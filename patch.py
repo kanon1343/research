@@ -6,11 +6,10 @@ import pprint
 import matplotlib.pyplot as plt
 import japanize_matplotlib  
 
-def get_contents(file_path):
+def get_contents(num, file_path):
     # 出力ごとに処理を行う.
     file_paths = glob.glob("{file_path}/**/".format(file_path=file_path), recursive=True)
     dicts = {}
-    
     for outputDir in file_paths:
         # diffでの"+""-"の合計を計算し、辞書に登録.
         diffs = glob.glob("{outputDir}/*.diff".format(outputDir=outputDir), recursive=True)
@@ -35,17 +34,18 @@ def get_contents(file_path):
     sorted(dicts.items())
     dicts = sorted(dicts.items())
     dicts = dict((x, y) for x, y in dicts)
-    drawGraph(dicts)
+    drawGraph(dicts, num)
     
 
 
     
-def drawGraph(dicts):
+def drawGraph(dicts: dict, num):
+    plt.figure()
     x = dicts.keys()
     y = dicts.values()
-    plt.title("seed0")
+    plt.title("seed%d"%(num))
     plt.plot(x, y)
-    plt.savefig("seed0.png")
+    plt.savefig("seed%d.png"%(num))
     # plt.show()
     
 
@@ -53,9 +53,9 @@ def drawGraph(dicts):
 def main():
     # file_paths = glob.glob("../math46_seed0/", recursive=True)
     # seedごとに処理を行う.
-    # for file_path in file_paths:
-    p = pathlib.Path("/Users/haradakanon/Desktop/研究/実験データ/math49//math49_seed0/")
-    get_contents(file_path=p.resolve())
+    for i in range(10):
+        p = pathlib.Path("/Users/haradakanon/Desktop/研究/実験データ/math85/math85_seed%d/"%(i))
+        get_contents(i, file_path=p.resolve())
 
 if __name__ == "__main__":
     main()
