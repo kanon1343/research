@@ -1,3 +1,4 @@
 env/
-.math80
-.math85
+math80/
+math85/
+.DS_Store
