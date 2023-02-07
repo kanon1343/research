@@ -1,7 +1,6 @@
 import pathlib
 import os
 import glob
-import pprint
 import numpy as np
 import matplotlib.pyplot as plt
 import japanize_matplotlib  
@@ -77,10 +76,64 @@ def analyze_defects4j(file_path):
     header = ["nloc","ccn","token_count","parameter_count","length","location","filepath","method_name","method_long_name","start_line","end_line"]
     df = pd.read_csv("{file_path}/analyze.csv".format(file_path=file_path), names=header)
     df.to_csv("{file_path}/analyze.csv".format(file_path=file_path))
-    
+
+
+# defects4j分析結果の合計と名前簡略化の出力.
+def sum_file_metrics(file_path):
+    df = pd.read_csv("{file_path}/analyze.csv".format(file_path=file_path))
+    df_metrics = pd.DataFrame(columns=["nloc", "ccn", "token", "parameter", "length", "filename"])
+    nloc = 0
+    ccn = 0
+    token = 0
+    parameter = 0
+    length = 0
+    file_name = ""
+    for i in range(len(df) - 1):
+        # メトリクスの合計を取得.
+        file_name = df.iat[i,7]
+        if file_name == df.iat[i+1,7]:
+            nloc += df.iat[i,1]
+            ccn += df.iat[i,2]
+            token += df.iat[i,3]
+            parameter += df.iat[i,4]
+            length += df.iat[i,5]
+        else:
+            nloc += df.iat[i,1]
+            ccn += df.iat[i,2]
+            token += df.iat[i,3]
+            parameter += df.iat[i,4]
+            length += df.iat[i,5]
+            # ファイル名を取得(org.apache.~~.java).
+            file_name = file_name.split("/", 3)
+            file_name = file_name[3].replace("/", ".")
+            dicts = {"nloc":nloc, "ccn":ccn, "token":token, "parameter":parameter, "length":length, "filename":file_name}
+            s = pd.DataFrame(dicts, index=[0])
+            nloc = 0
+            ccn = 0
+            token = 0
+            parameter = 0
+            length = 0
+            df_metrics = pd.concat([df_metrics, s])
+    # 最終行の計算.
+    nloc += df.iat[i+1,1]
+    ccn += df.iat[i+1,2]
+    token += df.iat[i+1,3]
+    parameter += df.iat[i+1,4]
+    length += df.iat[i+1,5]
+    file_name = file_name.split("/", 3)
+    file_name = file_name[3].replace("/", ".")
+    dicts = {"nloc":nloc, "ccn":ccn, "token":token, "parameter":parameter, "length":length, "filename":file_name}
+    s = pd.DataFrame(dicts, index=[0])
+    df_metrics = pd.concat([df_metrics, s])
+
+    # csvファイルへ出力
+    df_metrics.to_csv("{file_path}/metrics.csv".format(file_path=file_path))
 
 
 
+
+
+# 各要素の比較
 def analyze_element(num, file_path, count):
     dicts = {}
     for i in range(1, count):
@@ -105,8 +158,9 @@ def main():
         p = pathlib.Path("/Users/haradakanon/Desktop/研究/実験データ/math85/math85_seed%d/"%(i))
         # get_contents(i, file_path=p.resolve())
         # analyze_code(i, p)
-        defects4j = pathlib.Path("/Users/haradakanon/Desktop/研究/実験データ/research/math85/src/java")
-        analyze_defects4j(defects4j)
+    defects4j = pathlib.Path("./math85/src/java")
+    # analyze_defects4j(defects4j)
+    # sum_file_metrics(defects4j)
 
 
 if __name__ == "__main__":
