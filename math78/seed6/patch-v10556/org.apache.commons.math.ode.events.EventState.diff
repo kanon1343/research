@@ -1,0 +1,72 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -104,9 +104,7 @@
+         g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+-        previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -197,8 +195,37 @@
+                         // about bracketing
+                             // this should never happen
+                          
+-                    // variation direction, with respect to the integration direction
+-                    increasing = gb >= ga;
++                    {
++						increasing = gb >= ga;
++						final UnivariateRealFunction f = new UnivariateRealFunction() {
++							public double value(final double t) throws FunctionEvaluationException {
++								try {
++									interpolator.setInterpolatedTime(t);
++									return handler.g(t, interpolator.getInterpolatedState());
++								} catch (DerivativeException e) {
++									throw new FunctionEvaluationException(e, t);
++								} catch (EventException e) {
++									throw new FunctionEvaluationException(e, t);
++								}
++							}
++						};
++						final BrentSolver solver = new BrentSolver();
++						solver.setMaximalIterationCount(maxIterationCount);
++						final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
++						if ((Math.abs(root - ta) <= convergence)
++								&& (Math.abs(root - previousEventTime) <= convergence)) {
++							ta = tb;
++							ga = gb;
++						} else if (Double.isNaN(previousEventTime)
++								|| (Math.abs(previousEventTime - root) > convergence)) {
++							pendingEventTime = root;
++							if (pendingEvent && (Math.abs(t1 - pendingEventTime) <= convergence)) {
++								return false;
++							}
++							pendingEvent = true;
++							return true;
++						}
++					}
+ 
+                     final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+@@ -231,9 +258,7 @@
+                             // properly ends exactly at the event occurrence
+                             return false;
+                         }
+-                        // either we were not waiting for the event or it has
+-                        // moved in such a way the step cannot be accepted
+-                        pendingEvent = true;
++                        solver.setAbsoluteAccuracy(convergence);
+                         return true;
+                     }
+ 
+@@ -286,8 +311,6 @@
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {
+-            // force the sign to its value "just after the event"
+-            previousEventTime = t;
+             g0Positive        = increasing;
+             nextAction        = handler.eventOccurred(t, y, !(increasing ^ forward));
+         } else {

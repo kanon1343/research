@@ -1,0 +1,40 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -19,6 +19,10 @@
+ 	public static String removeSymbols(String r) {
+ 
+ 		r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
++		r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
++		r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
++		r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
++		boolean isValidInteger = false;
+ 		return r;
+ 	}
+ 
+@@ -30,6 +34,7 @@
+ 			}
+ 			if (r.length() >= 2) {
+ 				r = r.trim().substring(0, r.length() - 1);
++				r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+ 			}
+ 
+ 			return r + "]";
+@@ -38,8 +43,17 @@
+ 			if (out instanceof String && !isInteger(out.toString()))
+ 				s += out.toString();
+ 			else {
++				s += out.toString();
++				String r = "[";
+ 				s = (mustRemoveDecimal && out.toString().endsWith(".0")
+-						? out.toString().substring(0, out.toString().length() - 2) : out.toString());
++						? out.toString().substring(0, out.toString().length() - 2)
++						: out.toString());
++				s = (mustRemoveDecimal && out.toString().endsWith(".0")
++						? out.toString().substring(0, out.toString().length() - 2)
++						: out.toString());
++				s = (mustRemoveDecimal && out.toString().endsWith(".0")
++						? out.toString().substring(0, out.toString().length() - 2)
++						: out.toString());
+ 			}
+ 			return s;
+ 		}

@@ -1,0 +1,17 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -30,11 +30,14 @@
+ 			}
+ 			if (r.length() >= 2) {
+ 				r = r.trim().substring(0, r.length() - 1);
++				r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+ 			}
+ 
+ 			return r + "]";
+ 		} else {
+ 			String s = "";
++			s += out.toString();
++			boolean isValidInteger = false;
+ 			if (out instanceof String && !isInteger(out.toString()))
+ 				s += out.toString();
+ 			else {

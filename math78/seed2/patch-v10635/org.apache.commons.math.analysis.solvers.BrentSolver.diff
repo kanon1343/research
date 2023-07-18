@@ -1,0 +1,18 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -219,6 +219,7 @@
+     throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+         double delta = x1 - x0;
++		resultComputed = true;
+         double oldDelta = delta;
+ 
+         int i = 0;
+@@ -282,7 +283,6 @@
+                     delta = 0.5 * dx;
+                     oldDelta = delta;
+                 } else {
+-                    oldDelta = delta;
+                     delta = p / p1;
+                 }
+             }

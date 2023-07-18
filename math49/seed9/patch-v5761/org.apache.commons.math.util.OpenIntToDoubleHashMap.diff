@@ -1,0 +1,44 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -139,9 +139,7 @@
+         states = new byte[length];
+         System.arraycopy(source.states, 0, states, 0, length);
+         missingEntries = source.missingEntries;
+-        size  = source.size;
+         mask  = source.mask;
+-        count = source.count;
+     }
+ 
+     /**
+@@ -394,7 +392,6 @@
+         keys[index]   = 0;
+         states[index] = REMOVED;
+         final double previous = values[index];
+-        values[index] = missingEntries;
+         --size;
+         ++count;
+         return previous;
+@@ -527,7 +524,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +540,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +556,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step

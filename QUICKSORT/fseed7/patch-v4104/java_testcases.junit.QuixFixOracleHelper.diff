@@ -1,0 +1,11 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -26,6 +26,8 @@
+ 		if (out instanceof Iterable) {
+ 			String r = "[";
+ 			for (Object o : (Iterable) out) {
++				r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
++				r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+ 				r += transformToString(o, mustRemoveDecimal) + ",";
+ 			}
+ 			if (r.length() >= 2) {

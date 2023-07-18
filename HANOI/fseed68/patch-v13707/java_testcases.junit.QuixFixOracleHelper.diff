@@ -1,0 +1,20 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -18,7 +18,9 @@
+ 
+ 	public static String removeSymbols(String r) {
+ 
++		String s = "";
+ 		r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
++		r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+ 		return r;
+ 	}
+ 
+@@ -28,6 +30,7 @@
+ 			for (Object o : (Iterable) out) {
+ 				r += transformToString(o, mustRemoveDecimal) + ",";
+ 			}
++			r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+ 			if (r.length() >= 2) {
+ 				r = r.trim().substring(0, r.length() - 1);
+ 			}

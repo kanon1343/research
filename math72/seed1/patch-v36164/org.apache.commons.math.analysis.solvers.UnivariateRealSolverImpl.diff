@@ -1,0 +1,21 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -128,7 +128,6 @@
+ 
+     /** {@inheritDoc} */
+     public void resetFunctionValueAccuracy() {
+-        functionValueAccuracy = defaultFunctionValueAccuracy;
+     }
+ 
+     /**
+@@ -193,7 +192,9 @@
+      * @return true if the arguments form an increasing sequence
+      */
+     protected boolean isSequence(final double start, final double mid, final double end) {
+-        return (start < mid) && (mid < end);
++        functionValueAccuracy = defaultFunctionValueAccuracy;
++		functionValueAccuracy = defaultFunctionValueAccuracy;
++		return (start < mid) && (mid < end);
+     }
+ 
+     /**

@@ -1,0 +1,21 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -35,12 +35,18 @@
+ 			return r + "]";
+ 		} else {
+ 			String s = "";
++			String r = "[";
++			s += out.toString();
++			s += out.toString();
++			s += out.toString();
++			s += out.toString();
+ 			if (out instanceof String && !isInteger(out.toString()))
+ 				s += out.toString();
+ 			else {
+ 				s = (mustRemoveDecimal && out.toString().endsWith(".0")
+ 						? out.toString().substring(0, out.toString().length() - 2) : out.toString());
+ 			}
++			boolean isValidInteger = false;
+ 			return s;
+ 		}
+ 

@@ -1,0 +1,13 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -35,6 +35,10 @@
+ 			return r + "]";
+ 		} else {
+ 			String s = "";
++			String r = "[";
++			s += out.toString();
++			s += out.toString();
++			s += out.toString();
+ 			if (out instanceof String && !isInteger(out.toString()))
+ 				s += out.toString();
+ 			else {

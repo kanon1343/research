@@ -1,0 +1,11 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -32,6 +32,8 @@
+ 				r = r.trim().substring(0, r.length() - 1);
+ 			}
+ 
++			String s = "";
++			r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+ 			return r + "]";
+ 		} else {
+ 			String s = "";

@@ -1,0 +1,19 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -122,12 +122,14 @@
+      */
+     protected double[][] createTableau(final boolean maximize) {
+ 
+-        // create a matrix of the correct size
++        double minValue = 0;
++		// create a matrix of the correct size
+         List<LinearConstraint> constraints = getNormalizedConstraints();
+         int width = numDecisionVariables + numSlackVariables +
+         numArtificialVariables + getNumObjectiveFunctions() + 1; // + 1 is for RHS
+         int height = constraints.size() + getNumObjectiveFunctions();
+-        double[][] matrix = new double[height][width];
++        Integer minRatioPos = null;
++		double[][] matrix = new double[height][width];
+ 
+         // initialize the objective function rows
+         if (getNumObjectiveFunctions() == 2) {

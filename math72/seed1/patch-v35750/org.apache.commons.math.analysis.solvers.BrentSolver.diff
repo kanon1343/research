@@ -1,0 +1,65 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -106,13 +106,15 @@
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            clearResult();
++			return result;
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
++        if (Math.abs(max - min) <= absoluteAccuracy) {
+             setResult(yMin, 0);
++			clearResult();
+             return result;
+         }
+ 
+@@ -124,7 +126,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -181,7 +182,6 @@
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+-                setResult(max, 0);
+                 ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+@@ -229,7 +229,19 @@
+         double delta = x1 - x0;
+         double oldDelta = delta;
+ 
+-        int i = 0;
++        {
++			x2 = x0;
++			y2 = y0;
++		}
++		{
++			x2 = x0;
++			y2 = y0;
++		}
++		{
++			x2 = x0;
++			y2 = y0;
++		}
++		int i = 0;
+         while (i < maximalIterationCount) {
+             if (Math.abs(y2) < Math.abs(y1)) {
+                 // use the bracket point if is better than last approximation
+@@ -245,7 +257,6 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

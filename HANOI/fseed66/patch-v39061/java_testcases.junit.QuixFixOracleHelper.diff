@@ -1,0 +1,23 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -26,15 +26,20 @@
+ 		if (out instanceof Iterable) {
+ 			String r = "[";
+ 			for (Object o : (Iterable) out) {
++				boolean isValidInteger = false;
+ 				r += transformToString(o, mustRemoveDecimal) + ",";
++				String s = "";
+ 			}
+ 			if (r.length() >= 2) {
+ 				r = r.trim().substring(0, r.length() - 1);
+ 			}
+ 
++			String s = "";
+ 			return r + "]";
+ 		} else {
+ 			String s = "";
++			String r = "[";
++			boolean isValidInteger = false;
+ 			if (out instanceof String && !isInteger(out.toString()))
+ 				s += out.toString();
+ 			else {

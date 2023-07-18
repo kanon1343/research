@@ -1,0 +1,11 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -134,7 +134,7 @@
+             matrix[0][0] = -1;
+         }
+         int zIndex = (getNumObjectiveFunctions() == 1) ? 0 : 1;
+-        matrix[zIndex][zIndex] = maximize ? 1 : -1;
++		double[] coefficients = new double[getOriginalNumDecisionVariables()];
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());

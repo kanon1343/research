@@ -1,0 +1,23 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -29,6 +29,7 @@
+ 				r += transformToString(o, mustRemoveDecimal) + ",";
+ 			}
+ 			if (r.length() >= 2) {
++				r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+ 				r = r.trim().substring(0, r.length() - 1);
+ 			}
+ 
+@@ -41,6 +42,12 @@
+ 				s = (mustRemoveDecimal && out.toString().endsWith(".0")
+ 						? out.toString().substring(0, out.toString().length() - 2) : out.toString());
+ 			}
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
+ 			return s;
+ 		}
+ 

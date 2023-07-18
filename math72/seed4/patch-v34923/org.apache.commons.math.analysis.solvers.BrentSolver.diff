@@ -1,0 +1,62 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -59,6 +59,8 @@
+      */
+     public BrentSolver() {
+         super(100, 1E-6);
++		this.defaultFunctionValueAccuracy = 1.0e-15;
++		this.defaultFunctionValueAccuracy = 1.0e-15;
+     }
+ 
+     /** {@inheritDoc} */
+@@ -111,9 +113,10 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
++		double x1 = max;
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+-            return result;
++            verifyInterval(min, max);
++			return result;
+         }
+ 
+         // reduce interval if min and initial bracket the root
+@@ -124,7 +127,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -178,7 +180,6 @@
+         if (sign > 0) {
+             // check if either value is close to a zero
+             if (Math.abs(yMin) <= functionValueAccuracy) {
+-                setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
+@@ -226,7 +227,9 @@
+                          double x2, double y2)
+     throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        double delta = x1 - x0;
++        clearResult();
++		clearResult();
++		double delta = x1 - x0;
+         double oldDelta = delta;
+ 
+         int i = 0;
+@@ -245,7 +248,9 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
++				x1 = x1 + delta;
++                x1 = x2;
++				return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

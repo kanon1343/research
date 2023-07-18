@@ -1,0 +1,19 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -223,7 +223,7 @@
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+-            if (Math.abs(y2) < Math.abs(y1)) {
++            if (i < maximalIterationCount) {
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;
+@@ -237,7 +237,6 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

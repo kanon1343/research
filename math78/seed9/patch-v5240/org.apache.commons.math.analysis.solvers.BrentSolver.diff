@@ -1,0 +1,31 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -186,7 +186,6 @@
+         } else {
+             // either min or max is a root
+             if (yMin == 0.0) {
+-                ret = min;
+             } else {
+                 ret = max;
+             }
+@@ -276,14 +275,16 @@
+                 }
+                 if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+                         p >= Math.abs(0.5 * oldDelta * p1)) {
+-                    // Inverse quadratic interpolation gives a value
+-                    // in the wrong direction, or progress is slow.
+-                    // Fall back to bisection.
+-                    delta = 0.5 * dx;
+                     oldDelta = delta;
+                 } else {
+                     oldDelta = delta;
+                     delta = p / p1;
++					{
++						delta = (x0 - x1) / (1 - y0 / y1);
++						if (delta / oldDelta > 1) {
++							delta = 0.5 * oldDelta;
++						}
++					}
+                 }
+             }
+             // Save old X1, Y1

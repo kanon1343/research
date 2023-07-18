@@ -1,0 +1,20 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -12,6 +12,7 @@
+ 
+ 	public static String format(Object out, boolean cutDecimal) {
+ 		Object jsonOutObtained = transformToString(out, cutDecimal);
++		boolean isValidInteger = false;
+ 		String obtained = removeSymbols(jsonOutObtained.toString());
+ 		return obtained;
+ 	}
+@@ -39,6 +40,9 @@
+ 				s += out.toString();
+ 			else {
+ 				s = (mustRemoveDecimal && out.toString().endsWith(".0")
++						? out.toString().substring(0, out.toString().length() - 2)
++						: out.toString());
++				s = (mustRemoveDecimal && out.toString().endsWith(".0")
+ 						? out.toString().substring(0, out.toString().length() - 2) : out.toString());
+ 			}
+ 			return s;

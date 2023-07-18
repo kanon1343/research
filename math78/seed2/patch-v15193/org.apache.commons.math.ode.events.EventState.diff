@@ -1,0 +1,34 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -102,11 +102,12 @@
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+         g0Positive        = true;
+-        pendingEvent      = false;
++        pendingEventTime = Double.NaN;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
++        pendingEventTime = Double.NaN;
++		nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -289,7 +290,6 @@
+             // force the sign to its value "just after the event"
+             previousEventTime = t;
+             g0Positive        = increasing;
+-            nextAction        = handler.eventOccurred(t, y, !(increasing ^ forward));
+         } else {
+             g0Positive = g0 >= 0;
+             nextAction = EventHandler.CONTINUE;
+@@ -323,7 +323,7 @@
+         if (nextAction == EventHandler.RESET_STATE) {
+             handler.resetState(t, y);
+         }
+-        pendingEvent      = false;
++        pendingEventTime = Double.NaN;
+         pendingEventTime  = Double.NaN;
+ 
+         return (nextAction == EventHandler.RESET_STATE) ||

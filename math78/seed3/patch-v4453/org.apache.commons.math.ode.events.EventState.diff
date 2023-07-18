@@ -1,0 +1,32 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -150,7 +150,10 @@
+         throws EventException {
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+-        g0Positive = g0 >= 0;
++        {
++			g0Positive = g0 >= 0;
++			nextAction = EventHandler.CONTINUE;
++		}
+     }
+ 
+     /** Evaluate the impact of the proposed step on the event handler.
+@@ -247,7 +250,8 @@
+ 
+             // no event during the whole step
+             pendingEvent     = false;
+-            pendingEventTime = Double.NaN;
++            previousEventTime = Double.NaN;
++			pendingEventTime = Double.NaN;
+             return false;
+ 
+         } catch (FunctionEvaluationException e) {
+@@ -282,7 +286,6 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {

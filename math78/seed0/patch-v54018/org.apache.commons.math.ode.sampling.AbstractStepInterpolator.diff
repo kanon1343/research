@@ -1,0 +1,28 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -96,7 +96,6 @@
+     interpolatedDerivatives = null;
+     finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -218,6 +217,8 @@
+ 
+     currentTime = t;
+     h           = currentTime - previousTime;
++	finalized = false;
++	finalized = false;
+     setInterpolatedTime(t);
+ 
+     // the step is not finalized anymore
+@@ -243,6 +244,8 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
++	previousTime = currentTime;
++	previousTime = currentTime;
+       dirtyState       = true;
+   }
+ 

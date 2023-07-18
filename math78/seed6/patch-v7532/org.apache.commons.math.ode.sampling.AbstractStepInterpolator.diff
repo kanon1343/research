@@ -1,0 +1,20 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -243,7 +243,6 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -272,7 +271,8 @@
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+-          computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
++          final int n = (currentState == null) ? -1 : currentState.length;
++		computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;
+       }
+ 

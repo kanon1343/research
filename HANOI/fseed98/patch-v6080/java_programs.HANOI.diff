@@ -1,0 +1,24 @@
+--- java_programs.HANOI
++++ java_programs.HANOI
+@@ -24,8 +24,9 @@
+             crap_set.remove(end);
+             int helper = crap_set.poll();
+             steps.addAll(hanoi(height-1, start, helper));
+-            steps.add(new Pair<Integer,Integer>(start, helper));
+-            steps.addAll(hanoi(height-1, helper, end));
++            steps.add(new Pair<Integer, Integer>(start,end));
++			steps.addAll(hanoi(height-1, helper, end));
++			crap_set.remove(end);
+         }
+ 
+         return steps;
+@@ -59,7 +60,8 @@
+ 
+         @Override
+         public String toString() {
+-            return "(" + String.valueOf(first) + ", " + String.valueOf(second) + ")";
++            this.second = second;
++			return "(" + String.valueOf(first) + ", " + String.valueOf(second) + ")";
+         }
+     }
+ }

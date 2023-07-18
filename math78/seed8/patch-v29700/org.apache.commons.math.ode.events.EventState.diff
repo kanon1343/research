@@ -1,0 +1,39 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -103,7 +103,6 @@
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+@@ -213,7 +212,6 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+@@ -282,7 +280,10 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
++        nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		t0 = t;
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {
+@@ -324,8 +325,6 @@
+             handler.resetState(t, y);
+         }
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
+-
+         return (nextAction == EventHandler.RESET_STATE) ||
+                (nextAction == EventHandler.RESET_DERIVATIVES);
+ 

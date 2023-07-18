@@ -1,0 +1,28 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -156,14 +156,13 @@
+         FunctionEvaluationException {
+ 
+         clearResult();
+-        verifyInterval(min, max);
+-
+         double ret = Double.NaN;
+ 
+         double yMin = f.value(min);
+         double yMax = f.value(max);
+ 
+-        // Verify bracketing
++        verifyInterval(min, max);
++		// Verify bracketing
+         double sign = yMin * yMax;
+         if (sign > 0) {
+             // check if either value is close to a zero
+@@ -223,7 +222,7 @@
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+-            if (Math.abs(y2) < Math.abs(y1)) {
++            if (f == null) {
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;

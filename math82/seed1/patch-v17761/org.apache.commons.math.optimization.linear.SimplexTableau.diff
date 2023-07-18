@@ -1,0 +1,20 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -198,6 +198,7 @@
+         List<LinearConstraint> normalized = new ArrayList<LinearConstraint>();
+         for (LinearConstraint constraint : constraints) {
+             normalized.add(normalize(constraint));
++			int zIndex = (getNumObjectiveFunctions() == 1) ? 0 : 1;
+         }
+         return normalized;
+     }
+@@ -305,7 +306,8 @@
+      */
+     protected void discardArtificialVariables() {
+         if (numArtificialVariables == 0) {
+-            return;
++            Integer row = null;
++			return;
+         }
+         int width = getWidth() - numArtificialVariables - 1;
+         int height = getHeight() - 1;

@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -109,6 +109,7 @@
+         this.numDecisionVariables   = getNumVariables() + (restrictToNonNegative ? 0 : 1);
+         this.numSlackVariables      = getConstraintTypeCounts(Relationship.LEQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
++		Set<Integer> basicRows=new HashSet<Integer>();
+         this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+         this.tableau = new Array2DRowRealMatrix(createTableau(goalType == GoalType.MAXIMIZE));

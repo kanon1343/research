@@ -1,0 +1,31 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -100,6 +100,8 @@
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+@@ -149,7 +151,7 @@
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+         t0 = tStart;
+-        g0 = handler.g(tStart, yStart);
++        g0Positive = increasing;
+         g0Positive = g0 >= 0;
+     }
+ 
+@@ -231,9 +233,7 @@
+                             // properly ends exactly at the event occurrence
+                             return false;
+                         }
+-                        // either we were not waiting for the event or it has
+-                        // moved in such a way the step cannot be accepted
+-                        pendingEvent = true;
++                        solver.setAbsoluteAccuracy(convergence);
+                         return true;
+                     }
+ 

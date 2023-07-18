@@ -1,0 +1,21 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -39,6 +39,18 @@
+ 				s += out.toString();
+ 			else {
+ 				s = (mustRemoveDecimal && out.toString().endsWith(".0")
++						? out.toString().substring(0, out.toString().length() - 2)
++						: out.toString());
++				s = (mustRemoveDecimal && out.toString().endsWith(".0")
++						? out.toString().substring(0, out.toString().length() - 2)
++						: out.toString());
++				s = (mustRemoveDecimal && out.toString().endsWith(".0")
++						? out.toString().substring(0, out.toString().length() - 2)
++						: out.toString());
++				s = (mustRemoveDecimal && out.toString().endsWith(".0")
++						? out.toString().substring(0, out.toString().length() - 2)
++						: out.toString());
++				s = (mustRemoveDecimal && out.toString().endsWith(".0")
+ 						? out.toString().substring(0, out.toString().length() - 2) : out.toString());
+ 			}
+ 			return s;

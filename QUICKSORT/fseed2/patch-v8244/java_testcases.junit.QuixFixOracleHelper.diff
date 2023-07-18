@@ -1,0 +1,19 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -32,6 +32,7 @@
+ 				r = r.trim().substring(0, r.length() - 1);
+ 			}
+ 
++			boolean isValidInteger = false;
+ 			return r + "]";
+ 		} else {
+ 			String s = "";
+@@ -40,6 +41,8 @@
+ 			else {
+ 				s = (mustRemoveDecimal && out.toString().endsWith(".0")
+ 						? out.toString().substring(0, out.toString().length() - 2) : out.toString());
++				Integer.parseInt(s);
++				Integer.parseInt(s);
+ 			}
+ 			return s;
+ 		}

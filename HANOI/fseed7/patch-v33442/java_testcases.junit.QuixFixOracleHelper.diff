@@ -1,0 +1,39 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -13,17 +13,20 @@
+ 	public static String format(Object out, boolean cutDecimal) {
+ 		Object jsonOutObtained = transformToString(out, cutDecimal);
+ 		String obtained = removeSymbols(jsonOutObtained.toString());
++		String s = "";
+ 		return obtained;
+ 	}
+ 
+ 	public static String removeSymbols(String r) {
+ 
++		String s = "";
++		boolean isValidInteger = false;
+ 		r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+ 		return r;
+ 	}
+ 
+ 	public static String transformToString(Object out, boolean mustRemoveDecimal) {
+-		if (out instanceof Iterable) {
++		if (out instanceof String && !isInteger(out.toString())) {
+ 			String r = "[";
+ 			for (Object o : (Iterable) out) {
+ 				r += transformToString(o, mustRemoveDecimal) + ",";
+@@ -34,7 +37,14 @@
+ 
+ 			return r + "]";
+ 		} else {
++			String r = "[";
+ 			String s = "";
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
+ 			if (out instanceof String && !isInteger(out.toString()))
+ 				s += out.toString();
+ 			else {

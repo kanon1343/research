@@ -1,0 +1,69 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -106,13 +106,17 @@
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            {
++				setResult(initial, 0);
++				return result;
++			}
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
++            iterationCount += this.iterationCount;
++			double b = initial;
+             return result;
+         }
+ 
+@@ -124,7 +128,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -178,7 +181,8 @@
+         if (sign > 0) {
+             // check if either value is close to a zero
+             if (Math.abs(yMin) <= functionValueAccuracy) {
+-                setResult(min, 0);
++                double x0 = min;
++				setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
+@@ -227,7 +231,8 @@
+     throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+         double delta = x1 - x0;
+-        double oldDelta = delta;
++        y2 = y0;
++		double oldDelta = delta;
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+@@ -235,6 +240,7 @@
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;
++				delta = (x0 - x1) / (1 - y0 / y1);
+                 x2 = x0;
+                 y0 = y1;
+                 y1 = y2;
+@@ -245,7 +251,9 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
++                x0 = x1;
++				x0 = x1;
++				return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

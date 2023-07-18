@@ -1,0 +1,10 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -204,6 +204,7 @@
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+                                 interpolator.setInterpolatedTime(t);
++								boolean resetDerivatives = false;
+                                 return handler.g(t, interpolator.getInterpolatedState());
+                             } catch (DerivativeException e) {
+                                 throw new FunctionEvaluationException(e, t);

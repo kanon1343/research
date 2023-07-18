@@ -1,0 +1,23 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -101,11 +101,10 @@
+         // some dummy values ...
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+-        g0Positive        = true;
++        g0 = Double.NaN;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+-        increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+ 
+     }
+@@ -181,7 +180,6 @@
+ 
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+-                interpolator.setInterpolatedTime(tb);
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence

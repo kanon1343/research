@@ -1,0 +1,20 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -25,6 +25,7 @@
+ 	public static String transformToString(Object out, boolean mustRemoveDecimal) {
+ 		if (out instanceof Iterable) {
+ 			String r = "[";
++			boolean isValidInteger = false;
+ 			for (Object o : (Iterable) out) {
+ 				r += transformToString(o, mustRemoveDecimal) + ",";
+ 			}
+@@ -38,6 +39,9 @@
+ 			if (out instanceof String && !isInteger(out.toString()))
+ 				s += out.toString();
+ 			else {
++				s += out.toString();
++				s += out.toString();
++				s += out.toString();
+ 				s = (mustRemoveDecimal && out.toString().endsWith(".0")
+ 						? out.toString().substring(0, out.toString().length() - 2) : out.toString());
+ 			}

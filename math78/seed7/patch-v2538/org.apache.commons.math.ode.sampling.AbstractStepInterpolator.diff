@@ -1,0 +1,20 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -216,7 +216,8 @@
+    */
+   public void storeTime(final double t) {
+ 
+-    currentTime = t;
++    currentTime = Double.NaN;
++	currentTime = t;
+     h           = currentTime - previousTime;
+     setInterpolatedTime(t);
+ 
+@@ -273,7 +274,6 @@
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+-          dirtyState = false;
+       }
+ 
+       return interpolatedState;

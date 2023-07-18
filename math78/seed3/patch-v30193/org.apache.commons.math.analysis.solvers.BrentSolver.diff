@@ -1,0 +1,10 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -228,6 +228,7 @@
+                 x0 = x1;
+                 x1 = x2;
+                 x2 = x0;
++				double r3 = y1 / y0;
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;

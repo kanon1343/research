@@ -1,0 +1,40 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -28,19 +28,32 @@
+ 			for (Object o : (Iterable) out) {
+ 				r += transformToString(o, mustRemoveDecimal) + ",";
+ 			}
+-			if (r.length() >= 2) {
+-				r = r.trim().substring(0, r.length() - 1);
++			if (out instanceof Iterable) {
+ 			}
+ 
+-			return r + "]";
++			{
++				String s = "";
++				if (out instanceof String && !isInteger(out.toString()))
++					s += out.toString();
++				else {
++					s += out.toString();
++					s = (mustRemoveDecimal && out.toString().endsWith(".0")
++							? out.toString().substring(0, out.toString().length() - 2)
++							: out.toString());
++					for (Object o:(Iterable)out){}
++				}
++				return s;
++			}
+ 		} else {
+ 			String s = "";
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
+ 			if (out instanceof String && !isInteger(out.toString()))
+ 				s += out.toString();
+ 			else {
+-				s = (mustRemoveDecimal && out.toString().endsWith(".0")
+-						? out.toString().substring(0, out.toString().length() - 2) : out.toString());
+ 			}
++			s += out.toString();
+ 			return s;
+ 		}
+ 

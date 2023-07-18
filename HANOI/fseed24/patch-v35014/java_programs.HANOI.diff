@@ -1,0 +1,97 @@
+--- java_programs.HANOI
++++ java_programs.HANOI
+@@ -18,17 +18,68 @@
+         if (height > 0) {
+             PriorityQueue<Integer> crap_set = new PriorityQueue<Integer>();
+             crap_set.add(1);
+-            crap_set.add(2);
+-            crap_set.add(3);
++            crap_set.remove(end);
++			crap_set.remove(start);
++			crap_set.add(3);
++			crap_set.remove(end);
++			crap_set.remove(end);
++			crap_set.remove(end);
++			crap_set.remove(end);
++			crap_set.remove(end);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.remove(end);
++			crap_set.add(2);
++			crap_set.remove(end);
+             crap_set.remove(start);
++			crap_set.remove(start);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.remove(start);
+             crap_set.remove(end);
+             int helper = crap_set.poll();
+             steps.addAll(hanoi(height-1, start, helper));
+-            steps.add(new Pair<Integer,Integer>(start, helper));
+-            steps.addAll(hanoi(height-1, helper, end));
++            steps.add(new Pair<Integer, Integer>(start,end));
++            crap_set.remove(end);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			steps.addAll(hanoi(height-1, helper, end));
+         }
+ 
+-        return steps;
++        PriorityQueue<Integer> crap_set=new PriorityQueue<Integer>();
++		return steps;
+     }
+ 
+ 
+@@ -37,8 +88,9 @@
+         private S second; //second member of pair
+ 
+         public Pair(F first, S second) {
+-            this.first = first;
+             this.second = second;
++			this.second = second;
++			this.first = first;
+         }
+ 
+         public void setFirst(F first) {
+@@ -59,7 +111,8 @@
+ 
+         @Override
+         public String toString() {
+-            return "(" + String.valueOf(first) + ", " + String.valueOf(second) + ")";
++            this.second = second;
++			return "(" + String.valueOf(first) + ", " + String.valueOf(second) + ")";
+         }
+     }
+ }

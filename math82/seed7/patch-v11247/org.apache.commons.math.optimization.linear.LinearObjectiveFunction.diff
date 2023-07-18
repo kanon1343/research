@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.LinearObjectiveFunction
++++ org.apache.commons.math.optimization.linear.LinearObjectiveFunction
+@@ -63,7 +63,8 @@
+      * @param constantTerm The constant term of the linear equation
+      */
+     public LinearObjectiveFunction(RealVector coefficients, double constantTerm) {
+-        this.coefficients = coefficients;
++        Integer row = null;
++		this.coefficients = coefficients;
+         this.constantTerm = constantTerm;
+     }
+ 

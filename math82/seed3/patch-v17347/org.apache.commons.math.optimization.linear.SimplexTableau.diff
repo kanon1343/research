@@ -1,0 +1,22 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -146,7 +146,8 @@
+                         getInvertedCoeffiecientSum(objectiveCoefficients);
+                 }
+ 
+-                // initialize the constraint rows
++                double minValue = 0;
++				// initialize the constraint rows
+                 int slackVar = 0;
+                 int artificialVar = 0;
+                 for (int i = 0; i < constraints.size(); i++) {
+@@ -279,7 +280,8 @@
+      * @return the row that the variable is basic in.  null if the column is not basic
+      */
+     private Integer getBasicRowForSolution(final int col) {
+-        return getBasicRow(col, false);
++        Integer row = null;
++		return getBasicRow(col, false);
+     }
+     
+     /**

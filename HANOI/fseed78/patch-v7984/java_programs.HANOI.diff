@@ -1,0 +1,43 @@
+--- java_programs.HANOI
++++ java_programs.HANOI
+@@ -17,14 +17,30 @@
+ 
+         if (height > 0) {
+             PriorityQueue<Integer> crap_set = new PriorityQueue<Integer>();
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
+             crap_set.add(1);
+             crap_set.add(2);
+             crap_set.add(3);
+             crap_set.remove(start);
+             crap_set.remove(end);
+             int helper = crap_set.poll();
+-            steps.addAll(hanoi(height-1, start, helper));
+-            steps.add(new Pair<Integer,Integer>(start, helper));
++            crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			steps.addAll(hanoi(height-1, start, helper));
++            steps.add(new Pair<Integer, Integer>(start,end));
+             steps.addAll(hanoi(height-1, helper, end));
+         }
+ 
+@@ -39,6 +55,7 @@
+         public Pair(F first, S second) {
+             this.first = first;
+             this.second = second;
++			this.first = first;
+         }
+ 
+         public void setFirst(F first) {

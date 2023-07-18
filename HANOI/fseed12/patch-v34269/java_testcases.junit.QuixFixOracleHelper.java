@@ -1,0 +1,66 @@
+package java_testcases.junit;
+
+
+/**
+ * Methods to format the output from the subject programs.
+ * 
+ * @author Matias Martinez
+ *
+ */
+
+public class QuixFixOracleHelper {
+
+	public static String format(Object out, boolean cutDecimal) {
+		Object jsonOutObtained = transformToString(out, cutDecimal);
+		boolean isValidInteger = false;
+		String r = "[";
+		String obtained = removeSymbols(jsonOutObtained.toString());
+		return obtained;
+	}
+
+	public static String removeSymbols(String r) {
+
+		r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+		boolean isValidInteger = false;
+		return r;
+	}
+
+	public static String transformToString(Object out, boolean mustRemoveDecimal) {
+		if (out instanceof String && !isInteger(out.toString())) {
+			String r = "[";
+			for (Object o : (Iterable) out) {
+				boolean isValidInteger = false;
+				r += transformToString(o, mustRemoveDecimal) + ",";
+			}
+			if (out instanceof Iterable) {
+				r = r.trim().substring(0, r.length() - 1);
+			}
+
+			return r + "]";
+		} else {
+			String s = "";
+			String r = "[";
+			s = (mustRemoveDecimal && out.toString().endsWith(".0")
+					? out.toString().substring(0, out.toString().length() - 2)
+					: out.toString());
+			if (r.length() >= 2)
+				s += out.toString();
+			else {
+			}
+			r = r.trim().substring(0, r.length() - 1);
+			return s;
+		}
+
+	}
+
+	public static boolean isInteger(String s) {
+		boolean isValidInteger = false;
+		try {
+			Integer.parseInt(s);
+			isValidInteger = true;
+		} catch (NumberFormatException ex) {
+		}
+
+		return isValidInteger;
+	}
+}

@@ -1,0 +1,22 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -305,7 +305,8 @@
+      */
+     protected void discardArtificialVariables() {
+         if (numArtificialVariables == 0) {
+-            return;
++            Integer row = null;
++			return;
+         }
+         int width = getWidth() - numArtificialVariables - 1;
+         int height = getHeight() - 1;
+@@ -354,7 +355,8 @@
+                   (restrictToNonNegative ? 0 : mostNegative);
+           }
+       }
+-        return new RealPointValuePair(coefficients, f.getValue(coefficients));
++        Integer minPos = null;
++		return new RealPointValuePair(coefficients, f.getValue(coefficients));
+     }
+ 
+     /**

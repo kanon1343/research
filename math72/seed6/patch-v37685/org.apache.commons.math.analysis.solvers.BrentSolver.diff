@@ -1,0 +1,50 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -109,10 +109,12 @@
+             return result;
+         }
+ 
+-        // return the first endpoint if it is good enough
++        clearResult();
++		// return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
++            verifyInterval(min, max);
++			verifyInterval(min, max);
+             return result;
+         }
+ 
+@@ -124,7 +126,8 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
++            verifyInterval(min, max);
++			verifyInterval(min, max);
+             return result;
+         }
+ 
+@@ -241,10 +244,13 @@
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
++                this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				// Avoid division by very small values. Assume
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
++				x1 = x2;
+                 return result;
+             }
+             double dx = x2 - x1;
+@@ -258,7 +264,6 @@
+                     (Math.abs(y0) <= Math.abs(y1))) {
+                 // Force bisection.
+                 delta = 0.5 * dx;
+-                oldDelta = delta;
+             } else {
+                 double r3 = y1 / y0;
+                 double p;

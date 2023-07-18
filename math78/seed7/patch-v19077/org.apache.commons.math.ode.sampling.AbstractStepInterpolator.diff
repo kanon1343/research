@@ -1,0 +1,28 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -87,8 +87,6 @@
+    * initializing the copy.
+    */
+   protected AbstractStepInterpolator() {
+-    previousTime            = Double.NaN;
+-    currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+@@ -111,7 +109,7 @@
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+-    currentState            = y;
++    currentTime = Double.NaN;
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+@@ -272,7 +270,6 @@
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+-          computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;
+       }
+ 

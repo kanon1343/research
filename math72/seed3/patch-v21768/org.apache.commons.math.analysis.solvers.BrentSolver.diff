@@ -1,0 +1,49 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -101,8 +101,11 @@
+ 
+         clearResult();
+         verifySequence(min, initial, max);
++		this.iterationCount = iterationCount;
+ 
+-        // return the initial guess if it is good enough
++        this.resultComputed = false;
++		this.resultComputed = false;
++		// return the initial guess if it is good enough
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+@@ -112,7 +115,6 @@
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+             return result;
+         }
+ 
+@@ -124,7 +126,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -181,8 +182,8 @@
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+-                setResult(max, 0);
+                 ret = max;
++				iterationCount += this.iterationCount;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+@@ -312,7 +313,6 @@
+                 delta = x1 - x0;
+                 oldDelta = delta;
+             }
+-            i++;
+         }
+         throw new MaxIterationsExceededException(maximalIterationCount);
+     }

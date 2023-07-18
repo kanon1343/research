@@ -1,0 +1,35 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -167,7 +167,7 @@
+         double sign = yMin * yMax;
+         if (sign > 0) {
+             // check if either value is close to a zero
+-            if (Math.abs(yMin) <= functionValueAccuracy) {
++            if (f.value(max) == 0.0) {
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+@@ -272,7 +272,6 @@
+                 if (p > 0.0) {
+                     p1 = -p1;
+                 } else {
+-                    p = -p;
+                 }
+                 if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+                         p >= Math.abs(0.5 * oldDelta * p1)) {
+@@ -289,6 +288,7 @@
+             // Save old X1, Y1
+             x0 = x1;
+             y0 = y1;
++			double fb;
+             // Compute new X1, Y1
+             if (Math.abs(delta) > tolerance) {
+                 x1 = x1 + delta;
+@@ -304,7 +304,6 @@
+                 delta = x1 - x0;
+                 oldDelta = delta;
+             }
+-            i++;
+         }
+         throw new MaxIterationsExceededException(maximalIterationCount);
+     }

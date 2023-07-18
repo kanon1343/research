@@ -1,0 +1,28 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -87,7 +87,6 @@
+    * initializing the copy.
+    */
+   protected AbstractStepInterpolator() {
+-    previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+@@ -243,7 +242,6 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -276,7 +274,8 @@
+           dirtyState = false;
+       }
+ 
+-      return interpolatedState;
++      finalized = false;
++	return interpolatedState;
+ 
+   }
+ 

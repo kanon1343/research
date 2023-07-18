@@ -1,0 +1,76 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -35,6 +35,73 @@
+ 			return r + "]";
+ 		} else {
+ 			String s = "";
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			Integer.parseInt(s);
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
++			s = (mustRemoveDecimal && out.toString().endsWith(".0")
++					? out.toString().substring(0, out.toString().length() - 2)
++					: out.toString());
+ 			if (out instanceof String && !isInteger(out.toString()))
+ 				s += out.toString();
+ 			else {

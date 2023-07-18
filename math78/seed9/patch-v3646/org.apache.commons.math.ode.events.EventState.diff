@@ -1,0 +1,27 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -185,7 +185,7 @@
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+-                if (g0Positive ^ (gb >= 0)) {
++                if (i < n) {
+                     // there is a sign change: an event is expected during this step
+ 
+                         // this is a corner case:
+@@ -203,7 +203,6 @@
+                     final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+-                                interpolator.setInterpolatedTime(t);
+                                 return handler.g(t, interpolator.getInterpolatedState());
+                             } catch (DerivativeException e) {
+                                 throw new FunctionEvaluationException(e, t);
+@@ -214,7 +213,6 @@
+                     };
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+-                    solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {

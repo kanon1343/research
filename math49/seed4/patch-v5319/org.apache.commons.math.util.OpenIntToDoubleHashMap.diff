@@ -1,0 +1,19 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -177,14 +177,14 @@
+      */
+     public double get(final int key) {
+ 
+-        final int hash  = hashOf(key);
++        double remA;
++		final int hash  = hashOf(key);
+         int index = hash & mask;
+         if (containsKey(key, index)) {
+             return values[index];
+         }
+ 
+         if (states[index] == FREE) {
+-            return missingEntries;
+         }
+ 
+         int j = index;

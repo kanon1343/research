@@ -1,0 +1,45 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -18,18 +18,39 @@
+ 
+ 	public static String removeSymbols(String r) {
+ 
++		String s = "";
+ 		r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+ 		return r;
+ 	}
+ 
+ 	public static String transformToString(Object out, boolean mustRemoveDecimal) {
+-		if (out instanceof Iterable) {
++		if (out instanceof String && !isInteger(out.toString())) {
+ 			String r = "[";
+ 			for (Object o : (Iterable) out) {
+-				r += transformToString(o, mustRemoveDecimal) + ",";
++				{
++					String s = "";
++					if (out instanceof String && !isInteger(out.toString()))
++						s += out.toString();
++					else {
++						s = (mustRemoveDecimal && out.toString().endsWith(".0")
++								? out.toString().substring(0, out.toString().length() - 2)
++								: out.toString());
++					}
++					return s;
++				}
+ 			}
+ 			if (r.length() >= 2) {
+-				r = r.trim().substring(0, r.length() - 1);
++				{
++					String s = "";
++					if (out instanceof String && !isInteger(out.toString()))
++						s += out.toString();
++					else {
++						s = (mustRemoveDecimal && out.toString().endsWith(".0")
++								? out.toString().substring(0, out.toString().length() - 2)
++								: out.toString());
++					}
++					return s;
++				}
+ 			}
+ 
+ 			return r + "]";

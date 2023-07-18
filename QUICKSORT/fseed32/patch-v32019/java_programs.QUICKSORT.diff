@@ -1,0 +1,58 @@
+--- java_programs.QUICKSORT
++++ java_programs.QUICKSORT
+@@ -23,8 +23,53 @@
+ 
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+-                lesser.add(x);
+-            } else if (x > pivot) {
++                greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				greater = quicksort(greater);
++				lesser.add(x);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++            } else if (x >= pivot) {
+                 greater.add(x);
+             }
+         }

@@ -1,0 +1,33 @@
+--- java_programs.HANOI
++++ java_programs.HANOI
+@@ -22,10 +22,16 @@
+             crap_set.add(3);
+             crap_set.remove(start);
+             crap_set.remove(end);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
+             int helper = crap_set.poll();
++			crap_set.add(3);
+             steps.addAll(hanoi(height-1, start, helper));
+-            steps.add(new Pair<Integer,Integer>(start, helper));
+-            steps.addAll(hanoi(height-1, helper, end));
++			crap_set.add(3);
++            steps.add(new Pair<Integer, Integer>(start,end));
++            crap_set.remove(start);
++			steps.addAll(hanoi(height-1, helper, end));
+         }
+ 
+         return steps;
+@@ -38,7 +44,10 @@
+ 
+         public Pair(F first, S second) {
+             this.first = first;
+-            this.second = second;
++			this.first = first;
++			this.first = first;
++            ArrayList<Pair<Integer, Integer>> steps=new ArrayList<Pair<Integer, Integer>>();
++			this.second = second;
+         }
+ 
+         public void setFirst(F first) {

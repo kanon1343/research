@@ -1,0 +1,19 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -100,13 +100,14 @@
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+-        g0                = Double.NaN;
+         g0Positive        = true;
++		pendingEventTime = Double.NaN;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
++        pendingEventTime = Double.NaN;
++		nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 

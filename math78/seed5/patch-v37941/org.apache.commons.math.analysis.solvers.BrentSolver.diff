@@ -1,0 +1,21 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -106,6 +106,7 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
++		int i = 0;
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+             setResult(yMin, 0);
+             return result;
+@@ -288,7 +289,9 @@
+             }
+             // Save old X1, Y1
+             x0 = x1;
+-            y0 = y1;
++            y1 = f.value(x1);
++			y1 = f.value(x1);
++			y0 = y1;
+             // Compute new X1, Y1
+             if (Math.abs(delta) > tolerance) {
+                 x1 = x1 + delta;

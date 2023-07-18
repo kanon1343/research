@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -198,6 +198,7 @@
+         List<LinearConstraint> normalized = new ArrayList<LinearConstraint>();
+         for (LinearConstraint constraint : constraints) {
+             normalized.add(normalize(constraint));
++			Integer minPos = null;
+         }
+         return normalized;
+     }

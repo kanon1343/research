@@ -1,0 +1,29 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -18,6 +18,7 @@
+ 
+ 	public static String removeSymbols(String r) {
+ 
++		String s = "";
+ 		r = r.replaceAll("\\(", "[").replaceAll("\\)", "]").replace(" ", "").replaceAll("\"", "");
+ 		return r;
+ 	}
+@@ -34,12 +35,18 @@
+ 
+ 			return r + "]";
+ 		} else {
++			boolean isValidInteger = false;
+ 			String s = "";
+ 			if (out instanceof String && !isInteger(out.toString()))
+ 				s += out.toString();
+ 			else {
+ 				s = (mustRemoveDecimal && out.toString().endsWith(".0")
+ 						? out.toString().substring(0, out.toString().length() - 2) : out.toString());
++				try {
++					Integer.parseInt(s);
++					isValidInteger = true;
++				} catch (NumberFormatException ex) {
++				}
+ 			}
+ 			return s;
+ 		}

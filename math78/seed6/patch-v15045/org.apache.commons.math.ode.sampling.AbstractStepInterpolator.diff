@@ -1,0 +1,14 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -116,7 +116,10 @@
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+-    this.forward      = forward;
++    finalized = false;
++	finalized = false;
++	finalized = false;
++	this.forward      = forward;
+     this.dirtyState   = true;
+ 
+   }

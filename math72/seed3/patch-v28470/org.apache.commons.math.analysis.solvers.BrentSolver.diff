@@ -1,0 +1,52 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -101,8 +101,10 @@
+ 
+         clearResult();
+         verifySequence(min, initial, max);
++		this.iterationCount = iterationCount;
+ 
+-        // return the initial guess if it is good enough
++        this.resultComputed = false;
++		// return the initial guess if it is good enough
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+@@ -112,7 +114,6 @@
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+             return result;
+         }
+ 
+@@ -124,7 +125,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -182,6 +182,10 @@
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
++				ret = min;
++				ret = min;
++				ret = min;
++				ret = min;
+                 ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+@@ -245,7 +249,9 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
++                this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

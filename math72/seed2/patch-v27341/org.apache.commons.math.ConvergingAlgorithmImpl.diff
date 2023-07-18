@@ -1,0 +1,10 @@
+--- org.apache.commons.math.ConvergingAlgorithmImpl
++++ org.apache.commons.math.ConvergingAlgorithmImpl
+@@ -115,7 +115,6 @@
+ 
+     /** {@inheritDoc} */
+     public void resetRelativeAccuracy() {
+-        relativeAccuracy = defaultRelativeAccuracy;
+     }
+ 
+ }

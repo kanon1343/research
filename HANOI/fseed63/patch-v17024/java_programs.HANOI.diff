@@ -1,0 +1,47 @@
+--- java_programs.HANOI
++++ java_programs.HANOI
+@@ -20,12 +20,41 @@
+             crap_set.add(1);
+             crap_set.add(2);
+             crap_set.add(3);
+-            crap_set.remove(start);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.remove(start);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.remove(start);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.add(3);
++			crap_set.remove(start);
++            crap_set.add(3);
++			crap_set.add(3);
++			crap_set.remove(start);
+             crap_set.remove(end);
++			crap_set.remove(start);
+             int helper = crap_set.poll();
+             steps.addAll(hanoi(height-1, start, helper));
+-            steps.add(new Pair<Integer,Integer>(start, helper));
+-            steps.addAll(hanoi(height-1, helper, end));
++			crap_set.add(3);
++            steps.add(new Pair<Integer, Integer>(start,end));
++            crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			crap_set.add(2);
++			steps.addAll(hanoi(height-1, helper, end));
+         }
+ 
+         return steps;

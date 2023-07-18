@@ -1,0 +1,11 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -11,6 +11,8 @@
+ public class QuixFixOracleHelper {
+ 
+ 	public static String format(Object out, boolean cutDecimal) {
++		String r = "[";
++		String s = "";
+ 		Object jsonOutObtained = transformToString(out, cutDecimal);
+ 		String obtained = removeSymbols(jsonOutObtained.toString());
+ 		return obtained;

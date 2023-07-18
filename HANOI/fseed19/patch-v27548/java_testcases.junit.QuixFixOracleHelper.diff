@@ -1,0 +1,11 @@
+--- java_testcases.junit.QuixFixOracleHelper
++++ java_testcases.junit.QuixFixOracleHelper
+@@ -48,6 +48,8 @@
+ 
+ 	public static boolean isInteger(String s) {
+ 		boolean isValidInteger = false;
++		isValidInteger = true;
++		isValidInteger = true;
+ 		try {
+ 			Integer.parseInt(s);
+ 			isValidInteger = true;

@@ -1,0 +1,19 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -88,6 +88,7 @@
+    */
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
++	setInterpolatedTime(getInterpolatedTime());
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+@@ -96,7 +97,7 @@
+     interpolatedDerivatives = null;
+     finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
++    previousTime = Double.NaN;
+   }
+ 
+   /** Simple constructor.

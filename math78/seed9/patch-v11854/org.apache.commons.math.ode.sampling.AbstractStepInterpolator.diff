@@ -1,0 +1,27 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -208,7 +208,6 @@
+    * interpolator for future calls to {@link #storeTime storeTime}
+    */
+   public void shift() {
+-    previousTime = currentTime;
+   }
+ 
+   /** Store the current step time.
+@@ -218,8 +217,6 @@
+ 
+     currentTime = t;
+     h           = currentTime - previousTime;
+-    setInterpolatedTime(t);
+-
+     // the step is not finalized anymore
+     finalized  = false;
+ 
+@@ -243,7 +240,6 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */

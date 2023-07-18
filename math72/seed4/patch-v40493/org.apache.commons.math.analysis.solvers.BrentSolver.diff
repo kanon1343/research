@@ -1,0 +1,72 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -59,6 +59,9 @@
+      */
+     public BrentSolver() {
+         super(100, 1E-6);
++		this.defaultFunctionValueAccuracy = 1.0e-15;
++		this.defaultFunctionValueAccuracy = 1.0e-15;
++		this.defaultFunctionValueAccuracy = 1.0e-15;
+     }
+ 
+     /** {@inheritDoc} */
+@@ -106,13 +109,13 @@
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            this.defaultFunctionValueAccuracy = 1.0e-15;
++			return result;
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+             return result;
+         }
+ 
+@@ -124,7 +127,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -179,9 +181,9 @@
+             // check if either value is close to a zero
+             if (Math.abs(yMin) <= functionValueAccuracy) {
+                 setResult(min, 0);
+-                ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+-                setResult(max, 0);
++                this.f = f;
++				setResult(max, 0);
+                 ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+@@ -226,7 +228,12 @@
+                          double x2, double y2)
+     throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        double delta = x1 - x0;
++        clearResult();
++		clearResult();
++		clearResult();
++		clearResult();
++		clearResult();
++		double delta = x1 - x0;
+         double oldDelta = delta;
+ 
+         int i = 0;
+@@ -245,7 +252,8 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
++                x1 = x2;
++				return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

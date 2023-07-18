@@ -1,0 +1,25 @@
+--- java_programs.QUICKSORT
++++ java_programs.QUICKSORT
+@@ -14,17 +14,20 @@
+ public class QUICKSORT {
+     public static ArrayList<Integer> quicksort(ArrayList<Integer> arr) {
+         if (arr.isEmpty()) {
+-            return new ArrayList<Integer>();
++            ArrayList<Integer> greater=new ArrayList<Integer>();
++			return new ArrayList<Integer>();
+         }
+ 
+         Integer pivot = arr.get(0);
+         ArrayList<Integer> lesser = new ArrayList<Integer>();
++		lesser = quicksort(lesser);
+         ArrayList<Integer> greater = new ArrayList<Integer>();
++		greater = quicksort(greater);
+ 
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
++            } else if (x >= pivot) {
+                 greater.add(x);
+             }
+         }

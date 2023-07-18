@@ -1,0 +1,29 @@
+--- java_programs.QUICKSORT
++++ java_programs.QUICKSORT
+@@ -24,14 +24,24 @@
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
+-                greater.add(x);
++            } else if (x >= pivot) {
++                greater = quicksort(greater);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				lesser = quicksort(lesser);
++				greater.add(x);
+             }
+         }
+         ArrayList<Integer> middle = new ArrayList<Integer>();
+         middle.add(pivot);
+         lesser = quicksort(lesser);
++		greater = quicksort(greater);
++		lesser = quicksort(lesser);
+         greater = quicksort(greater);
++		lesser = quicksort(lesser);
+         middle.addAll(greater);
+         lesser.addAll(middle);
+         return lesser;

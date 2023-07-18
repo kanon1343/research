@@ -1,0 +1,20 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -94,6 +94,7 @@
+     public EventState(final EventHandler handler, final double maxCheckInterval,
+                       final double convergence, final int maxIterationCount) {
+         this.handler           = handler;
++		pendingEvent = true;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+@@ -174,7 +175,8 @@
+             final int    n  = Math.max(1, (int) Math.ceil(Math.abs(t1 - t0) / maxCheckInterval));
+             final double h  = (t1 - t0) / n;
+ 
+-            double ta = t0;
++            final double t0 = interpolator.getPreviousTime();
++			double ta = t0;
+             double ga = g0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {

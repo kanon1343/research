@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ruleset name="customruleset">
+    <description>
+    static code analysis for kGenProg Java source code by PMD
+    </description>
+    <rule ref="category/java/bestpractices.xml/UnusedLocalVariable" 
+        message="使用されない変数">
+    </rule>
+    <rule ref="category/java/codestyle.xml/EmptyControlStatement"
+        message="空のブロック" >
+    </rule>
+</ruleset>
+
+
+

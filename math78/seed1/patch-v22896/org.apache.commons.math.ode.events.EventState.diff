@@ -1,0 +1,30 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -98,8 +98,7 @@
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+ 
+-        // some dummy values ...
+-        t0                = Double.NaN;
++        increasing = true;
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+@@ -197,9 +196,6 @@
+                         // about bracketing
+                             // this should never happen
+                          
+-                    // variation direction, with respect to the integration direction
+-                    increasing = gb >= ga;
+-
+                     final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+@@ -213,7 +209,6 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
