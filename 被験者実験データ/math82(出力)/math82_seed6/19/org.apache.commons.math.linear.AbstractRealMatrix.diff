@@ -1,0 +1,38 @@
+--- org.apache.commons.math.linear.AbstractRealMatrix
++++ org.apache.commons.math.linear.AbstractRealMatrix
+@@ -41,7 +41,6 @@
+      * Creates a matrix with no data
+      */
+     protected AbstractRealMatrix() {
+-        lu = null;
+     }
+ 
+     /**
+@@ -63,7 +62,6 @@
+                     "invalid column dimension {0} (must be positive)",
+                     columnDimension);
+         }
+-        lu = null;
+     }
+ 
+     /** {@inheritDoc} */
+@@ -399,10 +397,8 @@
+             for (int j = 0; j < nCols; ++j) {
+                 setEntry(row + i, column + j, subMatrix[i][j]);
+             }
+-        } 
++        }
+ 
+-        lu = null;
+-
+     }
+ 
+     /** {@inheritDoc} */
+@@ -788,7 +784,6 @@
+                 setEntry(row, column, newValue);
+             }
+         }
+-        lu = null;
+         return visitor.end();
+     }
+ 

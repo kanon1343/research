@@ -1,0 +1,61 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -102,7 +102,6 @@
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+         g0Positive        = true;
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+@@ -181,8 +180,41 @@
+ 
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+-                interpolator.setInterpolatedTime(tb);
++                pendingEventTime = Double.NaN;
++				interpolator.setInterpolatedTime(tb);
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				final double[] y = interpolator.getInterpolatedState();
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
+ 
+                 // check events occurrence
+                 if (g0Positive ^ (gb >= 0)) {
+@@ -323,7 +355,6 @@
+         if (nextAction == EventHandler.RESET_STATE) {
+             handler.resetState(t, y);
+         }
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+ 
+         return (nextAction == EventHandler.RESET_STATE) ||

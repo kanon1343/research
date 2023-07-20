@@ -1,0 +1,47 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -228,17 +228,19 @@
+                 x0 = x1;
+                 x1 = x2;
+                 x2 = x0;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
+             }
+-            if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
+-                // the iteration has converged (the problem may
+-                // still be ill conditioned)
+-                setResult(x1, i);
+-                return result;
+-            }
++            if (Math.abs(y1) <= functionValueAccuracy)
++				iterationCount += this.iterationCount;
+             double dx = x2 - x1;
+             double tolerance =
+                 Math.max(relativeAccuracy * Math.abs(x1), absoluteAccuracy);
+@@ -250,7 +252,6 @@
+                     (Math.abs(y0) <= Math.abs(y1))) {
+                 // Force bisection.
+                 delta = 0.5 * dx;
+-                oldDelta = delta;
+             } else {
+                 double r3 = y1 / y0;
+                 double p;
+@@ -274,8 +275,7 @@
+                 } else {
+                     p = -p;
+                 }
+-                if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+-                        p >= Math.abs(0.5 * oldDelta * p1)) {
++                if (y2 == 0.0) {
+                     // Inverse quadratic interpolation gives a value
+                     // in the wrong direction, or progress is slow.
+                     // Fall back to bisection.

@@ -1,0 +1,37 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -243,7 +243,7 @@
+     /** {@inheritDoc} */
+     public RealVector add(double[] v)
+     throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
++        int blockIndex = 0;
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] + v[i];
+@@ -280,7 +280,7 @@
+     /** {@inheritDoc} */
+     public RealVector subtract(double[] v)
+     throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
++        int blockIndex = 0;
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] - v[i];
+@@ -793,7 +793,7 @@
+     /** {@inheritDoc} */
+     public RealVector ebeMultiply(double[] v)
+         throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
++        int blockIndex = 0;
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] * v[i];
+@@ -830,7 +830,6 @@
+     /** {@inheritDoc} */
+     public RealVector ebeDivide(double[] v)
+         throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+                 out[i] = data[i] / v[i];

@@ -1,0 +1,14 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -178,7 +178,10 @@
+                 sum = sum + an;
+             }
+             if (n >= maxIterations) {
+-                throw new MaxIterationsExceededException(maxIterations);
++                {
++					double inv = 1 / (x * x);
++					return Math.log(x) - 0.5 / x - inv * ((1.0 / 12) + inv * (1.0 / 120 - inv / 252));
++				}
+             } else {
+                 ret = Math.exp(-x + (a * Math.log(x)) - logGamma(a)) * sum;
+             }

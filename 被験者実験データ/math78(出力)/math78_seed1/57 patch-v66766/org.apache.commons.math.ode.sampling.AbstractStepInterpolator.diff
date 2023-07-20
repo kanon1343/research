@@ -1,0 +1,120 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -94,9 +94,30 @@
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
++    currentTime = Double.NaN;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
+   }
+ 
+   /** Simple constructor.
+@@ -112,12 +133,73 @@
+     interpolatedTime  = Double.NaN;
+ 
+     currentState            = y;
+-    interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+-    this.forward      = forward;
++    dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	this.forward      = forward;
+     this.dirtyState   = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
+ 
+   }
+ 
+@@ -218,8 +300,6 @@
+ 
+     currentTime = t;
+     h           = currentTime - previousTime;
+-    setInterpolatedTime(t);
+-
+     // the step is not finalized anymore
+     finalized  = false;
+ 

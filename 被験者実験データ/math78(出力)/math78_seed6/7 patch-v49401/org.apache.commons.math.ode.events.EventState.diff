@@ -1,0 +1,48 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -97,6 +97,19 @@
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		pendingEvent = true;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+@@ -170,7 +183,24 @@
+         try {
+ 
+             forward = interpolator.isForward();
+-            final double t1 = interpolator.getCurrentTime();
++            nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			nextAction = EventHandler.CONTINUE;
++			final double t1 = interpolator.getCurrentTime();
+             final int    n  = Math.max(1, (int) Math.ceil(Math.abs(t1 - t0) / maxCheckInterval));
+             final double h  = (t1 - t0) / n;
+ 

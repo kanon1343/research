@@ -1,0 +1,10 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -212,6 +212,7 @@
+                             }
+                         }
+                     };
++					previousEventTime = Double.NaN;
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);

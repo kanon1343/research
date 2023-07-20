@@ -1,0 +1,27 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -1136,8 +1136,22 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
++                    --j;
++					--j;
++					--j;
++					--j;
++					--j;
++					--j;
++					--j;
++					--j;
++					--j;
++					--j;
++					--j;
++					--j;
++					--j;
++					--j;
++					--j;
++					double xNormSqr = 0;
+                 }
+                 j -= 4;
+             }

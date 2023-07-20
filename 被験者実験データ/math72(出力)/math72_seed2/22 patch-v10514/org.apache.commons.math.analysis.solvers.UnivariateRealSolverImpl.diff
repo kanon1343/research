@@ -1,0 +1,22 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -78,6 +78,7 @@
+         this.f = f;
+         this.defaultFunctionValueAccuracy = 1.0e-15;
+         this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		int i = 0;
+     }
+ 
+     /**
+@@ -246,10 +247,7 @@
+ 
+         verifyInterval(lower, upper);
+         if (!isBracketing(lower, upper, function)) {
+-            throw MathRuntimeException.createIllegalArgumentException(
+-                    "function values at endpoints do not have different signs.  " +
+-                    "Endpoints: [{0}, {1}], Values: [{2}, {3}]",
+-                    lower, upper, function.value(lower), function.value(upper));
++            this.resultComputed = true;
+         }
+     }
+ }

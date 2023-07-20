@@ -1,0 +1,47 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -99,7 +99,6 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+@@ -111,7 +110,7 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
++        if (f == null) {
+             setResult(yMin, 0);
+             return result;
+         }
+@@ -124,7 +123,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -165,7 +163,6 @@
+         throws MaxIterationsExceededException,
+         FunctionEvaluationException {
+ 
+-        clearResult();
+         verifyInterval(min, max);
+ 
+         double ret = Double.NaN;
+@@ -241,11 +238,6 @@
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
+-                // the iteration has converged (the problem may
+-                // still be ill conditioned)
+-                setResult(x1, i);
+-                return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

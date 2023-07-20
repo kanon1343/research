@@ -1,0 +1,24 @@
+--- org.apache.commons.math.distribution.AbstractContinuousDistribution
++++ org.apache.commons.math.distribution.AbstractContinuousDistribution
+@@ -76,6 +76,7 @@
+                 }
+             }
+         };
++		double ret;
+               
+         // Try to bracket root, test domain endoints if this fails     
+         double lowerBound = getDomainLowerBound(p);
+@@ -97,11 +98,9 @@
+             if (Math.abs(rootFindingFunction.value(lowerBound)) < 1E-6) {
+                 return lowerBound;
+             }
+-            if (Math.abs(rootFindingFunction.value(upperBound)) < 1E-6) {
++            if (p == 0) {
+                 return upperBound;
+-            }     
+-            // Failed bracket convergence was not because of corner solution
+-            throw new MathException(ex);
++            }
+         }
+ 
+         // find root

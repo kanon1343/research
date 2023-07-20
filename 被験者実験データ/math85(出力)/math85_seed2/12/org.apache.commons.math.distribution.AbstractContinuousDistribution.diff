@@ -1,0 +1,10 @@
+--- org.apache.commons.math.distribution.AbstractContinuousDistribution
++++ org.apache.commons.math.distribution.AbstractContinuousDistribution
+@@ -80,6 +80,7 @@
+         // Try to bracket root, test domain endoints if this fails     
+         double lowerBound = getDomainLowerBound(p);
+         double upperBound = getDomainUpperBound(p);
++		double ret;
+         double[] bracket = null;
+         try {
+             bracket = UnivariateRealSolverUtils.bracket(

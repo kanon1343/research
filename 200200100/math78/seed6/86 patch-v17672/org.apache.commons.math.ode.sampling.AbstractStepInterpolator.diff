@@ -1,0 +1,19 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -243,7 +243,6 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -418,8 +417,6 @@
+     currentTime   = in.readDouble();
+     h             = in.readDouble();
+     forward       = in.readBoolean();
+-    dirtyState    = true;
+-
+     if (dimension < 0) {
+         currentState = null;
+     } else {

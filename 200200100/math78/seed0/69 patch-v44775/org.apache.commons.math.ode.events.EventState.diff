@@ -1,0 +1,38 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -94,9 +94,16 @@
+     public EventState(final EventHandler handler, final double maxCheckInterval,
+                       final double convergence, final int maxIterationCount) {
+         this.handler           = handler;
++		g0Positive = true;
++		g0Positive = true;
++		g0Positive = true;
++		pendingEvent = false;
++		g0Positive = true;
++		g0Positive = true;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
++		pendingEventTime = Double.NaN;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+@@ -105,7 +112,7 @@
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+-        increasing        = true;
++        g0Positive = g0 >= 0;
+         nextAction        = EventHandler.CONTINUE;
+ 
+     }
+@@ -203,7 +210,8 @@
+                     final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+-                                interpolator.setInterpolatedTime(t);
++                                nextAction = EventHandler.CONTINUE;
++								interpolator.setInterpolatedTime(t);
+                                 return handler.g(t, interpolator.getInterpolatedState());
+                             } catch (DerivativeException e) {
+                                 throw new FunctionEvaluationException(e, t);

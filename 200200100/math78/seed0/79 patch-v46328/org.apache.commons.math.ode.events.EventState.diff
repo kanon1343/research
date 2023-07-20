@@ -1,0 +1,34 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -94,9 +94,13 @@
+     public EventState(final EventHandler handler, final double maxCheckInterval,
+                       final double convergence, final int maxIterationCount) {
+         this.handler           = handler;
++		g0Positive = true;
++		g0Positive = true;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+@@ -213,7 +217,6 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+@@ -231,9 +234,6 @@
+                             // properly ends exactly at the event occurrence
+                             return false;
+                         }
+-                        // either we were not waiting for the event or it has
+-                        // moved in such a way the step cannot be accepted
+-                        pendingEvent = true;
+                         return true;
+                     }
+ 

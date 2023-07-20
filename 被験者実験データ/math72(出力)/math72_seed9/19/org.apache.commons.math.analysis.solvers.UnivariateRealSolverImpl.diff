@@ -1,0 +1,40 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -72,6 +72,37 @@
+                                        final int defaultMaximalIterationCount,
+                                        final double defaultAbsoluteAccuracy) {
+         super(defaultMaximalIterationCount, defaultAbsoluteAccuracy);
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		resultComputed = true;
++		resultComputed = true;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		resultComputed = true;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		resultComputed = true;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		resultComputed = true;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
+         if (f == null) {
+             throw MathRuntimeException.createIllegalArgumentException("function to solve cannot be null");
+         }

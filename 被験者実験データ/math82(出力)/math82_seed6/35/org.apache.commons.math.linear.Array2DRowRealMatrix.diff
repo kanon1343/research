@@ -1,0 +1,10 @@
+--- org.apache.commons.math.linear.Array2DRowRealMatrix
++++ org.apache.commons.math.linear.Array2DRowRealMatrix
+@@ -365,6 +365,7 @@
+         throws MatrixIndexException {
+         try {
+             data[row][column] = value;
++			MatrixUtils.checkColumnIndex(this, column);
+         } catch (ArrayIndexOutOfBoundsException e) {
+             throw new MatrixIndexException(
+                     "no entry at indices ({0}, {1}) in a {2}x{3} matrix",

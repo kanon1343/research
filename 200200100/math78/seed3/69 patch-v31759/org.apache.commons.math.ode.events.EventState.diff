@@ -1,0 +1,35 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -101,7 +101,6 @@
+         // some dummy values ...
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+-        g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+@@ -150,7 +149,6 @@
+         throws EventException {
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+-        g0Positive = g0 >= 0;
+     }
+ 
+     /** Evaluate the impact of the proposed step on the event handler.
+@@ -241,13 +239,15 @@
+                     // no sign change: there is no event for now
+                     ta = tb;
+                     ga = gb;
++					g0Positive = increasing;
+                 }
+ 
+             }
+ 
+             // no event during the whole step
+             pendingEvent     = false;
+-            pendingEventTime = Double.NaN;
++            previousEventTime = Double.NaN;
++			pendingEventTime = Double.NaN;
+             return false;
+ 
+         } catch (FunctionEvaluationException e) {

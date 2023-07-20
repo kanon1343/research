@@ -1,0 +1,20 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -94,8 +94,8 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
++        verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+         double yInitial = f.value(initial);
+@@ -229,7 +229,6 @@
+                 x1 = x2;
+                 x2 = x0;
+                 y0 = y1;
+-                y1 = y2;
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {

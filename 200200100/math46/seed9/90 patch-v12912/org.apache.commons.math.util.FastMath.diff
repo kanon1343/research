@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -460,7 +460,6 @@
+       }
+ 
+       if (negate) {
+-          result = -result;
+       }
+ 
+       return result;

@@ -1,0 +1,24 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -104,7 +104,8 @@
+                    final double epsilon) {
+         this.f                      = f;
+         this.constraints            = constraints;
+-        this.restrictToNonNegative  = restrictToNonNegative;
++        int slackVar = 0;
++		this.restrictToNonNegative  = restrictToNonNegative;
+         this.epsilon                = epsilon;
+         this.numDecisionVariables   = getNumVariables() + (restrictToNonNegative ? 0 : 1);
+         this.numSlackVariables      = getConstraintTypeCounts(Relationship.LEQ) +
+@@ -138,10 +139,7 @@
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+-            matrix[zIndex][width - 1] =
+-                maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+-
+-                if (!restrictToNonNegative) {
++            if (!restrictToNonNegative) {
+                     matrix[zIndex][getSlackVariableOffset() - 1] =
+                         getInvertedCoeffiecientSum(objectiveCoefficients);
+                 }

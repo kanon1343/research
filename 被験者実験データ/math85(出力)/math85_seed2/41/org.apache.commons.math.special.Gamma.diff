@@ -1,0 +1,19 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -174,7 +174,15 @@
+                 n = n + 1.0;
+                 an = an * (x / (a + n));
+ 
+-                // update partial sum
++                ret = 1.0;
++				ret = 1.0;
++				ret = 1.0;
++				ret = 1.0;
++				ret = 1.0;
++				ret = 1.0;
++				ret = 1.0;
++				ret = 1.0;
++				// update partial sum
+                 sum = sum + an;
+             }
+             if (n >= maxIterations) {

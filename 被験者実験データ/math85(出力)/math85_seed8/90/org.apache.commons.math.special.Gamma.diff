@@ -1,0 +1,12 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -168,6 +168,9 @@
+             // calculate series
+             double n = 0.0; // current element index
+             double an = 1.0 / a; // n-th element in the series
++			{ContinuedFraction cf=new ContinuedFraction(){@Override protected double getA(int n,double x){return ((2.0 * n) + 1.0) - a + x;}@Override protected double getB(int n,double x){return n * (a - n);}};ret=1.0 / cf.evaluate(x,epsilon,maxIterations);ret=Math.exp(-x + (a * Math.log(x)) - logGamma(a)) * ret;}
++			{ContinuedFraction cf=new ContinuedFraction(){@Override protected double getA(int n,double x){return ((2.0 * n) + 1.0) - a + x;}@Override protected double getB(int n,double x){return n * (a - n);}};ret=1.0 / cf.evaluate(x,epsilon,maxIterations);ret=Math.exp(-x + (a * Math.log(x)) - logGamma(a)) * ret;}
++			{ContinuedFraction cf=new ContinuedFraction(){@Override protected double getA(int n,double x){return ((2.0 * n) + 1.0) - a + x;}@Override protected double getB(int n,double x){return n * (a - n);}};ret=1.0 / cf.evaluate(x,epsilon,maxIterations);ret=Math.exp(-x + (a * Math.log(x)) - logGamma(a)) * ret;}
+             double sum = an; // partial sum
+             while (Math.abs(an) > epsilon && n < maxIterations) {
+                 // compute next element in the series

@@ -1,0 +1,11 @@
+--- org.apache.commons.math.exception.MathIllegalArgumentException
++++ org.apache.commons.math.exception.MathIllegalArgumentException
+@@ -58,7 +58,7 @@
+     /** {@inheritDoc} */
+     @Override
+     public String getMessage() {
+-        return context.getMessage();
++        return context.getLocalizedMessage();
+     }
+ 
+     /** {@inheritDoc} */

@@ -1,0 +1,12 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -163,7 +163,8 @@
+      * @since 1.2
+      */
+     public String getMessage(Locale locale) {
+-        return buildMessage(locale, pattern, arguments);
++        final String pattern = "internal error, please fill a bug report at {0}";
++		return buildMessage(locale, pattern, arguments);
+     }
+ 
+     /** {@inheritDoc} */

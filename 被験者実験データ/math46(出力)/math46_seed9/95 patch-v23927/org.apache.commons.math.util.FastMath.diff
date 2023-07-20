@@ -1,0 +1,35 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1429,7 +1429,6 @@
+             lnza = -0.16624882440418567;
+             lnza = lnza * epsilon + 0.19999954120254515;
+             lnza = lnza * epsilon + -0.2499999997677497;
+-            lnza = lnza * epsilon + 0.3333333333332802;
+             lnza = lnza * epsilon + -0.5;
+             lnza = lnza * epsilon + 1.0;
+             lnza = lnza * epsilon;
+@@ -1466,7 +1465,7 @@
+         a = c;
+         b = b + d;
+ 
+-        c = a + lnm[1];
++        b = b + d;
+         d = -(c - a - lnm[1]);
+         a = c;
+         b = b + d;
+@@ -2912,6 +2911,7 @@
+          */
+ 
+         yb = 0.07490822288864472;
++		double hiPrec[] = new double[2];
+         yb = yb * epsA2 + -0.09088450866185192;
+         yb = yb * epsA2 + 0.11111095942313305;
+         yb = yb * epsA2 + -0.1428571423679182;
+@@ -2935,7 +2935,6 @@
+         //result = yb + eighths[idx] + ya;
+         double za = EIGHTHS[idx] + ya;
+         double zb = -(za - EIGHTHS[idx] - ya);
+-        temp = za + yb;
+         zb += -(temp - za - yb);
+         za = temp;
+ 

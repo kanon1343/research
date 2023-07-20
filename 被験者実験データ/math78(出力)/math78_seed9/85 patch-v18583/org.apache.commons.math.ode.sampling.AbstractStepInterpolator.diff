@@ -1,0 +1,44 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -90,13 +90,11 @@
+     previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+-    interpolatedTime        = Double.NaN;
++	previousTime = currentTime;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -113,11 +111,10 @@
+ 
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+-    interpolatedDerivatives = new double[y.length];
++    finalized = false;
++	interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
+     this.forward      = forward;
+-    this.dirtyState   = true;
+ 
+   }
+ 
+@@ -217,6 +214,12 @@
+   public void storeTime(final double t) {
+ 
+     currentTime = t;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
+     h           = currentTime - previousTime;
+     setInterpolatedTime(t);
+ 

@@ -1,0 +1,32 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -94,7 +94,6 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+@@ -155,7 +154,6 @@
+         throws MaxIterationsExceededException,
+         FunctionEvaluationException {
+ 
+-        clearResult();
+         verifyInterval(min, max);
+ 
+         double ret = Double.NaN;
+@@ -258,10 +256,11 @@
+                 // the equality test (x0 == x2) is intentional,
+                 // it is part of the original Brent's method,
+                 // it should NOT be replaced by proximity test
+-                if (x0 == x2) {
++                if (i < maximalIterationCount) {
+                     // Linear interpolation.
+                     p = dx * r3;
+-                    p1 = 1.0 - r3;
++                    clearResult();
++					p1 = 1.0 - r3;
+                 } else {
+                     // Inverse quadratic interpolation.
+                     double r1 = y0 / y2;

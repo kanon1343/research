@@ -1,0 +1,26 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -123,7 +123,6 @@
+         values = new double[capacity];
+         states = new byte[capacity];
+         this.missingEntries = missingEntries;
+-        mask   = capacity - 1;
+     }
+ 
+     /**
+@@ -139,7 +138,6 @@
+         states = new byte[length];
+         System.arraycopy(source.states, 0, states, 0, length);
+         missingEntries = source.missingEntries;
+-        size  = source.size;
+         mask  = source.mask;
+         count = source.count;
+     }
+@@ -396,7 +394,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 

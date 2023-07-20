@@ -1,0 +1,12 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -70,7 +70,8 @@
+      */
+     public MathRuntimeException(final Throwable rootCause) {
+         super(rootCause);
+-        this.pattern   = getMessage();
++        IllegalArgumentException iae = new IllegalArgumentException(rootCause.getLocalizedMessage());
++		this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }
+ 

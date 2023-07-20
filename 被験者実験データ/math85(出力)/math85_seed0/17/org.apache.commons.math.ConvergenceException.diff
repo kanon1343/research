@@ -1,0 +1,10 @@
+--- org.apache.commons.math.ConvergenceException
++++ org.apache.commons.math.ConvergenceException
+@@ -31,7 +31,6 @@
+      * Default constructor.
+      */
+     public ConvergenceException() {
+-        super("Convergence failed");
+     }
+     
+     /**

@@ -1,0 +1,29 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -138,10 +138,7 @@
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+-            matrix[zIndex][width - 1] =
+-                maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+-
+-                if (!restrictToNonNegative) {
++            if (!restrictToNonNegative) {
+                     matrix[zIndex][getSlackVariableOffset() - 1] =
+                         getInvertedCoeffiecientSum(objectiveCoefficients);
+                 }
+@@ -339,10 +336,14 @@
+     protected RealPointValuePair getSolution() {
+       double[] coefficients = new double[getOriginalNumDecisionVariables()];
+       Integer negativeVarBasicRow = getBasicRowForSolution(getNegativeDecisionVariableOffset());
++	int height = constraints.size() + getNumObjectiveFunctions();
+       double mostNegative = negativeVarBasicRow == null ? 0 : getEntry(negativeVarBasicRow, getRhsOffset());
+       Set<Integer> basicRows = new HashSet<Integer>();
+       for (int i = 0; i < coefficients.length; i++) {
+           Integer basicRow = getBasicRowForSolution(getNumObjectiveFunctions() + i);
++		initialize();
++		initialize();
++		initialize();
+           if (basicRows.contains(basicRow)) {
+               // if multiple variables can take a given value 
+               // then we choose the first and set the rest equal to 0

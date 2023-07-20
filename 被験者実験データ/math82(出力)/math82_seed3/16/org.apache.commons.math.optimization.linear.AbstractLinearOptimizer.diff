@@ -1,0 +1,27 @@
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -60,6 +60,13 @@
+      */
+     protected AbstractLinearOptimizer() {
+         setMaxIterations(DEFAULT_MAX_ITERATIONS);
++		this.restrictToNonNegative = restrictToNonNegative;
++		iterations = 0;
++		iterations = 0;
++		this.restrictToNonNegative = restrictToNonNegative;
++		iterations = 0;
++		iterations = 0;
++		this.restrictToNonNegative = restrictToNonNegative;
+     }
+ 
+     /** {@inheritDoc} */
+@@ -98,7 +105,9 @@
+         this.f                     = f;
+         this.constraints           = constraints;
+         this.goalType              = goalType;
+-        this.restrictToNonNegative = restrictToNonNegative;
++        iterations = 0;
++		iterations = 0;
++		this.restrictToNonNegative = restrictToNonNegative;
+ 
+         iterations  = 0;
+ 

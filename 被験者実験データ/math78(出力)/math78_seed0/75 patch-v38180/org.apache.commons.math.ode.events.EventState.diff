@@ -1,0 +1,13 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -96,7 +96,9 @@
+         this.handler           = handler;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+-        this.maxIterationCount = maxIterationCount;
++        pendingEvent = true;
++		pendingEvent = true;
++		this.maxIterationCount = maxIterationCount;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;

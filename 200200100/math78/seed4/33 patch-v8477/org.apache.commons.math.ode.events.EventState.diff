@@ -1,0 +1,20 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -197,14 +197,13 @@
+                         // about bracketing
+                             // this should never happen
+                          
+-                    // variation direction, with respect to the integration direction
+-                    increasing = gb >= ga;
+-
+                     final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+                                 interpolator.setInterpolatedTime(t);
+-                                return handler.g(t, interpolator.getInterpolatedState());
++                                pendingEvent = false;
++								pendingEvent = false;
++								return handler.g(t, interpolator.getInterpolatedState());
+                             } catch (DerivativeException e) {
+                                 throw new FunctionEvaluationException(e, t);
+                             } catch (EventException e) {

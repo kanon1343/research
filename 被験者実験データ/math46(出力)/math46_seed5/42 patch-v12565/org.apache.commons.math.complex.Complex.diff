@@ -1,0 +1,45 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -256,8 +256,23 @@
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            final double d = divisor.getImaginary();
++			double imaginary2 = 2.0 * imaginary;
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -289,12 +304,13 @@
+      * @see #divide(Complex)
+      */
+     public Complex divide(double divisor) {
+-        if (isNaN || Double.isNaN(divisor)) {
++        if (isInfinite()) {
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;

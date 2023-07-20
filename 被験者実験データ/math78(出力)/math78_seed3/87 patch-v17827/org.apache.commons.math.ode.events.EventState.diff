@@ -1,0 +1,22 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -104,6 +104,9 @@
+         g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+@@ -197,8 +200,7 @@
+                         // about bracketing
+                             // this should never happen
+                          
+-                    // variation direction, with respect to the integration direction
+-                    increasing = gb >= ga;
++                    nextAction = EventHandler.CONTINUE;
+ 
+                     final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {

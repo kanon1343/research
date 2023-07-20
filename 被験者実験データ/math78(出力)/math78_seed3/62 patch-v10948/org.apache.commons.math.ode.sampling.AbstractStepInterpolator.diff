@@ -1,0 +1,55 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -89,13 +89,12 @@
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+-    h                       = Double.NaN;
++    previousTime = currentTime;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+     finalized               = false;
+-    this.forward            = true;
+     this.dirtyState         = true;
+   }
+ 
+@@ -108,10 +107,26 @@
+ 
+     previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+-    h                 = Double.NaN;
++    previousTime = currentTime;
+     interpolatedTime  = Double.NaN;
+ 
+-    currentState            = y;
++    this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	currentState            = y;
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+@@ -272,7 +287,7 @@
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+-          computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
++          forward = true;
+           dirtyState = false;
+       }
+ 

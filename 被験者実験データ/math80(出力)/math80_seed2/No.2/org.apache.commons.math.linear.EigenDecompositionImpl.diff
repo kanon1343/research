@@ -1,0 +1,20 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -836,9 +836,6 @@
+             return;
+         }
+ 
+-        // initial checks for splits (see Parlett & Marques section 3.3)
+-        flipIfWarranted(n, 2);
+-
+         // two iterations with Li's test for initial splits
+         initialSplits(n);
+ 
+@@ -1103,7 +1100,6 @@
+                     } else {
+                         // early failure. Divide by 4.
+                         tau *= 0.25;
+-                        tType -= 12;
+                     }
+                 } else if (Double.isNaN(dMin)) {
+                     tau = 0.0;

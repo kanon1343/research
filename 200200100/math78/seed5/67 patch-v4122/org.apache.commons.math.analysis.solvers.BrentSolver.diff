@@ -1,0 +1,20 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -288,7 +288,8 @@
+             }
+             // Save old X1, Y1
+             x0 = x1;
+-            y0 = y1;
++            y1 = f.value(x1);
++			y0 = y1;
+             // Compute new X1, Y1
+             if (Math.abs(delta) > tolerance) {
+                 x1 = x1 + delta;
+@@ -304,7 +305,6 @@
+                 delta = x1 - x0;
+                 oldDelta = delta;
+             }
+-            i++;
+         }
+         throw new MaxIterationsExceededException(maximalIterationCount);
+     }

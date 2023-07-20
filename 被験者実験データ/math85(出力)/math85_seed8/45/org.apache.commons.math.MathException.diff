@@ -1,0 +1,11 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -169,7 +169,7 @@
+     /** {@inheritDoc} */
+     @Override
+     public String getLocalizedMessage() {
+-        return getMessage(Locale.getDefault());
++        return pattern;
+     }
+ 
+     /**

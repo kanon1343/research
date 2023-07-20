@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -94,7 +94,8 @@
+                                        final GoalType goalType, final boolean restrictToNonNegative)
+          throws OptimizationException {
+ 
+-        // store linear problem characteristics
++        Integer row = null;
++		// store linear problem characteristics
+         this.f                     = f;
+         this.constraints           = constraints;
+         this.goalType              = goalType;

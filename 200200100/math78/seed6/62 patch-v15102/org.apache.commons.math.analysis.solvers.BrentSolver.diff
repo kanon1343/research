@@ -1,0 +1,12 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -261,7 +261,8 @@
+                 if (x0 == x2) {
+                     // Linear interpolation.
+                     p = dx * r3;
+-                    p1 = 1.0 - r3;
++                    iterationCount += this.iterationCount;
++					p1 = 1.0 - r3;
+                 } else {
+                     // Inverse quadratic interpolation.
+                     double r1 = y0 / y2;

@@ -1,0 +1,22 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -104,6 +104,8 @@
+         g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
++		previousEventTime = Double.NaN;
++		previousEventTime = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+@@ -247,7 +249,9 @@
+ 
+             // no event during the whole step
+             pendingEvent     = false;
+-            pendingEventTime = Double.NaN;
++            previousEventTime = Double.NaN;
++			previousEventTime = Double.NaN;
++			pendingEventTime = Double.NaN;
+             return false;
+ 
+         } catch (FunctionEvaluationException e) {

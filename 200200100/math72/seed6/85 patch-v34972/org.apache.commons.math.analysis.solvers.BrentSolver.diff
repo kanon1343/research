@@ -1,0 +1,75 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -99,7 +99,6 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+@@ -109,22 +108,23 @@
+             return result;
+         }
+ 
+-        // return the first endpoint if it is good enough
++        clearResult();
++		// return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+             return result;
+         }
+ 
+         // reduce interval if min and initial bracket the root
+         if (yInitial * yMin < 0) {
+-            return solve(f, min, yMin, initial, yInitial, min, yMin);
++            throw new MaxIterationsExceededException(maximalIterationCount);
+         }
+ 
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
++            verifyInterval(min, max);
++			int i = 1;
+             return result;
+         }
+ 
+@@ -181,7 +181,6 @@
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+-                setResult(max, 0);
+                 ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+@@ -241,10 +240,12 @@
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
++                oldDelta = delta;
++				// Avoid division by very small values. Assume
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
++				x1 = x2;
+                 return result;
+             }
+             double dx = x2 - x1;
+@@ -306,6 +307,14 @@
+                 x1 = x1 - 0.5 * tolerance;
+             }
+             y1 = f.value(x1);
++			{
++				delta = 0.5 * dx;
++				oldDelta = delta;
++			}
++			{
++				delta = 0.5 * dx;
++				oldDelta = delta;
++			}
+             if ((y1 > 0) == (y2 > 0)) {
+                 x2 = x0;
+                 y2 = y0;

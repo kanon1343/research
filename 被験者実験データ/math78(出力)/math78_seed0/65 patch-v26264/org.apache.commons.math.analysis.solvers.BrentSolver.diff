@@ -1,0 +1,61 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -263,7 +263,57 @@
+                     p = dx * r3;
+                     p1 = 1.0 - r3;
+                 } else {
+-                    // Inverse quadratic interpolation.
++                    y0 = y1;
++					delta = 0.5 * oldDelta;
++					x1 = x1 + 0.5 * tolerance;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					delta = 0.5 * oldDelta;
++					// Inverse quadratic interpolation.
+                     double r1 = y0 / y2;
+                     double r2 = y1 / y2;
+                     p = r3 * (dx * r1 * (r1 - r2) - (x1 - x0) * (r2 - 1.0));

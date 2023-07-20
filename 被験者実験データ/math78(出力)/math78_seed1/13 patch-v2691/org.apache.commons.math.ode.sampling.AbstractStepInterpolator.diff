@@ -1,0 +1,11 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -97,6 +97,8 @@
+     finalized               = false;
+     this.forward            = true;
+     this.dirtyState         = true;
++	finalized = true;
++	finalized = true;
+   }
+ 
+   /** Simple constructor.

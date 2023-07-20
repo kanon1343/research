@@ -1,0 +1,53 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,8 +60,8 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
++                minPos = i;
+             }
+         }
+         return minPos;
+@@ -185,6 +185,40 @@
+         throws OptimizationException {
+         final SimplexTableau tableau =
+             new SimplexTableau(f, constraints, goalType, restrictToNonNegative, epsilon);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		this.restrictToNonNegative = restrictToNonNegative;
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		this.restrictToNonNegative = restrictToNonNegative;
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		this.restrictToNonNegative = restrictToNonNegative;
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		this.restrictToNonNegative = restrictToNonNegative;
++		this.restrictToNonNegative = restrictToNonNegative;
++		this.restrictToNonNegative = restrictToNonNegative;
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
+         solvePhase1(tableau);
+         tableau.discardArtificialVariables();
+         while (!isOptimal(tableau)) {

@@ -1,0 +1,47 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -955,8 +955,6 @@
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+                     work[i]     = -0.0;
+-                    work[j]     = d;
+-                    work[j + 2] = 0.0;
+                     d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+                            (MathUtils.SAFE_MIN * work[j] < work[i + 2])) {
+@@ -1086,9 +1084,7 @@
+                            (dMin1 > 0.0) &&
+                            (work[4 * deflatedEnd - 5 - pingPong] < TOLERANCE * (sigma + dN1)) &&
+                            (Math.abs(dN) < TOLERANCE * sigma)) {
+-                   // convergence hidden by negative DN.
+-                    work[4 * deflatedEnd - 3 - pingPong] = 0.0;
+-                    dMin = 0.0;
++                   dMin = 0.0;
+                     updateSigma(tau);
+                     return deflatedEnd;
+                 } else if (dMin < 0.0) {
+@@ -1136,7 +1132,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1384,7 +1379,6 @@
+             work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1403,8 +1397,6 @@
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+-            dMin = dN;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];

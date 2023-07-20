@@ -1,0 +1,18 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1467,7 +1467,6 @@
+         b = b + d;
+ 
+         c = a + lnm[1];
+-        d = -(c - a - lnm[1]);
+         a = c;
+         b = b + d;
+ 
+@@ -2891,7 +2890,6 @@
+             /* Correct for rounding in division */
+             yb = (epsA - yaa * zaa - yaa * zab - yab * zaa - yab * zab) / za;
+ 
+-            yb += -epsA * zb / za / za;
+             yb += epsB / za;
+         }
+ 

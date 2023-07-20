@@ -1,0 +1,11 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -353,7 +353,7 @@
+ 
+       double result = ya + yb;
+       result *= 0.5;
+-      return result;
++      return Double.NaN;
+     }
+ 
+     /** Compute the hyperbolic sine of a number.

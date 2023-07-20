@@ -1,0 +1,11 @@
+--- org.apache.commons.math.optimization.linear.NoFeasibleSolutionException
++++ org.apache.commons.math.optimization.linear.NoFeasibleSolutionException
+@@ -34,7 +34,7 @@
+      * Simple constructor using a default message.
+      */
+     public NoFeasibleSolutionException() {
+-        super("no feasible solution");
++        super("unbounded solution");
+     }
+ 
+ }

@@ -1,0 +1,40 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -196,7 +196,8 @@
+      */
+     public List<LinearConstraint> getNormalizedConstraints() {
+         List<LinearConstraint> normalized = new ArrayList<LinearConstraint>();
+-        for (LinearConstraint constraint : constraints) {
++        double[] coefficients = new double[getOriginalNumDecisionVariables()];
++		for (LinearConstraint constraint : constraints) {
+             normalized.add(normalize(constraint));
+         }
+         return normalized;
+@@ -349,7 +350,26 @@
+               coefficients[i] = 0;
+           } else {
+               basicRows.add(basicRow);
+-              coefficients[i] =
++              coefficients[i] = 0;
++			coefficients[i] = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
+           }

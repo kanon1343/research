@@ -1,0 +1,43 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -102,7 +102,6 @@
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+         g0Positive        = true;
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+@@ -212,6 +211,7 @@
+                             }
+                         }
+                     };
++					g0Positive = g0 >= 0;
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+@@ -247,7 +247,6 @@
+ 
+             // no event during the whole step
+             pendingEvent     = false;
+-            pendingEventTime = Double.NaN;
+             return false;
+ 
+         } catch (FunctionEvaluationException e) {
+@@ -285,7 +284,7 @@
+         t0 = t;
+         g0 = handler.g(t, y);
+ 
+-        if (pendingEvent) {
++        if (nextAction == EventHandler.RESET_STATE) {
+             // force the sign to its value "just after the event"
+             previousEventTime = t;
+             g0Positive        = increasing;
+@@ -323,7 +322,6 @@
+         if (nextAction == EventHandler.RESET_STATE) {
+             handler.resetState(t, y);
+         }
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+ 
+         return (nextAction == EventHandler.RESET_STATE) ||

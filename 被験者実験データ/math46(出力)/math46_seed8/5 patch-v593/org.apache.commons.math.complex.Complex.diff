@@ -1,0 +1,25 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -256,8 +256,7 @@
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            final List<Complex> result=new ArrayList<Complex>();
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -289,10 +288,10 @@
+      * @see #divide(Complex)
+      */
+     public Complex divide(double divisor) {
+-        if (isNaN || Double.isNaN(divisor)) {
++        if (divisor == 0d) {
+             return NaN;
+         }
+-        if (divisor == 0d) {
++        if (isNaN) {
+             // return isZero ? NaN : INF; // See MATH-657
+             return isZero ? NaN : INF;
+         }

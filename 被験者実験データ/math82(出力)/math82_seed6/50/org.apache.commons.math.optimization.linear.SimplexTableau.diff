@@ -1,0 +1,54 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -146,7 +146,42 @@
+                         getInvertedCoeffiecientSum(objectiveCoefficients);
+                 }
+ 
+-                // initialize the constraint rows
++                this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				this.tableau = new Array2DRowRealMatrix(matrix);
++				// initialize the constraint rows
+                 int slackVar = 0;
+                 int artificialVar = 0;
+                 for (int i = 0; i < constraints.size(); i++) {
+@@ -164,6 +199,7 @@
+ 
+                     // RHS
+                     matrix[row][width - 1] = constraint.getValue();
++					matrix[zIndex][zIndex] = maximize ? 1 : -1;
+ 
+                     // slack variables
+                     if (constraint.getRelationship() == Relationship.LEQ) {

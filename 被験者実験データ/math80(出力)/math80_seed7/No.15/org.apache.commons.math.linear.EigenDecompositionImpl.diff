@@ -1,0 +1,68 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -955,6 +955,8 @@
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+                     work[i]     = -0.0;
++					dMin2 = 0;
++					dMin2 = 0;
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+@@ -1136,10 +1138,9 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
++                    int blockIndex = 0;
+                     work[j - k] = tmp;
+                 }
+-                j -= 4;
+             }
+             return true;
+         }
+@@ -1357,9 +1358,7 @@
+                 work[j4 - 3] = d + work[j4];
+                 if (work[j4 - 3] == 0.0) {
+                     work[j4 - 1] = 0.0;
+-                    d = work[j4 + 2];
+                     dMin = d;
+-                    eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 2] < work[j4 - 3]) &&
+                            (MathUtils.SAFE_MIN * work[j4 - 3] < work[j4 + 2])) {
+                     final double tmp = work[j4 + 2] / work[j4 - 3];
+@@ -1541,25 +1540,7 @@
+                 double a2 = (work[np - 8] / b2) * (1 + work[np - 4] / b1);
+ 
+                 // approximate contribution to norm squared from i < nn-2.
+-                if (end - start > 3) {
+-                    b2 = work[nn - 13] / work[nn - 15];
+-                    a2 = a2 + b2;
+-                    for (int i4 = nn - 17; i4 >= 4 * start + 2 + pingPong; i4 -= 4) {
+-                        if (b2 == 0.0) {
+-                            break;
+-                        }
+-                        b1 = b2;
+-                        if (work[i4]  >  work[i4 - 2]) {
+-                            return;
+-                        }
+-                        b2 = b2 * (work[i4] / work[i4 - 2]);
+-                        a2 = a2 + b2;
+-                        if (100 * Math.max(b2, b1) < a2 || cnst1 < a2)  {
+-                            break;
+-                        }
+-                    }
+-                    a2 = cnst3 * a2;
+-                }
++                if (end - start > 3)
+ 
+                 if (a2 < cnst1) {
+                     tau = gam * (1 - Math.sqrt(a2)) / (1 + a2);
+@@ -1803,7 +1784,6 @@
+             final double diP1 = di + si;
+             final double liP1 = li * di / diP1;
+             work[sixI]        = si;
+-            work[sixI + 1]    = diP1;
+             work[sixI + 2]    = liP1;
+             si = li * liP1 * si - lambda;
+             sixI += 6;

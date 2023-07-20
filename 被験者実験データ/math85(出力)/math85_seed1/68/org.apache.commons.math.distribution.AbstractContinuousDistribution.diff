@@ -1,0 +1,26 @@
+--- org.apache.commons.math.distribution.AbstractContinuousDistribution
++++ org.apache.commons.math.distribution.AbstractContinuousDistribution
+@@ -80,9 +80,22 @@
+         // Try to bracket root, test domain endoints if this fails     
+         double lowerBound = getDomainLowerBound(p);
+         double upperBound = getDomainUpperBound(p);
++		double ret;
+         double[] bracket = null;
+         try {
+-            bracket = UnivariateRealSolverUtils.bracket(
++            try {
++				bracket = UnivariateRealSolverUtils.bracket(rootFindingFunction, getInitialDomain(p), lowerBound,
++						upperBound);
++			} catch (ConvergenceException ex) {
++				if (Math.abs(rootFindingFunction.value(lowerBound)) < 1E-6) {
++					return lowerBound;
++				}
++				if (Math.abs(rootFindingFunction.value(upperBound)) < 1E-6) {
++					return upperBound;
++				}
++				throw new MathException(ex);
++			}
++			bracket = UnivariateRealSolverUtils.bracket(
+                     rootFindingFunction, getInitialDomain(p),
+                     lowerBound, upperBound);
+         }  catch (ConvergenceException ex) {

@@ -1,0 +1,33 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -97,6 +97,13 @@
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+@@ -213,14 +220,14 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
++                    g0 = Double.NaN;
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {
+                         // we have either found nothing or found (again ?) a past event, we simply ignore it
+                         ta = tb;
+-                        ga = gb;
++                        return true;
+                     } else if (Double.isNaN(previousEventTime) ||
+                                (Math.abs(previousEventTime - root) > convergence)) {
+                         pendingEventTime = root;

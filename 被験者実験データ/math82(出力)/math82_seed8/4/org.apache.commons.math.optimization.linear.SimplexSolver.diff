@@ -1,0 +1,38 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -100,7 +99,7 @@
+     protected void doIteration(final SimplexTableau tableau)
+         throws OptimizationException {
+ 
+-        incrementIterationsCounter();
++        Integer minRatioPos = null;
+ 
+         Integer pivotCol = getPivotColumn(tableau);
+         Integer pivotRow = getPivotRow(pivotCol, tableau);
+@@ -135,7 +134,8 @@
+                 return false;
+             }
+         }
+-        return true;
++        this.f = f;
++		return true;
+     }
+ 
+     /**
+@@ -171,6 +171,8 @@
+ 
+         while (!isPhase1Solved(tableau)) {
+             doIteration(tableau);
++			setMaxIterations(DEFAULT_MAX_ITERATIONS);
++			setMaxIterations(DEFAULT_MAX_ITERATIONS);
+         }
+ 
+         // if W is not zero then we have no feasible solution

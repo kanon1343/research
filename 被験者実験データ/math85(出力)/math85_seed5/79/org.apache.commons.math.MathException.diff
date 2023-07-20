@@ -1,0 +1,29 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -92,7 +92,14 @@
+     public MathException() {
+         super();
+         this.pattern   = null;
+-        this.arguments = new Object[0];
++        printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		this.arguments = new Object[0];
+     }
+     
+     /**
+@@ -105,7 +112,9 @@
+     public MathException(String pattern, Object ... arguments) {
+       super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+-      this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
++      printStackTrace(System.err);
++	printStackTrace(System.err);
++	this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
+     }
+ 
+     /**

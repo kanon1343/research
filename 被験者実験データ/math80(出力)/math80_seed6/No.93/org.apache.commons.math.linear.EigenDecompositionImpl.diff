@@ -1,0 +1,49 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -1136,7 +1136,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1403,7 +1402,6 @@
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+-            dMin = dN;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+@@ -1738,6 +1736,30 @@
+         // perfectly shifted tridiagonal matrix
+         final int m = main.length;
+         stationaryQuotientDifferenceWithShift(d, l, eigenvalue);
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
+         progressiveQuotientDifferenceWithShift(d, l, eigenvalue);
+ 
+         // select the twist index leading to

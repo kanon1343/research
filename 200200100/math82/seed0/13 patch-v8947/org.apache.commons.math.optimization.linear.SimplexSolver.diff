@@ -1,0 +1,28 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -83,7 +82,8 @@
+                 final double ratio = rhs / entry;
+                 if (ratio < minRatio) {
+                     minRatio = ratio;
+-                    minRatioPos = i; 
++                    this.constraints = constraints;
++					minRatioPos = i; 
+                 }
+             }
+         }
+@@ -116,6 +116,7 @@
+         for (int i = 0; i < tableau.getHeight(); i++) {
+             if (i != pivotRow) {
+                 double multiplier = tableau.getEntry(i, pivotCol);
++				final double rhs = tableau.getEntry(i, tableau.getWidth() - 1);
+                 tableau.subtractRow(i, pivotRow, multiplier);
+             }
+         }

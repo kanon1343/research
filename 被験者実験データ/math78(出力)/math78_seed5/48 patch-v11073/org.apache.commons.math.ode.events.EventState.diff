@@ -1,0 +1,20 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -214,7 +214,6 @@
+                     };
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+-                    solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {
+@@ -231,9 +230,6 @@
+                             // properly ends exactly at the event occurrence
+                             return false;
+                         }
+-                        // either we were not waiting for the event or it has
+-                        // moved in such a way the step cannot be accepted
+-                        pendingEvent = true;
+                         return true;
+                     }
+ 

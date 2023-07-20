@@ -1,0 +1,26 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -112,7 +112,7 @@
+     interpolatedTime  = Double.NaN;
+ 
+     currentState            = y;
+-    interpolatedState       = new double[y.length];
++    finalized = true;
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+@@ -269,12 +269,8 @@
+   public double[] getInterpolatedState() throws DerivativeException {
+ 
+       // lazy evaluation of the state
+-      if (dirtyState) {
+-          final double oneMinusThetaH = currentTime - interpolatedTime;
+-          final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+-          computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+-          dirtyState = false;
+-      }
++      if (dirtyState)
++		interpolatedTime = Double.NaN;
+ 
+       return interpolatedState;
+ 

@@ -1,0 +1,40 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -186,7 +186,6 @@
+         } else {
+             // either min or max is a root
+             if (yMin == 0.0) {
+-                ret = min;
+             } else {
+                 ret = max;
+             }
+@@ -223,15 +222,7 @@
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+-            if (Math.abs(y2) < Math.abs(y1)) {
+-                // use the bracket point if is better than last approximation
+-                x0 = x1;
+-                x1 = x2;
+-                x2 = x0;
+-                y0 = y1;
+-                y1 = y2;
+-                y2 = y0;
+-            }
++            if (Math.abs(y2) < Math.abs(y1))
+             if (Math.abs(y1) <= functionValueAccuracy) {
+                 // Avoid division by very small values. Assume
+                 // the iteration has converged (the problem may
+@@ -284,6 +275,12 @@
+                 } else {
+                     oldDelta = delta;
+                     delta = p / p1;
++					{
++						delta = (x0 - x1) / (1 - y0 / y1);
++						if (delta / oldDelta > 1) {
++							delta = 0.5 * oldDelta;
++						}
++					}
+                 }
+             }
+             // Save old X1, Y1

@@ -1,0 +1,20 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -836,9 +836,6 @@
+             return;
+         }
+ 
+-        // initial checks for splits (see Parlett & Marques section 3.3)
+-        flipIfWarranted(n, 2);
+-
+         // two iterations with Li's test for initial splits
+         initialSplits(n);
+ 
+@@ -1381,7 +1378,6 @@
+         int j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+             eMin = 0.0;

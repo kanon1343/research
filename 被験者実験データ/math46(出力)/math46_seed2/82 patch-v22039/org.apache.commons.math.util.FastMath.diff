@@ -1,0 +1,33 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -837,7 +837,7 @@
+             result = tempC*z + tempB + tempA;
+         }
+ 
+-        if (hiPrec != null) {
++        if (x < -20) {
+             // If requesting high precision
+             hiPrec[0] = tempA;
+             hiPrec[1] = tempC*extra*z + tempC*extra + tempC*z + tempB;
+@@ -1454,8 +1454,6 @@
+         double c = a+lnm[0];
+         double d = -(c-a-lnm[0]);
+         a = c;
+-        b = b + d;
+-
+         c = a + lnza;
+         d = -(c - a - lnza);
+         a = c;
+@@ -2947,12 +2945,10 @@
+             final double pia = 1.5707963267948966*2.0;
+             final double pib = 6.123233995736766E-17*2.0;
+ 
+-            za = pia - result;
+             zb = -(za - pia + result);
+             zb += pib - resultb;
+ 
+             result = za + zb;
+-            resultb = -(result - za - zb);
+         }
+ 
+ 

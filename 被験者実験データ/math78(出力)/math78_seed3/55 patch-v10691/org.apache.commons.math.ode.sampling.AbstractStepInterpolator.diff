@@ -1,0 +1,60 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -87,7 +87,6 @@
+    * initializing the copy.
+    */
+   protected AbstractStepInterpolator() {
+-    previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+@@ -106,12 +105,29 @@
+    */
+   protected AbstractStepInterpolator(final double[] y, final boolean forward) {
+ 
+-    previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+-    currentState            = y;
++    this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	currentState            = y;
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+@@ -208,7 +224,6 @@
+    * interpolator for future calls to {@link #storeTime storeTime}
+    */
+   public void shift() {
+-    previousTime = currentTime;
+   }
+ 
+   /** Store the current step time.
+@@ -272,8 +287,7 @@
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+-          computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+-          dirtyState = false;
++          forward = true;
+       }
+ 
+       return interpolatedState;

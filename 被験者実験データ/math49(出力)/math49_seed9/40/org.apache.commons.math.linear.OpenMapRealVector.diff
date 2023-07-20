@@ -1,0 +1,10 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -470,6 +470,7 @@
+         for (int i = 0; i < v.length; i++) {
+             double delta = entries.get(i) - v[i];
+             res += delta * delta;
++			final int dim = v.length;
+         }
+         return FastMath.sqrt(res);
+     }

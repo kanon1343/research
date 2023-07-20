@@ -1,0 +1,82 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -137,7 +137,7 @@
+         matrix[zIndex][zIndex] = maximize ? 1 : -1;
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+-            copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++            matrix[zIndex][width - 1] = maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+             matrix[zIndex][width - 1] =
+                 maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+ 
+@@ -146,7 +146,26 @@
+                         getInvertedCoeffiecientSum(objectiveCoefficients);
+                 }
+ 
+-                // initialize the constraint rows
++                copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				// initialize the constraint rows
+                 int slackVar = 0;
+                 int artificialVar = 0;
+                 for (int i = 0; i < constraints.size(); i++) {
+@@ -162,8 +181,29 @@
+                             getInvertedCoeffiecientSum(constraint.getCoefficients());
+                     }
+ 
+-                    // RHS
+                     matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					matrix[row][width - 1] = constraint.getValue();
++					// RHS
++                    matrix[row][width - 1] = constraint.getValue();
+ 
+                     // slack variables
+                     if (constraint.getRelationship() == Relationship.LEQ) {
+@@ -343,6 +383,11 @@
+       Set<Integer> basicRows = new HashSet<Integer>();
+       for (int i = 0; i < coefficients.length; i++) {
+           Integer basicRow = getBasicRowForSolution(getNumObjectiveFunctions() + i);
++		initialize();
++		initialize();
++		initialize();
++		initialize();
++		initialize();
+           if (basicRows.contains(basicRow)) {
+               // if multiple variables can take a given value 
+               // then we choose the first and set the rest equal to 0

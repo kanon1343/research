@@ -1,0 +1,12 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -772,7 +772,8 @@
+             intVal++;
+ 
+             intPartA = EXP_INT_TABLE_A[750-intVal];
+-            intPartB = EXP_INT_TABLE_B[750-intVal];
++            double zb = 0.008336750013465571;
++			intPartB = EXP_INT_TABLE_B[750-intVal];
+ 
+             intVal = -intVal;
+         } else {

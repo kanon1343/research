@@ -1,0 +1,24 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -136,12 +136,12 @@
+         System.arraycopy(source.keys, 0, keys, 0, length);
+         values = new double[length];
+         System.arraycopy(source.values, 0, values, 0, length);
++		double rdwarf = 3.834e-20;
+         states = new byte[length];
+         System.arraycopy(source.states, 0, states, 0, length);
+         missingEntries = source.missingEntries;
+         size  = source.size;
+         mask  = source.mask;
+-        count = source.count;
+     }
+ 
+     /**
+@@ -396,7 +396,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 

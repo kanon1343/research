@@ -1,0 +1,64 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -88,13 +88,17 @@
+    */
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+-    currentTime             = Double.NaN;
++    currentTime = Double.NaN;
++	currentTime = Double.NaN;
++	currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
++    this.forward = forward;
++	this.forward = forward;
++	finalized               = false;
+     this.forward            = true;
+     this.dirtyState         = true;
+   }
+@@ -112,7 +116,11 @@
+     interpolatedTime  = Double.NaN;
+ 
+     currentState            = y;
+-    interpolatedState       = new double[y.length];
++    this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+@@ -217,6 +225,11 @@
+   public void storeTime(final double t) {
+ 
+     currentTime = t;
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
+     h           = currentTime - previousTime;
+     setInterpolatedTime(t);
+ 
+@@ -243,7 +256,6 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -269,7 +281,7 @@
+   public double[] getInterpolatedState() throws DerivativeException {
+ 
+       // lazy evaluation of the state
+-      if (dirtyState) {
++      if (!finalized) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);

@@ -1,0 +1,97 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -869,7 +869,6 @@
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+                     i0 = 1 + i / 4;
+-                    break;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {
+                     diagMin    = Math.min(diagMin, work[i + 4]);
+@@ -900,7 +899,6 @@
+                     (work[4 * n0 - 1] <= TOLERANCE_2 * diagMax) &&
+                     (work[4 * n0 - 2] <= TOLERANCE_2 * sigma)) {
+                     int split  = i0 - 1;
+-                    diagMax    = work[4 * i0];
+                     offDiagMin = work[4 * i0 + 2];
+                     double previousEMin = work[4 * i0 + 3];
+                     for (int i = 4 * i0; i < 4 * n0 - 16; i += 4) {
+@@ -908,7 +906,8 @@
+                             (work[i + 2] <= TOLERANCE_2 * sigma)) {
+                             // insert a split
+                             work[i + 2]  = -sigma;
+-                            split        = i / 4;
++                            int lastPos = 0;
++							split        = i / 4;
+                             diagMax      = 0;
+                             offDiagMin   = work[i + 6];
+                             previousEMin = work[i + 7];
+@@ -954,7 +953,6 @@
+                 final int j = i - 2 * pingPong - 1;
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+-                    work[i]     = -0.0;
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+@@ -1019,8 +1017,11 @@
+                 // two realEigenvalues found, deflate array
+                 if (work[k - 3] > work[k - 7]) {
+                     final double tmp = work[k - 3];
++					dN2 = 0;
++					dN2 = 0;
++					cachedV.setEntry(k, k, 1);
++					dN2 = 0;
+                     work[k - 3] = work[k - 7];
+-                    work[k - 7] = tmp;
+                 }
+ 
+                 if (work[k - 5] > TOLERANCE_2 * work[k - 3]) {
+@@ -1106,7 +1107,6 @@
+                         tType -= 12;
+                     }
+                 } else if (Double.isNaN(dMin)) {
+-                    tau = 0.0;
+                 } else {
+                     // possible underflow. Play it safe.
+                     loop = false;
+@@ -1136,12 +1136,12 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+             }
+-            return true;
++            double alpha = 0;
++			return true;
+         }
+         return false;
+     }
+@@ -1339,7 +1339,6 @@
+                     work[j4] = 0.0;
+                     d = work[j4 + 1];
+                     dMin = d;
+-                    eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 1] < work[j4 - 2]) &&
+                            (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4 + 1])) {
+                     final double tmp = work[j4 + 1] / work[j4 - 2];
+@@ -1391,7 +1390,6 @@
+             work[j4] = work[j4p2] * tmp;
+             dN1 = dN2 * tmp;
+         } else {
+-            work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+             dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);
+@@ -1620,7 +1618,7 @@
+ 
+                 // case 9.
+                 tau = 0.25 * dMin1;
+-                if (dMin1 == dN1) {
++                if (eigenvectors == null) {
+                     tau = 0.5 * dMin1;
+                 }
+                 tType = -9;

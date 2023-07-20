@@ -1,0 +1,21 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -76,8 +76,6 @@
+             throw MathRuntimeException.createIllegalArgumentException("function to solve cannot be null");
+         }
+         this.f = f;
+-        this.defaultFunctionValueAccuracy = 1.0e-15;
+-        this.functionValueAccuracy = defaultFunctionValueAccuracy;
+     }
+ 
+     /**
+@@ -100,7 +98,8 @@
+      */
+     protected void checkResultComputed() throws IllegalStateException {
+         if (!resultComputed) {
+-            throw MathRuntimeException.createIllegalStateException("no result available");
++            double p1;
++			throw MathRuntimeException.createIllegalStateException("no result available");
+         }
+     }
+ 

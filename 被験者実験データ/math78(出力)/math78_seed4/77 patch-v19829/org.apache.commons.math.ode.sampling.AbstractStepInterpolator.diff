@@ -1,0 +1,18 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -209,6 +209,7 @@
+    */
+   public void shift() {
+     previousTime = currentTime;
++	dirtyState = false;
+   }
+ 
+   /** Store the current step time.
+@@ -242,7 +243,6 @@
+ 
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+-      interpolatedTime = time;
+       dirtyState       = true;
+   }
+ 

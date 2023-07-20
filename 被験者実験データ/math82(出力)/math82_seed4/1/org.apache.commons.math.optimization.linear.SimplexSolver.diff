@@ -1,0 +1,36 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -59,7 +59,7 @@
+         double minValue = 0;
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+-            if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
++            if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+                 minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+@@ -166,11 +166,12 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
++            Integer row = null;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {
+-            doIteration(tableau);
++            Integer minRatioPos = null;
++			doIteration(tableau);
+         }
+ 
+         // if W is not zero then we have no feasible solution
+@@ -185,7 +186,8 @@
+         throws OptimizationException {
+         final SimplexTableau tableau =
+             new SimplexTableau(f, constraints, goalType, restrictToNonNegative, epsilon);
+-        solvePhase1(tableau);
++        Integer minRatioPos = null;
++		solvePhase1(tableau);
+         tableau.discardArtificialVariables();
+         while (!isOptimal(tableau)) {
+             doIteration(tableau);

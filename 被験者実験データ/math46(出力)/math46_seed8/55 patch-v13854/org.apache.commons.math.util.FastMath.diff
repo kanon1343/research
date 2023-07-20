@@ -1,0 +1,18 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -461,6 +461,7 @@
+ 
+       if (negate) {
+           result = -result;
++		double y;
+       }
+ 
+       return result;
+@@ -2948,7 +2949,6 @@
+             final double pib = 6.123233995736766E-17*2.0;
+ 
+             za = pia - result;
+-            zb = -(za - pia + result);
+             zb += pib - resultb;
+ 
+             result = za + zb;

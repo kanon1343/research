@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.linear.LinearConstraint
++++ org.apache.commons.math.optimization.linear.LinearConstraint
+@@ -100,6 +100,7 @@
+         this.coefficients = coefficients;
+         this.relationship = relationship;
+         this.value        = value;
++		Integer row = null;
+     }
+ 
+     /**

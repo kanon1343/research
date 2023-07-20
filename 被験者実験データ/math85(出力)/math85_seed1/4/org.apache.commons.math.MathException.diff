@@ -1,0 +1,26 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -68,7 +68,14 @@
+             // do nothing here
+         }
+ 
+-        // the locale is not supported or the resource is unknown
++        try {
++			ResourceBundle bundle = ResourceBundle.getBundle("org.apache.commons.math.MessagesResources", locale);
++			if (bundle.getLocale().getLanguage().equals(locale.getLanguage())) {
++				return bundle.getString(s);
++			}
++		} catch (MissingResourceException mre) {
++		}
++		// the locale is not supported or the resource is unknown
+         // don't translate and fall back to using the string as is
+         return s;
+ 
+@@ -116,7 +123,6 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }

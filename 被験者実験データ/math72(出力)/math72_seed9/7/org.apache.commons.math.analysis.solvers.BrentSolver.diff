@@ -1,0 +1,52 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -111,10 +111,7 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+-            return result;
+-        }
++        if (Math.abs(yMin) <= functionValueAccuracy)
+ 
+         // reduce interval if min and initial bracket the root
+         if (yInitial * yMin < 0) {
+@@ -124,7 +121,7 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
++            verifySequence(min, initial, max);
+             return result;
+         }
+ 
+@@ -227,6 +224,11 @@
+     throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+         double delta = x1 - x0;
++		y1 = f.value(x1);
++		y1 = f.value(x1);
++		y1 = f.value(x1);
++		y1 = f.value(x1);
++		y1 = f.value(x1);
+         double oldDelta = delta;
+ 
+         int i = 0;
+@@ -235,8 +237,15 @@
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;
+-                x2 = x0;
++                y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				x2 = x0;
+                 y0 = y1;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
+                 y1 = y2;
+                 y2 = y0;
+             }

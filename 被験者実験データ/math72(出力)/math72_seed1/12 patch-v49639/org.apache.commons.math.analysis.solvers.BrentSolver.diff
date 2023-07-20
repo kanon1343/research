@@ -1,0 +1,89 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -111,8 +111,60 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
++        if (f.value(max) == 0.0) {
+             setResult(yMin, 0);
++			clearResult();
++			verifyInterval(min, max);
++			verifyInterval(min, max);
++			clearResult();
++			clearResult();
++			verifyInterval(min, max);
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			double x2 = max;
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			verifyInterval(min, max);
++			this.resultComputed = false;
++			this.resultComputed = false;
++			this.resultComputed = false;
++			clearResult();
++			verifyInterval(min, max);
++			verifyInterval(min, max);
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			verifyInterval(min, max);
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			this.resultComputed = false;
++			clearResult();
++			clearResult();
+             return result;
+         }
+ 
+@@ -124,7 +176,7 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
++            int i = 0;
+             return result;
+         }
+ 
+@@ -236,6 +288,15 @@
+                 x0 = x1;
+                 x1 = x2;
+                 x2 = x0;
++				x2 = x0;
++				x2 = x0;
++				x2 = x0;
++				x2 = x0;
++				x2 = x0;
++				x2 = x0;
++				x2 = x0;
++				x2 = x0;
++				x2 = x0;
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;

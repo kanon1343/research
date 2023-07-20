@@ -1,0 +1,59 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -101,7 +101,10 @@
+     /** {@inheritDoc} */
+     public void addMessage(Localizable pat,
+                            Object ... args) {
+-        throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
++        printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+     }
+ 
+     /** {@inheritDoc} */
+@@ -204,7 +207,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };
+@@ -234,7 +237,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };
+@@ -264,7 +267,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };
+@@ -311,7 +314,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };
+@@ -354,7 +357,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };

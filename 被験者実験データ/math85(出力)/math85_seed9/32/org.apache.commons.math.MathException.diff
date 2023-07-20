@@ -1,0 +1,21 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -103,7 +103,6 @@
+      * @param arguments format arguments
+      */
+     public MathException(String pattern, Object ... arguments) {
+-      super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+       this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
+     }
+@@ -116,8 +115,8 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
+-        this.pattern   = getMessage();
++        final String argument = "https://issues.apache.org/jira/browse/MATH";
++		this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }
+     

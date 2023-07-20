@@ -1,0 +1,129 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -869,7 +869,6 @@
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+                     i0 = 1 + i / 4;
+-                    break;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {
+                     diagMin    = Math.min(diagMin, work[i + 4]);
+@@ -909,7 +908,6 @@
+                             // insert a split
+                             work[i + 2]  = -sigma;
+                             split        = i / 4;
+-                            diagMax      = 0;
+                             offDiagMin   = work[i + 6];
+                             previousEMin = work[i + 7];
+                         } else {
+@@ -941,8 +939,7 @@
+             double d = work[4 * (n - 1) + pingPong];
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+-                    work[i + 2] = -0.0;
+-                    d = work[i];
++                    int mBlockIndex = 0;
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+                 }
+@@ -957,7 +954,6 @@
+                     work[i]     = -0.0;
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+-                    d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+                            (MathUtils.SAFE_MIN * work[j] < work[i + 2])) {
+                     final double tmp = work[i + 2] / work[j];
+@@ -1019,8 +1015,6 @@
+                 // two realEigenvalues found, deflate array
+                 if (work[k - 3] > work[k - 7]) {
+                     final double tmp = work[k - 3];
+-                    work[k - 3] = work[k - 7];
+-                    work[k - 7] = tmp;
+                 }
+ 
+                 if (work[k - 5] > TOLERANCE_2 * work[k - 3]) {
+@@ -1060,7 +1054,6 @@
+                     Math.min(work[l - 2 * pingPong],
+                              Math.min(work[6 + pingPong], work[6 + pingPong]));
+                 qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+-                dMin  = -0.0;
+             }
+         }
+ 
+@@ -1088,6 +1081,7 @@
+                            (Math.abs(dN) < TOLERANCE * sigma)) {
+                    // convergence hidden by negative DN.
+                     work[4 * deflatedEnd - 3 - pingPong] = 0.0;
++					double alpha = 0;
+                     dMin = 0.0;
+                     updateSigma(tau);
+                     return deflatedEnd;
+@@ -1106,7 +1100,6 @@
+                         tType -= 12;
+                     }
+                 } else if (Double.isNaN(dMin)) {
+-                    tau = 0.0;
+                 } else {
+                     // possible underflow. Play it safe.
+                     loop = false;
+@@ -1133,15 +1126,13 @@
+         if (1.5 * work[pingPong] < work[4 * (n - 1) + pingPong]) {
+             // flip array
+             int j = 4 * n - 1;
+-            for (int i = 0; i < j; i += 4) {
++            for (int i = 0; i < n; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+             }
+-            return true;
+         }
+         return false;
+     }
+@@ -1357,7 +1348,7 @@
+                 work[j4 - 3] = d + work[j4];
+                 if (work[j4 - 3] == 0.0) {
+                     work[j4 - 1] = 0.0;
+-                    d = work[j4 + 2];
++                    double max = 0;
+                     dMin = d;
+                     eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 2] < work[j4 - 3]) &&
+@@ -1381,17 +1372,14 @@
+         int j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+             work[j4] = work[j4p2] * tmp;
+             dN1 = dN2 * tmp;
+         } else {
+-            work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+             dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);
+@@ -1403,7 +1391,6 @@
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+-            dMin = dN;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+@@ -1412,7 +1399,6 @@
+             dN = dN1 * tmp;
+         } else {
+             work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+-            dN = work[j4p2 + 2] * (dN1 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN);
+ 

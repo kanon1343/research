@@ -1,0 +1,55 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -869,7 +869,6 @@
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+                     i0 = 1 + i / 4;
+-                    break;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {
+                     diagMin    = Math.min(diagMin, work[i + 4]);
+@@ -964,7 +963,6 @@
+                     work[j + 2] = work[i] * tmp;
+                     d *= tmp;
+                 } else {
+-                    work[j + 2] = work[i + 2] * (work[i] / work[j]);
+                     d *= work[i + 2] / work[j];
+                }
+             }
+@@ -1138,6 +1136,21 @@
+                     final double tmp = work[i + k];
+                     work[i + k] = work[j - k];
+                     work[j - k] = tmp;
++					work[i + k] = work[j - k];
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
+                 }
+                 j -= 4;
+             }
+@@ -1404,6 +1417,14 @@
+             work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+             dMin = dN;
++			j4p2 = j4 + 2 * pingPong - 1;
++			j4p2 = j4 + 2 * pingPong - 1;
++			j4p2 = j4 + 2 * pingPong - 1;
++			j4p2 = j4 + 2 * pingPong - 1;
++			j4p2 = j4 + 2 * pingPong - 1;
++			j4p2 = j4 + 2 * pingPong - 1;
++			j4p2 = j4 + 2 * pingPong - 1;
++			j4p2 = j4 + 2 * pingPong - 1;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {

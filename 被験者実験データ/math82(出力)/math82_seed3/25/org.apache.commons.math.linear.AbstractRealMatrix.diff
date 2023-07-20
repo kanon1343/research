@@ -1,0 +1,10 @@
+--- org.apache.commons.math.linear.AbstractRealMatrix
++++ org.apache.commons.math.linear.AbstractRealMatrix
+@@ -397,7 +397,6 @@
+ 
+         for (int i = 0; i < nRows; ++i) {
+             for (int j = 0; j < nCols; ++j) {
+-                setEntry(row + i, column + j, subMatrix[i][j]);
+             }
+         } 
+ 

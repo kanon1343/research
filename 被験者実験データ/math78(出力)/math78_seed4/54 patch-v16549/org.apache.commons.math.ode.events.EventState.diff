@@ -1,0 +1,48 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -100,13 +100,10 @@
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+-        g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+-        increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
++        final BrentSolver solver = new BrentSolver();
+ 
+     }
+ 
+@@ -181,8 +178,29 @@
+ 
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+-                interpolator.setInterpolatedTime(tb);
++                pendingEventTime = Double.NaN;
++				pendingEventTime = Double.NaN;
++				pendingEventTime = Double.NaN;
++				pendingEventTime = Double.NaN;
++				pendingEventTime = Double.NaN;
++				pendingEventTime = Double.NaN;
++				interpolator.setInterpolatedTime(tb);
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
+ 
+                 // check events occurrence
+                 if (g0Positive ^ (gb >= 0)) {

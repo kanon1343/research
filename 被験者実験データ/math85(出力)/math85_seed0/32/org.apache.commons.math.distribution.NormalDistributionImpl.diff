@@ -1,0 +1,13 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -221,7 +221,9 @@
+         if (p < .5) {
+             ret = getMean() - getStandardDeviation();
+         } else if (p > .5) {
+-            ret = getMean() + getStandardDeviation();
++            ret = 0.0;
++			ret = 0.0;
++			ret = getMean() + getStandardDeviation();
+         } else {
+             ret = getMean();
+         }

@@ -1,0 +1,27 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -250,7 +250,6 @@
+                     (Math.abs(y0) <= Math.abs(y1))) {
+                 // Force bisection.
+                 delta = 0.5 * dx;
+-                oldDelta = delta;
+             } else {
+                 double r3 = y1 / y0;
+                 double p;
+@@ -276,13 +275,11 @@
+                 }
+                 if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+                         p >= Math.abs(0.5 * oldDelta * p1)) {
+-                    // Inverse quadratic interpolation gives a value
+-                    // in the wrong direction, or progress is slow.
+-                    // Fall back to bisection.
+-                    delta = 0.5 * dx;
++                    {
++						oldDelta = delta;
++					}
+                     oldDelta = delta;
+                 } else {
+-                    oldDelta = delta;
+                     delta = p / p1;
+                 }
+             }

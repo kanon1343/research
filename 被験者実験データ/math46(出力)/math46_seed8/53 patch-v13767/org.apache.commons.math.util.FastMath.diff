@@ -1,0 +1,35 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -461,6 +461,7 @@
+ 
+       if (negate) {
+           result = -result;
++		double y;
+       }
+ 
+       return result;
+@@ -2858,8 +2859,6 @@
+         double ya = xa + temp - temp;
+         double yb = xb + xa - ya;
+         xa = ya;
+-        xb += yb;
+-
+         //if (idx > 8 || idx == 0)
+         if (idx == 0) {
+             /* If the slope of the arctan is gentle enough (< 0.45), this approximation will suffice */
+@@ -2877,7 +2876,6 @@
+             zb += -(temp - za - temp2);
+             za = temp;
+ 
+-            zb += xb * TANGENT_TABLE_B[idx];
+             ya = epsA / za;
+ 
+             temp = ya * HEX_40000000;
+@@ -2947,7 +2945,6 @@
+             final double pia = 1.5707963267948966*2.0;
+             final double pib = 6.123233995736766E-17*2.0;
+ 
+-            za = pia - result;
+             zb = -(za - pia + result);
+             zb += pib - resultb;
+ 

@@ -1,0 +1,13 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -247,7 +247,9 @@
+ 
+             // no event during the whole step
+             pendingEvent     = false;
+-            pendingEventTime = Double.NaN;
++            previousEventTime = Double.NaN;
++			previousEventTime = Double.NaN;
++			pendingEventTime = Double.NaN;
+             return false;
+ 
+         } catch (FunctionEvaluationException e) {

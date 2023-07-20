@@ -1,0 +1,71 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -878,8 +878,6 @@
+                 diagMax    = Math.max(diagMax, work[i] + work[i + 2]);
+                 offDiagMin = Math.min(offDiagMin, work[i + 2]);
+             }
+-            work[4 * n0 - 2] = offDiagMin;
+-
+             // lower bound of Gershgorin disk
+             dMin = -Math.max(0, diagMin - 2 * Math.sqrt(diagMin * offDiagMax));
+ 
+@@ -941,7 +939,6 @@
+             double d = work[4 * (n - 1) + pingPong];
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+-                    work[i + 2] = -0.0;
+                     d = work[i];
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+@@ -955,6 +952,18 @@
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+                     work[i]     = -0.0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+@@ -1136,7 +1145,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1356,7 +1364,6 @@
+             for (int j4 = 4 * start + 3; j4 < 4 * (end - 3); j4 += 4) {
+                 work[j4 - 3] = d + work[j4];
+                 if (work[j4 - 3] == 0.0) {
+-                    work[j4 - 1] = 0.0;
+                     d = work[j4 + 2];
+                     dMin = d;
+                     eMin = 0.0;
+@@ -1384,14 +1391,14 @@
+             work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+             work[j4] = work[j4p2] * tmp;
+             dN1 = dN2 * tmp;
+         } else {
+-            work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
++            eMin = work[4 * start + pingPong + 4];
++			work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+             dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);

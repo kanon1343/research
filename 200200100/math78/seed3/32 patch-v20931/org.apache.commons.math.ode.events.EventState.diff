@@ -1,0 +1,47 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -106,7 +106,6 @@
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -174,7 +173,8 @@
+             final int    n  = Math.max(1, (int) Math.ceil(Math.abs(t1 - t0) / maxCheckInterval));
+             final double h  = (t1 - t0) / n;
+ 
+-            double ta = t0;
++            pendingEvent = false;
++			double ta = t0;
+             double ga = g0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {
+@@ -213,6 +213,8 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+@@ -240,14 +242,15 @@
+                 } else {
+                     // no sign change: there is no event for now
+                     ta = tb;
+-                    ga = gb;
++                    increasing = gb >= ga;
+                 }
+ 
+             }
+ 
+             // no event during the whole step
+             pendingEvent     = false;
+-            pendingEventTime = Double.NaN;
++            previousEventTime = Double.NaN;
++			pendingEventTime = Double.NaN;
+             return false;
+ 
+         } catch (FunctionEvaluationException e) {

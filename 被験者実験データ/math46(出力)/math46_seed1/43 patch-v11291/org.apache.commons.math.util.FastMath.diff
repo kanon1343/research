@@ -1,0 +1,69 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -346,11 +346,8 @@
+       // y = y + 1/y
+       temp = ya + recipa;
+       yb += -(temp - ya - recipa);
+-      ya = temp;
+       temp = ya + recipb;
+       yb += -(temp - ya - recipb);
+-      ya = temp;
+-
+       double result = ya + yb;
+       result *= 0.5;
+       return result;
+@@ -912,7 +909,6 @@
+         zb = zb * epsilon + 0.16666666666745392;
+         zb = zb * epsilon + 0.49999999999999994;
+         zb = zb * epsilon;
+-        zb = zb * epsilon;
+ 
+         double za = epsilon;
+         double temp = za + zb;
+@@ -926,8 +922,6 @@
+ 
+         /* Combine the parts.   expm1(a+b) = expm1(a) + expm1(b) + expm1(a)*expm1(b) */
+         double ya = za * baseA;
+-        //double yb = za*baseB + zb*baseA + zb*baseB;
+-        temp = ya + za * baseB;
+         double yb = -(temp - ya - za * baseB);
+         ya = temp;
+ 
+@@ -946,8 +940,6 @@
+         ya = temp;
+ 
+         temp = ya + za;
+-        //yb += (ya > za) ? -(temp - ya - za) : -(temp - za - ya);
+-        yb += -(temp - ya - za);
+         ya = temp;
+ 
+         temp = ya + baseB;
+@@ -955,7 +947,7 @@
+         yb += -(temp - ya - baseB);
+         ya = temp;
+ 
+-        temp = ya + zb;
++        temp = ya + baseB;
+         //yb += (ya > zb) ? -(temp - ya - zb) : -(temp - zb - ya);
+         yb += -(temp - ya - zb);
+         ya = temp;
+@@ -1453,8 +1445,9 @@
+         double b = 0.0;
+         double c = a+lnm[0];
+         double d = -(c-a-lnm[0]);
+-        a = c;
+-        b = b + d;
++        expm1(x * 2.0, hiPrec);
++		a = c;
++        double invx = 1.0 / x;
+ 
+         c = a + lnza;
+         d = -(c - a - lnza);
+@@ -1467,7 +1460,6 @@
+         b = b + d;
+ 
+         c = a + lnm[1];
+-        d = -(c - a - lnm[1]);
+         a = c;
+         b = b + d;
+ 

@@ -1,0 +1,18 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -213,7 +213,6 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+@@ -289,7 +288,6 @@
+             // force the sign to its value "just after the event"
+             previousEventTime = t;
+             g0Positive        = increasing;
+-            nextAction        = handler.eventOccurred(t, y, !(increasing ^ forward));
+         } else {
+             g0Positive = g0 >= 0;
+             nextAction = EventHandler.CONTINUE;

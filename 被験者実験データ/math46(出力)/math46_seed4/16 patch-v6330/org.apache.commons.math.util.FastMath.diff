@@ -1,0 +1,26 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -460,7 +460,6 @@
+       }
+ 
+       if (negate) {
+-          result = -result;
+       }
+ 
+       return result;
+@@ -578,7 +577,6 @@
+       }
+ 
+       if (negate) {
+-          result = -result;
+       }
+ 
+       return result;
+@@ -2936,7 +2934,6 @@
+         double za = EIGHTHS[idx] + ya;
+         double zb = -(za - EIGHTHS[idx] - ya);
+         temp = za + yb;
+-        zb += -(temp - za - yb);
+         za = temp;
+ 
+         result = za + zb;

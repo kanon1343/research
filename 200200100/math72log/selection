@@ -1,0 +1,806 @@
+./200200100/math49/seed0/1 patch-v26/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/10 patch-v3285/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/10 patch-v3285/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:397:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/10 patch-v3285/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/11 patch-v3764/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/11 patch-v3764/org.apache.commons.math.linear.AbstractRealVector.java:63:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/11 patch-v3764/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/12 patch-v3975/org.apache.commons.math.MathRuntimeException.java:373:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/12 patch-v3975/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/12 patch-v3975/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/12 patch-v3975/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/12 patch-v3975/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/13 patch-v4379/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:397:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/13 patch-v4379/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/13 patch-v4379/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/13 patch-v4379/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/13 patch-v4379/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/14 patch-v4812/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/15 patch-v4961/org.apache.commons.math.exception.util.LocalizedFormats.java:361:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/15 patch-v4961/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/15 patch-v4961/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/15 patch-v4961/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/15 patch-v4961/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/16 patch-v5240/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/16 patch-v5240/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:398:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/16 patch-v5240/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/16 patch-v5240/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/16 patch-v5240/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/16 patch-v5240/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/17 patch-v5358/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/17 patch-v5358/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/17 patch-v5358/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/17 patch-v5358/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/17 patch-v5358/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/18 patch-v5540/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/18 patch-v5540/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/18 patch-v5540/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/18 patch-v5540/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/19 patch-v5804/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/19 patch-v5804/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/19 patch-v5804/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/19 patch-v5804/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/2 patch-v234/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:399:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/2 patch-v234/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/20 patch-v5937/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/20 patch-v5937/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/20 patch-v5937/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/20 patch-v5937/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/20 patch-v5937/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/21 patch-v6350/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/21 patch-v6350/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/21 patch-v6350/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/21 patch-v6350/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/21 patch-v6350/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/22 patch-v6439/org.apache.commons.math.MathRuntimeException.java:373:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/22 patch-v6439/org.apache.commons.math.exception.util.LocalizedFormats.java:361:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/22 patch-v6439/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/23 patch-v6467/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/23 patch-v6467/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/24 patch-v6497/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/24 patch-v6497/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/24 patch-v6497/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/24 patch-v6497/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/25 patch-v6701/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/25 patch-v6701/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/25 patch-v6701/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/25 patch-v6701/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/26 patch-v6728/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/26 patch-v6728/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/26 patch-v6728/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/26 patch-v6728/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/27 patch-v6733/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/27 patch-v6733/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/27 patch-v6733/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/27 patch-v6733/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/28 patch-v6990/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:139:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/28 patch-v6990/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/29 patch-v7013/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:397:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/29 patch-v7013/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/29 patch-v7013/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/29 patch-v7013/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/29 patch-v7013/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/3 patch-v890/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:395:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/3 patch-v890/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:573:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/30 patch-v7142/org.apache.commons.math.MathRuntimeException.java:373:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/30 patch-v7142/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/30 patch-v7142/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/30 patch-v7142/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/30 patch-v7142/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/31 patch-v7479/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/31 patch-v7479/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/31 patch-v7479/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/31 patch-v7479/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/32 patch-v7486/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/32 patch-v7486/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/32 patch-v7486/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/32 patch-v7486/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/32 patch-v7486/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/33 patch-v7724/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:397:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/33 patch-v7724/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:399:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/33 patch-v7724/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/4 patch-v1348/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:398:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/4 patch-v1348/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/5 patch-v2490/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:139:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/5 patch-v2490/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/5 patch-v2490/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/5 patch-v2490/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/5 patch-v2490/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/6 patch-v2666/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/6 patch-v2666/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/6 patch-v2666/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/6 patch-v2666/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/7 patch-v2739/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/7 patch-v2739/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/7 patch-v2739/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/7 patch-v2739/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/8 patch-v3159/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/8 patch-v3159/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/8 patch-v3159/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/8 patch-v3159/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed0/9 patch-v3162/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/9 patch-v3162/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed0/9 patch-v3162/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed0/9 patch-v3162/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/1 patch-v121/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/10 patch-v5369/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/10 patch-v5369/org.apache.commons.math.util.FastMath.java:3757:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/10 patch-v5369/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:191:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/10 patch-v5369/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:221:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/10 patch-v5369/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:222:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/10 patch-v5369/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:395:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/10 patch-v5369/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/11 patch-v6306/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:191:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/11 patch-v6306/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/11 patch-v6306/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/11 patch-v6306/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/11 patch-v6306/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/12 patch-v6454/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/13 patch-v6792/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:220:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/13 patch-v6792/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:221:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/13 patch-v6792/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:524:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/13 patch-v6792/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:557:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/13 patch-v6792/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:565:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/14 patch-v6964/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:187:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/14 patch-v6964/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/14 patch-v6964/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:219:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/14 patch-v6964/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:220:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/14 patch-v6964/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:523:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/14 patch-v6964/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:539:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/14 patch-v6964/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:555:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/14 patch-v6964/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/15 patch-v6991/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:220:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/15 patch-v6991/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:221:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/15 patch-v6991/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:540:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/15 patch-v6991/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:556:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/15 patch-v6991/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:564:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/16 patch-v7196/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/16 patch-v7196/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/16 patch-v7196/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/16 patch-v7196/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/17 patch-v7398/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/17 patch-v7398/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/17 patch-v7398/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/18 patch-v7416/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/18 patch-v7416/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:527:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/18 patch-v7416/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:543:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/18 patch-v7416/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:559:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/18 patch-v7416/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:567:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/2 patch-v205/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:399:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/2 patch-v205/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/3 patch-v864/org.apache.commons.math.linear.OpenMapRealVector.java:181:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/3 patch-v864/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/3 patch-v864/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/4 patch-v2115/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/4 patch-v2115/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/4 patch-v2115/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/4 patch-v2115/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/5 patch-v3298/org.apache.commons.math.linear.OpenMapRealVector.java:181:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/5 patch-v3298/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:396:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/5 patch-v3298/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/5 patch-v3298/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/6 patch-v3353/org.apache.commons.math.linear.OpenMapRealVector.java:181:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/6 patch-v3353/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:397:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/6 patch-v3353/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/7 patch-v3653/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:138:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/7 patch-v3653/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/7 patch-v3653/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/7 patch-v3653/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/8 patch-v4557/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:187:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/8 patch-v4557/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed1/8 patch-v4557/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:219:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/8 patch-v4557/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:220:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/8 patch-v4557/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:565:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed1/9 patch-v4834/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/9 patch-v4834/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:220:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/9 patch-v4834/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:221:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/9 patch-v4834/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:392:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed1/9 patch-v4834/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:567:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/1 patch-v467/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/1 patch-v467/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/10 patch-v4335/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:140:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/10 patch-v4335/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/10 patch-v4335/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/10 patch-v4335/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/10 patch-v4335/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/11 patch-v4713/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/11 patch-v4713/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/11 patch-v4713/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/11 patch-v4713/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/12 patch-v4875/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/13 patch-v6071/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/14 patch-v6244/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/14 patch-v6244/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/14 patch-v6244/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/14 patch-v6244/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/14 patch-v6244/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/15 patch-v6259/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/15 patch-v6259/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/15 patch-v6259/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/15 patch-v6259/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/16 patch-v6509/org.apache.commons.math.linear.OpenMapRealVector.java:76:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/16 patch-v6509/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:140:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/16 patch-v6509/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/17 patch-v6651/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/17 patch-v6651/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/17 patch-v6651/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/17 patch-v6651/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/18 patch-v6745/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/18 patch-v6745/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/18 patch-v6745/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:564:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/18 patch-v6745/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/19 patch-v6772/org.apache.commons.math.linear.OpenMapRealVector.java:76:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/19 patch-v6772/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/19 patch-v6772/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/19 patch-v6772/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/19 patch-v6772/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/19 patch-v6772/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/2 patch-v1253/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/2 patch-v1253/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/2 patch-v1253/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/2 patch-v1253/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/20 patch-v6908/org.apache.commons.math.MathRuntimeException.java:201:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/20 patch-v6908/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:140:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/20 patch-v6908/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/20 patch-v6908/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/21 patch-v6921/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:140:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/21 patch-v6921/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/21 patch-v6921/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/21 patch-v6921/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/21 patch-v6921/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/22 patch-v7004/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/22 patch-v7004/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/22 patch-v7004/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/22 patch-v7004/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/23 patch-v7261/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/23 patch-v7261/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/24 patch-v7373/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/24 patch-v7373/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/25 patch-v7474/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/25 patch-v7474/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/25 patch-v7474/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/25 patch-v7474/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/26 patch-v7494/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/26 patch-v7494/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/26 patch-v7494/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/26 patch-v7494/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/3 patch-v1359/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/3 patch-v1359/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/4 patch-v1543/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/4 patch-v1543/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/4 patch-v1543/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/4 patch-v1543/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/5 patch-v2219/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/5 patch-v2219/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/5 patch-v2219/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/5 patch-v2219/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/6 patch-v2808/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/6 patch-v2808/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/6 patch-v2808/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/7 patch-v3614/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:398:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/7 patch-v3614/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/7 patch-v3614/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/8 patch-v4063/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed2/9 patch-v4277/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/9 patch-v4277/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed2/9 patch-v4277/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed2/9 patch-v4277/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/1 patch-v270/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/1 patch-v270/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/10 patch-v7121/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/10 patch-v7121/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/10 patch-v7121/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/10 patch-v7121/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/10 patch-v7121/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/11 patch-v7540/org.apache.commons.math.linear.OpenMapRealVector.java:356:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/11 patch-v7540/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/11 patch-v7540/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/11 patch-v7540/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/11 patch-v7540/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/2 patch-v1813/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/2 patch-v1813/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/2 patch-v1813/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/2 patch-v1813/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/3 patch-v2797/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/3 patch-v2797/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/3 patch-v2797/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/3 patch-v2797/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/4 patch-v3079/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/4 patch-v3079/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/4 patch-v3079/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/4 patch-v3079/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/5 patch-v3128/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/5 patch-v3128/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/5 patch-v3128/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/5 patch-v3128/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/6 patch-v3380/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/6 patch-v3380/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/6 patch-v3380/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/7 patch-v3729/org.apache.commons.math.linear.OpenMapRealVector.java:356:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/7 patch-v3729/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/8 patch-v4488/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:180:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed3/8 patch-v4488/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed3/9 patch-v6909/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:185:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed3/9 patch-v6909/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/1 patch-v295/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/10 patch-v4022/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/11 patch-v4841/org.apache.commons.math.util.FastMath.java:3756:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/11 patch-v4841/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/11 patch-v4841/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:527:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/11 patch-v4841/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:543:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/11 patch-v4841/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:559:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/11 patch-v4841/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:567:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/12 patch-v4976/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:144:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/12 patch-v4976/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:181:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/12 patch-v4976/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:573:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/13 patch-v5319/org.apache.commons.math.util.FastMath.java:3756:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/13 patch-v5319/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:180:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/13 patch-v5319/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:187:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/13 patch-v5319/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/14 patch-v6273/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:144:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/14 patch-v6273/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:218:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/14 patch-v6273/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:531:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/14 patch-v6273/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/14 patch-v6273/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/14 patch-v6273/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/15 patch-v6419/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/15 patch-v6419/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/15 patch-v6419/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/15 patch-v6419/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/16 patch-v6479/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:144:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/16 patch-v6479/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:187:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/16 patch-v6479/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/17 patch-v6711/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:144:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/17 patch-v6711/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/17 patch-v6711/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/17 patch-v6711/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/17 patch-v6711/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/18 patch-v6801/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:144:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/18 patch-v6801/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:187:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/18 patch-v6801/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/18 patch-v6801/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/18 patch-v6801/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/18 patch-v6801/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/19 patch-v7138/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/19 patch-v7138/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/19 patch-v7138/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/19 patch-v7138/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/19 patch-v7138/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/2 patch-v1350/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/20 patch-v7194/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/20 patch-v7194/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/20 patch-v7194/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/20 patch-v7194/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/3 patch-v1366/org.apache.commons.math.util.FastMath.java:3756:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/3 patch-v1366/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/4 patch-v1747/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/5 patch-v2045/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:121:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/5 patch-v2045/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/5 patch-v2045/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/5 patch-v2045/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/6 patch-v2135/org.apache.commons.math.MathRuntimeException.java:373:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/6 patch-v2135/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/7 patch-v3130/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:121:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed4/7 patch-v3130/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/7 patch-v3130/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/7 patch-v3130/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/7 patch-v3130/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/8 patch-v3160/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/8 patch-v3160/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/8 patch-v3160/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/8 patch-v3160/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed4/9 patch-v3965/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/9 patch-v3965/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/9 patch-v3965/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed4/9 patch-v3965/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed5/1 patch-v32/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed5/2 patch-v324/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed5/2 patch-v324/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed5/3 patch-v3656/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed5/4 patch-v3680/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:398:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed5/4 patch-v3680/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed5/5 patch-v3695/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:274:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed5/5 patch-v3695/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed5/6 patch-v4022/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed5/7 patch-v5776/org.apache.commons.math.util.FastMath.java:3756:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed5/7 patch-v5776/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed5/8 patch-v7281/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed5/8 patch-v7281/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:273:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed5/8 patch-v7281/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/1 patch-v880/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/10 patch-v5376/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:190:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/10 patch-v5376/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/11 patch-v5935/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:396:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/11 patch-v5935/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:564:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/11 patch-v5935/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/12 patch-v6055/org.apache.commons.math.linear.OpenMapRealVector.java:244:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/12 patch-v6055/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/12 patch-v6055/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/13 patch-v6447/org.apache.commons.math.linear.OpenMapRealVector.java:227:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/13 patch-v6447/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/14 patch-v6454/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:396:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/14 patch-v6454/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/14 patch-v6454/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:531:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/14 patch-v6454/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/15 patch-v6474/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/15 patch-v6474/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/16 patch-v6519/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:135:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/16 patch-v6519/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/16 patch-v6519/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/16 patch-v6519/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/17 patch-v6937/org.apache.commons.math.linear.OpenMapRealVector.java:226:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/17 patch-v6937/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:527:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/17 patch-v6937/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/18 patch-v7064/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/18 patch-v7064/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/18 patch-v7064/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/19 patch-v7290/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:190:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/19 patch-v7290/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:532:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/19 patch-v7290/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/2 patch-v1907/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/2 patch-v1907/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/2 patch-v1907/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/2 patch-v1907/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/20 patch-v7308/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:190:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/20 patch-v7308/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/20 patch-v7308/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/20 patch-v7308/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/21 patch-v7327/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/21 patch-v7327/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/22 patch-v7816/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/22 patch-v7816/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/3 patch-v2013/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/3 patch-v2013/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/3 patch-v2013/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/3 patch-v2013/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/4 patch-v2576/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:190:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/4 patch-v2576/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:532:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/4 patch-v2576/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/5 patch-v2991/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:526:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/5 patch-v2991/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/6 patch-v3341/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:526:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/6 patch-v3341/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:542:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/6 patch-v3341/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:567:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/7 patch-v3388/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed6/7 patch-v3388/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/8 patch-v4069/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:135:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/8 patch-v4069/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:191:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/8 patch-v4069/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:398:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/8 patch-v4069/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:575:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed6/9 patch-v4438/org.apache.commons.math.linear.OpenMapRealVector.java:244:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/9 patch-v4438/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:421:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed6/9 patch-v4438/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/1 patch-v10/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/10 patch-v4574/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/10 patch-v4574/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/10 patch-v4574/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/10 patch-v4574/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/11 patch-v5076/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:137:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed7/11 patch-v5076/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/11 patch-v5076/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/11 patch-v5076/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/11 patch-v5076/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/12 patch-v5082/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/12 patch-v5082/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/12 patch-v5082/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/12 patch-v5082/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/13 patch-v5127/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/13 patch-v5127/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/13 patch-v5127/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/13 patch-v5127/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/13 patch-v5127/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/14 patch-v5538/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:187:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/14 patch-v5538/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/14 patch-v5538/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/14 patch-v5538/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/14 patch-v5538/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/14 patch-v5538/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/15 patch-v5709/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/15 patch-v5709/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/15 patch-v5709/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/15 patch-v5709/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/16 patch-v6042/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/16 patch-v6042/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/17 patch-v6109/org.apache.commons.math.linear.OpenMapRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed7/17 patch-v6109/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:181:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed7/17 patch-v6109/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:187:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/17 patch-v6109/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed7/17 patch-v6109/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/18 patch-v6403/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/19 patch-v7158/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/19 patch-v7158/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/19 patch-v7158/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/19 patch-v7158/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/2 patch-v889/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/2 patch-v889/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/2 patch-v889/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/2 patch-v889/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/3 patch-v1757/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:158:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/3 patch-v1757/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/4 patch-v2812/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/4 patch-v2812/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/5 patch-v3264/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:137:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed7/5 patch-v3264/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/5 patch-v3264/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/5 patch-v3264/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/5 patch-v3264/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/6 patch-v3306/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:137:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed7/6 patch-v3306/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:188:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed7/6 patch-v3306/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/7 patch-v3349/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:181:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed7/7 patch-v3349/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/8 patch-v4302/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/8 patch-v4302/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/8 patch-v4302/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed7/8 patch-v4302/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed7/9 patch-v4457/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/1 patch-v241/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:181:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/1 patch-v241/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/10 patch-v3058/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/10 patch-v3058/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/10 patch-v3058/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/10 patch-v3058/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/11 patch-v3108/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/11 patch-v3108/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/11 patch-v3108/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/11 patch-v3108/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/12 patch-v3158/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/12 patch-v3158/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/12 patch-v3158/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/12 patch-v3158/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/13 patch-v3167/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/13 patch-v3167/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/13 patch-v3167/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:564:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/13 patch-v3167/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/14 patch-v3214/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/15 patch-v3332/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/15 patch-v3332/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:527:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/15 patch-v3332/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/16 patch-v3491/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/16 patch-v3491/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/16 patch-v3491/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/16 patch-v3491/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/16 patch-v3491/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/17 patch-v3698/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/17 patch-v3698/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/17 patch-v3698/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/17 patch-v3698/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/17 patch-v3698/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/18 patch-v3828/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/18 patch-v3828/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/18 patch-v3828/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:564:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/18 patch-v3828/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/19 patch-v4244/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/19 patch-v4244/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/19 patch-v4244/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/19 patch-v4244/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/2 patch-v552/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/2 patch-v552/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/20 patch-v4265/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/20 patch-v4265/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/20 patch-v4265/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/20 patch-v4265/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/21 patch-v4510/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/21 patch-v4510/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/21 patch-v4510/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/22 patch-v4623/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/22 patch-v4623/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/22 patch-v4623/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/22 patch-v4623/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/23 patch-v4645/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/23 patch-v4645/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/23 patch-v4645/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/23 patch-v4645/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/24 patch-v4752/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/24 patch-v4752/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/24 patch-v4752/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/24 patch-v4752/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/25 patch-v4856/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/25 patch-v4856/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/25 patch-v4856/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/25 patch-v4856/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/26 patch-v4865/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:394:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/26 patch-v4865/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/27 patch-v5420/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/27 patch-v5420/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/27 patch-v5420/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/27 patch-v5420/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/28 patch-v5438/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/28 patch-v5438/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/28 patch-v5438/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/28 patch-v5438/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/28 patch-v5438/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/29 patch-v5513/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/29 patch-v5513/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/29 patch-v5513/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/29 patch-v5513/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/3 patch-v570/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/3 patch-v570/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/3 patch-v570/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/3 patch-v570/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/30 patch-v5614/org.apache.commons.math.linear.OpenMapRealVector.java:480:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/30 patch-v5614/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/30 patch-v5614/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/30 patch-v5614/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/30 patch-v5614/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/31 patch-v5812/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/31 patch-v5812/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/31 patch-v5812/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/31 patch-v5812/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/32 patch-v5862/org.apache.commons.math.linear.OpenMapRealVector.java:480:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/32 patch-v5862/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/32 patch-v5862/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/32 patch-v5862/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/32 patch-v5862/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/33 patch-v5863/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:394:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/33 patch-v5863/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/33 patch-v5863/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/33 patch-v5863/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/33 patch-v5863/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/34 patch-v5947/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/34 patch-v5947/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:531:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/34 patch-v5947/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/34 patch-v5947/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:564:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/34 patch-v5947/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/35 patch-v6257/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:181:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/35 patch-v6257/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/35 patch-v6257/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/35 patch-v6257/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/35 patch-v6257/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/36 patch-v6319/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/36 patch-v6319/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/36 patch-v6319/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:564:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/36 patch-v6319/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:572:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/37 patch-v6323/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/37 patch-v6323/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/37 patch-v6323/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/37 patch-v6323/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/38 patch-v6414/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:181:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/38 patch-v6414/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/38 patch-v6414/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/38 patch-v6414/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/38 patch-v6414/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/38 patch-v6414/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/39 patch-v6646/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/39 patch-v6646/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/39 patch-v6646/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/39 patch-v6646/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/39 patch-v6646/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/4 patch-v1270/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/4 patch-v1270/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/4 patch-v1270/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/40 patch-v6720/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/40 patch-v6720/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:547:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/40 patch-v6720/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/40 patch-v6720/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/41 patch-v7289/org.apache.commons.math.linear.OpenMapRealVector.java:479:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/41 patch-v7289/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/41 patch-v7289/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:527:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/41 patch-v7289/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/42 patch-v7771/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:527:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/42 patch-v7771/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/5 patch-v1299/org.apache.commons.math.linear.OpenMapRealVector.java:480:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/5 patch-v1299/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/5 patch-v1299/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/6 patch-v1693/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/7 patch-v2507/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/7 patch-v2507/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/8 patch-v2631/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/8 patch-v2631/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/8 patch-v2631/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/8 patch-v2631/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed8/9 patch-v2699/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/9 patch-v2699/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed8/9 patch-v2699/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:563:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed8/9 patch-v2699/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/1 patch-v100/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/10 patch-v2191/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/10 patch-v2191/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/11 patch-v2292/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/11 patch-v2292/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/12 patch-v2314/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:527:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/12 patch-v2314/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/13 patch-v2385/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/13 patch-v2385/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/13 patch-v2385/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/14 patch-v2583/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/14 patch-v2583/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/14 patch-v2583/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:534:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/14 patch-v2583/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/14 patch-v2583/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/14 patch-v2583/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/15 patch-v2929/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/15 patch-v2929/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:527:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/15 patch-v2929/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/16 patch-v3589/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/16 patch-v3589/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/16 patch-v3589/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/16 patch-v3589/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/17 patch-v3681/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/17 patch-v3681/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/17 patch-v3681/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/18 patch-v4063/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/18 patch-v4063/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/18 patch-v4063/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/18 patch-v4063/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/19 patch-v4127/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/19 patch-v4127/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:398:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/19 patch-v4127/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/19 patch-v4127/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/2 patch-v428/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/20 patch-v5269/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/20 patch-v5269/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:359:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/20 patch-v5269/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/21 patch-v5553/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/21 patch-v5553/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/21 patch-v5553/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/21 patch-v5553/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/22 patch-v5735/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/22 patch-v5735/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/23 patch-v5761/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:526:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/23 patch-v5761/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:542:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/23 patch-v5761/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:558:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/23 patch-v5761/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:566:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/24 patch-v6952/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/24 patch-v6952/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/24 patch-v6952/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/24 patch-v6952/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/24 patch-v6952/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/25 patch-v7353/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/25 patch-v7353/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:215:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/25 patch-v7353/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/26 patch-v7631/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/26 patch-v7631/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/26 patch-v7631/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:395:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/26 patch-v7631/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/27 patch-v7806/org.apache.commons.math.linear.OpenMapRealVector.java:77:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/27 patch-v7806/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/27 patch-v7806/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/27 patch-v7806/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/27 patch-v7806/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/28 patch-v7900/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/28 patch-v7900/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/28 patch-v7900/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/28 patch-v7900/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/29 patch-v7982/org.apache.commons.math.linear.OpenMapRealVector.java:77:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/29 patch-v7982/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/29 patch-v7982/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/29 patch-v7982/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/29 patch-v7982/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/3 patch-v485/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/30 patch-v8025/org.apache.commons.math.linear.OpenMapRealVector.java:77:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/30 patch-v8025/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:530:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/30 patch-v8025/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:546:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/30 patch-v8025/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:562:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/30 patch-v8025/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/31 patch-v8134/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/31 patch-v8134/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:186:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/31 patch-v8134/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:533:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/31 patch-v8134/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/32 patch-v8316/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:220:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/32 patch-v8316/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:221:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/32 patch-v8316/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:524:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/32 patch-v8316/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:540:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/32 patch-v8316/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:556:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/32 patch-v8316/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:564:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/33 patch-v8371/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/33 patch-v8371/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:544:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/33 patch-v8371/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:560:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/33 patch-v8371/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:568:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/4 patch-v1286/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/4 patch-v1286/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/5 patch-v1351/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:217:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/5 patch-v1351/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:528:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/5 patch-v1351/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:570:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/6 patch-v1404/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/6 patch-v1404/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/7 patch-v1592/org.apache.commons.math.linear.OpenMapRealVector.java:77:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/7 patch-v1592/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/8 patch-v1770/org.apache.commons.math.exception.util.LocalizedFormats.java:367:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/8 patch-v1770/org.apache.commons.math.exception.util.LocalizedFormats.java:368:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/8 patch-v1770/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:571:	EmptyControlStatement:	Empty while statement
+./200200100/math49/seed9/9 patch-v2162/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:216:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/9 patch-v2162/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:529:	UnusedLocalVariable:	使用されない変数
+./200200100/math49/seed9/9 patch-v2162/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:545:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/9 patch-v2162/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:561:	EmptyControlStatement:	Empty if statement
+./200200100/math49/seed9/9 patch-v2162/org.apache.commons.math.util.OpenIntToDoubleHashMap.java:569:	EmptyControlStatement:	Empty while statement

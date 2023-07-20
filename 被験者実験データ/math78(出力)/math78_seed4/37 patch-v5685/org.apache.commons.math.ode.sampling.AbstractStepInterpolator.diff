@@ -1,0 +1,36 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -90,11 +90,9 @@
+     previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+-    interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+     this.forward            = true;
+     this.dirtyState         = true;
+   }
+@@ -109,13 +107,10 @@
+     previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+     h                 = Double.NaN;
+-    interpolatedTime  = Double.NaN;
+-
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
+     this.forward      = forward;
+     this.dirtyState   = true;
+ 
+@@ -177,7 +172,6 @@
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
+     this.forward      = isForward;
+     this.dirtyState   = true;
+ 

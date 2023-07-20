@@ -1,0 +1,11 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2947,7 +2947,7 @@
+             final double pia = 1.5707963267948966*2.0;
+             final double pib = 6.123233995736766E-17*2.0;
+ 
+-            za = pia - result;
++            double reduceResults[] = new double[3];
+             zb = -(za - pia + result);
+             zb += pib - resultb;
+ 

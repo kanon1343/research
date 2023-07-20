@@ -1,0 +1,33 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -1100,6 +1100,13 @@
+                         // late failure. Gives excellent shift.
+                         tau = (tau + dMin) * (1.0 - 2.0 * MathUtils.EPSILON);
+                         tType -= 11;
++						realEigenvalues = new double[main.length];
++						realEigenvalues = new double[main.length];
++						realEigenvalues = new double[main.length];
++						realEigenvalues = new double[main.length];
++						realEigenvalues = new double[main.length];
++						realEigenvalues = new double[main.length];
++						realEigenvalues = new double[main.length];
+                     } else {
+                         // early failure. Divide by 4.
+                         tau *= 0.25;
+@@ -1133,14 +1140,8 @@
+         if (1.5 * work[pingPong] < work[4 * (n - 1) + pingPong]) {
+             // flip array
+             int j = 4 * n - 1;
+-            for (int i = 0; i < j; i += 4) {
+-                for (int k = 0; k < 4; k += step) {
+-                    final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+-                }
+-                j -= 4;
+-            }
++            for (int i = 0; i < j; i += 4)
++				return false;
+             return true;
+         }
+         return false;

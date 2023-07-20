@@ -1,0 +1,11 @@
+--- org.apache.commons.math.MaxIterationsExceededException
++++ org.apache.commons.math.MaxIterationsExceededException
+@@ -41,7 +41,7 @@
+      */
+     public MaxIterationsExceededException(final int maxIterations) {
+         super("Maximal number of iterations ({0}) exceeded", maxIterations);
+-        this.maxIterations = maxIterations;
++		this.maxIterations = maxIterations;
+     }
+ 
+     /**

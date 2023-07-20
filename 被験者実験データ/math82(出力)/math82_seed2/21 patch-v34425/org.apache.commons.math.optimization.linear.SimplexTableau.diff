@@ -1,0 +1,26 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -349,7 +349,22 @@
+               coefficients[i] = 0;
+           } else {
+               basicRows.add(basicRow);
+-              coefficients[i] =
++              this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
+           }

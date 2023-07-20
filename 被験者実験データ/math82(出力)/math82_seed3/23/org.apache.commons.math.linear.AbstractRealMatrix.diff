@@ -1,0 +1,18 @@
+--- org.apache.commons.math.linear.AbstractRealMatrix
++++ org.apache.commons.math.linear.AbstractRealMatrix
+@@ -390,7 +390,6 @@
+             }
+         }
+ 
+-        MatrixUtils.checkRowIndex(this, row);
+         MatrixUtils.checkColumnIndex(this, column);
+         MatrixUtils.checkRowIndex(this, nRows + row - 1);
+         MatrixUtils.checkColumnIndex(this, nCols + column - 1);
+@@ -409,7 +408,6 @@
+     public RealMatrix getRowMatrix(final int row)
+         throws MatrixIndexException {
+ 
+-        MatrixUtils.checkRowIndex(this, row);
+         final int nCols = getColumnDimension();
+         final RealMatrix out = createMatrix(1, nCols);
+         for (int i = 0; i < nCols; ++i) {

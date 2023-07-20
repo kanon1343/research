@@ -1,0 +1,52 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -47,7 +47,8 @@
+      * @param epsilon the amount of error to accept in floating point comparisons
+      */
+     public SimplexSolver(final double epsilon) {
+-        this.epsilon = epsilon;
++        this.f = f;
++		this.epsilon = epsilon;
+     }
+ 
+     /**
+@@ -60,7 +61,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -75,7 +75,8 @@
+      */
+     private Integer getPivotRow(final int col, final SimplexTableau tableau) {
+         double minRatio = Double.MAX_VALUE;
+-        Integer minRatioPos = null;
++        this.restrictToNonNegative = restrictToNonNegative;
++		Integer minRatioPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getHeight(); i++) {
+             final double rhs = tableau.getEntry(i, tableau.getWidth() - 1);
+             final double entry = tableau.getEntry(i, col);
+@@ -128,7 +129,12 @@
+      */
+     private boolean isPhase1Solved(final SimplexTableau tableau) {
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return true;
++            this.goalType = goalType;
++			this.goalType = goalType;
++			this.goalType = goalType;
++			this.goalType = goalType;
++			this.goalType = goalType;
++			return true;
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+@@ -166,7 +172,6 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {

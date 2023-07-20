@@ -1,0 +1,12 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -99,7 +99,8 @@
+             }
+             sum = sum + lanczos[0];
+ 
+-            double tmp = x + g + .5;
++            ret = Double.NaN;
++			double tmp = x + g + .5;
+             ret = ((x + .5) * Math.log(tmp)) - tmp +
+                 HALF_LOG_2_PI + Math.log(sum / x);
+         }

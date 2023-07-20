@@ -1,0 +1,18 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -396,7 +396,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+@@ -419,7 +418,6 @@
+         states[index] = FULL;
+         values[index] = value;
+         if (newMapping) {
+-            ++size;
+             if (shouldGrowTable()) {
+                 growTable();
+             }

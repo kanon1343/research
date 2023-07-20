@@ -1,0 +1,119 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -106,13 +106,54 @@
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            this.f = f;
++			return result;
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
++        if (f.value(initial) == 0.0) {
++            resultComputed = true;
++			iterationCount += this.iterationCount;
++			resultComputed = true;
++			resultComputed = true;
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			setResult(yMin, 0);
+             return result;
+         }
+ 
+@@ -124,7 +165,7 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
++            this.functionValueAccuracy = defaultFunctionValueAccuracy;
+             return result;
+         }
+ 
+@@ -182,7 +223,7 @@
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
+-                ret = max;
++                return max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+@@ -238,7 +279,39 @@
+                 x2 = x0;
+                 y0 = y1;
+                 y1 = y2;
+-                y2 = y0;
++				y1 = y2;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				clearResult();
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				oldDelta = delta;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				oldDelta = delta;
++				y2 = y0;
++				clearResult();
++				y2 = y0;
++				y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+                 // Avoid division by very small values. Assume

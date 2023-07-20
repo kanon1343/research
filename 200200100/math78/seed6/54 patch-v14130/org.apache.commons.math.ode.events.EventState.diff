@@ -1,0 +1,33 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -103,10 +103,8 @@
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -231,9 +229,7 @@
+                             // properly ends exactly at the event occurrence
+                             return false;
+                         }
+-                        // either we were not waiting for the event or it has
+-                        // moved in such a way the step cannot be accepted
+-                        pendingEvent = true;
++                        solver.setAbsoluteAccuracy(convergence);
+                         return true;
+                     }
+ 
+@@ -286,8 +282,6 @@
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {
+-            // force the sign to its value "just after the event"
+-            previousEventTime = t;
+             g0Positive        = increasing;
+             nextAction        = handler.eventOccurred(t, y, !(increasing ^ forward));
+         } else {

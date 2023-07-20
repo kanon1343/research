@@ -1,0 +1,84 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -95,8 +95,8 @@
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+     finalized               = false;
+-    this.forward            = true;
+-    this.dirtyState         = true;
++    interpolatedDerivatives = null;
++	this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -111,7 +111,61 @@
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+-    currentState            = y;
++    {
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	h = Double.NaN;
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	h = Double.NaN;
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	h = Double.NaN;
++	h = Double.NaN;
++	h = Double.NaN;
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	h = Double.NaN;
++	interpolatedDerivatives = null;
++	h = Double.NaN;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	currentState            = y;
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+@@ -242,7 +296,6 @@
+ 
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+-      interpolatedTime = time;
+       dirtyState       = true;
+   }
+ 

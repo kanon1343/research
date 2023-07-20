@@ -1,0 +1,19 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -237,7 +237,6 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =
+@@ -301,7 +300,7 @@
+             if ((y1 > 0) == (y2 > 0)) {
+                 x2 = x0;
+                 y2 = y0;
+-                delta = x1 - x0;
++                y0 = y1;
+                 oldDelta = delta;
+             }
+             i++;

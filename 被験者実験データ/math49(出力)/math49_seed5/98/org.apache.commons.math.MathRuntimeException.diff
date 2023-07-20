@@ -1,0 +1,11 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+     }
+ 
+     /** Gets the message in a specified locale.

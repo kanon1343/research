@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -187,7 +187,8 @@
+      * @return number of variables
+      */
+     public int getNumVariables() {
+-        return f.getCoefficients().getDimension();
++        int zIndex = (getNumObjectiveFunctions() == 1) ? 0 : 1;
++		return f.getCoefficients().getDimension();
+     }
+ 
+     /**

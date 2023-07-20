@@ -1,0 +1,84 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -88,15 +88,29 @@
+    */
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+-    currentTime             = Double.NaN;
++    finalized = false;
++	interpolatedState = null;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+     finalized               = false;
++	interpolatedState = null;
+     this.forward            = true;
+     this.dirtyState         = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
+   }
+ 
+   /** Simple constructor.
+@@ -107,7 +121,7 @@
+   protected AbstractStepInterpolator(final double[] y, final boolean forward) {
+ 
+     previousTime      = Double.NaN;
+-    currentTime       = Double.NaN;
++    finalized = false;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+@@ -116,7 +130,21 @@
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+-    this.forward      = forward;
++    interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	this.forward      = forward;
+     this.dirtyState   = true;
+ 
+   }
+@@ -169,7 +197,7 @@
+   protected void reinitialize(final double[] y, final boolean isForward) {
+ 
+     previousTime      = Double.NaN;
+-    currentTime       = Double.NaN;
++    finalized = false;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+@@ -208,7 +236,8 @@
+    * interpolator for future calls to {@link #storeTime storeTime}
+    */
+   public void shift() {
+-    previousTime = currentTime;
++    setInterpolatedTime(getInterpolatedTime());
++	previousTime = currentTime;
+   }
+ 
+   /** Store the current step time.

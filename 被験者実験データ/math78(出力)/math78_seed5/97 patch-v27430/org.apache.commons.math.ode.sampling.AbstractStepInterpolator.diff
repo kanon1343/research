@@ -1,0 +1,101 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -87,8 +87,6 @@
+    * initializing the copy.
+    */
+   protected AbstractStepInterpolator() {
+-    previousTime            = Double.NaN;
+-    currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+@@ -106,7 +104,6 @@
+    */
+   protected AbstractStepInterpolator(final double[] y, final boolean forward) {
+ 
+-    previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+@@ -116,7 +113,6 @@
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+-    this.forward      = forward;
+     this.dirtyState   = true;
+ 
+   }
+@@ -168,7 +164,6 @@
+    */
+   protected void reinitialize(final double[] y, final boolean isForward) {
+ 
+-    previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+@@ -209,6 +204,52 @@
+    */
+   public void shift() {
+     previousTime = currentTime;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
+   }
+ 
+   /** Store the current step time.
+@@ -271,6 +312,12 @@
+       // lazy evaluation of the state
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
++		currentTime = Double.NaN;
++		currentTime = Double.NaN;
++		currentTime = Double.NaN;
++		currentTime = Double.NaN;
++		currentTime = Double.NaN;
++		currentTime = Double.NaN;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;

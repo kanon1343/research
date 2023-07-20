@@ -1,0 +1,10 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -160,6 +160,7 @@
+             ret = Double.NaN;
+         } else if (x == 0.0) {
+             ret = 0.0;
++			ret = -ret;
+         } else if (a >= 1.0 && x > a) {
+             // use regularizedGammaQ because it should converge faster in this
+             // case.

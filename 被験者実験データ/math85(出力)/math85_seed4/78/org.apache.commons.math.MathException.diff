@@ -1,0 +1,20 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -105,7 +105,8 @@
+     public MathException(String pattern, Object ... arguments) {
+       super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+-      this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
++      printStackTrace(System.err);
++	this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
+     }
+ 
+     /**
+@@ -116,7 +117,6 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }

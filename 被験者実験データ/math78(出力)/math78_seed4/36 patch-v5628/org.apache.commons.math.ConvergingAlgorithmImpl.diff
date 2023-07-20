@@ -1,0 +1,10 @@
+--- org.apache.commons.math.ConvergingAlgorithmImpl
++++ org.apache.commons.math.ConvergingAlgorithmImpl
+@@ -91,6 +91,7 @@
+     /** {@inheritDoc} */
+     public void setMaximalIterationCount(int count) {
+         maximalIterationCount = count;
++		absoluteAccuracy = defaultAbsoluteAccuracy;
+     }
+ 
+     /** {@inheritDoc} */

@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -111,6 +111,7 @@
+                                       getConstraintTypeCounts(Relationship.GEQ);
+         this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
++		double minValue = 0;
+         this.tableau = new Array2DRowRealMatrix(createTableau(goalType == GoalType.MAXIMIZE));
+         initialize();
+     }

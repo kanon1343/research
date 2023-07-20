@@ -1,0 +1,46 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -139,7 +139,6 @@
+         states = new byte[length];
+         System.arraycopy(source.states, 0, states, 0, length);
+         missingEntries = source.missingEntries;
+-        size  = source.size;
+         mask  = source.mask;
+         count = source.count;
+     }
+@@ -214,17 +213,11 @@
+         }
+ 
+         if (states[index] == FREE) {
+-            return false;
+         }
+ 
+         int j = index;
+-        for (int perturb = perturb(hash); states[index] != FREE; perturb >>= PERTURB_SHIFT) {
+-            j = probe(perturb, j);
+-            index = j & mask;
+-            if (containsKey(key, index)) {
+-                return true;
+-            }
+-        }
++        for (int perturb = perturb(hash); states[index] != FREE; perturb >>= PERTURB_SHIFT)
++			states[index] = REMOVED;
+ 
+         return false;
+ 
+@@ -396,7 +389,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+@@ -527,7 +519,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);

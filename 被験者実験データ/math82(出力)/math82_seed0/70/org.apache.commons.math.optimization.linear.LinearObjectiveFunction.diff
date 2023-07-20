@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.LinearObjectiveFunction
++++ org.apache.commons.math.optimization.linear.LinearObjectiveFunction
+@@ -64,7 +64,8 @@
+      */
+     public LinearObjectiveFunction(RealVector coefficients, double constantTerm) {
+         this.coefficients = coefficients;
+-        this.constantTerm = constantTerm;
++        Integer row = null;
++		this.constantTerm = constantTerm;
+     }
+ 
+     /**

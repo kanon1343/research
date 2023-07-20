@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.linear.LinearConstraint
++++ org.apache.commons.math.optimization.linear.LinearConstraint
+@@ -79,6 +79,7 @@
+     public LinearConstraint(final double[] coefficients, final Relationship relationship,
+                             final double value) {
+         this(new ArrayRealVector(coefficients), relationship, value);
++		int artificialVar = 0;
+     }
+ 
+     /**

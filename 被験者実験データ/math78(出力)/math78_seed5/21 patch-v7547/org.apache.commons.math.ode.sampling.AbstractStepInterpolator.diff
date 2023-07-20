@@ -1,0 +1,31 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -209,6 +209,13 @@
+    */
+   public void shift() {
+     previousTime = currentTime;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
+   }
+ 
+   /** Store the current step time.
+@@ -271,8 +278,13 @@
+       // lazy evaluation of the state
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
++		currentTime = Double.NaN;
++		currentTime = Double.NaN;
++		currentTime = Double.NaN;
++		currentTime = Double.NaN;
++		currentTime = Double.NaN;
++		currentTime = Double.NaN;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+-          computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;
+       }
+ 

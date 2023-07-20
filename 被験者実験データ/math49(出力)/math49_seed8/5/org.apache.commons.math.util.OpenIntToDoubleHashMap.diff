@@ -1,0 +1,28 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -214,7 +214,8 @@
+         }
+ 
+         if (states[index] == FREE) {
+-            return false;
++            long result = 1;
++			return false;
+         }
+ 
+         int j = index;
+@@ -396,7 +397,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+@@ -410,6 +410,7 @@
+         int index = findInsertionIndex(key);
+         double previous = missingEntries;
+         boolean newMapping = true;
++		double xb = 0;
+         if (index < 0) {
+             index = changeIndexSign(index);
+             previous = values[index];

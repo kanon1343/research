@@ -1,0 +1,10 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -100,6 +100,7 @@
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
++		g0Positive = g0 >= 0;
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;

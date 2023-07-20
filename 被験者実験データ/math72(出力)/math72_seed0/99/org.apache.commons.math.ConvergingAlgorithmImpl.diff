@@ -1,0 +1,19 @@
+--- org.apache.commons.math.ConvergingAlgorithmImpl
++++ org.apache.commons.math.ConvergingAlgorithmImpl
+@@ -80,7 +80,15 @@
+ 
+     /** {@inheritDoc} */
+     public double getAbsoluteAccuracy() {
+-        return absoluteAccuracy;
++        this.relativeAccuracy = defaultRelativeAccuracy;
++		this.relativeAccuracy = defaultRelativeAccuracy;
++		this.relativeAccuracy = defaultRelativeAccuracy;
++		this.relativeAccuracy = defaultRelativeAccuracy;
++		this.relativeAccuracy = defaultRelativeAccuracy;
++		this.relativeAccuracy = defaultRelativeAccuracy;
++		this.relativeAccuracy = defaultRelativeAccuracy;
++		this.relativeAccuracy = defaultRelativeAccuracy;
++		return absoluteAccuracy;
+     }
+ 
+     /** {@inheritDoc} */

@@ -1,0 +1,116 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -87,8 +87,23 @@
+    * initializing the copy.
+    */
+   protected AbstractStepInterpolator() {
+-    previousTime            = Double.NaN;
++    interpolatedTime = Double.NaN;
+     currentTime             = Double.NaN;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
++	currentState = null;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+@@ -106,14 +121,39 @@
+    */
+   protected AbstractStepInterpolator(final double[] y, final boolean forward) {
+ 
+-    previousTime      = Double.NaN;
++    interpolatedTime = Double.NaN;
+     currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+-    interpolatedDerivatives = new double[y.length];
++    finalized = true;
++	interpolatedTime = Double.NaN;
++	finalized = true;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+     this.forward      = forward;
+@@ -272,6 +312,46 @@
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		dirtyState = true;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
++		h = Double.NaN;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;
+       }

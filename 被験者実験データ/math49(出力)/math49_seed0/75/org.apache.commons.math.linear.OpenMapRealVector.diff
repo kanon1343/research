@@ -1,0 +1,35 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -223,7 +223,6 @@
+     /** {@inheritDoc} */
+     @Override
+         public RealVector add(RealVector v) {
+-        checkVectorDimensions(v.getDimension());
+         if (v instanceof OpenMapRealVector) {
+             return add((OpenMapRealVector) v);
+         } else {
+@@ -241,7 +240,6 @@
+      * if the dimensions do not match.
+      */
+     public OpenMapRealVector add(OpenMapRealVector v) {
+-        checkVectorDimensions(v.getDimension());
+         boolean copyThis = entries.size() > v.entries.size();
+         OpenMapRealVector res = copyThis ? this.copy() : v.copy();
+         Iterator iter = copyThis ? v.entries.iterator() : entries.iterator();
+@@ -316,7 +314,6 @@
+      * if the dimensions do not match.
+      */
+     public double dotProduct(OpenMapRealVector v) {
+-        checkVectorDimensions(v.getDimension());
+         boolean thisIsSmaller  = entries.size() < v.entries.size();
+         Iterator iter = thisIsSmaller  ? entries.iterator() : v.entries.iterator();
+         OpenIntToDoubleHashMap larger = thisIsSmaller  ? v.entries : entries;
+@@ -342,6 +339,8 @@
+     public OpenMapRealVector ebeDivide(RealVector v) {
+         checkVectorDimensions(v.getDimension());
+         OpenMapRealVector res = new OpenMapRealVector(this);
++		checkVectorDimensions(v.getDimension());
++		checkVectorDimensions(v.getDimension());
+         Iterator iter = res.entries.iterator();
+         while (iter.hasNext()) {
+             iter.advance();

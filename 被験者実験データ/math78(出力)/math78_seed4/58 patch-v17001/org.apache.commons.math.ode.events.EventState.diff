@@ -1,0 +1,47 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -149,7 +149,8 @@
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+         t0 = tStart;
+-        g0 = handler.g(tStart, yStart);
++        increasing = true;
++		g0 = handler.g(tStart, yStart);
+         g0Positive = g0 >= 0;
+     }
+ 
+@@ -181,8 +182,25 @@
+ 
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+-                interpolator.setInterpolatedTime(tb);
++                pendingEventTime = Double.NaN;
++				pendingEventTime = Double.NaN;
++				pendingEventTime = Double.NaN;
++				interpolator.setInterpolatedTime(tb);
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
++				ga = gb;
+ 
+                 // check events occurrence
+                 if (g0Positive ^ (gb >= 0)) {
+@@ -216,6 +234,7 @@
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
++					ga = gb;
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {
+                         // we have either found nothing or found (again ?) a past event, we simply ignore it

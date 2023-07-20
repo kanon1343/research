@@ -1,0 +1,71 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -185,6 +184,60 @@
+         throws OptimizationException {
+         final SimplexTableau tableau =
+             new SimplexTableau(f, constraints, goalType, restrictToNonNegative, epsilon);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		this.restrictToNonNegative = restrictToNonNegative;
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		this.restrictToNonNegative = restrictToNonNegative;
++		solvePhase1(tableau);
++		solvePhase1(tableau);
++		solvePhase1(tableau);
+         solvePhase1(tableau);
+         tableau.discardArtificialVariables();
+         while (!isOptimal(tableau)) {

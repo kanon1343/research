@@ -1,0 +1,30 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -104,9 +104,9 @@
+         g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
++		previousEventTime = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -213,6 +213,7 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
++					pendingEventTime = Double.NaN;
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+@@ -240,7 +241,7 @@
+                 } else {
+                     // no sign change: there is no event for now
+                     ta = tb;
+-                    ga = gb;
++                    increasing = gb >= ga;
+                 }
+ 
+             }

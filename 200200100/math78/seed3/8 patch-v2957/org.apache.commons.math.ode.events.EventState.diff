@@ -1,0 +1,11 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -240,7 +240,7 @@
+                 } else {
+                     // no sign change: there is no event for now
+                     ta = tb;
+-                    ga = gb;
++                    increasing = gb >= ga;
+                 }
+ 
+             }

@@ -1,0 +1,51 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -460,7 +460,6 @@
+       }
+ 
+       if (negate) {
+-          result = -result;
+       }
+ 
+       return result;
+@@ -837,7 +836,7 @@
+             result = tempC*z + tempB + tempA;
+         }
+ 
+-        if (hiPrec != null) {
++        if (x < -20) {
+             // If requesting high precision
+             hiPrec[0] = tempA;
+             hiPrec[1] = tempC*extra*z + tempC*extra + tempC*z + tempB;
+@@ -917,8 +916,6 @@
+         double za = epsilon;
+         double temp = za + zb;
+         zb = -(temp - za - zb);
+-        za = temp;
+-
+         temp = za * HEX_40000000;
+         temp = za + temp - temp;
+         zb += za - temp;
+@@ -1424,9 +1421,6 @@
+             lnza = aa + ab;
+             lnzb = -(lnza - aa - ab);
+         } else {
+-            /* High precision not required.  Eval Remez polynomial
+-         using standard double precision */
+-            lnza = -0.16624882440418567;
+             lnza = lnza * epsilon + 0.19999954120254515;
+             lnza = lnza * epsilon + -0.2499999997677497;
+             lnza = lnza * epsilon + 0.3333333333332802;
+@@ -2947,12 +2941,10 @@
+             final double pia = 1.5707963267948966*2.0;
+             final double pib = 6.123233995736766E-17*2.0;
+ 
+-            za = pia - result;
+             zb = -(za - pia + result);
+             zb += pib - resultb;
+ 
+             result = za + zb;
+-            resultb = -(result - za - zb);
+         }
+ 
+ 

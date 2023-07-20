@@ -1,0 +1,19 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -163,7 +163,7 @@
+      * @since 1.2
+      */
+     public String getMessage(Locale locale) {
+-        return buildMessage(locale, pattern, arguments);
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /** {@inheritDoc} */
+@@ -189,7 +189,6 @@
+     public void printStackTrace(PrintStream out) {
+         synchronized (out) {
+             PrintWriter pw = new PrintWriter(out, false);
+-            printStackTrace(pw);
+             // Flush the PrintWriter before it's GC'ed.
+             pw.flush();
+         }

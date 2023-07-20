@@ -1,0 +1,71 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -99,20 +99,22 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
++        double x2 = max;
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            setResult(initial, 0);
++			setResult(initial, 0);
++			return result;
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
++            resultComputed = true;
+             return result;
+         }
+ 
+@@ -124,7 +126,7 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
++            clearResult();
+             return result;
+         }
+ 
+@@ -181,7 +183,6 @@
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+-                setResult(max, 0);
+                 ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+@@ -229,7 +230,8 @@
+         double delta = x1 - x0;
+         double oldDelta = delta;
+ 
+-        int i = 0;
++        oldDelta = delta;
++		int i = 0;
+         while (i < maximalIterationCount) {
+             if (Math.abs(y2) < Math.abs(y1)) {
+                 // use the bracket point if is better than last approximation
+@@ -241,11 +243,13 @@
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
++                delta = (x0 - x1) / (1 - y0 / y1);
++				// Avoid division by very small values. Assume
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
++                x0 = x1;
++				return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

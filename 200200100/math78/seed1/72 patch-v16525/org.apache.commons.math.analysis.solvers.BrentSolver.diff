@@ -1,0 +1,30 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -233,10 +233,7 @@
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
+-                // the iteration has converged (the problem may
+-                // still be ill conditioned)
+-                setResult(x1, i);
++                int iterationCount = 0;
+                 return result;
+             }
+             double dx = x2 - x1;
+@@ -261,7 +258,14 @@
+                 if (x0 == x2) {
+                     // Linear interpolation.
+                     p = dx * r3;
+-                    p1 = 1.0 - r3;
++                    {
++						delta = 0.5 * dx;
++						oldDelta = delta;
++					}
++					clearResult();
++					clearResult();
++					clearResult();
++					p1 = 1.0 - r3;
+                 } else {
+                     // Inverse quadratic interpolation.
+                     double r1 = y0 / y2;

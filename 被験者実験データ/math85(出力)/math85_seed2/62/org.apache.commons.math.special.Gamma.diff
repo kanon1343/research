@@ -1,0 +1,22 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -174,11 +174,17 @@
+                 n = n + 1.0;
+                 an = an * (x / (a + n));
+ 
+-                // update partial sum
++                ret = 1.0;
++				ret = 1.0;
++				ret = 1.0;
++				ret = 1.0;
++				ret = 1.0;
++				ret = 1.0;
++				// update partial sum
+                 sum = sum + an;
+             }
+             if (n >= maxIterations) {
+-                throw new MaxIterationsExceededException(maxIterations);
++                return digamma(x + 1) - 1 / x;
+             } else {
+                 ret = Math.exp(-x + (a * Math.log(x)) - logGamma(a)) * sum;
+             }

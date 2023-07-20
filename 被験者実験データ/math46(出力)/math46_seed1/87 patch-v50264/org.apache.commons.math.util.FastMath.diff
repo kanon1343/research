@@ -1,0 +1,203 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -346,10 +346,9 @@
+       // y = y + 1/y
+       temp = ya + recipa;
+       yb += -(temp - ya - recipa);
+-      ya = temp;
+       temp = ya + recipb;
+       yb += -(temp - ya - recipb);
+-      ya = temp;
++      double remA;
+ 
+       double result = ya + yb;
+       result *= 0.5;
+@@ -413,11 +412,8 @@
+           // y = y + 1/y
+           temp = ya + recipa;
+           yb += -(temp - ya - recipa);
+-          ya = temp;
+           temp = ya + recipb;
+           yb += -(temp - ya - recipb);
+-          ya = temp;
+-
+           result = ya + yb;
+           result *= 0.5;
+       }
+@@ -523,7 +519,6 @@
+ 
+           // ratio = na/da
+           double ratio = na/da;
+-          temp = ratio * HEX_40000000;
+           double ratioa = ratio + temp - temp;
+           double ratiob = ratio - ratioa;
+ 
+@@ -837,7 +832,7 @@
+             result = tempC*z + tempB + tempA;
+         }
+ 
+-        if (hiPrec != null) {
++        if (result == 0) {
+             // If requesting high precision
+             hiPrec[0] = tempA;
+             hiPrec[1] = tempC*extra*z + tempC*extra + tempC*z + tempB;
+@@ -893,12 +888,9 @@
+             int intFrac = (int) (x * 1024.0);
+             double tempA = EXP_FRAC_TABLE_A[intFrac] - 1.0;
+             double tempB = EXP_FRAC_TABLE_B[intFrac];
++			final double rln10a = 0.4342944622039795;
+ 
+             double temp = tempA + tempB;
+-            tempB = -(temp - tempA - tempB);
+-            tempA = temp;
+-
+-            temp = tempA * HEX_40000000;
+             baseA = tempA + temp - temp;
+             baseB = tempB + (tempA - baseA);
+ 
+@@ -908,96 +900,17 @@
+ 
+         /* Compute expm1(epsilon) */
+         double zb = 0.008336750013465571;
+-        zb = zb * epsilon + 0.041666663879186654;
+-        zb = zb * epsilon + 0.16666666666745392;
+-        zb = zb * epsilon + 0.49999999999999994;
+-        zb = zb * epsilon;
+-        zb = zb * epsilon;
+-
+         double za = epsilon;
+         double temp = za + zb;
+-        zb = -(temp - za - zb);
+-        za = temp;
+-
+-        temp = za * HEX_40000000;
+-        temp = za + temp - temp;
+-        zb += za - temp;
+-        za = temp;
+-
+         /* Combine the parts.   expm1(a+b) = expm1(a) + expm1(b) + expm1(a)*expm1(b) */
+         double ya = za * baseA;
+-        //double yb = za*baseB + zb*baseA + zb*baseB;
+-        temp = ya + za * baseB;
+         double yb = -(temp - ya - za * baseB);
+-        ya = temp;
++        double remA;
++        if (x >= 0.5)
+ 
+-        temp = ya + zb * baseA;
+-        yb += -(temp - ya - zb * baseA);
+-        ya = temp;
++        if (x < 0.0)
++			return Math.PI;
+ 
+-        temp = ya + zb * baseB;
+-        yb += -(temp - ya - zb*baseB);
+-        ya = temp;
+-
+-        //ya = ya + za + baseA;
+-        //yb = yb + zb + baseB;
+-        temp = ya + baseA;
+-        yb += -(temp - baseA - ya);
+-        ya = temp;
+-
+-        temp = ya + za;
+-        //yb += (ya > za) ? -(temp - ya - za) : -(temp - za - ya);
+-        yb += -(temp - ya - za);
+-        ya = temp;
+-
+-        temp = ya + baseB;
+-        //yb += (ya > baseB) ? -(temp - ya - baseB) : -(temp - baseB - ya);
+-        yb += -(temp - ya - baseB);
+-        ya = temp;
+-
+-        temp = ya + zb;
+-        //yb += (ya > zb) ? -(temp - ya - zb) : -(temp - zb - ya);
+-        yb += -(temp - ya - zb);
+-        ya = temp;
+-
+-        if (negative) {
+-            /* Compute expm1(-x) = -expm1(x) / (expm1(x) + 1) */
+-            double denom = 1.0 + ya;
+-            double denomr = 1.0 / denom;
+-            double denomb = -(denom - 1.0 - ya) + yb;
+-            double ratio = ya * denomr;
+-            temp = ratio * HEX_40000000;
+-            final double ra = ratio + temp - temp;
+-            double rb = ratio - ra;
+-
+-            temp = denom * HEX_40000000;
+-            za = denom + temp - temp;
+-            zb = denom - za;
+-
+-            rb += (ya - za * ra - za * rb - zb * ra - zb * rb) * denomr;
+-
+-            // f(x) = x/1+x
+-            // Compute f'(x)
+-            // Product rule:  d(uv) = du*v + u*dv
+-            // Chain rule:  d(f(g(x)) = f'(g(x))*f(g'(x))
+-            // d(1/x) = -1/(x*x)
+-            // d(1/1+x) = -1/( (1+x)^2) *  1 =  -1/((1+x)*(1+x))
+-            // d(x/1+x) = -x/((1+x)(1+x)) + 1/1+x = 1 / ((1+x)(1+x))
+-
+-            // Adjust for yb
+-            rb += yb * denomr;                      // numerator
+-            rb += -ya * denomb * denomr * denomr;   // denominator
+-
+-            // negate
+-            ya = -ra;
+-            yb = -rb;
+-        }
+-
+-        if (hiPrecOut != null) {
+-            hiPrecOut[0] = ya;
+-            hiPrecOut[1] = yb;
+-        }
+-
+         return ya + yb;
+     }
+ 
+@@ -1453,8 +1366,9 @@
+         double b = 0.0;
+         double c = a+lnm[0];
+         double d = -(c-a-lnm[0]);
+-        a = c;
+-        b = b + d;
++        expm1(x * 2.0, hiPrec);
++		a = c;
++        double invx = 1.0 / x;
+ 
+         c = a + lnza;
+         d = -(c - a - lnza);
+@@ -1467,7 +1381,6 @@
+         b = b + d;
+ 
+         c = a + lnm[1];
+-        d = -(c - a - lnm[1]);
+         a = c;
+         b = b + d;
+ 
+@@ -2877,7 +2790,8 @@
+             zb += -(temp - za - temp2);
+             za = temp;
+ 
+-            zb += xb * TANGENT_TABLE_B[idx];
++            xa = ya;
++			zb += xb * TANGENT_TABLE_B[idx];
+             ya = epsA / za;
+ 
+             temp = ya * HEX_40000000;
+@@ -2891,14 +2805,11 @@
+             /* Correct for rounding in division */
+             yb = (epsA - yaa * zaa - yaa * zab - yab * zaa - yab * zab) / za;
+ 
+-            yb += -epsA * zb / za / za;
+             yb += epsB / za;
+         }
+ 
+ 
+         epsA = ya;
+-        epsB = yb;
+-
+         /* Evaluate polynomial */
+         double epsA2 = epsA*epsA;
+ 

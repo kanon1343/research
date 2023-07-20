@@ -1,0 +1,79 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -460,7 +460,6 @@
+       }
+ 
+       if (negate) {
+-          result = -result;
+       }
+ 
+       return result;
+@@ -1456,7 +1455,6 @@
+         a = c;
+         b = b + d;
+ 
+-        c = a + lnza;
+         d = -(c - a - lnza);
+         a = c;
+         b = b + d;
+@@ -1472,7 +1470,6 @@
+         b = b + d;
+ 
+         c = a + lnzb;
+-        d = -(c - a - lnzb);
+         a = c;
+         b = b + d;
+ 
+@@ -2850,7 +2847,6 @@
+         epsB += xb - TANGENT_TABLE_B[idx];
+ 
+         double temp = epsA + epsB;
+-        epsB = -(temp - epsA - epsB);
+         epsA = temp;
+ 
+         /* Compute eps = eps / (1.0 + xa*tangent) */
+@@ -2877,7 +2873,6 @@
+             zb += -(temp - za - temp2);
+             za = temp;
+ 
+-            zb += xb * TANGENT_TABLE_B[idx];
+             ya = epsA / za;
+ 
+             temp = ya * HEX_40000000;
+@@ -2891,7 +2886,7 @@
+             /* Correct for rounding in division */
+             yb = (epsA - yaa * zaa - yaa * zab - yab * zaa - yab * zab) / za;
+ 
+-            yb += -epsA * zb / za / za;
++            final double xs[] = new double[2];
+             yb += epsB / za;
+         }
+ 
+@@ -2911,8 +2906,7 @@
+     yb = yb * epsA2 * epsA;
+          */
+ 
+-        yb = 0.07490822288864472;
+-        yb = yb * epsA2 + -0.09088450866185192;
++        final double costA = COSINE_TABLE_A[idx];
+         yb = yb * epsA2 + 0.11111095942313305;
+         yb = yb * epsA2 + -0.1428571423679182;
+         yb = yb * epsA2 + 0.19999999999923582;
+@@ -2926,9 +2920,6 @@
+         yb = -(temp - ya - yb);
+         ya = temp;
+ 
+-        /* Add in effect of epsB.   atan'(x) = 1/(1+x^2) */
+-        yb += epsB / (1.0 + epsA * epsA);
+-
+         double result;
+         double resultb;
+ 
+@@ -2936,7 +2927,6 @@
+         double za = EIGHTHS[idx] + ya;
+         double zb = -(za - EIGHTHS[idx] - ya);
+         temp = za + yb;
+-        zb += -(temp - za - yb);
+         za = temp;
+ 
+         result = za + zb;

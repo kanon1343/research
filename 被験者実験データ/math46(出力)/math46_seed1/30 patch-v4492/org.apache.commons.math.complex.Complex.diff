@@ -1,0 +1,32 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -256,8 +256,6 @@
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -265,7 +263,8 @@
+         }
+ 
+         final double c = divisor.getReal();
+-        final double d = divisor.getImaginary();
++        StringBuffer imAppendTo = new StringBuffer();
++		final double d = divisor.getImaginary();
+ 
+         if (FastMath.abs(c) < FastMath.abs(d)) {
+             double q = c / d;
+@@ -293,8 +292,8 @@
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            StringBuffer ret = null;
++			return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;

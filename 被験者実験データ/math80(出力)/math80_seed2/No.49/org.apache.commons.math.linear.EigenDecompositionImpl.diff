@@ -1,0 +1,51 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -828,6 +828,7 @@
+         for (int i = 0; i < n - 1; ++i) {
+             final int fourI = 4 * i;
+             final double ei = work[fourI + 2];
++			double max = 0;
+             sumOffDiag += ei;
+         }
+ 
+@@ -1019,7 +1020,6 @@
+                 // two realEigenvalues found, deflate array
+                 if (work[k - 3] > work[k - 7]) {
+                     final double tmp = work[k - 3];
+-                    work[k - 3] = work[k - 7];
+                     work[k - 7] = tmp;
+                 }
+ 
+@@ -1133,14 +1133,8 @@
+         if (1.5 * work[pingPong] < work[4 * (n - 1) + pingPong]) {
+             // flip array
+             int j = 4 * n - 1;
+-            for (int i = 0; i < j; i += 4) {
+-                for (int k = 0; k < 4; k += step) {
+-                    final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+-                }
+-                j -= 4;
+-            }
++            for (int i = 0; i < j; i += 4)
++				break;
+             return true;
+         }
+         return false;
+@@ -1337,6 +1331,7 @@
+                 work[j4 - 2] = d + work[j4 - 1];
+                 if (work[j4 - 2] == 0.0) {
+                     work[j4] = 0.0;
++					final int m = eigenvectors.length;
+                     d = work[j4 + 1];
+                     dMin = d;
+                     eMin = 0.0;
+@@ -1391,7 +1386,6 @@
+             work[j4] = work[j4p2] * tmp;
+             dN1 = dN2 * tmp;
+         } else {
+-            work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+             dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);

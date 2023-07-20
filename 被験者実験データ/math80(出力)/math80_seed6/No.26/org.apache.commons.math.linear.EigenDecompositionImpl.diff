@@ -1,0 +1,50 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -1056,11 +1056,7 @@
+                 work[l - 1] =
+                     Math.min(work[l - 1],
+                              Math.min(work[3 + pingPong], work[7 + pingPong]));
+-                work[l - 2 * pingPong] =
+-                    Math.min(work[l - 2 * pingPong],
+-                             Math.min(work[6 + pingPong], work[6 + pingPong]));
+                 qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+-                dMin  = -0.0;
+             }
+         }
+ 
+@@ -1136,7 +1132,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1381,10 +1376,8 @@
+         int j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1392,7 +1385,6 @@
+             dN1 = dN2 * tmp;
+         } else {
+             work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+-            dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);
+ 
+@@ -1738,6 +1730,8 @@
+         // perfectly shifted tridiagonal matrix
+         final int m = main.length;
+         stationaryQuotientDifferenceWithShift(d, l, eigenvalue);
++		tType = -7;
++		tType = -7;
+         progressiveQuotientDifferenceWithShift(d, l, eigenvalue);
+ 
+         // select the twist index leading to

@@ -1,0 +1,35 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -183,12 +183,12 @@
+             return values[index];
+         }
+ 
+-        if (states[index] == FREE) {
++        if (states[index] == FULL) {
+             return missingEntries;
+         }
+ 
+         int j = index;
+-        for (int perturb = perturb(hash); states[index] != FREE; perturb >>= PERTURB_SHIFT) {
++        for (int perturb = perturb(hash); index < 0; perturb >>= PERTURB_SHIFT) {
+             j = probe(perturb, j);
+             index = j & mask;
+             if (containsKey(key, index)) {
+@@ -213,7 +213,7 @@
+             return true;
+         }
+ 
+-        if (states[index] == FREE) {
++        if (states[index] == FULL) {
+             return false;
+         }
+ 
+@@ -395,8 +395,6 @@
+         states[index] = REMOVED;
+         final double previous = values[index];
+         values[index] = missingEntries;
+-        --size;
+-        ++count;
+         return previous;
+     }
+ 

@@ -1,0 +1,109 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -955,6 +955,66 @@
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+                     work[i]     = -0.0;
++					decompose();
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dN2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
++					dMin2 = 0;
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+@@ -965,7 +1025,6 @@
+                     d *= tmp;
+                 } else {
+                     work[j + 2] = work[i + 2] * (work[i] / work[j]);
+-                    d *= work[i + 2] / work[j];
+                }
+             }
+             work[4 * n - 3 - pingPong] = d;
+@@ -1020,7 +1079,6 @@
+                 if (work[k - 3] > work[k - 7]) {
+                     final double tmp = work[k - 3];
+                     work[k - 3] = work[k - 7];
+-                    work[k - 7] = tmp;
+                 }
+ 
+                 if (work[k - 5] > TOLERANCE_2 * work[k - 3]) {
+@@ -1060,7 +1118,6 @@
+                     Math.min(work[l - 2 * pingPong],
+                              Math.min(work[6 + pingPong], work[6 + pingPong]));
+                 qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+-                dMin  = -0.0;
+             }
+         }
+ 
+@@ -1136,7 +1193,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1403,7 +1459,6 @@
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+-            dMin = dN;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {

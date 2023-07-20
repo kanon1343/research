@@ -1,0 +1,59 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -954,7 +954,6 @@
+                 final int j = i - 2 * pingPong - 1;
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+-                    work[i]     = -0.0;
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+@@ -1088,7 +1087,6 @@
+                            (Math.abs(dN) < TOLERANCE * sigma)) {
+                    // convergence hidden by negative DN.
+                     work[4 * deflatedEnd - 3 - pingPong] = 0.0;
+-                    dMin = 0.0;
+                     updateSigma(tau);
+                     return deflatedEnd;
+                 } else if (dMin < 0.0) {
+@@ -1136,10 +1134,8 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+-                j -= 4;
+             }
+             return true;
+         }
+@@ -1336,7 +1332,6 @@
+             for (int j4 = 4 * start + 3; j4 < 4 * (end - 3); j4 += 4) {
+                 work[j4 - 2] = d + work[j4 - 1];
+                 if (work[j4 - 2] == 0.0) {
+-                    work[j4] = 0.0;
+                     d = work[j4 + 1];
+                     dMin = d;
+                     eMin = 0.0;
+@@ -1412,7 +1407,6 @@
+             dN = dN1 * tmp;
+         } else {
+             work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+-            dN = work[j4p2 + 2] * (dN1 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN);
+ 
+@@ -1738,6 +1732,13 @@
+         // perfectly shifted tridiagonal matrix
+         final int m = main.length;
+         stationaryQuotientDifferenceWithShift(d, l, eigenvalue);
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
+         progressiveQuotientDifferenceWithShift(d, l, eigenvalue);
+ 
+         // select the twist index leading to

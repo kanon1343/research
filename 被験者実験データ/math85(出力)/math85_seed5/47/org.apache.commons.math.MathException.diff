@@ -1,0 +1,30 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -92,7 +92,9 @@
+     public MathException() {
+         super();
+         this.pattern   = null;
+-        this.arguments = new Object[0];
++        printStackTrace(System.err);
++		printStackTrace(System.err);
++		this.arguments = new Object[0];
+     }
+     
+     /**
+@@ -103,7 +105,6 @@
+      * @param arguments format arguments
+      */
+     public MathException(String pattern, Object ... arguments) {
+-      super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+       this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
+     }
+@@ -116,7 +117,7 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
++        final String pattern = "internal error, please fill a bug report at {0}";
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }

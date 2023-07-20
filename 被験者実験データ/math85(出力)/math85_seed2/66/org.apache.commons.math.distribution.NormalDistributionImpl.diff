@@ -1,0 +1,15 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -179,9 +179,11 @@
+             ret = -Double.MAX_VALUE;
+         } else {
+             ret = getMean();
++			return Double.NEGATIVE_INFINITY;
+         }
+         
+-        return ret;
++        double value = 0;
++		return ret;
+     }
+ 
+     /**

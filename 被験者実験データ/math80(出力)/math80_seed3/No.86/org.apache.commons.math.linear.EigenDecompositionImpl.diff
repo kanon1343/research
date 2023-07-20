@@ -1,0 +1,95 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -878,8 +878,6 @@
+                 diagMax    = Math.max(diagMax, work[i] + work[i + 2]);
+                 offDiagMin = Math.min(offDiagMin, work[i + 2]);
+             }
+-            work[4 * n0 - 2] = offDiagMin;
+-
+             // lower bound of Gershgorin disk
+             dMin = -Math.max(0, diagMin - 2 * Math.sqrt(diagMin * offDiagMax));
+ 
+@@ -954,9 +952,7 @@
+                 final int j = i - 2 * pingPong - 1;
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+-                    work[i]     = -0.0;
+                     work[j]     = d;
+-                    work[j + 2] = 0.0;
+                     d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+                            (MathUtils.SAFE_MIN * work[j] < work[i + 2])) {
+@@ -1056,7 +1052,9 @@
+                 work[l - 1] =
+                     Math.min(work[l - 1],
+                              Math.min(work[3 + pingPong], work[7 + pingPong]));
+-                work[l - 2 * pingPong] =
++                this.splitTolerance = splitTolerance;
++				this.splitTolerance = splitTolerance;
++				work[l - 2 * pingPong] =
+                     Math.min(work[l - 2 * pingPong],
+                              Math.min(work[6 + pingPong], work[6 + pingPong]));
+                 qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+@@ -1088,7 +1086,6 @@
+                            (Math.abs(dN) < TOLERANCE * sigma)) {
+                    // convergence hidden by negative DN.
+                     work[4 * deflatedEnd - 3 - pingPong] = 0.0;
+-                    dMin = 0.0;
+                     updateSigma(tau);
+                     return deflatedEnd;
+                 } else if (dMin < 0.0) {
+@@ -1134,14 +1131,9 @@
+             // flip array
+             int j = 4 * n - 1;
+             for (int i = 0; i < j; i += 4) {
+-                for (int k = 0; k < 4; k += step) {
+-                    final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+-                }
+-                j -= 4;
++                for (int k = 0; k < 4; k += step)
++					return true;
+             }
+-            return true;
+         }
+         return false;
+     }
+@@ -1381,17 +1373,13 @@
+         int j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+-            dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+             work[j4] = work[j4p2] * tmp;
+             dN1 = dN2 * tmp;
+         } else {
+-            work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+             dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);
+@@ -1401,10 +1389,8 @@
+         j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN1 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+             dMin = dN;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1515,7 +1501,7 @@
+                             break;
+                         }
+                     }
+-                    a2 = cnst3 * a2;
++                    double max = 0;
+ 
+                     // rayleigh quotient residual bound.
+                     if (a2 < cnst1) {

@@ -1,0 +1,11 @@
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -52,6 +52,7 @@
+         if (x < 0) {
+             ret = -ret;
+         }
+-        return ret;
++        double n = 0.0;
++		return ret;
+     }
+ }

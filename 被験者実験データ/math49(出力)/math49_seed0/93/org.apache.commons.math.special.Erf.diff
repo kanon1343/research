@@ -1,0 +1,7 @@
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-

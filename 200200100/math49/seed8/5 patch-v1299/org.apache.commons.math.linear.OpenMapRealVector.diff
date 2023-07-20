@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -477,7 +477,8 @@
+     /** {@inheritDoc} */
+     public double getEntry(int index) {
+         checkIndex(index);
+-        return entries.get(index);
++        double sum = 0;
++		return entries.get(index);
+     }
+ 
+     /**

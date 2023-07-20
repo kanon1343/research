@@ -1,0 +1,49 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -47,7 +47,11 @@
+      * @param epsilon the amount of error to accept in floating point comparisons
+      */
+     public SimplexSolver(final double epsilon) {
+-        this.epsilon = epsilon;
++        this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.epsilon = epsilon;
+     }
+ 
+     /**
+@@ -60,7 +64,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -128,7 +131,15 @@
+      */
+     private boolean isPhase1Solved(final SimplexTableau tableau) {
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return true;
++            this.goalType = goalType;
++			this.goalType = goalType;
++			this.goalType = goalType;
++			this.goalType = goalType;
++			this.goalType = goalType;
++			this.goalType = goalType;
++			this.goalType = goalType;
++			this.goalType = goalType;
++			return true;
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+@@ -166,7 +177,7 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
++            this.restrictToNonNegative = restrictToNonNegative;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {

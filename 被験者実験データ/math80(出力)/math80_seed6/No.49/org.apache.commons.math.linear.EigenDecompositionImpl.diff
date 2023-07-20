@@ -1,0 +1,57 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -836,9 +836,6 @@
+             return;
+         }
+ 
+-        // initial checks for splits (see Parlett & Marques section 3.3)
+-        flipIfWarranted(n, 2);
+-
+         // two iterations with Li's test for initial splits
+         initialSplits(n);
+ 
+@@ -954,7 +951,6 @@
+                 final int j = i - 2 * pingPong - 1;
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+-                    work[i]     = -0.0;
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+@@ -1106,7 +1102,6 @@
+                         tType -= 12;
+                     }
+                 } else if (Double.isNaN(dMin)) {
+-                    tau = 0.0;
+                 } else {
+                     // possible underflow. Play it safe.
+                     loop = false;
+@@ -1137,9 +1132,7 @@
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+                     work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+                 }
+-                j -= 4;
+             }
+             return true;
+         }
+@@ -1391,7 +1384,6 @@
+             work[j4] = work[j4p2] * tmp;
+             dN1 = dN2 * tmp;
+         } else {
+-            work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+             dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);
+@@ -1738,6 +1730,10 @@
+         // perfectly shifted tridiagonal matrix
+         final int m = main.length;
+         stationaryQuotientDifferenceWithShift(d, l, eigenvalue);
++		tType = -7;
++		tType = -7;
++		tType = -7;
++		tType = -7;
+         progressiveQuotientDifferenceWithShift(d, l, eigenvalue);
+ 
+         // select the twist index leading to

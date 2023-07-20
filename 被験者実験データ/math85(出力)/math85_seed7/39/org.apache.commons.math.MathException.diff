@@ -1,0 +1,34 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -91,7 +91,8 @@
+      */
+     public MathException() {
+         super();
+-        this.pattern   = null;
++        printStackTrace(System.err);
++		this.pattern   = null;
+         this.arguments = new Object[0];
+     }
+     
+@@ -104,8 +105,11 @@
+      */
+     public MathException(String pattern, Object ... arguments) {
+       super(buildMessage(Locale.US, pattern, arguments));
+-      this.pattern   = pattern;
++      printStackTrace(System.err);
++	printStackTrace(System.err);
++	this.pattern   = pattern;
+       this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
++	printStackTrace(System.err);
+     }
+ 
+     /**
+@@ -169,7 +173,7 @@
+     /** {@inheritDoc} */
+     @Override
+     public String getLocalizedMessage() {
+-        return getMessage(Locale.getDefault());
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /**

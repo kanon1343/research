@@ -1,0 +1,127 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -87,16 +87,57 @@
+    * initializing the copy.
+    */
+   protected AbstractStepInterpolator() {
+-    previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
++    currentTime = Double.NaN;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
+   }
+ 
+   /** Simple constructor.
+@@ -112,12 +153,51 @@
+     interpolatedTime  = Double.NaN;
+ 
+     currentState            = y;
+-    interpolatedState       = new double[y.length];
++    interpolatedState = null;
++	finalized = false;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	dirtyState = true;
++	currentState = y;
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+-    this.forward      = forward;
++    interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	interpolatedState = new double[y.length];
++	this.forward      = forward;
+     this.dirtyState   = true;
++	finalized = true;
++	finalized = true;
+ 
+   }
+ 
+@@ -232,7 +312,8 @@
+ 
+   /** {@inheritDoc} */
+   public double getCurrentTime() {
+-    return currentTime;
++    finalized = false;
++	return currentTime;
+   }
+ 
+   /** {@inheritDoc} */

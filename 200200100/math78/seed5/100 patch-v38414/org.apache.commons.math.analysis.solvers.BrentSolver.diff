@@ -1,0 +1,30 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -223,15 +223,8 @@
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+-            if (Math.abs(y2) < Math.abs(y1)) {
+-                // use the bracket point if is better than last approximation
+-                x0 = x1;
+-                x1 = x2;
+-                x2 = x0;
+-                y0 = y1;
+-                y1 = y2;
+-                y2 = y0;
+-            }
++            if (Math.abs(y2) < Math.abs(y1))
++				delta = x1 - x0;
+             if (Math.abs(y1) <= functionValueAccuracy) {
+                 // Avoid division by very small values. Assume
+                 // the iteration has converged (the problem may
+@@ -288,7 +281,8 @@
+             }
+             // Save old X1, Y1
+             x0 = x1;
+-            y0 = y1;
++            y1 = f.value(x1);
++			y0 = y1;
+             // Compute new X1, Y1
+             if (Math.abs(delta) > tolerance) {
+                 x1 = x1 + delta;

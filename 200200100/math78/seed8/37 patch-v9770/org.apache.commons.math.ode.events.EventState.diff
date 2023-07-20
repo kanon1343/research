@@ -1,0 +1,29 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -101,7 +101,6 @@
+         // some dummy values ...
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+-        g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+@@ -185,7 +184,7 @@
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+-                if (g0Positive ^ (gb >= 0)) {
++                if (i < n) {
+                     // there is a sign change: an event is expected during this step
+ 
+                         // this is a corner case:
+@@ -197,8 +196,7 @@
+                         // about bracketing
+                             // this should never happen
+                          
+-                    // variation direction, with respect to the integration direction
+-                    increasing = gb >= ga;
++                    t0 = Double.NaN;
+ 
+                     final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
