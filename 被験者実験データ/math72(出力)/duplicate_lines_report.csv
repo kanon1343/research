@@ -1,0 +1,473 @@
+File Path
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/18/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/18/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/9/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/9/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/11/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/11/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/7/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/16/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/16/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/6/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/17/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/17/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/10/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/10/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/19/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/19/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/8/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/4/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/15/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/15/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/12/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/12/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/13/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/13/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/5/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/14/org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed9/14/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/9/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/9/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/11/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/11/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/7/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/7/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/16/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/16/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/6/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/6/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/17/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/17/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/10/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/10/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/8/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/8/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/15/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/15/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/12/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/12/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/13/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/13/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/5/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/5/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/14/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed7/14/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/61/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/61/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/95/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/95/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/59/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/59/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/92/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/92/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/66/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/66/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/50/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/68/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/68/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/57/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/57/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/32/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/35/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/69/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/69/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/56/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/51/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/51/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/58/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/58/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/67/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/67/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/93/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/93/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/94/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/94/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/60/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/60/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/34/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/33/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/20/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/18/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/27/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/11/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/29/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/16/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/42/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/42/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/89/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/89/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/45/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/73/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/73/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/87/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/87/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/80/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/80/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/74/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/74/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/28/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/17/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/10/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/19/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/26/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/8/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/21/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/75/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/75/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/81/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/81/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/86/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/86/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/72/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/72/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/44/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/44/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/43/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/43/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/88/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/88/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/38/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/36/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/31/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/91/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/91/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/65/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/65/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/62/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/62/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/96/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/96/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/100/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/100/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/54/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/54/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/98/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/98/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/53/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/53/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/30/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/37/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/39/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/99/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/99/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/52/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/52/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/55/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/97/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/97/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/63/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/63/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/64/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/64/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/90/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/90/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/46/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/79/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/79/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/41/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/83/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/83/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/77/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/77/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/48/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/48/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/70/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/70/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/84/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/84/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/24/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/23/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/15/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/12/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/85/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/85/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/71/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/71/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/76/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/76/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/82/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/82/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/49/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/40/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/40/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/47/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/47/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/78/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/78/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/13/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/14/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/22/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed0/25/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed1/7 patch-v3049/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed1/12 patch-v49639/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed1/9 patch-v10115/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed1/11 patch-v34026/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed1/10 patch-v19126/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed1/8 patch-v7304/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed6/9/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed6/11/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed6/16/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed6/17/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed6/10/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed6/15/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed6/13/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed6/14/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/32/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/32/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/35/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/35/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/34/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/34/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/33/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/33/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/20/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/20/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/18/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/18/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/27/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/27/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/9/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/11/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/11/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/7/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/29/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/29/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/16/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/16/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/28/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/28/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/17/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/17/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/10/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/10/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/19/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/19/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/26/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/26/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/8/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/21/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/21/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/36/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/36/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/31/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/31/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/30/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/30/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/24/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/24/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/23/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/23/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/15/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/15/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/3/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/12/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/12/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/13/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/13/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/14/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/14/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/22/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/22/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/25/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed8/25/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/32/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/32/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/35/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/35/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/34/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/34/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/33/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/33/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/20/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/18/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/27/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/27/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/11/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/29/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/29/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/16/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/42/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/42/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/6/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/28/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/17/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/10/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/19/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/26/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/21/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/43/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/43/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/38/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/38/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/36/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/36/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/31/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/31/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/30/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/30/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/37/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/37/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/39/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/39/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/41/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/41/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/24/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/23/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/15/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/12/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/40/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/40/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/13/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/14/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/22/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed3/25/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/52 patch-v17445/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/32 patch-v10507/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/29 patch-v10025/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/35 patch-v11474/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/15 patch-v2496/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/30 patch-v10323/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/66 patch-v33860/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/26 patch-v6652/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/44 patch-v13053/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/33 patch-v11282/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/46 patch-v13285/org.apache.commons.math.ConvergingAlgorithmImpl.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/46 patch-v13285/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/45 patch-v13126/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/68 patch-v40739/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/57 patch-v21630/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/18 patch-v4250/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/64 patch-v33780/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/50 patch-v13930/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/24 patch-v5444/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/31 patch-v10423/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/34 patch-v11373/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/71 patch-v78992/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/63 patch-v32513/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/69 patch-v40747/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/43 patch-v12816/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/60 patch-v27386/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/67 patch-v40425/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/37 patch-v11853/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/51 patch-v14355/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/28 patch-v9927/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/58 patch-v22120/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/70 patch-v44254/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/54 patch-v20830/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/36 patch-v11606/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/22 patch-v5289/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/55 patch-v21209/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/48 patch-v13703/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/41 patch-v12330/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/53 patch-v18261/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/27 patch-v8026/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/39 patch-v12241/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/65 patch-v33843/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/56 patch-v21526/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/42 patch-v12420/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/40 patch-v12266/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/23 patch-v5374/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/62 patch-v31932/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/49 patch-v13853/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/38 patch-v12002/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/59 patch-v22817/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/47 patch-v13293/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed4/61 patch-v30260/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed5/9 patch-v16752/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/39 patch-v15719/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/38 patch-v15637/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/41 patch-v15866/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/92 patch-v42962/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/58 patch-v23461/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/18 patch-v8107/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/91 patch-v42665/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/28 patch-v12178/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/12 patch-v7072/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/16 patch-v7629/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/37 patch-v15143/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/81 patch-v37132/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/7 patch-v6425/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/6 patch-v6163/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/59 patch-v23609/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/93 patch-v43079/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/62 patch-v24658/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/71 patch-v33951/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/46 patch-v16591/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/83 patch-v38190/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/67 patch-v31304/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/63 patch-v24740/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/88 patch-v42002/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/52 patch-v21070/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/36 patch-v14502/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/99 patch-v45522/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/32 patch-v13041/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/25 patch-v11550/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/70 patch-v33638/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/95 patch-v44969/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/55 patch-v22899/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/29 patch-v12815/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/68 patch-v32732/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/69 patch-v33138/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/34 patch-v14343/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/90 patch-v42501/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/44 patch-v16422/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/60 patch-v24515/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/40 patch-v15764/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/33 patch-v14032/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/61 patch-v24600/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/51 patch-v20178/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/87 patch-v41537/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/86 patch-v41475/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/27 patch-v12083/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/45 patch-v16566/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/78 patch-v35042/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/5 patch-v6018/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/75 patch-v34585/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/73 patch-v34254/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/98 patch-v45365/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/49 patch-v19698/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/8 patch-v6493/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/26 patch-v11931/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/53 patch-v21865/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/21 patch-v9774/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/94 patch-v43304/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/57 patch-v22981/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/20 patch-v9055/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/64 patch-v25125/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/96 patch-v45073/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/31 patch-v12999/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/22 patch-v10514/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/66 patch-v31300/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/85 patch-v40277/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/80 patch-v36994/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/82 patch-v37464/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/23 patch-v10583/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/17 patch-v7790/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/50 patch-v19841/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/100 patch-v45842/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/30 patch-v12997/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/35 patch-v14424/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/54 patch-v22193/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/42 patch-v16252/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/43 patch-v16332/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/19 patch-v8911/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/79 patch-v36839/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/11 patch-v6964/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/77 patch-v34824/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/48 patch-v17944/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/76 patch-v34733/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/24 patch-v10760/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/56 patch-v22902/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/84 patch-v39065/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/47 patch-v16661/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/10 patch-v6597/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/13 patch-v7209/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/89 patch-v42407/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/97 patch-v45140/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/14 patch-v7286/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/72 patch-v34188/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/65 patch-v31045/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/74 patch-v34499/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/9 patch-v6593/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/15 patch-v7367/org.apache.commons.math.analysis.solvers.BrentSolver.diff
+/Users/haradakanon/Downloads/research/被験者実験データ/math72(出力)/math72_seed2/4 patch-v4651/org.apache.commons.math.analysis.solvers.BrentSolver.diff

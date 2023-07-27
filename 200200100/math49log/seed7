@@ -1,0 +1,1640 @@
+2023-06-28 20:49:07 [main] [WARN]  Configuration$Builder - The directory where kGenProg is running is different from the root directory of the given target project.
+2023-06-28 20:49:07 [main] [WARN]  Configuration$Builder - If the target project includes test cases with file I/O, such test cases won't run correctly.
+2023-06-28 20:49:07 [main] [WARN]  Configuration$Builder - We recommend you running kGenProg with the root directory of the target project as the current directory.
+2023-06-28 20:49:07 [main] [INFO]  KGenProgMain - 
+==================== kGenProg Configuration ====================
+configPath = /Users/haradakanon/Downloads/kGenProg-1.8.2/example/math49/kgenprog-49.toml (set by command line)
+rootDir = /Users/haradakanon/Downloads/kGenProg-1.8.2/example/math49 (set in config file)
+productPaths = [/Users/haradakanon/Downloads/kGenProg-1.8.2/example/math49/src/main] (set in config file)
+testPaths = [/Users/haradakanon/Downloads/kGenProg-1.8.2/example/math49/src/test] (set in config file)
+classPaths = []
+executionTests = [org.apache.commons.math.linear.SparseRealVectorTest] (set in config file)
+outDir = kgenprog-out
+logLevel = INFO (set in config file)
+mutationGeneratingCount = 200 (set in config file)
+crossoverGeneratingCount = 200 (set in config file)
+headcount = 100
+maxGeneration = 1000 (set in config file)
+timeLimit = PT24H (set in config file)
+testTimeLimit = PT3M (set in config file)
+requiredSolutionsCount = 100 (set in config file)
+randomSeed = 7 (set by command line)
+scope = PACKAGE (set in config file)
+faultLocalization = Zoltar (set in config file)
+mutationType = Simple
+crossoverType = Random
+firstVariantSelectionStrategy = Random
+secondVariantSelectionStrategy = Random
+isPatchOutput = true (set in config file)
+isHistoryRecord = false
+currentDirectory = /Users/haradakanon/Desktop/afterResearch
+version = 1.8.2
+================================================================
+2023-06-28 20:50:04 [main] [INFO]  KGenProgMain - initial failed tests (1/9)
+org.apache.commons.math.linear.SparseRealVectorTest.testConcurrentModification: map has been modified while iterating
+
+2023-06-28 20:50:05 [main] [INFO]  KGenProgMain - GA started
+2023-06-28 20:50:05 [main] [INFO]  KGenProgMain - entered the era of 1st generation.
+2023-06-28 20:58:26 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 8 minutes 21 seconds
+Variants: generated 200, build-succeeded 15, build-failed 119, syntax-invalid 9, redundant 57
+Fitness: max 1(1), min 0.444(1), ave 0.859
+Test execution time: sum 485639 ms, max 37679 ms, min 23210 ms
+----------------------------------------------------------------
+
+2023-06-28 20:58:26 [main] [INFO]  KGenProgMain - entered the era of 2nd generation.
+2023-06-28 21:15:50 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 25 minutes 44 seconds
+Variants: generated 200, build-succeeded 26, build-failed 146, syntax-invalid 7, redundant 21
+Fitness: max 0.889(16), min 0(2), ave 0.769
+Test execution time: sum 1027182 ms, max 216449 ms, min 26477 ms
+----------------------------------------------------------------
+
+2023-06-28 21:15:50 [main] [INFO]  KGenProgMain - entered the era of 3rd generation.
+2023-06-28 22:31:06 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 1 hours 41 minutes 1 seconds
+Variants: generated 400, build-succeeded 107, build-failed 145, syntax-invalid 15, redundant 133
+Fitness: max 0.889(44), min 0(9), ave 0.693
+Test execution time: sum 4469297 ms, max 577305 ms, min 16101 ms
+----------------------------------------------------------------
+
+2023-06-28 22:31:06 [main] [INFO]  KGenProgMain - entered the era of 4th generation.
+2023-06-28 23:26:49 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 36 minutes 43 seconds
+Variants: generated 400, build-succeeded 75, build-failed 147, syntax-invalid 21, redundant 157
+Fitness: max 1(1), min 0.111(1), ave 0.828
+Test execution time: sum 3296313 ms, max 212810 ms, min 23788 ms
+----------------------------------------------------------------
+
+2023-06-28 23:26:49 [main] [INFO]  KGenProgMain - entered the era of 5th generation.
+2023-06-29 00:22:32 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 32 minutes 27 seconds
+Variants: generated 400, build-succeeded 92, build-failed 142, syntax-invalid 22, redundant 144
+Fitness: max 0.889(84), min 0(1), ave 0.867
+Test execution time: sum 3320107 ms, max 573955 ms, min 17633 ms
+----------------------------------------------------------------
+
+2023-06-29 00:22:32 [main] [INFO]  KGenProgMain - entered the era of 6th generation.
+2023-06-29 01:15:52 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 4 hours 25 minutes 47 seconds
+Variants: generated 400, build-succeeded 105, build-failed 144, syntax-invalid 17, redundant 134
+Fitness: max 1(1), min 0.333(1), ave 0.873
+Test execution time: sum 3173487 ms, max 39365 ms, min 21122 ms
+----------------------------------------------------------------
+
+2023-06-29 01:15:52 [main] [INFO]  KGenProgMain - entered the era of 7th generation.
+2023-06-29 02:26:22 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 36 minutes 17 seconds
+Variants: generated 400, build-succeeded 132, build-failed 141, syntax-invalid 23, redundant 104
+Fitness: max 0.889(127), min 0.444(1), ave 0.882
+Test execution time: sum 4199678 ms, max 38349 ms, min 21352 ms
+----------------------------------------------------------------
+
+2023-06-29 02:26:22 [main] [INFO]  KGenProgMain - entered the era of 8th generation.
+2023-06-29 03:33:33 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 6 hours 43 minutes 28 seconds
+Variants: generated 400, build-succeeded 125, build-failed 148, syntax-invalid 30, redundant 97
+Fitness: max 0.889(118), min 0.556(1), ave 0.878
+Test execution time: sum 4004746 ms, max 39951 ms, min 18887 ms
+----------------------------------------------------------------
+
+2023-06-29 03:33:33 [main] [INFO]  KGenProgMain - entered the era of 9th generation.
+2023-06-29 04:48:09 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 7 hours 58 minutes 4 seconds
+Variants: generated 400, build-succeeded 138, build-failed 137, syntax-invalid 29, redundant 96
+Fitness: max 1(1), min 0(1), ave 0.873
+Test execution time: sum 4445003 ms, max 38920 ms, min 23033 ms
+----------------------------------------------------------------
+
+2023-06-29 04:48:09 [main] [INFO]  KGenProgMain - entered the era of 10th generation.
+2023-06-29 06:08:40 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 9 hours 18 minutes 34 seconds
+Variants: generated 400, build-succeeded 148, build-failed 162, syntax-invalid 19, redundant 71
+Fitness: max 1(3), min 0.222(1), ave 0.882
+Test execution time: sum 4796260 ms, max 39420 ms, min 22657 ms
+----------------------------------------------------------------
+
+2023-06-29 06:08:40 [main] [INFO]  KGenProgMain - entered the era of 11th generation.
+2023-06-29 07:28:06 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 10 hours 38 minutes 1 seconds
+Variants: generated 400, build-succeeded 149, build-failed 151, syntax-invalid 26, redundant 74
+Fitness: max 0.889(138), min 0.556(2), ave 0.878
+Test execution time: sum 4734529 ms, max 39068 ms, min 22344 ms
+----------------------------------------------------------------
+
+2023-06-29 07:28:06 [main] [INFO]  KGenProgMain - entered the era of 12th generation.
+2023-06-29 08:50:27 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 12 hours 21 seconds
+Variants: generated 400, build-succeeded 153, build-failed 149, syntax-invalid 31, redundant 67
+Fitness: max 1(1), min 0.444(2), ave 0.882
+Test execution time: sum 4904536 ms, max 38798 ms, min 20517 ms
+----------------------------------------------------------------
+
+2023-06-29 08:50:27 [main] [INFO]  KGenProgMain - entered the era of 13th generation.
+2023-06-29 10:21:06 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 31 minutes 0 seconds
+Variants: generated 400, build-succeeded 167, build-failed 149, syntax-invalid 25, redundant 59
+Fitness: max 1(2), min 0.444(1), ave 0.882
+Test execution time: sum 5405650 ms, max 39532 ms, min 22271 ms
+----------------------------------------------------------------
+
+2023-06-29 10:21:06 [main] [INFO]  KGenProgMain - entered the era of 14th generation.
+2023-06-29 11:58:22 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 15 hours 8 minutes 16 seconds
+Variants: generated 400, build-succeeded 178, build-failed 151, syntax-invalid 25, redundant 46
+Fitness: max 1(3), min 0.444(1), ave 0.884
+Test execution time: sum 5798917 ms, max 39784 ms, min 20437 ms
+----------------------------------------------------------------
+
+2023-06-29 11:58:22 [main] [INFO]  KGenProgMain - entered the era of 15th generation.
+2023-06-29 13:39:03 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 16 hours 48 minutes 57 seconds
+Variants: generated 400, build-succeeded 187, build-failed 140, syntax-invalid 27, redundant 46
+Fitness: max 1(1), min 0(1), ave 0.875
+Test execution time: sum 6000685 ms, max 38956 ms, min 20840 ms
+----------------------------------------------------------------
+
+2023-06-29 13:39:03 [main] [INFO]  KGenProgMain - entered the era of 16th generation.
+2023-06-29 15:15:50 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 18 hours 25 minutes 44 seconds
+Variants: generated 400, build-succeeded 180, build-failed 156, syntax-invalid 22, redundant 42
+Fitness: max 1(1), min 0(1), ave 0.877
+Test execution time: sum 5769939 ms, max 38877 ms, min 22092 ms
+----------------------------------------------------------------
+
+2023-06-29 15:15:51 [main] [INFO]  KGenProgMain - entered the era of 17th generation.
+2023-06-29 17:03:55 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 13 minutes 49 seconds
+Variants: generated 400, build-succeeded 200, build-failed 152, syntax-invalid 17, redundant 31
+Fitness: max 1(2), min 0.222(1), ave 0.872
+Test execution time: sum 6445069 ms, max 39622 ms, min 21639 ms
+----------------------------------------------------------------
+
+2023-06-29 17:03:55 [main] [INFO]  KGenProgMain - entered the era of 18th generation.
+2023-06-29 18:46:42 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 56 minutes 35 seconds
+Variants: generated 400, build-succeeded 188, build-failed 139, syntax-invalid 30, redundant 43
+Fitness: max 1(1), min 0.556(1), ave 0.881
+Test execution time: sum 6129761 ms, max 38102 ms, min 19776 ms
+----------------------------------------------------------------
+
+2023-06-29 18:46:42 [main] [INFO]  KGenProgMain - entered the era of 19th generation.
+2023-06-29 20:21:52 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 23 hours 31 minutes 46 seconds
+Variants: generated 400, build-succeeded 177, build-failed 142, syntax-invalid 34, redundant 47
+Fitness: max 1(1), min 0.444(1), ave 0.883
+Test execution time: sum 5672285 ms, max 39349 ms, min 20126 ms
+----------------------------------------------------------------
+
+2023-06-29 20:21:52 [main] [INFO]  KGenProgMain - entered the era of 20th generation.
+2023-06-29 22:11:38 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 25 hours 21 minutes 31 seconds
+Variants: generated 400, build-succeeded 187, build-failed 143, syntax-invalid 26, redundant 44
+Fitness: max 0.889(176), min 0.444(2), ave 0.875
+Test execution time: sum 6544609 ms, max 573485 ms, min 19901 ms
+----------------------------------------------------------------
+
+2023-06-29 22:11:38 [main] [INFO]  KGenProgMain - GA stopped
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v10)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v10)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v10)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v10)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v10)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -396,7 +396,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v889)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v889)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v889)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v889)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v889)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -527,7 +527,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +543,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +559,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v1757)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v1757)
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -370,24 +370,7 @@
+      */
+     public static ConcurrentModificationException createConcurrentModificationException(final Localizable pattern,
+                                                                                         final Object ... arguments) {
+-        return new ConcurrentModificationException() {
+-
+-            /** Serializable version identifier. */
+-            private static final long serialVersionUID = -1878427236170442052L;
+-
+-            /** {@inheritDoc} */
+-            @Override
+-            public String getMessage() {
+-                return buildMessage(Locale.US, pattern, arguments);
+-            }
+-
+-            /** {@inheritDoc} */
+-            @Override
+-            public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
+-            }
+-
+-        };
++        throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+     }
+ 
+     /**
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v1757)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v1757)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v1757)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v1757)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -156,7 +156,6 @@
+         final int capacity   = (int) FastMath.ceil(expectedSize / LOAD_FACTOR);
+         final int powerOfTwo = Integer.highestOneBit(capacity);
+         if (powerOfTwo == capacity) {
+-            return capacity;
+         }
+         return nextPowerOfTwo(capacity);
+     }
+@@ -396,7 +395,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v2812)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v2812)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v2812)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v2812)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v2812)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -183,8 +183,7 @@
+             return values[index];
+         }
+ 
+-        if (states[index] == FREE) {
+-            return missingEntries;
++        if (states[index] == FULL && keys[index] == key) {
+         }
+ 
+         int j = index;
+@@ -396,7 +395,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+@@ -423,7 +421,6 @@
+             if (shouldGrowTable()) {
+                 growTable();
+             }
+-            ++count;
+         }
+         return previous;
+ 
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3264)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3264)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3264)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3264)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3264)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -134,12 +134,12 @@
+         final int length = source.keys.length;
+         keys = new int[length];
+         System.arraycopy(source.keys, 0, keys, 0, length);
+-        values = new double[length];
++        double result;
++		values = new double[length];
+         System.arraycopy(source.values, 0, values, 0, length);
+         states = new byte[length];
+         System.arraycopy(source.states, 0, states, 0, length);
+         missingEntries = source.missingEntries;
+-        size  = source.size;
+         mask  = source.mask;
+         count = source.count;
+     }
+@@ -183,7 +183,7 @@
+             return values[index];
+         }
+ 
+-        if (states[index] == FREE) {
++        if (index >= 0) {
+             return missingEntries;
+         }
+ 
+@@ -527,7 +527,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +543,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +559,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3306)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3306)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3306)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3306)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3306)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -134,7 +134,8 @@
+         final int length = source.keys.length;
+         keys = new int[length];
+         System.arraycopy(source.keys, 0, keys, 0, length);
+-        values = new double[length];
++        double result;
++		values = new double[length];
+         System.arraycopy(source.values, 0, values, 0, length);
+         states = new byte[length];
+         System.arraycopy(source.states, 0, states, 0, length);
+@@ -183,8 +184,8 @@
+             return values[index];
+         }
+ 
+-        if (states[index] == FREE) {
+-            return missingEntries;
++        if (states[index] == FULL && keys[index] == key) {
++            double tmp[] = new double[2];
+         }
+ 
+         int j = index;
+@@ -396,7 +397,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3349)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3349)
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        return "";
+     }
+ 
+     /** Gets the message in a specified locale.
+@@ -370,24 +370,7 @@
+      */
+     public static ConcurrentModificationException createConcurrentModificationException(final Localizable pattern,
+                                                                                         final Object ... arguments) {
+-        return new ConcurrentModificationException() {
+-
+-            /** Serializable version identifier. */
+-            private static final long serialVersionUID = -1878427236170442052L;
+-
+-            /** {@inheritDoc} */
+-            @Override
+-            public String getMessage() {
+-                return buildMessage(Locale.US, pattern, arguments);
+-            }
+-
+-            /** {@inheritDoc} */
+-            @Override
+-            public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
+-            }
+-
+-        };
++        throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+     }
+ 
+     /**
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3349)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3349)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3349)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:39 [main] [INFO]  PatchLogExporter - patch (v3349)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -178,7 +178,8 @@
+     public double get(final int key) {
+ 
+         final int hash  = hashOf(key);
+-        int index = hash & mask;
++        int intVal;
++		int index = hash & mask;
+         if (containsKey(key, index)) {
+             return values[index];
+         }
+@@ -396,7 +397,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4302)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4302)
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        return buildMessage(Locale.US, pattern, arguments);
+     }
+ 
+     /** Gets the message in a specified locale.
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4302)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4302)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4302)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4302)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -527,7 +527,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +543,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +559,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4457)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4457)
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /** Gets the message in a specified locale.
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4457)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4457)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4457)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4457)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -183,7 +183,7 @@
+             return values[index];
+         }
+ 
+-        if (states[index] == FREE) {
++        if (states[index] == FULL && keys[index] == key) {
+             return missingEntries;
+         }
+ 
+@@ -394,9 +394,7 @@
+         keys[index]   = 0;
+         states[index] = REMOVED;
+         final double previous = values[index];
+-        values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4574)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4574)
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        return buildMessage(Locale.US, pattern, arguments);
+     }
+ 
+     /** Gets the message in a specified locale.
+@@ -198,7 +198,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getMessage() {
+-                return buildMessage(Locale.US, pattern, arguments);
++                return buildMessage(Locale.getDefault(), pattern, arguments);
+             }
+ 
+             /** {@inheritDoc} */
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4574)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4574)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4574)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v4574)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -527,7 +527,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +543,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +559,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5076)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5076)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5076)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5076)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5076)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -134,7 +134,8 @@
+         final int length = source.keys.length;
+         keys = new int[length];
+         System.arraycopy(source.keys, 0, keys, 0, length);
+-        values = new double[length];
++        double result;
++		values = new double[length];
+         System.arraycopy(source.values, 0, values, 0, length);
+         states = new byte[length];
+         System.arraycopy(source.states, 0, states, 0, length);
+@@ -527,7 +528,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +544,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +560,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5082)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5082)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5082)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5082)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5082)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -177,7 +177,8 @@
+      */
+     public double get(final int key) {
+ 
+-        final int hash  = hashOf(key);
++        --size;
++		final int hash  = hashOf(key);
+         int index = hash & mask;
+         if (containsKey(key, index)) {
+             return values[index];
+@@ -423,7 +424,6 @@
+             if (shouldGrowTable()) {
+                 growTable();
+             }
+-            ++count;
+         }
+         return previous;
+ 
+@@ -527,7 +527,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +543,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +559,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5127)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5127)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5127)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5127)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5127)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -183,8 +183,7 @@
+             return values[index];
+         }
+ 
+-        if (states[index] == FREE) {
+-            return missingEntries;
++        if (index >= 0) {
+         }
+ 
+         int j = index;
+@@ -527,7 +526,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +542,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +558,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5538)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5538)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5538)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5538)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5538)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -177,14 +177,14 @@
+      */
+     public double get(final int key) {
+ 
+-        final int hash  = hashOf(key);
++        --size;
++		final int hash  = hashOf(key);
+         int index = hash & mask;
+         if (containsKey(key, index)) {
+             return values[index];
+         }
+ 
+         if (states[index] == FREE) {
+-            return missingEntries;
+         }
+ 
+         int j = index;
+@@ -214,7 +214,6 @@
+         }
+ 
+         if (states[index] == FREE) {
+-            return false;
+         }
+ 
+         int j = index;
+@@ -527,7 +526,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +542,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +558,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5709)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5709)
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /** Gets the message in a specified locale.
+@@ -198,7 +198,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getMessage() {
+-                return buildMessage(Locale.US, pattern, arguments);
++                return buildMessage(Locale.getDefault(), pattern, arguments);
+             }
+ 
+             /** {@inheritDoc} */
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5709)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5709)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5709)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v5709)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -177,7 +177,8 @@
+      */
+     public double get(final int key) {
+ 
+-        final int hash  = hashOf(key);
++        --size;
++		final int hash  = hashOf(key);
+         int index = hash & mask;
+         if (containsKey(key, index)) {
+             return values[index];
+@@ -527,7 +528,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +544,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +560,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6042)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6042)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6042)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6042)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6042)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -183,8 +183,7 @@
+             return values[index];
+         }
+ 
+-        if (states[index] == FREE) {
+-            return missingEntries;
++        if (states[index] == FULL && keys[index] == key) {
+         }
+ 
+         int j = index;
+@@ -213,7 +212,7 @@
+             return true;
+         }
+ 
+-        if (states[index] == FREE) {
++        if (states[index] == FULL && keys[index] == key) {
+             return false;
+         }
+ 
+@@ -391,12 +390,10 @@
+      * @return removed value
+      */
+     private double doRemove(int index) {
+-        keys[index]   = 0;
+         states[index] = REMOVED;
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6109)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6109)
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /** Gets the message in a specified locale.
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6109)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6109)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6109)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6109)
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -75,6 +75,7 @@
+         virtualSize = dimension;
+         entries = new OpenIntToDoubleHashMap(0.0);
+         this.epsilon = epsilon;
++		double invIJ = 0;
+     }
+ 
+     /**
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6109)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -178,13 +178,13 @@
+     public double get(final int key) {
+ 
+         final int hash  = hashOf(key);
+-        int index = hash & mask;
++        int intVal;
++		int index = hash & mask;
+         if (containsKey(key, index)) {
+             return values[index];
+         }
+ 
+         if (states[index] == FREE) {
+-            return missingEntries;
+         }
+ 
+         int j = index;
+@@ -214,7 +214,7 @@
+         }
+ 
+         if (states[index] == FREE) {
+-            return false;
++            final int[] oldKeys = keys;
+         }
+ 
+         int j = index;
+@@ -396,7 +396,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+@@ -423,7 +422,6 @@
+             if (shouldGrowTable()) {
+                 growTable();
+             }
+-            ++count;
+         }
+         return previous;
+ 
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6403)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6403)
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        return "";
+     }
+ 
+     /** Gets the message in a specified locale.
+@@ -204,7 +204,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6403)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6403)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6403)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6403)
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -223,7 +223,6 @@
+     /** {@inheritDoc} */
+     @Override
+         public RealVector add(RealVector v) {
+-        checkVectorDimensions(v.getDimension());
+         if (v instanceof OpenMapRealVector) {
+             return add((OpenMapRealVector) v);
+         } else {
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v6403)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -183,7 +183,7 @@
+             return values[index];
+         }
+ 
+-        if (states[index] == FREE) {
++        if (true) {
+             return missingEntries;
+         }
+ 
+@@ -396,7 +396,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v7158)
+--- org.apache.commons.math.special.Erf
++++ org.apache.commons.math.special.Erf
+@@ -92,4 +92,3 @@
+         return x < 0 ? 2 - ret : ret;
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v7158)
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /** Gets the message in a specified locale.
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v7158)
+--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
++++ org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic
+@@ -286,4 +286,3 @@
+         return test(values, begin, length, allowEmpty);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v7158)
+--- org.apache.commons.math.optimization.direct.CMAESOptimizer
++++ org.apache.commons.math.optimization.direct.CMAESOptimizer
+@@ -1394,4 +1394,3 @@
+         return new Array2DRowRealMatrix(d, false);
+     }
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v7158)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-06-29 22:11:40 [main] [INFO]  PatchLogExporter - patch (v7158)
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -391,7 +391,6 @@
+      * @return removed value
+      */
+     private double doRemove(int index) {
+-        keys[index]   = 0;
+         states[index] = REMOVED;
+         final double previous = values[index];
+         values[index] = missingEntries;
+@@ -527,7 +526,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -544,7 +542,6 @@
+         public double value()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+@@ -561,7 +558,6 @@
+             throws ConcurrentModificationException, NoSuchElementException {
+ 
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+ 
+             // advance on step
+2023-06-29 22:11:40 [main] [INFO]  KGenProgMain - Summary
+Reached generation = 20
+Generated variants = 7600
+Syntax valid variants = 7145
+Build succeeded variants = 2729
+Time elapsed = 25 hours 21 minutes 34 seconds
+Exit status = FAILURE (time limit)

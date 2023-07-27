@@ -1,4 +1,5 @@
 name
+File
 math80/seed0/2
 math80/seed0/11
 math80/seed0/14
@@ -29,6 +30,7 @@ math80/seed0/57
 math80/seed0/59
 math80/seed0/63
 math80/seed0/64
+math80/seed0/65
 math80/seed0/66
 math80/seed0/67
 math80/seed0/69
@@ -37,6 +39,7 @@ math80/seed0/71
 math80/seed0/72
 math80/seed0/73
 math80/seed0/74
+math80/seed0/75
 math80/seed0/76
 math80/seed0/77
 math80/seed0/78
@@ -86,6 +89,7 @@ math80/seed1/57
 math80/seed1/58
 math80/seed1/60
 math80/seed1/63
+math80/seed1/72
 math80/seed1/73
 math80/seed1/76
 math80/seed1/78
@@ -376,8 +380,11 @@ math80/seed6/73
 math80/seed6/74
 math80/seed6/75
 math80/seed6/76
+math80/seed6/77
 math80/seed6/78
 math80/seed6/79
+math80/seed6/80
+math80/seed6/81
 math80/seed6/82
 math80/seed7/3
 math80/seed7/4
