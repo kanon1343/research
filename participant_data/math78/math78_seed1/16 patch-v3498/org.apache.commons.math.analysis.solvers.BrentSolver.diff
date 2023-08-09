@@ -1,0 +1,18 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -228,6 +228,7 @@
+                 x0 = x1;
+                 x1 = x2;
+                 x2 = x0;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
+@@ -237,7 +238,6 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

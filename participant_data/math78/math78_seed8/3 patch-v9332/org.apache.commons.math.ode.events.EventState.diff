@@ -1,0 +1,46 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -100,12 +100,13 @@
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+-        increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+ 
+     }
+@@ -148,7 +149,8 @@
+      */
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+-        t0 = tStart;
++        nextAction = EventHandler.CONTINUE;
++		t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+         g0Positive = g0 >= 0;
+     }
+@@ -181,7 +183,9 @@
+ 
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+-                interpolator.setInterpolatedTime(tb);
++                g0Positive = increasing;
++				g0Positive = increasing;
++				interpolator.setInterpolatedTime(tb);
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+@@ -213,7 +217,6 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&

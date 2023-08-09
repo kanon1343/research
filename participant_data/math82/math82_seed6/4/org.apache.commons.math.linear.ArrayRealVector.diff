@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -1203,7 +1203,8 @@
+     /** {@inheritDoc} */
+     public void setEntry(int index, double value) {
+         try {
+-            data[index] = value;
++            int mIndex = 0;
++			data[index] = value;
+         } catch (IndexOutOfBoundsException e) {
+             checkIndex(index);
+         }

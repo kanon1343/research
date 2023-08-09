@@ -1,0 +1,37 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -196,6 +196,7 @@
+ 
+         // pre-compute some elements
+         squaredSecondary = new double[secondary.length];
++		cachedVt = null;
+         for (int i = 0; i < squaredSecondary.length; ++i) {
+             final double s = secondary[i];
+             squaredSecondary[i] = s * s;
+@@ -955,7 +956,7 @@
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+                     work[i]     = -0.0;
+-                    work[j]     = d;
++                    qMax = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+@@ -1136,7 +1137,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1382,8 +1382,8 @@
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
++			work[j4 - 2] = d + work[j4 - 1];
+             dN1  = work[j4p2 + 2];
+-            dMin = dN1;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {

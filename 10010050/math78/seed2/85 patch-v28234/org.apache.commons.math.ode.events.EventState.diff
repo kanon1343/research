@@ -1,0 +1,42 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -103,7 +103,6 @@
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+@@ -182,6 +181,10 @@
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+                 interpolator.setInterpolatedTime(tb);
++				increasing = true;
++				increasing = true;
++				increasing = true;
++				increasing = true;
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+@@ -245,8 +248,7 @@
+ 
+             }
+ 
+-            // no event during the whole step
+-            pendingEvent     = false;
++            increasing = true;
+             pendingEventTime = Double.NaN;
+             return false;
+ 
+@@ -268,7 +270,9 @@
+      * step.
+      */
+     public double getEventTime() {
+-        return pendingEventTime;
++        g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		return pendingEventTime;
+     }
+ 
+     /** Acknowledge the fact the step has been accepted by the integrator.

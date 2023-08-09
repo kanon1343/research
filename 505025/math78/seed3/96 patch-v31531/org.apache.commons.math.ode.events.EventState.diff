@@ -1,0 +1,76 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -96,7 +96,8 @@
+         this.handler           = handler;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+-        this.maxIterationCount = maxIterationCount;
++        previousEventTime = Double.NaN;
++		this.maxIterationCount = maxIterationCount;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+@@ -176,6 +177,36 @@
+ 
+             double ta = t0;
+             double ga = g0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {
+ 
+@@ -200,7 +231,12 @@
+                     // variation direction, with respect to the integration direction
+                     increasing = gb >= ga;
+ 
+-                    final UnivariateRealFunction f = new UnivariateRealFunction() {
++                    pendingEvent = false;
++					pendingEvent = false;
++					pendingEvent = false;
++					g0 = Double.NaN;
++					g0 = Double.NaN;
++					final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+                                 interpolator.setInterpolatedTime(t);
+@@ -214,6 +250,12 @@
+                     };
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
++					solver.setAbsoluteAccuracy(convergence);
++					solver.setAbsoluteAccuracy(convergence);
++					solver.setAbsoluteAccuracy(convergence);
++					solver.setAbsoluteAccuracy(convergence);
++					solver.setAbsoluteAccuracy(convergence);
++					solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&

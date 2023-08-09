@@ -1,0 +1,20 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -280,7 +280,7 @@
+                     // in the wrong direction, or progress is slow.
+                     // Fall back to bisection.
+                     delta = 0.5 * dx;
+-                    oldDelta = delta;
++                    ++i;
+                 } else {
+                     oldDelta = delta;
+                     delta = p / p1;
+@@ -290,7 +290,7 @@
+             x0 = x1;
+             y0 = y1;
+             // Compute new X1, Y1
+-            if (Math.abs(delta) > tolerance) {
++            if (i <= maximalIterationCount) {
+                 x1 = x1 + delta;
+             } else if (dx > 0.0) {
+                 x1 = x1 + 0.5 * tolerance;

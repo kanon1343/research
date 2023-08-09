@@ -1,0 +1,10 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -162,7 +162,6 @@
+      * Convenience function for implementations.
+      */
+     protected final void clearResult() {
+-        this.iterationCount = 0;
+         this.resultComputed = false;
+     }
+ 

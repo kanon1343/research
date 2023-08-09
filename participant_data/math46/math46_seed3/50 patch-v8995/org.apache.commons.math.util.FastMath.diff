@@ -1,0 +1,20 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2912,7 +2912,6 @@
+          */
+ 
+         yb = 0.07490822288864472;
+-        yb = yb * epsA2 + -0.09088450866185192;
+         yb = yb * epsA2 + 0.11111095942313305;
+         yb = yb * epsA2 + -0.1428571423679182;
+         yb = yb * epsA2 + 0.19999999999923582;
+@@ -2926,9 +2925,6 @@
+         yb = -(temp - ya - yb);
+         ya = temp;
+ 
+-        /* Add in effect of epsB.   atan'(x) = 1/(1+x^2) */
+-        yb += epsB / (1.0 + epsA * epsA);
+-
+         double result;
+         double resultb;
+ 

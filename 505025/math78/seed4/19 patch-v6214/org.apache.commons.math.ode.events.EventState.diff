@@ -1,0 +1,50 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -101,8 +101,6 @@
+         // some dummy values ...
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+-        g0Positive        = true;
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+@@ -150,7 +148,6 @@
+         throws EventException {
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+-        g0Positive = g0 >= 0;
+     }
+ 
+     /** Evaluate the impact of the proposed step on the event handler.
+@@ -181,7 +178,6 @@
+ 
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+-                interpolator.setInterpolatedTime(tb);
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+@@ -215,6 +211,14 @@
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {
+@@ -282,7 +286,6 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {

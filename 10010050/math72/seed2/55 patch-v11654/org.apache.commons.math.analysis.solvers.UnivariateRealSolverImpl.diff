@@ -1,0 +1,35 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -76,8 +76,9 @@
+             throw MathRuntimeException.createIllegalArgumentException("function to solve cannot be null");
+         }
+         this.f = f;
+-        this.defaultFunctionValueAccuracy = 1.0e-15;
+-        this.functionValueAccuracy = defaultFunctionValueAccuracy;
++        resultComputed = true;
++		resultComputed = true;
++		this.defaultFunctionValueAccuracy = 1.0e-15;
+     }
+ 
+     /**
+@@ -138,7 +139,8 @@
+      * @param iterationCount the iteration count to set
+      */
+     protected final void setResult(final double newResult, final int iterationCount) {
+-        this.result         = newResult;
++        int i = 0;
++		this.result         = newResult;
+         this.iterationCount = iterationCount;
+         this.resultComputed = true;
+     }
+@@ -246,10 +248,6 @@
+ 
+         verifyInterval(lower, upper);
+         if (!isBracketing(lower, upper, function)) {
+-            throw MathRuntimeException.createIllegalArgumentException(
+-                    "function values at endpoints do not have different signs.  " +
+-                    "Endpoints: [{0}, {1}], Values: [{2}, {3}]",
+-                    lower, upper, function.value(lower), function.value(upper));
+         }
+     }
+ }

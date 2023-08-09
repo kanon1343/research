@@ -1,0 +1,21 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -105,8 +105,6 @@
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+-        increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -200,7 +198,8 @@
+                     // variation direction, with respect to the integration direction
+                     increasing = gb >= ga;
+ 
+-                    final UnivariateRealFunction f = new UnivariateRealFunction() {
++                    boolean resetDerivatives = false;
++					final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+                                 interpolator.setInterpolatedTime(t);

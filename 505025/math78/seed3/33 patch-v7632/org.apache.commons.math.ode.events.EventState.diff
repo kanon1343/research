@@ -1,0 +1,34 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -150,7 +150,6 @@
+         throws EventException {
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+-        g0Positive = g0 >= 0;
+     }
+ 
+     /** Evaluate the impact of the proposed step on the event handler.
+@@ -176,6 +175,13 @@
+ 
+             double ta = t0;
+             double ga = g0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {
+ 
+@@ -214,7 +220,8 @@
+                     };
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+-                    solver.setMaximalIterationCount(maxIterationCount);
++                    t0 = Double.NaN;
++					solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {

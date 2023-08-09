@@ -1,0 +1,19 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -116,7 +116,6 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }
+@@ -169,7 +168,7 @@
+     /** {@inheritDoc} */
+     @Override
+     public String getLocalizedMessage() {
+-        return getMessage(Locale.getDefault());
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /**

@@ -1,0 +1,66 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -88,15 +88,14 @@
+    */
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+-    currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
++    finalized = false;
++	finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -107,17 +106,13 @@
+   protected AbstractStepInterpolator(final double[] y, final boolean forward) {
+ 
+     previousTime      = Double.NaN;
+-    currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+-    interpolatedDerivatives = new double[y.length];
+-
+     finalized         = false;
+     this.forward      = forward;
+-    this.dirtyState   = true;
+ 
+   }
+ 
+@@ -169,14 +164,11 @@
+   protected void reinitialize(final double[] y, final boolean isForward) {
+ 
+     previousTime      = Double.NaN;
+-    currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+-    interpolatedDerivatives = new double[y.length];
+-
+     finalized         = false;
+     this.forward      = isForward;
+     this.dirtyState   = true;
+@@ -271,8 +263,11 @@
+       // lazy evaluation of the state
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+-          computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;
+       }
+ 

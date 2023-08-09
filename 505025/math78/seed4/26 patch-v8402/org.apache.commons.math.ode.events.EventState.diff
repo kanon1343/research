@@ -1,0 +1,23 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -213,8 +213,19 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
++                    previousEventTime = Double.NaN;
+                     solver.setMaximalIterationCount(maxIterationCount);
++					increasing = true;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {

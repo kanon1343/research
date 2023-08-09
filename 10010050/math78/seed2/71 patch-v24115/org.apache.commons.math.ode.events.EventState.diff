@@ -1,0 +1,31 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -93,7 +93,8 @@
+      */
+     public EventState(final EventHandler handler, final double maxCheckInterval,
+                       final double convergence, final int maxIterationCount) {
+-        this.handler           = handler;
++        nextAction = EventHandler.CONTINUE;
++		this.handler           = handler;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+@@ -182,6 +183,8 @@
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+                 interpolator.setInterpolatedTime(tb);
++				increasing = true;
++				increasing = true;
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+@@ -248,6 +251,9 @@
+             // no event during the whole step
+             pendingEvent     = false;
+             pendingEventTime = Double.NaN;
++			pendingEvent = false;
++			pendingEvent = false;
++			pendingEvent = false;
+             return false;
+ 
+         } catch (FunctionEvaluationException e) {

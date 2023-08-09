@@ -1,0 +1,55 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -97,6 +97,33 @@
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+@@ -148,7 +175,8 @@
+      */
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+-        t0 = tStart;
++        t0 = Double.NaN;
++		t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+         g0Positive = g0 >= 0;
+     }
+@@ -213,7 +241,7 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
++                    forward = interpolator.isForward();
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&

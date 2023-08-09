@@ -1,0 +1,23 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -103,6 +103,11 @@
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
++		previousEventTime = Double.NaN;
++		previousEventTime = Double.NaN;
++		previousEventTime = Double.NaN;
++		previousEventTime = Double.NaN;
++		previousEventTime = Double.NaN;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+@@ -282,7 +287,7 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
++        g0Positive = increasing;
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {

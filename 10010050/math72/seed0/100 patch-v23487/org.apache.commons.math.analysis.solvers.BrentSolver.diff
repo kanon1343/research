@@ -1,0 +1,65 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -99,22 +99,24 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+-        verifySequence(min, initial, max);
++        double x0 = min;
++        this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
++		verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            checkResultComputed();
++			checkResultComputed();
++			double b = initial;
++			return result;
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+-            return result;
+-        }
++        if (Math.abs(yMin) <= functionValueAccuracy)
+ 
+         // reduce interval if min and initial bracket the root
+         if (yInitial * yMin < 0) {
+@@ -124,7 +126,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -183,13 +184,21 @@
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
+                 ret = max;
++				return result;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+                         NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+             }
+         } else if (sign < 0){
+-            // solve using only the first endpoint as initial guess
++            iterationCount += this.iterationCount;
++			iterationCount += this.iterationCount;
++			iterationCount += this.iterationCount;
++			iterationCount += this.iterationCount;
++			iterationCount += this.iterationCount;
++			iterationCount += this.iterationCount;
++			iterationCount += this.iterationCount;
++			// solve using only the first endpoint as initial guess
+             ret = solve(f, min, yMin, max, yMax, min, yMin);
+         } else {
+             // either min or max is a root

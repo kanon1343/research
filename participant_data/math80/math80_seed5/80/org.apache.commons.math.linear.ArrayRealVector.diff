@@ -1,0 +1,66 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -243,7 +243,6 @@
+     /** {@inheritDoc} */
+     public RealVector add(double[] v)
+     throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] + v[i];
+@@ -280,7 +279,6 @@
+     /** {@inheritDoc} */
+     public RealVector subtract(double[] v)
+     throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] - v[i];
+@@ -793,7 +791,6 @@
+     /** {@inheritDoc} */
+     public RealVector ebeMultiply(double[] v)
+         throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] * v[i];
+@@ -830,7 +827,6 @@
+     /** {@inheritDoc} */
+     public RealVector ebeDivide(double[] v)
+         throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+                 out[i] = data[i] / v[i];
+@@ -881,7 +877,6 @@
+     /** {@inheritDoc} */
+     public double dotProduct(double[] v)
+         throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double dot = 0;
+         for (int i = 0; i < data.length; i++) {
+             dot += data[i] * v[i];
+@@ -946,7 +941,6 @@
+     /** {@inheritDoc} */
+     public double getDistance(double[] v)
+         throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double sum = 0;
+         for (int i = 0; i < data.length; ++i) {
+             final double delta = data[i] - v[i];
+@@ -992,7 +986,6 @@
+     /** {@inheritDoc} */
+     public double getL1Distance(double[] v)
+         throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double sum = 0;
+         for (int i = 0; i < data.length; ++i) {
+             final double delta = data[i] - v[i];
+@@ -1038,7 +1031,6 @@
+     /** {@inheritDoc} */
+     public double getLInfDistance(double[] v)
+         throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double max = 0;
+         for (int i = 0; i < data.length; ++i) {
+             final double delta = data[i] - v[i];

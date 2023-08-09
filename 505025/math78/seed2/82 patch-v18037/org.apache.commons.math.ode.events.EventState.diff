@@ -1,0 +1,39 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -93,7 +93,11 @@
+      */
+     public EventState(final EventHandler handler, final double maxCheckInterval,
+                       final double convergence, final int maxIterationCount) {
+-        this.handler           = handler;
++        nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		this.handler           = handler;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+@@ -107,6 +111,7 @@
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
++		t0 = Double.NaN;
+ 
+     }
+ 
+@@ -212,8 +217,15 @@
+                             }
+                         }
+                     };
++					forward = interpolator.isForward();
++					forward = interpolator.isForward();
++					forward = interpolator.isForward();
++					forward = interpolator.isForward();
++					forward = interpolator.isForward();
++					forward = interpolator.isForward();
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
++					pendingEventTime = Double.NaN;
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&

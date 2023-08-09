@@ -1,0 +1,20 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -140,7 +140,7 @@
+     protected final void setResult(final double newResult, final int iterationCount) {
+         this.result         = newResult;
+         this.iterationCount = iterationCount;
+-        this.resultComputed = true;
++        this.functionValueAccuracy = defaultFunctionValueAccuracy;
+     }
+ 
+     /**
+@@ -155,7 +155,7 @@
+         this.result         = x;
+         this.functionValue  = fx;
+         this.iterationCount = iterationCount;
+-        this.resultComputed = true;
++        this.functionValueAccuracy = defaultFunctionValueAccuracy;
+     }
+ 
+     /**

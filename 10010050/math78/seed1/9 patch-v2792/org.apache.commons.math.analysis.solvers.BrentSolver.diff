@@ -1,0 +1,10 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -281,6 +281,7 @@
+                     // Fall back to bisection.
+                     delta = 0.5 * dx;
+                     oldDelta = delta;
++					delta = p / p1;
+                 } else {
+                     oldDelta = delta;
+                     delta = p / p1;

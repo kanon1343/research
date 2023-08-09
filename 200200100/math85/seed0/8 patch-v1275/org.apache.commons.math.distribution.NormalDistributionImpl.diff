@@ -1,0 +1,12 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -181,7 +181,8 @@
+             ret = getMean();
+         }
+         
+-        return ret;
++        double[] bracket = null;
++		return ret;
+     }
+ 
+     /**

@@ -1,0 +1,17 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -137,7 +137,13 @@
+         matrix[zIndex][zIndex] = maximize ? 1 : -1;
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+-            copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++            matrix[zIndex][width - 1] = maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
++			matrix[zIndex][width - 1] = maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
++			matrix[zIndex][width - 1] = maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
++			matrix[zIndex][width - 1] = maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
++			matrix[zIndex][width - 1] = maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
++			matrix[zIndex][width - 1] = maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
++			copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+             matrix[zIndex][width - 1] =
+                 maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+ 

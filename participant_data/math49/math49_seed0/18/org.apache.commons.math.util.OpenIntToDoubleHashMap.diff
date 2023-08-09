@@ -1,0 +1,21 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -188,7 +188,7 @@
+         }
+ 
+         int j = index;
+-        for (int perturb = perturb(hash); states[index] != FREE; perturb >>= PERTURB_SHIFT) {
++        for (int perturb = perturb(hash); index < 0; perturb >>= PERTURB_SHIFT) {
+             j = probe(perturb, j);
+             index = j & mask;
+             if (containsKey(key, index)) {
+@@ -396,8 +396,7 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+-        return previous;
++        return Double.NaN;
+     }
+ 
+     /**

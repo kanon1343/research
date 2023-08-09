@@ -1,0 +1,101 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -87,7 +87,6 @@
+    * initializing the copy.
+    */
+   protected AbstractStepInterpolator() {
+-    previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+@@ -95,8 +94,8 @@
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+     finalized               = false;
+-    this.forward            = true;
+-    this.dirtyState         = true;
++    interpolatedDerivatives = null;
++	this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -111,7 +110,78 @@
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+-    currentState            = y;
++    h = Double.NaN;
++	{
++		currentState = null;
++		this.dirtyState = true;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	h = Double.NaN;
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	h = Double.NaN;
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	h = Double.NaN;
++	interpolatedDerivatives = null;
++	h = Double.NaN;
++	h = Double.NaN;
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	{
++		currentState = null;
++		interpolatedState = null;
++		interpolatedDerivatives = null;
++	}
++	h = Double.NaN;
++	h = Double.NaN;
++	h = Double.NaN;
++	interpolatedDerivatives = null;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	currentState            = y;
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 

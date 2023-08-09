@@ -1,0 +1,35 @@
+--- org.apache.commons.math.linear.Array2DRowRealMatrix
++++ org.apache.commons.math.linear.Array2DRowRealMatrix
+@@ -620,6 +620,32 @@
+      */
+     private void copyIn(final double[][] in) {
+         setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
++		setSubMatrix(in, 0, 0);
+     }
+ 
+ }

@@ -1,0 +1,65 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -88,15 +88,11 @@
+    */
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+-    currentTime             = Double.NaN;
+-    h                       = Double.NaN;
+-    interpolatedTime        = Double.NaN;
++    setInterpolatedTime(getInterpolatedTime());
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -107,7 +103,6 @@
+   protected AbstractStepInterpolator(final double[] y, final boolean forward) {
+ 
+     previousTime      = Double.NaN;
+-    currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+@@ -115,9 +110,11 @@
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
++    this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	finalized         = false;
+     this.forward      = forward;
+-    this.dirtyState   = true;
+ 
+   }
+ 
+@@ -169,7 +166,6 @@
+   protected void reinitialize(final double[] y, final boolean isForward) {
+ 
+     previousTime      = Double.NaN;
+-    currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+@@ -217,7 +213,6 @@
+   public void storeTime(final double t) {
+ 
+     currentTime = t;
+-    h           = currentTime - previousTime;
+     setInterpolatedTime(t);
+ 
+     // the step is not finalized anymore
+@@ -244,6 +239,7 @@
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+       dirtyState       = true;
++	finalized = true;
+   }
+ 
+   /** {@inheritDoc} */

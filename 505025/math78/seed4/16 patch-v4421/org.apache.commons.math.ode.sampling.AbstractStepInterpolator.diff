@@ -1,0 +1,13 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -248,7 +248,9 @@
+ 
+   /** {@inheritDoc} */
+   public boolean isForward() {
+-    return forward;
++    dirtyState = false;
++	dirtyState = false;
++	return forward;
+   }
+ 
+   /** Compute the state and derivatives at the interpolated time.

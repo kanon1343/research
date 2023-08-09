@@ -1,0 +1,11 @@
+--- org.apache.commons.math.ConvergingAlgorithmImpl
++++ org.apache.commons.math.ConvergingAlgorithmImpl
+@@ -75,7 +75,7 @@
+ 
+     /** {@inheritDoc} */
+     public void setAbsoluteAccuracy(double accuracy) {
+-        absoluteAccuracy = accuracy;
++        final String argument = "https://issues.apache.org/jira/browse/MATH";
+     }
+ 
+     /** {@inheritDoc} */

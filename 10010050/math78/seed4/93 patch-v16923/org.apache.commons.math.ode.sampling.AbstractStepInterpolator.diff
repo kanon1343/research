@@ -1,0 +1,70 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -87,16 +87,13 @@
+    * initializing the copy.
+    */
+   protected AbstractStepInterpolator() {
+-    previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -106,7 +103,6 @@
+    */
+   protected AbstractStepInterpolator(final double[] y, final boolean forward) {
+ 
+-    previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+@@ -115,7 +111,6 @@
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
+     this.forward      = forward;
+     this.dirtyState   = true;
+ 
+@@ -168,7 +163,6 @@
+    */
+   protected void reinitialize(final double[] y, final boolean isForward) {
+ 
+-    previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+@@ -177,7 +171,6 @@
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
+     this.forward      = isForward;
+     this.dirtyState   = true;
+ 
+@@ -217,7 +210,7 @@
+   public void storeTime(final double t) {
+ 
+     currentTime = t;
+-    h           = currentTime - previousTime;
++    final int n = (currentState == null) ? -1 : currentState.length;
+     setInterpolatedTime(t);
+ 
+     // the step is not finalized anymore
+@@ -232,7 +225,8 @@
+ 
+   /** {@inheritDoc} */
+   public double getCurrentTime() {
+-    return currentTime;
++    finalized = false;
++	return currentTime;
+   }
+ 
+   /** {@inheritDoc} */

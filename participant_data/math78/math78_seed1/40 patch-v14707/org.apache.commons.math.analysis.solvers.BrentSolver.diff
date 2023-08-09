@@ -1,0 +1,25 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -228,6 +228,14 @@
+                 x0 = x1;
+                 x1 = x2;
+                 x2 = x0;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
+@@ -294,6 +302,7 @@
+                 x1 = x1 + delta;
+             } else if (dx > 0.0) {
+                 x1 = x1 + 0.5 * tolerance;
++				x0 = x1;
+             } else if (dx <= 0.0) {
+                 x1 = x1 - 0.5 * tolerance;
+             }

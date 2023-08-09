@@ -1,0 +1,65 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -103,10 +103,12 @@
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
++		previousEventTime = Double.NaN;
++		previousEventTime = Double.NaN;
+         pendingEventTime  = Double.NaN;
++		pendingEvent = false;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -213,7 +215,6 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+@@ -240,7 +241,39 @@
+                 } else {
+                     // no sign change: there is no event for now
+                     ta = tb;
+-                    ga = gb;
++                    {
++						increasing = gb >= ga;
++						final UnivariateRealFunction f = new UnivariateRealFunction() {
++							public double value(final double t) throws FunctionEvaluationException {
++								try {
++									interpolator.setInterpolatedTime(t);
++									return handler.g(t, interpolator.getInterpolatedState());
++								} catch (DerivativeException e) {
++									throw new FunctionEvaluationException(e, t);
++								} catch (EventException e) {
++									throw new FunctionEvaluationException(e, t);
++								}
++							}
++						};
++						final BrentSolver solver = new BrentSolver();
++						solver.setAbsoluteAccuracy(convergence);
++						solver.setMaximalIterationCount(maxIterationCount);
++						final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
++						if ((Math.abs(root - ta) <= convergence)
++								&& (Math.abs(root - previousEventTime) <= convergence)) {
++							ta = tb;
++							ga = gb;
++						} else if (Double.isNaN(previousEventTime)
++								|| (Math.abs(previousEventTime - root) > convergence)) {
++							pendingEventTime = root;
++							if (pendingEvent && (Math.abs(t1 - pendingEventTime) <= convergence)) {
++								return false;
++							}
++							pendingEvent = true;
++							return true;
++						}
++					}
++					ga = gb;
+                 }
+ 
+             }

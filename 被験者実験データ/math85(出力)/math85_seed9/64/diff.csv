@@ -1,6 +1,0 @@
-,nloc_o,ccn_o,token_o,parameter_o,length_o,filename,nloc_r,ccn_r,token_r,parameter_r,length_r,repairLines
-0,69,18,430,19,75,org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils.java,67,18,429,19,73,23
-1,14,4,58,3,14,org.apache.commons.math.optimization.fitting.WeightedObservedPoint.java,14,4,58,3,14,23
-2,39,8,240,1,55,org.apache.commons.math.distribution.AbstractContinuousDistribution.java,38,8,233,1,53,23
-3,82,22,426,10,88,org.apache.commons.math.distribution.NormalDistributionImpl.java,84,22,438,10,90,23
-4,12,4,63,6,12,org.apache.commons.math.ConvergenceException.java,11,4,56,6,11,23

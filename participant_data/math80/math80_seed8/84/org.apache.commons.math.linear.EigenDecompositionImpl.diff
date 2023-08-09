@@ -1,0 +1,82 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -868,7 +868,6 @@
+             i0 = 0;
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+-                    i0 = 1 + i / 4;
+                     break;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {
+@@ -956,7 +955,6 @@
+                 if (work[i] <= TOLERANCE_2 * d) {
+                     work[i]     = -0.0;
+                     work[j]     = d;
+-                    work[j + 2] = 0.0;
+                     d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+                            (MathUtils.SAFE_MIN * work[j] < work[i + 2])) {
+@@ -1053,9 +1051,6 @@
+         if ((dMin <= 0) || (deflatedEnd < end)) {
+             if (flipIfWarranted(deflatedEnd, 1)) {
+                 dMin2 = Math.min(dMin2, work[l - 1]);
+-                work[l - 1] =
+-                    Math.min(work[l - 1],
+-                             Math.min(work[3 + pingPong], work[7 + pingPong]));
+                 work[l - 2 * pingPong] =
+                     Math.min(work[l - 2 * pingPong],
+                              Math.min(work[6 + pingPong], work[6 + pingPong]));
+@@ -1136,10 +1131,9 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
++                    initialSplits(n);
+                     work[j - k] = tmp;
+                 }
+-                j -= 4;
+             }
+             return true;
+         }
+@@ -1337,9 +1331,7 @@
+                 work[j4 - 2] = d + work[j4 - 1];
+                 if (work[j4 - 2] == 0.0) {
+                     work[j4] = 0.0;
+-                    d = work[j4 + 1];
+                     dMin = d;
+-                    eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 1] < work[j4 - 2]) &&
+                            (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4 + 1])) {
+                     final double tmp = work[j4 + 1] / work[j4 - 2];
+@@ -1358,7 +1350,6 @@
+                 if (work[j4 - 3] == 0.0) {
+                     work[j4 - 1] = 0.0;
+                     d = work[j4 + 2];
+-                    dMin = d;
+                     eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 2] < work[j4 - 3]) &&
+                            (MathUtils.SAFE_MIN * work[j4 - 3] < work[j4 + 2])) {
+@@ -1382,8 +1373,14 @@
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
++			this.realEigenvalues = realEigenvalues;
++			this.realEigenvalues = realEigenvalues;
++			this.realEigenvalues = realEigenvalues;
++			this.realEigenvalues = realEigenvalues;
++			this.realEigenvalues = realEigenvalues;
++			this.realEigenvalues = realEigenvalues;
++			this.realEigenvalues = realEigenvalues;
+             dN1  = work[j4p2 + 2];
+-            dMin = dN1;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+@@ -1402,7 +1399,6 @@
+         work[j4 - 2] = dN1 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+-            dN   = work[j4p2 + 2];
+             dMin = dN;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&

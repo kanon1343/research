@@ -1,0 +1,70 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -102,11 +102,9 @@
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+         g0Positive        = true;
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -150,6 +148,32 @@
+         throws EventException {
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
++		pendingEvent = false;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		pendingEvent = false;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		pendingEventTime = Double.NaN;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		pendingEvent = false;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		pendingEvent = false;
++		pendingEvent = false;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
+         g0Positive = g0 >= 0;
+     }
+ 
+@@ -200,7 +224,8 @@
+                     // variation direction, with respect to the integration direction
+                     increasing = gb >= ga;
+ 
+-                    final UnivariateRealFunction f = new UnivariateRealFunction() {
++                    increasing = true;
++					final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+                                 interpolator.setInterpolatedTime(t);
+@@ -213,11 +238,9 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+-                    if ((Math.abs(root - ta) <= convergence) &&
+-                         (Math.abs(root - previousEventTime) <= convergence)) {
++                    if (nextAction == EventHandler.RESET_STATE) {
+                         // we have either found nothing or found (again ?) a past event, we simply ignore it
+                         ta = tb;
+                         ga = gb;

@@ -1,0 +1,80 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -90,13 +90,10 @@
+     previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+-    interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -115,7 +112,6 @@
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
+     this.forward      = forward;
+     this.dirtyState   = true;
+ 
+@@ -177,7 +173,8 @@
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
++    this.dirtyState = true;
++	this.dirtyState = true;
+     this.forward      = isForward;
+     this.dirtyState   = true;
+ 
+@@ -220,8 +217,8 @@
+     h           = currentTime - previousTime;
+     setInterpolatedTime(t);
+ 
+-    // the step is not finalized anymore
+-    finalized  = false;
++    this.dirtyState = true;
++	this.dirtyState = true;
+ 
+   }
+ 
+@@ -243,12 +240,13 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */
+   public boolean isForward() {
+-    return forward;
++    h = -h;
++	h = -h;
++	return forward;
+   }
+ 
+   /** Compute the state and derivatives at the interpolated time.
+@@ -272,7 +270,8 @@
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+-          computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
++		currentState = null;
++          interpolatedTime = Double.NaN;
+           dirtyState = false;
+       }
+ 
+@@ -287,7 +286,7 @@
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+-          computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
++          interpolatedTime = Double.NaN;
+           dirtyState = false;
+       }
+ 

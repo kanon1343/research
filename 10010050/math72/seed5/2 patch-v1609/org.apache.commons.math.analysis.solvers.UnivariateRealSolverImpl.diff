@@ -1,0 +1,18 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -76,7 +76,6 @@
+             throw MathRuntimeException.createIllegalArgumentException("function to solve cannot be null");
+         }
+         this.f = f;
+-        this.defaultFunctionValueAccuracy = 1.0e-15;
+         this.functionValueAccuracy = defaultFunctionValueAccuracy;
+     }
+ 
+@@ -139,7 +138,6 @@
+      */
+     protected final void setResult(final double newResult, final int iterationCount) {
+         this.result         = newResult;
+-        this.iterationCount = iterationCount;
+         this.resultComputed = true;
+     }
+ 

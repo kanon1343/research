@@ -1,0 +1,27 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -151,6 +151,7 @@
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+         g0Positive = g0 >= 0;
++		pendingEventTime = Double.NaN;
+     }
+ 
+     /** Evaluate the impact of the proposed step on the event handler.
+@@ -213,7 +214,6 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+@@ -286,8 +286,6 @@
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {
+-            // force the sign to its value "just after the event"
+-            previousEventTime = t;
+             g0Positive        = increasing;
+             nextAction        = handler.eventOccurred(t, y, !(increasing ^ forward));
+         } else {

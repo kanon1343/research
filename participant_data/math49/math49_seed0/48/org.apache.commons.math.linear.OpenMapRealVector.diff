@@ -1,0 +1,29 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -223,7 +223,6 @@
+     /** {@inheritDoc} */
+     @Override
+         public RealVector add(RealVector v) {
+-        checkVectorDimensions(v.getDimension());
+         if (v instanceof OpenMapRealVector) {
+             return add((OpenMapRealVector) v);
+         } else {
+@@ -241,7 +240,6 @@
+      * if the dimensions do not match.
+      */
+     public OpenMapRealVector add(OpenMapRealVector v) {
+-        checkVectorDimensions(v.getDimension());
+         boolean copyThis = entries.size() > v.entries.size();
+         OpenMapRealVector res = copyThis ? this.copy() : v.copy();
+         Iterator iter = copyThis ? v.entries.iterator() : entries.iterator();
+@@ -342,6 +340,10 @@
+     public OpenMapRealVector ebeDivide(RealVector v) {
+         checkVectorDimensions(v.getDimension());
+         OpenMapRealVector res = new OpenMapRealVector(this);
++		checkVectorDimensions(v.getDimension());
++		checkVectorDimensions(v.getDimension());
++		checkVectorDimensions(v.getDimension());
++		checkVectorDimensions(v.getDimension());
+         Iterator iter = res.entries.iterator();
+         while (iter.hasNext()) {
+             iter.advance();

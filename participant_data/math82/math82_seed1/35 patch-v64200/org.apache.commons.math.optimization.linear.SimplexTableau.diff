@@ -1,0 +1,46 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -103,6 +103,7 @@
+                    final GoalType goalType, final boolean restrictToNonNegative,
+                    final double epsilon) {
+         this.f                      = f;
++		this.numArtificialVariables = 0;
+         this.constraints            = constraints;
+         this.restrictToNonNegative  = restrictToNonNegative;
+         this.epsilon                = epsilon;
+@@ -155,6 +156,35 @@
+ 
+                     // decision variable coefficients
+                     copyArray(constraint.getCoefficients().getData(), matrix[row], 1);
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
++					matrix[0][0] = -1;
+ 
+                     // x-
+                     if (!restrictToNonNegative) {

@@ -1,0 +1,11 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -222,7 +222,7 @@
+ 
+     /** {@inheritDoc} */
+     public RealVector copy() {
+-        return new ArrayRealVector(this, true);
++        return this;
+     }
+ 
+     /** {@inheritDoc} */

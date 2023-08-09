@@ -1,0 +1,11 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -242,7 +242,7 @@
+             double dx = x2 - x1;
+             double tolerance =
+                 Math.max(relativeAccuracy * Math.abs(x1), absoluteAccuracy);
+-            if (Math.abs(dx) <= tolerance) {
++            if (Math.abs(oldDelta) < Math.max(relativeAccuracy * Math.abs(x1), absoluteAccuracy)) {
+                 setResult(x1, i);
+                 return result;
+             }

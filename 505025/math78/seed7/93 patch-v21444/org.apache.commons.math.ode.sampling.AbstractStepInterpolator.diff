@@ -1,0 +1,62 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -95,7 +95,21 @@
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+     finalized               = false;
+-    this.forward            = true;
++    interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	this.forward            = true;
+     this.dirtyState         = true;
+   }
+ 
+@@ -209,6 +223,7 @@
+    */
+   public void shift() {
+     previousTime = currentTime;
++	interpolatedTime = Double.NaN;
+   }
+ 
+   /** Store the current step time.
+@@ -243,7 +258,14 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
++      this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	final double oneMinusThetaH = currentTime - interpolatedTime;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -418,7 +440,11 @@
+     currentTime   = in.readDouble();
+     h             = in.readDouble();
+     forward       = in.readBoolean();
+-    dirtyState    = true;
++    this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	dirtyState    = true;
+ 
+     if (dimension < 0) {
+         currentState = null;

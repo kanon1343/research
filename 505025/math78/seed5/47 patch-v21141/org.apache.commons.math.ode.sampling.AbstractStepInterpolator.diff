@@ -1,0 +1,75 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -96,7 +96,7 @@
+     interpolatedDerivatives = null;
+     finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
++    final double oneMinusThetaH = currentTime - interpolatedTime;
+   }
+ 
+   /** Simple constructor.
+@@ -117,7 +117,7 @@
+ 
+     finalized         = false;
+     this.forward      = forward;
+-    this.dirtyState   = true;
++    final double oneMinusThetaH = currentTime - interpolatedTime;
+ 
+   }
+ 
+@@ -216,7 +216,12 @@
+    */
+   public void storeTime(final double t) {
+ 
+-    currentTime = t;
++    this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	dirtyState = true;
++	currentTime = t;
+     h           = currentTime - previousTime;
+     setInterpolatedTime(t);
+ 
+@@ -243,7 +248,30 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
++      this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -273,6 +301,8 @@
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
++		this.dirtyState = true;
++		this.dirtyState = true;
+           dirtyState = false;
+       }
+ 

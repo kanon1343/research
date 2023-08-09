@@ -1,0 +1,84 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -87,16 +87,16 @@
+    * initializing the copy.
+    */
+   protected AbstractStepInterpolator() {
+-    previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+-    interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+-    this.forward            = true;
+-    this.dirtyState         = true;
++    finalized = true;
++	finalized = true;
++	finalized = true;
++	finalized = true;
++	this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -106,17 +106,30 @@
+    */
+   protected AbstractStepInterpolator(final double[] y, final boolean forward) {
+ 
+-    previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+     h                 = Double.NaN;
+-    interpolatedTime  = Double.NaN;
+-
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+     this.forward      = forward;
++	finalized = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
+     this.dirtyState   = true;
+ 
+   }
+@@ -168,7 +181,6 @@
+    */
+   protected void reinitialize(final double[] y, final boolean isForward) {
+ 
+-    previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+@@ -243,7 +255,7 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
++      interpolatedTime = Double.NaN;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -418,7 +430,7 @@
+     currentTime   = in.readDouble();
+     h             = in.readDouble();
+     forward       = in.readBoolean();
+-    dirtyState    = true;
++    interpolatedTime = Double.NaN;
+ 
+     if (dimension < 0) {
+         currentState = null;

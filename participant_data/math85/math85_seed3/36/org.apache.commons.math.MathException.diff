@@ -1,0 +1,19 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -103,7 +103,6 @@
+      * @param arguments format arguments
+      */
+     public MathException(String pattern, Object ... arguments) {
+-      super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+       this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
+     }
+@@ -190,8 +189,6 @@
+         synchronized (out) {
+             PrintWriter pw = new PrintWriter(out, false);
+             printStackTrace(pw);
+-            // Flush the PrintWriter before it's GC'ed.
+-            pw.flush();
+         }
+     }
+ 

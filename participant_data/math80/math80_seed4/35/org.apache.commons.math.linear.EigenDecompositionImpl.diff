@@ -1,0 +1,56 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -868,7 +868,6 @@
+             i0 = 0;
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+-                    i0 = 1 + i / 4;
+                     break;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {
+@@ -954,7 +953,6 @@
+                 final int j = i - 2 * pingPong - 1;
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+-                    work[i]     = -0.0;
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+@@ -1018,9 +1016,7 @@
+ 
+                 // two realEigenvalues found, deflate array
+                 if (work[k - 3] > work[k - 7]) {
+-                    final double tmp = work[k - 3];
+                     work[k - 3] = work[k - 7];
+-                    work[k - 7] = tmp;
+                 }
+ 
+                 if (work[k - 5] > TOLERANCE_2 * work[k - 3]) {
+@@ -1136,10 +1132,8 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+-                j -= 4;
+             }
+             return true;
+         }
+@@ -1194,8 +1188,6 @@
+         }
+         lower = Math.max(lower, left - 100 * MathUtils.EPSILON * Math.abs(left));
+ 
+-        // search upper eigenvalue
+-        left  = lower - margin;
+         right = upper + margin;
+         for (int i = 0; i < maxIter; ++i) {
+ 
+@@ -1384,7 +1376,6 @@
+             work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];

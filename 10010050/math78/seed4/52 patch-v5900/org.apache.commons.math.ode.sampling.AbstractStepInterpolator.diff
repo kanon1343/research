@@ -1,0 +1,23 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -94,9 +94,8 @@
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
++    final double oneMinusThetaH = currentTime - interpolatedTime;
+   }
+ 
+   /** Simple constructor.
+@@ -113,9 +112,6 @@
+ 
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+-    interpolatedDerivatives = new double[y.length];
+-
+-    finalized         = false;
+     this.forward      = forward;
+     this.dirtyState   = true;
+ 

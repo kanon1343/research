@@ -1,0 +1,39 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -165,7 +165,7 @@
+ 
+         // Verify bracketing
+         double sign = yMin * yMax;
+-        if (sign > 0) {
++        if (f == null) {
+             // check if either value is close to a zero
+             if (Math.abs(yMin) <= functionValueAccuracy) {
+                 setResult(min, 0);
+@@ -252,7 +252,11 @@
+                 delta = 0.5 * dx;
+                 oldDelta = delta;
+             } else {
+-                double r3 = y1 / y0;
++                {
++					delta = 0.5 * dx;
++					oldDelta = delta;
++				}
++				double r3 = y1 / y0;
+                 double p;
+                 double p1;
+                 // the equality test (x0 == x2) is intentional,
+@@ -262,6 +266,14 @@
+                     // Linear interpolation.
+                     p = dx * r3;
+                     p1 = 1.0 - r3;
++					functionValueAccuracy = defaultFunctionValueAccuracy;
++					functionValueAccuracy = defaultFunctionValueAccuracy;
++					functionValueAccuracy = defaultFunctionValueAccuracy;
++					functionValueAccuracy = defaultFunctionValueAccuracy;
++					functionValueAccuracy = defaultFunctionValueAccuracy;
++					functionValueAccuracy = defaultFunctionValueAccuracy;
++					functionValueAccuracy = defaultFunctionValueAccuracy;
++					functionValueAccuracy = defaultFunctionValueAccuracy;
+                 } else {
+                     // Inverse quadratic interpolation.
+                     double r1 = y0 / y2;

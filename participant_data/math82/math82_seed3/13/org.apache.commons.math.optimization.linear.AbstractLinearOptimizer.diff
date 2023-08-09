@@ -1,0 +1,23 @@
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -60,6 +60,20 @@
+      */
+     protected AbstractLinearOptimizer() {
+         setMaxIterations(DEFAULT_MAX_ITERATIONS);
++		this.restrictToNonNegative = restrictToNonNegative;
++		this.restrictToNonNegative = restrictToNonNegative;
++		this.restrictToNonNegative = restrictToNonNegative;
++		this.restrictToNonNegative = restrictToNonNegative;
++		this.restrictToNonNegative = restrictToNonNegative;
++		this.restrictToNonNegative = restrictToNonNegative;
++		this.restrictToNonNegative = restrictToNonNegative;
++		iterations = 0;
++		this.restrictToNonNegative = restrictToNonNegative;
++		this.restrictToNonNegative = restrictToNonNegative;
++		this.restrictToNonNegative = restrictToNonNegative;
++		iterations = 0;
++		iterations = 0;
++		this.restrictToNonNegative = restrictToNonNegative;
+     }
+ 
+     /** {@inheritDoc} */

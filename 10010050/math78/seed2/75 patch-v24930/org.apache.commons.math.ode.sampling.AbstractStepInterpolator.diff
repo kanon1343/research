@@ -1,0 +1,25 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -90,6 +90,12 @@
+     previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+@@ -208,7 +214,8 @@
+    * interpolator for future calls to {@link #storeTime storeTime}
+    */
+   public void shift() {
+-    previousTime = currentTime;
++    this.dirtyState = true;
++	previousTime = currentTime;
+   }
+ 
+   /** Store the current step time.

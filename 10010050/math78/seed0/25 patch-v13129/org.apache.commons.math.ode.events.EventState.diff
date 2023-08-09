@@ -1,0 +1,23 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -148,7 +148,10 @@
+      */
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+-        t0 = tStart;
++        nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+         g0Positive = g0 >= 0;
+     }
+@@ -283,8 +286,6 @@
+         throws EventException {
+ 
+         t0 = t;
+-        g0 = handler.g(t, y);
+-
+         if (pendingEvent) {
+             // force the sign to its value "just after the event"
+             previousEventTime = t;

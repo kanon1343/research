@@ -1,0 +1,7 @@
+,nloc,ccn,token,parameter,length,repairLines,filename
+1,14,4,58,3,14,20,org.apache.commons.math.optimization.fitting.WeightedObservedPoint.java
+2,111,34,876,15,145,20,org.apache.commons.math.special.Gamma.java
+3,62,18,398,19,68,20,org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils.java
+4,11,3,52,4,11,20,org.apache.commons.math.MaxIterationsExceededException.java
+5,82,22,423,10,88,20,org.apache.commons.math.distribution.NormalDistributionImpl.java
+6,38,8,233,1,53,20,org.apache.commons.math.distribution.AbstractContinuousDistribution.java

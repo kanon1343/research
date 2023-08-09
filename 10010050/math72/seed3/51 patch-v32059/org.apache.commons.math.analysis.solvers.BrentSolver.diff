@@ -1,0 +1,61 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -112,7 +112,6 @@
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+             return result;
+         }
+ 
+@@ -124,7 +123,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -182,9 +180,22 @@
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
+-                ret = max;
++                this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				clearResult();
++				clearResult();
++				clearResult();
++				clearResult();
++				clearResult();
++				clearResult();
++				clearResult();
++				ret = max;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
+             } else {
+-                // neither value is close to zero and min and max do not bracket root.
++                this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				// neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+                         NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+             }
+@@ -234,7 +245,8 @@
+             if (Math.abs(y2) < Math.abs(y1)) {
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+-                x1 = x2;
++                delta = 0.5 * oldDelta;
++				x1 = x2;
+                 x2 = x0;
+                 y0 = y1;
+                 y1 = y2;
+@@ -245,7 +257,6 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

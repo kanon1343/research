@@ -1,0 +1,48 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -93,7 +93,12 @@
+      */
+     public EventState(final EventHandler handler, final double maxCheckInterval,
+                       final double convergence, final int maxIterationCount) {
+-        this.handler           = handler;
++        nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		this.handler           = handler;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+@@ -148,7 +153,19 @@
+      */
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+-        t0 = tStart;
++        {
++				g0Positive = g0 >= 0;
++				nextAction = EventHandler.CONTINUE;
++			}
++		{
++			g0Positive = g0 >= 0;
++			nextAction = EventHandler.CONTINUE;
++		}
++		{
++			g0Positive = g0 >= 0;
++			nextAction = EventHandler.CONTINUE;
++		}
++		t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+         g0Positive = g0 >= 0;
+     }
+@@ -212,6 +229,10 @@
+                             }
+                         }
+                     };
++					forward = interpolator.isForward();
++					forward = interpolator.isForward();
++					forward = interpolator.isForward();
++					forward = interpolator.isForward();
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);

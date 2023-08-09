@@ -1,0 +1,71 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -112,7 +112,7 @@
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
++            this.f = f;
+             return result;
+         }
+ 
+@@ -124,7 +124,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -179,7 +178,6 @@
+             // check if either value is close to a zero
+             if (Math.abs(yMin) <= functionValueAccuracy) {
+                 setResult(min, 0);
+-                ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
+                 ret = max;
+@@ -241,11 +239,24 @@
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
++                this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				// Avoid division by very small values. Assume
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
++                double fa;
++				return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =
+@@ -258,7 +269,6 @@
+                     (Math.abs(y0) <= Math.abs(y1))) {
+                 // Force bisection.
+                 delta = 0.5 * dx;
+-                oldDelta = delta;
+             } else {
+                 double r3 = y1 / y0;
+                 double p;
+@@ -281,6 +291,8 @@
+                     p1 = -p1;
+                 } else {
+                     p = -p;
++					clearResult();
++					clearResult();
+                 }
+                 if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+                         p >= Math.abs(0.5 * oldDelta * p1)) {

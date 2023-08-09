@@ -1,0 +1,47 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -128,11 +127,21 @@
+      */
+     private boolean isPhase1Solved(final SimplexTableau tableau) {
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return true;
++            this.constraints = constraints;
++			this.constraints = constraints;
++			return true;
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+-                return false;
++                this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				return false;
+             }
+         }
+         return true;
+@@ -170,7 +179,11 @@
+         }
+ 
+         while (!isPhase1Solved(tableau)) {
+-            doIteration(tableau);
++            this.f = f;
++			this.f = f;
++			this.f = f;
++			this.f = f;
++			doIteration(tableau);
+         }
+ 
+         // if W is not zero then we have no feasible solution

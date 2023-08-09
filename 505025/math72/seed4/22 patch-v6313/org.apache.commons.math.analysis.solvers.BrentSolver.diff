@@ -1,0 +1,35 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -111,7 +111,7 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
++        if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(yMin, 0);
+             return result;
+         }
+@@ -124,7 +124,11 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
++            this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.resultComputed = true;
+             return result;
+         }
+ 
+@@ -235,8 +239,9 @@
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;
+-                x2 = x0;
+                 y0 = y1;
++				x2 = x0;
++                y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
+             }

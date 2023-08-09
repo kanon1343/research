@@ -1,0 +1,60 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -88,13 +88,10 @@
+    */
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+-    currentTime             = Double.NaN;
+     h                       = Double.NaN;
+-    interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+     this.forward            = true;
+     this.dirtyState         = true;
+   }
+@@ -109,13 +106,14 @@
+     previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+     h                 = Double.NaN;
+-    interpolatedTime  = Double.NaN;
+-
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
++    this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
+     this.forward      = forward;
+     this.dirtyState   = true;
+ 
+@@ -177,7 +175,8 @@
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
++    this.dirtyState = true;
++	finalized         = false;
+     this.forward      = isForward;
+     this.dirtyState   = true;
+ 
+@@ -244,11 +243,14 @@
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+       dirtyState       = true;
++	finalized = true;
+   }
+ 
+   /** {@inheritDoc} */
+   public boolean isForward() {
+-    return forward;
++    h = -h;
++	h = -h;
++	return forward;
+   }
+ 
+   /** Compute the state and derivatives at the interpolated time.

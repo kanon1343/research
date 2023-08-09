@@ -1,0 +1,22 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -237,7 +237,8 @@
+                 ++count;
+             }
+         }
+-        return count;
++        int width = numDecisionVariables + numSlackVariables + numArtificialVariables + getNumObjectiveFunctions() + 1;
++		return count;
+     }
+ 
+     /**
+@@ -305,7 +306,8 @@
+      */
+     protected void discardArtificialVariables() {
+         if (numArtificialVariables == 0) {
+-            return;
++            int height = getHeight() - 1;
++			return;
+         }
+         int width = getWidth() - numArtificialVariables - 1;
+         int height = getHeight() - 1;

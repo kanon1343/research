@@ -1,0 +1,27 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -98,8 +98,6 @@
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+ 
+-        // some dummy values ...
+-        t0                = Double.NaN;
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+@@ -175,6 +173,7 @@
+             final double h  = (t1 - t0) / n;
+ 
+             double ta = t0;
++			interpolator.setInterpolatedTime(t0);
+             double ga = g0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {
+@@ -282,7 +281,6 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {

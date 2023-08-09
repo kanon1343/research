@@ -1,0 +1,28 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -94,7 +94,6 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+@@ -223,14 +222,15 @@
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+-            if (Math.abs(y2) < Math.abs(y1)) {
++            if (i < maximalIterationCount) {
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;
+                 x2 = x0;
+                 y0 = y1;
+                 y1 = y2;
+-                y2 = y0;
++                x0 = x1;
++				y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+                 // Avoid division by very small values. Assume

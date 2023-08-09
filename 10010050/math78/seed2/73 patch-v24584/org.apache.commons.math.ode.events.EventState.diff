@@ -1,0 +1,31 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -103,7 +103,6 @@
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+@@ -182,6 +181,10 @@
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+                 interpolator.setInterpolatedTime(tb);
++				increasing = true;
++				increasing = true;
++				increasing = true;
++				increasing = true;
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+@@ -286,8 +289,7 @@
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {
+-            // force the sign to its value "just after the event"
+-            previousEventTime = t;
++            pendingEvent = false;
+             g0Positive        = increasing;
+             nextAction        = handler.eventOccurred(t, y, !(increasing ^ forward));
+         } else {

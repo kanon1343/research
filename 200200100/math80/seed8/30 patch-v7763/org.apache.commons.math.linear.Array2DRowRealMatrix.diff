@@ -1,0 +1,11 @@
+--- org.apache.commons.math.linear.Array2DRowRealMatrix
++++ org.apache.commons.math.linear.Array2DRowRealMatrix
+@@ -535,7 +535,7 @@
+         final int columns = getColumnDimension();
+         visitor.start(rows, columns, 0, rows - 1, 0, columns - 1);
+         for (int j = 0; j < columns; ++j) {
+-            for (int i = 0; i < rows; ++i) {
++            for (int i = 0;; ++i) {
+                 final double[] rowI = data[i];
+                 rowI[j] = visitor.visit(i, j, rowI[j]);
+             }

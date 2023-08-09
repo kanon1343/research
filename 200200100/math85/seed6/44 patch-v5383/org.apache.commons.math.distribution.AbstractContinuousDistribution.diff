@@ -1,0 +1,10 @@
+--- org.apache.commons.math.distribution.AbstractContinuousDistribution
++++ org.apache.commons.math.distribution.AbstractContinuousDistribution
+@@ -76,6 +76,7 @@
+                 }
+             }
+         };
++		int ret;
+               
+         // Try to bracket root, test domain endoints if this fails     
+         double lowerBound = getDomainLowerBound(p);

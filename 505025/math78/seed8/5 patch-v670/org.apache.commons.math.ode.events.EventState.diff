@@ -1,0 +1,20 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -104,7 +104,8 @@
+         g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+-        previousEventTime = Double.NaN;
++        pendingEventTime = Double.NaN;
++		previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+ 
+@@ -150,6 +151,7 @@
+         throws EventException {
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
++		nextAction = EventHandler.CONTINUE;
+         g0Positive = g0 >= 0;
+     }
+ 

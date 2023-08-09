@@ -1,0 +1,51 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -88,14 +88,25 @@
+    */
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+-    currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+     finalized               = false;
+-    this.forward            = true;
++    interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	this.forward            = true;
+     this.dirtyState         = true;
+   }
+ 
+@@ -243,7 +254,19 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
++      this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	this.forward = true;
++	dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */

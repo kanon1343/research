@@ -1,0 +1,10 @@
+--- org.apache.commons.math.linear.Array2DRowRealMatrix
++++ org.apache.commons.math.linear.Array2DRowRealMatrix
+@@ -238,7 +238,6 @@
+             final double[] mRow       = m.data[row];
+             final double[] outDataRow = outData[row];
+             for (int col = 0; col < columnCount; col++) {
+-                outDataRow[col] = dataRow[col] - mRow[col];
+             }
+         }
+ 

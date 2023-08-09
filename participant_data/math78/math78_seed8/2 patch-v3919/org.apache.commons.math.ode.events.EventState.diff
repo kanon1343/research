@@ -1,0 +1,32 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -103,7 +103,7 @@
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
++        pendingEvent = false;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+@@ -170,7 +170,11 @@
+         try {
+ 
+             forward = interpolator.isForward();
+-            final double t1 = interpolator.getCurrentTime();
++            pendingEventTime = Double.NaN;
++			pendingEventTime = Double.NaN;
++			pendingEventTime = Double.NaN;
++			pendingEventTime = Double.NaN;
++			final double t1 = interpolator.getCurrentTime();
+             final int    n  = Math.max(1, (int) Math.ceil(Math.abs(t1 - t0) / maxCheckInterval));
+             final double h  = (t1 - t0) / n;
+ 
+@@ -282,7 +286,6 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {

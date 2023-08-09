@@ -1,0 +1,19 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -150,6 +150,8 @@
+         throws EventException {
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
+         g0Positive = g0 >= 0;
+     }
+ 
+@@ -282,7 +284,6 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {

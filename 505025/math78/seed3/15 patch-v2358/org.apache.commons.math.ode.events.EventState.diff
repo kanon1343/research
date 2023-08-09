@@ -1,0 +1,28 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -100,7 +100,6 @@
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+-        g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+@@ -214,7 +213,8 @@
+                     };
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+-                    solver.setMaximalIterationCount(maxIterationCount);
++                    t0 = Double.NaN;
++					solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {
+@@ -234,6 +234,7 @@
+                         // either we were not waiting for the event or it has
+                         // moved in such a way the step cannot be accepted
+                         pendingEvent = true;
++						ta = tb;
+                         return true;
+                     }
+ 

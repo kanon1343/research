@@ -1,0 +1,20 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -166,7 +166,6 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {
+@@ -190,7 +189,8 @@
+         while (!isOptimal(tableau)) {
+             doIteration(tableau);
+         }
+-        return tableau.getSolution();
++        this.goalType = goalType;
++		return tableau.getSolution();
+     }
+ 
+ }

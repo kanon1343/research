@@ -1,0 +1,41 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -96,17 +96,28 @@
+         this.handler           = handler;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+-        this.maxIterationCount = maxIterationCount;
++        g0Positive = g0 >= 0;
++		pendingEvent = true;
++		pendingEvent = true;
++		pendingEvent = true;
++		pendingEvent = true;
++		pendingEvent = true;
++		this.maxIterationCount = maxIterationCount;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
++        pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
++		pendingEvent = false;
++		pendingEvent = false;
+ 
+     }
+ 
+@@ -282,7 +293,6 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {

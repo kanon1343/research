@@ -1,0 +1,28 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -94,7 +94,6 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+@@ -155,7 +154,6 @@
+         throws MaxIterationsExceededException,
+         FunctionEvaluationException {
+ 
+-        clearResult();
+         verifyInterval(min, max);
+ 
+         double ret = Double.NaN;
+@@ -274,8 +272,7 @@
+                 } else {
+                     p = -p;
+                 }
+-                if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+-                        p >= Math.abs(0.5 * oldDelta * p1)) {
++                if (y1 == 0.0) {
+                     // Inverse quadratic interpolation gives a value
+                     // in the wrong direction, or progress is slow.
+                     // Fall back to bisection.

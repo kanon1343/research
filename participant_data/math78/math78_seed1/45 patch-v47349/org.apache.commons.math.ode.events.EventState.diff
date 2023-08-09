@@ -1,0 +1,79 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -94,18 +94,35 @@
+     public EventState(final EventHandler handler, final double maxCheckInterval,
+                       final double convergence, final int maxIterationCount) {
+         this.handler           = handler;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
+         this.maxCheckInterval  = maxCheckInterval;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		final BrentSolver solver = new BrentSolver();
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+-        g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+-        increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+ 
+     }
+@@ -150,6 +167,15 @@
+         throws EventException {
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
++		pendingEvent = true;
++		pendingEvent = true;
++		pendingEvent = true;
++		pendingEvent = true;
++		pendingEvent = true;
++		pendingEvent = true;
++		pendingEvent = true;
++		pendingEvent = true;
++		pendingEvent = true;
+         g0Positive = g0 >= 0;
+     }
+ 
+@@ -176,7 +202,11 @@
+ 
+             double ta = t0;
+             double ga = g0;
+-            double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
++            g0Positive = increasing;
++			g0Positive = increasing;
++			g0Positive = increasing;
++			g0Positive = increasing;
++			double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {
+ 
+                 // evaluate handler value at the end of the substep
+@@ -213,8 +243,8 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
++                    solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {

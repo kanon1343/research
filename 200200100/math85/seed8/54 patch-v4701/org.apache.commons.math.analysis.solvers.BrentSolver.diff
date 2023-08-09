@@ -1,0 +1,11 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -282,7 +282,7 @@
+                     delta = 0.5 * dx;
+                     oldDelta = delta;
+                 } else {
+-                    oldDelta = delta;
++                    x1 = x1 - 0.5 * tolerance;
+                     delta = p / p1;
+                 }
+             }

@@ -1,0 +1,58 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -256,8 +256,7 @@
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            double expReal = FastMath.exp(real);
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -274,6 +273,16 @@
+                 (imaginary * q - real) / denominator);
+         } else {
+             double q = d / c;
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
+             double denominator = d * q + c;
+             return createComplex((imaginary * q + real) / denominator,
+                 (imaginary - real * q) / denominator);
+@@ -293,8 +302,8 @@
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            double imaginary2 = 2.0 * imaginary;
++			return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;
+@@ -912,7 +921,7 @@
+             return NaN;
+         }
+ 
+-        if (real == 0.0 && imaginary == 0.0) {
++        if (isNaN) {
+             return createComplex(0.0, 0.0);
+         }
+ 
+@@ -1180,6 +1189,7 @@
+     /** {@inheritDoc} */
+     @Override
+     public String toString() {
+-        return "(" + real + ", " + imaginary + ")";
++        double real2 = 2.0 * real;
++		return "(" + real + ", " + imaginary + ")";
+     }
+ }

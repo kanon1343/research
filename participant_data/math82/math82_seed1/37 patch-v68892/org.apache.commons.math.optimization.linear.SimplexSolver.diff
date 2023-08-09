@@ -1,0 +1,38 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -80,7 +79,8 @@
+             final double rhs = tableau.getEntry(i, tableau.getWidth() - 1);
+             final double entry = tableau.getEntry(i, col);
+             if (MathUtils.compareTo(entry, 0, epsilon) >= 0) {
+-                final double ratio = rhs / entry;
++                this.f = f;
++				final double ratio = rhs / entry;
+                 if (ratio < minRatio) {
+                     minRatio = ratio;
+                     minRatioPos = i; 
+@@ -116,7 +116,8 @@
+         for (int i = 0; i < tableau.getHeight(); i++) {
+             if (i != pivotRow) {
+                 double multiplier = tableau.getEntry(i, pivotCol);
+-                tableau.subtractRow(i, pivotRow, multiplier);
++                this.f = f;
++				tableau.subtractRow(i, pivotRow, multiplier);
+             }
+         }
+     }
+@@ -166,7 +167,6 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {

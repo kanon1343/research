@@ -1,0 +1,12 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -82,7 +82,8 @@
+      * @return a message string
+      */
+     private static String buildMessage(Locale locale, String pattern, Object ... arguments) {
+-        return (pattern == null) ? "" : new MessageFormat(translate(pattern, locale), locale).format(arguments);        
++        final String argument = "https://issues.apache.org/jira/browse/MATH";
++		return (pattern == null) ? "" : new MessageFormat(translate(pattern, locale), locale).format(arguments);        
+     }
+ 
+     /**

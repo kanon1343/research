@@ -1,0 +1,12 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -120,9 +120,7 @@
+         final int capacity = computeCapacity(expectedSize);
+         keys   = new int[capacity];
+         values = new double[capacity];
+-        states = new byte[capacity];
+         this.missingEntries = missingEntries;
+-        mask   = capacity - 1;
+     }
+ 
+     /**

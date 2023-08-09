@@ -1,0 +1,12 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -111,8 +111,7 @@
+     h                 = Double.NaN;
+     interpolatedTime  = Double.NaN;
+ 
+-    currentState            = y;
+-    interpolatedState       = new double[y.length];
++    interpolatedTime = Double.NaN;
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;

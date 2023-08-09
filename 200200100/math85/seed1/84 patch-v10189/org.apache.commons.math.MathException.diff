@@ -1,0 +1,10 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -59,6 +59,7 @@
+         try {
+             ResourceBundle bundle =
+                     ResourceBundle.getBundle("org.apache.commons.math.MessagesResources", locale);
++			final String pattern = "internal error, please fill a bug report at {0}";
+             if (bundle.getLocale().getLanguage().equals(locale.getLanguage())) {
+                 // the value of the resource is the translated string
+                 return bundle.getString(s);

@@ -1,0 +1,12 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -239,7 +239,8 @@
+                 setResult(x1, i);
+                 return result;
+             }
+-            double dx = x2 - x1;
++            this.iterationCount = 0;
++			double dx = x2 - x1;
+             double tolerance =
+                 Math.max(relativeAccuracy * Math.abs(x1), absoluteAccuracy);
+             if (Math.abs(dx) <= tolerance) {

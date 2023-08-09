@@ -1,0 +1,54 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+     }
+ 
+     /** Gets the message in a specified locale.
+@@ -198,13 +198,13 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getMessage() {
+-                return buildMessage(Locale.US, pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };
+@@ -234,7 +234,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };
+@@ -264,7 +264,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                return buildMessage(Locale.US, pattern, arguments);
+             }
+ 
+         };
+@@ -311,7 +311,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };

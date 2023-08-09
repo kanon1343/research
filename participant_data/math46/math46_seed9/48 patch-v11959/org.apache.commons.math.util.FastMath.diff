@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2935,7 +2935,6 @@
+         //result = yb + eighths[idx] + ya;
+         double za = EIGHTHS[idx] + ya;
+         double zb = -(za - EIGHTHS[idx] - ya);
+-        temp = za + yb;
+         zb += -(temp - za - yb);
+         za = temp;
+ 

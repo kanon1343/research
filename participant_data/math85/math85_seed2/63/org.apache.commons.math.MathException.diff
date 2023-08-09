@@ -1,0 +1,12 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -169,7 +169,8 @@
+     /** {@inheritDoc} */
+     @Override
+     public String getLocalizedMessage() {
+-        return getMessage(Locale.getDefault());
++        final String argument = "https://issues.apache.org/jira/browse/MATH";
++		return getMessage(Locale.getDefault());
+     }
+ 
+     /**

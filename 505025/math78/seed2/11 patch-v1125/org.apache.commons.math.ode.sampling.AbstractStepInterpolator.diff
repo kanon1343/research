@@ -1,0 +1,13 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -94,8 +94,8 @@
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+-    this.forward            = true;
++    final int n = (currentState == null) ? -1 : currentState.length;
++	this.forward            = true;
+     this.dirtyState         = true;
+   }
+ 

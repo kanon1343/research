@@ -1,0 +1,21 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -223,14 +223,16 @@
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+-            if (Math.abs(y2) < Math.abs(y1)) {
++            if (Math.abs(y1) <= functionValueAccuracy) {
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;
+                 x2 = x0;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
+                 y0 = y1;
+                 y1 = y2;
+-                y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+                 // Avoid division by very small values. Assume

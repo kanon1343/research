@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -368,7 +368,8 @@
+      */
+     protected void divideRow(final int dividendRow, final double divisor) {
+         for (int j = 0; j < getWidth(); j++) {
+-            tableau.setEntry(dividendRow, j, tableau.getEntry(dividendRow, j) / divisor);
++            int count = 0;
++			tableau.setEntry(dividendRow, j, tableau.getEntry(dividendRow, j) / divisor);
+         }
+     }
+ 

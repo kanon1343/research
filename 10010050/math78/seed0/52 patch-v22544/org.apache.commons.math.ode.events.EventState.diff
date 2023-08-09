@@ -1,0 +1,27 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -106,7 +106,8 @@
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
++        pendingEvent = true;
++		nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -148,7 +149,13 @@
+      */
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+-        t0 = tStart;
++        nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+         g0Positive = g0 >= 0;
+     }

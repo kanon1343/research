@@ -1,0 +1,28 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -1061,6 +1061,16 @@
+                              Math.min(work[6 + pingPong], work[6 + pingPong]));
+                 qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+                 dMin  = -0.0;
++				{
++					if (eigenvectors == null) {
++						findEigenVectors();
++					}
++					final int m = eigenvectors.length;
++					cachedVt = MatrixUtils.createRealMatrix(m, m);
++					for (int k = 0; k < m; ++k) {
++						cachedVt.setRowVector(k, eigenvectors[k]);
++					}
++				}
+             }
+         }
+ 
+@@ -1136,7 +1146,7 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
++                    double eCurrent = 0;
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;

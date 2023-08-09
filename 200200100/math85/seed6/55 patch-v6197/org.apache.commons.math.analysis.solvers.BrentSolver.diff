@@ -1,0 +1,20 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -54,6 +54,7 @@
+      */
+     public BrentSolver() {
+         super(100, 1E-6);
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
+     }
+ 
+     /** {@inheritDoc} */
+@@ -228,7 +229,8 @@
+                 x0 = x1;
+                 x1 = x2;
+                 x2 = x0;
+-                y0 = y1;
++                setResult(x1, i);
++				y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
+             }

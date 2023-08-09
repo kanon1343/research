@@ -1,0 +1,39 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -94,7 +94,7 @@
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
++    interpolatedTime = Double.NaN;
+     this.forward            = true;
+     this.dirtyState         = true;
+   }
+@@ -115,7 +115,7 @@
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
++    interpolatedTime = Double.NaN;
+     this.forward      = forward;
+     this.dirtyState   = true;
+ 
+@@ -177,7 +177,7 @@
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
++    interpolatedTime = Double.NaN;
+     this.forward      = isForward;
+     this.dirtyState   = true;
+ 
+@@ -274,6 +274,9 @@
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;
++		finalized = false;
++		finalized = false;
++		finalized = false;
+       }
+ 
+       return interpolatedState;

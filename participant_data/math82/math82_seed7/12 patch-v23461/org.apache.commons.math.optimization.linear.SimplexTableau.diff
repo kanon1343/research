@@ -1,0 +1,33 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -146,7 +146,19 @@
+                         getInvertedCoeffiecientSum(objectiveCoefficients);
+                 }
+ 
+-                // initialize the constraint rows
++                copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				// initialize the constraint rows
+                 int slackVar = 0;
+                 int artificialVar = 0;
+                 for (int i = 0; i < constraints.size(); i++) {
+@@ -343,6 +355,9 @@
+       Set<Integer> basicRows = new HashSet<Integer>();
+       for (int i = 0; i < coefficients.length; i++) {
+           Integer basicRow = getBasicRowForSolution(getNumObjectiveFunctions() + i);
++		initialize();
++		initialize();
++		initialize();
+           if (basicRows.contains(basicRow)) {
+               // if multiple variables can take a given value 
+               // then we choose the first and set the rest equal to 0

@@ -1,0 +1,55 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -129,7 +129,7 @@
+      */
+     private static String buildMessage(final Locale locale, final Localizable pattern,
+                                        final Object ... arguments) {
+-        return new MessageFormat(pattern.getLocalizedString(locale), locale).format(arguments);
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /** Gets the message in a specified locale.
+@@ -198,13 +198,13 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getMessage() {
+-                return buildMessage(Locale.US, pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };
+@@ -234,7 +234,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                return buildMessage(Locale.US, pattern, arguments);
+             }
+ 
+         };
+@@ -264,7 +264,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                return buildMessage(Locale.US, pattern, arguments);
+             }
+ 
+         };
+@@ -370,7 +370,8 @@
+      */
+     public static ConcurrentModificationException createConcurrentModificationException(final Localizable pattern,
+                                                                                         final Object ... arguments) {
+-        return new ConcurrentModificationException() {
++        final String argument = "https://issues.apache.org/jira/browse/MATH";
++		return new ConcurrentModificationException() {
+ 
+             /** Serializable version identifier. */
+             private static final long serialVersionUID = -1878427236170442052L;

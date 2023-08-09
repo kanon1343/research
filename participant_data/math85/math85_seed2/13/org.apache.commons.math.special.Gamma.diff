@@ -1,0 +1,21 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -88,7 +88,7 @@
+     public static double logGamma(double x) {
+         double ret;
+ 
+-        if (Double.isNaN(x) || (x <= 0.0)) {
++        if (x == 0.0) {
+             ret = Double.NaN;
+         } else {
+             double g = 607.0 / 128.0;
+@@ -178,7 +178,8 @@
+                 sum = sum + an;
+             }
+             if (n >= maxIterations) {
+-                throw new MaxIterationsExceededException(maxIterations);
++                double g = 607.0 / 128.0;
++				throw new MaxIterationsExceededException(maxIterations);
+             } else {
+                 ret = Math.exp(-x + (a * Math.log(x)) - logGamma(a)) * sum;
+             }

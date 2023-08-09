@@ -1,0 +1,73 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -99,20 +99,21 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            this.iterationCount = iterationCount;
++			return result;
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
++            this.iterationCount = iterationCount;
++			this.iterationCount = iterationCount;
+             return result;
+         }
+ 
+@@ -124,7 +125,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -182,7 +182,8 @@
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
+-                ret = max;
++                this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+@@ -232,7 +233,16 @@
+         int i = 0;
+         while (i < maximalIterationCount) {
+             if (Math.abs(y2) < Math.abs(y1)) {
+-                // use the bracket point if is better than last approximation
++                functionValueAccuracy = defaultFunctionValueAccuracy;
++				functionValueAccuracy = defaultFunctionValueAccuracy;
++				functionValueAccuracy = defaultFunctionValueAccuracy;
++				functionValueAccuracy = defaultFunctionValueAccuracy;
++				functionValueAccuracy = defaultFunctionValueAccuracy;
++				functionValueAccuracy = defaultFunctionValueAccuracy;
++				functionValueAccuracy = defaultFunctionValueAccuracy;
++				functionValueAccuracy = defaultFunctionValueAccuracy;
++				functionValueAccuracy = defaultFunctionValueAccuracy;
++				// use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;
+                 x2 = x0;
+@@ -245,7 +255,8 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
++                y2 = y0;
++				return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

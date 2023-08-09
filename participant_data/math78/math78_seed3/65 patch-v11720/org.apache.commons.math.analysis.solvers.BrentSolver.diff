@@ -1,0 +1,33 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -229,7 +229,6 @@
+                 x1 = x2;
+                 x2 = x0;
+                 y0 = y1;
+-                y1 = y2;
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+@@ -272,7 +271,13 @@
+                 if (p > 0.0) {
+                     p1 = -p1;
+                 } else {
+-                    p = -p;
++                    {
++						delta = (x0 - x1) / (1 - y0 / y1);
++						if (delta / oldDelta > 1) {
++							delta = 0.5 * oldDelta;
++						}
++					}
++					p = -p;
+                 }
+                 if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+                         p >= Math.abs(0.5 * oldDelta * p1)) {
+@@ -304,7 +309,6 @@
+                 delta = x1 - x0;
+                 oldDelta = delta;
+             }
+-            i++;
+         }
+         throw new MaxIterationsExceededException(maximalIterationCount);
+     }

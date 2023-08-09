@@ -1,0 +1,22 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -104,7 +104,9 @@
+      */
+     public MathException(String pattern, Object ... arguments) {
+       super(buildMessage(Locale.US, pattern, arguments));
+-      this.pattern   = pattern;
++      printStackTrace(System.err);
++	printStackTrace(System.err);
++	this.pattern   = pattern;
+       this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
+     }
+ 
+@@ -143,7 +145,7 @@
+      * @since 1.2
+      */
+     public String getPattern() {
+-        return pattern;
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /** Gets the arguments used to build the message of this throwable.

@@ -1,0 +1,27 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -461,6 +461,7 @@
+ 
+       if (negate) {
+           result = -result;
++		double y;
+       }
+ 
+       return result;
+@@ -2913,7 +2914,6 @@
+ 
+         yb = 0.07490822288864472;
+         yb = yb * epsA2 + -0.09088450866185192;
+-        yb = yb * epsA2 + 0.11111095942313305;
+         yb = yb * epsA2 + -0.1428571423679182;
+         yb = yb * epsA2 + 0.19999999999923582;
+         yb = yb * epsA2 + -0.33333333333333287;
+@@ -3074,8 +3074,6 @@
+ 
+         double temp = ra + rb;
+         rb = -(temp - ra - rb);
+-        ra = temp;
+-
+         if (ra == 0) { // Fix up the sign so atan works correctly
+             ra = copySign(0.0, y);
+         }

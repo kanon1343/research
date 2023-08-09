@@ -1,0 +1,31 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -92,6 +92,12 @@
+     public MathException() {
+         super();
+         this.pattern   = null;
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
+         this.arguments = new Object[0];
+     }
+     
+@@ -103,7 +109,6 @@
+      * @param arguments format arguments
+      */
+     public MathException(String pattern, Object ... arguments) {
+-      super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+       this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
+     }
+@@ -116,7 +121,6 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }

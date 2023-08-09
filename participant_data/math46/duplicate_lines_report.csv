@@ -1,0 +1,357 @@
+File Path
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/72 patch-v27940/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/47 patch-v14090/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/88 patch-v39637/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/51 patch-v15073/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/23 patch-v6492/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/74 patch-v30647/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/90 patch-v41301/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/32 patch-v9078/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/68 patch-v24105/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/16 patch-v4112/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/31 patch-v8746/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/14 patch-v3855/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/87 patch-v38746/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/80 patch-v35298/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/39 patch-v11638/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/91 patch-v41391/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/58 patch-v18758/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/75 patch-v31538/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/13 patch-v3363/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/61 patch-v20100/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/82 patch-v36578/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/76 patch-v32011/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/24 patch-v6595/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/97 patch-v50119/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/66 patch-v23764/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/20 patch-v5556/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/70 patch-v25763/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/94 patch-v44270/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/63 patch-v22899/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/71 patch-v27125/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/65 patch-v23636/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/62 patch-v22513/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/54 patch-v16780/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/17 patch-v4964/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/49 patch-v14677/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/73 patch-v28180/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/5 patch-v724/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/92 patch-v42725/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/38 patch-v11240/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/21 patch-v5766/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/78 patch-v34751/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/99 patch-v53556/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/46 patch-v13788/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/52 patch-v15160/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/37 patch-v11217/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/30 patch-v8417/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/53 patch-v15456/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/83 patch-v36748/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/100 patch-v53609/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/26 patch-v7055/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/84 patch-v37062/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/95 patch-v46591/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/69 patch-v25369/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/55 patch-v16931/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/60 patch-v19624/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/27 patch-v7317/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/33 patch-v9307/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/89 patch-v40171/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/48 patch-v14650/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/57 patch-v17460/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/56 patch-v17201/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/43 patch-v12975/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/28 patch-v7369/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/67 patch-v24014/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/22 patch-v6092/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/98 patch-v53389/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/64 patch-v23532/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/96 patch-v47867/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/44 patch-v13461/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/34 patch-v10175/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/79 patch-v35076/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/15 patch-v3871/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/40 patch-v12030/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/41 patch-v12518/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/77 patch-v32724/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/86 patch-v38350/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/81 patch-v35874/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/59 patch-v19127/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/45 patch-v13536/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/25 patch-v7054/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/93 patch-v43388/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/18 patch-v5209/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/42 patch-v12565/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/85 patch-v37301/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed5/50 patch-v14895/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/56 patch-v16406/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/75 patch-v26098/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/91 patch-v29302/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/92 patch-v29454/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/94 patch-v30435/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/67 patch-v23314/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/83 patch-v28019/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/68 patch-v23456/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/59 patch-v19303/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/84 patch-v28360/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/93 patch-v30115/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/36 patch-v10341/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/40 patch-v10978/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/73 patch-v25852/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/77 patch-v26727/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/78 patch-v26970/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/98 patch-v30911/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/69 patch-v24401/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/79 patch-v27064/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/72 patch-v24920/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/48 patch-v14656/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/44 patch-v13141/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/97 patch-v30599/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/58 patch-v16722/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/96 patch-v30488/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/80 patch-v27369/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/90 patch-v29289/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/74 patch-v26092/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/46 patch-v14093/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/85 patch-v28440/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/76 patch-v26482/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/100 patch-v31306/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/52 patch-v15060/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/86 patch-v28583/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/50 patch-v14965/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/89 patch-v28983/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/49 patch-v14820/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/54 patch-v15361/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/33 patch-v9202/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/81 patch-v27389/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/88 patch-v28881/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/55 patch-v15622/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/95 patch-v30483/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/39 patch-v10900/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/87 patch-v28814/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/82 patch-v27446/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/99 patch-v30982/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/71 patch-v24679/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/51 patch-v14976/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/43 patch-v12086/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/45 patch-v13215/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/57 patch-v16565/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/53 patch-v15282/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed4/70 patch-v24563/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/92 patch-v15831/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/68 patch-v13146/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/72 patch-v13779/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/40 patch-v5377/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/24 patch-v3156/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/56 patch-v10967/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/78 patch-v14721/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/71 patch-v13676/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/86 patch-v15319/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/30 patch-v3683/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/65 patch-v12756/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/28 patch-v3556/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/74 patch-v13947/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/91 patch-v15829/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/27 patch-v3462/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/33 patch-v4339/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/98 patch-v16174/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/80 patch-v14838/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/83 patch-v14965/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/84 patch-v15292/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/99 patch-v16483/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/58 patch-v11292/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/66 patch-v12889/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/60 patch-v11929/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/59 patch-v11529/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/38 patch-v4815/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/34 patch-v4427/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/77 patch-v14594/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/93 patch-v15903/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/39 patch-v5156/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/88 patch-v15483/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/94 patch-v15950/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/50 patch-v8995/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/69 patch-v13214/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/89 patch-v15534/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/37 patch-v4808/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/67 patch-v13135/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/51 patch-v9309/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/52 patch-v9392/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/97 patch-v16053/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/73 patch-v13897/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/42 patch-v6405/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/32 patch-v4337/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/22 patch-v2578/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/57 patch-v11157/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/35 patch-v4512/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/26 patch-v3453/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/53 patch-v9619/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/82 patch-v14961/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/79 patch-v14803/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/75 patch-v14193/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/46 patch-v7785/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/96 patch-v16036/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/70 patch-v13219/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/43 patch-v6668/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/62 patch-v12567/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/49 patch-v8970/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/41 patch-v5948/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/54 patch-v9787/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/47 patch-v8507/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/29 patch-v3604/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/81 patch-v14906/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/61 patch-v12089/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/87 patch-v15362/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/44 patch-v6838/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/45 patch-v7463/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/19 patch-v2246/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/100 patch-v16757/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/31 patch-v3862/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/90 patch-v15711/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/36 patch-v4579/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/95 patch-v16032/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/85 patch-v15298/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/76 patch-v14270/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/64 patch-v12723/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/55 patch-v10825/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/63 patch-v12574/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/25 patch-v3203/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed3/48 patch-v8903/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed6/92/org.apache.commons.math.exception.MathIllegalArgumentException.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed6/87/org.apache.commons.math.exception.MathIllegalArgumentException.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed6/86/org.apache.commons.math.exception.MathIllegalArgumentException.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed6/79/org.apache.commons.math.exception.MathIllegalArgumentException.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed6/84/org.apache.commons.math.exception.MathIllegalArgumentException.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed6/76/org.apache.commons.math.exception.MathIllegalArgumentException.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed6/82/org.apache.commons.math.exception.MathIllegalArgumentException.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/50 patch-v16346/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/58 patch-v28646/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/64 patch-v33284/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/59 patch-v28756/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/71 patch-v36824/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/62 patch-v32165/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/68 patch-v35121/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/74 patch-v37397/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/60 patch-v29203/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/48 patch-v16181/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/61 patch-v31942/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/43 patch-v11291/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/47 patch-v15532/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/63 patch-v33218/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/46 patch-v15290/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/49 patch-v16246/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/52 patch-v21291/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/44 patch-v11937/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/45 patch-v15228/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/54 patch-v25538/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/76 patch-v39287/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/67 patch-v34091/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/51 patch-v19381/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/55 patch-v25934/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/53 patch-v22803/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/69 patch-v35927/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed1/70 patch-v36496/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/61/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/95/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/59/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/92/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/66/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/50/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/68/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/57/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/32/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/35/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/69/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/56/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/51/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/58/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/67/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/93/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/94/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/60/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/34/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/27/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/29/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/89/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/45/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/73/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/87/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/80/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/74/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/28/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/26/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/75/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/81/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/86/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/72/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/44/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/43/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/88/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/38/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/36/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/31/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/91/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/65/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/62/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/96/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/100/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/54/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/98/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/53/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/30/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/37/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/39/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/99/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/52/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/55/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/97/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/63/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/64/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/90/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/46/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/79/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/83/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/77/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/48/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/70/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/84/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/85/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/71/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/76/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/82/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/49/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/40/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/47/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed7/78/org.apache.commons.math.complex.Complex.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/88 patch-v22420/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/57 patch-v14670/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/86 patch-v22168/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/91 patch-v22916/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/92 patch-v23135/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/81 patch-v21381/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/96 patch-v23944/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/87 patch-v22338/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/71 patch-v18583/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/89 patch-v22432/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/72 patch-v19783/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/93 patch-v23378/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/90 patch-v22757/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/62 patch-v16403/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/54 patch-v13717/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/68 patch-v17768/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/65 patch-v17381/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/99 patch-v24405/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/100 patch-v25219/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/52 patch-v13471/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/83 patch-v21552/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/70 patch-v18181/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/82 patch-v21473/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/94 patch-v23879/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/97 patch-v24028/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/64 patch-v17379/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/85 patch-v21927/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/78 patch-v20826/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/61 patch-v16277/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/98 patch-v24401/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/84 patch-v21864/org.apache.commons.math.util.FastMath.diff
+/Users/haradakanon/Downloads/research/participant_data/math46/math46_seed9/95 patch-v23927/org.apache.commons.math.util.FastMath.diff

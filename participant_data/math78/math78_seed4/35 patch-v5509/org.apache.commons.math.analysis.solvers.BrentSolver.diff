@@ -1,0 +1,19 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -54,6 +54,7 @@
+      */
+     public BrentSolver() {
+         super(100, 1E-6);
++		int i = 0;
+     }
+ 
+     /** {@inheritDoc} */
+@@ -223,7 +224,7 @@
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+-            if (Math.abs(y2) < Math.abs(y1)) {
++            if (i <= maximalIterationCount) {
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;

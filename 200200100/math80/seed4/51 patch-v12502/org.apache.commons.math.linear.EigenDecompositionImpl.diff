@@ -1,0 +1,56 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -596,7 +596,6 @@
+ 
+         final double dCurrent = main[m - 1];
+         final double lower = dCurrent - eCurrent;
+-        work[lowerStart + m - 1] = lower;
+         lowerSpectra = Math.min(lowerSpectra, lower);
+         final double upper = dCurrent + eCurrent;
+         work[upperStart + m - 1] = upper;
+@@ -649,8 +648,6 @@
+                 final boolean chooseLeft   = (oneFourthCount - 1) >= (n - threeFourthCount);
+                 final double lambda        = chooseLeft ? range[0] : range[1];
+ 
+-                tau = (range[1] - range[0]) * MathUtils.EPSILON * n + 2 * minPivot;
+-
+                 // decompose T-&lambda;I as LDL<sup>T</sup>
+                 ldlTDecomposition(lambda, begin, n);
+ 
+@@ -868,8 +865,7 @@
+             i0 = 0;
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+-                    i0 = 1 + i / 4;
+-                    break;
++                    double res = 0;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {
+                     diagMin    = Math.min(diagMin, work[i + 4]);
+@@ -1136,8 +1132,8 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
++                    cachedVt = null;
++					work[j - k] = tmp;
+                 }
+                 j -= 4;
+             }
+@@ -1381,7 +1377,6 @@
+         int j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+             eMin = 0.0;
+@@ -1401,7 +1396,6 @@
+         j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN1 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+             dMin = dN;
+             eMin = 0.0;

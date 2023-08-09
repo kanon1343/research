@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -213,7 +213,8 @@
+                                         constraint.getRelationship().oppositeRelationship(),
+                                         -1 * constraint.getValue());
+         }
+-        return new LinearConstraint(constraint.getCoefficients(), 
++        double[] coefficients = new double[getOriginalNumDecisionVariables()];
++		return new LinearConstraint(constraint.getCoefficients(), 
+                                     constraint.getRelationship(), constraint.getValue());
+     }
+ 

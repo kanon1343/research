@@ -101,7 +101,6 @@ def selected(output_file_path, selection_file_path, duplicate_file_path):
     else:
         print(1)
 
-    print(len(duplicate_list), len(selection_list))
     output_list = set(selection_list + duplicate_list)
 
     # ソートをしてリストをデータフレームに変換
@@ -120,16 +119,21 @@ def main():
     #         "/Users/haradakanon/Downloads/kGenProg-1.8.2/example/math78")
     #     data = extract_generation_with_max_fitness(file_path)
     #     summarize(summarize_file_path, i, data)
-    output_file_path = pathlib.Path(
-        "/Users/haradakanon/Downloads/research/被験者実験データ/math85(出力)/selection"
-    )
-    selection_file_path = pathlib.Path(
-        "/Users/haradakanon/Downloads/research//被験者実験データ/math85(出力)/selection"
-    )
-    duplicate_file_path = pathlib.Path(
-        "/Users/haradakanon/Downloads/research//被験者実験データ/math85(出力)/duplicate_lines_report.csv"
-    )
-    selected(output_file_path, selection_file_path, duplicate_file_path)
+    projects = ["46", "49", "80", "82", "85"]
+    for project in projects:
+        output_file_path = pathlib.Path(
+            "/Users/haradakanon/Downloads/research/200200100/math{project}log/selection".format(
+                project=project)
+        )
+        selection_file_path = pathlib.Path(
+            "/Users/haradakanon/Downloads/research/200200100/math{project}log/selection".format(
+                project=project)
+        )
+        duplicate_file_path = pathlib.Path(
+            "/Users/haradakanon/Downloads/research//200200100/math{project}log/duplicate_lines_report.csv".format(
+                project=project)
+        )
+        selected(output_file_path, selection_file_path, duplicate_file_path)
 
 
 if __name__ == "__main__":

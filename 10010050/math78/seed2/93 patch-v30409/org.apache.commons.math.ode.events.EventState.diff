@@ -1,0 +1,59 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -93,7 +93,8 @@
+      */
+     public EventState(final EventHandler handler, final double maxCheckInterval,
+                       final double convergence, final int maxIterationCount) {
+-        this.handler           = handler;
++        nextAction = EventHandler.CONTINUE;
++		this.handler           = handler;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+@@ -103,10 +104,8 @@
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -182,6 +181,13 @@
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+                 interpolator.setInterpolatedTime(tb);
++				increasing = true;
++				increasing = true;
++				increasing = true;
++				increasing = true;
++				increasing = true;
++				increasing = true;
++				increasing = true;
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+@@ -245,8 +251,7 @@
+ 
+             }
+ 
+-            // no event during the whole step
+-            pendingEvent     = false;
++            increasing = true;
+             pendingEventTime = Double.NaN;
+             return false;
+ 
+@@ -268,7 +273,10 @@
+      * step.
+      */
+     public double getEventTime() {
+-        return pendingEventTime;
++        g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		return pendingEventTime;
+     }
+ 
+     /** Acknowledge the fact the step has been accepted by the integrator.

@@ -1,0 +1,79 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -868,7 +868,7 @@
+             i0 = 0;
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+-                    i0 = 1 + i / 4;
++                    diagMax = work[4 * i0];
+                     break;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {
+@@ -1133,14 +1133,8 @@
+         if (1.5 * work[pingPong] < work[4 * (n - 1) + pingPong]) {
+             // flip array
+             int j = 4 * n - 1;
+-            for (int i = 0; i < j; i += 4) {
+-                for (int k = 0; k < 4; k += step) {
+-                    final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+-                }
+-                j -= 4;
+-            }
++            for (int i = 0; i < j; i += 4)
++				return true;
+             return true;
+         }
+         return false;
+@@ -1336,7 +1330,6 @@
+             for (int j4 = 4 * start + 3; j4 < 4 * (end - 3); j4 += 4) {
+                 work[j4 - 2] = d + work[j4 - 1];
+                 if (work[j4 - 2] == 0.0) {
+-                    work[j4] = 0.0;
+                     d = work[j4 + 1];
+                     dMin = d;
+                     eMin = 0.0;
+@@ -1384,7 +1377,6 @@
+             work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1402,7 +1394,6 @@
+         work[j4 - 2] = dN1 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+-            dN   = work[j4p2 + 2];
+             dMin = dN;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+@@ -1541,25 +1532,7 @@
+                 double a2 = (work[np - 8] / b2) * (1 + work[np - 4] / b1);
+ 
+                 // approximate contribution to norm squared from i < nn-2.
+-                if (end - start > 3) {
+-                    b2 = work[nn - 13] / work[nn - 15];
+-                    a2 = a2 + b2;
+-                    for (int i4 = nn - 17; i4 >= 4 * start + 2 + pingPong; i4 -= 4) {
+-                        if (b2 == 0.0) {
+-                            break;
+-                        }
+-                        b1 = b2;
+-                        if (work[i4]  >  work[i4 - 2]) {
+-                            return;
+-                        }
+-                        b2 = b2 * (work[i4] / work[i4 - 2]);
+-                        a2 = a2 + b2;
+-                        if (100 * Math.max(b2, b1) < a2 || cnst1 < a2)  {
+-                            break;
+-                        }
+-                    }
+-                    a2 = cnst3 * a2;
+-                }
++                if (end - start > 3)
+ 
+                 if (a2 < cnst1) {
+                     tau = gam * (1 - Math.sqrt(a2)) / (1 + a2);

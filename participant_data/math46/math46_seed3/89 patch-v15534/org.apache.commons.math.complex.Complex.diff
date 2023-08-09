@@ -1,0 +1,67 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -250,14 +250,11 @@
+      */
+     public Complex divide(Complex divisor)
+         throws NullArgumentException {
+-        MathUtils.checkNotNull(divisor);
+         if (isNaN || divisor.isNaN) {
+             return NaN;
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -274,6 +271,29 @@
+                 (imaginary * q - real) / denominator);
+         } else {
+             double q = d / c;
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			double expReal = FastMath.exp(real);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
+             double denominator = d * q + c;
+             return createComplex((imaginary * q + real) / denominator,
+                 (imaginary - real * q) / denominator);
+@@ -293,8 +313,7 @@
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;
+@@ -389,7 +408,8 @@
+      * and neither part is {@code NaN}.
+      */
+     public boolean isInfinite() {
+-        return isInfinite;
++        final List<Complex> result=new ArrayList<Complex>();
++		return isInfinite;
+     }
+ 
+     /**

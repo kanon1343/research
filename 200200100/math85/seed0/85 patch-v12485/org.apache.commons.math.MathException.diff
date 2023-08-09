@@ -1,0 +1,18 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -163,13 +163,13 @@
+      * @since 1.2
+      */
+     public String getMessage(Locale locale) {
+-        return buildMessage(locale, pattern, arguments);
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /** {@inheritDoc} */
+     @Override
+     public String getLocalizedMessage() {
+-        return getMessage(Locale.getDefault());
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /**

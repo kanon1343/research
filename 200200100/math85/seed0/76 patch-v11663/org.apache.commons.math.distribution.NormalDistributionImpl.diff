@@ -1,0 +1,10 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -224,6 +224,7 @@
+             ret = getMean() + getStandardDeviation();
+         } else {
+             ret = getMean();
++			return ret;
+         }
+         
+         return ret;

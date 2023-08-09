@@ -1,0 +1,20 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -98,15 +98,13 @@
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+ 
+-        // some dummy values ...
+-        t0                = Double.NaN;
+-        g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
++        boolean resetDerivatives = false;
++		nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 

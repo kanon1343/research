@@ -1,0 +1,22 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -92,7 +92,9 @@
+     public MathException() {
+         super();
+         this.pattern   = null;
+-        this.arguments = new Object[0];
++        printStackTrace(System.err);
++		printStackTrace(System.err);
++		this.arguments = new Object[0];
+     }
+     
+     /**
+@@ -190,8 +192,6 @@
+         synchronized (out) {
+             PrintWriter pw = new PrintWriter(out, false);
+             printStackTrace(pw);
+-            // Flush the PrintWriter before it's GC'ed.
+-            pw.flush();
+         }
+     }
+ 

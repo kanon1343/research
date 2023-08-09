@@ -1,0 +1,25 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,8 +60,8 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
++                minPos = i;
+             }
+         }
+         return minPos;
+@@ -76,6 +76,12 @@
+     private Integer getPivotRow(final int col, final SimplexTableau tableau) {
+         double minRatio = Double.MAX_VALUE;
+         Integer minRatioPos = null;
++		this.constraints = constraints;
++		this.constraints = constraints;
++		this.constraints = constraints;
++		this.constraints = constraints;
++		this.constraints = constraints;
++		this.constraints = constraints;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getHeight(); i++) {
+             final double rhs = tableau.getEntry(i, tableau.getWidth() - 1);
+             final double entry = tableau.getEntry(i, col);

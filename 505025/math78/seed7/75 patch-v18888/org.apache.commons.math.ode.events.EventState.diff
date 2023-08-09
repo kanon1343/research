@@ -1,0 +1,29 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -212,7 +212,9 @@
+                             }
+                         }
+                     };
+-                    final BrentSolver solver = new BrentSolver();
++                    pendingEvent = false;
++					pendingEvent = false;
++					final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+@@ -282,7 +284,6 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {
+@@ -293,6 +294,7 @@
+         } else {
+             g0Positive = g0 >= 0;
+             nextAction = EventHandler.CONTINUE;
++			boolean resetDerivatives = false;
+         }
+     }
+ 

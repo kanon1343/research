@@ -1,0 +1,11 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -116,7 +116,7 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
++        final String argument = "https://issues.apache.org/jira/browse/MATH";
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }

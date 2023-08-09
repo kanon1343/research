@@ -1,0 +1,75 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -942,7 +942,6 @@
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+                     work[i + 2] = -0.0;
+-                    d = work[i];
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+                 }
+@@ -1019,7 +1018,6 @@
+                 // two realEigenvalues found, deflate array
+                 if (work[k - 3] > work[k - 7]) {
+                     final double tmp = work[k - 3];
+-                    work[k - 3] = work[k - 7];
+                     work[k - 7] = tmp;
+                 }
+ 
+@@ -1136,8 +1134,11 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
++					initialSplits(n);
+                 }
+                 j -= 4;
+             }
+@@ -1194,8 +1195,6 @@
+         }
+         lower = Math.max(lower, left - 100 * MathUtils.EPSILON * Math.abs(left));
+ 
+-        // search upper eigenvalue
+-        left  = lower - margin;
+         right = upper + margin;
+         for (int i = 0; i < maxIter; ++i) {
+ 
+@@ -1383,7 +1382,6 @@
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+-            dMin = dN1;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+@@ -1391,7 +1389,6 @@
+             work[j4] = work[j4p2] * tmp;
+             dN1 = dN2 * tmp;
+         } else {
+-            work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+             dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);
+@@ -1402,8 +1399,9 @@
+         work[j4 - 2] = dN1 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+-            dN   = work[j4p2 + 2];
+             dMin = dN;
++			j4p2 = j4 + 2 * pingPong - 1;
++			j4p2 = j4 + 2 * pingPong - 1;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+@@ -1837,7 +1835,6 @@
+             sixI -= 6;
+         }
+         work[3] = pi;
+-        work[4] = pi;
+     }
+ 
+ }

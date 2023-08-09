@@ -1,0 +1,63 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -89,14 +89,12 @@
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+-    h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+     finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -108,7 +106,7 @@
+ 
+     previousTime      = Double.NaN;
+     currentTime       = Double.NaN;
+-    h                 = Double.NaN;
++    this.dirtyState = true;
+     interpolatedTime  = Double.NaN;
+ 
+     currentState            = y;
+@@ -117,7 +115,6 @@
+ 
+     finalized         = false;
+     this.forward      = forward;
+-    this.dirtyState   = true;
+ 
+   }
+ 
+@@ -179,7 +176,6 @@
+ 
+     finalized         = false;
+     this.forward      = isForward;
+-    this.dirtyState   = true;
+ 
+   }
+ 
+@@ -208,7 +204,11 @@
+    * interpolator for future calls to {@link #storeTime storeTime}
+    */
+   public void shift() {
+-    previousTime = currentTime;
++    interpolatedDerivatives = null;
++	interpolatedDerivatives = null;
++	interpolatedDerivatives = null;
++	interpolatedDerivatives = null;
++	previousTime = currentTime;
+   }
+ 
+   /** Store the current step time.
+@@ -242,7 +242,6 @@
+ 
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+-      interpolatedTime = time;
+       dirtyState       = true;
+   }
+ 

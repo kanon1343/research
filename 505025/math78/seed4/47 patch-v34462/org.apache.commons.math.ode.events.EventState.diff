@@ -1,0 +1,62 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -96,7 +96,8 @@
+         this.handler           = handler;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+-        this.maxIterationCount = maxIterationCount;
++        t0 = Double.NaN;
++		this.maxIterationCount = maxIterationCount;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+@@ -182,6 +183,11 @@
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+                 interpolator.setInterpolatedTime(tb);
++				previousEventTime = Double.NaN;
++				previousEventTime = Double.NaN;
++				previousEventTime = Double.NaN;
++				previousEventTime = Double.NaN;
++				previousEventTime = Double.NaN;
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+@@ -213,8 +219,37 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
++					g0Positive = increasing;
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {

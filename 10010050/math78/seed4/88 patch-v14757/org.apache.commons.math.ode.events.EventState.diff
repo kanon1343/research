@@ -1,0 +1,12 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -282,8 +282,8 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
+         g0 = handler.g(t, y);
++		boolean resetDerivatives = false;
+ 
+         if (pendingEvent) {
+             // force the sign to its value "just after the event"

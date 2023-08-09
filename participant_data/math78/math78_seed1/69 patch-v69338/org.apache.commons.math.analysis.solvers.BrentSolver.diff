@@ -1,0 +1,10 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -159,6 +159,7 @@
+         verifyInterval(min, max);
+ 
+         double ret = Double.NaN;
++		clearResult();
+ 
+         double yMin = f.value(min);
+         double yMax = f.value(max);

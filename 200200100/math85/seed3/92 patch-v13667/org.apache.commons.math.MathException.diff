@@ -1,0 +1,10 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -189,6 +189,7 @@
+     public void printStackTrace(PrintStream out) {
+         synchronized (out) {
+             PrintWriter pw = new PrintWriter(out, false);
++			pw.flush();
+             printStackTrace(pw);
+             // Flush the PrintWriter before it's GC'ed.
+             pw.flush();

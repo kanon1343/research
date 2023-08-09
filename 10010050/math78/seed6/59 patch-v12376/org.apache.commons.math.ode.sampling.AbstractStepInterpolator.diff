@@ -1,0 +1,64 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -94,7 +94,7 @@
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
++    dirtyState = true;
+     this.forward            = true;
+     this.dirtyState         = true;
+   }
+@@ -116,7 +116,6 @@
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+-    this.forward      = forward;
+     this.dirtyState   = true;
+ 
+   }
+@@ -243,7 +242,7 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
++      this.forward = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -274,6 +273,26 @@
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
+       }
+ 
+       return interpolatedState;
+@@ -418,7 +437,7 @@
+     currentTime   = in.readDouble();
+     h             = in.readDouble();
+     forward       = in.readBoolean();
+-    dirtyState    = true;
++    this.forward = true;
+ 
+     if (dimension < 0) {
+         currentState = null;

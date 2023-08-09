@@ -1,0 +1,22 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -116,7 +116,8 @@
+             return solve(f, min, yMin, initial, yInitial, min, yMin);
+         }
+ 
+-        // return the second endpoint if it is good enough
++        double x;
++		// return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+             setResult(yMax, 0);
+@@ -252,7 +253,8 @@
+                 delta = 0.5 * dx;
+                 oldDelta = delta;
+             } else {
+-                double r3 = y1 / y0;
++                oldDelta = delta;
++				double r3 = y1 / y0;
+                 double p;
+                 double p1;
+                 // the equality test (x0 == x2) is intentional,

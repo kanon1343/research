@@ -1,0 +1,32 @@
+--- org.apache.commons.math.ConvergingAlgorithmImpl
++++ org.apache.commons.math.ConvergingAlgorithmImpl
+@@ -59,12 +59,27 @@
+      */
+     protected ConvergingAlgorithmImpl(final int defaultMaximalIterationCount,
+                                       final double defaultAbsoluteAccuracy) {
+-        this.defaultAbsoluteAccuracy = defaultAbsoluteAccuracy;
++        this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++		this.defaultAbsoluteAccuracy = defaultAbsoluteAccuracy;
+         this.defaultRelativeAccuracy = 1.0e-14;
+         this.absoluteAccuracy = defaultAbsoluteAccuracy;
+         this.relativeAccuracy = defaultRelativeAccuracy;
+         this.defaultMaximalIterationCount = defaultMaximalIterationCount;
+-        this.maximalIterationCount = defaultMaximalIterationCount;
++        maximalIterationCount = defaultMaximalIterationCount;
+         this.iterationCount = 0;
+     }
+ 

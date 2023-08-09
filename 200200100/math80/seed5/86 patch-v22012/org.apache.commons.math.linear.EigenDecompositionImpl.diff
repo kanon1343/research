@@ -1,0 +1,73 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -596,7 +596,6 @@
+ 
+         final double dCurrent = main[m - 1];
+         final double lower = dCurrent - eCurrent;
+-        work[lowerStart + m - 1] = lower;
+         lowerSpectra = Math.min(lowerSpectra, lower);
+         final double upper = dCurrent + eCurrent;
+         work[upperStart + m - 1] = upper;
+@@ -842,8 +841,6 @@
+         // two iterations with Li's test for initial splits
+         initialSplits(n);
+ 
+-        // initialize parameters used by goodStep
+-        tType = 0;
+         dMin1 = 0;
+         dMin2 = 0;
+         dN    = 0;
+@@ -880,9 +877,6 @@
+             }
+             work[4 * n0 - 2] = offDiagMin;
+ 
+-            // lower bound of Gershgorin disk
+-            dMin = -Math.max(0, diagMin - 2 * Math.sqrt(diagMin * offDiagMax));
+-
+             pingPong = 0;
+             int maxIter = 30 * (n0 - i0);
+             for (int k = 0; i0 < n0; ++k) {
+@@ -941,7 +935,6 @@
+             double d = work[4 * (n - 1) + pingPong];
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+-                    work[i + 2] = -0.0;
+                     d = work[i];
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+@@ -954,8 +947,6 @@
+                 final int j = i - 2 * pingPong - 1;
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+-                    work[i]     = -0.0;
+-                    work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+@@ -1056,10 +1047,6 @@
+                 work[l - 1] =
+                     Math.min(work[l - 1],
+                              Math.min(work[3 + pingPong], work[7 + pingPong]));
+-                work[l - 2 * pingPong] =
+-                    Math.min(work[l - 2 * pingPong],
+-                             Math.min(work[6 + pingPong], work[6 + pingPong]));
+-                qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+                 dMin  = -0.0;
+             }
+         }
+@@ -1136,7 +1123,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1403,7 +1389,6 @@
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+-            dMin = dN;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {

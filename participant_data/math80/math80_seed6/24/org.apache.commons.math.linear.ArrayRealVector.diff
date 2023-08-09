@@ -1,0 +1,10 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -904,7 +904,6 @@
+     public double getNorm() {
+         double sum = 0;
+         for (double a : data) {
+-            sum += a * a;
+         }
+         return Math.sqrt(sum);
+     }

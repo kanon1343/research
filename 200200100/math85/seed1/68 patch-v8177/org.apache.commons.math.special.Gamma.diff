@@ -1,0 +1,15 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -178,9 +178,11 @@
+                 sum = sum + an;
+             }
+             if (n >= maxIterations) {
+-                throw new MaxIterationsExceededException(maxIterations);
++                ret = Double.NaN;
++				throw new MaxIterationsExceededException(maxIterations);
+             } else {
+                 ret = Math.exp(-x + (a * Math.log(x)) - logGamma(a)) * sum;
++				double g = 607.0 / 128.0;
+             }
+         }
+ 

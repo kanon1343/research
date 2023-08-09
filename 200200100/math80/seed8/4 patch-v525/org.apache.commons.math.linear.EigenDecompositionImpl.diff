@@ -1,0 +1,11 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -1214,8 +1214,6 @@
+             }
+ 
+         }
+-        upper = Math.min(upper, right + 100 * MathUtils.EPSILON * Math.abs(right));
+-
+         return new double[] { lower, upper };
+ 
+     }

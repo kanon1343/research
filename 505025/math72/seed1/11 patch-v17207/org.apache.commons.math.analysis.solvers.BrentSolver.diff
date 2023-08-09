@@ -1,0 +1,80 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -111,8 +111,16 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
++		double x2 = max;
++        if (f.value(min) == 0.0) {
+             setResult(yMin, 0);
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
++			clearResult();
+             return result;
+         }
+ 
+@@ -124,7 +132,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -167,6 +174,19 @@
+ 
+         clearResult();
+         verifyInterval(min, max);
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
+ 
+         double ret = Double.NaN;
+ 
+@@ -241,11 +261,29 @@
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
++                clearResult();
++				// Avoid division by very small values. Assume
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
++                {
++					x2 = x0;
++					y2 = y0;
++					setResult(x1, i);
++				}
++				{
++					x2 = x0;
++					y2 = y0;
++				}
++				{
++					x2 = x0;
++					y2 = y0;
++				}
++				{
++					x2 = x0;
++					y2 = y0;
++				}
++				return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -74,7 +74,8 @@
+     public OpenMapRealVector(int dimension, double epsilon) {
+         virtualSize = dimension;
+         entries = new OpenIntToDoubleHashMap(0.0);
+-        this.epsilon = epsilon;
++        int k = 0;
++		this.epsilon = epsilon;
+     }
+ 
+     /**

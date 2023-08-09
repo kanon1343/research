@@ -1,0 +1,30 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -107,7 +107,8 @@
+         this.restrictToNonNegative  = restrictToNonNegative;
+         this.epsilon                = epsilon;
+         this.numDecisionVariables   = getNumVariables() + (restrictToNonNegative ? 0 : 1);
+-        this.numSlackVariables      = getConstraintTypeCounts(Relationship.LEQ) +
++        Set<Integer> basicRows=new HashSet<Integer>();
++		this.numSlackVariables      = getConstraintTypeCounts(Relationship.LEQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+         this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+@@ -134,7 +135,6 @@
+             matrix[0][0] = -1;
+         }
+         int zIndex = (getNumObjectiveFunctions() == 1) ? 0 : 1;
+-        matrix[zIndex][zIndex] = maximize ? 1 : -1;
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+@@ -385,7 +385,8 @@
+     protected void subtractRow(final int minuendRow, final int subtrahendRow,
+                                final double multiple) {
+         for (int j = 0; j < getWidth(); j++) {
+-            tableau.setEntry(minuendRow, j, tableau.getEntry(minuendRow, j) -
++            List<LinearConstraint> normalized=new ArrayList<LinearConstraint>();
++			tableau.setEntry(minuendRow, j, tableau.getEntry(minuendRow, j) -
+                              multiple * tableau.getEntry(subtrahendRow, j));
+         }
+     }

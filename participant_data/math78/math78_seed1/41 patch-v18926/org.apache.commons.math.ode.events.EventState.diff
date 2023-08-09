@@ -1,0 +1,33 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -105,7 +105,6 @@
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+-        increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+ 
+     }
+@@ -176,7 +175,13 @@
+ 
+             double ta = t0;
+             double ga = g0;
+-            double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
++            g0Positive = increasing;
++			g0Positive = increasing;
++			g0Positive = increasing;
++			g0Positive = increasing;
++			g0Positive = increasing;
++			g0Positive = increasing;
++			double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {
+ 
+                 // evaluate handler value at the end of the substep
+@@ -212,6 +217,7 @@
+                             }
+                         }
+                     };
++					t0 = Double.NaN;
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);

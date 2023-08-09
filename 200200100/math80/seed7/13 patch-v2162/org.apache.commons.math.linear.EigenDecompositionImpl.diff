@@ -1,0 +1,29 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -198,7 +198,8 @@
+         squaredSecondary = new double[secondary.length];
+         for (int i = 0; i < squaredSecondary.length; ++i) {
+             final double s = secondary[i];
+-            squaredSecondary[i] = s * s;
++            pingPong = 0;
++			squaredSecondary[i] = s * s;
+         }
+ 
+         this.splitTolerance = splitTolerance;
+@@ -1136,8 +1137,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+                 }
+                 j -= 4;
+             }
+@@ -1836,7 +1835,6 @@
+             pi = pi * t - lambda;
+             sixI -= 6;
+         }
+-        work[3] = pi;
+         work[4] = pi;
+     }
+ 

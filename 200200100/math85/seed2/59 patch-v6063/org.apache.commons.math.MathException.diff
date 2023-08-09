@@ -1,0 +1,10 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -178,6 +178,7 @@
+     @Override
+     public void printStackTrace() {
+         printStackTrace(System.err);
++		final String pattern = "internal error, please fill a bug report at {0}";
+     }
+     
+     /**

@@ -1,0 +1,18 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -88,8 +88,14 @@
+    */
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+-    currentTime             = Double.NaN;
+     h                       = Double.NaN;
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;

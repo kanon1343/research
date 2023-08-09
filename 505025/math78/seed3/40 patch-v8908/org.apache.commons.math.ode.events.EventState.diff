@@ -1,0 +1,47 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -98,8 +98,6 @@
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+ 
+-        // some dummy values ...
+-        t0                = Double.NaN;
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+@@ -176,6 +174,15 @@
+ 
+             double ta = t0;
+             double ga = g0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {
+ 
+@@ -214,7 +221,8 @@
+                     };
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+-                    solver.setMaximalIterationCount(maxIterationCount);
++                    t0 = Double.NaN;
++					solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {
+@@ -231,9 +239,6 @@
+                             // properly ends exactly at the event occurrence
+                             return false;
+                         }
+-                        // either we were not waiting for the event or it has
+-                        // moved in such a way the step cannot be accepted
+-                        pendingEvent = true;
+                         return true;
+                     }
+ 

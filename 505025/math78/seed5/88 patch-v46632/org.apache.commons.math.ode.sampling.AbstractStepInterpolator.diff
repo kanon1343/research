@@ -1,0 +1,84 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -94,9 +94,58 @@
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
++    setInterpolatedTime(getInterpolatedTime());
+     this.forward            = true;
+-    this.dirtyState         = true;
++    previousTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	this.forward = forward;
++	interpolatedState = null;
++	this.forward = forward;
++	interpolatedState = null;
++	previousTime = Double.NaN;
++	previousTime = Double.NaN;
++	interpolatedState = null;
++	interpolatedState = null;
++	this.forward = forward;
++	this.forward = forward;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	dirtyState = true;
+   }
+ 
+   /** Simple constructor.
+@@ -243,7 +292,7 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
++      this.dirtyState = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -273,6 +322,11 @@
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
++		this.dirtyState = true;
++		this.dirtyState = true;
++		this.dirtyState = true;
++		this.dirtyState = true;
++		this.dirtyState = true;
+           dirtyState = false;
+       }
+ 

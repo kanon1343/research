@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1467,7 +1467,6 @@
+         b = b + d;
+ 
+         c = a + lnm[1];
+-        d = -(c - a - lnm[1]);
+         a = c;
+         b = b + d;
+ 

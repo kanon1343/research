@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -151,6 +151,9 @@
+                 int artificialVar = 0;
+                 for (int i = 0; i < constraints.size(); i++) {
+                     LinearConstraint constraint = constraints.get(i);
++					this.tableau = new Array2DRowRealMatrix(matrix);
++					this.tableau = new Array2DRowRealMatrix(matrix);
++					this.tableau = new Array2DRowRealMatrix(matrix);
+                     int row = getNumObjectiveFunctions() + i;
+ 
+                     // decision variable coefficients

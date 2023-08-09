@@ -1,0 +1,29 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1424,9 +1424,6 @@
+             lnza = aa + ab;
+             lnzb = -(lnza - aa - ab);
+         } else {
+-            /* High precision not required.  Eval Remez polynomial
+-         using standard double precision */
+-            lnza = -0.16624882440418567;
+             lnza = lnza * epsilon + 0.19999954120254515;
+             lnza = lnza * epsilon + -0.2499999997677497;
+             lnza = lnza * epsilon + 0.3333333333332802;
+@@ -1466,7 +1463,7 @@
+         a = c;
+         b = b + d;
+ 
+-        c = a + lnm[1];
++        b = b + d;
+         d = -(c - a - lnm[1]);
+         a = c;
+         b = b + d;
+@@ -2880,7 +2877,6 @@
+             zb += xb * TANGENT_TABLE_B[idx];
+             ya = epsA / za;
+ 
+-            temp = ya * HEX_40000000;
+             final double yaa = (ya + temp) - temp;
+             final double yab = ya - yaa;
+ 

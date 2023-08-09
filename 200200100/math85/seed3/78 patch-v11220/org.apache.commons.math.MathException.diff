@@ -1,0 +1,19 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -103,7 +103,6 @@
+      * @param arguments format arguments
+      */
+     public MathException(String pattern, Object ... arguments) {
+-      super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+       this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
+     }
+@@ -163,7 +162,7 @@
+      * @since 1.2
+      */
+     public String getMessage(Locale locale) {
+-        return buildMessage(locale, pattern, arguments);
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /** {@inheritDoc} */

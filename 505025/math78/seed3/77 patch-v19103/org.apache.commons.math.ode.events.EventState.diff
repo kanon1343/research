@@ -1,0 +1,58 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -176,6 +176,22 @@
+ 
+             double ta = t0;
+             double ga = g0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
++			g0Positive = g0 >= 0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {
+ 
+@@ -197,10 +213,10 @@
+                         // about bracketing
+                             // this should never happen
+                          
+-                    // variation direction, with respect to the integration direction
+-                    increasing = gb >= ga;
+-
+-                    final UnivariateRealFunction f = new UnivariateRealFunction() {
++                    g0 = Double.NaN;
++					g0 = Double.NaN;
++					g0 = Double.NaN;
++					final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+                                 interpolator.setInterpolatedTime(t);
+@@ -214,6 +230,8 @@
+                     };
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
++					solver.setAbsoluteAccuracy(convergence);
++					solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+@@ -282,7 +300,7 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
++        g0 = Double.NaN;
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {

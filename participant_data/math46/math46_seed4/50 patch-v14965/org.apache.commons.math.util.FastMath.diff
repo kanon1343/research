@@ -1,0 +1,71 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -460,7 +460,6 @@
+       }
+ 
+       if (negate) {
+-          result = -result;
+       }
+ 
+       return result;
+@@ -769,7 +768,8 @@
+                 return result;
+             }
+ 
+-            intVal++;
++            int k = 0;
++			intVal++;
+ 
+             intPartA = EXP_INT_TABLE_A[750-intVal];
+             intPartB = EXP_INT_TABLE_B[750-intVal];
+@@ -1472,7 +1472,6 @@
+         b = b + d;
+ 
+         c = a + lnzb;
+-        d = -(c - a - lnzb);
+         a = c;
+         b = b + d;
+ 
+@@ -2850,7 +2849,6 @@
+         epsB += xb - TANGENT_TABLE_B[idx];
+ 
+         double temp = epsA + epsB;
+-        epsB = -(temp - epsA - epsB);
+         epsA = temp;
+ 
+         /* Compute eps = eps / (1.0 + xa*tangent) */
+@@ -2877,7 +2875,6 @@
+             zb += -(temp - za - temp2);
+             za = temp;
+ 
+-            zb += xb * TANGENT_TABLE_B[idx];
+             ya = epsA / za;
+ 
+             temp = ya * HEX_40000000;
+@@ -2891,7 +2888,7 @@
+             /* Correct for rounding in division */
+             yb = (epsA - yaa * zaa - yaa * zab - yab * zaa - yab * zab) / za;
+ 
+-            yb += -epsA * zb / za / za;
++            final double xs[] = new double[2];
+             yb += epsB / za;
+         }
+ 
+@@ -2926,9 +2923,6 @@
+         yb = -(temp - ya - yb);
+         ya = temp;
+ 
+-        /* Add in effect of epsB.   atan'(x) = 1/(1+x^2) */
+-        yb += epsB / (1.0 + epsA * epsA);
+-
+         double result;
+         double resultb;
+ 
+@@ -2936,7 +2930,6 @@
+         double za = EIGHTHS[idx] + ya;
+         double zb = -(za - EIGHTHS[idx] - ya);
+         temp = za + yb;
+-        zb += -(temp - za - yb);
+         za = temp;
+ 
+         result = za + zb;

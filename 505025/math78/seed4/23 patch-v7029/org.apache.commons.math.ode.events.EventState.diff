@@ -1,0 +1,36 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -98,8 +98,6 @@
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+ 
+-        // some dummy values ...
+-        t0                = Double.NaN;
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+@@ -148,7 +146,6 @@
+      */
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+-        t0 = tStart;
+         g0 = handler.g(tStart, yStart);
+         g0Positive = g0 >= 0;
+     }
+@@ -215,6 +212,16 @@
+                     final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
++					pendingEventTime = Double.NaN;
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {

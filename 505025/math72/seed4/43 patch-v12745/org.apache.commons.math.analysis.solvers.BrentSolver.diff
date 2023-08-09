@@ -1,0 +1,62 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -112,7 +112,7 @@
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
++            verifyBracketing(min, max, f);
+             return result;
+         }
+ 
+@@ -124,8 +124,17 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+-            return result;
++            this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			this.defaultFunctionValueAccuracy = 1.0e-15;
++			return result;
+         }
+ 
+         // reduce interval if initial and max bracket the root
+@@ -182,7 +191,18 @@
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
+-                ret = max;
++                this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				clearResult();
++				this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+@@ -235,8 +255,9 @@
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;
+-                x2 = x0;
+                 y0 = y1;
++				x2 = x0;
++                y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
+             }

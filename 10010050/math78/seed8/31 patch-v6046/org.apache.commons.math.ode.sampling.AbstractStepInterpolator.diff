@@ -1,0 +1,10 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -117,6 +117,7 @@
+ 
+     finalized         = false;
+     this.forward      = forward;
++	this.forward = true;
+     this.dirtyState   = true;
+ 
+   }

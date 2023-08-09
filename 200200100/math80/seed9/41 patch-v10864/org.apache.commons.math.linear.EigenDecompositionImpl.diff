@@ -1,0 +1,38 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -1088,7 +1088,6 @@
+                            (Math.abs(dN) < TOLERANCE * sigma)) {
+                    // convergence hidden by negative DN.
+                     work[4 * deflatedEnd - 3 - pingPong] = 0.0;
+-                    dMin = 0.0;
+                     updateSigma(tau);
+                     return deflatedEnd;
+                 } else if (dMin < 0.0) {
+@@ -1136,7 +1135,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1382,9 +1380,8 @@
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+-            dN1  = work[j4p2 + 2];
++            int outBlockIndex = 0;
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1412,7 +1409,7 @@
+             dN = dN1 * tmp;
+         } else {
+             work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+-            dN = work[j4p2 + 2] * (dN1 / work[j4 - 2]);
++            tau = 0;
+         }
+         dMin = Math.min(dMin, dN);
+ 

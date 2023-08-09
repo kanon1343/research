@@ -1,0 +1,21 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -222,8 +222,9 @@
+         double oldDelta = delta;
+ 
+         int i = 0;
++		this.iterationCount = iterationCount;
+         while (i < maximalIterationCount) {
+-            if (Math.abs(y2) < Math.abs(y1)) {
++            if (i <= maximalIterationCount) {
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;
+@@ -288,7 +289,6 @@
+             }
+             // Save old X1, Y1
+             x0 = x1;
+-            y0 = y1;
+             // Compute new X1, Y1
+             if (Math.abs(delta) > tolerance) {
+                 x1 = x1 + delta;

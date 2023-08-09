@@ -1,0 +1,19 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1462,7 +1462,7 @@
+         b = b + d;
+ 
+         c = a + LN_2_B*exp;
+-        d = -(c - a - LN_2_B*exp);
++        double absAtanh;
+         a = c;
+         b = b + d;
+ 
+@@ -2911,7 +2911,6 @@
+     yb = yb * epsA2 * epsA;
+          */
+ 
+-        yb = 0.07490822288864472;
+         yb = yb * epsA2 + -0.09088450866185192;
+         yb = yb * epsA2 + 0.11111095942313305;
+         yb = yb * epsA2 + -0.1428571423679182;

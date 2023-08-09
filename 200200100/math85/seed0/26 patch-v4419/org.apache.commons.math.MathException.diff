@@ -1,0 +1,13 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -116,8 +116,9 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
++        super("Convergence failed");
+         this.pattern   = getMessage();
++		final String pattern = "internal error, please fill a bug report at {0}";
+         this.arguments = new Object[0];
+     }
+     

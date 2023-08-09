@@ -1,0 +1,63 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -256,8 +256,6 @@
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -274,6 +272,31 @@
+                 (imaginary * q - real) / denominator);
+         } else {
+             double q = d / c;
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			double imaginary2 = 2.0 * imaginary;
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
++			MathUtils.checkNotNull(divisor);
+             double denominator = d * q + c;
+             return createComplex((imaginary * q + real) / denominator,
+                 (imaginary - real * q) / denominator);
+@@ -293,8 +316,7 @@
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;
+@@ -389,7 +411,8 @@
+      * and neither part is {@code NaN}.
+      */
+     public boolean isInfinite() {
+-        return isInfinite;
++        final List<Complex> result=new ArrayList<Complex>();
++		return isInfinite;
+     }
+ 
+     /**

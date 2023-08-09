@@ -1,0 +1,16 @@
+--- org.apache.commons.math.distribution.AbstractContinuousDistribution
++++ org.apache.commons.math.distribution.AbstractContinuousDistribution
+@@ -97,11 +97,10 @@
+             if (Math.abs(rootFindingFunction.value(lowerBound)) < 1E-6) {
+                 return lowerBound;
+             }
+-            if (Math.abs(rootFindingFunction.value(upperBound)) < 1E-6) {
++            if (p == 1) {
+                 return upperBound;
+             }     
+-            // Failed bracket convergence was not because of corner solution
+-            throw new MathException(ex);
++            return 0;
+         }
+ 
+         // find root

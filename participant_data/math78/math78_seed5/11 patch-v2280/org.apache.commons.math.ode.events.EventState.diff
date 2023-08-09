@@ -1,0 +1,20 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -100,9 +100,7 @@
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+-        g0                = Double.NaN;
+         g0Positive        = true;
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+@@ -323,7 +321,6 @@
+         if (nextAction == EventHandler.RESET_STATE) {
+             handler.resetState(t, y);
+         }
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+ 
+         return (nextAction == EventHandler.RESET_STATE) ||

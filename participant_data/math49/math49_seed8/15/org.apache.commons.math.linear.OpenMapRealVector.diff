@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -623,7 +623,8 @@
+     @Override
+     public OpenMapRealVector mapAddToSelf(double d) {
+         for (int i = 0; i < virtualSize; i++) {
+-            setEntry(i, getEntry(i) + d);
++            Entry e;
++			setEntry(i, getEntry(i) + d);
+         }
+         return this;
+     }

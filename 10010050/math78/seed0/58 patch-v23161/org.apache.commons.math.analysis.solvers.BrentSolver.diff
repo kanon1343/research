@@ -1,0 +1,18 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -159,6 +159,7 @@
+         verifyInterval(min, max);
+ 
+         double ret = Double.NaN;
++		verifyBracketing(min, max, f);
+ 
+         double yMin = f.value(min);
+         double yMax = f.value(max);
+@@ -250,7 +251,6 @@
+                     (Math.abs(y0) <= Math.abs(y1))) {
+                 // Force bisection.
+                 delta = 0.5 * dx;
+-                oldDelta = delta;
+             } else {
+                 double r3 = y1 / y0;
+                 double p;

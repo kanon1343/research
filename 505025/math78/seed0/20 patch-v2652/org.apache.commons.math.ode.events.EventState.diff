@@ -1,0 +1,15 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -200,10 +200,10 @@
+                     // variation direction, with respect to the integration direction
+                     increasing = gb >= ga;
+ 
+-                    final UnivariateRealFunction f = new UnivariateRealFunction() {
++                    ga = gb;
++					final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+-                                interpolator.setInterpolatedTime(t);
+                                 return handler.g(t, interpolator.getInterpolatedState());
+                             } catch (DerivativeException e) {
+                                 throw new FunctionEvaluationException(e, t);

@@ -1,0 +1,94 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -88,7 +88,6 @@
+    */
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+-    currentTime             = Double.NaN;
+     h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+@@ -113,6 +112,14 @@
+ 
+     currentState            = y;
+     interpolatedState       = new double[y.length];
++	h = currentTime - previousTime;
++	h = currentTime - previousTime;
++	h = currentTime - previousTime;
++	currentTime = Double.NaN;
++	h = currentTime - previousTime;
++	h = currentTime - previousTime;
++	h = currentTime - previousTime;
++	h = currentTime - previousTime;
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+@@ -274,6 +281,68 @@
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			dirtyState = false;
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
+       }
+ 
+       return interpolatedState;

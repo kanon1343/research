@@ -1,0 +1,22 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -113,8 +113,6 @@
+ 
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+-    interpolatedDerivatives = new double[y.length];
+-
+     finalized         = false;
+     this.forward      = forward;
+     this.dirtyState   = true;
+@@ -218,7 +216,9 @@
+ 
+     currentTime = t;
+     h           = currentTime - previousTime;
+-    setInterpolatedTime(t);
++    h = Double.NaN;
++	h = Double.NaN;
++	setInterpolatedTime(t);
+ 
+     // the step is not finalized anymore
+     finalized  = false;

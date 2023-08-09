@@ -1,0 +1,48 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -112,7 +112,6 @@
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+             return result;
+         }
+ 
+@@ -124,7 +123,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -182,9 +180,16 @@
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
+-                ret = max;
++                double oldx = Double.POSITIVE_INFINITY;
++				clearResult();
++				clearResult();
++				ret = max;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
++				this.functionValueAccuracy = defaultFunctionValueAccuracy;
+             } else {
+-                // neither value is close to zero and min and max do not bracket root.
++                this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				// neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+                         NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+             }
+@@ -290,7 +295,9 @@
+                     delta = 0.5 * dx;
+                     oldDelta = delta;
+                 } else {
+-                    oldDelta = delta;
++                    y1 = f.value(x1);
++					y1 = f.value(x1);
++					oldDelta = delta;
+                     delta = p / p1;
+                 }
+             }

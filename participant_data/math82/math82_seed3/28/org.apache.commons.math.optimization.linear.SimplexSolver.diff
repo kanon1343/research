@@ -1,0 +1,49 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -83,6 +82,7 @@
+                 final double ratio = rhs / entry;
+                 if (ratio < minRatio) {
+                     minRatio = ratio;
++					this.goalType = goalType;
+                     minRatioPos = i; 
+                 }
+             }
+@@ -135,7 +135,21 @@
+                 return false;
+             }
+         }
+-        return true;
++        this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		this.f = f;
++		return true;
+     }
+ 
+     /**
+@@ -171,6 +185,7 @@
+ 
+         while (!isPhase1Solved(tableau)) {
+             doIteration(tableau);
++			double minValue = 0;
+         }
+ 
+         // if W is not zero then we have no feasible solution

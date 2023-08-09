@@ -1,0 +1,101 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -95,6 +95,10 @@
+                       final double convergence, final int maxIterationCount) {
+         this.handler           = handler;
+         this.maxCheckInterval  = maxCheckInterval;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		pendingEventTime = Double.NaN;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+ 
+@@ -103,7 +107,44 @@
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
++        nextAction = EventHandler.CONTINUE;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+@@ -213,7 +254,7 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
++                    boolean resetDerivatives = false;
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+@@ -221,8 +262,7 @@
+                         // we have either found nothing or found (again ?) a past event, we simply ignore it
+                         ta = tb;
+                         ga = gb;
+-                    } else if (Double.isNaN(previousEventTime) ||
+-                               (Math.abs(previousEventTime - root) > convergence)) {
++                    } else if (g0Positive ^ (gb >= 0)) {
+                         pendingEventTime = root;
+                         if (pendingEvent && (Math.abs(t1 - pendingEventTime) <= convergence)) {
+                             // we were already waiting for this event which was
+@@ -268,7 +308,21 @@
+      * step.
+      */
+     public double getEventTime() {
+-        return pendingEventTime;
++        t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		t0 = Double.NaN;
++		return pendingEventTime;
+     }
+ 
+     /** Acknowledge the fact the step has been accepted by the integrator.

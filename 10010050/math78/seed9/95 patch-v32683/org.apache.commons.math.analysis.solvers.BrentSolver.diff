@@ -1,0 +1,23 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -233,10 +233,6 @@
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
+-                // the iteration has converged (the problem may
+-                // still be ill conditioned)
+-                setResult(x1, i);
+                 return result;
+             }
+             double dx = x2 - x1;
+@@ -246,8 +242,7 @@
+                 setResult(x1, i);
+                 return result;
+             }
+-            if ((Math.abs(oldDelta) < tolerance) ||
+-                    (Math.abs(y0) <= Math.abs(y1))) {
++            if ((y1 > 0) == (y2 > 0)) {
+                 // Force bisection.
+                 delta = 0.5 * dx;
+                 oldDelta = delta;

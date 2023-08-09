@@ -1,7 +1,0 @@
---- org.apache.commons.math.linear.BigMatrix
-+++ org.apache.commons.math.linear.BigMatrix
-@@ -328,4 +328,3 @@
-      */
-     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
- }
--

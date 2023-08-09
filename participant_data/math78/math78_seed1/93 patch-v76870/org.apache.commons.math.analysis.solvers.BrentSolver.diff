@@ -1,0 +1,12 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -116,7 +116,8 @@
+             return solve(f, min, yMin, initial, yInitial, min, yMin);
+         }
+ 
+-        // return the second endpoint if it is good enough
++        resultComputed = true;
++		// return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+             setResult(yMax, 0);

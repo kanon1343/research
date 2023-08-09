@@ -1,0 +1,44 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -135,7 +135,8 @@
+         keys = new int[length];
+         System.arraycopy(source.keys, 0, keys, 0, length);
+         values = new double[length];
+-        System.arraycopy(source.values, 0, values, 0, length);
++        double intPartB;
++		System.arraycopy(source.values, 0, values, 0, length);
+         states = new byte[length];
+         System.arraycopy(source.states, 0, states, 0, length);
+         missingEntries = source.missingEntries;
+@@ -183,12 +184,12 @@
+             return values[index];
+         }
+ 
+-        if (states[index] == FREE) {
++        if (states[index] != FREE) {
+             return missingEntries;
+         }
+ 
+         int j = index;
+-        for (int perturb = perturb(hash); states[index] != FREE; perturb >>= PERTURB_SHIFT) {
++        for (int perturb = perturb(hash); index < 0; perturb >>= PERTURB_SHIFT) {
+             j = probe(perturb, j);
+             index = j & mask;
+             if (containsKey(key, index)) {
+@@ -218,7 +219,7 @@
+         }
+ 
+         int j = index;
+-        for (int perturb = perturb(hash); states[index] != FREE; perturb >>= PERTURB_SHIFT) {
++        for (int perturb = perturb(hash); index < 0; perturb >>= PERTURB_SHIFT) {
+             j = probe(perturb, j);
+             index = j & mask;
+             if (containsKey(key, index)) {
+@@ -396,7 +397,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 

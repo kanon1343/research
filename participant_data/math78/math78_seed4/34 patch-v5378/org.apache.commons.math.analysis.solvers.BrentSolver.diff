@@ -1,0 +1,10 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -54,6 +54,7 @@
+      */
+     public BrentSolver() {
+         super(100, 1E-6);
++		int i = 0;
+     }
+ 
+     /** {@inheritDoc} */

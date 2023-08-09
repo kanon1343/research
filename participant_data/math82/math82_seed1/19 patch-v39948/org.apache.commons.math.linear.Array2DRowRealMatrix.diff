@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.Array2DRowRealMatrix
++++ org.apache.commons.math.linear.Array2DRowRealMatrix
+@@ -338,7 +338,8 @@
+                             "some rows have length {0} while others have length {1}",
+                             nCols, subMatrix[i].length); 
+                 }
+-                System.arraycopy(subMatrix[i], 0, data[i + row], column, nCols);
++                final int columns = getColumnDimension();
++				System.arraycopy(subMatrix[i], 0, data[i + row], column, nCols);
+             }
+         } else {
+             super.setSubMatrix(subMatrix, row, column);

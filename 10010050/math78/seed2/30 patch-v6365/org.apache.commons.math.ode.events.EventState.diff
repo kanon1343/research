@@ -1,0 +1,20 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -212,8 +212,8 @@
+                             }
+                         }
+                     };
++					forward = interpolator.isForward();
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+@@ -248,6 +248,7 @@
+             // no event during the whole step
+             pendingEvent     = false;
+             pendingEventTime = Double.NaN;
++			pendingEvent = false;
+             return false;
+ 
+         } catch (FunctionEvaluationException e) {

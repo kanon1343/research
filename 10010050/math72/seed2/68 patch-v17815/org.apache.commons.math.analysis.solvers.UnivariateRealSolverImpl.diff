@@ -1,0 +1,49 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -76,8 +76,12 @@
+             throw MathRuntimeException.createIllegalArgumentException("function to solve cannot be null");
+         }
+         this.f = f;
+-        this.defaultFunctionValueAccuracy = 1.0e-15;
+-        this.functionValueAccuracy = defaultFunctionValueAccuracy;
++        resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		this.functionValueAccuracy = defaultFunctionValueAccuracy;
+     }
+ 
+     /**
+@@ -91,7 +95,11 @@
+     protected UnivariateRealSolverImpl(final int defaultMaximalIterationCount,
+                                        final double defaultAbsoluteAccuracy) {
+         super(defaultMaximalIterationCount, defaultAbsoluteAccuracy);
+-        this.defaultFunctionValueAccuracy = 1.0e-15;
++        resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		this.defaultFunctionValueAccuracy = 1.0e-15;
+         this.functionValueAccuracy = defaultFunctionValueAccuracy;
+     }
+ 
+@@ -180,6 +188,7 @@
+                                    final UnivariateRealFunction function)
+         throws FunctionEvaluationException {
+         final double f1 = function.value(lower);
++		functionValueAccuracy = defaultFunctionValueAccuracy;
+         final double f2 = function.value(upper);
+         return (f1 > 0 && f2 < 0) || (f1 < 0 && f2 > 0);
+     }
+@@ -246,10 +255,6 @@
+ 
+         verifyInterval(lower, upper);
+         if (!isBracketing(lower, upper, function)) {
+-            throw MathRuntimeException.createIllegalArgumentException(
+-                    "function values at endpoints do not have different signs.  " +
+-                    "Endpoints: [{0}, {1}], Values: [{2}, {3}]",
+-                    lower, upper, function.value(lower), function.value(upper));
+         }
+     }
+ }

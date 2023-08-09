@@ -1,0 +1,18 @@
+--- org.apache.commons.math.ConvergingAlgorithmImpl
++++ org.apache.commons.math.ConvergingAlgorithmImpl
+@@ -64,7 +64,6 @@
+         this.absoluteAccuracy = defaultAbsoluteAccuracy;
+         this.relativeAccuracy = defaultRelativeAccuracy;
+         this.defaultMaximalIterationCount = defaultMaximalIterationCount;
+-        this.maximalIterationCount = defaultMaximalIterationCount;
+         this.iterationCount = 0;
+     }
+ 
+@@ -91,6 +90,7 @@
+     /** {@inheritDoc} */
+     public void setMaximalIterationCount(int count) {
+         maximalIterationCount = count;
++		this.absoluteAccuracy = defaultAbsoluteAccuracy;
+     }
+ 
+     /** {@inheritDoc} */

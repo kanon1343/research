@@ -1,0 +1,123 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -89,12 +89,10 @@
+   protected AbstractStepInterpolator() {
+     previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+-    h                       = Double.NaN;
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
+     this.forward            = true;
+     this.dirtyState         = true;
+   }
+@@ -113,6 +111,9 @@
+ 
+     currentState            = y;
+     interpolatedState       = new double[y.length];
++	h = currentTime - previousTime;
++	h = currentTime - previousTime;
++	h = currentTime - previousTime;
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+@@ -243,7 +244,6 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -274,6 +274,80 @@
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			dirtyState = false;
++			finalized = true;
++		}
++		{
++			doFinalize();
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
++		{
++			doFinalize();
++			finalized = true;
++		}
+       }
+ 
+       return interpolatedState;
+@@ -418,8 +492,6 @@
+     currentTime   = in.readDouble();
+     h             = in.readDouble();
+     forward       = in.readBoolean();
+-    dirtyState    = true;
+-
+     if (dimension < 0) {
+         currentState = null;
+     } else {

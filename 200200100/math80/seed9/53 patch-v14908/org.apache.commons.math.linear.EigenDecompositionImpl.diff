@@ -1,0 +1,48 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -880,9 +880,6 @@
+             }
+             work[4 * n0 - 2] = offDiagMin;
+ 
+-            // lower bound of Gershgorin disk
+-            dMin = -Math.max(0, diagMin - 2 * Math.sqrt(diagMin * offDiagMax));
+-
+             pingPong = 0;
+             int maxIter = 30 * (n0 - i0);
+             for (int k = 0; i0 < n0; ++k) {
+@@ -1136,7 +1133,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1382,9 +1378,8 @@
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+-            dN1  = work[j4p2 + 2];
++            int outBlockIndex = 0;
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1403,7 +1398,6 @@
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+-            dMin = dN;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+@@ -1412,7 +1406,7 @@
+             dN = dN1 * tmp;
+         } else {
+             work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+-            dN = work[j4p2 + 2] * (dN1 / work[j4 - 2]);
++            tau = 0;
+         }
+         dMin = Math.min(dMin, dN);
+ 

@@ -1,0 +1,56 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -198,7 +198,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getMessage() {
+-                return buildMessage(Locale.US, pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+             /** {@inheritDoc} */
+@@ -234,7 +234,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                return buildMessage(Locale.US, pattern, arguments);
+             }
+ 
+         };
+@@ -264,7 +264,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };
+@@ -311,7 +311,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                return buildMessage(Locale.US, pattern, arguments);
+             }
+ 
+         };
+@@ -354,7 +354,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };
+@@ -384,7 +384,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+         };

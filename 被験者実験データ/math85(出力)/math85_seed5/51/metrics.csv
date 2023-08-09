@@ -1,7 +1,0 @@
-,nloc,ccn,token,parameter,length,repairLines,filename
-1,14,4,58,3,14,17,org.apache.commons.math.optimization.fitting.WeightedObservedPoint.java
-2,57,17,372,13,65,17,org.apache.commons.math.MathException.java
-3,11,4,56,6,11,17,org.apache.commons.math.ConvergenceException.java
-4,63,18,403,19,69,17,org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils.java
-5,83,22,429,10,89,17,org.apache.commons.math.distribution.NormalDistributionImpl.java
-6,39,8,230,1,55,17,org.apache.commons.math.distribution.AbstractContinuousDistribution.java

@@ -1,0 +1,22 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -116,7 +116,6 @@
+     interpolatedDerivatives = new double[y.length];
+ 
+     finalized         = false;
+-    this.forward      = forward;
+     this.dirtyState   = true;
+ 
+   }
+@@ -208,7 +207,10 @@
+    * interpolator for future calls to {@link #storeTime storeTime}
+    */
+   public void shift() {
+-    previousTime = currentTime;
++    interpolatedDerivatives = null;
++	interpolatedDerivatives = null;
++	interpolatedDerivatives = null;
++	previousTime = currentTime;
+   }
+ 
+   /** Store the current step time.

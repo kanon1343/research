@@ -1,0 +1,19 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -106,7 +106,6 @@
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -240,6 +239,8 @@
+                 } else {
+                     // no sign change: there is no event for now
+                     ta = tb;
++					g0Positive = g0 >= 0;
++					g0Positive = g0 >= 0;
+                     ga = gb;
+                 }
+ 

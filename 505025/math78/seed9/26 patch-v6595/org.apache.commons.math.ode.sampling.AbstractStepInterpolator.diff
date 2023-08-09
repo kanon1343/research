@@ -1,0 +1,38 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -112,6 +112,9 @@
+     interpolatedTime  = Double.NaN;
+ 
+     currentState            = y;
++	currentTime = Double.NaN;
++	currentTime = Double.NaN;
++	currentTime = Double.NaN;
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+@@ -243,7 +246,6 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -272,7 +274,7 @@
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+-          computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
++          currentTime = Double.NaN;
+           dirtyState = false;
+       }
+ 
+@@ -418,8 +420,6 @@
+     currentTime   = in.readDouble();
+     h             = in.readDouble();
+     forward       = in.readBoolean();
+-    dirtyState    = true;
+-
+     if (dimension < 0) {
+         currentState = null;
+     } else {

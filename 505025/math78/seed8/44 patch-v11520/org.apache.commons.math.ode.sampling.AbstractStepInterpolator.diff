@@ -1,0 +1,50 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -95,8 +95,8 @@
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+     finalized               = false;
++	this.h = Math.abs(h);
+     this.forward            = true;
+-    this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -217,7 +217,6 @@
+   public void storeTime(final double t) {
+ 
+     currentTime = t;
+-    h           = currentTime - previousTime;
+     setInterpolatedTime(t);
+ 
+     // the step is not finalized anymore
+@@ -243,7 +242,6 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -270,10 +268,20 @@
+ 
+       // lazy evaluation of the state
+       if (dirtyState) {
+-          final double oneMinusThetaH = currentTime - interpolatedTime;
++          dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;
++		finalized = true;
+       }
+ 
+       return interpolatedState;

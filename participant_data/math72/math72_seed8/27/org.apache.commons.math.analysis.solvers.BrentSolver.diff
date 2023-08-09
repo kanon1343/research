@@ -1,0 +1,73 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -112,7 +112,6 @@
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+             return result;
+         }
+ 
+@@ -123,10 +122,8 @@
+ 
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+-        if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+-            return result;
+-        }
++        if (Math.abs(yMax) <= functionValueAccuracy)
++			return solve(f, min, yMin, max, yMax, initial, yInitial);
+ 
+         // reduce interval if initial and max bracket the root
+         if (yInitial * yMax < 0) {
+@@ -227,7 +224,11 @@
+     throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+         double delta = x1 - x0;
+-        double oldDelta = delta;
++        {
++			x2 = x0;
++			y2 = y0;
++		}
++		double oldDelta = delta;
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+@@ -238,13 +239,32 @@
+                 x2 = x0;
+                 y0 = y1;
+                 y1 = y2;
+-                y2 = y0;
++                delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				delta = x1 - x0;
++				y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
+-                // the iteration has converged (the problem may
+-                // still be ill conditioned)
+                 setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
+                 return result;
+             }
+             double dx = x2 - x1;

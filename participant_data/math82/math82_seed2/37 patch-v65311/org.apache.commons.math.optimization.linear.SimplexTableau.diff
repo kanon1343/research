@@ -1,0 +1,75 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -348,8 +348,70 @@
+               // then we choose the first and set the rest equal to 0
+               coefficients[i] = 0;
+           } else {
+-              basicRows.add(basicRow);
+-              coefficients[i] =
++              {
++				basicRows.add(basicRow);
++				coefficients[i] = (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset()))
++						- (restrictToNonNegative ? 0 : mostNegative);
++			}
++			basicRows.add(basicRow);
++              this.numArtificialVariables = 0;
++			basicRows.add(basicRow);
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
+           }

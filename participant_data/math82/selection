@@ -1,0 +1,517 @@
+./被験者実験データ/math82(出力)/math82_seed0/1/org.apache.commons.math.linear.ArrayRealVector.java:886:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/10/org.apache.commons.math.optimization.linear.SimplexSolver.java:129:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/100/org.apache.commons.math.linear.ArrayRealVector.java:79:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/100/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:68:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/12/org.apache.commons.math.optimization.linear.SimplexSolver.java:129:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/13/org.apache.commons.math.optimization.linear.SimplexTableau.java:415:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/15/org.apache.commons.math.optimization.linear.SimplexSolver.java:129:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/15/org.apache.commons.math.optimization.linear.SimplexTableau.java:107:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/16/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/16/org.apache.commons.math.optimization.linear.SimplexTableau.java:415:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/18/org.apache.commons.math.linear.ArrayRealVector.java:885:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/19/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/2/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/22/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/22/org.apache.commons.math.optimization.linear.SimplexTableau.java:415:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/23/org.apache.commons.math.linear.ArrayRealVector.java:886:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/23/org.apache.commons.math.optimization.linear.SimplexSolver.java:129:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/24/org.apache.commons.math.optimization.linear.SimplexTableau.java:415:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/28/org.apache.commons.math.linear.ArrayRealVector.java:886:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/29/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/30/org.apache.commons.math.linear.ArrayRealVector.java:885:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/30/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/31/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/31/org.apache.commons.math.optimization.linear.SimplexTableau.java:415:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/33/org.apache.commons.math.optimization.linear.SimplexTableau.java:107:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/33/org.apache.commons.math.optimization.linear.SimplexTableau.java:416:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/34/org.apache.commons.math.linear.ArrayRealVector.java:885:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/34/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/35/org.apache.commons.math.optimization.linear.SimplexTableau.java:107:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/36/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/37/org.apache.commons.math.linear.ArrayRealVector.java:885:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/37/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/38/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/39/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/40/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/40/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/41/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/41/org.apache.commons.math.optimization.linear.SimplexTableau.java:234:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/41/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/42/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/42/org.apache.commons.math.optimization.linear.SimplexTableau.java:234:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/43/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/43/org.apache.commons.math.optimization.linear.SimplexTableau.java:213:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/43/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/43/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/44/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/44/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/44/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/45/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/45/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/46/org.apache.commons.math.linear.ArrayRealVector.java:884:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/46/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/47/org.apache.commons.math.linear.ArrayRealVector.java:886:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/47/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/47/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/47/org.apache.commons.math.optimization.linear.SimplexTableau.java:213:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/47/org.apache.commons.math.optimization.linear.SimplexTableau.java:232:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/48/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/48/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/48/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/48/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/49/org.apache.commons.math.linear.ArrayRealVector.java:885:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/49/org.apache.commons.math.optimization.linear.SimplexTableau.java:234:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/49/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/49/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/49/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/5/org.apache.commons.math.optimization.linear.SimplexSolver.java:129:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/50/org.apache.commons.math.linear.ArrayRealVector.java:885:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/50/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/50/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/50/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/51/org.apache.commons.math.linear.ArrayRealVector.java:886:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/51/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/51/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:68:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/51/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/51/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/51/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/52/org.apache.commons.math.linear.ArrayRealVector.java:883:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/52/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/52/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/53/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:67:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/53/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/54/org.apache.commons.math.linear.ArrayRealVector.java:884:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/54/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/54/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/54/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/55/org.apache.commons.math.linear.ArrayRealVector.java:884:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/55/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/56/org.apache.commons.math.linear.ArrayRealVector.java:884:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/56/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/56/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/57/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/57/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/57/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/57/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/58/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:67:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/58/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/59/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/59/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/6/org.apache.commons.math.optimization.linear.SimplexTableau.java:415:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/60/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/60/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/61/org.apache.commons.math.optimization.linear.SimplexTableau.java:134:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/61/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/63/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:68:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/64/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/64/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/65/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:67:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/65/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:69:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/65/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/65/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/66/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/67/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:67:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/67/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/69/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/7/org.apache.commons.math.linear.ArrayRealVector.java:886:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/7/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/70/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:67:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/70/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/73/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/74/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/76/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/76/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/77/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:68:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/77/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/77/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/77/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/78/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/78/org.apache.commons.math.optimization.linear.SimplexTableau.java:133:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/80/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:68:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/80/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/81/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/84/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/85/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/85/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:69:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/86/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/86/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/87/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/87/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:69:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/87/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/88/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/88/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/88/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/89/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/89/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:69:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/89/org.apache.commons.math.optimization.linear.SimplexTableau.java:133:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/89/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/9/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed0/91/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/92/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/93/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/93/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:69:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/94/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/94/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:69:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/95/org.apache.commons.math.linear.ArrayRealVector.java:79:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/95/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:68:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/96/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/96/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:69:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/98/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/99/org.apache.commons.math.linear.ArrayRealVector.java:79:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed0/99/org.apache.commons.math.optimization.linear.LinearObjectiveFunction.java:68:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/12 patch-v24011/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:68:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/16 patch-v30171/org.apache.commons.math.optimization.linear.SimplexTableau.java:235:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/18 patch-v37380/org.apache.commons.math.linear.Array2DRowRealMatrix.java:341:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/19 patch-v39948/org.apache.commons.math.linear.Array2DRowRealMatrix.java:341:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/19 patch-v39948/org.apache.commons.math.util.MathUtils.java:292:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/19 patch-v39948/org.apache.commons.math.util.MathUtils.java:368:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/2 patch-v5527/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:97:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/2 patch-v5527/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed1/2 patch-v5527/org.apache.commons.math.optimization.linear.SimplexTableau.java:357:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/20 patch-v41232/org.apache.commons.math.optimization.linear.SimplexSolver.java:190:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed1/20 patch-v41232/org.apache.commons.math.util.MathUtils.java:292:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/20 patch-v41232/org.apache.commons.math.util.MathUtils.java:368:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/21 patch-v48254/org.apache.commons.math.optimization.linear.SimplexTableau.java:258:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/22 patch-v48820/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/26 patch-v50680/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/26 patch-v50680/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed1/29 patch-v59460/org.apache.commons.math.optimization.linear.SimplexSolver.java:188:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed1/3 patch-v6358/org.apache.commons.math.optimization.linear.SimplexTableau.java:357:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/3 patch-v6358/org.apache.commons.math.optimization.linear.SimplexTableau.java:450:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/30 patch-v59472/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/33 patch-v60644/org.apache.commons.math.optimization.linear.SimplexTableau.java:176:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/34 patch-v60978/org.apache.commons.math.optimization.linear.LinearConstraint.java:101:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/37 patch-v68892/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed1/38 patch-v71130/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/38 patch-v71130/org.apache.commons.math.optimization.linear.SimplexSolver.java:173:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed1/4 patch-v9129/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/4 patch-v9129/org.apache.commons.math.optimization.linear.SimplexSolver.java:175:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed1/4 patch-v9129/org.apache.commons.math.optimization.linear.SimplexTableau.java:371:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/40 patch-v72747/org.apache.commons.math.optimization.linear.SimplexTableau.java:185:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/41 patch-v72749/org.apache.commons.math.optimization.linear.SimplexTableau.java:179:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/43 patch-v74251/org.apache.commons.math.optimization.linear.SimplexTableau.java:290:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/46 patch-v75392/org.apache.commons.math.optimization.linear.SimplexSolver.java:170:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed1/46 patch-v75392/org.apache.commons.math.optimization.linear.SimplexTableau.java:149:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/47 patch-v76644/org.apache.commons.math.optimization.linear.SimplexTableau.java:156:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/47 patch-v76644/org.apache.commons.math.optimization.linear.SimplexTableau.java:209:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed1/7 patch-v18100/org.apache.commons.math.optimization.linear.SimplexSolver.java:180:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed1/8 patch-v21784/org.apache.commons.math.optimization.linear.SimplexSolver.java:130:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/1 patch-v966/org.apache.commons.math.optimization.linear.LinearConstraint.java:103:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/10 patch-v10502/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/10 patch-v10502/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/10 patch-v10502/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/11 patch-v10743/org.apache.commons.math.optimization.linear.SimplexTableau.java:351:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/11 patch-v10743/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/11 patch-v10743/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/12 patch-v13213/org.apache.commons.math.optimization.linear.SimplexTableau.java:234:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/13 patch-v13712/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/15 patch-v21318/org.apache.commons.math.linear.Array2DRowRealMatrix.java:404:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/15 patch-v21318/org.apache.commons.math.optimization.linear.SimplexTableau.java:199:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/16 patch-v21362/org.apache.commons.math.optimization.linear.SimplexSolver.java:170:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/16 patch-v21362/org.apache.commons.math.optimization.linear.SimplexTableau.java:199:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/17 patch-v22169/org.apache.commons.math.optimization.linear.SimplexSolver.java:172:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/18 patch-v22245/org.apache.commons.math.linear.Array2DRowRealMatrix.java:404:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/18 patch-v22245/org.apache.commons.math.optimization.linear.SimplexTableau.java:354:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/2 patch-v4039/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/20 patch-v28200/org.apache.commons.math.optimization.linear.LinearConstraint.java:82:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/21 patch-v34425/org.apache.commons.math.optimization.linear.SimplexSolver.java:178:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/23 patch-v38244/org.apache.commons.math.optimization.linear.SimplexSolver.java:171:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/27 patch-v43129/org.apache.commons.math.optimization.linear.SimplexSolver.java:177:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/3 patch-v4411/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/30 patch-v50752/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/32 patch-v54081/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/34 patch-v56655/org.apache.commons.math.optimization.linear.SimplexTableau.java:292:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/37 patch-v65311/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/39 patch-v68243/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/39 patch-v68243/org.apache.commons.math.optimization.linear.SimplexTableau.java:353:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/4 patch-v5619/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/4 patch-v5619/org.apache.commons.math.optimization.linear.SimplexTableau.java:190:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/40 patch-v70195/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/5 patch-v5929/org.apache.commons.math.optimization.linear.SimplexTableau.java:140:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/6 patch-v7550/org.apache.commons.math.optimization.linear.SimplexTableau.java:140:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/6 patch-v7550/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/7 patch-v7796/org.apache.commons.math.optimization.linear.SimplexSolver.java:77:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/7 patch-v7796/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/8 patch-v9284/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/8 patch-v9284/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/8 patch-v9284/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/8 patch-v9284/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed2/9 patch-v9639/org.apache.commons.math.optimization.linear.SimplexTableau.java:356:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed2/9 patch-v9639/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed3/1/org.apache.commons.math.optimization.linear.SimplexSolver.java:129:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed3/1/org.apache.commons.math.optimization.linear.SimplexTableau.java:110:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/1/org.apache.commons.math.optimization.linear.SimplexTableau.java:388:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/10/org.apache.commons.math.optimization.linear.SimplexTableau.java:136:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/12/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:68:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/14/org.apache.commons.math.optimization.linear.SimplexSolver.java:181:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed3/2/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed3/2/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed3/2/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed3/20/org.apache.commons.math.optimization.linear.SimplexSolver.java:186:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed3/23/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/24/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/24/org.apache.commons.math.optimization.linear.SimplexTableau.java:116:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/25/org.apache.commons.math.linear.AbstractRealMatrix.java:399:	EmptyControlStatement:	Empty for statement
+./被験者実験データ/math82(出力)/math82_seed3/25/org.apache.commons.math.optimization.linear.SimplexSolver.java:189:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/26/org.apache.commons.math.optimization.linear.SimplexSolver.java:187:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/26/org.apache.commons.math.optimization.linear.SimplexTableau.java:116:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/27/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/27/org.apache.commons.math.optimization.linear.SimplexSolver.java:184:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed3/28/org.apache.commons.math.linear.Array2DRowRealMatrix.java:638:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/28/org.apache.commons.math.optimization.linear.SimplexSolver.java:188:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/28/org.apache.commons.math.optimization.linear.SimplexTableau.java:116:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/3/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:103:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/3/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed3/3/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed3/5/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed3/6/org.apache.commons.math.optimization.linear.SimplexSolver.java:174:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/1/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/1/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/1/org.apache.commons.math.optimization.linear.SimplexSolver.java:173:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/1/org.apache.commons.math.optimization.linear.SimplexSolver.java:189:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/1/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/10/org.apache.commons.math.linear.AbstractRealMatrix.java:819:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/10/org.apache.commons.math.linear.AbstractRealMatrix.java:852:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/11/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/12/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/13/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/15/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/2/org.apache.commons.math.linear.AbstractRealMatrix.java:65:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/2/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/2/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/21/org.apache.commons.math.optimization.linear.SimplexTableau.java:352:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/22/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/25/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/26/org.apache.commons.math.optimization.linear.SimplexTableau.java:106:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/3/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/3/org.apache.commons.math.linear.AbstractRealMatrix.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/32/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/33/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/34/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/34/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/34/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/35/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/38/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/39/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/4/org.apache.commons.math.linear.AbstractRealMatrix.java:402:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/4/org.apache.commons.math.linear.AbstractRealMatrix.java:853:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/40/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/5/org.apache.commons.math.linear.AbstractRealMatrix.java:819:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/5/org.apache.commons.math.linear.AbstractRealMatrix.java:852:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/5/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/5/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/5/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/6/org.apache.commons.math.linear.AbstractRealMatrix.java:787:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/6/org.apache.commons.math.optimization.linear.SimplexSolver.java:193:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/6/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed4/7/org.apache.commons.math.optimization.linear.SimplexTableau.java:105:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed4/8/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/1 patch-v339/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/10 patch-v7372/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/10 patch-v7372/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/12 patch-v8263/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/13 patch-v10975/org.apache.commons.math.optimization.linear.SimplexSolver.java:171:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/13 patch-v10975/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/13 patch-v10975/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/18 patch-v24727/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/19 patch-v25045/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:103:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/2 patch-v590/org.apache.commons.math.optimization.linear.SimplexTableau.java:165:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/20 patch-v29460/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/21 patch-v30344/org.apache.commons.math.optimization.linear.SimplexSolver.java:173:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/23 patch-v48905/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/23 patch-v48905/org.apache.commons.math.optimization.linear.SimplexSolver.java:175:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/4 patch-v1450/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/4 patch-v1450/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/4 patch-v1450/org.apache.commons.math.optimization.linear.SimplexTableau.java:165:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/5 patch-v2744/org.apache.commons.math.optimization.linear.SimplexTableau.java:282:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/5 patch-v2744/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/5 patch-v2744/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/6 patch-v3365/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/6 patch-v3365/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/6 patch-v3365/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/7 patch-v3875/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/7 patch-v3875/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/8 patch-v5204/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/8 patch-v5204/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed5/9 patch-v5295/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed5/9 patch-v5295/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/1/org.apache.commons.math.linear.ArrayRealVector.java:251:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/1/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/10/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/10/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/11/org.apache.commons.math.optimization.linear.SimplexSolver.java:165:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/11/org.apache.commons.math.optimization.linear.SimplexTableau.java:240:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/11/org.apache.commons.math.optimization.linear.SimplexTableau.java:309:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/11/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/12/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/12/org.apache.commons.math.optimization.linear.SimplexTableau.java:116:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/13/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/13/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/14/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/14/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/15/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/15/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/16/org.apache.commons.math.optimization.linear.SimplexTableau.java:240:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/18/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/18/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/18/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/19/org.apache.commons.math.optimization.linear.SimplexSolver.java:166:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/2/org.apache.commons.math.linear.ArrayRealVector.java:251:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/2/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:99:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/2/org.apache.commons.math.util.MathUtils.java:395:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/22/org.apache.commons.math.optimization.linear.SimplexSolver.java:172:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/24/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/28/org.apache.commons.math.optimization.linear.SimplexSolver.java:64:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/3/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:99:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/31/org.apache.commons.math.optimization.linear.SimplexSolver.java:173:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/34/org.apache.commons.math.optimization.linear.SimplexSolver.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/35/org.apache.commons.math.optimization.linear.SimplexSolver.java:65:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/39/org.apache.commons.math.optimization.RealPointValuePair.java:50:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/39/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/4/org.apache.commons.math.linear.ArrayRealVector.java:1206:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/4/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/41/org.apache.commons.math.optimization.linear.SimplexSolver.java:176:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/42/org.apache.commons.math.optimization.linear.SimplexSolver.java:174:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/44/org.apache.commons.math.optimization.linear.SimplexTableau.java:223:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/46/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/5/org.apache.commons.math.optimization.linear.SimplexTableau.java:125:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/5/org.apache.commons.math.optimization.linear.SimplexTableau.java:306:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/51/org.apache.commons.math.optimization.linear.SimplexTableau.java:137:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/54/org.apache.commons.math.optimization.linear.SimplexSolver.java:65:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/54/org.apache.commons.math.util.MathUtils.java:292:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/55/org.apache.commons.math.util.MathUtils.java:292:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/56/org.apache.commons.math.util.MathUtils.java:292:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/57/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/57/org.apache.commons.math.optimization.linear.SimplexSolver.java:183:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/57/org.apache.commons.math.optimization.linear.SimplexTableau.java:400:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/58/org.apache.commons.math.optimization.linear.SimplexSolver.java:187:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/58/org.apache.commons.math.optimization.linear.SimplexTableau.java:378:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/6/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/60/org.apache.commons.math.optimization.linear.SimplexTableau.java:376:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/63/org.apache.commons.math.optimization.linear.SimplexSolver.java:50:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/63/org.apache.commons.math.optimization.linear.SimplexSolver.java:67:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/64/org.apache.commons.math.linear.Array2DRowRealMatrix.java:623:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/7/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/8/org.apache.commons.math.optimization.linear.SimplexTableau.java:305:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed6/8/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/9/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/9/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed6/9/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/1 patch-v506/org.apache.commons.math.optimization.linear.SimplexSolver.java:130:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/1 patch-v506/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/10 patch-v17306/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/10 patch-v17306/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/10 patch-v17306/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/11 patch-v22010/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/11 patch-v22010/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/12 patch-v23461/org.apache.commons.math.optimization.linear.LinearConstraint.java:82:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/12 patch-v23461/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/13 patch-v24329/org.apache.commons.math.optimization.linear.LinearConstraint.java:82:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/13 patch-v24329/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/15 patch-v26574/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/15 patch-v26574/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/16 patch-v27205/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/16 patch-v27205/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/16 patch-v27205/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/17 patch-v32751/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/17 patch-v32751/org.apache.commons.math.optimization.linear.SimplexTableau.java:369:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/18 patch-v32825/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/19 patch-v33139/org.apache.commons.math.optimization.linear.SimplexSolver.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/2 patch-v3624/org.apache.commons.math.linear.AbstractRealMatrix.java:45:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/2 patch-v3624/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/20 patch-v34114/org.apache.commons.math.optimization.linear.SimplexSolver.java:66:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/20 patch-v34114/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/21 patch-v38349/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/22 patch-v38501/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/22 patch-v38501/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/22 patch-v38501/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/23 patch-v38993/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/23 patch-v38993/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/26 patch-v42013/org.apache.commons.math.optimization.linear.SimplexTableau.java:149:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/3 patch-v7127/org.apache.commons.math.optimization.linear.SimplexTableau.java:331:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/30 patch-v48409/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/30 patch-v48409/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/33 patch-v51521/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/33 patch-v51521/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/34 patch-v52278/org.apache.commons.math.optimization.linear.SimplexTableau.java:140:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/39 patch-v58748/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/39 patch-v58748/org.apache.commons.math.optimization.linear.SimplexTableau.java:140:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/4 patch-v8332/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/4 patch-v8332/org.apache.commons.math.optimization.linear.SimplexTableau.java:339:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/40 patch-v59201/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/43 patch-v65551/org.apache.commons.math.optimization.linear.SimplexTableau.java:140:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/43 patch-v65551/org.apache.commons.math.optimization.linear.SimplexTableau.java:400:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/44 patch-v67066/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/5 patch-v11622/org.apache.commons.math.optimization.linear.SimplexTableau.java:343:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/7 patch-v14723/org.apache.commons.math.optimization.linear.SimplexSolver.java:85:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/7 patch-v14723/org.apache.commons.math.optimization.linear.SimplexTableau.java:416:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/8 patch-v16722/org.apache.commons.math.optimization.linear.SimplexTableau.java:114:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed7/8 patch-v16722/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/8 patch-v16722/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/8 patch-v16722/org.apache.commons.math.util.MathUtils.java:779:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed7/9 patch-v16975/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/1/org.apache.commons.math.optimization.linear.SimplexTableau.java:130:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/10/org.apache.commons.math.optimization.linear.SimplexSolver.java:173:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/10/org.apache.commons.math.optimization.linear.SimplexTableau.java:398:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/11/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/12/org.apache.commons.math.linear.ArrayRealVector.java:888:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/13/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/14/org.apache.commons.math.linear.ArrayRealVector.java:889:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/14/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/15/org.apache.commons.math.optimization.linear.SimplexTableau.java:216:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/16/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/18/org.apache.commons.math.optimization.linear.SimplexSolver.java:84:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/18/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/19/org.apache.commons.math.optimization.linear.SimplexSolver.java:175:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/19/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/2/org.apache.commons.math.optimization.linear.SimplexTableau.java:112:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/20/org.apache.commons.math.optimization.linear.SimplexSolver.java:175:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/20/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/21/org.apache.commons.math.optimization.linear.SimplexTableau.java:390:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/21/org.apache.commons.math.optimization.linear.SimplexTableau.java:416:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/21/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/22/org.apache.commons.math.optimization.linear.SimplexSolver.java:182:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/23/org.apache.commons.math.optimization.linear.SimplexSolver.java:143:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/23/org.apache.commons.math.optimization.linear.SimplexTableau.java:390:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/24/org.apache.commons.math.optimization.linear.SimplexSolver.java:174:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/25/org.apache.commons.math.optimization.linear.SimplexSolver.java:173:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/26/org.apache.commons.math.optimization.linear.SimplexSolver.java:175:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/26/org.apache.commons.math.optimization.linear.SimplexTableau.java:310:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/27/org.apache.commons.math.optimization.linear.SimplexSolver.java:174:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/27/org.apache.commons.math.optimization.linear.SimplexTableau.java:310:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/28/org.apache.commons.math.optimization.linear.SimplexTableau.java:311:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/29/org.apache.commons.math.optimization.linear.SimplexTableau.java:312:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/3/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:100:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/3/org.apache.commons.math.optimization.linear.SimplexTableau.java:238:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/33/org.apache.commons.math.optimization.linear.SimplexSolver.java:188:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/38/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/39/org.apache.commons.math.linear.Array2DRowRealMatrix.java:95:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/39/org.apache.commons.math.optimization.linear.SimplexTableau.java:351:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/4/org.apache.commons.math.optimization.linear.SimplexSolver.java:102:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/40/org.apache.commons.math.linear.Array2DRowRealMatrix.java:95:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/42/org.apache.commons.math.optimization.linear.SimplexTableau.java:295:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/43/org.apache.commons.math.optimization.linear.SimplexSolver.java:51:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/44/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/45/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/5/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:100:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/5/org.apache.commons.math.optimization.linear.SimplexTableau.java:238:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/8/org.apache.commons.math.optimization.linear.SimplexSolver.java:117:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed8/8/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed8/9/org.apache.commons.math.optimization.linear.SimplexSolver.java:165:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed9/1 patch-v2324/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./被験者実験データ/math82(出力)/math82_seed9/10 patch-v19625/org.apache.commons.math.linear.ArrayRealVector.java:794:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/11 patch-v20428/org.apache.commons.math.linear.ArrayRealVector.java:282:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/11 patch-v20428/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/11 patch-v20428/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/12 patch-v22250/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/14 patch-v24654/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/17 patch-v29720/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/2 patch-v5960/org.apache.commons.math.optimization.linear.SimplexTableau.java:392:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/20 patch-v47075/org.apache.commons.math.optimization.linear.SimplexSolver.java:172:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/22 patch-v61076/org.apache.commons.math.optimization.linear.SimplexSolver.java:175:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/3 patch-v6021/org.apache.commons.math.linear.ArrayRealVector.java:831:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/3 patch-v6021/org.apache.commons.math.optimization.linear.SimplexTableau.java:393:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/4 patch-v10493/org.apache.commons.math.linear.ArrayRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/6 patch-v13283/org.apache.commons.math.linear.ArrayRealVector.java:794:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/7 patch-v15709/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./被験者実験データ/math82(出力)/math82_seed9/8 patch-v17050/org.apache.commons.math.linear.ArrayRealVector.java:881:	UnusedLocalVariable:	使用されない変数

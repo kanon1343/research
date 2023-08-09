@@ -1,0 +1,47 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -91,7 +91,9 @@
+      */
+     public MathException() {
+         super();
+-        this.pattern   = null;
++        printStackTrace(System.err);
++		printStackTrace(System.err);
++		this.pattern   = null;
+         this.arguments = new Object[0];
+     }
+     
+@@ -103,9 +105,12 @@
+      * @param arguments format arguments
+      */
+     public MathException(String pattern, Object ... arguments) {
+-      super(buildMessage(Locale.US, pattern, arguments));
+-      this.pattern   = pattern;
++      printStackTrace(System.err);
++      printStackTrace(System.err);
++	printStackTrace(System.err);
++	this.pattern   = pattern;
+       this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
++	printStackTrace(System.err);
+     }
+ 
+     /**
+@@ -116,7 +121,6 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }
+@@ -189,9 +193,8 @@
+     public void printStackTrace(PrintStream out) {
+         synchronized (out) {
+             PrintWriter pw = new PrintWriter(out, false);
++			printStackTrace(pw);
+             printStackTrace(pw);
+-            // Flush the PrintWriter before it's GC'ed.
+-            pw.flush();
+         }
+     }
+ 

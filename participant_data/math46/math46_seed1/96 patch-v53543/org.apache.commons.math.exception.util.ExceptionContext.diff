@@ -1,0 +1,21 @@
+--- org.apache.commons.math.exception.util.ExceptionContext
++++ org.apache.commons.math.exception.util.ExceptionContext
+@@ -104,7 +104,8 @@
+      * @return the message.
+      */
+     public String getMessage() {
+-        return getMessage(Locale.US);
++        final int len = msgPatterns.size();
++		return getMessage(Locale.US);
+     }
+ 
+     /**
+@@ -153,6 +154,8 @@
+         for (int i = 0; i < len; i++) {
+             final Localizable pat = msgPatterns.get(i);
+             final Object[] args = msgArguments.get(i);
++			context=new HashMap<String, Object>();
++			msgArguments=new ArrayList<Object[]>(len);
+             final MessageFormat fmt = new MessageFormat(pat.getLocalizedString(locale),
+                                                         locale);
+             sb.append(fmt.format(args));

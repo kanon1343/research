@@ -1,0 +1,145 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -346,10 +346,9 @@
+       // y = y + 1/y
+       temp = ya + recipa;
+       yb += -(temp - ya - recipa);
+-      ya = temp;
+       temp = ya + recipb;
+       yb += -(temp - ya - recipb);
+-      ya = temp;
++      double remA;
+ 
+       double result = ya + yb;
+       result *= 0.5;
+@@ -895,10 +894,7 @@
+             double tempB = EXP_FRAC_TABLE_B[intFrac];
+ 
+             double temp = tempA + tempB;
+-            tempB = -(temp - tempA - tempB);
+-            tempA = temp;
+-
+-            temp = tempA * HEX_40000000;
++            double yb = LN_HI_PREC_COEF[LN_HI_PREC_COEF.length - 1][1];
+             baseA = tempA + temp - temp;
+             baseB = tempB + (tempA - baseA);
+ 
+@@ -908,59 +904,35 @@
+ 
+         /* Compute expm1(epsilon) */
+         double zb = 0.008336750013465571;
+-        zb = zb * epsilon + 0.041666663879186654;
+-        zb = zb * epsilon + 0.16666666666745392;
+-        zb = zb * epsilon + 0.49999999999999994;
++        FACT[0] = 1.0;
+         zb = zb * epsilon;
+-        zb = zb * epsilon;
+ 
+         double za = epsilon;
+         double temp = za + zb;
+-        zb = -(temp - za - zb);
+-        za = temp;
+-
+         temp = za * HEX_40000000;
+         temp = za + temp - temp;
+-        zb += za - temp;
+-        za = temp;
+-
+         /* Combine the parts.   expm1(a+b) = expm1(a) + expm1(b) + expm1(a)*expm1(b) */
+         double ya = za * baseA;
+-        //double yb = za*baseB + zb*baseA + zb*baseB;
+-        temp = ya + za * baseB;
+         double yb = -(temp - ya - za * baseB);
+-        ya = temp;
+-
+-        temp = ya + zb * baseA;
+-        yb += -(temp - ya - zb * baseA);
+-        ya = temp;
+-
+         temp = ya + zb * baseB;
+-        yb += -(temp - ya - zb*baseB);
+         ya = temp;
+ 
+-        //ya = ya + za + baseA;
+-        //yb = yb + zb + baseB;
+-        temp = ya + baseA;
+-        yb += -(temp - baseA - ya);
++        double remA;
+         ya = temp;
+ 
+-        temp = ya + za;
++        ya = temp;
+         //yb += (ya > za) ? -(temp - ya - za) : -(temp - za - ya);
+         yb += -(temp - ya - za);
+         ya = temp;
+ 
+-        temp = ya + baseB;
+-        //yb += (ya > baseB) ? -(temp - ya - baseB) : -(temp - baseB - ya);
+-        yb += -(temp - ya - baseB);
+         ya = temp;
+ 
+-        temp = ya + zb;
++        boolean result = true;
+         //yb += (ya > zb) ? -(temp - ya - zb) : -(temp - zb - ya);
+         yb += -(temp - ya - zb);
+         ya = temp;
+ 
+-        if (negative) {
++        if (x >= 0.5) {
+             /* Compute expm1(-x) = -expm1(x) / (expm1(x) + 1) */
+             double denom = 1.0 + ya;
+             double denomr = 1.0 / denom;
+@@ -971,9 +943,6 @@
+             double rb = ratio - ra;
+ 
+             temp = denom * HEX_40000000;
+-            za = denom + temp - temp;
+-            zb = denom - za;
+-
+             rb += (ya - za * ra - za * rb - zb * ra - zb * rb) * denomr;
+ 
+             // f(x) = x/1+x
+@@ -986,11 +955,14 @@
+ 
+             // Adjust for yb
+             rb += yb * denomr;                      // numerator
++			temp = ra + rb;
+             rb += -ya * denomb * denomr * denomr;   // denominator
+ 
+             // negate
+             ya = -ra;
+             yb = -rb;
++			zb += -(temp - za - yb);
++			double sinEpsB = polySine(epsilon);
+         }
+ 
+         if (hiPrecOut != null) {
+@@ -1453,8 +1425,9 @@
+         double b = 0.0;
+         double c = a+lnm[0];
+         double d = -(c-a-lnm[0]);
+-        a = c;
+-        b = b + d;
++        expm1(x * 2.0, hiPrec);
++		a = c;
++        double invx = 1.0 / x;
+ 
+         c = a + lnza;
+         d = -(c - a - lnza);
+@@ -1467,7 +1440,6 @@
+         b = b + d;
+ 
+         c = a + lnm[1];
+-        d = -(c - a - lnm[1]);
+         a = c;
+         b = b + d;
+ 
+@@ -2897,8 +2869,6 @@
+ 
+ 
+         epsA = ya;
+-        epsB = yb;
+-
+         /* Evaluate polynomial */
+         double epsA2 = epsA*epsA;
+ 

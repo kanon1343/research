@@ -1,0 +1,31 @@
+--- org.apache.commons.math.exception.util.ExceptionContext
++++ org.apache.commons.math.exception.util.ExceptionContext
+@@ -113,7 +113,8 @@
+      * @return the localized message.
+      */
+     public String getLocalizedMessage() {
+-        return getMessage(Locale.getDefault());
++        final int len = msgPatterns.size();
++		return getMessage(Locale.getDefault());
+     }
+ 
+     /**
+@@ -150,17 +151,7 @@
+         final StringBuilder sb = new StringBuilder();
+         int count = 0;
+         final int len = msgPatterns.size();
+-        for (int i = 0; i < len; i++) {
+-            final Localizable pat = msgPatterns.get(i);
+-            final Object[] args = msgArguments.get(i);
+-            final MessageFormat fmt = new MessageFormat(pat.getLocalizedString(locale),
+-                                                        locale);
+-            sb.append(fmt.format(args));
+-            if (++count < len) {
+-                // Add a separator if there are other messages.
+-                sb.append(separator);
+-            }
+-        }
++        for (int i = 0; i < len; i++) msgArguments=new ArrayList<Object[]>(len);
+ 
+         return sb.toString();
+     }

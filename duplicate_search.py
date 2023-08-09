@@ -1,5 +1,6 @@
 import os
 import csv
+import pathlib
 
 
 def detect_consecutive_duplicate_lines(program):
@@ -48,26 +49,25 @@ def search_java_files(folder_path):
 
 
 def main():
-    # 対象のフォルダパスを指定してください
-    folder_path = "/Users/haradakanon/Downloads/research/被験者実験データ/math85(出力)"
-    java_files = search_java_files(folder_path)
+    projects = ["46", "49", "80", "82", "85"]
+    for project in projects:
+        folder_path = pathlib.Path(
+            "/Users/haradakanon/Downloads/research/200200100/math{project}".format(project=project))
+        java_files = search_java_files(folder_path)
+        output_csv_file = pathlib.Path(
+            "/Users/haradakanon/Downloads/research/200200100/math{project}log/duplicate_lines_report.csv".format(project=project))
+        with open(output_csv_file, mode="w", newline="") as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow(["File Path"])
 
-    # CSVファイルに結果を出力
-    output_csv_file = "/Users/haradakanon/Downloads/research/被験者実験データ/math85(出力)/duplicate_lines_report.csv"
-    with open(output_csv_file, mode="w", newline="") as csv_file:
-        writer = csv.writer(csv_file)
-        writer.writerow(["File Path"])
+            for java_file in java_files:
+                with open(java_file, "r") as file:
+                    program = file.read()
 
-        for java_file in java_files:
-            with open(java_file, "r") as file:
-                program = file.read()
-
-            has_consecutive_duplicates = detect_consecutive_duplicate_lines(
-                program)
-            if has_consecutive_duplicates:
-                writer.writerow([java_file])
-
-    # print(f"CSVファイル {output_csv_file} に結果を出力しました。")
+                has_consecutive_duplicates = detect_consecutive_duplicate_lines(
+                    program)
+                if has_consecutive_duplicates:
+                    writer.writerow([java_file])
 
 
 if __name__ == "__main__":
