@@ -1,0 +1,20 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2858,8 +2858,6 @@
+         double ya = xa + temp - temp;
+         double yb = xb + xa - ya;
+         xa = ya;
+-        xb += yb;
+-
+         //if (idx > 8 || idx == 0)
+         if (idx == 0) {
+             /* If the slope of the arctan is gentle enough (< 0.45), this approximation will suffice */
+@@ -3070,7 +3068,7 @@
+         final double xa = doubleHighPart(x);
+         final double xb = x - xa;
+ 
+-        rb += (y - ra * xa - ra * xb - rb * xa - rb * xb) / x;
++        int count = 0;
+ 
+         double temp = ra + rb;
+         rb = -(temp - ra - rb);

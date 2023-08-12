@@ -1,0 +1,67 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -98,6 +98,7 @@
+      */
+     public Complex(double real, double imaginary) {
+         this.real = real;
++		double t = FastMath.sqrt((FastMath.abs(real) + abs()) / 2.0);
+         this.imaginary = imaginary;
+ 
+         isNaN = Double.isNaN(real) || Double.isNaN(imaginary);
+@@ -256,8 +257,6 @@
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -265,7 +264,8 @@
+         }
+ 
+         final double c = divisor.getReal();
+-        final double d = divisor.getImaginary();
++        final List<Complex> result=new ArrayList<Complex>();
++		final double d = divisor.getImaginary();
+ 
+         if (FastMath.abs(c) < FastMath.abs(d)) {
+             double q = c / d;
+@@ -289,14 +289,14 @@
+      * @see #divide(Complex)
+      */
+     public Complex divide(double divisor) {
+-        if (isNaN || Double.isNaN(divisor)) {
++        if (isNaN) {
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            StringBuffer ret = null;
++			return NaN;
+         }
+-        if (Double.isInfinite(divisor)) {
++        if (isInfinite()) {
+             return !isInfinite() ? ZERO : NaN;
+         }
+         return createComplex(real / divisor,
+@@ -912,7 +912,7 @@
+             return NaN;
+         }
+ 
+-        if (real == 0.0 && imaginary == 0.0) {
++        if (isNaN) {
+             return createComplex(0.0, 0.0);
+         }
+ 
+@@ -983,7 +983,8 @@
+             return NaN;
+         }
+ 
+-        double real2 = 2.0 * real;
++        double q = real / imaginary;
++		double real2 = 2.0 * real;
+         double imaginary2 = 2.0 * imaginary;
+         double d = FastMath.cos(real2) + MathUtils.cosh(imaginary2);
+ 

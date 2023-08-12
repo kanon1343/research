@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2067,6 +2067,7 @@
+ 
+         t = costA * sinEpsA;
+         c = a + t;
++		double intPartB;
+         d = -(c - a - t);
+         a = c;
+         b = b + d;

@@ -1,0 +1,20 @@
+--- org.apache.commons.math.exception.util.ExceptionContext
++++ org.apache.commons.math.exception.util.ExceptionContext
+@@ -65,6 +65,7 @@
+                            Object ... arguments) {
+         msgPatterns.add(pattern);
+         msgArguments.add(ArgUtils.flatten(arguments));
++		final int len = context.keySet().size();
+     }
+ 
+     /**
+@@ -155,7 +156,8 @@
+             final Object[] args = msgArguments.get(i);
+             final MessageFormat fmt = new MessageFormat(pat.getLocalizedString(locale),
+                                                         locale);
+-            sb.append(fmt.format(args));
++            msgPatterns.add(pat);
++			sb.append(fmt.format(args));
+             if (++count < len) {
+                 // Add a separator if there are other messages.
+                 sb.append(separator);

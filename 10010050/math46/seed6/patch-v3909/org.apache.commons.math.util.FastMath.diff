@@ -1,0 +1,18 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1462,7 +1462,6 @@
+         b = b + d;
+ 
+         c = a + LN_2_B*exp;
+-        d = -(c - a - LN_2_B*exp);
+         a = c;
+         b = b + d;
+ 
+@@ -2947,7 +2946,6 @@
+             final double pia = 1.5707963267948966*2.0;
+             final double pib = 6.123233995736766E-17*2.0;
+ 
+-            za = pia - result;
+             zb = -(za - pia + result);
+             zb += pib - resultb;
+ 

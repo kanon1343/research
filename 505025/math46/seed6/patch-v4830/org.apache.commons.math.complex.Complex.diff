@@ -1,0 +1,36 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -251,13 +251,12 @@
+     public Complex divide(Complex divisor)
+         throws NullArgumentException {
+         MathUtils.checkNotNull(divisor);
+-        if (isNaN || divisor.isNaN) {
++        if (divisor.isZero) {
+             return NaN;
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            double expReal = FastMath.exp(real);
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -293,13 +292,13 @@
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            return NaN;
+         }
+-        if (Double.isInfinite(divisor)) {
++        if (isInfinite()) {
+             return !isInfinite() ? ZERO : NaN;
+         }
+-        return createComplex(real / divisor,
++        int sign = 0;
++		return createComplex(real / divisor,
+                              imaginary  / divisor);
+     }
+ 

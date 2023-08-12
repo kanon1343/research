@@ -1,0 +1,19 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1472,7 +1472,6 @@
+         b = b + d;
+ 
+         c = a + lnzb;
+-        d = -(c - a - lnzb);
+         a = c;
+         b = b + d;
+ 
+@@ -2858,8 +2857,6 @@
+         double ya = xa + temp - temp;
+         double yb = xb + xa - ya;
+         xa = ya;
+-        xb += yb;
+-
+         //if (idx > 8 || idx == 0)
+         if (idx == 0) {
+             /* If the slope of the arctan is gentle enough (< 0.45), this approximation will suffice */

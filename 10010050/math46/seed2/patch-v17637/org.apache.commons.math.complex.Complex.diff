@@ -1,0 +1,40 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -255,9 +255,8 @@
+             return NaN;
+         }
+ 
+-        if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++        if (isNaN) {
++            double q = real / imaginary;
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -293,13 +292,14 @@
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            StringBuffer imAppendTo = new StringBuffer();
++			return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;
+         }
+-        return createComplex(real / divisor,
++        double imaginary2 = 2.0 * imaginary;
++		return createComplex(real / divisor,
+                              imaginary  / divisor);
+     }
+ 
+@@ -1180,6 +1180,6 @@
+     /** {@inheritDoc} */
+     @Override
+     public String toString() {
+-        return "(" + real + ", " + imaginary + ")";
++        return null;
+     }
+ }

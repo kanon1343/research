@@ -1,0 +1,61 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -460,7 +460,6 @@
+       }
+ 
+       if (negate) {
+-          result = -result;
+       }
+ 
+       return result;
+@@ -749,15 +748,7 @@
+                 return 0.0;
+             }
+ 
+-            if (intVal > 709) {
+-                /* This will produce a subnormal output */
+-                final double result = exp(x+40.19140625, extra, hiPrec) / 285040095144011776.0;
+-                if (hiPrec != null) {
+-                    hiPrec[0] /= 285040095144011776.0;
+-                    hiPrec[1] /= 285040095144011776.0;
+-                }
+-                return result;
+-            }
++            if (intVal > 709)
+ 
+             if (intVal == 709) {
+                 /* exp(1.494140625) is nearly a machine number... */
+@@ -917,8 +908,6 @@
+         double za = epsilon;
+         double temp = za + zb;
+         zb = -(temp - za - zb);
+-        za = temp;
+-
+         temp = za * HEX_40000000;
+         temp = za + temp - temp;
+         zb += za - temp;
+@@ -2067,7 +2056,6 @@
+ 
+         t = costA * sinEpsA;
+         c = a + t;
+-        d = -(c - a - t);
+         a = c;
+         b = b + d;
+ 
+@@ -3073,7 +3061,7 @@
+         rb += (y - ra * xa - ra * xb - rb * xa - rb * xb) / x;
+ 
+         double temp = ra + rb;
+-        rb = -(temp - ra - rb);
++		double logSum = 0;
+         ra = temp;
+ 
+         if (ra == 0) { // Fix up the sign so atan works correctly
+@@ -3156,7 +3144,6 @@
+       rb += -x * dx / y / y;  // Add in effect additional bits of sqrt.
+ 
+       temp = ra + rb;
+-      rb = -(temp - ra - rb);
+       ra = temp;
+ 
+       return atan(ra, rb, false);

@@ -1,0 +1,11 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -3074,8 +3074,6 @@
+ 
+         double temp = ra + rb;
+         rb = -(temp - ra - rb);
+-        ra = temp;
+-
+         if (ra == 0) { // Fix up the sign so atan works correctly
+             ra = copySign(0.0, y);
+         }

@@ -1,0 +1,18 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -460,7 +460,6 @@
+       }
+ 
+       if (negate) {
+-          result = -result;
+       }
+ 
+       return result;
+@@ -3073,6 +3072,7 @@
+         rb += (y - ra * xa - ra * xb - rb * xa - rb * xb) / x;
+ 
+         double temp = ra + rb;
++		double logSum = 0;
+         rb = -(temp - ra - rb);
+         ra = temp;
+ 

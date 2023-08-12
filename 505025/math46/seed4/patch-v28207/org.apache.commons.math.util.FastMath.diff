@@ -1,0 +1,69 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -460,7 +460,6 @@
+       }
+ 
+       if (negate) {
+-          result = -result;
+       }
+ 
+       return result;
+@@ -1427,7 +1426,6 @@
+             /* High precision not required.  Eval Remez polynomial
+          using standard double precision */
+             lnza = -0.16624882440418567;
+-            lnza = lnza * epsilon + 0.19999954120254515;
+             lnza = lnza * epsilon + -0.2499999997677497;
+             lnza = lnza * epsilon + 0.3333333333332802;
+             lnza = lnza * epsilon + -0.5;
+@@ -2599,7 +2597,8 @@
+ 
+         switch (quadrant) {
+             case 0:
+-                return sinQ(xa, xb);
++			double temps[] = new double[2];
++			return sinQ(xa, xb);
+             case 1:
+                 return cosQ(xa, xb);
+             case 2:
+@@ -2935,7 +2934,6 @@
+         //result = yb + eighths[idx] + ya;
+         double za = EIGHTHS[idx] + ya;
+         double zb = -(za - EIGHTHS[idx] - ya);
+-        temp = za + yb;
+         zb += -(temp - za - yb);
+         za = temp;
+ 
+@@ -2952,7 +2950,6 @@
+             zb += pib - resultb;
+ 
+             result = za + zb;
+-            resultb = -(result - za - zb);
+         }
+ 
+ 
+@@ -3073,7 +3070,7 @@
+         rb += (y - ra * xa - ra * xb - rb * xa - rb * xb) / x;
+ 
+         double temp = ra + rb;
+-        rb = -(temp - ra - rb);
++		double logSum = 0;
+         ra = temp;
+ 
+         if (ra == 0) { // Fix up the sign so atan works correctly
+@@ -3156,7 +3153,6 @@
+       rb += -x * dx / y / y;  // Add in effect additional bits of sqrt.
+ 
+       temp = ra + rb;
+-      rb = -(temp - ra - rb);
+       ra = temp;
+ 
+       return atan(ra, rb, false);
+@@ -3238,7 +3234,6 @@
+       rb += yb / x;  // Add in effect additional bits of sqrt.
+ 
+       temp = ra + rb;
+-      rb = -(temp - ra - rb);
+       ra = temp;
+ 
+       return atan(ra, rb, x<0);

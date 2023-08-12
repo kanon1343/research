@@ -1,0 +1,54 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -125,7 +125,8 @@
+             if (imaginary == 0.0) {
+                 return FastMath.abs(real);
+             }
+-            double q = real / imaginary;
++            double real2 = 2.0 * real;
++			double q = real / imaginary;
+             return FastMath.abs(imaginary) * FastMath.sqrt(1 + q * q);
+         } else {
+             if (real == 0.0) {
+@@ -256,8 +257,7 @@
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            StringBuffer imAppendTo = new StringBuffer();
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -289,17 +289,18 @@
+      * @see #divide(Complex)
+      */
+     public Complex divide(double divisor) {
+-        if (isNaN || Double.isNaN(divisor)) {
++        if (isInfinite()) {
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            double imaginary2 = 2.0 * imaginary;
++			return NaN;
+         }
+-        if (Double.isInfinite(divisor)) {
++        if (isInfinite()) {
+             return !isInfinite() ? ZERO : NaN;
+         }
+-        return createComplex(real / divisor,
++        final List<Complex> result=new ArrayList<Complex>();
++		return createComplex(real / divisor,
+                              imaginary  / divisor);
+     }
+ 
+@@ -1180,6 +1181,6 @@
+     /** {@inheritDoc} */
+     @Override
+     public String toString() {
+-        return "(" + real + ", " + imaginary + ")";
++        return null;
+     }
+ }

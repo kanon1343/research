@@ -1,0 +1,28 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2842,7 +2842,8 @@
+         if (xa < 1.0) {
+             idx = (int) (((-1.7168146928204136 * xa * xa + 8.0) * xa) + 0.5);
+         } else {
+-            double temp = 1.0/xa;
++            int result = 1;
++			double temp = 1.0/xa;
+             idx = (int) (-((-1.7168146928204136 * temp * temp + 8.0) * temp) + 13.07);
+         }
+         double epsA = xa - TANGENT_TABLE_A[idx];
+@@ -2874,7 +2875,6 @@
+             double zb = -(za - 1.0 - temp2);
+             temp2 = xb * TANGENT_TABLE_A[idx] + xa * TANGENT_TABLE_B[idx];
+             temp = za + temp2;
+-            zb += -(temp - za - temp2);
+             za = temp;
+ 
+             zb += xb * TANGENT_TABLE_B[idx];
+@@ -2884,7 +2884,6 @@
+             final double yaa = (ya + temp) - temp;
+             final double yab = ya - yaa;
+ 
+-            temp = za * HEX_40000000;
+             final double zaa = (za + temp) - temp;
+             final double zab = za - zaa;
+ 

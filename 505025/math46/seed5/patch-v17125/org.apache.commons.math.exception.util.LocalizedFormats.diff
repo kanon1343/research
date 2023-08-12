@@ -1,0 +1,26 @@
+--- org.apache.commons.math.exception.util.LocalizedFormats
++++ org.apache.commons.math.exception.util.LocalizedFormats
+@@ -354,6 +354,7 @@
+      */
+     private LocalizedFormats(final String sourceFormat) {
+         this.sourceFormat = sourceFormat;
++		final StringBuilder sb = new StringBuilder();
+     }
+ 
+     /** {@inheritDoc} */
+@@ -364,7 +365,14 @@
+     /** {@inheritDoc} */
+     public String getLocalizedString(final Locale locale) {
+         try {
+-            ResourceBundle bundle =
++            try {
++				ResourceBundle bundle = ResourceBundle.getBundle("META-INF/localization/LocalizedFormats", locale);
++				if (bundle.getLocale().getLanguage().equals(locale.getLanguage())) {
++					return bundle.getString(toString());
++				}
++			} catch (MissingResourceException mre) {
++			}
++			ResourceBundle bundle =
+                     ResourceBundle.getBundle("META-INF/localization/LocalizedFormats", locale);
+             if (bundle.getLocale().getLanguage().equals(locale.getLanguage())) {
+                 // the value of the resource is the translated format

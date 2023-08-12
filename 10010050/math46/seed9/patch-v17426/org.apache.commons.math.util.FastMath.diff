@@ -1,0 +1,20 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2858,8 +2858,6 @@
+         double ya = xa + temp - temp;
+         double yb = xb + xa - ya;
+         xa = ya;
+-        xb += yb;
+-
+         //if (idx > 8 || idx == 0)
+         if (idx == 0) {
+             /* If the slope of the arctan is gentle enough (< 0.45), this approximation will suffice */
+@@ -3074,8 +3072,6 @@
+ 
+         double temp = ra + rb;
+         rb = -(temp - ra - rb);
+-        ra = temp;
+-
+         if (ra == 0) { // Fix up the sign so atan works correctly
+             ra = copySign(0.0, y);
+         }

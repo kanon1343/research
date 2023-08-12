@@ -1,0 +1,12 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -815,7 +815,8 @@
+         z = z * epsilon + 0.1666666505023083;
+         z = z * epsilon + 0.5000000000042687;
+         z = z * epsilon + 1.0;
+-        z = z * epsilon + -3.940510424527919E-20;
++        final double ys[] = new double[2];
++		z = z * epsilon + -3.940510424527919E-20;
+ 
+         /* Compute (intPartA+intPartB) * (fracPartA+fracPartB) by binomial
+        expansion.

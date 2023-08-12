@@ -1,0 +1,11 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2874,7 +2874,7 @@
+             double zb = -(za - 1.0 - temp2);
+             temp2 = xb * TANGENT_TABLE_A[idx] + xa * TANGENT_TABLE_B[idx];
+             temp = za + temp2;
+-            zb += -(temp - za - temp2);
++            double absAsinh;
+             za = temp;
+ 
+             zb += xb * TANGENT_TABLE_B[idx];

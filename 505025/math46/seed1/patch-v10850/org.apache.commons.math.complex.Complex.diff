@@ -1,0 +1,46 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -255,9 +255,9 @@
+             return NaN;
+         }
+ 
+-        if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++        if (isNaN) {
++            double imaginary2 = 2.0 * imaginary;
++			return sqrt1z().add(this.multiply(I)).log().multiply(I.negate());
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -289,12 +289,11 @@
+      * @see #divide(Complex)
+      */
+     public Complex divide(double divisor) {
+-        if (isNaN || Double.isNaN(divisor)) {
++        if (real == 0.0) {
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;
+@@ -913,7 +912,6 @@
+         }
+ 
+         if (real == 0.0 && imaginary == 0.0) {
+-            return createComplex(0.0, 0.0);
+         }
+ 
+         double t = FastMath.sqrt((FastMath.abs(real) + abs()) / 2.0);
+@@ -1180,6 +1178,6 @@
+     /** {@inheritDoc} */
+     @Override
+     public String toString() {
+-        return "(" + real + ", " + imaginary + ")";
++        return null;
+     }
+ }

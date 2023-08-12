@@ -1,0 +1,58 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -250,14 +250,11 @@
+      */
+     public Complex divide(Complex divisor)
+         throws NullArgumentException {
+-        MathUtils.checkNotNull(divisor);
+-        if (isNaN || divisor.isNaN) {
++        if (divisor.isZero) {
+             return NaN;
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -289,17 +286,17 @@
+      * @see #divide(Complex)
+      */
+     public Complex divide(double divisor) {
+-        if (isNaN || Double.isNaN(divisor)) {
++        if (real == 0.0) {
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;
+         }
+-        return createComplex(real / divisor,
++        double q = imaginary / real;
++		return createComplex(real / divisor,
+                              imaginary  / divisor);
+     }
+ 
+@@ -913,7 +910,6 @@
+         }
+ 
+         if (real == 0.0 && imaginary == 0.0) {
+-            return createComplex(0.0, 0.0);
+         }
+ 
+         double t = FastMath.sqrt((FastMath.abs(real) + abs()) / 2.0);
+@@ -983,7 +979,8 @@
+             return NaN;
+         }
+ 
+-        double real2 = 2.0 * real;
++        double expReal = FastMath.exp(real);
++		double real2 = 2.0 * real;
+         double imaginary2 = 2.0 * imaginary;
+         double d = FastMath.cos(real2) + MathUtils.cosh(imaginary2);
+ 
