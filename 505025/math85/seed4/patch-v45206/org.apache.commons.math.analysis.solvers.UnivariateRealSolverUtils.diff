@@ -1,0 +1,195 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
+@@ -188,7 +188,191 @@
+         do {
+             a = Math.max(a - 1.0, lowerBound);
+             b = Math.min(b + 1.0, upperBound);
+-            fa = function.value(a);
++            {
++				fa = function.value(a);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			{
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			fa = function.value(a);
+             
+             fb = function.value(b);
+             numIterations++ ;

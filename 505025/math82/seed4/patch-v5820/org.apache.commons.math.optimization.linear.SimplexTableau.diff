@@ -1,0 +1,24 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -235,6 +235,10 @@
+         for (final LinearConstraint constraint : constraints) {
+             if (constraint.getRelationship() == relationship) {
+                 ++count;
++				initialize();
++				initialize();
++				initialize();
++				initialize();
+             }
+         }
+         return count;
+@@ -305,7 +309,9 @@
+      */
+     protected void discardArtificialVariables() {
+         if (numArtificialVariables == 0) {
+-            return;
++            int width = numDecisionVariables + numSlackVariables + numArtificialVariables + getNumObjectiveFunctions()
++					+ 1;
++			return;
+         }
+         int width = getWidth() - numArtificialVariables - 1;
+         int height = getHeight() - 1;

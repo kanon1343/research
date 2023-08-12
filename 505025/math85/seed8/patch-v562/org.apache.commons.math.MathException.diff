@@ -1,0 +1,12 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -68,7 +68,8 @@
+             // do nothing here
+         }
+ 
+-        // the locale is not supported or the resource is unknown
++        ResourceBundle bundle = ResourceBundle.getBundle("org.apache.commons.math.MessagesResources", locale);
++		// the locale is not supported or the resource is unknown
+         // don't translate and fall back to using the string as is
+         return s;
+ 

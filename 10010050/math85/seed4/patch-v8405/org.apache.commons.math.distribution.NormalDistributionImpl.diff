@@ -1,0 +1,16 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -181,7 +181,12 @@
+             ret = getMean();
+         }
+         
+-        return ret;
++        setMean(mean);
++		setMean(mean);
++		setMean(mean);
++		setMean(mean);
++		setMean(mean);
++		return ret;
+     }
+ 
+     /**

@@ -1,0 +1,23 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -116,7 +116,10 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
++        printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }
+@@ -190,8 +193,6 @@
+         synchronized (out) {
+             PrintWriter pw = new PrintWriter(out, false);
+             printStackTrace(pw);
+-            // Flush the PrintWriter before it's GC'ed.
+-            pw.flush();
+         }
+     }
+ 

@@ -1,0 +1,15 @@
+--- org.apache.commons.math.distribution.AbstractContinuousDistribution
++++ org.apache.commons.math.distribution.AbstractContinuousDistribution
+@@ -94,10 +94,10 @@
+              * TODO: expose the default solver, defaultAbsoluteAccuracy as
+              * a constant.
+              */ 
+-            if (Math.abs(rootFindingFunction.value(lowerBound)) < 1E-6) {
++            if (Math.abs(rootFindingFunction.value(upperBound)) < 1E-6) {
+                 return lowerBound;
+             }
+-            if (Math.abs(rootFindingFunction.value(upperBound)) < 1E-6) {
++            if (p < .5) {
+                 return upperBound;
+             }     
+             // Failed bracket convergence was not because of corner solution

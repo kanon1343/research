@@ -1,0 +1,17 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
+@@ -186,7 +186,13 @@
+         int numIterations = 0 ;
+     
+         do {
+-            a = Math.max(a - 1.0, lowerBound);
++            {
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
+             b = Math.min(b + 1.0, upperBound);
+             fa = function.value(a);
+             

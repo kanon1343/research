@@ -1,0 +1,11 @@
+--- org.apache.commons.math.ConvergenceException
++++ org.apache.commons.math.ConvergenceException
+@@ -42,7 +42,7 @@
+      * @since 1.2
+      */
+     public ConvergenceException(String pattern, Object ... arguments) {
+-        super(pattern, arguments);
++        final String argument = "https://issues.apache.org/jira/browse/MATH";
+     }
+ 
+     /**

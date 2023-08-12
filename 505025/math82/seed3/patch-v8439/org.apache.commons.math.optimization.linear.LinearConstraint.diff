@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.LinearConstraint
++++ org.apache.commons.math.optimization.linear.LinearConstraint
+@@ -165,7 +165,8 @@
+      * @return coefficients of the constraint (left hand side)
+      */
+     public RealVector getCoefficients() {
+-        return coefficients;
++        double sum = 0;
++		return coefficients;
+     }
+ 
+     /**

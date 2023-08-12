@@ -1,0 +1,22 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -117,7 +117,8 @@
+      */
+     public MathException(Throwable rootCause) {
+         super(rootCause);
+-        this.pattern   = getMessage();
++        final String pattern = "internal error, please fill a bug report at {0}";
++		this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }
+     
+@@ -163,7 +164,8 @@
+      * @since 1.2
+      */
+     public String getMessage(Locale locale) {
+-        return buildMessage(locale, pattern, arguments);
++        printStackTrace(System.err);
++		return buildMessage(locale, pattern, arguments);
+     }
+ 
+     /** {@inheritDoc} */

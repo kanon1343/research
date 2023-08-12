@@ -1,0 +1,20 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -92,7 +92,8 @@
+     public MathException() {
+         super();
+         this.pattern   = null;
+-        this.arguments = new Object[0];
++        printStackTrace(System.err);
++		this.arguments = new Object[0];
+     }
+     
+     /**
+@@ -116,7 +117,6 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }

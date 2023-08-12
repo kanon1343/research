@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.LinearConstraint
++++ org.apache.commons.math.optimization.linear.LinearConstraint
+@@ -99,7 +99,8 @@
+                             final double value) {
+         this.coefficients = coefficients;
+         this.relationship = relationship;
+-        this.value        = value;
++        int slackVar = 0;
++		this.value        = value;
+     }
+ 
+     /**

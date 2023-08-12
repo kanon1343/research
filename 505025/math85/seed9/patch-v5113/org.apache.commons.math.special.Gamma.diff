@@ -1,0 +1,18 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -98,6 +98,7 @@
+                 sum = sum + (lanczos[i] / (x + i));
+             }
+             sum = sum + lanczos[0];
++			double inv = 1 / (x * x);
+ 
+             double tmp = x + g + .5;
+             ret = ((x + .5) * Math.log(tmp)) - tmp +
+@@ -172,6 +173,7 @@
+             while (Math.abs(an) > epsilon && n < maxIterations) {
+                 // compute next element in the series
+                 n = n + 1.0;
++				ret = Double.NaN;
+                 an = an * (x / (a + n));
+ 
+                 // update partial sum

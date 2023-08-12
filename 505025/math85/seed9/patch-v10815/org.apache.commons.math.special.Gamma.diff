@@ -1,0 +1,15 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -172,6 +172,12 @@
+             while (Math.abs(an) > epsilon && n < maxIterations) {
+                 // compute next element in the series
+                 n = n + 1.0;
++				ret = Double.NaN;
++				ret = Double.NaN;
++				ret = Double.NaN;
++				ret = Double.NaN;
++				ret = Double.NaN;
++				ret = Double.NaN;
+                 an = an * (x / (a + n));
+ 
+                 // update partial sum

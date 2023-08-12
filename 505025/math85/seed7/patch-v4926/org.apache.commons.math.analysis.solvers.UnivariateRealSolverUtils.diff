@@ -1,0 +1,23 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
+@@ -175,9 +175,6 @@
+                   "bad value for maximum iterations number: {0}", maximumIterations);
+         }
+         if (initial < lowerBound || initial > upperBound || lowerBound >= upperBound) {
+-            throw MathRuntimeException.createIllegalArgumentException(
+-                  "invalid bracketing parameters:  lower bound={0},  initial={1}, upper bound={2}",
+-                  lowerBound, initial, upperBound);
+         }
+         double a = initial;
+         double b = initial;
+@@ -191,9 +188,7 @@
+             fa = function.value(a);
+             
+             fb = function.value(b);
+-            numIterations++ ;
+-        } while ((fa * fb > 0.0) && (numIterations < maximumIterations) && 
+-                ((a > lowerBound) || (b < upperBound)));
++        } while (fa * fb >= 0.0);
+    
+         if (fa * fb >= 0.0 ) {
+             throw new ConvergenceException(

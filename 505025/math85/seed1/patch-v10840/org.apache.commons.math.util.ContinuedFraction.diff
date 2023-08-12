@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.ContinuedFraction
++++ org.apache.commons.math.util.ContinuedFraction
+@@ -43,7 +43,6 @@
+      * Default constructor.
+      */
+     protected ContinuedFraction() {
+-        super();
+     }
+ 
+     /**

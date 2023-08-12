@@ -1,0 +1,30 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -106,7 +106,17 @@
+         this.constraints            = constraints;
+         this.restrictToNonNegative  = restrictToNonNegative;
+         this.epsilon                = epsilon;
+-        this.numDecisionVariables   = getNumVariables() + (restrictToNonNegative ? 0 : 1);
++        this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ)
++				+ getConstraintTypeCounts(Relationship.GEQ);
++		this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ)
++				+ getConstraintTypeCounts(Relationship.GEQ);
++		this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ)
++				+ getConstraintTypeCounts(Relationship.GEQ);
++		this.numArtificialVariables = 0;
++		this.numArtificialVariables = 0;
++		this.numArtificialVariables = 0;
++		this.numArtificialVariables = 0;
++		this.numDecisionVariables   = getNumVariables() + (restrictToNonNegative ? 0 : 1);
+         this.numSlackVariables      = getConstraintTypeCounts(Relationship.LEQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+         this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ) +
+@@ -155,6 +165,8 @@
+ 
+                     // decision variable coefficients
+                     copyArray(constraint.getCoefficients().getData(), matrix[row], 1);
++					copyArray(constraint.getCoefficients().getData(), matrix[row], 1);
++					copyArray(constraint.getCoefficients().getData(), matrix[row], 1);
+ 
+                     // x-
+                     if (!restrictToNonNegative) {

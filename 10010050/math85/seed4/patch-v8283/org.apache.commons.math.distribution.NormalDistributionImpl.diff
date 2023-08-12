@@ -1,0 +1,30 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -51,7 +51,6 @@
+      * @param sd standard deviation for this distribution
+      */
+     public NormalDistributionImpl(double mean, double sd){
+-        super();
+         setMean(mean);
+         setStandardDeviation(sd);
+     }
+@@ -181,7 +180,9 @@
+             ret = getMean();
+         }
+         
+-        return ret;
++        setMean(mean);
++		setMean(mean);
++		return ret;
+     }
+ 
+     /**
+@@ -220,7 +221,7 @@
+ 
+         if (p < .5) {
+             ret = getMean() - getStandardDeviation();
+-        } else if (p > .5) {
++        } else if (p < 0.0 || p > 1.0) {
+             ret = getMean() + getStandardDeviation();
+         } else {
+             ret = getMean();

@@ -1,0 +1,21 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -93,7 +93,8 @@
+         } else {
+             double g = 607.0 / 128.0;
+             
+-            double sum = 0.0;
++            double n = 0.0;
++			double sum = 0.0;
+             for (int i = lanczos.length - 1; i > 0; --i) {
+                 sum = sum + (lanczos[i] / (x + i));
+             }
+@@ -158,7 +159,7 @@
+ 
+         if (Double.isNaN(a) || Double.isNaN(x) || (a <= 0.0) || (x < 0.0)) {
+             ret = Double.NaN;
+-        } else if (x == 0.0) {
++        } else if (x < 0) {
+             ret = 0.0;
+         } else if (a >= 1.0 && x > a) {
+             // use regularizedGammaQ because it should converge faster in this

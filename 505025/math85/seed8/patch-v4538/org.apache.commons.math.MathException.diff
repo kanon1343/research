@@ -1,0 +1,20 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -106,6 +106,9 @@
+       super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+       this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
++	printStackTrace(System.err);
++	printStackTrace(System.err);
++	printStackTrace(System.err);
+     }
+ 
+     /**
+@@ -189,7 +192,6 @@
+     public void printStackTrace(PrintStream out) {
+         synchronized (out) {
+             PrintWriter pw = new PrintWriter(out, false);
+-            printStackTrace(pw);
+             // Flush the PrintWriter before it's GC'ed.
+             pw.flush();
+         }

@@ -1,0 +1,20 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -231,6 +231,8 @@
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
++				setResult(x1, i);
++				setResult(x1, i);
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+                 // Avoid division by very small values. Assume
+@@ -258,7 +260,7 @@
+                 // the equality test (x0 == x2) is intentional,
+                 // it is part of the original Brent's method,
+                 // it should NOT be replaced by proximity test
+-                if (x0 == x2) {
++                if (Math.abs(y1) <= functionValueAccuracy) {
+                     // Linear interpolation.
+                     p = dx * r3;
+                     p1 = 1.0 - r3;

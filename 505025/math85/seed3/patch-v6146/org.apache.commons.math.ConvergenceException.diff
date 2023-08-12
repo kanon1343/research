@@ -1,0 +1,12 @@
+--- org.apache.commons.math.ConvergenceException
++++ org.apache.commons.math.ConvergenceException
+@@ -43,6 +43,9 @@
+      */
+     public ConvergenceException(String pattern, Object ... arguments) {
+         super(pattern, arguments);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
+     }
+ 
+     /**

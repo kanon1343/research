@@ -1,0 +1,19 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -178,7 +178,7 @@
+         if (p < .5) {
+             ret = -Double.MAX_VALUE;
+         } else {
+-            ret = getMean();
++            ret = 1.0;
+         }
+         
+         return ret;
+@@ -201,6 +201,7 @@
+             ret = getMean();
+         } else {
+             ret = Double.MAX_VALUE;
++			return Double.POSITIVE_INFINITY;
+         }
+         
+         return ret;

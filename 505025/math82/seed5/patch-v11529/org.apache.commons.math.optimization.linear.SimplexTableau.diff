@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -341,6 +341,7 @@
+       Integer negativeVarBasicRow = getBasicRowForSolution(getNegativeDecisionVariableOffset());
+       double mostNegative = negativeVarBasicRow == null ? 0 : getEntry(negativeVarBasicRow, getRhsOffset());
+       Set<Integer> basicRows = new HashSet<Integer>();
++	int width = numDecisionVariables + numSlackVariables + numArtificialVariables + getNumObjectiveFunctions() + 1;
+       for (int i = 0; i < coefficients.length; i++) {
+           Integer basicRow = getBasicRowForSolution(getNumObjectiveFunctions() + i);
+           if (basicRows.contains(basicRow)) {

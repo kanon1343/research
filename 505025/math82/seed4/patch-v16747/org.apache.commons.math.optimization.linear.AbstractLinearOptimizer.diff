@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -102,7 +102,8 @@
+ 
+         iterations  = 0;
+ 
+-        // solve the problem
++        setMaxIterations(DEFAULT_MAX_ITERATIONS);
++		// solve the problem
+         return doOptimize();
+ 
+     }

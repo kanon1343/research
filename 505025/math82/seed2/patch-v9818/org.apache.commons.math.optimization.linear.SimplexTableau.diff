@@ -1,0 +1,27 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -134,14 +134,10 @@
+             matrix[0][0] = -1;
+         }
+         int zIndex = (getNumObjectiveFunctions() == 1) ? 0 : 1;
+-        matrix[zIndex][zIndex] = maximize ? 1 : -1;
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+-            matrix[zIndex][width - 1] =
+-                maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+-
+-                if (!restrictToNonNegative) {
++            if (!restrictToNonNegative) {
+                     matrix[zIndex][getSlackVariableOffset() - 1] =
+                         getInvertedCoeffiecientSum(objectiveCoefficients);
+                 }
+@@ -149,6 +145,8 @@
+                 // initialize the constraint rows
+                 int slackVar = 0;
+                 int artificialVar = 0;
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+                 for (int i = 0; i < constraints.size(); i++) {
+                     LinearConstraint constraint = constraints.get(i);
+                     int row = getNumObjectiveFunctions() + i;

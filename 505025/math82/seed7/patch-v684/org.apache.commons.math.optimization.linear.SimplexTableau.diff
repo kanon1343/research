@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -354,7 +354,8 @@
+                   (restrictToNonNegative ? 0 : mostNegative);
+           }
+       }
+-        return new RealPointValuePair(coefficients, f.getValue(coefficients));
++        int width = getWidth() - numArtificialVariables - 1;
++		return new RealPointValuePair(coefficients, f.getValue(coefficients));
+     }
+ 
+     /**

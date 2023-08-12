@@ -1,0 +1,28 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -90,7 +90,6 @@
+      * detail message.
+      */
+     public MathException() {
+-        super();
+         this.pattern   = null;
+         this.arguments = new Object[0];
+     }
+@@ -105,7 +104,7 @@
+     public MathException(String pattern, Object ... arguments) {
+       super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+-      this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
++      this.arguments = new Object[0];
+     }
+ 
+     /**
+@@ -134,7 +133,7 @@
+     public MathException(Throwable rootCause, String pattern, Object ... arguments) {
+       super(buildMessage(Locale.US, pattern, arguments), rootCause);
+       this.pattern   = pattern;
+-      this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
++      this.arguments = new Object[0];
+     }
+ 
+     /** Gets the pattern used to build the message of this throwable.

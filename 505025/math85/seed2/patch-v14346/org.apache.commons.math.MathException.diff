@@ -1,0 +1,35 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -117,7 +117,11 @@
+      */
+     public MathException(Throwable rootCause) {
+         super(rootCause);
+-        this.pattern   = getMessage();
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }
+     
+@@ -177,7 +181,8 @@
+      */
+     @Override
+     public void printStackTrace() {
+-        printStackTrace(System.err);
++        final String pattern = "internal error, please fill a bug report at {0}";
++		printStackTrace(System.err);
+     }
+     
+     /**
+@@ -189,9 +194,6 @@
+     public void printStackTrace(PrintStream out) {
+         synchronized (out) {
+             PrintWriter pw = new PrintWriter(out, false);
+-            printStackTrace(pw);
+-            // Flush the PrintWriter before it's GC'ed.
+-            pw.flush();
+         }
+     }
+ 

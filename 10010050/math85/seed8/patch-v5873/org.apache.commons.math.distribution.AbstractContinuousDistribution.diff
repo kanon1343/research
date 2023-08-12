@@ -1,0 +1,21 @@
+--- org.apache.commons.math.distribution.AbstractContinuousDistribution
++++ org.apache.commons.math.distribution.AbstractContinuousDistribution
+@@ -43,7 +43,6 @@
+      * Default constructor.
+      */
+     protected AbstractContinuousDistribution() {
+-        super();
+     }
+ 
+     /**
+@@ -99,9 +98,7 @@
+             }
+             if (Math.abs(rootFindingFunction.value(upperBound)) < 1E-6) {
+                 return upperBound;
+-            }     
+-            // Failed bracket convergence was not because of corner solution
+-            throw new MathException(ex);
++            }
+         }
+ 
+         // find root

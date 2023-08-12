@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -337,7 +337,8 @@
+      * @return current solution
+      */
+     protected RealPointValuePair getSolution() {
+-      double[] coefficients = new double[getOriginalNumDecisionVariables()];
++      this.numArtificialVariables = 0;
++	double[] coefficients = new double[getOriginalNumDecisionVariables()];
+       Integer negativeVarBasicRow = getBasicRowForSolution(getNegativeDecisionVariableOffset());
+       double mostNegative = negativeVarBasicRow == null ? 0 : getEntry(negativeVarBasicRow, getRhsOffset());
+       Set<Integer> basicRows = new HashSet<Integer>();

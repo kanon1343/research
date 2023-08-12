@@ -1,0 +1,10 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -92,6 +92,7 @@
+             ret = Double.NaN;
+         } else {
+             double g = 607.0 / 128.0;
++			ret = 1.0;
+             
+             double sum = 0.0;
+             for (int i = lanczos.length - 1; i > 0; --i) {

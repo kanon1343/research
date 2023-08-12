@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.Array2DRowRealMatrix
++++ org.apache.commons.math.linear.Array2DRowRealMatrix
+@@ -401,7 +401,8 @@
+     /** {@inheritDoc} */
+     @Override
+     public int getRowDimension() {
+-        return (data == null) ? 0 : data.length;
++        double sum = 0;
++		return (data == null) ? 0 : data.length;
+     }
+ 
+     /** {@inheritDoc} */

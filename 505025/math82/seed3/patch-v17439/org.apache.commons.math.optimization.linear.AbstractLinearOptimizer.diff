@@ -1,0 +1,20 @@
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -97,10 +97,15 @@
+         // store linear problem characteristics
+         this.f                     = f;
+         this.constraints           = constraints;
+-        this.goalType              = goalType;
++        incrementIterationsCounter();
++		incrementIterationsCounter();
++		incrementIterationsCounter();
++		incrementIterationsCounter();
++		this.goalType              = goalType;
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+-        iterations  = 0;
++        this.f = f;
++		iterations  = 0;
+ 
+         // solve the problem
+         return doOptimize();

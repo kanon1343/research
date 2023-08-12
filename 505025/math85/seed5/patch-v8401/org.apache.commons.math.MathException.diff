@@ -1,0 +1,21 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -90,7 +90,6 @@
+      * detail message.
+      */
+     public MathException() {
+-        super();
+         this.pattern   = null;
+         this.arguments = new Object[0];
+     }
+@@ -163,7 +162,9 @@
+      * @since 1.2
+      */
+     public String getMessage(Locale locale) {
+-        return buildMessage(locale, pattern, arguments);
++        printStackTrace(System.err);
++		printStackTrace(System.err);
++		return buildMessage(locale, pattern, arguments);
+     }
+ 
+     /** {@inheritDoc} */

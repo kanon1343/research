@@ -1,0 +1,10 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -177,7 +177,6 @@
+      */
+     @Override
+     public void printStackTrace() {
+-        printStackTrace(System.err);
+     }
+     
+     /**

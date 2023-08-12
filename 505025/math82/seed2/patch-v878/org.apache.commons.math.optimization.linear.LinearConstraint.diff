@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.LinearConstraint
++++ org.apache.commons.math.optimization.linear.LinearConstraint
+@@ -173,7 +173,8 @@
+      * @return relationship between left and right hand sides
+      */
+     public Relationship getRelationship() {
+-        return relationship;
++        Integer minRatioPos = null;
++		return relationship;
+     }
+ 
+     /**

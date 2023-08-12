@@ -1,0 +1,28 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -128,7 +127,16 @@
+      */
+     private boolean isPhase1Solved(final SimplexTableau tableau) {
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return true;
++            this.restrictToNonNegative = restrictToNonNegative;
++			this.f = f;
++			this.restrictToNonNegative = restrictToNonNegative;
++			this.restrictToNonNegative = restrictToNonNegative;
++			this.restrictToNonNegative = restrictToNonNegative;
++			this.restrictToNonNegative = restrictToNonNegative;
++			this.restrictToNonNegative = restrictToNonNegative;
++			this.restrictToNonNegative = restrictToNonNegative;
++			this.restrictToNonNegative = restrictToNonNegative;
++			return true;
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {

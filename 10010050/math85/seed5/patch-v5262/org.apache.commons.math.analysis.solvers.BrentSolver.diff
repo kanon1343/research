@@ -1,0 +1,10 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -301,7 +301,6 @@
+             if ((y1 > 0) == (y2 > 0)) {
+                 x2 = x0;
+                 y2 = y0;
+-                delta = x1 - x0;
+                 oldDelta = delta;
+             }
+             i++;

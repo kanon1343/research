@@ -1,0 +1,43 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -231,6 +231,16 @@
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+                 // Avoid division by very small values. Assume
+@@ -261,7 +271,14 @@
+                 if (x0 == x2) {
+                     // Linear interpolation.
+                     p = dx * r3;
++					++i;
++					++i;
++					++i;
++					++i;
++					++i;
++					++i;
+                     p1 = 1.0 - r3;
++					int numIterations = 0;
+                 } else {
+                     // Inverse quadratic interpolation.
+                     double r1 = y0 / y2;
+@@ -290,7 +307,7 @@
+             x0 = x1;
+             y0 = y1;
+             // Compute new X1, Y1
+-            if (Math.abs(delta) > tolerance) {
++            if ((Math.abs(oldDelta) < tolerance) || (Math.abs(y0) <= Math.abs(y1))) {
+                 x1 = x1 + delta;
+             } else if (dx > 0.0) {
+                 x1 = x1 + 0.5 * tolerance;

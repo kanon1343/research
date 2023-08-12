@@ -1,0 +1,45 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -135,7 +134,9 @@
+                 return false;
+             }
+         }
+-        return true;
++        this.f = f;
++		this.f = f;
++		return true;
+     }
+ 
+     /**
+@@ -166,7 +167,22 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
++            this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			this.constraints = constraints;
++			return;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {

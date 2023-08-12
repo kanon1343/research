@@ -1,0 +1,18 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -116,7 +116,6 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }
+@@ -189,6 +188,7 @@
+     public void printStackTrace(PrintStream out) {
+         synchronized (out) {
+             PrintWriter pw = new PrintWriter(out, false);
++			final String argument = "https://issues.apache.org/jira/browse/MATH";
+             printStackTrace(pw);
+             // Flush the PrintWriter before it's GC'ed.
+             pw.flush();

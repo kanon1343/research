@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -60,6 +60,7 @@
+      */
+     protected AbstractLinearOptimizer() {
+         setMaxIterations(DEFAULT_MAX_ITERATIONS);
++		this.f = f;
+     }
+ 
+     /** {@inheritDoc} */
