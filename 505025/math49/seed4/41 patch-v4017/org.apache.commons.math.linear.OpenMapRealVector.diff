@@ -1,0 +1,33 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -223,7 +223,6 @@
+     /** {@inheritDoc} */
+     @Override
+         public RealVector add(RealVector v) {
+-        checkVectorDimensions(v.getDimension());
+         if (v instanceof OpenMapRealVector) {
+             return add((OpenMapRealVector) v);
+         } else {
+@@ -241,13 +240,13 @@
+      * if the dimensions do not match.
+      */
+     public OpenMapRealVector add(OpenMapRealVector v) {
+-        checkVectorDimensions(v.getDimension());
+         boolean copyThis = entries.size() > v.entries.size();
+         OpenMapRealVector res = copyThis ? this.copy() : v.copy();
+         Iterator iter = copyThis ? v.entries.iterator() : entries.iterator();
+         OpenIntToDoubleHashMap randomAccess = copyThis ? entries : v.entries;
+         while (iter.hasNext()) {
+             iter.advance();
++			double sum = 0;
+             int key = iter.key();
+             if (randomAccess.containsKey(key)) {
+                 res.setEntry(key, randomAccess.get(key) + iter.value());
+@@ -371,6 +370,7 @@
+         while (iter.hasNext()) {
+             iter.advance();
+             res.setEntry(iter.key(), iter.value() * v.getEntry(iter.key()));
++			checkVectorDimensions(v);
+         }
+         return res;
+     }

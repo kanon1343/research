@@ -1,0 +1,53 @@
+,世代,時間,出力数,前世代までの合計
+0,4th, 37 seconds,1,0
+1,6th, 59 seconds,1,1
+2,7th, 1 minutes 10 seconds,2,2
+3,9th, 16 minutes 33 seconds,1,4
+4,10th, 16 minutes 45 seconds,2,5
+5,11th, 16 minutes 57 seconds,1,7
+6,13th, 17 minutes 21 seconds,2,8
+7,14th, 17 minutes 35 seconds,1,10
+8,16th, 18 minutes 0 seconds,2,11
+9,18th, 18 minutes 27 seconds,2,13
+10,20th, 18 minutes 53 seconds,1,15
+11,21st, 19 minutes 7 seconds,1,16
+12,23rd, 19 minutes 36 seconds,1,17
+13,28th, 35 minutes 48 seconds,1,18
+14,32nd, 36 minutes 48 seconds,1,19
+15,33rd, 37 minutes 5 seconds,1,20
+16,44th, 40 minutes 13 seconds,1,21
+17,50th, 56 minutes 54 seconds,1,22
+18,56th, 1 hours 13 minutes 38 seconds,1,23
+19,59th, 1 hours 14 minutes 33 seconds,1,24
+20,66th, 1 hours 16 minutes 47 seconds,1,25
+21,68th, 1 hours 32 minutes 27 seconds,1,26
+22,70th, 1 hours 33 minutes 4 seconds,1,27
+23,83rd, 1 hours 52 minutes 36 seconds,1,28
+24,91st, 1 hours 55 minutes 24 seconds,1,29
+25,92nd, 1 hours 55 minutes 44 seconds,1,30
+26,96th, 1 hours 57 minutes 9 seconds,1,31
+27,97th, 1 hours 57 minutes 30 seconds,1,32
+28,111th, 2 hours 32 minutes 49 seconds,1,33
+29,116th, 2 hours 49 minutes 49 seconds,1,34
+30,127th, 2 hours 54 minutes 13 seconds,1,35
+31,130th, 2 hours 55 minutes 22 seconds,1,36
+32,133rd, 3 hours 11 minutes 35 seconds,1,37
+33,134th, 3 hours 11 minutes 59 seconds,1,38
+34,148th, 3 hours 32 minutes 51 seconds,1,39
+35,151st, 3 hours 34 minutes 5 seconds,1,40
+36,168th, 3 hours 41 minutes 28 seconds,1,41
+37,169th, 3 hours 41 minutes 57 seconds,1,42
+38,173rd, 3 hours 43 minutes 50 seconds,2,43
+39,175th, 3 hours 44 minutes 50 seconds,1,45
+40,184th, 3 hours 49 minutes 16 seconds,1,46
+41,215th, 4 hours 24 minutes 33 seconds,1,47
+42,231st, 4 hours 34 minutes 34 seconds,1,48
+43,236th, 4 hours 52 minutes 58 seconds,1,49
+44,247th, 5 hours 34 seconds,1,50
+45,255th, 5 hours 5 minutes 56 seconds,1,51
+46,260th, 5 hours 9 minutes 32 seconds,1,52
+47,295th, 6 hours 20 minutes 23 seconds,2,53
+48,366th, 7 hours 36 minutes 27 seconds,2,55
+49,386th, 7 hours 54 minutes 50 seconds,1,57
+50,416th, 8 hours 39 minutes 54 seconds,1,58
+51,453rd, 9 hours 18 minutes 16 seconds,1,59

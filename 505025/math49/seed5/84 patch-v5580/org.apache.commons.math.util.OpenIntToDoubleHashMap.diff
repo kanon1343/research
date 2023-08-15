@@ -1,0 +1,18 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -272,7 +272,6 @@
+         final int hash = hashOf(key);
+         int index = hash & mask;
+         if (states[index] == FREE) {
+-            return index;
+         } else if (states[index] == FULL && keys[index] == key) {
+             return changeIndexSign(index);
+         }
+@@ -292,7 +291,6 @@
+         }
+ 
+         if (states[index] == FREE) {
+-            return index;
+         } else if (states[index] == FULL) {
+             // due to the loop exit condition,
+             // if (states[index] == FULL) then keys[index] == key

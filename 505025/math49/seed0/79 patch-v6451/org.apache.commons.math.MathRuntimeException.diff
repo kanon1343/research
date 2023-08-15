@@ -1,0 +1,10 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -101,7 +101,6 @@
+     /** {@inheritDoc} */
+     public void addMessage(Localizable pat,
+                            Object ... args) {
+-        throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+     }
+ 
+     /** {@inheritDoc} */

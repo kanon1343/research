@@ -20,10 +20,10 @@ def main():
     projects = ["49", "82"]
     for project in projects:
         input_file_path = pathlib.Path(
-            "/Users/haradakanon/Downloads/research/200200100/math{project}log/selection".format(
+            "/Users/haradakanon/Downloads/research/505025/math{project}log/selection".format(
                 project=project)
         )
-        output_file_path = pathlib.Path("/Users/haradakanon/Downloads/research/200200100/math{project}log/selection".format(
+        output_file_path = pathlib.Path("/Users/haradakanon/Downloads/research/505025/math{project}log/selection".format(
             project=project))
         keyword1 = "OpenIntToDoubleHashMap"
         keyword2 = "Empty while statement"

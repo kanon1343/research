@@ -1,0 +1,12 @@
+--- org.apache.commons.math.exception.util.LocalizedFormats
++++ org.apache.commons.math.exception.util.LocalizedFormats
+@@ -358,7 +358,8 @@
+ 
+     /** {@inheritDoc} */
+     public String getSourceString() {
+-        return sourceFormat;
++        final StringBuilder sb = new StringBuilder();
++		return sourceFormat;
+     }
+ 
+     /** {@inheritDoc} */

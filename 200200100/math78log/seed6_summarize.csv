@@ -1,35 +1,35 @@
 ,世代,時間,出力数,前世代までの合計
-0,1st, 18s,4,0
-1,3rd, 3m42s,2,4
-2,5th, 4m24s,1,6
-3,7th, 5m9s,1,7
-4,8th, 5m33s,1,8
-5,12th, 13m23s,3,9
-6,16th, 21m28s,1,12
-7,17th, 22m0s,1,13
-8,18th, 22m33s,2,14
-9,20th, 26m39s,1,16
-10,23rd, 28m27s,2,17
-11,24th, 28m57s,5,19
-12,25th, 29m26s,2,24
-13,26th, 29m58s,4,26
-14,27th, 33m29s,3,30
-15,28th, 34m5s,2,33
-16,29th, 34m35s,1,35
-17,34th, 49m8s,7,36
-18,35th, 49m42s,6,43
-19,36th, 50m15s,2,49
-20,37th, 50m47s,4,51
-21,38th, 54m23s,1,55
-22,39th, 54m53s,8,56
-23,40th, 55m29s,4,64
-24,41st, 56m4s,3,68
-25,42nd, 59m33s,3,71
-26,43rd, 1h3m6s,3,74
-27,44th, 1h6m40s,5,77
-28,45th, 1h13m25s,3,82
-29,46th, 1h17m7s,5,85
-30,47th, 1h20m45s,2,90
-31,48th, 1h27m31s,3,92
-32,49th, 1h31m10s,2,95
-33,50th, 1h31m16s,3,97
+0,1st, 18 seconds,4,0
+1,3rd, 3 minutes 42 seconds,2,4
+2,5th, 4 minutes 24 seconds,1,6
+3,7th, 5 minutes 9 seconds,1,7
+4,8th, 5 minutes 33 seconds,1,8
+5,12th, 13 minutes 23 seconds,3,9
+6,16th, 21 minutes 28 seconds,1,12
+7,17th, 22 minutes 0 seconds,1,13
+8,18th, 22 minutes 33 seconds,2,14
+9,20th, 26 minutes 39 seconds,1,16
+10,23rd, 28 minutes 27 seconds,2,17
+11,24th, 28 minutes 57 seconds,5,19
+12,25th, 29 minutes 26 seconds,2,24
+13,26th, 29 minutes 58 seconds,4,26
+14,27th, 33 minutes 29 seconds,3,30
+15,28th, 34 minutes 5 seconds,2,33
+16,29th, 34 minutes 35 seconds,1,35
+17,34th, 49 minutes 8 seconds,7,36
+18,35th, 49 minutes 42 seconds,6,43
+19,36th, 50 minutes 15 seconds,2,49
+20,37th, 50 minutes 47 seconds,4,51
+21,38th, 54 minutes 23 seconds,1,55
+22,39th, 54 minutes 53 seconds,8,56
+23,40th, 55 minutes 29 seconds,4,64
+24,41st, 56 minutes 4 seconds,3,68
+25,42nd, 59 minutes 33 seconds,3,71
+26,43rd, 1 hours 3 minutes 6 seconds,3,74
+27,44th, 1 hours 6 minutes 40 seconds,5,77
+28,45th, 1 hours 13 minutes 25 seconds,3,82
+29,46th, 1 hours 17 minutes 7 seconds,5,85
+30,47th, 1 hours 20 minutes 45 seconds,2,90
+31,48th, 1 hours 27 minutes 31 seconds,3,92
+32,49th, 1 hours 31 minutes 10 seconds,2,95
+33,50th, 1 hours 31 minutes 16 seconds,3,97

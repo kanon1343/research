@@ -1,0 +1,18 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -371,6 +371,7 @@
+         while (iter.hasNext()) {
+             iter.advance();
+             res.setEntry(iter.key(), iter.value() * v.getEntry(iter.key()));
++			checkVectorDimensions(v);
+         }
+         return res;
+     }
+@@ -390,7 +391,6 @@
+ 
+     /** {@inheritDoc} */
+     public OpenMapRealVector getSubVector(int index, int n) {
+-        checkIndex(index);
+         checkIndex(index + n - 1);
+         OpenMapRealVector res = new OpenMapRealVector(n);
+         int end = index + n;

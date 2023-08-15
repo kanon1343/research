@@ -1,64 +1,64 @@
 ,世代,時間,出力数,前世代までの合計
-0,2nd, 24s,2,0
-1,5th, 1m28s,2,2
-2,6th, 1m47s,1,4
-3,7th, 2m11s,1,5
-4,8th, 17m33s,1,6
-5,9th, 17m57s,2,7
-6,10th, 18m22s,1,9
-7,16th, 35m59s,2,10
-8,17th, 36m27s,1,12
-9,19th, 52m23s,1,13
-10,20th, 52m53s,2,14
-11,23rd, 54m23s,1,16
-12,24th, 54m53s,2,17
-13,25th, 1h10m25s,1,19
-14,26th, 1h10m58s,1,20
-15,27th, 1h11m31s,3,21
-16,28th, 1h12m3s,3,24
-17,30th, 1h13m4s,1,27
-18,31st, 1h13m36s,2,28
-19,33rd, 1h14m43s,1,30
-20,46th, 1h37m43s,1,31
-21,50th, 1h40m25s,2,32
-22,56th, 1h59m23s,1,34
-23,59th, 2h1m19s,1,35
-24,60th, 2h1m56s,1,36
-25,61st, 2h2m36s,2,37
-26,63rd, 2h3m55s,3,39
-27,64th, 2h34m34s,1,42
-28,65th, 2h35m13s,1,43
-29,67th, 2h36m33s,1,44
-30,72nd, 3h10m8s,3,45
-31,73rd, 3h11m1s,1,48
-32,78th, 3h15m37s,2,49
-33,81st, 3h18m20s,1,51
-34,82nd, 3h19m17s,1,52
-35,83rd, 3h20m12s,1,53
-36,85th, 3h22m6s,2,54
-37,86th, 3h23m1s,4,56
-38,87th, 3h23m58s,2,60
-39,88th, 3h24m56s,2,62
-40,89th, 3h25m57s,3,64
-41,90th, 3h26m56s,2,67
-42,92nd, 3h28m54s,1,69
-43,93rd, 3h29m53s,1,70
-44,94th, 3h30m52s,1,71
-45,95th, 3h31m53s,2,72
-46,96th, 3h32m58s,3,74
-47,98th, 3h35m8s,1,77
-48,99th, 3h36m13s,1,78
-49,101st, 3h38m23s,1,79
-50,102nd, 3h39m29s,2,80
-51,103rd, 3h55m33s,2,82
-52,106th, 3h58m45s,1,84
-53,108th, 4h55s,1,85
-54,109th, 4h2m1s,1,86
-55,110th, 4h3m8s,2,87
-56,114th, 4h7m48s,1,89
-57,116th, 4h10m20s,1,90
-58,123rd, 4h19m11s,1,91
-59,127th, 4h24m14s,2,92
-60,128th, 4h25m27s,2,94
-61,129th, 4h26m43s,2,96
-62,131st, 4h28m31s,2,98
+0,2nd, 24 seconds,2,0
+1,5th, 1 minutes 28 seconds,2,2
+2,6th, 1 minutes 47 seconds,1,4
+3,7th, 2 minutes 11 seconds,1,5
+4,8th, 17 minutes 33 seconds,1,6
+5,9th, 17 minutes 57 seconds,2,7
+6,10th, 18 minutes 22 seconds,1,9
+7,16th, 35 minutes 59 seconds,2,10
+8,17th, 36 minutes 27 seconds,1,12
+9,19th, 52 minutes 23 seconds,1,13
+10,20th, 52 minutes 53 seconds,2,14
+11,23rd, 54 minutes 23 seconds,1,16
+12,24th, 54 minutes 53 seconds,2,17
+13,25th, 1 hours 10 minutes 25 seconds,1,19
+14,26th, 1 hours 10 minutes 58 seconds,1,20
+15,27th, 1 hours 11 minutes 31 seconds,3,21
+16,28th, 1 hours 12 minutes 3 seconds,3,24
+17,30th, 1 hours 13 minutes 4 seconds,1,27
+18,31st, 1 hours 13 minutes 36 seconds,2,28
+19,33rd, 1 hours 14 minutes 43 seconds,1,30
+20,46th, 1 hours 37 minutes 43 seconds,1,31
+21,50th, 1 hours 40 minutes 25 seconds,2,32
+22,56th, 1 hours 59 minutes 23 seconds,1,34
+23,59th, 2 hours 1 minutes 19 seconds,1,35
+24,60th, 2 hours 1 minutes 56 seconds,1,36
+25,61st, 2 hours 2 minutes 36 seconds,2,37
+26,63rd, 2 hours 3 minutes 55 seconds,3,39
+27,64th, 2 hours 34 minutes 34 seconds,1,42
+28,65th, 2 hours 35 minutes 13 seconds,1,43
+29,67th, 2 hours 36 minutes 33 seconds,1,44
+30,72nd, 3 hours 10 minutes 8 seconds,3,45
+31,73rd, 3 hours 11 minutes 1 seconds,1,48
+32,78th, 3 hours 15 minutes 37 seconds,2,49
+33,81st, 3 hours 18 minutes 20 seconds,1,51
+34,82nd, 3 hours 19 minutes 17 seconds,1,52
+35,83rd, 3 hours 20 minutes 12 seconds,1,53
+36,85th, 3 hours 22 minutes 6 seconds,2,54
+37,86th, 3 hours 23 minutes 1 seconds,4,56
+38,87th, 3 hours 23 minutes 58 seconds,2,60
+39,88th, 3 hours 24 minutes 56 seconds,2,62
+40,89th, 3 hours 25 minutes 57 seconds,3,64
+41,90th, 3 hours 26 minutes 56 seconds,2,67
+42,92nd, 3 hours 28 minutes 54 seconds,1,69
+43,93rd, 3 hours 29 minutes 53 seconds,1,70
+44,94th, 3 hours 30 minutes 52 seconds,1,71
+45,95th, 3 hours 31 minutes 53 seconds,2,72
+46,96th, 3 hours 32 minutes 58 seconds,3,74
+47,98th, 3 hours 35 minutes 8 seconds,1,77
+48,99th, 3 hours 36 minutes 13 seconds,1,78
+49,101st, 3 hours 38 minutes 23 seconds,1,79
+50,102nd, 3 hours 39 minutes 29 seconds,2,80
+51,103rd, 3 hours 55 minutes 33 seconds,2,82
+52,106th, 3 hours 58 minutes 45 seconds,1,84
+53,108th, 4 hours 55 seconds,1,85
+54,109th, 4 hours 2 minutes 1 seconds,1,86
+55,110th, 4 hours 3 minutes 8 seconds,2,87
+56,114th, 4 hours 7 minutes 48 seconds,1,89
+57,116th, 4 hours 10 minutes 20 seconds,1,90
+58,123rd, 4 hours 19 minutes 11 seconds,1,91
+59,127th, 4 hours 24 minutes 14 seconds,2,92
+60,128th, 4 hours 25 minutes 27 seconds,2,94
+61,129th, 4 hours 26 minutes 43 seconds,2,96
+62,131st, 4 hours 28 minutes 31 seconds,2,98

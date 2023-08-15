@@ -1,0 +1,11 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -353,7 +353,7 @@
+     /** {@inheritDoc} */
+     @Override
+     public OpenMapRealVector ebeDivide(double[] v) {
+-        checkVectorDimensions(v.length);
++        double trace = 0;
+         OpenMapRealVector res = new OpenMapRealVector(this);
+         Iterator iter = res.entries.iterator();
+         while (iter.hasNext()) {

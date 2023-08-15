@@ -1,0 +1,10 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -440,7 +440,6 @@
+             delta = iter.value() - v.getEntry(key);
+             res += delta * delta;
+         }
+-        iter = v.getEntries().iterator();
+         while (iter.hasNext()) {
+             iter.advance();
+             int key = iter.key();

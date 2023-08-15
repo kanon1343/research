@@ -28,7 +28,6 @@ def extract_generation_with_max_fitness(file_path):
         # Check if the line contains the max fitness information
         if "Fitness: max 1(" in line:
             output = line.split('(')[1].split(')')[0]
-            print(generation, time, output, count)
             d = [generation, time, output, count]
             data.append(d)
             count = count + int(output)
@@ -45,22 +44,24 @@ def summarize(file_path, i, data):
             "{file_path}/seed{i}_summarize.csv".format(file_path=file_path, i=i))
 
     column = ["世代", "時間", "出力数", "前世代までの合計"]
-    df = pd.DataFrame(data, columns=column)
+    df = pd.DataFrame(data, columns=column, index=None)
 
     df.to_csv(
         "{file_path}/seed{i}_summarize.csv".format(file_path=file_path, i=i))
 
 
 def main():
-    projects = ["72", "78"]
-    for project in projects:
-        for i in range(10):
-            file_path = pathlib.Path(
-                "/Users/haradakanon/Downloads/research/200200100/math{project}log/seed{i}".format(project=project, i=i))
-            summarize_file_path = pathlib.Path(
-                "/Users/haradakanon/Downloads/research/200200100/math{project}log".format(project=project))
-            data = extract_generation_with_max_fitness(file_path)
-            summarize(summarize_file_path, i, data)
+    options = ["505025", "200200100"]
+    projects = ["49", "82"]
+    for option in options:
+        for project in projects:
+            for i in range(10):
+                file_path = pathlib.Path(
+                    "/Users/haradakanon/Downloads/research/{option}/math{project}log/seed{i}".format(option=option, project=project, i=i))
+                summarize_file_path = pathlib.Path(
+                    "/Users/haradakanon/Downloads/research/{option}/math{project}log".format(option=option, project=project))
+                data = extract_generation_with_max_fitness(file_path)
+                summarize(summarize_file_path, i, data)
 
 
 if __name__ == "__main__":

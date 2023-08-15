@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -301,7 +301,6 @@
+ 
+         final int firstRemoved = index;
+         while (true) {
+-            j = probe(perturb, j);
+             index = j & mask;
+ 
+             if (states[index] == FREE) {
