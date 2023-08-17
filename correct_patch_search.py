@@ -79,7 +79,7 @@ def summary(file_path):
 
 def main():
     # correct_patch_search
-    projects = ["49", "82"]
+    projects = ["80"]
     for project in projects:
         for seed in range(10):
             selection_file_path = pathlib.Path(

@@ -131,7 +131,7 @@ def count_output(file_path, summarize_file_path):
 
 def main():
     options = ["505025", "200200100"]
-    projects = ["49", "82"]
+    projects = ["80"]
     for option in options:
         for project in projects:
             file_path = pathlib.Path(

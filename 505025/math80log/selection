@@ -1,0 +1,989 @@
+./505025/math80/seed0/10 patch-v1539/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/10 patch-v1539/org.apache.commons.math.linear.EigenDecompositionImpl.java:866:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/10 patch-v1539/org.apache.commons.math.linear.EigenDecompositionImpl.java:944:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed0/100 patch-v16914/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed0/100 patch-v16914/org.apache.commons.math.linear.EigenDecompositionImpl.java:1157:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/11 patch-v1738/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed0/13 patch-v1921/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/13 patch-v1921/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/16 patch-v2204/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/17 patch-v2344/org.apache.commons.math.linear.EigenDecompositionImpl.java:866:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/18 patch-v2442/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/19 patch-v2503/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/20 patch-v2525/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/20 patch-v2525/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/21 patch-v2917/org.apache.commons.math.linear.EigenDecompositionImpl.java:1380:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/23 patch-v3111/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/23 patch-v3111/org.apache.commons.math.linear.EigenDecompositionImpl.java:1143:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/24 patch-v3514/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/25 patch-v3516/org.apache.commons.math.linear.EigenDecompositionImpl.java:866:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/26 patch-v4005/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/27 patch-v4407/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/27 patch-v4407/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/27 patch-v4407/org.apache.commons.math.linear.EigenDecompositionImpl.java:1140:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/28 patch-v4531/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/28 patch-v4531/org.apache.commons.math.linear.EigenDecompositionImpl.java:1144:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/29 patch-v4661/org.apache.commons.math.linear.EigenDecompositionImpl.java:1339:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed0/30 patch-v4763/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/30 patch-v4763/org.apache.commons.math.linear.EigenDecompositionImpl.java:866:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/30 patch-v4763/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/30 patch-v4763/org.apache.commons.math.linear.EigenDecompositionImpl.java:1397:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/31 patch-v4813/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/32 patch-v5242/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/32 patch-v5242/org.apache.commons.math.linear.EigenDecompositionImpl.java:1347:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed0/34 patch-v5414/org.apache.commons.math.linear.ArrayRealVector.java:285:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed0/34 patch-v5414/org.apache.commons.math.linear.ArrayRealVector.java:885:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed0/34 patch-v5414/org.apache.commons.math.linear.EigenDecompositionImpl.java:1401:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/35 patch-v5464/org.apache.commons.math.linear.EigenDecompositionImpl.java:1387:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/37 patch-v5484/org.apache.commons.math.linear.EigenDecompositionImpl.java:1380:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/38 patch-v5600/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed0/38 patch-v5600/org.apache.commons.math.linear.EigenDecompositionImpl.java:1400:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/39 patch-v6185/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/40 patch-v7221/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/40 patch-v7221/org.apache.commons.math.linear.EigenDecompositionImpl.java:966:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/41 patch-v7598/org.apache.commons.math.linear.ArrayRealVector.java:905:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/41 patch-v7598/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/41 patch-v7598/org.apache.commons.math.linear.EigenDecompositionImpl.java:1140:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/42 patch-v7695/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/42 patch-v7695/org.apache.commons.math.linear.EigenDecompositionImpl.java:1142:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/43 patch-v7879/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/44 patch-v7883/org.apache.commons.math.linear.ArrayRealVector.java:905:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/45 patch-v7987/org.apache.commons.math.linear.EigenDecompositionImpl.java:1143:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/46 patch-v8041/org.apache.commons.math.linear.ArrayRealVector.java:885:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed0/46 patch-v8041/org.apache.commons.math.linear.ArrayRealVector.java:903:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/46 patch-v8041/org.apache.commons.math.linear.ArrayRealVector.java:905:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed0/46 patch-v8041/org.apache.commons.math.linear.ArrayRealVector.java:905:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/47 patch-v8127/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/47 patch-v8127/org.apache.commons.math.linear.EigenDecompositionImpl.java:1147:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/48 patch-v8331/org.apache.commons.math.linear.ArrayRealVector.java:285:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed0/48 patch-v8331/org.apache.commons.math.linear.ArrayRealVector.java:885:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed0/48 patch-v8331/org.apache.commons.math.linear.EigenDecompositionImpl.java:1144:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/49 patch-v8378/org.apache.commons.math.linear.EigenDecompositionImpl.java:1147:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/50 patch-v8385/org.apache.commons.math.linear.ArrayRealVector.java:905:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/51 patch-v8422/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/51 patch-v8422/org.apache.commons.math.linear.EigenDecompositionImpl.java:1141:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/52 patch-v8434/org.apache.commons.math.linear.ArrayRealVector.java:905:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/53 patch-v8458/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/56 patch-v8651/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/56 patch-v8651/org.apache.commons.math.linear.EigenDecompositionImpl.java:1156:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/57 patch-v8666/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/57 patch-v8666/org.apache.commons.math.linear.EigenDecompositionImpl.java:1141:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/58 patch-v8682/org.apache.commons.math.linear.EigenDecompositionImpl.java:1151:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/59 patch-v8855/org.apache.commons.math.linear.EigenDecompositionImpl.java:1155:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/6 patch-v1139/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/6 patch-v1139/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed0/61 patch-v8954/org.apache.commons.math.linear.EigenDecompositionImpl.java:1148:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/61 patch-v8954/org.apache.commons.math.linear.EigenDecompositionImpl.java:1150:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/62 patch-v8961/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/63 patch-v8964/org.apache.commons.math.linear.EigenDecompositionImpl.java:1145:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/65 patch-v9007/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/65 patch-v9007/org.apache.commons.math.linear.EigenDecompositionImpl.java:1064:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/66 patch-v9111/org.apache.commons.math.linear.EigenDecompositionImpl.java:1143:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/67 patch-v9171/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/67 patch-v9171/org.apache.commons.math.linear.EigenDecompositionImpl.java:1142:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/69 patch-v9191/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/69 patch-v9191/org.apache.commons.math.linear.EigenDecompositionImpl.java:1544:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed0/7 patch-v1303/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/70 patch-v9259/org.apache.commons.math.linear.EigenDecompositionImpl.java:1146:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/70 patch-v9259/org.apache.commons.math.linear.EigenDecompositionImpl.java:1148:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/71 patch-v9371/org.apache.commons.math.linear.EigenDecompositionImpl.java:194:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/71 patch-v9371/org.apache.commons.math.linear.EigenDecompositionImpl.java:1545:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed0/72 patch-v9385/org.apache.commons.math.linear.EigenDecompositionImpl.java:1539:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed0/73 patch-v9400/org.apache.commons.math.linear.EigenDecompositionImpl.java:1064:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/73 patch-v9400/org.apache.commons.math.linear.EigenDecompositionImpl.java:1147:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/73 patch-v9400/org.apache.commons.math.linear.EigenDecompositionImpl.java:1149:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/74 patch-v9574/org.apache.commons.math.linear.EigenDecompositionImpl.java:1062:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/75 patch-v9697/org.apache.commons.math.linear.EigenDecompositionImpl.java:1145:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/77 patch-v10301/org.apache.commons.math.linear.EigenDecompositionImpl.java:1150:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/78 patch-v11234/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed0/78 patch-v11234/org.apache.commons.math.linear.EigenDecompositionImpl.java:1145:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/79 patch-v11466/org.apache.commons.math.linear.EigenDecompositionImpl.java:1149:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/81 patch-v11587/org.apache.commons.math.linear.EigenDecompositionImpl.java:1152:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/84 patch-v12826/org.apache.commons.math.linear.EigenDecompositionImpl.java:1400:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/85 patch-v14105/org.apache.commons.math.linear.EigenDecompositionImpl.java:1397:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/86 patch-v14825/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed0/88 patch-v14944/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed0/89 patch-v15041/org.apache.commons.math.linear.EigenDecompositionImpl.java:969:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/9 patch-v1526/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed0/91 patch-v15630/org.apache.commons.math.linear.EigenDecompositionImpl.java:1069:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed0/92 patch-v15923/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed0/93 patch-v15949/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed0/96 patch-v16627/org.apache.commons.math.linear.EigenDecompositionImpl.java:1160:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/10 patch-v2940/org.apache.commons.math.linear.EigenDecompositionImpl.java:1141:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/11 patch-v3078/org.apache.commons.math.linear.EigenDecompositionImpl.java:1106:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/15 patch-v3803/org.apache.commons.math.linear.EigenDecompositionImpl.java:1102:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/19 patch-v4389/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/22 patch-v4866/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/23 patch-v4872/org.apache.commons.math.linear.ArrayRealVector.java:284:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/23 patch-v4872/org.apache.commons.math.linear.ArrayRealVector.java:884:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/23 patch-v4872/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/24 patch-v5739/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/24 patch-v5739/org.apache.commons.math.linear.EigenDecompositionImpl.java:1105:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed1/24 patch-v5739/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/25 patch-v5782/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/26 patch-v5833/org.apache.commons.math.linear.ArrayRealVector.java:284:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/27 patch-v5971/org.apache.commons.math.linear.ArrayRealVector.java:284:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/27 patch-v5971/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/27 patch-v5971/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/28 patch-v5999/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/28 patch-v5999/org.apache.commons.math.linear.ArrayRealVector.java:882:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/28 patch-v5999/org.apache.commons.math.linear.EigenDecompositionImpl.java:1021:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/29 patch-v6051/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/29 patch-v6051/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/30 patch-v6075/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/30 patch-v6075/org.apache.commons.math.linear.EigenDecompositionImpl.java:1132:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/30 patch-v6075/org.apache.commons.math.linear.EigenDecompositionImpl.java:1162:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/31 patch-v6120/org.apache.commons.math.linear.ArrayRealVector.java:284:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/31 patch-v6120/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/32 patch-v6208/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/32 patch-v6208/org.apache.commons.math.linear.EigenDecompositionImpl.java:1106:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed1/33 patch-v6405/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/33 patch-v6405/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/34 patch-v6703/org.apache.commons.math.linear.ArrayRealVector.java:284:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/34 patch-v6703/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/34 patch-v6703/org.apache.commons.math.linear.EigenDecompositionImpl.java:1165:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/35 patch-v6930/org.apache.commons.math.linear.ArrayRealVector.java:284:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed1/35 patch-v6930/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/35 patch-v6930/org.apache.commons.math.linear.EigenDecompositionImpl.java:1163:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/37 patch-v7820/org.apache.commons.math.linear.EigenDecompositionImpl.java:1018:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/38 patch-v7838/org.apache.commons.math.linear.ArrayRealVector.java:904:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/38 patch-v7838/org.apache.commons.math.linear.EigenDecompositionImpl.java:1018:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/39 patch-v7994/org.apache.commons.math.linear.EigenDecompositionImpl.java:1018:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/4 patch-v2145/org.apache.commons.math.linear.EigenDecompositionImpl.java:955:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/4 patch-v2145/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/40 patch-v8240/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/42 patch-v8499/org.apache.commons.math.linear.ArrayRealVector.java:904:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/43 patch-v8577/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/45 patch-v8949/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/47 patch-v9713/org.apache.commons.math.linear.EigenDecompositionImpl.java:941:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed1/48 patch-v10214/org.apache.commons.math.linear.ArrayRealVector.java:904:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/49 patch-v11719/org.apache.commons.math.linear.EigenDecompositionImpl.java:1016:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/5 patch-v2148/org.apache.commons.math.linear.EigenDecompositionImpl.java:955:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/50 patch-v12006/org.apache.commons.math.linear.EigenDecompositionImpl.java:1375:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/51 patch-v12597/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/52 patch-v12608/org.apache.commons.math.linear.EigenDecompositionImpl.java:1161:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/53 patch-v12740/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed1/54 patch-v13131/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/54 patch-v13131/org.apache.commons.math.linear.EigenDecompositionImpl.java:1129:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/55 patch-v13327/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed1/55 patch-v13327/org.apache.commons.math.linear.EigenDecompositionImpl.java:1017:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/55 patch-v13327/org.apache.commons.math.linear.EigenDecompositionImpl.java:1760:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/57 patch-v14221/org.apache.commons.math.linear.EigenDecompositionImpl.java:1758:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/58 patch-v14354/org.apache.commons.math.linear.EigenDecompositionImpl.java:1165:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/6 patch-v2247/org.apache.commons.math.linear.EigenDecompositionImpl.java:953:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/6 patch-v2247/org.apache.commons.math.linear.EigenDecompositionImpl.java:1132:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/7 patch-v2437/org.apache.commons.math.linear.EigenDecompositionImpl.java:1106:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/8 patch-v2461/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed1/9 patch-v2498/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/10 patch-v2189/org.apache.commons.math.linear.EigenDecompositionImpl.java:942:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/11 patch-v2494/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/12 patch-v2738/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/13 patch-v3116/org.apache.commons.math.linear.EigenDecompositionImpl.java:1132:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/16 patch-v4604/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/2 patch-v1543/org.apache.commons.math.linear.EigenDecompositionImpl.java:942:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/29 patch-v6220/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/3 patch-v1877/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/3 patch-v1877/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/31 patch-v6543/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/32 patch-v6803/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/32 patch-v6803/org.apache.commons.math.linear.EigenDecompositionImpl.java:1276:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/33 patch-v7003/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/33 patch-v7003/org.apache.commons.math.linear.EigenDecompositionImpl.java:1402:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/43 patch-v9107/org.apache.commons.math.linear.EigenDecompositionImpl.java:1131:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/43 patch-v9107/org.apache.commons.math.linear.EigenDecompositionImpl.java:1132:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/44 patch-v9436/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/45 patch-v10022/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/47 patch-v10348/org.apache.commons.math.linear.EigenDecompositionImpl.java:944:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/48 patch-v11125/org.apache.commons.math.linear.EigenDecompositionImpl.java:1396:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/49 patch-v11152/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/49 patch-v11152/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/49 patch-v11152/org.apache.commons.math.linear.EigenDecompositionImpl.java:1398:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/5 patch-v1948/org.apache.commons.math.linear.EigenDecompositionImpl.java:944:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/5 patch-v1948/org.apache.commons.math.linear.EigenDecompositionImpl.java:1021:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/5 patch-v1948/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/50 patch-v11260/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/50 patch-v11260/org.apache.commons.math.linear.EigenDecompositionImpl.java:1132:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/50 patch-v11260/org.apache.commons.math.linear.EigenDecompositionImpl.java:1395:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/51 patch-v11397/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/51 patch-v11397/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/51 patch-v11397/org.apache.commons.math.linear.EigenDecompositionImpl.java:1131:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/53 patch-v11588/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/53 patch-v11588/org.apache.commons.math.linear.EigenDecompositionImpl.java:1129:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/54 patch-v12876/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/54 patch-v12876/org.apache.commons.math.linear.EigenDecompositionImpl.java:1132:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/55 patch-v13096/org.apache.commons.math.linear.EigenDecompositionImpl.java:944:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/55 patch-v13096/org.apache.commons.math.linear.EigenDecompositionImpl.java:1390:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/56 patch-v13108/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/56 patch-v13108/org.apache.commons.math.linear.ArrayRealVector.java:880:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/56 patch-v13108/org.apache.commons.math.linear.EigenDecompositionImpl.java:1017:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/57 patch-v13253/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/57 patch-v13253/org.apache.commons.math.linear.EigenDecompositionImpl.java:1403:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/58 patch-v13268/org.apache.commons.math.linear.EigenDecompositionImpl.java:944:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/58 patch-v13268/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/58 patch-v13268/org.apache.commons.math.linear.EigenDecompositionImpl.java:1397:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/59 patch-v13381/org.apache.commons.math.linear.EigenDecompositionImpl.java:945:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/59 patch-v13381/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/59 patch-v13381/org.apache.commons.math.linear.EigenDecompositionImpl.java:1399:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/6 patch-v1959/org.apache.commons.math.linear.EigenDecompositionImpl.java:1021:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/60 patch-v13490/org.apache.commons.math.linear.EigenDecompositionImpl.java:1403:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/61 patch-v13558/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/61 patch-v13558/org.apache.commons.math.linear.EigenDecompositionImpl.java:1402:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/62 patch-v13728/org.apache.commons.math.linear.EigenDecompositionImpl.java:1129:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/62 patch-v13728/org.apache.commons.math.linear.EigenDecompositionImpl.java:1400:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/63 patch-v16001/org.apache.commons.math.linear.EigenDecompositionImpl.java:957:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/63 patch-v16001/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/63 patch-v16001/org.apache.commons.math.linear.EigenDecompositionImpl.java:1394:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/64 patch-v16340/org.apache.commons.math.linear.EigenDecompositionImpl.java:945:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/64 patch-v16340/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/64 patch-v16340/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/64 patch-v16340/org.apache.commons.math.linear.EigenDecompositionImpl.java:1396:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/65 patch-v16548/org.apache.commons.math.linear.EigenDecompositionImpl.java:941:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/65 patch-v16548/org.apache.commons.math.linear.EigenDecompositionImpl.java:1125:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/65 patch-v16548/org.apache.commons.math.linear.EigenDecompositionImpl.java:1385:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/65 patch-v16548/org.apache.commons.math.linear.EigenDecompositionImpl.java:1393:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/66 patch-v16738/org.apache.commons.math.linear.EigenDecompositionImpl.java:941:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/66 patch-v16738/org.apache.commons.math.linear.EigenDecompositionImpl.java:1125:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/66 patch-v16738/org.apache.commons.math.linear.EigenDecompositionImpl.java:1384:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/66 patch-v16738/org.apache.commons.math.linear.EigenDecompositionImpl.java:1392:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/67 patch-v16838/org.apache.commons.math.linear.EigenDecompositionImpl.java:945:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/67 patch-v16838/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/67 patch-v16838/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/67 patch-v16838/org.apache.commons.math.linear.EigenDecompositionImpl.java:1395:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/68 patch-v17071/org.apache.commons.math.linear.EigenDecompositionImpl.java:946:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/68 patch-v17071/org.apache.commons.math.linear.EigenDecompositionImpl.java:1021:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/68 patch-v17071/org.apache.commons.math.linear.EigenDecompositionImpl.java:1104:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/68 patch-v17071/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/69 patch-v17204/org.apache.commons.math.linear.EigenDecompositionImpl.java:953:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/69 patch-v17204/org.apache.commons.math.linear.EigenDecompositionImpl.java:1015:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/69 patch-v17204/org.apache.commons.math.linear.EigenDecompositionImpl.java:1098:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/70 patch-v17394/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/70 patch-v17394/org.apache.commons.math.linear.EigenDecompositionImpl.java:1398:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/70 patch-v17394/org.apache.commons.math.linear.EigenDecompositionImpl.java:1406:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/71 patch-v17748/org.apache.commons.math.linear.EigenDecompositionImpl.java:964:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/72 patch-v17841/org.apache.commons.math.linear.ArrayRealVector.java:881:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/72 patch-v17841/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/72 patch-v17841/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/72 patch-v17841/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/72 patch-v17841/org.apache.commons.math.linear.EigenDecompositionImpl.java:1398:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/73 patch-v17917/org.apache.commons.math.linear.EigenDecompositionImpl.java:955:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/73 patch-v17917/org.apache.commons.math.linear.EigenDecompositionImpl.java:962:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/73 patch-v17917/org.apache.commons.math.linear.EigenDecompositionImpl.java:1015:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/73 patch-v17917/org.apache.commons.math.linear.EigenDecompositionImpl.java:1125:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/74 patch-v17926/org.apache.commons.math.linear.ArrayRealVector.java:881:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/74 patch-v17926/org.apache.commons.math.linear.EigenDecompositionImpl.java:868:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/74 patch-v17926/org.apache.commons.math.linear.EigenDecompositionImpl.java:941:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/74 patch-v17926/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/74 patch-v17926/org.apache.commons.math.linear.EigenDecompositionImpl.java:1395:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/75 patch-v18171/org.apache.commons.math.linear.EigenDecompositionImpl.java:1014:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/75 patch-v18171/org.apache.commons.math.linear.EigenDecompositionImpl.java:1395:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/76 patch-v18492/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/76 patch-v18492/org.apache.commons.math.linear.EigenDecompositionImpl.java:1128:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/76 patch-v18492/org.apache.commons.math.linear.EigenDecompositionImpl.java:1392:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/77 patch-v18910/org.apache.commons.math.linear.EigenDecompositionImpl.java:1126:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/77 patch-v18910/org.apache.commons.math.linear.EigenDecompositionImpl.java:1129:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/78 patch-v19618/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/78 patch-v19618/org.apache.commons.math.linear.EigenDecompositionImpl.java:1125:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/78 patch-v19618/org.apache.commons.math.linear.EigenDecompositionImpl.java:1128:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/79 patch-v19917/org.apache.commons.math.linear.ArrayRealVector.java:881:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/79 patch-v19917/org.apache.commons.math.linear.EigenDecompositionImpl.java:940:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/79 patch-v19917/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/79 patch-v19917/org.apache.commons.math.linear.EigenDecompositionImpl.java:1129:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/79 patch-v19917/org.apache.commons.math.linear.EigenDecompositionImpl.java:1391:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/79 patch-v19917/org.apache.commons.math.linear.EigenDecompositionImpl.java:1462:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/79 patch-v19917/org.apache.commons.math.linear.EigenDecompositionImpl.java:1506:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/80 patch-v21243/org.apache.commons.math.linear.EigenDecompositionImpl.java:954:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/80 patch-v21243/org.apache.commons.math.linear.EigenDecompositionImpl.java:960:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/80 patch-v21243/org.apache.commons.math.linear.EigenDecompositionImpl.java:1127:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/80 patch-v21243/org.apache.commons.math.linear.EigenDecompositionImpl.java:1356:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/80 patch-v21243/org.apache.commons.math.linear.EigenDecompositionImpl.java:1396:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/81 patch-v21875/org.apache.commons.math.linear.EigenDecompositionImpl.java:941:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/81 patch-v21875/org.apache.commons.math.linear.EigenDecompositionImpl.java:1359:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/81 patch-v21875/org.apache.commons.math.linear.EigenDecompositionImpl.java:1393:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/81 patch-v21875/org.apache.commons.math.linear.EigenDecompositionImpl.java:1524:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/82 patch-v24799/org.apache.commons.math.linear.ArrayRealVector.java:895:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/82 patch-v24799/org.apache.commons.math.linear.EigenDecompositionImpl.java:1017:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/82 patch-v24799/org.apache.commons.math.linear.EigenDecompositionImpl.java:1129:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/82 patch-v24799/org.apache.commons.math.linear.EigenDecompositionImpl.java:1358:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/82 patch-v24799/org.apache.commons.math.linear.EigenDecompositionImpl.java:1399:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/83 patch-v24911/org.apache.commons.math.linear.ArrayRealVector.java:881:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/83 patch-v24911/org.apache.commons.math.linear.ArrayRealVector.java:900:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed2/83 patch-v24911/org.apache.commons.math.linear.ArrayRealVector.java:900:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/83 patch-v24911/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/83 patch-v24911/org.apache.commons.math.linear.EigenDecompositionImpl.java:1336:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/83 patch-v24911/org.apache.commons.math.linear.EigenDecompositionImpl.java:1354:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/83 patch-v24911/org.apache.commons.math.linear.EigenDecompositionImpl.java:1386:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/83 patch-v24911/org.apache.commons.math.linear.EigenDecompositionImpl.java:1394:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/83 patch-v24911/org.apache.commons.math.linear.EigenDecompositionImpl.java:1510:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/84 patch-v25023/org.apache.commons.math.linear.ArrayRealVector.java:881:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/84 patch-v25023/org.apache.commons.math.linear.ArrayRealVector.java:900:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed2/84 patch-v25023/org.apache.commons.math.linear.ArrayRealVector.java:900:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/84 patch-v25023/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/84 patch-v25023/org.apache.commons.math.linear.EigenDecompositionImpl.java:1126:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/84 patch-v25023/org.apache.commons.math.linear.EigenDecompositionImpl.java:1336:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/84 patch-v25023/org.apache.commons.math.linear.EigenDecompositionImpl.java:1354:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/84 patch-v25023/org.apache.commons.math.linear.EigenDecompositionImpl.java:1386:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/84 patch-v25023/org.apache.commons.math.linear.EigenDecompositionImpl.java:1394:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/85 patch-v25229/org.apache.commons.math.linear.ArrayRealVector.java:881:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/85 patch-v25229/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/85 patch-v25229/org.apache.commons.math.linear.EigenDecompositionImpl.java:1126:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/85 patch-v25229/org.apache.commons.math.linear.EigenDecompositionImpl.java:1336:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/85 patch-v25229/org.apache.commons.math.linear.EigenDecompositionImpl.java:1354:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/85 patch-v25229/org.apache.commons.math.linear.EigenDecompositionImpl.java:1386:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/85 patch-v25229/org.apache.commons.math.linear.EigenDecompositionImpl.java:1394:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/86 patch-v26505/org.apache.commons.math.linear.EigenDecompositionImpl.java:972:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/86 patch-v26505/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/86 patch-v26505/org.apache.commons.math.linear.EigenDecompositionImpl.java:1141:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/86 patch-v26505/org.apache.commons.math.linear.EigenDecompositionImpl.java:1366:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/86 patch-v26505/org.apache.commons.math.linear.EigenDecompositionImpl.java:1401:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/86 patch-v26505/org.apache.commons.math.linear.EigenDecompositionImpl.java:1409:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/87 patch-v27113/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/87 patch-v27113/org.apache.commons.math.linear.ArrayRealVector.java:880:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/87 patch-v27113/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/87 patch-v27113/org.apache.commons.math.linear.EigenDecompositionImpl.java:952:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/87 patch-v27113/org.apache.commons.math.linear.EigenDecompositionImpl.java:1354:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/87 patch-v27113/org.apache.commons.math.linear.EigenDecompositionImpl.java:1387:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/87 patch-v27113/org.apache.commons.math.linear.EigenDecompositionImpl.java:1395:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/88 patch-v27148/org.apache.commons.math.linear.EigenDecompositionImpl.java:876:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/88 patch-v27148/org.apache.commons.math.linear.EigenDecompositionImpl.java:970:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/88 patch-v27148/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/88 patch-v27148/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/88 patch-v27148/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/88 patch-v27148/org.apache.commons.math.linear.EigenDecompositionImpl.java:1363:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/88 patch-v27148/org.apache.commons.math.linear.EigenDecompositionImpl.java:1398:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/88 patch-v27148/org.apache.commons.math.linear.EigenDecompositionImpl.java:1406:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.ArrayRealVector.java:881:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.ArrayRealVector.java:900:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.ArrayRealVector.java:900:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.EigenDecompositionImpl.java:939:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.EigenDecompositionImpl.java:1124:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.EigenDecompositionImpl.java:1125:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.EigenDecompositionImpl.java:1126:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.EigenDecompositionImpl.java:1129:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.EigenDecompositionImpl.java:1353:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.EigenDecompositionImpl.java:1385:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/89 patch-v27514/org.apache.commons.math.linear.EigenDecompositionImpl.java:1393:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/9 patch-v1986/org.apache.commons.math.linear.EigenDecompositionImpl.java:942:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/9 patch-v1986/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/90 patch-v27807/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/90 patch-v27807/org.apache.commons.math.linear.ArrayRealVector.java:880:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/90 patch-v27807/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/90 patch-v27807/org.apache.commons.math.linear.EigenDecompositionImpl.java:952:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/90 patch-v27807/org.apache.commons.math.linear.EigenDecompositionImpl.java:1123:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/90 patch-v27807/org.apache.commons.math.linear.EigenDecompositionImpl.java:1335:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/90 patch-v27807/org.apache.commons.math.linear.EigenDecompositionImpl.java:1353:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/90 patch-v27807/org.apache.commons.math.linear.EigenDecompositionImpl.java:1385:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/90 patch-v27807/org.apache.commons.math.linear.EigenDecompositionImpl.java:1393:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/91 patch-v27849/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/91 patch-v27849/org.apache.commons.math.linear.ArrayRealVector.java:880:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/91 patch-v27849/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/91 patch-v27849/org.apache.commons.math.linear.EigenDecompositionImpl.java:952:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/91 patch-v27849/org.apache.commons.math.linear.EigenDecompositionImpl.java:1099:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/91 patch-v27849/org.apache.commons.math.linear.EigenDecompositionImpl.java:1353:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/91 patch-v27849/org.apache.commons.math.linear.EigenDecompositionImpl.java:1385:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/91 patch-v27849/org.apache.commons.math.linear.EigenDecompositionImpl.java:1393:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/92 patch-v28020/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/92 patch-v28020/org.apache.commons.math.linear.ArrayRealVector.java:880:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed2/92 patch-v28020/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/92 patch-v28020/org.apache.commons.math.linear.EigenDecompositionImpl.java:952:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/92 patch-v28020/org.apache.commons.math.linear.EigenDecompositionImpl.java:1099:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed2/92 patch-v28020/org.apache.commons.math.linear.EigenDecompositionImpl.java:1327:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed2/92 patch-v28020/org.apache.commons.math.linear.EigenDecompositionImpl.java:1352:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/92 patch-v28020/org.apache.commons.math.linear.EigenDecompositionImpl.java:1383:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/92 patch-v28020/org.apache.commons.math.linear.EigenDecompositionImpl.java:1386:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed2/92 patch-v28020/org.apache.commons.math.linear.EigenDecompositionImpl.java:1392:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed3/11 patch-v1913/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/11 patch-v1913/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/12 patch-v2106/org.apache.commons.math.linear.EigenDecompositionImpl.java:1061:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/13 patch-v2149/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed3/13 patch-v2149/org.apache.commons.math.linear.EigenDecompositionImpl.java:957:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/13 patch-v2149/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/14 patch-v2204/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/15 patch-v2223/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/15 patch-v2223/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/17 patch-v2544/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/18 patch-v3200/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed3/2 patch-v538/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/20 patch-v3319/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed3/20 patch-v3319/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/21 patch-v3431/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/23 patch-v3708/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/24 patch-v3928/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/25 patch-v4217/org.apache.commons.math.linear.EigenDecompositionImpl.java:1407:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/26 patch-v4332/org.apache.commons.math.linear.EigenDecompositionImpl.java:1377:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/29 patch-v5335/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/29 patch-v5335/org.apache.commons.math.linear.EigenDecompositionImpl.java:1383:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/3 patch-v716/org.apache.commons.math.linear.EigenDecompositionImpl.java:1061:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/32 patch-v5508/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/34 patch-v5804/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/35 patch-v6105/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/36 patch-v6129/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/36 patch-v6129/org.apache.commons.math.linear.EigenDecompositionImpl.java:1380:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/37 patch-v6449/org.apache.commons.math.linear.EigenDecompositionImpl.java:1382:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/38 patch-v7442/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/38 patch-v7442/org.apache.commons.math.linear.EigenDecompositionImpl.java:1386:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/38 patch-v7442/org.apache.commons.math.linear.EigenDecompositionImpl.java:1405:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/39 patch-v7530/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/39 patch-v7530/org.apache.commons.math.linear.EigenDecompositionImpl.java:1375:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/4 patch-v1243/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/40 patch-v7745/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/40 patch-v7745/org.apache.commons.math.linear.EigenDecompositionImpl.java:1384:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/40 patch-v7745/org.apache.commons.math.linear.EigenDecompositionImpl.java:1404:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/41 patch-v8018/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/42 patch-v8125/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/42 patch-v8125/org.apache.commons.math.linear.EigenDecompositionImpl.java:945:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/42 patch-v8125/org.apache.commons.math.linear.EigenDecompositionImpl.java:1388:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/44 patch-v8232/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/47 patch-v8721/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/47 patch-v8721/org.apache.commons.math.linear.EigenDecompositionImpl.java:1382:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/48 patch-v9002/org.apache.commons.math.linear.EigenDecompositionImpl.java:945:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/48 patch-v9002/org.apache.commons.math.linear.EigenDecompositionImpl.java:1385:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/5 patch-v1304/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/50 patch-v9267/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/59 patch-v11638/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/6 patch-v1414/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/6 patch-v1414/org.apache.commons.math.linear.EigenDecompositionImpl.java:1062:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/60 patch-v11905/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed3/61 patch-v12806/org.apache.commons.math.linear.EigenDecompositionImpl.java:1129:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/63 patch-v13218/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/63 patch-v13218/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/64 patch-v13321/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/64 patch-v13321/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/64 patch-v13321/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/66 patch-v13901/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/67 patch-v14115/org.apache.commons.math.linear.EigenDecompositionImpl.java:1132:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/67 patch-v14115/org.apache.commons.math.linear.EigenDecompositionImpl.java:1337:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/69 patch-v14322/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/69 patch-v14322/org.apache.commons.math.linear.EigenDecompositionImpl.java:1398:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/7 patch-v1435/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/71 patch-v15235/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/72 patch-v15321/org.apache.commons.math.linear.EigenDecompositionImpl.java:957:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/72 patch-v15321/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/73 patch-v15401/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/74 patch-v15434/org.apache.commons.math.linear.EigenDecompositionImpl.java:957:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/75 patch-v15606/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/75 patch-v15606/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/76 patch-v15607/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/77 patch-v15626/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/8 patch-v1532/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/80 patch-v16145/org.apache.commons.math.linear.EigenDecompositionImpl.java:1399:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/82 patch-v16436/org.apache.commons.math.linear.ArrayRealVector.java:283:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed3/82 patch-v16436/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/85 patch-v16482/org.apache.commons.math.linear.EigenDecompositionImpl.java:1140:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/86 patch-v16562/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/86 patch-v16562/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/87 patch-v16698/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed3/87 patch-v16698/org.apache.commons.math.linear.EigenDecompositionImpl.java:1404:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/89 patch-v16868/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/92 patch-v17047/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/93 patch-v17201/org.apache.commons.math.linear.EigenDecompositionImpl.java:1141:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/94 patch-v17401/org.apache.commons.math.linear.EigenDecompositionImpl.java:1141:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/96 patch-v17555/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/98 patch-v18099/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed3/99 patch-v18327/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/10 patch-v1616/org.apache.commons.math.linear.EigenDecompositionImpl.java:1054:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/100 patch-v20201/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/12 patch-v1945/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/14 patch-v2419/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/15 patch-v2522/org.apache.commons.math.linear.ArrayRealVector.java:900:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/16 patch-v2529/org.apache.commons.math.linear.EigenDecompositionImpl.java:1054:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/16 patch-v2529/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/17 patch-v2537/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/19 patch-v2936/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/2 patch-v343/org.apache.commons.math.linear.EigenDecompositionImpl.java:1063:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/21 patch-v3641/org.apache.commons.math.linear.ArrayRealVector.java:900:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/22 patch-v4031/org.apache.commons.math.linear.ArrayRealVector.java:900:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/25 patch-v5106/org.apache.commons.math.linear.EigenDecompositionImpl.java:1054:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/28 patch-v6140/org.apache.commons.math.linear.EigenDecompositionImpl.java:1056:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/3 patch-v413/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/32 patch-v7702/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/33 patch-v7705/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/33 patch-v7705/org.apache.commons.math.linear.EigenDecompositionImpl.java:1258:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/34 patch-v8024/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/36 patch-v8510/org.apache.commons.math.linear.EigenDecompositionImpl.java:1415:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed4/37 patch-v8615/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/38 patch-v8747/org.apache.commons.math.linear.EigenDecompositionImpl.java:1418:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed4/39 patch-v8843/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/39 patch-v8843/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/4 patch-v734/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/41 patch-v9094/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/42 patch-v9223/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/43 patch-v9439/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/44 patch-v9502/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/45 patch-v9834/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/46 patch-v9918/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/46 patch-v9918/org.apache.commons.math.linear.EigenDecompositionImpl.java:1348:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/47 patch-v10122/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/48 patch-v10340/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed4/48 patch-v10340/org.apache.commons.math.linear.EigenDecompositionImpl.java:1347:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/49 patch-v10402/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/5 patch-v838/org.apache.commons.math.linear.ArrayRealVector.java:906:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/50 patch-v10434/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/53 patch-v10943/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/53 patch-v10943/org.apache.commons.math.linear.EigenDecompositionImpl.java:1021:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/53 patch-v10943/org.apache.commons.math.linear.EigenDecompositionImpl.java:1062:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/54 patch-v11322/org.apache.commons.math.linear.EigenDecompositionImpl.java:1062:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/55 patch-v11327/org.apache.commons.math.linear.EigenDecompositionImpl.java:942:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/55 patch-v11327/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/58 patch-v12433/org.apache.commons.math.linear.EigenDecompositionImpl.java:1412:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/6 patch-v1039/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/68 patch-v13948/org.apache.commons.math.linear.EigenDecompositionImpl.java:1520:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/68 patch-v13948/org.apache.commons.math.linear.EigenDecompositionImpl.java:1545:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/68 patch-v13948/org.apache.commons.math.linear.EigenDecompositionImpl.java:1572:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/69 patch-v14119/org.apache.commons.math.linear.EigenDecompositionImpl.java:1522:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/69 patch-v14119/org.apache.commons.math.linear.EigenDecompositionImpl.java:1547:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/69 patch-v14119/org.apache.commons.math.linear.EigenDecompositionImpl.java:1574:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/7 patch-v1223/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/7 patch-v1223/org.apache.commons.math.linear.EigenDecompositionImpl.java:1536:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/70 patch-v14421/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/70 patch-v14421/org.apache.commons.math.linear.EigenDecompositionImpl.java:1524:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/70 patch-v14421/org.apache.commons.math.linear.EigenDecompositionImpl.java:1549:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/70 patch-v14421/org.apache.commons.math.linear.EigenDecompositionImpl.java:1576:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/72 patch-v14716/org.apache.commons.math.linear.EigenDecompositionImpl.java:1546:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/72 patch-v14716/org.apache.commons.math.linear.EigenDecompositionImpl.java:1573:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/74 patch-v15048/org.apache.commons.math.linear.EigenDecompositionImpl.java:1547:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/74 patch-v15048/org.apache.commons.math.linear.EigenDecompositionImpl.java:1574:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/76 patch-v15306/org.apache.commons.math.linear.EigenDecompositionImpl.java:1543:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/76 patch-v15306/org.apache.commons.math.linear.EigenDecompositionImpl.java:1570:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/77 patch-v15450/org.apache.commons.math.linear.EigenDecompositionImpl.java:1550:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/77 patch-v15450/org.apache.commons.math.linear.EigenDecompositionImpl.java:1577:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/78 patch-v15647/org.apache.commons.math.linear.EigenDecompositionImpl.java:1546:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/78 patch-v15647/org.apache.commons.math.linear.EigenDecompositionImpl.java:1573:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed4/80 patch-v16214/org.apache.commons.math.linear.ArrayRealVector.java:906:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed4/80 patch-v16214/org.apache.commons.math.linear.ArrayRealVector.java:906:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/81 patch-v16417/org.apache.commons.math.linear.ArrayRealVector.java:906:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed4/81 patch-v16417/org.apache.commons.math.linear.ArrayRealVector.java:906:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/83 patch-v16622/org.apache.commons.math.linear.ArrayRealVector.java:906:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed4/83 patch-v16622/org.apache.commons.math.linear.ArrayRealVector.java:906:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/84 patch-v16807/org.apache.commons.math.linear.ArrayRealVector.java:906:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed4/84 patch-v16807/org.apache.commons.math.linear.ArrayRealVector.java:906:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/85 patch-v16922/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/86 patch-v17140/org.apache.commons.math.linear.ArrayRealVector.java:906:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed4/86 patch-v17140/org.apache.commons.math.linear.ArrayRealVector.java:906:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/90 patch-v18138/org.apache.commons.math.linear.EigenDecompositionImpl.java:1725:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/92 patch-v18311/org.apache.commons.math.linear.EigenDecompositionImpl.java:1130:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/92 patch-v18311/org.apache.commons.math.linear.EigenDecompositionImpl.java:1727:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/93 patch-v18720/org.apache.commons.math.linear.ArrayRealVector.java:906:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed4/93 patch-v18720/org.apache.commons.math.linear.ArrayRealVector.java:906:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/93 patch-v18720/org.apache.commons.math.linear.EigenDecompositionImpl.java:1728:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/94 patch-v19043/org.apache.commons.math.linear.ArrayRealVector.java:906:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed4/94 patch-v19043/org.apache.commons.math.linear.ArrayRealVector.java:906:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/94 patch-v19043/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/95 patch-v19121/org.apache.commons.math.linear.EigenDecompositionImpl.java:1726:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/96 patch-v19627/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/96 patch-v19627/org.apache.commons.math.linear.EigenDecompositionImpl.java:1731:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/97 patch-v19810/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/97 patch-v19810/org.apache.commons.math.linear.EigenDecompositionImpl.java:1732:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/98 patch-v19815/org.apache.commons.math.linear.EigenDecompositionImpl.java:1733:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed4/99 patch-v19840/org.apache.commons.math.linear.ArrayRealVector.java:906:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed4/99 patch-v19840/org.apache.commons.math.linear.ArrayRealVector.java:906:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/14 patch-v2417/org.apache.commons.math.linear.EigenDecompositionImpl.java:1352:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/19 patch-v3042/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/19 patch-v3042/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/21 patch-v3347/org.apache.commons.math.linear.EigenDecompositionImpl.java:1355:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/27 patch-v4608/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/28 patch-v5113/org.apache.commons.math.linear.EigenDecompositionImpl.java:956:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/28 patch-v5113/org.apache.commons.math.linear.EigenDecompositionImpl.java:1402:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/29 patch-v6039/org.apache.commons.math.linear.EigenDecompositionImpl.java:1396:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/30 patch-v6047/org.apache.commons.math.linear.EigenDecompositionImpl.java:942:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed5/30 patch-v6047/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/30 patch-v6047/org.apache.commons.math.linear.EigenDecompositionImpl.java:1398:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/32 patch-v6071/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed5/33 patch-v6128/org.apache.commons.math.linear.ArrayRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/34 patch-v6140/org.apache.commons.math.linear.ArrayRealVector.java:886:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed5/34 patch-v6140/org.apache.commons.math.linear.EigenDecompositionImpl.java:1397:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/35 patch-v6183/org.apache.commons.math.linear.EigenDecompositionImpl.java:941:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed5/35 patch-v6183/org.apache.commons.math.linear.EigenDecompositionImpl.java:1396:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/36 patch-v6185/org.apache.commons.math.linear.ArrayRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/36 patch-v6185/org.apache.commons.math.linear.EigenDecompositionImpl.java:1398:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/38 patch-v6299/org.apache.commons.math.linear.ArrayRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/38 patch-v6299/org.apache.commons.math.linear.EigenDecompositionImpl.java:1400:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/39 patch-v6379/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/41 patch-v6385/org.apache.commons.math.linear.EigenDecompositionImpl.java:1402:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/43 patch-v6490/org.apache.commons.math.linear.EigenDecompositionImpl.java:1402:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/44 patch-v6492/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/45 patch-v6500/org.apache.commons.math.linear.EigenDecompositionImpl.java:941:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed5/46 patch-v6593/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/46 patch-v6593/org.apache.commons.math.linear.ArrayRealVector.java:283:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/46 patch-v6593/org.apache.commons.math.linear.EigenDecompositionImpl.java:1400:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/48 patch-v6690/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/49 patch-v6728/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/49 patch-v6728/org.apache.commons.math.linear.ArrayRealVector.java:886:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed5/49 patch-v6728/org.apache.commons.math.linear.ArrayRealVector.java:905:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed5/49 patch-v6728/org.apache.commons.math.linear.ArrayRealVector.java:905:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/50 patch-v6772/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/51 patch-v6788/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/52 patch-v6799/org.apache.commons.math.linear.ArrayRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/52 patch-v6799/org.apache.commons.math.linear.EigenDecompositionImpl.java:957:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/54 patch-v6861/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/55 patch-v6867/org.apache.commons.math.linear.ArrayRealVector.java:285:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed5/55 patch-v6867/org.apache.commons.math.linear.ArrayRealVector.java:885:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed5/55 patch-v6867/org.apache.commons.math.linear.EigenDecompositionImpl.java:940:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed5/55 patch-v6867/org.apache.commons.math.linear.EigenDecompositionImpl.java:1132:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/56 patch-v6885/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/57 patch-v6890/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/58 patch-v6892/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/59 patch-v6936/org.apache.commons.math.linear.ArrayRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/59 patch-v6936/org.apache.commons.math.linear.ArrayRealVector.java:887:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed5/60 patch-v6965/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/63 patch-v7068/org.apache.commons.math.linear.ArrayRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/64 patch-v7072/org.apache.commons.math.linear.ArrayRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/64 patch-v7072/org.apache.commons.math.linear.EigenDecompositionImpl.java:1402:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/66 patch-v7165/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/66 patch-v7165/org.apache.commons.math.linear.EigenDecompositionImpl.java:1754:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/67 patch-v7243/org.apache.commons.math.linear.EigenDecompositionImpl.java:1400:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/69 patch-v7363/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/69 patch-v7363/org.apache.commons.math.linear.EigenDecompositionImpl.java:1404:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/70 patch-v7394/org.apache.commons.math.linear.EigenDecompositionImpl.java:1402:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/71 patch-v7399/org.apache.commons.math.linear.EigenDecompositionImpl.java:1402:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/73 patch-v8442/org.apache.commons.math.linear.EigenDecompositionImpl.java:1402:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/77 patch-v9050/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/78 patch-v9105/org.apache.commons.math.linear.EigenDecompositionImpl.java:1401:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/80 patch-v9233/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/81 patch-v9438/org.apache.commons.math.linear.ArrayRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/81 patch-v9438/org.apache.commons.math.linear.EigenDecompositionImpl.java:1054:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/81 patch-v9438/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/81 patch-v9438/org.apache.commons.math.linear.EigenDecompositionImpl.java:1403:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/82 patch-v9537/org.apache.commons.math.linear.EigenDecompositionImpl.java:1054:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/82 patch-v9537/org.apache.commons.math.linear.EigenDecompositionImpl.java:1407:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/83 patch-v9640/org.apache.commons.math.linear.EigenDecompositionImpl.java:1055:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/83 patch-v9640/org.apache.commons.math.linear.EigenDecompositionImpl.java:1405:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/84 patch-v10302/org.apache.commons.math.linear.EigenDecompositionImpl.java:1052:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/85 patch-v10305/org.apache.commons.math.linear.EigenDecompositionImpl.java:1052:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/86 patch-v10309/org.apache.commons.math.linear.EigenDecompositionImpl.java:1407:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/87 patch-v10348/org.apache.commons.math.linear.ArrayRealVector.java:78:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/87 patch-v10348/org.apache.commons.math.linear.EigenDecompositionImpl.java:1050:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/89 patch-v10936/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/90 patch-v11027/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/94 patch-v12444/org.apache.commons.math.linear.EigenDecompositionImpl.java:1363:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/94 patch-v12444/org.apache.commons.math.linear.EigenDecompositionImpl.java:1780:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/95 patch-v12621/org.apache.commons.math.linear.EigenDecompositionImpl.java:1363:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed5/97 patch-v13346/org.apache.commons.math.linear.EigenDecompositionImpl.java:1403:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/11 patch-v2987/org.apache.commons.math.linear.ArrayRealVector.java:285:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed6/12 patch-v3010/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/13 patch-v3048/org.apache.commons.math.linear.ArrayRealVector.java:285:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed6/14 patch-v3344/org.apache.commons.math.linear.ArrayRealVector.java:285:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed6/16 patch-v3734/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/19 patch-v4750/org.apache.commons.math.linear.ArrayRealVector.java:285:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed6/20 patch-v4761/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/20 patch-v4761/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/21 patch-v5002/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/23 patch-v6448/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed6/25 patch-v7060/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/26 patch-v7065/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/27 patch-v7365/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/28 patch-v7519/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/3 patch-v1425/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed6/3 patch-v1425/org.apache.commons.math.linear.EigenDecompositionImpl.java:1106:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed6/31 patch-v7588/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/31 patch-v7588/org.apache.commons.math.linear.EigenDecompositionImpl.java:1532:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed6/38 patch-v7777/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/42 patch-v7843/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/44 patch-v8066/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed6/44 patch-v8066/org.apache.commons.math.linear.EigenDecompositionImpl.java:957:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/45 patch-v8071/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/60 patch-v9658/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/62 patch-v9708/org.apache.commons.math.linear.EigenDecompositionImpl.java:956:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/63 patch-v9717/org.apache.commons.math.linear.ArrayRealVector.java:881:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed6/63 patch-v9717/org.apache.commons.math.linear.ArrayRealVector.java:900:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed6/63 patch-v9717/org.apache.commons.math.linear.ArrayRealVector.java:900:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/63 patch-v9717/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed6/63 patch-v9717/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed6/64 patch-v9828/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed6/64 patch-v9828/org.apache.commons.math.linear.EigenDecompositionImpl.java:1376:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed6/9 patch-v2886/org.apache.commons.math.linear.EigenDecompositionImpl.java:872:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/10 patch-v1728/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/12 patch-v2021/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/15 patch-v2301/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/16 patch-v2406/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/20 patch-v3228/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/21 patch-v3236/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/23 patch-v3327/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/24 patch-v3422/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/24 patch-v3422/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/25 patch-v3515/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/25 patch-v3515/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/26 patch-v3539/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/28 patch-v3717/org.apache.commons.math.linear.EigenDecompositionImpl.java:1021:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/3 patch-v522/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/30 patch-v3942/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/31 patch-v4019/org.apache.commons.math.linear.EigenDecompositionImpl.java:1018:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/32 patch-v4238/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/32 patch-v4238/org.apache.commons.math.linear.EigenDecompositionImpl.java:1409:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed7/33 patch-v4425/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/33 patch-v4425/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/34 patch-v4825/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed7/34 patch-v4825/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/35 patch-v4831/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/35 patch-v4831/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/35 patch-v4831/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/35 patch-v4831/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/36 patch-v4837/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed7/36 patch-v4837/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/37 patch-v5006/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/38 patch-v5622/org.apache.commons.math.linear.EigenDecompositionImpl.java:1021:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/38 patch-v5622/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/39 patch-v5645/org.apache.commons.math.linear.EigenDecompositionImpl.java:1059:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/39 patch-v5645/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/4 patch-v648/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/40 patch-v5745/org.apache.commons.math.linear.EigenDecompositionImpl.java:1058:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/44 patch-v6717/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/46 patch-v7218/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/47 patch-v7602/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/48 patch-v8014/org.apache.commons.math.linear.EigenDecompositionImpl.java:945:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/49 patch-v9532/org.apache.commons.math.linear.EigenDecompositionImpl.java:945:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/49 patch-v9532/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/5 patch-v735/org.apache.commons.math.linear.EigenDecompositionImpl.java:960:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/51 patch-v10141/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/51 patch-v10141/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/52 patch-v10337/org.apache.commons.math.linear.EigenDecompositionImpl.java:945:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/52 patch-v10337/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/54 patch-v10610/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/55 patch-v10707/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/58 patch-v11026/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/59 patch-v11342/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/6 patch-v803/org.apache.commons.math.linear.EigenDecompositionImpl.java:960:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/61 patch-v11719/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/61 patch-v11719/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/62 patch-v11721/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/64 patch-v11923/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/66 patch-v12106/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/68 patch-v12831/org.apache.commons.math.linear.EigenDecompositionImpl.java:871:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/68 patch-v12831/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/7 patch-v845/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed7/71 patch-v13610/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed7/8 patch-v1301/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/10 patch-v1857/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/15 patch-v1975/org.apache.commons.math.linear.EigenDecompositionImpl.java:1137:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/16 patch-v2368/org.apache.commons.math.linear.EigenDecompositionImpl.java:1391:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/21 patch-v3510/org.apache.commons.math.linear.EigenDecompositionImpl.java:1390:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/23 patch-v3596/org.apache.commons.math.linear.EigenDecompositionImpl.java:1389:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/24 patch-v3612/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/27 patch-v4729/org.apache.commons.math.linear.EigenDecompositionImpl.java:1394:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/29 patch-v5328/org.apache.commons.math.linear.EigenDecompositionImpl.java:1391:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/30 patch-v5341/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/33 patch-v6010/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/37 patch-v7743/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/37 patch-v7743/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/37 patch-v7743/org.apache.commons.math.linear.EigenDecompositionImpl.java:1381:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed8/39 patch-v8322/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed8/43 patch-v9416/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/47 patch-v10502/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/48 patch-v10808/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/49 patch-v10827/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/49 patch-v10827/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed8/49 patch-v10827/org.apache.commons.math.linear.EigenDecompositionImpl.java:1138:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/55 patch-v12504/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/55 patch-v12504/org.apache.commons.math.linear.EigenDecompositionImpl.java:1056:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/58 patch-v13506/org.apache.commons.math.linear.EigenDecompositionImpl.java:1279:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/64 patch-v14039/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/66 patch-v14339/org.apache.commons.math.linear.EigenDecompositionImpl.java:960:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/67 patch-v14344/org.apache.commons.math.linear.EigenDecompositionImpl.java:960:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/7 patch-v1431/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/70 patch-v14741/org.apache.commons.math.linear.EigenDecompositionImpl.java:960:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/73 patch-v16204/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/74 patch-v16222/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/74 patch-v16222/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/74 patch-v16222/org.apache.commons.math.linear.EigenDecompositionImpl.java:1535:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/74 patch-v16222/org.apache.commons.math.linear.EigenDecompositionImpl.java:1562:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed8/75 patch-v16243/org.apache.commons.math.linear.EigenDecompositionImpl.java:1534:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/75 patch-v16243/org.apache.commons.math.linear.EigenDecompositionImpl.java:1561:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed8/79 patch-v16906/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/90 patch-v19224/org.apache.commons.math.linear.EigenDecompositionImpl.java:1385:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/92 patch-v19612/org.apache.commons.math.linear.EigenDecompositionImpl.java:1140:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/93 patch-v19707/org.apache.commons.math.linear.EigenDecompositionImpl.java:1409:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed8/94 patch-v20033/org.apache.commons.math.linear.EigenDecompositionImpl.java:1383:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/96 patch-v20124/org.apache.commons.math.linear.EigenDecompositionImpl.java:1054:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/96 patch-v20124/org.apache.commons.math.linear.EigenDecompositionImpl.java:1377:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed8/97 patch-v20242/org.apache.commons.math.linear.EigenDecompositionImpl.java:1388:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/1 patch-v63/org.apache.commons.math.linear.EigenDecompositionImpl.java:1056:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/10 patch-v3019/org.apache.commons.math.linear.EigenDecompositionImpl.java:1379:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/11 patch-v3102/org.apache.commons.math.linear.EigenDecompositionImpl.java:1382:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/12 patch-v3912/org.apache.commons.math.linear.EigenDecompositionImpl.java:1403:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/13 patch-v4147/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/14 patch-v4434/org.apache.commons.math.linear.EigenDecompositionImpl.java:1401:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/15 patch-v4749/org.apache.commons.math.linear.EigenDecompositionImpl.java:1397:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/16 patch-v4825/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/17 patch-v5126/org.apache.commons.math.linear.EigenDecompositionImpl.java:1022:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/18 patch-v5507/org.apache.commons.math.linear.EigenDecompositionImpl.java:1398:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/19 patch-v5650/org.apache.commons.math.linear.EigenDecompositionImpl.java:942:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/19 patch-v5650/org.apache.commons.math.linear.EigenDecompositionImpl.java:1017:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/19 patch-v5650/org.apache.commons.math.linear.EigenDecompositionImpl.java:1374:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/2 patch-v1120/org.apache.commons.math.linear.EigenDecompositionImpl.java:1384:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/20 patch-v6347/org.apache.commons.math.linear.EigenDecompositionImpl.java:1147:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/21 patch-v6742/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/21 patch-v6742/org.apache.commons.math.linear.EigenDecompositionImpl.java:1394:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/22 patch-v7302/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/23 patch-v7750/org.apache.commons.math.linear.EigenDecompositionImpl.java:1111:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/23 patch-v7750/org.apache.commons.math.linear.EigenDecompositionImpl.java:1141:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/24 patch-v7946/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/24 patch-v7946/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/25 patch-v8022/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/25 patch-v8022/org.apache.commons.math.linear.EigenDecompositionImpl.java:1397:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/25 patch-v8022/org.apache.commons.math.linear.EigenDecompositionImpl.java:1399:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/26 patch-v8329/org.apache.commons.math.linear.EigenDecompositionImpl.java:942:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/26 patch-v8329/org.apache.commons.math.linear.EigenDecompositionImpl.java:1523:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/27 patch-v8592/org.apache.commons.math.linear.EigenDecompositionImpl.java:1146:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/27 patch-v8592/org.apache.commons.math.linear.EigenDecompositionImpl.java:1187:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/29 patch-v8900/org.apache.commons.math.linear.EigenDecompositionImpl.java:1106:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/29 patch-v8900/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/29 patch-v8900/org.apache.commons.math.linear.EigenDecompositionImpl.java:1398:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/30 patch-v8949/org.apache.commons.math.linear.EigenDecompositionImpl.java:1419:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/31 patch-v9135/org.apache.commons.math.linear.ArrayRealVector.java:906:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed9/31 patch-v9135/org.apache.commons.math.linear.ArrayRealVector.java:906:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/31 patch-v9135/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/32 patch-v9431/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/32 patch-v9431/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/32 patch-v9431/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/32 patch-v9431/org.apache.commons.math.linear.EigenDecompositionImpl.java:1528:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/33 patch-v10328/org.apache.commons.math.linear.ArrayRealVector.java:885:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/33 patch-v10328/org.apache.commons.math.linear.ArrayRealVector.java:904:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed9/33 patch-v10328/org.apache.commons.math.linear.ArrayRealVector.java:904:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/33 patch-v10328/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/33 patch-v10328/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/33 patch-v10328/org.apache.commons.math.linear.EigenDecompositionImpl.java:1134:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/33 patch-v10328/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/34 patch-v10414/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/34 patch-v10414/org.apache.commons.math.linear.EigenDecompositionImpl.java:1337:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed9/35 patch-v11025/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/35 patch-v11025/org.apache.commons.math.linear.EigenDecompositionImpl.java:1088:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/36 patch-v11137/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/36 patch-v11137/org.apache.commons.math.linear.EigenDecompositionImpl.java:1131:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/36 patch-v11137/org.apache.commons.math.linear.EigenDecompositionImpl.java:1522:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/37 patch-v11214/org.apache.commons.math.linear.ArrayRealVector.java:886:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/37 patch-v11214/org.apache.commons.math.linear.ArrayRealVector.java:905:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed9/37 patch-v11214/org.apache.commons.math.linear.ArrayRealVector.java:905:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/37 patch-v11214/org.apache.commons.math.linear.EigenDecompositionImpl.java:967:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/37 patch-v11214/org.apache.commons.math.linear.EigenDecompositionImpl.java:1145:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/37 patch-v11214/org.apache.commons.math.linear.EigenDecompositionImpl.java:1147:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/38 patch-v11611/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/38 patch-v11611/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/38 patch-v11611/org.apache.commons.math.linear.EigenDecompositionImpl.java:1021:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/38 patch-v11611/org.apache.commons.math.linear.EigenDecompositionImpl.java:1089:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/39 patch-v11622/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/39 patch-v11622/org.apache.commons.math.linear.EigenDecompositionImpl.java:939:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/39 patch-v11622/org.apache.commons.math.linear.EigenDecompositionImpl.java:1518:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/40 patch-v11719/org.apache.commons.math.linear.EigenDecompositionImpl.java:941:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/40 patch-v11719/org.apache.commons.math.linear.EigenDecompositionImpl.java:1088:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/40 patch-v11719/org.apache.commons.math.linear.EigenDecompositionImpl.java:1526:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/41 patch-v11726/org.apache.commons.math.linear.ArrayRealVector.java:886:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/41 patch-v11726/org.apache.commons.math.linear.ArrayRealVector.java:905:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed9/41 patch-v11726/org.apache.commons.math.linear.ArrayRealVector.java:905:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/41 patch-v11726/org.apache.commons.math.linear.EigenDecompositionImpl.java:965:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/41 patch-v11726/org.apache.commons.math.linear.EigenDecompositionImpl.java:1143:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/41 patch-v11726/org.apache.commons.math.linear.EigenDecompositionImpl.java:1145:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/42 patch-v12430/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/42 patch-v12430/org.apache.commons.math.linear.EigenDecompositionImpl.java:1095:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/43 patch-v12704/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/43 patch-v12704/org.apache.commons.math.linear.EigenDecompositionImpl.java:911:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/43 patch-v12704/org.apache.commons.math.linear.EigenDecompositionImpl.java:1089:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/43 patch-v12704/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/43 patch-v12704/org.apache.commons.math.linear.EigenDecompositionImpl.java:1140:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/44 patch-v12809/org.apache.commons.math.linear.ArrayRealVector.java:177:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/44 patch-v12809/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/44 patch-v12809/org.apache.commons.math.linear.EigenDecompositionImpl.java:1143:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/45 patch-v13344/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/45 patch-v13344/org.apache.commons.math.linear.EigenDecompositionImpl.java:911:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/45 patch-v13344/org.apache.commons.math.linear.EigenDecompositionImpl.java:1089:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/45 patch-v13344/org.apache.commons.math.linear.EigenDecompositionImpl.java:1136:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/45 patch-v13344/org.apache.commons.math.linear.EigenDecompositionImpl.java:1140:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/46 patch-v13633/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/46 patch-v13633/org.apache.commons.math.linear.EigenDecompositionImpl.java:911:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/46 patch-v13633/org.apache.commons.math.linear.EigenDecompositionImpl.java:1021:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/46 patch-v13633/org.apache.commons.math.linear.EigenDecompositionImpl.java:1088:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/46 patch-v13633/org.apache.commons.math.linear.EigenDecompositionImpl.java:1135:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/47 patch-v13919/org.apache.commons.math.linear.EigenDecompositionImpl.java:912:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/47 patch-v13919/org.apache.commons.math.linear.EigenDecompositionImpl.java:1097:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/47 patch-v13919/org.apache.commons.math.linear.EigenDecompositionImpl.java:1149:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/48 patch-v13942/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/48 patch-v13942/org.apache.commons.math.linear.EigenDecompositionImpl.java:939:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/48 patch-v13942/org.apache.commons.math.linear.EigenDecompositionImpl.java:1046:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/48 patch-v13942/org.apache.commons.math.linear.EigenDecompositionImpl.java:1083:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/48 patch-v13942/org.apache.commons.math.linear.EigenDecompositionImpl.java:1520:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/49 patch-v14620/org.apache.commons.math.linear.ArrayRealVector.java:285:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/49 patch-v14620/org.apache.commons.math.linear.ArrayRealVector.java:885:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/49 patch-v14620/org.apache.commons.math.linear.EigenDecompositionImpl.java:912:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/49 patch-v14620/org.apache.commons.math.linear.EigenDecompositionImpl.java:1103:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/49 patch-v14620/org.apache.commons.math.linear.EigenDecompositionImpl.java:1150:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/49 patch-v14620/org.apache.commons.math.linear.EigenDecompositionImpl.java:1540:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/50 patch-v14636/org.apache.commons.math.linear.EigenDecompositionImpl.java:867:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/50 patch-v14636/org.apache.commons.math.linear.EigenDecompositionImpl.java:956:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/50 patch-v14636/org.apache.commons.math.linear.EigenDecompositionImpl.java:1017:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/50 patch-v14636/org.apache.commons.math.linear.EigenDecompositionImpl.java:1085:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/51 patch-v14908/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/51 patch-v14908/org.apache.commons.math.linear.EigenDecompositionImpl.java:939:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/51 patch-v14908/org.apache.commons.math.linear.EigenDecompositionImpl.java:1044:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/51 patch-v14908/org.apache.commons.math.linear.EigenDecompositionImpl.java:1080:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/51 patch-v14908/org.apache.commons.math.linear.EigenDecompositionImpl.java:1328:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/51 patch-v14908/org.apache.commons.math.linear.EigenDecompositionImpl.java:1392:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed9/51 patch-v14908/org.apache.commons.math.linear.EigenDecompositionImpl.java:1515:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/52 patch-v15046/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/52 patch-v15046/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/52 patch-v15046/org.apache.commons.math.linear.EigenDecompositionImpl.java:1019:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/52 patch-v15046/org.apache.commons.math.linear.EigenDecompositionImpl.java:1087:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/52 patch-v15046/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/53 patch-v15148/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/53 patch-v15148/org.apache.commons.math.linear.EigenDecompositionImpl.java:959:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/53 patch-v15148/org.apache.commons.math.linear.EigenDecompositionImpl.java:1020:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/53 patch-v15148/org.apache.commons.math.linear.EigenDecompositionImpl.java:1087:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/53 patch-v15148/org.apache.commons.math.linear.EigenDecompositionImpl.java:1133:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/54 patch-v17028/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/54 patch-v17028/org.apache.commons.math.linear.EigenDecompositionImpl.java:958:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/54 patch-v17028/org.apache.commons.math.linear.EigenDecompositionImpl.java:1084:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/54 patch-v17028/org.apache.commons.math.linear.EigenDecompositionImpl.java:1324:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.ArrayRealVector.java:284:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.ArrayRealVector.java:884:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:910:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	EmptyControlStatement:	Empty block
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:1028:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:1030:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:1096:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:1143:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:1144:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:1346:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:1362:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed9/55 patch-v20744/org.apache.commons.math.linear.EigenDecompositionImpl.java:1527:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/56 patch-v24236/org.apache.commons.math.linear.ArrayRealVector.java:886:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/56 patch-v24236/org.apache.commons.math.linear.ArrayRealVector.java:905:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed9/56 patch-v24236/org.apache.commons.math.linear.ArrayRealVector.java:905:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/56 patch-v24236/org.apache.commons.math.linear.EigenDecompositionImpl.java:869:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/56 patch-v24236/org.apache.commons.math.linear.EigenDecompositionImpl.java:953:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/56 patch-v24236/org.apache.commons.math.linear.EigenDecompositionImpl.java:1079:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/56 patch-v24236/org.apache.commons.math.linear.EigenDecompositionImpl.java:1125:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/56 patch-v24236/org.apache.commons.math.linear.EigenDecompositionImpl.java:1323:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/56 patch-v24236/org.apache.commons.math.linear.EigenDecompositionImpl.java:1329:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.ArrayRealVector.java:285:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.ArrayRealVector.java:885:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.ArrayRealVector.java:904:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.ArrayRealVector.java:904:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:911:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	EmptyControlStatement:	Empty block
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:945:	EmptyControlStatement:	Empty block
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:1092:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:1139:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:1141:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:1337:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:1343:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:1351:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/57 patch-v24631/org.apache.commons.math.linear.EigenDecompositionImpl.java:1524:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.ArrayRealVector.java:285:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.ArrayRealVector.java:885:	EmptyControlStatement:	Empty for statement
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.ArrayRealVector.java:904:	EmptyControlStatement:	Empty foreach statement
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.ArrayRealVector.java:904:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:870:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:911:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:943:	EmptyControlStatement:	Empty block
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:945:	EmptyControlStatement:	Empty block
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:1093:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:1140:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:1143:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:1339:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:1345:	EmptyControlStatement:	Empty else statement
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:1353:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/58 patch-v24929/org.apache.commons.math.linear.EigenDecompositionImpl.java:1526:	EmptyControlStatement:	Empty if statement
+./505025/math80/seed9/6 patch-v2101/org.apache.commons.math.linear.EigenDecompositionImpl.java:1396:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/7 patch-v2402/org.apache.commons.math.linear.EigenDecompositionImpl.java:1384:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/7 patch-v2402/org.apache.commons.math.linear.EigenDecompositionImpl.java:1401:	UnusedLocalVariable:	使用されない変数
+./505025/math80/seed9/8 patch-v2724/org.apache.commons.math.linear.EigenDecompositionImpl.java:1018:	UnusedLocalVariable:	使用されない変数

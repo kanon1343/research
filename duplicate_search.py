@@ -11,6 +11,7 @@ def detect_consecutive_duplicate_lines(program):
     for line in lines:
         # 統合差分形式の指示子とコメント行、および-で始まる行を重複チェックから除外
         if line.startswith(('+++', '---', '@@', '//')):
+            prev_line = None
             continue
         # 空白を除いた行を重複チェックの対象とする
         cleaned_line = line.strip().replace(" ", "").replace("\t", "")
@@ -49,7 +50,7 @@ def search_java_files(folder_path):
 
 
 def main():
-    projects = ["49", "82"]
+    projects = ["46", "49", "72", "78", "80", "82", "85"]
     for project in projects:
         folder_path = pathlib.Path(
             "/Users/haradakanon/Downloads/research/505025/math{project}".format(project=project))

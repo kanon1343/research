@@ -3,5 +3,12 @@
     "editor.defaultFormatter": "ms-python.autopep8"
   },
   "python.formatting.provider": "none",
-  "cSpell.words": ["oline", "savefig", "xlines", "ylines"]
+  "cSpell.words": [
+    "matplotlib",
+    "oline",
+    "pyplot",
+    "savefig",
+    "xlines",
+    "ylines"
+  ]
 }

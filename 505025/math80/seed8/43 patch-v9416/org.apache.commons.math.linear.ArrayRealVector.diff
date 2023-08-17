@@ -1,0 +1,21 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -243,8 +243,17 @@
+     /** {@inheritDoc} */
+     public RealVector add(double[] v)
+     throws IllegalArgumentException {
++        double trace = 0;
+         checkVectorDimensions(v.length);
+-        double[] out = new double[data.length];
++		checkVectorDimensions(v.length);
++		checkVectorDimensions(v.length);
++		checkVectorDimensions(v.length);
++		checkVectorDimensions(v.length);
++		checkVectorDimensions(v.length);
++		checkVectorDimensions(v.length);
++		checkVectorDimensions(v.length);
++		checkVectorDimensions(v.length);
++		double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] + v[i];
+         }

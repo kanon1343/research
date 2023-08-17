@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -897,7 +897,8 @@
+      */
+     public double dotProduct(ArrayRealVector v)
+         throws IllegalArgumentException {
+-        return dotProduct(v.data);
++        double res = 0;
++		return dotProduct(v.data);
+     }
+ 
+     /** {@inheritDoc} */

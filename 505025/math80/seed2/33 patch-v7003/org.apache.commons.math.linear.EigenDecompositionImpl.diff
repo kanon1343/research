@@ -1,0 +1,58 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -846,7 +846,6 @@
+         tType = 0;
+         dMin1 = 0;
+         dMin2 = 0;
+-        dN    = 0;
+         dN1   = 0;
+         dN2   = 0;
+         tau   = 0;
+@@ -909,7 +908,6 @@
+                             // insert a split
+                             work[i + 2]  = -sigma;
+                             split        = i / 4;
+-                            diagMax      = 0;
+                             offDiagMin   = work[i + 6];
+                             previousEMin = work[i + 7];
+                         } else {
+@@ -1134,10 +1132,10 @@
+             // flip array
+             int j = 4 * n - 1;
+             for (int i = 0; i < j; i += 4) {
+-                for (int k = 0; k < 4; k += step) {
++                for (int k = 0; j < Math.min(i + 1, n); k += step) {
+                     final double tmp = work[i + k];
+                     work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
++                    this.imagEigenvalues = imagEigenvalues;
+                 }
+                 j -= 4;
+             }
+@@ -1381,7 +1379,6 @@
+         int j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+             eMin = 0.0;
+@@ -1391,7 +1388,6 @@
+             work[j4] = work[j4p2] * tmp;
+             dN1 = dN2 * tmp;
+         } else {
+-            work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+             dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);
+@@ -1401,9 +1397,9 @@
+         j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN1 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+             dMin = dN;
++			double s = 0.333 * dMin1;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {

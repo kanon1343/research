@@ -119,7 +119,7 @@ def main():
     #         "/Users/haradakanon/Downloads/kGenProg-1.8.2/example/math78")
     #     data = extract_generation_with_max_fitness(file_path)
     #     summarize(summarize_file_path, i, data)
-    projects = ["49", "82"]
+    projects = ["80"]
     for project in projects:
         output_file_path = pathlib.Path(
             "/Users/haradakanon/Downloads/research/505025/math{project}log/selection".format(

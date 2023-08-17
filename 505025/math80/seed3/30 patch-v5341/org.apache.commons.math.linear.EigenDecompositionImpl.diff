@@ -1,0 +1,75 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -958,6 +958,7 @@
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
++					computeGershgorinCircles();
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+                            (MathUtils.SAFE_MIN * work[j] < work[i + 2])) {
+                     final double tmp = work[i + 2] / work[j];
+@@ -1059,7 +1060,6 @@
+                 work[l - 2 * pingPong] =
+                     Math.min(work[l - 2 * pingPong],
+                              Math.min(work[6 + pingPong], work[6 + pingPong]));
+-                qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+                 dMin  = -0.0;
+             }
+         }
+@@ -1134,14 +1134,10 @@
+             // flip array
+             int j = 4 * n - 1;
+             for (int i = 0; i < j; i += 4) {
+-                for (int k = 0; k < 4; k += step) {
+-                    final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+-                }
++                for (int k = 0; k < 4; k += step)
++					break;
+                 j -= 4;
+             }
+-            return true;
+         }
+         return false;
+     }
+@@ -1381,10 +1377,8 @@
+         int j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+-            dMin = dN1;
+-            eMin = 0.0;
++            decompose();
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1404,7 +1398,6 @@
+             work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+             dMin = dN;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1567,19 +1560,6 @@
+                     tau = s;
+                 }
+ 
+-            } else {
+-
+-                // case 6, no information to guide us.
+-                if (tType == -6) {
+-                    g += 0.333 * (1 - g);
+-                } else if (tType == -18) {
+-                    g = 0.25 * 0.333;
+-                } else {
+-                    g = 0.25;
+-                }
+-                tau   = g * dMin;
+-                tType = -6;
+-
+             }
+             break;
+ 

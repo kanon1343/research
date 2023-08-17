@@ -1,0 +1,38 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -154,7 +154,7 @@
+      */
+     public ArrayRealVector(RealVector v) {
+         data = new double[v.getDimension()];
+-        for (int i = 0; i < data.length; ++i) {
++        for (int i = 0;; ++i) {
+             data[i] = v.getEntry(i);
+         }
+     }
+@@ -243,7 +243,6 @@
+     /** {@inheritDoc} */
+     public RealVector add(double[] v)
+     throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] + v[i];
+@@ -280,10 +279,8 @@
+     /** {@inheritDoc} */
+     public RealVector subtract(double[] v)
+     throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+-            out[i] = data[i] - v[i];
+         }
+         return new ArrayRealVector(out);
+     }
+@@ -793,7 +790,6 @@
+     /** {@inheritDoc} */
+     public RealVector ebeMultiply(double[] v)
+         throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] * v[i];
