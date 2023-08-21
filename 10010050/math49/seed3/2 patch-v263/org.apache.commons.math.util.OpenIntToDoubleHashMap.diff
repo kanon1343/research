@@ -1,0 +1,21 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -214,7 +214,6 @@
+         }
+ 
+         if (states[index] == FREE) {
+-            return false;
+         }
+ 
+         int j = index;
+@@ -394,9 +393,8 @@
+         keys[index]   = 0;
+         states[index] = REMOVED;
+         final double previous = values[index];
+-        values[index] = missingEntries;
++        final double as[] = new double[2];
+         --size;
+-        ++count;
+         return previous;
+     }
+ 

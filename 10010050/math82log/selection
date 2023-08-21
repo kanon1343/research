@@ -1,0 +1,246 @@
+./10010050/math82/seed0/1 patch-v321/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/10 patch-v1054/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/10 patch-v1054/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed0/11 patch-v1118/org.apache.commons.math.optimization.linear.SimplexTableau.java:354:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/12 patch-v1139/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/12 patch-v1139/org.apache.commons.math.optimization.linear.SimplexTableau.java:295:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/13 patch-v1153/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/14 patch-v1354/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/15 patch-v1393/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed0/15 patch-v1393/org.apache.commons.math.optimization.linear.SimplexTableau.java:295:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/16 patch-v1532/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed0/16 patch-v1532/org.apache.commons.math.optimization.linear.SimplexTableau.java:292:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/17 patch-v1565/org.apache.commons.math.optimization.linear.SimplexTableau.java:292:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/17 patch-v1565/org.apache.commons.math.optimization.linear.SimplexTableau.java:296:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/18 patch-v1779/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed0/19 patch-v1934/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/21 patch-v2323/org.apache.commons.math.optimization.linear.SimplexTableau.java:291:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/25 patch-v2744/org.apache.commons.math.optimization.linear.SimplexSolver.java:83:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/25 patch-v2744/org.apache.commons.math.optimization.linear.SimplexTableau.java:291:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/26 patch-v2797/org.apache.commons.math.optimization.linear.SimplexTableau.java:293:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/27 patch-v3102/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/27 patch-v3102/org.apache.commons.math.optimization.linear.SimplexTableau.java:295:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/28 patch-v3112/org.apache.commons.math.optimization.linear.SimplexSolver.java:165:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed0/3 patch-v503/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed0/30 patch-v3152/org.apache.commons.math.optimization.linear.SimplexSolver.java:83:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/31 patch-v3154/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/31 patch-v3154/org.apache.commons.math.optimization.linear.SimplexTableau.java:342:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/31 patch-v3154/org.apache.commons.math.optimization.linear.SimplexTableau.java:356:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/32 patch-v3168/org.apache.commons.math.optimization.linear.SimplexTableau.java:292:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/33 patch-v3261/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/33 patch-v3261/org.apache.commons.math.optimization.linear.SimplexTableau.java:292:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/33 patch-v3261/org.apache.commons.math.optimization.linear.SimplexTableau.java:343:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/34 patch-v3328/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/34 patch-v3328/org.apache.commons.math.linear.Array2DRowRealMatrix.java:325:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/35 patch-v3351/org.apache.commons.math.optimization.linear.SimplexSolver.java:83:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/36 patch-v3398/org.apache.commons.math.optimization.linear.SimplexTableau.java:296:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/37 patch-v6618/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/38 patch-v11660/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/38 patch-v11660/org.apache.commons.math.optimization.linear.SimplexTableau.java:137:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/38 patch-v11660/org.apache.commons.math.optimization.linear.SimplexTableau.java:225:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/39 patch-v11806/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/39 patch-v11806/org.apache.commons.math.optimization.linear.SimplexSolver.java:135:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/39 patch-v11806/org.apache.commons.math.optimization.linear.SimplexTableau.java:300:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/4 patch-v637/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/4 patch-v637/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed0/4 patch-v637/org.apache.commons.math.optimization.linear.SimplexTableau.java:355:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/40 patch-v12619/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/40 patch-v12619/org.apache.commons.math.optimization.linear.SimplexTableau.java:300:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/41 patch-v13244/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/42 patch-v13646/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/42 patch-v13646/org.apache.commons.math.optimization.linear.SimplexTableau.java:297:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/44 patch-v15020/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/45 patch-v15225/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/46 patch-v16642/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/47 patch-v17805/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/47 patch-v17805/org.apache.commons.math.optimization.linear.SimplexTableau.java:230:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/48 patch-v18845/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/49 patch-v20658/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/49 patch-v20658/org.apache.commons.math.optimization.linear.SimplexTableau.java:229:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/5 patch-v731/org.apache.commons.math.optimization.linear.SimplexTableau.java:355:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/6 patch-v740/org.apache.commons.math.optimization.linear.SimplexSolver.java:83:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/7 patch-v931/org.apache.commons.math.optimization.linear.SimplexSolver.java:134:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed0/7 patch-v931/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed0/8 patch-v983/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed0/9 patch-v998/org.apache.commons.math.optimization.linear.SimplexSolver.java:83:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/1 patch-v143/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed1/3 patch-v5860/org.apache.commons.math.optimization.linear.SimplexSolver.java:105:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/3 patch-v5860/org.apache.commons.math.optimization.linear.SimplexSolver.java:172:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/4 patch-v7636/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/4 patch-v7636/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed1/5 patch-v7675/org.apache.commons.math.linear.ArrayRealVector.java:340:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/5 patch-v7675/org.apache.commons.math.optimization.linear.SimplexTableau.java:110:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/5 patch-v7675/org.apache.commons.math.optimization.linear.SimplexTableau.java:343:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/6 patch-v9614/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/7 patch-v11027/org.apache.commons.math.linear.ArrayRealVector.java:339:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/7 patch-v11027/org.apache.commons.math.optimization.linear.SimplexSolver.java:107:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/7 patch-v11027/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed1/7 patch-v11027/org.apache.commons.math.optimization.linear.SimplexTableau.java:357:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed1/8 patch-v13209/org.apache.commons.math.linear.ArrayRealVector.java:340:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/1 patch-v248/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed2/10 patch-v12611/org.apache.commons.math.optimization.linear.SimplexTableau.java:398:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/2 patch-v842/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/2 patch-v842/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed2/3 patch-v1402/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed2/3 patch-v1402/org.apache.commons.math.optimization.linear.SimplexTableau.java:342:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/4 patch-v1656/org.apache.commons.math.linear.Array2DRowRealMatrix.java:342:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/4 patch-v1656/org.apache.commons.math.optimization.linear.SimplexSolver.java:104:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/5 patch-v2666/org.apache.commons.math.linear.Array2DRowRealMatrix.java:342:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/5 patch-v2666/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/5 patch-v2666/org.apache.commons.math.util.MathUtils.java:292:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/6 patch-v7235/org.apache.commons.math.optimization.linear.SimplexSolver.java:165:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed2/7 patch-v10061/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed2/7 patch-v10061/org.apache.commons.math.optimization.linear.SimplexTableau.java:237:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/7 patch-v10061/org.apache.commons.math.util.MathUtils.java:292:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/7 patch-v10061/org.apache.commons.math.util.MathUtils.java:368:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/8 patch-v10232/org.apache.commons.math.optimization.linear.SimplexTableau.java:342:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/8 patch-v10232/org.apache.commons.math.util.MathUtils.java:292:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/8 patch-v10232/org.apache.commons.math.util.MathUtils.java:367:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed2/9 patch-v12015/org.apache.commons.math.optimization.linear.SimplexTableau.java:342:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed2/9 patch-v12015/org.apache.commons.math.util.MathUtils.java:292:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/1 patch-v1602/org.apache.commons.math.optimization.linear.SimplexSolver.java:80:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/10 patch-v16893/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/10 patch-v16893/org.apache.commons.math.linear.ArrayRealVector.java:283:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/10 patch-v16893/org.apache.commons.math.linear.ArrayRealVector.java:796:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/10 patch-v16893/org.apache.commons.math.optimization.linear.SimplexSolver.java:50:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/10 patch-v16893/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed3/11 patch-v19267/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/11 patch-v19267/org.apache.commons.math.linear.ArrayRealVector.java:283:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/11 patch-v19267/org.apache.commons.math.linear.ArrayRealVector.java:796:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/11 patch-v19267/org.apache.commons.math.optimization.linear.SimplexTableau.java:110:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/11 patch-v19267/org.apache.commons.math.optimization.linear.SimplexTableau.java:292:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/11 patch-v19267/org.apache.commons.math.optimization.linear.SimplexTableau.java:342:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/12 patch-v20810/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/12 patch-v20810/org.apache.commons.math.linear.ArrayRealVector.java:283:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/12 patch-v20810/org.apache.commons.math.linear.ArrayRealVector.java:796:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/12 patch-v20810/org.apache.commons.math.linear.ArrayRealVector.java:833:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/12 patch-v20810/org.apache.commons.math.optimization.linear.SimplexSolver.java:76:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/12 patch-v20810/org.apache.commons.math.optimization.linear.SimplexTableau.java:110:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/3 patch-v7080/org.apache.commons.math.linear.Array2DRowRealMatrix.java:367:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/3 patch-v7080/org.apache.commons.math.optimization.linear.SimplexTableau.java:291:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/4 patch-v9883/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/4 patch-v9883/org.apache.commons.math.optimization.linear.SimplexTableau.java:340:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/5 patch-v10810/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:68:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/6 patch-v12251/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/6 patch-v12251/org.apache.commons.math.linear.ArrayRealVector.java:283:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/6 patch-v12251/org.apache.commons.math.optimization.linear.SimplexSolver.java:170:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed3/6 patch-v12251/org.apache.commons.math.optimization.linear.SimplexTableau.java:110:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/7 patch-v15086/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/7 patch-v15086/org.apache.commons.math.optimization.linear.SimplexTableau.java:110:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/7 patch-v15086/org.apache.commons.math.optimization.linear.SimplexTableau.java:141:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/7 patch-v15086/org.apache.commons.math.optimization.linear.SimplexTableau.java:293:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/8 patch-v16223/org.apache.commons.math.linear.ArrayRealVector.java:246:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/8 patch-v16223/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed3/8 patch-v16223/org.apache.commons.math.optimization.linear.SimplexTableau.java:139:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/9 patch-v16496/org.apache.commons.math.optimization.linear.SimplexSolver.java:140:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/9 patch-v16496/org.apache.commons.math.optimization.linear.SimplexSolver.java:171:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed3/9 patch-v16496/org.apache.commons.math.optimization.linear.SimplexTableau.java:291:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed3/9 patch-v16496/org.apache.commons.math.optimization.linear.SimplexTableau.java:309:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/1 patch-v4096/org.apache.commons.math.optimization.linear.SimplexSolver.java:187:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/1 patch-v4096/org.apache.commons.math.optimization.linear.SimplexTableau.java:136:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/1 patch-v4096/org.apache.commons.math.optimization.linear.SimplexTableau.java:404:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/10 patch-v10465/org.apache.commons.math.optimization.linear.SimplexTableau.java:352:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/10 patch-v10465/org.apache.commons.math.optimization.linear.SimplexTableau.java:408:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/11 patch-v14007/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed4/12 patch-v17457/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/2 patch-v4436/org.apache.commons.math.optimization.linear.SimplexTableau.java:403:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/3 patch-v5230/org.apache.commons.math.optimization.linear.SimplexSolver.java:130:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/3 patch-v5230/org.apache.commons.math.optimization.linear.SimplexSolver.java:147:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed4/3 patch-v5230/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed4/4 patch-v6287/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed4/4 patch-v6287/org.apache.commons.math.optimization.linear.SimplexSolver.java:188:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/4 patch-v6287/org.apache.commons.math.optimization.linear.SimplexTableau.java:351:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/5 patch-v7237/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed4/5 patch-v7237/org.apache.commons.math.optimization.linear.SimplexSolver.java:187:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/5 patch-v7237/org.apache.commons.math.optimization.linear.SimplexTableau.java:131:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/5 patch-v7237/org.apache.commons.math.optimization.linear.SimplexTableau.java:168:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/5 patch-v7237/org.apache.commons.math.optimization.linear.SimplexTableau.java:353:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/6 patch-v8831/org.apache.commons.math.optimization.linear.SimplexSolver.java:130:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/6 patch-v8831/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed4/7 patch-v9243/org.apache.commons.math.optimization.linear.SimplexSolver.java:131:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/7 patch-v9243/org.apache.commons.math.optimization.linear.SimplexTableau.java:351:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/8 patch-v9867/org.apache.commons.math.optimization.linear.SimplexSolver.java:130:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/9 patch-v10423/org.apache.commons.math.optimization.linear.SimplexTableau.java:131:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed4/9 patch-v10423/org.apache.commons.math.optimization.linear.SimplexTableau.java:137:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed5/1 patch-v895/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed5/2 patch-v1631/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed5/3 patch-v2211/org.apache.commons.math.optimization.linear.SimplexSolver.java:59:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed5/5 patch-v12073/org.apache.commons.math.optimization.linear.AbstractLinearOptimizer.java:105:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed5/5 patch-v12073/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed6/1 patch-v4214/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed6/1 patch-v4214/org.apache.commons.math.optimization.linear.SimplexTableau.java:114:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/1 patch-v4214/org.apache.commons.math.optimization.linear.SimplexTableau.java:309:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/10 patch-v16252/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/10 patch-v16252/org.apache.commons.math.linear.AbstractRealMatrix.java:66:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/10 patch-v16252/org.apache.commons.math.linear.AbstractRealMatrix.java:789:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/10 patch-v16252/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed6/11 patch-v18288/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/11 patch-v18288/org.apache.commons.math.optimization.linear.SimplexSolver.java:93:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/11 patch-v18288/org.apache.commons.math.optimization.linear.SimplexSolver.java:177:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/2 patch-v4827/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/2 patch-v4827/org.apache.commons.math.optimization.linear.SimplexSolver.java:50:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/3 patch-v7685/org.apache.commons.math.linear.AbstractRealMatrix.java:65:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/3 patch-v7685/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed6/4 patch-v8040/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/4 patch-v8040/org.apache.commons.math.optimization.linear.SimplexSolver.java:106:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/4 patch-v8040/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed6/4 patch-v8040/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/5 patch-v10489/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/5 patch-v10489/org.apache.commons.math.optimization.linear.SimplexSolver.java:50:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/5 patch-v10489/org.apache.commons.math.optimization.linear.SimplexSolver.java:130:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed6/5 patch-v10489/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/5 patch-v10489/org.apache.commons.math.optimization.linear.SimplexSolver.java:173:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/6 patch-v11039/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/6 patch-v11039/org.apache.commons.math.linear.AbstractRealMatrix.java:403:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/6 patch-v11039/org.apache.commons.math.linear.AbstractRealMatrix.java:790:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/6 patch-v11039/org.apache.commons.math.optimization.linear.SimplexTableau.java:291:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/6 patch-v11039/org.apache.commons.math.optimization.linear.SimplexTableau.java:309:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/6 patch-v11039/org.apache.commons.math.optimization.linear.SimplexTableau.java:310:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/7 patch-v11461/org.apache.commons.math.optimization.linear.SimplexSolver.java:50:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/8 patch-v12001/org.apache.commons.math.linear.AbstractRealMatrix.java:65:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/8 patch-v12001/org.apache.commons.math.linear.AbstractRealMatrix.java:788:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/9 patch-v14061/org.apache.commons.math.linear.AbstractRealMatrix.java:65:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/9 patch-v14061/org.apache.commons.math.linear.AbstractRealMatrix.java:403:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/9 patch-v14061/org.apache.commons.math.linear.AbstractRealMatrix.java:790:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/9 patch-v14061/org.apache.commons.math.linear.Array2DRowRealMatrix.java:96:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed6/9 patch-v14061/org.apache.commons.math.optimization.linear.SimplexTableau.java:291:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed7/1 patch-v1047/org.apache.commons.math.optimization.linear.SimplexTableau.java:357:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed7/3 patch-v3656/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed7/4 patch-v3685/org.apache.commons.math.optimization.linear.SimplexSolver.java:63:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed7/4 patch-v3685/org.apache.commons.math.optimization.linear.SimplexTableau.java:105:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed7/4 patch-v3685/org.apache.commons.math.optimization.linear.SimplexTableau.java:115:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed7/5 patch-v8708/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed7/6 patch-v8925/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed7/6 patch-v8925/org.apache.commons.math.optimization.linear.SimplexTableau.java:105:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed7/7 patch-v9195/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed7/7 patch-v9195/org.apache.commons.math.optimization.linear.SimplexTableau.java:310:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/10 patch-v15802/org.apache.commons.math.optimization.linear.SimplexSolver.java:76:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/10 patch-v15802/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed8/10 patch-v15802/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed8/11 patch-v16803/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed8/11 patch-v16803/org.apache.commons.math.optimization.linear.SimplexTableau.java:291:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/2 patch-v4096/org.apache.commons.math.optimization.linear.SimplexSolver.java:61:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/3 patch-v4278/org.apache.commons.math.optimization.linear.SimplexSolver.java:166:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/3 patch-v4278/org.apache.commons.math.optimization.linear.SimplexTableau.java:133:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed8/3 patch-v4278/org.apache.commons.math.optimization.linear.SimplexTableau.java:153:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/4 patch-v4894/org.apache.commons.math.optimization.linear.SimplexSolver.java:130:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/4 patch-v4894/org.apache.commons.math.optimization.linear.SimplexSolver.java:168:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/4 patch-v4894/org.apache.commons.math.optimization.linear.SimplexTableau.java:154:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/6 patch-v9651/org.apache.commons.math.optimization.linear.SimplexSolver.java:61:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/6 patch-v9651/org.apache.commons.math.optimization.linear.SimplexTableau.java:133:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed8/7 patch-v11447/org.apache.commons.math.optimization.linear.SimplexSolver.java:167:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed8/7 patch-v11447/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed8/7 patch-v11447/org.apache.commons.math.util.MathUtils.java:366:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed8/8 patch-v11684/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/8 patch-v11684/org.apache.commons.math.linear.AbstractRealMatrix.java:66:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/9 patch-v14291/org.apache.commons.math.linear.AbstractRealMatrix.java:44:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed8/9 patch-v14291/org.apache.commons.math.util.MathUtils.java:291:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed9/2 patch-v6477/org.apache.commons.math.optimization.linear.SimplexSolver.java:187:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed9/3 patch-v8057/org.apache.commons.math.linear.Array2DRowRealMatrix.java:95:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed9/4 patch-v9491/org.apache.commons.math.optimization.linear.SimplexTableau.java:308:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed9/5 patch-v10648/org.apache.commons.math.linear.ArrayRealVector.java:888:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed9/7 patch-v11213/org.apache.commons.math.linear.Array2DRowRealMatrix.java:95:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed9/7 patch-v11213/org.apache.commons.math.optimization.linear.SimplexTableau.java:152:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed9/8 patch-v16620/org.apache.commons.math.optimization.linear.SimplexSolver.java:191:	UnusedLocalVariable:	使用されない変数
+./10010050/math82/seed9/9 patch-v18258/org.apache.commons.math.optimization.linear.SimplexSolver.java:169:	EmptyControlStatement:	Empty if statement
+./10010050/math82/seed9/9 patch-v18258/org.apache.commons.math.optimization.linear.SimplexSolver.java:189:	UnusedLocalVariable:	使用されない変数

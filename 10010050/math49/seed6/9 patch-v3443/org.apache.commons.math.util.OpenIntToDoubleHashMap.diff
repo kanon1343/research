@@ -1,0 +1,35 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -124,6 +124,7 @@
+         states = new byte[capacity];
+         this.missingEntries = missingEntries;
+         mask   = capacity - 1;
++		double relativeError = Double.MAX_VALUE;
+     }
+ 
+     /**
+@@ -132,6 +133,7 @@
+      */
+     public OpenIntToDoubleHashMap(final OpenIntToDoubleHashMap source) {
+         final int length = source.keys.length;
++		final byte[] oldStates = states;
+         keys = new int[length];
+         System.arraycopy(source.keys, 0, keys, 0, length);
+         values = new double[length];
+@@ -396,7 +398,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+@@ -527,7 +528,7 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
++                double result;
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);

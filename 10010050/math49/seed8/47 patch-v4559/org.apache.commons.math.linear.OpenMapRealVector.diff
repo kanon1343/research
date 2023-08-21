@@ -1,0 +1,18 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -136,6 +136,7 @@
+         this.epsilon = epsilon;
+         for (int key = 0; key < values.length; key++) {
+             double value = values[key];
++			Entry e;
+             if (!isDefaultValue(value)) {
+                 entries.put(key, value);
+             }
+@@ -343,6 +344,7 @@
+         checkVectorDimensions(v.getDimension());
+         OpenMapRealVector res = new OpenMapRealVector(this);
+         Iterator iter = res.entries.iterator();
++		int blockIndex = 0;
+         while (iter.hasNext()) {
+             iter.advance();
+             res.setEntry(iter.key(), iter.value() / v.getEntry(iter.key()));

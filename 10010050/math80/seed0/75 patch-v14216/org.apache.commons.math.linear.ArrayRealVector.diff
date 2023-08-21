@@ -1,0 +1,26 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -243,7 +243,6 @@
+     /** {@inheritDoc} */
+     public RealVector add(double[] v)
+     throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] + v[i];
+@@ -280,7 +279,6 @@
+     /** {@inheritDoc} */
+     public RealVector subtract(double[] v)
+     throws IllegalArgumentException {
+-        checkVectorDimensions(v.length);
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] - v[i];
+@@ -885,6 +883,7 @@
+         double dot = 0;
+         for (int i = 0; i < data.length; i++) {
+             dot += data[i] * v[i];
++			int blockIndex = 0;
+         }
+         return dot;
+     }

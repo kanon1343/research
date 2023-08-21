@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -3754,7 +3754,6 @@
+ 
+         y = floor(x);
+         if (y == x) {
+-            return y;
+         }
+ 
+         y += 1.0;

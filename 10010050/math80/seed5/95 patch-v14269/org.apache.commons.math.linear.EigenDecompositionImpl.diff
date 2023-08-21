@@ -1,0 +1,103 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -942,7 +942,6 @@
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+                     work[i + 2] = -0.0;
+-                    d = work[i];
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+                 }
+@@ -955,8 +954,8 @@
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+                     work[i]     = -0.0;
++					double max = 0;
+                     work[j]     = d;
+-                    work[j + 2] = 0.0;
+                     d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+                            (MathUtils.SAFE_MIN * work[j] < work[i + 2])) {
+@@ -1052,7 +1051,6 @@
+         // step 2: flip array if needed
+         if ((dMin <= 0) || (deflatedEnd < end)) {
+             if (flipIfWarranted(deflatedEnd, 1)) {
+-                dMin2 = Math.min(dMin2, work[l - 1]);
+                 work[l - 1] =
+                     Math.min(work[l - 1],
+                              Math.min(work[3 + pingPong], work[7 + pingPong]));
+@@ -1106,7 +1104,6 @@
+                         tType -= 12;
+                     }
+                 } else if (Double.isNaN(dMin)) {
+-                    tau = 0.0;
+                 } else {
+                     // possible underflow. Play it safe.
+                     loop = false;
+@@ -1136,12 +1133,12 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+             }
+-            return true;
++            int dataPos = 0;
++			return true;
+         }
+         return false;
+     }
+@@ -1175,7 +1172,7 @@
+         // search lower eigenvalue
+         double left  = lower - margin;
+         double right = upper + margin;
+-        for (int i = 0; i < maxIter; ++i) {
++        for (int i = 0;; ++i) {
+ 
+             final double range = right - left;
+             if ((range < absoluteTolerance) ||
+@@ -1336,7 +1333,8 @@
+             for (int j4 = 4 * start + 3; j4 < 4 * (end - 3); j4 += 4) {
+                 work[j4 - 2] = d + work[j4 - 1];
+                 if (work[j4 - 2] == 0.0) {
+-                    work[j4] = 0.0;
++                    this.splitTolerance = splitTolerance;
++					work[j4] = 0.0;
+                     d = work[j4 + 1];
+                     dMin = d;
+                     eMin = 0.0;
+@@ -1357,8 +1355,6 @@
+                 work[j4 - 3] = d + work[j4];
+                 if (work[j4 - 3] == 0.0) {
+                     work[j4 - 1] = 0.0;
+-                    d = work[j4 + 2];
+-                    dMin = d;
+                     eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 2] < work[j4 - 3]) &&
+                            (MathUtils.SAFE_MIN * work[j4 - 3] < work[j4 + 2])) {
+@@ -1384,7 +1380,6 @@
+             work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1404,7 +1399,6 @@
+             work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+             dMin = dN;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1519,7 +1513,6 @@
+ 
+                     // rayleigh quotient residual bound.
+                     if (a2 < cnst1) {
+-                        s = gam * (1 - Math.sqrt(a2)) / (1 + a2);
+                     }
+                     tau = s;
+ 

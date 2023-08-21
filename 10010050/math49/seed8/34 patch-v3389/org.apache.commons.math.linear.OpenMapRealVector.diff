@@ -1,0 +1,18 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -223,7 +223,6 @@
+     /** {@inheritDoc} */
+     @Override
+         public RealVector add(RealVector v) {
+-        checkVectorDimensions(v.getDimension());
+         if (v instanceof OpenMapRealVector) {
+             return add((OpenMapRealVector) v);
+         } else {
+@@ -343,6 +342,7 @@
+         checkVectorDimensions(v.getDimension());
+         OpenMapRealVector res = new OpenMapRealVector(this);
+         Iterator iter = res.entries.iterator();
++		int blockIndex = 0;
+         while (iter.hasNext()) {
+             iter.advance();
+             res.setEntry(iter.key(), iter.value() / v.getEntry(iter.key()));

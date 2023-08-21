@@ -1,0 +1,28 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -132,6 +132,7 @@
+      */
+     public OpenIntToDoubleHashMap(final OpenIntToDoubleHashMap source) {
+         final int length = source.keys.length;
++		final byte[] oldStates = states;
+         keys = new int[length];
+         System.arraycopy(source.keys, 0, keys, 0, length);
+         values = new double[length];
+@@ -139,7 +140,6 @@
+         states = new byte[length];
+         System.arraycopy(source.states, 0, states, 0, length);
+         missingEntries = source.missingEntries;
+-        size  = source.size;
+         mask  = source.mask;
+         count = source.count;
+     }
+@@ -394,9 +394,7 @@
+         keys[index]   = 0;
+         states[index] = REMOVED;
+         final double previous = values[index];
+-        values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 

@@ -1,0 +1,47 @@
+,世代,時間,出力数,前世代までの合計
+0,1st, 19 seconds,1,0
+1,4th, 26 minutes 15 seconds,2,1
+2,5th, 30 minutes 5 seconds,1,3
+3,6th, 33 minutes 43 seconds,1,4
+4,10th, 1 hours 51 minutes 35 seconds,1,5
+5,11th, 2 hours 19 minutes 20 seconds,1,6
+6,14th, 3 hours 54 minutes 27 seconds,2,7
+7,15th, 4 hours 13 minutes 6 seconds,3,9
+8,16th, 4 hours 55 minutes 52 seconds,1,12
+9,17th, 5 hours 26 minutes 45 seconds,2,13
+10,25th, 9 hours 39 minutes 24 seconds,1,15
+11,26th, 9 hours 58 minutes 13 seconds,1,16
+12,27th, 10 hours 29 minutes 0 seconds,1,17
+13,28th, 11 hours 5 minutes 51 seconds,1,18
+14,30th, 11 hours 46 minutes 27 seconds,1,19
+15,32nd, 13 hours 15 minutes 8 seconds,1,20
+16,33rd, 13 hours 34 minutes 3 seconds,1,21
+17,36th, 15 hours 3 minutes 39 seconds,1,22
+18,37th, 15 hours 34 minutes 24 seconds,1,23
+19,39th, 16 hours 12 minutes 5 seconds,2,24
+20,40th, 16 hours 28 minutes 6 seconds,1,26
+21,41st, 16 hours 52 minutes 59 seconds,1,27
+22,46th, 19 hours 27 minutes 53 seconds,1,28
+23,48th, 20 hours 2 minutes 41 seconds,1,29
+24,49th, 20 hours 6 minutes 36 seconds,2,30
+25,50th, 20 hours 16 minutes 31 seconds,1,32
+26,51st, 20 hours 23 minutes 27 seconds,1,33
+27,53rd, 20 hours 34 minutes 19 seconds,2,34
+28,54th, 20 hours 38 minutes 14 seconds,1,36
+29,58th, 20 hours 51 minutes 19 seconds,2,37
+30,59th, 20 hours 52 minutes 21 seconds,1,39
+31,63rd, 21 hours 20 minutes 27 seconds,1,40
+32,65th, 21 hours 52 minutes 32 seconds,1,41
+33,68th, 22 hours 19 minutes 42 seconds,1,42
+34,69th, 22 hours 35 minutes 50 seconds,1,43
+35,73rd, 22 hours 55 minutes 1 seconds,1,44
+36,74th, 22 hours 59 minutes 1 seconds,1,45
+37,75th, 23 hours 0 seconds,1,46
+38,77th, 23 hours 4 minutes 59 seconds,1,47
+39,82nd, 23 hours 31 minutes 24 seconds,1,48
+40,83rd, 23 hours 35 minutes 27 seconds,1,49
+41,84th, 23 hours 36 minutes 28 seconds,1,50
+42,86th, 23 hours 38 minutes 39 seconds,1,51
+43,87th, 23 hours 39 minutes 47 seconds,1,52
+44,88th, 23 hours 52 minutes 50 seconds,1,53
+45,90th, 24 hours 4 minutes 10 seconds,2,54

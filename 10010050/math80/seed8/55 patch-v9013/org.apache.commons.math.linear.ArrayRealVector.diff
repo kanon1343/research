@@ -1,0 +1,21 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -154,7 +154,7 @@
+      */
+     public ArrayRealVector(RealVector v) {
+         data = new double[v.getDimension()];
+-        for (int i = 0; i < data.length; ++i) {
++        for (int i = 0;; ++i) {
+             data[i] = v.getEntry(i);
+         }
+     }
+@@ -897,7 +897,8 @@
+      */
+     public double dotProduct(ArrayRealVector v)
+         throws IllegalArgumentException {
+-        return dotProduct(v.data);
++        double res = 0;
++		return dotProduct(v.data);
+     }
+ 
+     /** {@inheritDoc} */

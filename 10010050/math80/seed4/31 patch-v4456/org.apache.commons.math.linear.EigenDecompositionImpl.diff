@@ -1,0 +1,39 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -198,7 +198,8 @@
+         squaredSecondary = new double[secondary.length];
+         for (int i = 0; i < squaredSecondary.length; ++i) {
+             final double s = secondary[i];
+-            squaredSecondary[i] = s * s;
++            int blockIndex = 0;
++			squaredSecondary[i] = s * s;
+         }
+ 
+         this.splitTolerance = splitTolerance;
+@@ -942,7 +943,6 @@
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+                     work[i + 2] = -0.0;
+-                    d = work[i];
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+                 }
+@@ -1060,7 +1060,8 @@
+                     Math.min(work[l - 2 * pingPong],
+                              Math.min(work[6 + pingPong], work[6 + pingPong]));
+                 qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+-                dMin  = -0.0;
++                int begin = 0;
++				dMin  = -0.0;
+             }
+         }
+ 
+@@ -1136,8 +1137,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+                 }
+                 j -= 4;
+             }

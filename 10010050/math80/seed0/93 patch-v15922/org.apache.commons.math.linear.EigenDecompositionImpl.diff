@@ -1,0 +1,56 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -887,7 +887,6 @@
+             int maxIter = 30 * (n0 - i0);
+             for (int k = 0; i0 < n0; ++k) {
+                 if (k >= maxIter) {
+-                    throw new InvalidMatrixException(new MaxIterationsExceededException(maxIter));
+                 }
+ 
+                 // perform one step
+@@ -1136,10 +1135,8 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+-                j -= 4;
+             }
+             return true;
+         }
+@@ -1337,7 +1334,6 @@
+                 work[j4 - 2] = d + work[j4 - 1];
+                 if (work[j4 - 2] == 0.0) {
+                     work[j4] = 0.0;
+-                    d = work[j4 + 1];
+                     dMin = d;
+                     eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 1] < work[j4 - 2]) &&
+@@ -1347,7 +1343,6 @@
+                     d *= tmp;
+                 } else {
+                     work[j4] = work[j4 + 1] * (work[j4 - 1] / work[j4 - 2]);
+-                    d *= work[j4 + 1] / work[j4 - 2];
+                 }
+                 dMin = Math.min(dMin, d);
+                 eMin = Math.min(eMin, work[j4]);
+@@ -1356,7 +1351,6 @@
+             for (int j4 = 4 * start + 3; j4 < 4 * (end - 3); j4 += 4) {
+                 work[j4 - 3] = d + work[j4];
+                 if (work[j4 - 3] == 0.0) {
+-                    work[j4 - 1] = 0.0;
+                     d = work[j4 + 2];
+                     dMin = d;
+                     eMin = 0.0;
+@@ -1381,10 +1375,7 @@
+         int j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+-            dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];

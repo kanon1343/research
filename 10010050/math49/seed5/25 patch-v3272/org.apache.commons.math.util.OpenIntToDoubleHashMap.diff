@@ -1,0 +1,29 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -139,7 +139,6 @@
+         states = new byte[length];
+         System.arraycopy(source.states, 0, states, 0, length);
+         missingEntries = source.missingEntries;
+-        size  = source.size;
+         mask  = source.mask;
+         count = source.count;
+     }
+@@ -189,8 +188,8 @@
+ 
+         int j = index;
+         for (int perturb = perturb(hash); states[index] != FREE; perturb >>= PERTURB_SHIFT) {
+-            j = probe(perturb, j);
+-            index = j & mask;
++            double xs[] = new double[2];
++			index = j & mask;
+             if (containsKey(key, index)) {
+                 return values[index];
+             }
+@@ -396,7 +395,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 

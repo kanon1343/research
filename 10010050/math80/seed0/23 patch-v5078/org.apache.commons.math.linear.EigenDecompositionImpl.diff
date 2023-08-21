@@ -1,0 +1,65 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -941,8 +941,6 @@
+             double d = work[4 * (n - 1) + pingPong];
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+-                    work[i + 2] = -0.0;
+-                    d = work[i];
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+                 }
+@@ -1056,9 +1054,6 @@
+                 work[l - 1] =
+                     Math.min(work[l - 1],
+                              Math.min(work[3 + pingPong], work[7 + pingPong]));
+-                work[l - 2 * pingPong] =
+-                    Math.min(work[l - 2 * pingPong],
+-                             Math.min(work[6 + pingPong], work[6 + pingPong]));
+                 qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+                 dMin  = -0.0;
+             }
+@@ -1136,7 +1131,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1347,7 +1341,6 @@
+                     d *= tmp;
+                 } else {
+                     work[j4] = work[j4 + 1] * (work[j4 - 1] / work[j4 - 2]);
+-                    d *= work[j4 + 1] / work[j4 - 2];
+                 }
+                 dMin = Math.min(dMin, d);
+                 eMin = Math.min(eMin, work[j4]);
+@@ -1384,7 +1377,6 @@
+             work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1567,19 +1559,6 @@
+                     tau = s;
+                 }
+ 
+-            } else {
+-
+-                // case 6, no information to guide us.
+-                if (tType == -6) {
+-                    g += 0.333 * (1 - g);
+-                } else if (tType == -18) {
+-                    g = 0.25 * 0.333;
+-                } else {
+-                    g = 0.25;
+-                }
+-                tau   = g * dMin;
+-                tType = -6;
+-
+             }
+             break;
+ 

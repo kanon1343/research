@@ -1,0 +1,74 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -941,7 +941,6 @@
+             double d = work[4 * (n - 1) + pingPong];
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+-                    work[i + 2] = -0.0;
+                     d = work[i];
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+@@ -954,9 +953,7 @@
+                 final int j = i - 2 * pingPong - 1;
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+-                    work[i]     = -0.0;
+                     work[j]     = d;
+-                    work[j + 2] = 0.0;
+                     d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+                            (MathUtils.SAFE_MIN * work[j] < work[i + 2])) {
+@@ -1052,10 +1049,6 @@
+         // step 2: flip array if needed
+         if ((dMin <= 0) || (deflatedEnd < end)) {
+             if (flipIfWarranted(deflatedEnd, 1)) {
+-                dMin2 = Math.min(dMin2, work[l - 1]);
+-                work[l - 1] =
+-                    Math.min(work[l - 1],
+-                             Math.min(work[3 + pingPong], work[7 + pingPong]));
+                 work[l - 2 * pingPong] =
+                     Math.min(work[l - 2 * pingPong],
+                              Math.min(work[6 + pingPong], work[6 + pingPong]));
+@@ -1088,6 +1081,10 @@
+                            (Math.abs(dN) < TOLERANCE * sigma)) {
+                    // convergence hidden by negative DN.
+                     work[4 * deflatedEnd - 3 - pingPong] = 0.0;
++					{
++						tau = (tau + dMin) * (1.0 - 2.0 * MathUtils.EPSILON);
++						tType -= 11;
++					}
+                     dMin = 0.0;
+                     updateSigma(tau);
+                     return deflatedEnd;
+@@ -1136,7 +1133,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1339,7 +1335,6 @@
+                     work[j4] = 0.0;
+                     d = work[j4 + 1];
+                     dMin = d;
+-                    eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 1] < work[j4 - 2]) &&
+                            (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4 + 1])) {
+                     final double tmp = work[j4 + 1] / work[j4 - 2];
+@@ -1358,7 +1353,6 @@
+                 if (work[j4 - 3] == 0.0) {
+                     work[j4 - 1] = 0.0;
+                     d = work[j4 + 2];
+-                    dMin = d;
+                     eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 2] < work[j4 - 3]) &&
+                            (MathUtils.SAFE_MIN * work[j4 - 3] < work[j4 + 2])) {
+@@ -1384,7 +1378,6 @@
+             work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];

@@ -1,0 +1,10 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -69,7 +69,6 @@
+      *                   to be thrown.
+      */
+     public MathRuntimeException(final Throwable rootCause) {
+-        super(rootCause);
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }

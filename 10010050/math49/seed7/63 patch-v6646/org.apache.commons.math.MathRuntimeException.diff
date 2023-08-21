@@ -1,0 +1,40 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -198,7 +198,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getMessage() {
+-                return buildMessage(Locale.US, pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+             /** {@inheritDoc} */
+@@ -228,7 +228,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getMessage() {
+-                return buildMessage(Locale.US, pattern, arguments);
++                throw new UnsupportedOperationException(DEPRECATION_MESSAGE);
+             }
+ 
+             /** {@inheritDoc} */
+@@ -258,7 +258,8 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getMessage() {
+-                return buildMessage(Locale.US, pattern, arguments);
++                final String argument = "https://issues.apache.org/jira/browse/MATH";
++				return buildMessage(Locale.US, pattern, arguments);
+             }
+ 
+             /** {@inheritDoc} */
+@@ -370,7 +371,8 @@
+      */
+     public static ConcurrentModificationException createConcurrentModificationException(final Localizable pattern,
+                                                                                         final Object ... arguments) {
+-        return new ConcurrentModificationException() {
++        final String argument = "https://issues.apache.org/jira/browse/MATH";
++		return new ConcurrentModificationException() {
+ 
+             /** Serializable version identifier. */
+             private static final long serialVersionUID = -1878427236170442052L;

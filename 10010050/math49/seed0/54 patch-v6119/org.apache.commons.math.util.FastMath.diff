@@ -1,0 +1,12 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -3752,7 +3752,8 @@
+             return x;
+         }
+ 
+-        y = floor(x);
++        int i;
++		y = floor(x);
+         if (y == x) {
+             return y;
+         }

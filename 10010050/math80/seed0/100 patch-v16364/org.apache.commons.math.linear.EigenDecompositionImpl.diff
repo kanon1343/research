@@ -1,0 +1,72 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -649,8 +649,6 @@
+                 final boolean chooseLeft   = (oneFourthCount - 1) >= (n - threeFourthCount);
+                 final double lambda        = chooseLeft ? range[0] : range[1];
+ 
+-                tau = (range[1] - range[0]) * MathUtils.EPSILON * n + 2 * minPivot;
+-
+                 // decompose T-&lambda;I as LDL<sup>T</sup>
+                 ldlTDecomposition(lambda, begin, n);
+ 
+@@ -869,7 +867,6 @@
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+                     i0 = 1 + i / 4;
+-                    break;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {
+                     diagMin    = Math.min(diagMin, work[i + 4]);
+@@ -887,7 +884,6 @@
+             int maxIter = 30 * (n0 - i0);
+             for (int k = 0; i0 < n0; ++k) {
+                 if (k >= maxIter) {
+-                    throw new InvalidMatrixException(new MaxIterationsExceededException(maxIter));
+                 }
+ 
+                 // perform one step
+@@ -941,7 +937,6 @@
+             double d = work[4 * (n - 1) + pingPong];
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+-                    work[i + 2] = -0.0;
+                     d = work[i];
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+@@ -1059,7 +1054,6 @@
+                 work[l - 2 * pingPong] =
+                     Math.min(work[l - 2 * pingPong],
+                              Math.min(work[6 + pingPong], work[6 + pingPong]));
+-                qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+                 dMin  = -0.0;
+             }
+         }
+@@ -1136,12 +1130,10 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+             }
+-            return true;
+         }
+         return false;
+     }
+@@ -1346,7 +1338,6 @@
+                     work[j4] = work[j4 - 1] * tmp;
+                     d *= tmp;
+                 } else {
+-                    work[j4] = work[j4 + 1] * (work[j4 - 1] / work[j4 - 2]);
+                     d *= work[j4 + 1] / work[j4 - 2];
+                 }
+                 dMin = Math.min(dMin, d);
+@@ -1384,7 +1375,6 @@
+             work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+-            eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];

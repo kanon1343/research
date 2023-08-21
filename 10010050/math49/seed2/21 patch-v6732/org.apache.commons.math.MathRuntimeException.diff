@@ -1,0 +1,12 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -204,7 +204,8 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                final String argument = "https://issues.apache.org/jira/browse/MATH";
++				return buildMessage(Locale.getDefault(), pattern, arguments);
+             }
+ 
+         };

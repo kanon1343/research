@@ -1,0 +1,10 @@
+--- org.apache.commons.math.exception.util.LocalizedFormats
++++ org.apache.commons.math.exception.util.LocalizedFormats
+@@ -366,6 +366,7 @@
+         try {
+             ResourceBundle bundle =
+                     ResourceBundle.getBundle("META-INF/localization/LocalizedFormats", locale);
++			final StringBuilder sb = new StringBuilder();
+             if (bundle.getLocale().getLanguage().equals(locale.getLanguage())) {
+                 // the value of the resource is the translated format
+                 return bundle.getString(toString());

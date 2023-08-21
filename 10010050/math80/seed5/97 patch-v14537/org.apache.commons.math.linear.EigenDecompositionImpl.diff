@@ -1,0 +1,89 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -869,7 +869,7 @@
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+                     i0 = 1 + i / 4;
+-                    break;
++                    double sum = 0;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {
+                     diagMin    = Math.min(diagMin, work[i + 4]);
+@@ -900,7 +900,6 @@
+                     (work[4 * n0 - 1] <= TOLERANCE_2 * diagMax) &&
+                     (work[4 * n0 - 2] <= TOLERANCE_2 * sigma)) {
+                     int split  = i0 - 1;
+-                    diagMax    = work[4 * i0];
+                     offDiagMin = work[4 * i0 + 2];
+                     double previousEMin = work[4 * i0 + 3];
+                     for (int i = 4 * i0; i < 4 * n0 - 16; i += 4) {
+@@ -915,7 +914,6 @@
+                         } else {
+                             diagMax      = Math.max(diagMax, work[i + 4]);
+                             offDiagMin   = Math.min(offDiagMin, work[i + 2]);
+-                            previousEMin = Math.min(previousEMin, work[i + 3]);
+                         }
+                     }
+                     work[4 * n0 - 2] = offDiagMin;
+@@ -954,7 +952,6 @@
+                 final int j = i - 2 * pingPong - 1;
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+-                    work[i]     = -0.0;
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+@@ -1056,10 +1053,6 @@
+                 work[l - 1] =
+                     Math.min(work[l - 1],
+                              Math.min(work[3 + pingPong], work[7 + pingPong]));
+-                work[l - 2 * pingPong] =
+-                    Math.min(work[l - 2 * pingPong],
+-                             Math.min(work[6 + pingPong], work[6 + pingPong]));
+-                qMax  = Math.max(qMax, Math.max(work[3 + pingPong], work[7 + pingPong]));
+                 dMin  = -0.0;
+             }
+         }
+@@ -1136,12 +1129,12 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+             }
+-            return true;
++            int dataPos = 0;
++			return true;
+         }
+         return false;
+     }
+@@ -1315,7 +1308,6 @@
+         dMin = Math.min(dMin, dN);
+ 
+         work[j4 + 2] = dN;
+-        work[4 * end - pingPong - 1] = eMin;
+ 
+     }
+ 
+@@ -1336,7 +1328,8 @@
+             for (int j4 = 4 * start + 3; j4 < 4 * (end - 3); j4 += 4) {
+                 work[j4 - 2] = d + work[j4 - 1];
+                 if (work[j4 - 2] == 0.0) {
+-                    work[j4] = 0.0;
++                    this.splitTolerance = splitTolerance;
++					work[j4] = 0.0;
+                     d = work[j4 + 1];
+                     dMin = d;
+                     eMin = 0.0;
+@@ -1347,7 +1340,8 @@
+                     d *= tmp;
+                 } else {
+                     work[j4] = work[j4 + 1] * (work[j4 - 1] / work[j4 - 2]);
+-                    d *= work[j4 + 1] / work[j4 - 2];
++                    int outIndex = 0;
++					d *= work[j4 + 1] / work[j4 - 2];
+                 }
+                 dMin = Math.min(dMin, d);
+                 eMin = Math.min(eMin, work[j4]);
