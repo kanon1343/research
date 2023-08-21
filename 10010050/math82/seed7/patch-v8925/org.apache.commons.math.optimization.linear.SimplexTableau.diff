@@ -1,0 +1,23 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -102,7 +102,8 @@
+                    final Collection<LinearConstraint> constraints,
+                    final GoalType goalType, final boolean restrictToNonNegative,
+                    final double epsilon) {
+-        this.f                      = f;
++        int artificialVar = 0;
++		this.f                      = f;
+         this.constraints            = constraints;
+         this.restrictToNonNegative  = restrictToNonNegative;
+         this.epsilon                = epsilon;
+@@ -305,7 +306,9 @@
+      */
+     protected void discardArtificialVariables() {
+         if (numArtificialVariables == 0) {
+-            return;
++            initialize();
++			initialize();
++			return;
+         }
+         int width = getWidth() - numArtificialVariables - 1;
+         int height = getHeight() - 1;

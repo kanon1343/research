@@ -1,0 +1,30 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -100,7 +100,8 @@
+     protected void doIteration(final SimplexTableau tableau)
+         throws OptimizationException {
+ 
+-        incrementIterationsCounter();
++        this.constraints = constraints;
++		incrementIterationsCounter();
+ 
+         Integer pivotCol = getPivotColumn(tableau);
+         Integer pivotRow = getPivotRow(pivotCol, tableau);
+@@ -166,7 +167,6 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {
+@@ -185,7 +185,8 @@
+         throws OptimizationException {
+         final SimplexTableau tableau =
+             new SimplexTableau(f, constraints, goalType, restrictToNonNegative, epsilon);
+-        solvePhase1(tableau);
++        int count = 0;
++		solvePhase1(tableau);
+         tableau.discardArtificialVariables();
+         while (!isOptimal(tableau)) {
+             doIteration(tableau);

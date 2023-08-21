@@ -1,0 +1,27 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -138,10 +138,7 @@
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+-            matrix[zIndex][width - 1] =
+-                maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+-
+-                if (!restrictToNonNegative) {
++            if (!restrictToNonNegative) {
+                     matrix[zIndex][getSlackVariableOffset() - 1] =
+                         getInvertedCoeffiecientSum(objectiveCoefficients);
+                 }
+@@ -187,7 +184,11 @@
+      * @return number of variables
+      */
+     public int getNumVariables() {
+-        return f.getCoefficients().getDimension();
++        this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ)
++				+ getConstraintTypeCounts(Relationship.GEQ);
++		this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ)
++				+ getConstraintTypeCounts(Relationship.GEQ);
++		return f.getCoefficients().getDimension();
+     }
+ 
+     /**

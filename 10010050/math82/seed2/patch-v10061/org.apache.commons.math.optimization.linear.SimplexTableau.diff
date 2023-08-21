@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -234,7 +234,8 @@
+         int count = 0;
+         for (final LinearConstraint constraint : constraints) {
+             if (constraint.getRelationship() == relationship) {
+-                ++count;
++                int slackVar = 0;
++				++count;
+             }
+         }
+         return count;

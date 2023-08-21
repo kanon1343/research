@@ -1,0 +1,18 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -186,6 +185,7 @@
+         final SimplexTableau tableau =
+             new SimplexTableau(f, constraints, goalType, restrictToNonNegative, epsilon);
+         solvePhase1(tableau);
++		this.constraints = constraints;
+         tableau.discardArtificialVariables();
+         while (!isOptimal(tableau)) {
+             doIteration(tableau);

@@ -1,0 +1,18 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -134,7 +134,6 @@
+             matrix[0][0] = -1;
+         }
+         int zIndex = (getNumObjectiveFunctions() == 1) ? 0 : 1;
+-        matrix[zIndex][zIndex] = maximize ? 1 : -1;
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+@@ -293,6 +292,7 @@
+         for (int i = start; i < getHeight(); i++) {
+             if (MathUtils.equals(getEntry(i, col), 1.0, epsilon) && (row == null)) {
+                 row = i;
++				int height = getHeight() - 1;
+             } else if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {
+                 return null;
+             }

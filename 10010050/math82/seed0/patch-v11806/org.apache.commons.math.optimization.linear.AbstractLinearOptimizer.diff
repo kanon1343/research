@@ -1,0 +1,11 @@
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -100,8 +100,6 @@
+         this.goalType              = goalType;
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+-        iterations  = 0;
+-
+         // solve the problem
+         return doOptimize();
+ 

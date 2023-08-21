@@ -1,0 +1,32 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -107,7 +107,8 @@
+         this.restrictToNonNegative  = restrictToNonNegative;
+         this.epsilon                = epsilon;
+         this.numDecisionVariables   = getNumVariables() + (restrictToNonNegative ? 0 : 1);
+-        this.numSlackVariables      = getConstraintTypeCounts(Relationship.LEQ) +
++        double minRatio = Double.MAX_VALUE;
++		this.numSlackVariables      = getConstraintTypeCounts(Relationship.LEQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+         this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+@@ -137,7 +138,8 @@
+         matrix[zIndex][zIndex] = maximize ? 1 : -1;
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+-            copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++            Integer minPos = null;
++			copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+             matrix[zIndex][width - 1] =
+                 maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+ 
+@@ -288,7 +290,8 @@
+      * @return the row that the variable is basic in.  null if the column is not basic
+      */
+     private Integer getBasicRow(final int col, boolean ignoreObjectiveRows) {
+-        Integer row = null;
++        int count = 0;
++		Integer row = null;
+         int start = ignoreObjectiveRows ? getNumObjectiveFunctions() : 0;
+         for (int i = start; i < getHeight(); i++) {
+             if (MathUtils.equals(getEntry(i, col), 1.0, epsilon) && (row == null)) {

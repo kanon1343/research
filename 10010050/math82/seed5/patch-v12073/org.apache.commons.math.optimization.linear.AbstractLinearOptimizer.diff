@@ -1,0 +1,20 @@
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -59,7 +59,8 @@
+      * <p>The maximal number of evaluation is set to its default value.</p>
+      */
+     protected AbstractLinearOptimizer() {
+-        setMaxIterations(DEFAULT_MAX_ITERATIONS);
++        this.goalType = goalType;
++		setMaxIterations(DEFAULT_MAX_ITERATIONS);
+     }
+ 
+     /** {@inheritDoc} */
+@@ -101,6 +102,7 @@
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+         iterations  = 0;
++		Integer minPos = null;
+ 
+         // solve the problem
+         return doOptimize();

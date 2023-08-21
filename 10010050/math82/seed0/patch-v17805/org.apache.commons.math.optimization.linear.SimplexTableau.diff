@@ -1,0 +1,33 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -106,7 +106,11 @@
+         this.constraints            = constraints;
+         this.restrictToNonNegative  = restrictToNonNegative;
+         this.epsilon                = epsilon;
+-        this.numDecisionVariables   = getNumVariables() + (restrictToNonNegative ? 0 : 1);
++        this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ)
++				+ getConstraintTypeCounts(Relationship.GEQ);
++		this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ)
++				+ getConstraintTypeCounts(Relationship.GEQ);
++		this.numDecisionVariables   = getNumVariables() + (restrictToNonNegative ? 0 : 1);
+         this.numSlackVariables      = getConstraintTypeCounts(Relationship.LEQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+         this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ) +
+@@ -135,6 +139,7 @@
+         }
+         int zIndex = (getNumObjectiveFunctions() == 1) ? 0 : 1;
+         matrix[zIndex][zIndex] = maximize ? 1 : -1;
++		matrix[zIndex][zIndex] = maximize ? 1 : -1;
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+@@ -222,7 +227,8 @@
+      * @return 2 for Phase 1.  1 for Phase 2.
+      */
+     protected final int getNumObjectiveFunctions() {
+-        return this.numArtificialVariables > 0 ? 2 : 1;
++        Integer minPos = null;
++		return this.numArtificialVariables > 0 ? 2 : 1;
+     }
+ 
+     /**

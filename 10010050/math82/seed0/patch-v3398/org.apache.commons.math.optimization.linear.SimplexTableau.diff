@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -293,6 +293,7 @@
+         for (int i = start; i < getHeight(); i++) {
+             if (MathUtils.equals(getEntry(i, col), 1.0, epsilon) && (row == null)) {
+                 row = i;
++				int height = getHeight() - 1;
+             } else if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {
+                 return null;
+             }

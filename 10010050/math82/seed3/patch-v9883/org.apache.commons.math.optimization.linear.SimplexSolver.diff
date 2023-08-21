@@ -1,0 +1,31 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -100,7 +99,8 @@
+     protected void doIteration(final SimplexTableau tableau)
+         throws OptimizationException {
+ 
+-        incrementIterationsCounter();
++        setMaxIterations(DEFAULT_MAX_ITERATIONS);
++		incrementIterationsCounter();
+ 
+         Integer pivotCol = getPivotColumn(tableau);
+         Integer pivotRow = getPivotRow(pivotCol, tableau);
+@@ -128,7 +128,9 @@
+      */
+     private boolean isPhase1Solved(final SimplexTableau tableau) {
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return true;
++            setMaxIterations(DEFAULT_MAX_ITERATIONS);
++			setMaxIterations(DEFAULT_MAX_ITERATIONS);
++			return true;
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {

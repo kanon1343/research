@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.OptimizationException
++++ org.apache.commons.math.optimization.OptimizationException
+@@ -39,7 +39,6 @@
+      * @param parts to insert in the format (no translation)
+      */
+     public OptimizationException(String specifier, Object ... parts) {
+-        super(specifier, parts);
+     }
+ 
+     /**

@@ -1,0 +1,28 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -128,6 +128,7 @@
+         numArtificialVariables + getNumObjectiveFunctions() + 1; // + 1 is for RHS
+         int height = constraints.size() + getNumObjectiveFunctions();
+         double[][] matrix = new double[height][width];
++		double minRatio = Double.MAX_VALUE;
+ 
+         // initialize the objective function rows
+         if (getNumObjectiveFunctions() == 2) {
+@@ -164,6 +165,7 @@
+ 
+                     // RHS
+                     matrix[row][width - 1] = constraint.getValue();
++					List<LinearConstraint> normalized=new ArrayList<LinearConstraint>();
+ 
+                     // slack variables
+                     if (constraint.getRelationship() == Relationship.LEQ) {
+@@ -348,7 +350,8 @@
+               // then we choose the first and set the rest equal to 0
+               coefficients[i] = 0;
+           } else {
+-              basicRows.add(basicRow);
++              int width = getWidth() - numArtificialVariables - 1;
++			basicRows.add(basicRow);
+               coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
