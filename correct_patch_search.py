@@ -79,25 +79,25 @@ def summary(file_path):
 
 def main():
     # correct_patch_search
-    projects = ["80"]
+    projects = ["49", "80", "82"]
     for project in projects:
         for seed in range(10):
             selection_file_path = pathlib.Path(
-                "/Users/haradakanon/Downloads/research/505025/math{project}log/selection.csv".format(project=project))
+                "/Users/haradakanon/Downloads/research/10010050/math{project}log/selection.csv".format(project=project))
             file_path = pathlib.Path(
-                "/Users/haradakanon/Downloads/research/505025/math{project}/seed{seed}".format(
+                "/Users/haradakanon/Downloads/research/10010050/math{project}/seed{seed}".format(
                     project=project, seed=str(seed))
             )
             output_file_path = pathlib.Path(
-                "/Users/haradakanon/Downloads/research/505025/math{project}log/correct_patch".format(project=project))
+                "/Users/haradakanon/Downloads/research/10010050/math{project}log/correct_patch".format(project=project))
             correct_patch_search(selection_file_path,
                                  file_path, project, seed, output_file_path)
 
     # summary
-    projects = ["49", "82"]
+    projects = ["49", "80", "82"]
     for project in projects:
         file_path = pathlib.Path(
-            "/Users/haradakanon/Downloads/research/505025/math{project}log".format(
+            "/Users/haradakanon/Downloads/research/10010050/math{project}log".format(
                 project=project)
         )
         summary(file_path)

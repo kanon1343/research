@@ -51,8 +51,8 @@ def summarize(file_path, i, data):
 
 
 def main():
-    options = ["505025", "200200100"]
-    projects = ["80"]
+    options = ["10010050"]
+    projects = ["49", "80", "82"]
     for option in options:
         for project in projects:
             for i in range(10):

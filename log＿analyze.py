@@ -119,18 +119,18 @@ def main():
     #         "/Users/haradakanon/Downloads/kGenProg-1.8.2/example/math78")
     #     data = extract_generation_with_max_fitness(file_path)
     #     summarize(summarize_file_path, i, data)
-    projects = ["80"]
+    projects = ["49", "80", "82"]
     for project in projects:
         output_file_path = pathlib.Path(
-            "/Users/haradakanon/Downloads/research/505025/math{project}log/selection".format(
+            "/Users/haradakanon/Downloads/research/10010050/math{project}log/selection".format(
                 project=project)
         )
         selection_file_path = pathlib.Path(
-            "/Users/haradakanon/Downloads/research/505025/math{project}log/selection".format(
+            "/Users/haradakanon/Downloads/research/10010050/math{project}log/selection".format(
                 project=project)
         )
         duplicate_file_path = pathlib.Path(
-            "/Users/haradakanon/Downloads/research//505025/math{project}log/duplicate_lines_report.csv".format(
+            "/Users/haradakanon/Downloads/research//10010050/math{project}log/duplicate_lines_report.csv".format(
                 project=project)
         )
         selected(output_file_path, selection_file_path, duplicate_file_path)
