@@ -19,14 +19,20 @@ def draw_graph(x1, y1, x2, y2, x3, y3, x4, y4, x5, y5, x6, y6, file_path, projec
 
     ax.legend()  # 凡例を表示
 
-    plt.title("math{project}".format(project=project))
-    axins = ax.inset_axes([0.6, 0.07, 0.38, 0.27])
+    axins = ax.inset_axes([0.6, 0.07, 0.38, 0.25])
     axins.plot(x1, y1, label="Accept505025")
     axins.plot(x2, y2, label="Accept10010050")
     axins.plot(x3, y3, label="Accept200200100")
     axins.set_xlim(1, 35000)
-    axins.set_ylim(1, 12)
+    axins.set_ylim(1, 13)
     ax.indicate_inset_zoom(axins)
+    # axins = ax.inset_axes([0.07, 0.42, 0.3, 0.2])
+    # axins.plot(x1, y1, label="A50")
+    # axins.plot(x2, y2, label="A100")
+    # axins.plot(x3, y3, label="A200")
+    # axins.set_xlim(70000, 86400)
+    # axins.set_ylim(15, 23)
+    # ax.indicate_inset_zoom(axins)
     # グラフを表示
     plt.savefig(
         "{file_path}/math{project}.png".format(file_path=file_path, project=project))
@@ -68,7 +74,7 @@ def main():
             if line.startswith(',') or not line:
                 continue
             x4.append(int(line.split(",")[1]))
-            y4.append(int(line.split(",")[0]) + 1)
+            y4.append(int(line.split(",")[2]))
 
         # 10010050
         # correct
@@ -103,7 +109,7 @@ def main():
             if line.startswith(',') or not line:
                 continue
             x5.append(int(line.split(",")[1]))
-            y5.append(int(line.split(",")[0]) + 1)
+            y5.append(int(line.split(",")[2]))
 
         # 200200100
         # correct
@@ -138,7 +144,7 @@ def main():
             if line.startswith(',') or not line:
                 continue
             x6.append(int(line.split(",")[1]))
-            y6.append(int(line.split(",")[0]) + 1)
+            y6.append(int(line.split(",")[2]))
 
         file_path = pathlib.Path(
             "/Users/haradakanon/Downloads/research/")

@@ -62,8 +62,8 @@ def merge_file(file_path, summarize_file_path):
             for i in range(len(output_lines)):
                 if cline.startswith("0") or output_lines[i].startswith(",") or not cline or not output_lines[i]:
                     continue
-                if not output_lines[i-1].startswith(",") and int(output_lines[i-1].split(",")[4]) < int(cline.split("/")[1]) and int(cline.split("/")[1]) <= int(output_lines[i].split(",")[4]):
-                    data.append(output_lines[i-1].split(",")[1:])
+                if not output_lines[i].startswith(",") and int(output_lines[i].split(",")[4]) < int(cline.split("/")[1]) and int(cline.split("/")[1]) <= (int(output_lines[i].split(",")[3]) + int(output_lines[i].split(",")[4])):
+                    data.append(output_lines[i].split(",")[1:])
 
     column = ["世代", "時間", "出力数", "前世代までの合計"]
     df = pd.DataFrame(data, columns=column)
@@ -130,8 +130,8 @@ def count_output(file_path, summarize_file_path):
 
 
 def main():
-    options = ["10010050"]
-    projects = ["49", "80", "82"]
+    options = ["505025", "10010050", "200200100"]
+    projects = ["46", "49", "72", "78", "80", "82", "85"]
     for option in options:
         for project in projects:
             file_path = pathlib.Path(
