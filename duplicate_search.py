@@ -50,13 +50,13 @@ def search_java_files(folder_path):
 
 
 def main():
-    projects = ["49", "80", "82"]
+    projects = ["codec9"]
     for project in projects:
         folder_path = pathlib.Path(
-            "/Users/haradakanon/Downloads/research/10010050/math{project}".format(project=project))
+            "/Users/haradakanon/Downloads/research/505025/{project}".format(project=project))
         java_files = search_java_files(folder_path)
         output_csv_file = pathlib.Path(
-            "/Users/haradakanon/Downloads/research/10010050/math{project}log/duplicate_lines_report.csv".format(project=project))
+            "/Users/haradakanon/Downloads/research/505025/{project}log/duplicate_lines_report.csv".format(project=project))
         with open(output_csv_file, mode="w", newline="") as csv_file:
             writer = csv.writer(csv_file)
             writer.writerow(["File Path"])

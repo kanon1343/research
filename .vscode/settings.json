@@ -10,5 +10,6 @@
     "savefig",
     "xlines",
     "ylines"
-  ]
+  ],
+  "git.ignoreLimitWarning": true
 }

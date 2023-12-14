@@ -14,7 +14,8 @@ def output_sum(file_path, i):
               "{file_path}/seed{i}".format(file_path=file_path, i=i))
     output_dir = "{file_path}/seed{i}".format(file_path=file_path, i=i)
     print("seed{i}の出力数".format(i=i))
-    print(sum(os.path.isdir(os.path.join(output_dir, name)) for name in os.listdir(output_dir)))
+    print(sum(os.path.isdir(os.path.join(output_dir, name))
+          for name in os.listdir(output_dir)))
 
 
 def remove_comment(file_path):
@@ -22,7 +23,8 @@ def remove_comment(file_path):
     それらを削除する．
     """
 
-    # file_path = path + '/src/main/java/org/apache/commons/lang3/text/translate/EntityArrays.java'
+    file_path = file_path + \
+        '/src/java/org/apache/commons/lang/Entities.java'
     with open(file_path, 'r', encoding='iso-8859-1') as f:
         code = f.readlines()
 
@@ -34,14 +36,18 @@ def remove_comment(file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
         f.writelines(code)
 
+
 def main():
     # seedごとに処理を行う.
-    file_path = pathlib.Path('/Users/haradakanon/Downloads/kGenProg-1.8.2/example/math49')
-    # remove_comment(file_path)
-    kgenprog_jarfile = pathlib.Path("/Users/haradakanon/Downloads/kGenProg-1.8.2.jar")
-    output_file_path = "/Users/haradakanon/Desktop/research"
-    for i in range(1, 5):
-        cmd = "java -jar {kgenprog_jarfile} --config {file_path}/kgenprog-49.toml" \
+    file_path = pathlib.Path(
+        '/Users/haradakanon/Downloads/kGenProg-1.8.2/example/cli20')
+    # remove_comment(
+    #     '/Users/haradakanon/Downloads/kGenProg-1.8.2/example/lang55')
+    kgenprog_jarfile = pathlib.Path(
+        "/Users/haradakanon/Downloads/kGenProg-1.8.2.jar")
+    output_file_path = "/Users/haradakanon/Downloads/research"
+    for i in range(0, 10):
+        cmd = "java -jar {kgenprog_jarfile} --config {file_path}/kgenprog-20.toml" \
             .format(kgenprog_jarfile=kgenprog_jarfile, file_path=file_path)
         repair(cmd, i, file_path)
         output_sum(output_file_path, i)
