@@ -1,0 +1,53 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -411,7 +411,8 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
++            buffer = null;
++			return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -435,14 +436,14 @@
+      *            Amount of bytes available from input for encoding.
+      */
+     void encode(byte[] in, int inPos, int inAvail) {
+-        if (eof) {
++        if (lineLength > 0 && lineLength <= currentLinePos) {
+             return;
+         }
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+             eof = true;
+-            if (buffer == null || buffer.length - pos < encodeSize) {
++            if (lineLength > 0 && lineLength <= currentLinePos) {
+                 resizeBuffer();
+             }
+             switch (modulus) {
+@@ -973,11 +974,9 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+                 len += chunkSeparator.length;
+             }
+@@ -1051,8 +1050,9 @@
+      */
+     private void reset() {
+         buffer = null;
+-        pos = 0;
+-        readPos = 0;
++        resizeBuffer();
++		pos = 0;
++        eof = false;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

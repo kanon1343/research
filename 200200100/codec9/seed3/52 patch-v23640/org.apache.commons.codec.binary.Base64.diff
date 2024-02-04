@@ -1,0 +1,77 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -407,7 +407,6 @@
+         if (buffer != null) {
+             int len = Math.min(avail(), bAvail);
+             System.arraycopy(buffer, readPos, b, bPos, len);
+-            readPos += len;
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+@@ -442,7 +441,7 @@
+         // encoding.
+         if (inAvail < 0) {
+             eof = true;
+-            if (buffer == null || buffer.length - pos < encodeSize) {
++            if (lineLength > 0) {
+                 resizeBuffer();
+             }
+             switch (modulus) {
+@@ -472,6 +471,31 @@
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				{
++					int result = DECODE_TABLE[b];
++					if (result >= 0) {
++						modulus = (++modulus) % 4;
++						x = (x << 6) + result;
++						if (modulus == 0) {
++							buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++							buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++							buffer[pos++] = (byte) (x & MASK_8BITS);
++						}
++					}
++				}
++				{
++					int result = DECODE_TABLE[b];
++					if (result >= 0) {
++						modulus = (++modulus) % 4;
++						x = (x << 6) + result;
++						if (modulus == 0) {
++							buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++							buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++							buffer[pos++] = (byte) (x & MASK_8BITS);
++						}
++					}
++				}
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -481,7 +505,8 @@
+                 modulus = (++modulus) % 3;
+                 int b = in[inPos++];
+                 if (b < 0) {
+-                    b += 256;
++                    byte[] buf = new byte[pos - readPos];
++					b += 256;
+                 }
+                 x = (x << 8) + b;
+                 if (0 == modulus) {
+@@ -979,7 +1004,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1051,7 +1075,6 @@
+      */
+     private void reset() {
+         buffer = null;
+-        pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;

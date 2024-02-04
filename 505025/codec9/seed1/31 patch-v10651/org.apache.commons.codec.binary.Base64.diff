@@ -1,0 +1,68 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -337,6 +337,8 @@
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		x = x >> 4;
++		x = x >> 4;
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
+         } else {
+@@ -382,6 +384,21 @@
+     private void resizeBuffer() {
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
+             pos = 0;
+             readPos = 0;
+         } else {
+@@ -449,6 +466,8 @@
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				eof = true;
++				eof = true;
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
+@@ -471,6 +490,7 @@
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				readPos = 0;
+                 pos += lineSeparator.length;
+             }
+         } else {
+@@ -973,7 +993,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1053,6 +1072,9 @@
+         buffer = null;
+         pos = 0;
+         readPos = 0;
++		readPos = 0;
++		readPos = 0;
++		readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

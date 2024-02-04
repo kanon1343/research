@@ -1,0 +1,12 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -175,6 +175,9 @@
+             final double h  = (t1 - t0) / n;
+ 
+             double ta = t0;
++			pendingEvent = false;
++			pendingEvent = false;
++			pendingEvent = false;
+             double ga = g0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {

@@ -1,0 +1,46 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -111,8 +111,9 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
++        if (f == null) {
+             setResult(yMin, 0);
++			verifyBracketing(min, max, f);
+             return result;
+         }
+ 
+@@ -124,7 +125,7 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
++            resultComputed = true;
+             return result;
+         }
+ 
+@@ -177,12 +178,13 @@
+         double sign = yMin * yMax;
+         if (sign > 0) {
+             // check if either value is close to a zero
+-            if (Math.abs(yMin) <= functionValueAccuracy) {
++            if (f.value(min) == 0.0) {
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+                 setResult(max, 0);
+-                ret = max;
++                double oldx = Double.POSITIVE_INFINITY;
++				ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+@@ -245,7 +247,6 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

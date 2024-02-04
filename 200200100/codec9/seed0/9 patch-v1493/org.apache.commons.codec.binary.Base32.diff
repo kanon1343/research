@@ -1,0 +1,11 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -326,7 +326,7 @@
+      */
+     private boolean containsBase32Byte(byte[] arrayOctet) {
+         for (int i = 0; i < arrayOctet.length; i++) {
+-            if (isBase32(arrayOctet[i])) {
++            if (modulus == 0) {
+                 return true;
+             }
+         }

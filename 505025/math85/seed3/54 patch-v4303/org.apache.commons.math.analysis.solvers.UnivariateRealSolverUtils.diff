@@ -1,0 +1,26 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
+@@ -180,6 +180,9 @@
+                   lowerBound, initial, upperBound);
+         }
+         double a = initial;
++		a = Math.max(a - 1.0, lowerBound);
++		a = Math.max(a - 1.0, lowerBound);
++		a = Math.max(a - 1.0, lowerBound);
+         double b = initial;
+         double fa;
+         double fb;
+@@ -196,12 +199,7 @@
+                 ((a > lowerBound) || (b < upperBound)));
+    
+         if (fa * fb >= 0.0 ) {
+-            throw new ConvergenceException(
+-                      "number of iterations={0}, maximum iterations={1}, " +
+-                      "initial={2}, lower bound={3}, upper bound={4}, final a value={5}, " +
+-                      "final b value={6}, f(a)={7}, f(b)={8}",
+-                      numIterations, maximumIterations, initial,
+-                      lowerBound, upperBound, a, b, fa, fb);
++            fb = function.value(b);
+         }
+         
+         return new double[]{a, b};

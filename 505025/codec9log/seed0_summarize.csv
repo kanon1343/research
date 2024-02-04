@@ -1,0 +1,63 @@
+,世代,時間,出力数,前世代までの合計
+0,2nd, 2 seconds,1,0
+1,7th, 16 seconds,1,1
+2,8th, 18 seconds,3,2
+3,11th, 25 seconds,1,5
+4,12th, 28 seconds,4,6
+5,14th, 36 seconds,1,10
+6,15th, 39 seconds,3,11
+7,17th, 46 seconds,1,14
+8,19th, 55 seconds,1,15
+9,24th, 1 minutes 13 seconds,1,16
+10,30th, 1 minutes 36 seconds,1,17
+11,35th, 1 minutes 56 seconds,1,18
+12,46th, 2 minutes 47 seconds,2,19
+13,47th, 2 minutes 53 seconds,5,21
+14,55th, 3 minutes 38 seconds,1,26
+15,59th, 3 minutes 59 seconds,1,27
+16,71st, 5 minutes 6 seconds,1,28
+17,73rd, 5 minutes 17 seconds,1,29
+18,78th, 5 minutes 44 seconds,1,30
+19,86th, 6 minutes 27 seconds,1,31
+20,91st, 6 minutes 53 seconds,1,32
+21,93rd, 7 minutes 6 seconds,3,33
+22,124th, 10 minutes 30 seconds,2,36
+23,145th, 13 minutes 33 seconds,1,38
+24,146th, 13 minutes 42 seconds,3,39
+25,154th, 14 minutes 53 seconds,1,42
+26,158th, 15 minutes 29 seconds,2,43
+27,177th, 18 minutes 41 seconds,1,45
+28,181st, 19 minutes 19 seconds,2,46
+29,182nd, 19 minutes 29 seconds,1,48
+30,183rd, 19 minutes 39 seconds,1,49
+31,184th, 19 minutes 48 seconds,1,50
+32,185th, 19 minutes 59 seconds,2,51
+33,186th, 20 minutes 11 seconds,2,53
+34,188th, 20 minutes 30 seconds,2,55
+35,214th, 25 minutes 1 seconds,1,57
+36,220th, 26 minutes 4 seconds,1,58
+37,228th, 27 minutes 31 seconds,3,59
+38,229th, 27 minutes 43 seconds,1,62
+39,242nd, 30 minutes 30 seconds,1,63
+40,281st, 39 minutes 31 seconds,1,64
+41,292nd, 42 minutes 17 seconds,1,65
+42,294th, 42 minutes 48 seconds,1,66
+43,301st, 44 minutes 30 seconds,1,67
+44,338th, 52 minutes 24 seconds,1,68
+45,346th, 54 minutes 13 seconds,1,69
+46,350th, 55 minutes 8 seconds,1,70
+47,362nd, 57 minutes 54 seconds,1,71
+48,364th, 58 minutes 21 seconds,1,72
+49,366th, 58 minutes 49 seconds,1,73
+50,370th, 59 minutes 44 seconds,1,74
+51,374th, 1 hours 36 seconds,1,75
+52,393rd, 1 hours 4 minutes 58 seconds,1,76
+53,409th, 1 hours 8 minutes 57 seconds,1,77
+54,410th, 1 hours 9 minutes 13 seconds,2,78
+55,414th, 1 hours 10 minutes 15 seconds,1,80
+56,436th, 1 hours 16 minutes 8 seconds,1,81
+57,461st, 1 hours 23 minutes 5 seconds,1,82
+58,475th, 1 hours 27 minutes 23 seconds,1,83
+59,477th, 1 hours 28 minutes 3 seconds,1,84
+60,479th, 1 hours 28 minutes 40 seconds,1,85
+61,495th, 1 hours 33 minutes 42 seconds,1,86

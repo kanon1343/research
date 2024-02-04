@@ -1,0 +1,44 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -466,6 +466,8 @@
+                     }
+                     break;
+             }
++			currentLinePos = 0;
++			currentLinePos = 0;
+             // Don't want to append the CRLF two times in a row, so make sure previous
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
+@@ -494,6 +496,10 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						modulus = 0;
++						modulus = 0;
++						modulus = 0;
++						modulus = 0;
+                     }
+                 }
+             }
+@@ -826,7 +832,12 @@
+ 
+         long len = getEncodeLength(binaryData, MIME_CHUNK_SIZE, CHUNK_SEPARATOR);
+         if (len > maxResultSize) {
+-            throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
++            len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
+                 len +
+                 ") than the specified maxium size of " +
+                 maxResultSize);
+@@ -979,7 +990,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

@@ -1,0 +1,21 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -141,6 +141,7 @@
+         this.result         = newResult;
+         this.iterationCount = iterationCount;
+         this.resultComputed = true;
++		double oldx = Double.POSITIVE_INFINITY;
+     }
+ 
+     /**
+@@ -193,7 +194,9 @@
+      * @return true if the arguments form an increasing sequence
+      */
+     protected boolean isSequence(final double start, final double mid, final double end) {
+-        return (start < mid) && (mid < end);
++        functionValueAccuracy = defaultFunctionValueAccuracy;
++		functionValueAccuracy = defaultFunctionValueAccuracy;
++		return (start < mid) && (mid < end);
+     }
+ 
+     /**

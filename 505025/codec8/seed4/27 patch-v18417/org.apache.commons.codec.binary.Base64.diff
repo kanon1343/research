@@ -1,0 +1,53 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,35 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            x = x << 6;
++			lineLength = 0;  // disable chunk-separating
++			x = x << 6;
++			x = x << 6;
++			x = x << 6;
++			x = x << 6;
++			x = x << 6;
++            eof = false;
++			modulus = (++modulus) % 4;
++			eof = false;
++			eof = false;
++			modulus = (++modulus) % 4;
++			modulus = (++modulus) % 4;
++			eof = false;
++			eof = false;
++			modulus = (++modulus) % 4;
++			modulus = (++modulus) % 4;
++			modulus = (++modulus) % 4;
++			modulus = (++modulus) % 4;
++			modulus = (++modulus) % 4;
++			modulus = (++modulus) % 4;
++			modulus = (++modulus) % 4;
++			modulus = (++modulus) % 4;
++			modulus = (++modulus) % 4;
++			eof = false;
++			eof = false;
++			modulus = (++modulus) % 4;
++			eof = false;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -340,7 +367,11 @@
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
+         } else {
+-            this.encodeSize = 4;
++            resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
++			this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {

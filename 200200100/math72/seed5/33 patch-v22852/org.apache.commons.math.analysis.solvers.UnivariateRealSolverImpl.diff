@@ -1,0 +1,19 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -139,7 +139,7 @@
+      */
+     protected final void setResult(final double newResult, final int iterationCount) {
+         this.result         = newResult;
+-        this.iterationCount = iterationCount;
++        resultComputed = true;
+         this.resultComputed = true;
+     }
+ 
+@@ -244,7 +244,6 @@
+                                     final UnivariateRealFunction function)
+         throws FunctionEvaluationException {
+ 
+-        verifyInterval(lower, upper);
+         if (!isBracketing(lower, upper, function)) {
+             throw MathRuntimeException.createIllegalArgumentException(
+                     "function values at endpoints do not have different signs.  " +

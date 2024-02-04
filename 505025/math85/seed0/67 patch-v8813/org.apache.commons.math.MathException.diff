@@ -1,0 +1,13 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -103,9 +103,8 @@
+      * @param arguments format arguments
+      */
+     public MathException(String pattern, Object ... arguments) {
+-      super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+-      this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
++      this.arguments = new Object[0];
+     }
+ 
+     /**

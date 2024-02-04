@@ -1,0 +1,67 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -95,8 +95,27 @@
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+     finalized               = false;
+-    this.forward            = true;
++    interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	interpolatedTime = Double.NaN;
++	this.forward            = true;
+     this.dirtyState         = true;
++	this.forward = true;
++	dirtyState = true;
++	this.forward = true;
++	this.forward = true;
++	dirtyState = true;
+   }
+ 
+   /** Simple constructor.
+@@ -113,8 +132,6 @@
+ 
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+-    interpolatedDerivatives = new double[y.length];
+-
+     finalized         = false;
+     this.forward      = forward;
+     this.dirtyState   = true;
+@@ -175,8 +192,6 @@
+ 
+     currentState            = y;
+     interpolatedState       = new double[y.length];
+-    interpolatedDerivatives = new double[y.length];
+-
+     finalized         = false;
+     this.forward      = isForward;
+     this.dirtyState   = true;
+@@ -209,6 +224,7 @@
+    */
+   public void shift() {
+     previousTime = currentTime;
++	interpolatedTime = Double.NaN;
+   }
+ 
+   /** Store the current step time.
+@@ -243,7 +259,8 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
++      this.forward = true;
++	dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */

@@ -1,0 +1,93 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -448,6 +448,43 @@
+             switch (modulus) {
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				{
++					if (buffer == null || buffer.length - pos < decodeSize) {
++						resizeBuffer();
++					}
++					switch (modulus) {
++					case 2:
++						buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++						break;
++					case 3:
++						buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++						break;
++					case 4:
++						x = x >> 4;
++						buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++						buffer[pos++] = (byte) ((x) & MASK_8BITS);
++						break;
++					case 5:
++						x = x >> 1;
++						buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++						buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++						buffer[pos++] = (byte) ((x) & MASK_8BITS);
++						break;
++					case 6:
++						x = x >> 6;
++						buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++						buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++						buffer[pos++] = (byte) ((x) & MASK_8BITS);
++						break;
++					case 7:
++						x = x >> 3;
++						buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++						buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++						buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++						buffer[pos++] = (byte) ((x) & MASK_8BITS);
++						break;
++					}
++				}
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+@@ -472,6 +509,30 @@
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
++				{
++					int result = DECODE_TABLE[b];
++					if (result >= 0) {
++						modulus = (++modulus) % 4;
++						x = (x << 6) + result;
++						if (modulus == 0) {
++							buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++							buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++							buffer[pos++] = (byte) (x & MASK_8BITS);
++						}
++					}
++				}
++				{
++					int result = DECODE_TABLE[b];
++					if (result >= 0) {
++						modulus = (++modulus) % 4;
++						x = (x << 6) + result;
++						if (modulus == 0) {
++							buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++							buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++							buffer[pos++] = (byte) (x & MASK_8BITS);
++						}
++					}
++				}
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -979,7 +1040,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1053,7 +1113,6 @@
+         buffer = null;
+         pos = 0;
+         readPos = 0;
+-        currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+     }

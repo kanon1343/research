@@ -1,0 +1,10 @@
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);

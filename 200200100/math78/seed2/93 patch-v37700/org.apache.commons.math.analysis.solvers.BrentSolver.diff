@@ -1,0 +1,47 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -94,7 +94,6 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+@@ -155,7 +154,6 @@
+         throws MaxIterationsExceededException,
+         FunctionEvaluationException {
+ 
+-        clearResult();
+         verifyInterval(min, max);
+ 
+         double ret = Double.NaN;
+@@ -165,7 +163,7 @@
+ 
+         // Verify bracketing
+         double sign = yMin * yMax;
+-        if (sign > 0) {
++        if (Math.abs(max - min) <= absoluteAccuracy) {
+             // check if either value is close to a zero
+             if (Math.abs(yMin) <= functionValueAccuracy) {
+                 setResult(min, 0);
+@@ -250,7 +248,6 @@
+                     (Math.abs(y0) <= Math.abs(y1))) {
+                 // Force bisection.
+                 delta = 0.5 * dx;
+-                oldDelta = delta;
+             } else {
+                 double r3 = y1 / y0;
+                 double p;
+@@ -276,10 +273,7 @@
+                 }
+                 if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+                         p >= Math.abs(0.5 * oldDelta * p1)) {
+-                    // Inverse quadratic interpolation gives a value
+-                    // in the wrong direction, or progress is slow.
+-                    // Fall back to bisection.
+-                    delta = 0.5 * dx;
++                    i++;
+                     oldDelta = delta;
+                 } else {
+                     oldDelta = delta;

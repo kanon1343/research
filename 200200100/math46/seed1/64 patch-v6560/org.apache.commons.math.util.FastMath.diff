@@ -1,0 +1,12 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2061,7 +2061,8 @@
+ 
+         double t = sintA;
+         double c = a + t;
+-        double d = -(c - a - t);
++        double s1 = 0;
++		double d = -(c - a - t);
+         a = c;
+         b = b + d;
+ 

@@ -1,0 +1,10 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -98,6 +98,7 @@
+                 sum = sum + (lanczos[i] / (x + i));
+             }
+             sum = sum + lanczos[0];
++			double inv = 1 / (x * x);
+ 
+             double tmp = x + g + .5;
+             ret = ((x + .5) * Math.log(tmp)) - tmp +

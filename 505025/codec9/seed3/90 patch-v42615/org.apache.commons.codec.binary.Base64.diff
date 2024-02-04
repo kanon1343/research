@@ -1,0 +1,79 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,20 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
+     }
+ 
+     /**
+@@ -409,7 +423,24 @@
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+-                buffer = null;
++                buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer = null;
+             }
+             return len;
+         }
+@@ -471,7 +502,20 @@
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                pos += lineSeparator.length;
++                x = x >> 1;
++				x = (x << 8) + b;
++				x = (x << 8) + b;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				pos += lineSeparator.length;
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -980,6 +1024,7 @@
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+                 len += chunkSeparator.length;
++				return 0;
+             }
+         }
+         return len;

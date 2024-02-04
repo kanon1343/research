@@ -1,0 +1,35 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -749,15 +749,7 @@
+                 return 0.0;
+             }
+ 
+-            if (intVal > 709) {
+-                /* This will produce a subnormal output */
+-                final double result = exp(x+40.19140625, extra, hiPrec) / 285040095144011776.0;
+-                if (hiPrec != null) {
+-                    hiPrec[0] /= 285040095144011776.0;
+-                    hiPrec[1] /= 285040095144011776.0;
+-                }
+-                return result;
+-            }
++            if (intVal > 709)
+ 
+             if (intVal == 709) {
+                 /* exp(1.494140625) is nearly a machine number... */
+@@ -1430,7 +1422,6 @@
+             lnza = lnza * epsilon + 0.19999954120254515;
+             lnza = lnza * epsilon + -0.2499999997677497;
+             lnza = lnza * epsilon + 0.3333333333332802;
+-            lnza = lnza * epsilon + -0.5;
+             lnza = lnza * epsilon + 1.0;
+             lnza = lnza * epsilon;
+         }
+@@ -2884,7 +2875,6 @@
+             final double yaa = (ya + temp) - temp;
+             final double yab = ya - yaa;
+ 
+-            temp = za * HEX_40000000;
+             final double zaa = (za + temp) - temp;
+             final double zab = za - zaa;
+ 

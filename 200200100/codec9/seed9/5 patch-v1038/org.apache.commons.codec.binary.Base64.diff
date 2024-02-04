@@ -1,0 +1,20 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -442,7 +442,7 @@
+         // encoding.
+         if (inAvail < 0) {
+             eof = true;
+-            if (buffer == null || buffer.length - pos < encodeSize) {
++            if (buffer == null || buffer.length - pos < decodeSize) {
+                 resizeBuffer();
+             }
+             switch (modulus) {
+@@ -978,7 +978,7 @@
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+-            if (!lenChunksPerfectly) {
++            if (pArray == null || pArray.length == 0) {
+                 len += chunkSeparator.length;
+             }
+         }

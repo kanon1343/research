@@ -1,0 +1,57 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,17 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
+     }
+ 
+     /**
+@@ -381,7 +392,9 @@
+     /** Doubles our buffer. */
+     private void resizeBuffer() {
+         if (buffer == null) {
+-            buffer = new byte[DEFAULT_BUFFER_SIZE];
++            pos += lineSeparator.length;
++			pos += lineSeparator.length;
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+             readPos = 0;
+         } else {
+@@ -408,6 +421,7 @@
+             int len = Math.min(avail(), bAvail);
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+@@ -440,7 +454,7 @@
+         }
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+-        if (inAvail < 0) {
++        if (buffer != null) {
+             eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+@@ -975,7 +989,7 @@
+         if (mod != 0) {
+             len += 4 - mod;
+         }
+-        if (chunkSize > 0) {
++        if (len == 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {

@@ -1,0 +1,11 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -374,7 +374,7 @@
+           return -exp(-x)/2.0;
+       }
+ 
+-      if (x == 0) {
++      if (Double.isInfinite(x) || Double.isNaN(x)) {
+           return x;
+       }
+ 

@@ -121,14 +121,14 @@ def count_output(file_path, summarize_file_path):
 
 
 def main():
-    options = ["10010050"]
-    projects = ["49", "80", "82"]
+    options = ["505025", "10010050", "200200100"]
+    projects = ["codec9"]
     for option in options:
         for project in projects:
             file_path = pathlib.Path(
-                "/Users/haradakanon/Downloads/research/{option}/math{project}log/".format(option=option, project=project))
+                "/Users/haradakanon/Downloads/research/{option}/{project}log/".format(option=option, project=project))
             summarize_file_path = pathlib.Path(
-                "/Users/haradakanon/Downloads/research/{option}/math{project}log".format(option=option, project=project))
+                "/Users/haradakanon/Downloads/research/{option}/{project}log".format(option=option, project=project))
             merge_file(file_path, summarize_file_path)
             input_file(file_path, summarize_file_path)
             count_output(file_path, summarize_file_path)

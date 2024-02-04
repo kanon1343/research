@@ -1,0 +1,20 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -124,6 +124,7 @@
+         states = new byte[capacity];
+         this.missingEntries = missingEntries;
+         mask   = capacity - 1;
++		double relativeError = Double.MAX_VALUE;
+     }
+ 
+     /**
+@@ -396,8 +397,7 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+-        return previous;
++        return Double.POSITIVE_INFINITY;
+     }
+ 
+     /**

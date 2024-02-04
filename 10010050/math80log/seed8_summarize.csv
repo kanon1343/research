@@ -1,0 +1,58 @@
+,世代,時間,出力数,前世代までの合計
+0,1st, 20 seconds,1,0
+1,4th, 8 minutes 4 seconds,2,1
+2,5th, 11 minutes 44 seconds,2,3
+3,6th, 12 minutes 25 seconds,1,5
+4,7th, 25 minutes 11 seconds,1,6
+5,8th, 31 minutes 56 seconds,3,7
+6,10th, 57 minutes 27 seconds,1,10
+7,12th, 1 hours 17 minutes 4 seconds,2,11
+8,13th, 1 hours 20 minutes 50 seconds,1,13
+9,14th, 1 hours 24 minutes 42 seconds,4,14
+10,15th, 1 hours 37 minutes 33 seconds,2,18
+11,19th, 2 hours 17 minutes 9 seconds,2,20
+12,21st, 2 hours 31 minutes 14 seconds,2,22
+13,22nd, 2 hours 35 minutes 9 seconds,1,24
+14,23rd, 2 hours 45 minutes 3 seconds,1,25
+15,24th, 3 hours 18 minutes 53 seconds,2,26
+16,25th, 3 hours 22 minutes 46 seconds,2,28
+17,26th, 3 hours 26 minutes 47 seconds,1,30
+18,27th, 3 hours 33 minutes 36 seconds,1,31
+19,28th, 3 hours 37 minutes 22 seconds,1,32
+20,29th, 3 hours 47 minutes 13 seconds,1,33
+21,31st, 3 hours 57 minutes 46 seconds,1,34
+22,32nd, 4 hours 10 minutes 31 seconds,2,35
+23,34th, 4 hours 27 minutes 2 seconds,1,37
+24,35th, 4 hours 42 minutes 47 seconds,1,38
+25,36th, 5 hours 16 minutes 35 seconds,2,39
+26,38th, 5 hours 42 minutes 4 seconds,2,41
+27,39th, 5 hours 54 minutes 49 seconds,2,43
+28,40th, 6 hours 10 minutes 35 seconds,1,45
+29,42nd, 6 hours 33 minutes 13 seconds,1,46
+30,43rd, 6 hours 45 minutes 54 seconds,1,47
+31,44th, 6 hours 58 minutes 33 seconds,2,48
+32,45th, 7 hours 2 minutes 17 seconds,2,50
+33,46th, 7 hours 9 minutes 0 seconds,2,52
+34,47th, 7 hours 24 minutes 55 seconds,2,54
+35,48th, 7 hours 40 minutes 43 seconds,2,56
+36,49th, 7 hours 56 minutes 27 seconds,2,58
+37,50th, 8 hours 15 minutes 10 seconds,1,60
+38,51st, 8 hours 27 minutes 53 seconds,2,61
+39,53rd, 8 hours 44 minutes 16 seconds,2,63
+40,54th, 9 hours 5 minutes 59 seconds,1,65
+41,55th, 9 hours 33 minutes 42 seconds,1,66
+42,56th, 9 hours 52 minutes 21 seconds,4,67
+43,57th, 10 hours 8 minutes 3 seconds,2,71
+44,58th, 10 hours 17 minutes 45 seconds,1,73
+45,60th, 10 hours 55 minutes 10 seconds,4,74
+46,61st, 11 hours 10 minutes 55 seconds,4,78
+47,62nd, 11 hours 26 minutes 46 seconds,2,82
+48,63rd, 12 hours 30 seconds,1,84
+49,64th, 12 hours 22 minutes 22 seconds,2,85
+50,66th, 12 hours 45 minutes 17 seconds,1,87
+51,67th, 12 hours 58 minutes 10 seconds,1,88
+52,69th, 13 hours 26 minutes 45 seconds,1,89
+53,70th, 14 hours 33 seconds,3,90
+54,71st, 14 hours 28 minutes 23 seconds,1,93
+55,72nd, 14 hours 32 minutes 14 seconds,1,94
+56,73rd, 14 hours 57 minutes 6 seconds,5,95

@@ -1,0 +1,64 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,33 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
+     }
+ 
+     /**
+@@ -338,7 +365,8 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            reset();
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -413,7 +441,8 @@
+             }
+             return len;
+         }
+-        return eof ? -1 : 0;
++        resizeBuffer();
++		return eof ? -1 : 0;
+     }
+ 
+     /**
+@@ -979,7 +1008,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

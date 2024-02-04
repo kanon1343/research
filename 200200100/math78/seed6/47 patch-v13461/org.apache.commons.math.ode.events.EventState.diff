@@ -1,0 +1,13 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -231,9 +231,7 @@
+                             // properly ends exactly at the event occurrence
+                             return false;
+                         }
+-                        // either we were not waiting for the event or it has
+-                        // moved in such a way the step cannot be accepted
+-                        pendingEvent = true;
++                        solver.setAbsoluteAccuracy(convergence);
+                         return true;
+                     }
+ 

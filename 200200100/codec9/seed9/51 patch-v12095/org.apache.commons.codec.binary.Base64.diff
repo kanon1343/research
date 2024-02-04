@@ -1,0 +1,54 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -441,7 +441,6 @@
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+-            eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+             }
+@@ -452,6 +451,7 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						int startSrc = 0;
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -491,7 +491,8 @@
+                     buffer[pos++] = encodeTable[x & MASK_6BITS];
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+-                        System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++                        readPos = 0;
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
+                     }
+@@ -529,6 +530,7 @@
+         }
+         if (inAvail < 0) {
+             eof = true;
++			resizeBuffer();
+         }
+         for (int i = 0; i < inAvail; i++) {
+             if (buffer == null || buffer.length - pos < decodeSize) {
+@@ -826,7 +828,8 @@
+ 
+         long len = getEncodeLength(binaryData, MIME_CHUNK_SIZE, CHUNK_SEPARATOR);
+         if (len > maxResultSize) {
+-            throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
++            int startSrc = 0;
++			throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
+                 len +
+                 ") than the specified maxium size of " +
+                 maxResultSize);
+@@ -979,7 +982,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

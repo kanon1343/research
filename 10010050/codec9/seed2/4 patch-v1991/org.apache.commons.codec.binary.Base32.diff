@@ -1,0 +1,21 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -238,7 +238,7 @@
+      */
+     public Base32(int lineLength, byte[] lineSeparator, boolean useHex) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            byte b = lineSeparator[lineSeparator.length - 1];
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / BYTES_PER_ENCODED_BLOCK) * BYTES_PER_ENCODED_BLOCK : 0;
+@@ -271,7 +271,8 @@
+      * @return <code>true</code> if the value is defined in the the Base32 alphabet (or pad), <code>false</code> otherwise.
+      */
+     public boolean isBase32(byte octet) {
+-        return octet == PAD || (octet >= 0 && octet < BASE32_DECODE_TABLE.length && BASE32_DECODE_TABLE[octet] != -1);
++        buffer[pos++] = encodeTable[(int) x & MASK_5BITS];
++		return octet == PAD || (octet >= 0 && octet < BASE32_DECODE_TABLE.length && BASE32_DECODE_TABLE[octet] != -1);
+     }
+ 
+     /**

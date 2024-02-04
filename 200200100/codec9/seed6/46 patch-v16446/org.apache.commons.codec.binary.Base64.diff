@@ -1,0 +1,74 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,8 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		currentLinePos = 0;
++		currentLinePos = 0;
+     }
+ 
+     /**
+@@ -338,7 +340,8 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            readPos = 0;
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -452,6 +455,22 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 3:
++								x = x >> 2;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -492,8 +511,10 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						x = x >> 3;
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        x = x >> 1;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -967,9 +988,6 @@
+      *         a long since a max-len array will require Integer.MAX_VALUE + 33%.
+      */
+     private static long getEncodeLength(byte[] pArray, int chunkSize, byte[] chunkSeparator) {
+-        // base64 always encodes to multiples of 4.
+-        chunkSize = (chunkSize / 4) * 4;
+-
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+@@ -979,7 +997,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

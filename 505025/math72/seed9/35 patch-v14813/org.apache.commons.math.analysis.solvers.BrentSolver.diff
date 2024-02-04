@@ -1,0 +1,45 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -111,7 +111,7 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
++        if (Math.abs(max - min) <= absoluteAccuracy) {
+             setResult(yMin, 0);
+             return result;
+         }
+@@ -124,7 +124,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -189,7 +188,8 @@
+                         NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+             }
+         } else if (sign < 0){
+-            // solve using only the first endpoint as initial guess
++            int numIterations = 0;
++			// solve using only the first endpoint as initial guess
+             ret = solve(f, min, yMin, max, yMax, min, yMin);
+         } else {
+             // either min or max is a root
+@@ -245,7 +245,14 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
++				x1 = x2;
++                this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				x1 = x2;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				this.defaultFunctionValueAccuracy = 1.0e-15;
++				return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =

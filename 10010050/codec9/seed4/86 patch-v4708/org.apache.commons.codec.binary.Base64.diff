@@ -1,0 +1,66 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -411,7 +411,6 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -458,6 +457,8 @@
+ 
+                 case 2 :
+                     buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				currentLinePos = 0;
++				resizeBuffer();
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+@@ -951,6 +952,38 @@
+         encode(pArray, 0, pArray.length);
+         encode(pArray, 0, -1); // Notify encoder of EOF.
+         byte[] buf = new byte[pos - readPos];
++		switch (modulus) {
++		case 2:
++			buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++			break;
++		case 3:
++			buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++			break;
++		case 4:
++			x = x >> 4;
++			buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x) & MASK_8BITS);
++			break;
++		case 5:
++			x = x >> 1;
++			buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x) & MASK_8BITS);
++			break;
++		case 6:
++			x = x >> 6;
++			buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x) & MASK_8BITS);
++			break;
++		case 7:
++			x = x >> 3;
++			buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x) & MASK_8BITS);
++			break;
++		}
+         readResults(buf, 0, buf.length);
+         return buf;
+     }
+@@ -973,7 +1006,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

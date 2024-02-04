@@ -1,0 +1,33 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -333,6 +333,22 @@
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			resizeBuffer();
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++				currentLinePos = 0;
++			}
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++				currentLinePos = 0;
++			}
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++				currentLinePos = 0;
++			}
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -341,6 +357,7 @@
+             this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
++			byte[] result = new byte[pos];
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {

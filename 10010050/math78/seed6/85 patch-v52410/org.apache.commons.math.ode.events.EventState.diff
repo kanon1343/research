@@ -1,0 +1,11 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -177,6 +177,8 @@
+             double ta = t0;
+             double ga = g0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
++			pendingEvent = false;
++			pendingEvent = false;
+             for (int i = 0; i < n; ++i) {
+ 
+                 // evaluate handler value at the end of the substep

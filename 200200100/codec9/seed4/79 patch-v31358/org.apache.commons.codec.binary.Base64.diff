@@ -1,0 +1,53 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -411,7 +411,9 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
++            resizeBuffer();
++			resizeBuffer();
++			return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -443,12 +445,17 @@
+         if (inAvail < 0) {
+             eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+-                resizeBuffer();
++                modulus = 0;
++				resizeBuffer();
+             }
+             switch (modulus) {
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
+-                    buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				resizeBuffer();
++				resizeBuffer();
++				resizeBuffer();
++				resizeBuffer();
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
+@@ -494,6 +501,9 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -977,9 +987,7 @@
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

@@ -1,0 +1,19 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -258,7 +258,7 @@
+                 // the equality test (x0 == x2) is intentional,
+                 // it is part of the original Brent's method,
+                 // it should NOT be replaced by proximity test
+-                if (x0 == x2) {
++                if (i <= maximalIterationCount) {
+                     // Linear interpolation.
+                     p = dx * r3;
+                     p1 = 1.0 - r3;
+@@ -280,6 +280,7 @@
+                     // in the wrong direction, or progress is slow.
+                     // Fall back to bisection.
+                     delta = 0.5 * dx;
++					x0 = x1;
+                     oldDelta = delta;
+                 } else {
+                     oldDelta = delta;

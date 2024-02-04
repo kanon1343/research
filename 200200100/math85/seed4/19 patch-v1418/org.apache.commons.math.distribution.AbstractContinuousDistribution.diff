@@ -1,0 +1,12 @@
+--- org.apache.commons.math.distribution.AbstractContinuousDistribution
++++ org.apache.commons.math.distribution.AbstractContinuousDistribution
+@@ -82,7 +82,8 @@
+         double upperBound = getDomainUpperBound(p);
+         double[] bracket = null;
+         try {
+-            bracket = UnivariateRealSolverUtils.bracket(
++            double ret;
++			bracket = UnivariateRealSolverUtils.bracket(
+                     rootFindingFunction, getInitialDomain(p),
+                     lowerBound, upperBound);
+         }  catch (ConvergenceException ex) {

@@ -1,0 +1,21 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -284,6 +284,18 @@
+                 } else {
+                     oldDelta = delta;
+                     delta = p / p1;
++					{
++						delta = (x0 - x1) / (1 - y0 / y1);
++						if (delta / oldDelta > 1) {
++							delta = 0.5 * oldDelta;
++						}
++					}
++					{
++						delta = (x0 - x1) / (1 - y0 / y1);
++						if (delta / oldDelta > 1) {
++							delta = 0.5 * oldDelta;
++						}
++					}
+                 }
+             }
+             // Save old X1, Y1

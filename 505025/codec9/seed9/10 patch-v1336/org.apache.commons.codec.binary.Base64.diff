@@ -1,0 +1,28 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -466,6 +466,7 @@
+                     }
+                     break;
+             }
++			currentLinePos = 0;
+             // Don't want to append the CRLF two times in a row, so make sure previous
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
+@@ -952,7 +953,8 @@
+         encode(pArray, 0, -1); // Notify encoder of EOF.
+         byte[] buf = new byte[pos - readPos];
+         readResults(buf, 0, buf.length);
+-        return buf;
++        int readLen = 0;
++		return buf;
+     }
+ 
+     /**
+@@ -979,7 +981,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

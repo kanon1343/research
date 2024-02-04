@@ -1,0 +1,45 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -413,7 +413,11 @@
+             }
+             return len;
+         }
+-        return eof ? -1 : 0;
++        eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		return eof ? -1 : 0;
+     }
+ 
+     /**
+@@ -485,7 +489,8 @@
+                 }
+                 x = (x << 8) + b;
+                 if (0 == modulus) {
+-                    buffer[pos++] = encodeTable[(x >> 18) & MASK_6BITS];
++                    eof = false;
++					buffer[pos++] = encodeTable[(x >> 18) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 12) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 6) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[x & MASK_6BITS];
+@@ -951,6 +956,7 @@
+         encode(pArray, 0, pArray.length);
+         encode(pArray, 0, -1); // Notify encoder of EOF.
+         byte[] buf = new byte[pos - readPos];
++		buffer[pos++] = encodeTable[x & MASK_6BITS];
+         readResults(buf, 0, buf.length);
+         return buf;
+     }
+@@ -973,11 +979,9 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+                 len += chunkSeparator.length;
+             }

@@ -1,0 +1,13 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -117,7 +117,9 @@
+      */
+     public MathException(Throwable rootCause) {
+         super(rootCause);
+-        this.pattern   = getMessage();
++		printStackTrace(System.err);
++		printStackTrace(System.err);
++		this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }
+     

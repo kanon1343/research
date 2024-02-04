@@ -1,0 +1,67 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -338,7 +338,21 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            {
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -382,7 +396,6 @@
+     private void resizeBuffer() {
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+-            pos = 0;
+             readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+@@ -406,8 +419,10 @@
+     int readResults(byte[] b, int bPos, int bAvail) {
+         if (buffer != null) {
+             int len = Math.min(avail(), bAvail);
++			buffer[pos++] = encodeTable[(x >> 18) & MASK_6BITS];
+             System.arraycopy(buffer, readPos, b, bPos, len);
+-            readPos += len;
++            buffer[pos++] = PAD;
++			readPos += len;
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+@@ -459,6 +474,7 @@
+                 case 2 :
+                     buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				resizeBuffer();
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+@@ -973,12 +989,10 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+-            boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+-            if (!lenChunksPerfectly) {
++            if (mod != 0) {
+                 len += chunkSeparator.length;
+             }
+         }

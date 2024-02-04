@@ -1,0 +1,30 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -204,7 +204,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                return buildMessage(Locale.US, pattern, arguments);
+             }
+ 
+         };
+@@ -234,7 +234,7 @@
+             /** {@inheritDoc} */
+             @Override
+             public String getLocalizedMessage() {
+-                return buildMessage(Locale.getDefault(), pattern, arguments);
++                return buildMessage(Locale.US, pattern, arguments);
+             }
+ 
+         };
+@@ -370,7 +370,8 @@
+      */
+     public static ConcurrentModificationException createConcurrentModificationException(final Localizable pattern,
+                                                                                         final Object ... arguments) {
+-        return new ConcurrentModificationException() {
++        final String argument = "https://issues.apache.org/jira/browse/MATH";
++		return new ConcurrentModificationException() {
+ 
+             /** Serializable version identifier. */
+             private static final long serialVersionUID = -1878427236170442052L;

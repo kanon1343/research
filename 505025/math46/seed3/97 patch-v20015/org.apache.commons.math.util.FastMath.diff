@@ -1,0 +1,48 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1424,9 +1424,7 @@
+             lnza = aa + ab;
+             lnzb = -(lnza - aa - ab);
+         } else {
+-            /* High precision not required.  Eval Remez polynomial
+-         using standard double precision */
+-            lnza = -0.16624882440418567;
++            double result;
+             lnza = lnza * epsilon + 0.19999954120254515;
+             lnza = lnza * epsilon + -0.2499999997677497;
+             lnza = lnza * epsilon + 0.3333333333332802;
+@@ -1463,6 +1461,7 @@
+ 
+         c = a + LN_2_B*exp;
+         d = -(c - a - LN_2_B*exp);
++		int idx;
+         a = c;
+         b = b + d;
+ 
+@@ -2884,7 +2883,6 @@
+             final double yaa = (ya + temp) - temp;
+             final double yab = ya - yaa;
+ 
+-            temp = za * HEX_40000000;
+             final double zaa = (za + temp) - temp;
+             final double zab = za - zaa;
+ 
+@@ -2936,7 +2934,8 @@
+         double za = EIGHTHS[idx] + ya;
+         double zb = -(za - EIGHTHS[idx] - ya);
+         temp = za + yb;
+-        zb += -(temp - za - yb);
++        ya = temp;
++		zb += -(temp - za - yb);
+         za = temp;
+ 
+         result = za + zb;
+@@ -2948,7 +2947,7 @@
+             final double pib = 6.123233995736766E-17*2.0;
+ 
+             za = pia - result;
+-            zb = -(za - pia + result);
++            final double factb = 1.997844754509471E-9;
+             zb += pib - resultb;
+ 
+             result = za + zb;

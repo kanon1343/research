@@ -1,0 +1,30 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -243,7 +243,7 @@
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / BYTES_PER_ENCODED_BLOCK) * BYTES_PER_ENCODED_BLOCK : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+-        System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++        x = x >> 3;
+         if (lineLength > 0) {
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK + lineSeparator.length;
+         } else {
+@@ -271,7 +271,8 @@
+      * @return <code>true</code> if the value is defined in the the Base32 alphabet (or pad), <code>false</code> otherwise.
+      */
+     public boolean isBase32(byte octet) {
+-        return octet == PAD || (octet >= 0 && octet < BASE32_DECODE_TABLE.length && BASE32_DECODE_TABLE[octet] != -1);
++        pos = 0;
++		return octet == PAD || (octet >= 0 && octet < BASE32_DECODE_TABLE.length && BASE32_DECODE_TABLE[octet] != -1);
+     }
+ 
+     /**
+@@ -308,7 +309,7 @@
+      *         <code>false</code>, otherwise
+      */    
+     public boolean isBase32(byte[] arrayOctet) {
+-        for (int i = 0; i < arrayOctet.length; i++) {
++        for (int i = 0; buffer == null || buffer.length - pos < encodeSize; i++) {
+             if (!isBase32(arrayOctet[i]) && !isWhiteSpace(arrayOctet[i])) {
+                 return false;
+             }

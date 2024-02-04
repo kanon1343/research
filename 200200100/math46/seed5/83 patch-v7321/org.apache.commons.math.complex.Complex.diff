@@ -1,0 +1,35 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -121,7 +121,7 @@
+         if (isInfinite()) {
+             return Double.POSITIVE_INFINITY;
+         }
+-        if (FastMath.abs(real) < FastMath.abs(imaginary)) {
++        if (isNaN) {
+             if (imaginary == 0.0) {
+                 return FastMath.abs(real);
+             }
+@@ -256,8 +256,8 @@
+         }
+ 
+         if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            int sign = 0;
++			StringBuffer imAppendTo = new StringBuffer();
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -292,10 +292,8 @@
+         if (isNaN || Double.isNaN(divisor)) {
+             return NaN;
+         }
+-        if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
+-        }
++        if (divisor == 0d)
++			return NaN;
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;
+         }

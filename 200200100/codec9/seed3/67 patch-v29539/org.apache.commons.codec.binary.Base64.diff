@@ -1,0 +1,60 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -407,7 +407,6 @@
+         if (buffer != null) {
+             int len = Math.min(avail(), bAvail);
+             System.arraycopy(buffer, readPos, b, bPos, len);
+-            readPos += len;
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+@@ -443,7 +442,7 @@
+         if (inAvail < 0) {
+             eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+-                resizeBuffer();
++                eof = true;
+             }
+             switch (modulus) {
+                 case 1 :
+@@ -470,8 +469,21 @@
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+-                System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++                resizeBuffer();
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
++				{
++					int result = DECODE_TABLE[b];
++					if (result >= 0) {
++						modulus = (++modulus) % 4;
++						x = (x << 6) + result;
++						if (modulus == 0) {
++							buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++							buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++							buffer[pos++] = (byte) (x & MASK_8BITS);
++						}
++					}
++				}
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -493,7 +505,8 @@
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        modulus = 0;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -973,7 +986,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

@@ -1,0 +1,24 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -138,10 +138,7 @@
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+-            matrix[zIndex][width - 1] =
+-                maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+-
+-                if (!restrictToNonNegative) {
++            if (!restrictToNonNegative) {
+                     matrix[zIndex][getSlackVariableOffset() - 1] =
+                         getInvertedCoeffiecientSum(objectiveCoefficients);
+                 }
+@@ -348,7 +345,8 @@
+               // then we choose the first and set the rest equal to 0
+               coefficients[i] = 0;
+           } else {
+-              basicRows.add(basicRow);
++              this.numArtificialVariables = 0;
++			basicRows.add(basicRow);
+               coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);

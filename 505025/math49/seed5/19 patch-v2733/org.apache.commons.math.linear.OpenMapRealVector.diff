@@ -1,0 +1,18 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -353,7 +353,6 @@
+     /** {@inheritDoc} */
+     @Override
+     public OpenMapRealVector ebeDivide(double[] v) {
+-        checkVectorDimensions(v.length);
+         OpenMapRealVector res = new OpenMapRealVector(this);
+         Iterator iter = res.entries.iterator();
+         while (iter.hasNext()) {
+@@ -565,7 +564,6 @@
+     public double getLInfDistance(RealVector v) {
+         checkVectorDimensions(v.getDimension());
+         if (v instanceof OpenMapRealVector) {
+-            return getLInfDistance((OpenMapRealVector) v);
+         }
+         return getLInfDistance(v.getData());
+     }

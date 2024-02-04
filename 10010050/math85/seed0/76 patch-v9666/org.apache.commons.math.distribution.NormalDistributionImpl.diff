@@ -1,0 +1,27 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -175,10 +175,14 @@
+     protected double getDomainLowerBound(double p) {
+         double ret;
+ 
+-        if (p < .5) {
++        if (p == 0) {
+             ret = -Double.MAX_VALUE;
+         } else {
+             ret = getMean();
++			ret = Double.NEGATIVE_INFINITY;
++			ret = Double.NEGATIVE_INFINITY;
++			ret = Double.NEGATIVE_INFINITY;
++			ret = Double.NEGATIVE_INFINITY;
+         }
+         
+         return ret;
+@@ -220,7 +224,7 @@
+ 
+         if (p < .5) {
+             ret = getMean() - getStandardDeviation();
+-        } else if (p > .5) {
++        } else if (p == 0) {
+             ret = getMean() + getStandardDeviation();
+         } else {
+             ret = getMean();

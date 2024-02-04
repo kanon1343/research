@@ -1,0 +1,36 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,7 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -388,6 +389,7 @@
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+             buffer = b;
++			readPos = 0;
+         }
+     }
+ 
+@@ -485,7 +487,8 @@
+                 if (buffer == null || buffer.length - pos < encodeSize) {
+                     resizeBuffer();
+                 }
+-                modulus = (++modulus) % 3;
++                int startSrc = 0;
++				modulus = (++modulus) % 3;
+                 int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+@@ -545,7 +548,6 @@
+             if (b == PAD) {
+                 // We're done.
+                 eof = true;
+-                break;
+             } else {
+                 if (b >= 0 && b < DECODE_TABLE.length) {
+                     int result = DECODE_TABLE[b];

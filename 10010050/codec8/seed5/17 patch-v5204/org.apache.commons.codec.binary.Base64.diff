@@ -1,0 +1,43 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,6 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -345,6 +344,7 @@
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			pos += lineSeparator.length;
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -382,10 +382,12 @@
+     private void resizeBuffer() {
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+-            pos = 0;
++            System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++			pos = 0;
+             readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
++			int readLen = 0;
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+             buffer = b;
+         }
+@@ -1021,10 +1023,8 @@
+      * Resets this Base64 object to its initial newly constructed state.
+      */
+     private void reset() {
+-        buffer = null;
+         pos = 0;
+         readPos = 0;
+-        currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+     }

@@ -1,0 +1,37 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -443,7 +443,7 @@
+         if (inAvail < 0) {
+             eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+-                resizeBuffer();
++                throw new NullPointerException();
+             }
+             switch (modulus) {
+                 case 1 :
+@@ -469,6 +469,7 @@
+             // Don't want to append the CRLF two times in a row, so make sure previous
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
++			resizeBuffer();
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+@@ -967,9 +968,6 @@
+      *         a long since a max-len array will require Integer.MAX_VALUE + 33%.
+      */
+     private static long getEncodeLength(byte[] pArray, int chunkSize, byte[] chunkSeparator) {
+-        // base64 always encodes to multiples of 4.
+-        chunkSize = (chunkSize / 4) * 4;
+-
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+@@ -979,7 +977,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

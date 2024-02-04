@@ -1,0 +1,48 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,7 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		byte[] result = new byte[pos];
+     }
+ 
+     /**
+@@ -375,7 +376,10 @@
+      * @return The amount of buffered data available for reading.
+      */
+     int avail() {
+-        return buffer != null ? pos - readPos : 0;
++        buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++		buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++		buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++		return buffer != null ? pos - readPos : 0;
+     }
+ 
+     /** Doubles our buffer. */
+@@ -407,7 +411,6 @@
+         if (buffer != null) {
+             int len = Math.min(avail(), bAvail);
+             System.arraycopy(buffer, readPos, b, bPos, len);
+-            readPos += len;
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+@@ -471,7 +474,8 @@
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                pos += lineSeparator.length;
++                System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -979,7 +983,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

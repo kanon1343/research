@@ -1,0 +1,75 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -226,6 +226,59 @@
+             if (Math.abs(y2) < Math.abs(y1)) {
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
++				resultComputed = true;
+                 x1 = x2;
+                 x2 = x0;
+                 y0 = y1;
+@@ -280,7 +333,11 @@
+                     // in the wrong direction, or progress is slow.
+                     // Fall back to bisection.
+                     delta = 0.5 * dx;
+-                    oldDelta = delta;
++                    {
++						oldDelta = delta;
++						delta = p / p1;
++					}
++					oldDelta = delta;
+                 } else {
+                     oldDelta = delta;
+                     delta = p / p1;

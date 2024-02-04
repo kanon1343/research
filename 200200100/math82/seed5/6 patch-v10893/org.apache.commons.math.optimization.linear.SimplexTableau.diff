@@ -1,0 +1,30 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -112,7 +112,8 @@
+         this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+         this.tableau = new Array2DRowRealMatrix(createTableau(goalType == GoalType.MAXIMIZE));
+-        initialize();
++        int height = getHeight() - 1;
++		initialize();
+     }
+ 
+     /**
+@@ -134,7 +135,6 @@
+             matrix[0][0] = -1;
+         }
+         int zIndex = (getNumObjectiveFunctions() == 1) ? 0 : 1;
+-        matrix[zIndex][zIndex] = maximize ? 1 : -1;
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+@@ -294,7 +294,8 @@
+             if (MathUtils.equals(getEntry(i, col), 1.0, epsilon) && (row == null)) {
+                 row = i;
+             } else if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {
+-                return null;
++                row = i;
++				return null;
+             }
+         }
+         return row;

@@ -1,0 +1,86 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,82 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            lineSeparator = CHUNK_SEPARATOR;
++			buffer = null;
++			modulus = (++modulus) % 4;
++			modulus = (++modulus) % 4;
++			lineLength = 0;
++			modulus = (++modulus) % 4;
++			buffer = null;
++			resizeBuffer();
++			modulus = (++modulus) % 4;
++			lineLength = 0;  // disable chunk-separating
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			modulus = (++modulus) % 4;
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			modulus = (++modulus) % 4;
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			switch (modulus) {
++			case 2:
++				x = x << 6;
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				break;
++			case 3:
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				break;
++			}
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++			modulus = (++modulus) % 4;
++			{
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;

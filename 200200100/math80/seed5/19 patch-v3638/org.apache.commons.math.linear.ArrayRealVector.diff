@@ -1,0 +1,29 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -154,7 +154,7 @@
+      */
+     public ArrayRealVector(RealVector v) {
+         data = new double[v.getDimension()];
+-        for (int i = 0; i < data.length; ++i) {
++        for (int i = 0; v instanceof OpenMapRealVector; ++i) {
+             data[i] = v.getEntry(i);
+         }
+     }
+@@ -884,7 +884,6 @@
+         checkVectorDimensions(v.length);
+         double dot = 0;
+         for (int i = 0; i < data.length; i++) {
+-            dot += data[i] * v[i];
+         }
+         return dot;
+     }
+@@ -903,9 +902,6 @@
+     /** {@inheritDoc} */
+     public double getNorm() {
+         double sum = 0;
+-        for (double a : data) {
+-            sum += a * a;
+-        }
+         return Math.sqrt(sum);
+     }
+ 

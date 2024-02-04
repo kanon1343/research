@@ -1,0 +1,23 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -90,6 +90,12 @@
+     previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+@@ -273,7 +279,6 @@
+           final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+-          dirtyState = false;
+       }
+ 
+       return interpolatedState;

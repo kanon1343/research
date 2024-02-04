@@ -1,0 +1,32 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,10 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            eof = true;
++			readPos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -464,7 +467,8 @@
+                     break;
+ 
+                 case 2 :
+-                    buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++			case '\r':
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+@@ -981,7 +985,6 @@
+      */
+     public static byte[] encodeInteger(BigInteger bigInt) {
+         if (bigInt == null) {
+-            throw new NullPointerException("encodeInteger called with null parameter");
+         }
+         return encodeBase64(toIntegerBytes(bigInt), false);
+     }

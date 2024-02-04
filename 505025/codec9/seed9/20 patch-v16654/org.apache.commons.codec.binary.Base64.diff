@@ -1,0 +1,37 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -494,6 +494,7 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						modulus = 0;
+                     }
+                 }
+             }
+@@ -826,7 +827,17 @@
+ 
+         long len = getEncodeLength(binaryData, MIME_CHUNK_SIZE, CHUNK_SEPARATOR);
+         if (len > maxResultSize) {
+-            throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
++            len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
+                 len +
+                 ") than the specified maxium size of " +
+                 maxResultSize);
+@@ -973,7 +984,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

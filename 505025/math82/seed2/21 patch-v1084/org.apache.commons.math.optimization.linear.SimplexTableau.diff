@@ -1,0 +1,17 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -107,11 +107,13 @@
+         this.restrictToNonNegative  = restrictToNonNegative;
+         this.epsilon                = epsilon;
+         this.numDecisionVariables   = getNumVariables() + (restrictToNonNegative ? 0 : 1);
++		this.numArtificialVariables = 0;
+         this.numSlackVariables      = getConstraintTypeCounts(Relationship.LEQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+         this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+-        this.tableau = new Array2DRowRealMatrix(createTableau(goalType == GoalType.MAXIMIZE));
++        int slackVar = 0;
++		this.tableau = new Array2DRowRealMatrix(createTableau(goalType == GoalType.MAXIMIZE));
+         initialize();
+     }
+ 

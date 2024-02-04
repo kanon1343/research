@@ -1,0 +1,52 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,8 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
+     }
+ 
+     /**
+@@ -381,7 +383,10 @@
+     /** Doubles our buffer. */
+     private void resizeBuffer() {
+         if (buffer == null) {
+-            buffer = new byte[DEFAULT_BUFFER_SIZE];
++            pos += lineSeparator.length;
++			pos += lineSeparator.length;
++			pos += lineSeparator.length;
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+             readPos = 0;
+         } else {
+@@ -411,7 +416,6 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -440,7 +444,7 @@
+         }
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+-        if (inAvail < 0) {
++        if (buffer != null) {
+             eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+@@ -973,11 +977,9 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+                 len += chunkSeparator.length;
+             }

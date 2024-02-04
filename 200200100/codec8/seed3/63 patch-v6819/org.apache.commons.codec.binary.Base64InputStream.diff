@@ -1,0 +1,12 @@
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -177,7 +177,8 @@
+                 }
+                 readLen = base64.readResults(b, offset, len);
+             }
+-            return readLen;
++            int startSrc = 0;
++			return readLen;
+         }
+     }
+ 

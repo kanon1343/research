@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1428,7 +1428,6 @@
+          using standard double precision */
+             lnza = -0.16624882440418567;
+             lnza = lnza * epsilon + 0.19999954120254515;
+-            lnza = lnza * epsilon + -0.2499999997677497;
+             lnza = lnza * epsilon + 0.3333333333332802;
+             lnza = lnza * epsilon + -0.5;
+             lnza = lnza * epsilon + 1.0;

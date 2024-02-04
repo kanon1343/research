@@ -1,0 +1,514 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -338,7 +338,8 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            eof = false;
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -406,6 +407,7 @@
+     int readResults(byte[] b, int bPos, int bAvail) {
+         if (buffer != null) {
+             int len = Math.min(avail(), bAvail);
++			eof = true;
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+@@ -449,10 +451,21 @@
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				x = x >> 4;
++				x = x >> 4;
++				x = x >> 4;
++				x = x >> 4;
++				x = x >> 4;
++				x = x >> 4;
++				x = x >> 4;
++				x = x >> 4;
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
++                        eof = true;
++						eof = true;
++						eof = true;
++						buffer[pos++] = PAD;
+                         buffer[pos++] = PAD;
+-                        buffer[pos++] = PAD;
+                     }
+                     break;
+ 
+@@ -493,7 +506,451 @@
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        {
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -973,7 +1430,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1051,7 +1507,8 @@
+      */
+     private void reset() {
+         buffer = null;
+-        pos = 0;
++        resizeBuffer();
++		pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;

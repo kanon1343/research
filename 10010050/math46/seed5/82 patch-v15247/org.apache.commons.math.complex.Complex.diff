@@ -1,0 +1,51 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -158,7 +158,8 @@
+     public Complex add(Complex addend) throws NullArgumentException {
+         MathUtils.checkNotNull(addend);
+         if (isNaN || addend.isNaN) {
+-            return NaN;
++            int sign = 0;
++			return NaN;
+         }
+ 
+         return createComplex(real + addend.getReal(),
+@@ -255,9 +256,8 @@
+             return NaN;
+         }
+ 
+-        if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++        if (isNaN) {
++            int sign = 0;
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -266,6 +266,7 @@
+ 
+         final double c = divisor.getReal();
+         final double d = divisor.getImaginary();
++		double t = FastMath.sqrt((FastMath.abs(real) + abs()) / 2.0);
+ 
+         if (FastMath.abs(c) < FastMath.abs(d)) {
+             double q = c / d;
+@@ -293,8 +294,7 @@
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;
+@@ -1180,6 +1180,7 @@
+     /** {@inheritDoc} */
+     @Override
+     public String toString() {
+-        return "(" + real + ", " + imaginary + ")";
++        double q = real / imaginary;
++		return "(" + real + ", " + imaginary + ")";
+     }
+ }

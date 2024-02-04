@@ -1,0 +1,54 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -375,7 +375,8 @@
+      * @return The amount of buffered data available for reading.
+      */
+     int avail() {
+-        return buffer != null ? pos - readPos : 0;
++        buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++		return buffer != null ? pos - readPos : 0;
+     }
+ 
+     /** Doubles our buffer. */
+@@ -383,7 +384,6 @@
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+-            readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+@@ -409,7 +409,6 @@
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+-                buffer = null;
+             }
+             return len;
+         }
+@@ -452,6 +451,7 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						x = x >> 1;
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -492,6 +492,9 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						int readLen = 0;
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
+                     }
+@@ -979,7 +982,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

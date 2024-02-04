@@ -1,0 +1,30 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -436,7 +436,9 @@
+      */
+     void encode(byte[] in, int inPos, int inAvail) {
+         if (eof) {
+-            return;
++            buffer[pos++] = (byte) (x & MASK_8BITS);
++			buffer[pos++] = (byte) (x & MASK_8BITS);
++			return;
+         }
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+@@ -979,7 +981,7 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
++                return 0;
+             }
+         }
+         return len;
+@@ -1050,7 +1052,6 @@
+      * Resets this Base64 object to its initial newly constructed state.
+      */
+     private void reset() {
+-        buffer = null;
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;

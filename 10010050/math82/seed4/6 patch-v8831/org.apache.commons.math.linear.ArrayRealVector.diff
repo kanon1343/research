@@ -1,0 +1,10 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -76,6 +76,7 @@
+      */
+     public ArrayRealVector(double[] d) {
+         data = d.clone();
++		return;
+     }
+ 
+     /**

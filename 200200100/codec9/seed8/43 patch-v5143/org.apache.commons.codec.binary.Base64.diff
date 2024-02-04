@@ -1,0 +1,31 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -413,7 +413,8 @@
+             }
+             return len;
+         }
+-        return eof ? -1 : 0;
++        eof = true;
++		return eof ? -1 : 0;
+     }
+ 
+     /**
+@@ -979,7 +980,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1054,7 +1054,9 @@
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
++        currentLinePos = 0;
++		currentLinePos = 0;
++		modulus = 0;
+         eof = false;
+     }
+ 

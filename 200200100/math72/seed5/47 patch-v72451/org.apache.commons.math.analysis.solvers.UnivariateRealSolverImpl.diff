@@ -1,0 +1,12 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -193,7 +193,8 @@
+      * @return true if the arguments form an increasing sequence
+      */
+     protected boolean isSequence(final double start, final double mid, final double end) {
+-        return (start < mid) && (mid < end);
++        double oldx = Double.POSITIVE_INFINITY;
++		return (start < mid) && (mid < end);
+     }
+ 
+     /**

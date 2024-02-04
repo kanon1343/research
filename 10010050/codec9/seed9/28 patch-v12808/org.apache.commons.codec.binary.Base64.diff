@@ -1,0 +1,69 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -409,9 +409,11 @@
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+-                buffer = null;
++                buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer = null;
+             }
+-            return len;
++            buffer = null;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -452,6 +454,7 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						int startSrc = 0;
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -460,6 +463,7 @@
+                     buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				resizeBuffer();
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
+@@ -480,6 +484,8 @@
+                 }
+                 modulus = (++modulus) % 3;
+                 int b = in[inPos++];
++				System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+                 if (b < 0) {
+                     b += 256;
+                 }
+@@ -493,6 +499,8 @@
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
++						x = x >> 3;
++						x = x >> 3;
+                         currentLinePos = 0;
+                     }
+                 }
+@@ -826,7 +834,8 @@
+ 
+         long len = getEncodeLength(binaryData, MIME_CHUNK_SIZE, CHUNK_SEPARATOR);
+         if (len > maxResultSize) {
+-            throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
++            len--;
++			throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
+                 len +
+                 ") than the specified maxium size of " +
+                 maxResultSize);
+@@ -972,7 +981,7 @@
+ 
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+-        if (mod != 0) {
++        if (pArray == null || pArray.length == 0) {
+             len += 4 - mod;
+         }
+         if (chunkSize > 0) {

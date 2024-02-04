@@ -1,0 +1,19 @@
+--- org.apache.commons.math.linear.AbstractRealMatrix
++++ org.apache.commons.math.linear.AbstractRealMatrix
+@@ -41,7 +41,7 @@
+      * Creates a matrix with no data
+      */
+     protected AbstractRealMatrix() {
+-        lu = null;
++        final int nSum = getColumnDimension();
+     }
+ 
+     /**
+@@ -63,7 +63,6 @@
+                     "invalid column dimension {0} (must be positive)",
+                     columnDimension);
+         }
+-        lu = null;
+     }
+ 
+     /** {@inheritDoc} */

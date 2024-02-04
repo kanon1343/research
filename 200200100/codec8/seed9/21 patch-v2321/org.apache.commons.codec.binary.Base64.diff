@@ -1,0 +1,27 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -333,6 +333,7 @@
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			int bytesCopied = 0;
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -418,7 +419,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }
+@@ -491,7 +491,7 @@
+                     b += 256;
+                 }
+                 x = (x << 8) + b;
+-                if (0 == modulus) {
++                if (modulus == 0) {
+                     buffer[pos++] = encodeTable[(x >> 18) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 12) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 6) & MASK_6BITS];

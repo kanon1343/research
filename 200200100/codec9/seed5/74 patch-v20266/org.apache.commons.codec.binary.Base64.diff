@@ -1,0 +1,67 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,7 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		modulus = 0;
+     }
+ 
+     /**
+@@ -339,6 +340,7 @@
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
++			buffer = null;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -448,6 +450,28 @@
+             switch (modulus) {
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				switch (modulus) {
++				case 2:
++					x = x >> 4;
++					buffer[pos++] = (byte) ((x) & MASK_8BITS);
++					break;
++				case 3:
++					x = x >> 2;
++					buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++					buffer[pos++] = (byte) ((x) & MASK_8BITS);
++					break;
++				}
++				switch (modulus) {
++				case 2:
++					x = x >> 4;
++					buffer[pos++] = (byte) ((x) & MASK_8BITS);
++					break;
++				case 3:
++					x = x >> 2;
++					buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++					buffer[pos++] = (byte) ((x) & MASK_8BITS);
++					break;
++				}
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+@@ -476,7 +500,9 @@
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+                 if (buffer == null || buffer.length - pos < encodeSize) {
+-                    resizeBuffer();
++                    currentLinePos = 0;
++					currentLinePos = 0;
++					resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+                 int b = in[inPos++];
+@@ -978,7 +1004,7 @@
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+-            if (!lenChunksPerfectly) {
++            if ((len & 0x01) != 0) {
+                 len += chunkSeparator.length;
+             }
+         }

@@ -122,15 +122,15 @@ def main():
     projects = ["codec9"]
     for project in projects:
         output_file_path = pathlib.Path(
-            "/Users/haradakanon/Downloads/research/10010050/{project}log/selection".format(
+            "/Users/haradakanon/Downloads/research/505025/{project}log/selection".format(
                 project=project)
         )
         selection_file_path = pathlib.Path(
-            "/Users/haradakanon/Downloads/research/10010050/{project}log/selection".format(
+            "/Users/haradakanon/Downloads/research/505025/{project}log/selection".format(
                 project=project)
         )
         duplicate_file_path = pathlib.Path(
-            "/Users/haradakanon/Downloads/research//10010050/{project}log/duplicate_lines_report.csv".format(
+            "/Users/haradakanon/Downloads/research//505025/{project}log/duplicate_lines_report.csv".format(
                 project=project)
         )
         selected(output_file_path, selection_file_path, duplicate_file_path)

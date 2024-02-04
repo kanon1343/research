@@ -1,0 +1,20 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -201,6 +201,8 @@
+             ret = getMean();
+         } else {
+             ret = Double.MAX_VALUE;
++			ret = Double.MAX_VALUE;
++			ret = Double.MAX_VALUE;
+         }
+         
+         return ret;
+@@ -220,7 +222,7 @@
+ 
+         if (p < .5) {
+             ret = getMean() - getStandardDeviation();
+-        } else if (p > .5) {
++        } else if (p < .5) {
+             ret = getMean() + getStandardDeviation();
+         } else {
+             ret = getMean();

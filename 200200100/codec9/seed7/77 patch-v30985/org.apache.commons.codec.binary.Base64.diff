@@ -1,0 +1,92 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -413,7 +413,10 @@
+             }
+             return len;
+         }
+-        return eof ? -1 : 0;
++        reset();
++		reset();
++		reset();
++		return eof ? -1 : 0;
+     }
+ 
+     /**
+@@ -471,6 +474,8 @@
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				x = x >> 6;
++				x = x >> 6;
+                 pos += lineSeparator.length;
+             }
+         } else {
+@@ -493,7 +498,45 @@
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -973,7 +1016,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1051,10 +1093,11 @@
+      */
+     private void reset() {
+         buffer = null;
+-        pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
++        System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		modulus = 0;
+         eof = false;
+     }
+ 

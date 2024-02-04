@@ -1,0 +1,15 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -420,7 +420,11 @@
+         if (out != null && out.length == outAvail) {
+             buffer = out;
+             pos = outPos;
+-            readPos = outPos;
++            {
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
+         }
+     }
+     /**

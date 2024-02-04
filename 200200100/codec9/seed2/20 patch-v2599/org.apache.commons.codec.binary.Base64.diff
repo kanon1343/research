@@ -1,0 +1,35 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -339,6 +339,7 @@
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
++			resizeBuffer();
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -409,7 +410,6 @@
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+-                buffer = null;
+             }
+             return len;
+         }
+@@ -973,7 +973,7 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
++            boolean lenChunksPerfectly = len % chunkSize == 0;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1053,7 +1053,6 @@
+         buffer = null;
+         pos = 0;
+         readPos = 0;
+-        currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+     }

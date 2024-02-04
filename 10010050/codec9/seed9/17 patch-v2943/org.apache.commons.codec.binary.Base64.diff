@@ -1,0 +1,37 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -451,8 +451,9 @@
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
++                        currentLinePos = 0;
++						buffer[pos++] = PAD;
+                         buffer[pos++] = PAD;
+-                        buffer[pos++] = PAD;
+                     }
+                     break;
+ 
+@@ -826,7 +827,8 @@
+ 
+         long len = getEncodeLength(binaryData, MIME_CHUNK_SIZE, CHUNK_SEPARATOR);
+         if (len > maxResultSize) {
+-            throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
++            len--;
++			throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
+                 len +
+                 ") than the specified maxium size of " +
+                 maxResultSize);
+@@ -967,13 +969,9 @@
+      *         a long since a max-len array will require Integer.MAX_VALUE + 33%.
+      */
+     private static long getEncodeLength(byte[] pArray, int chunkSize, byte[] chunkSeparator) {
+-        // base64 always encodes to multiples of 4.
+-        chunkSize = (chunkSize / 4) * 4;
+-
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

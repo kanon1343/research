@@ -1,0 +1,37 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -59,6 +59,7 @@
+      */
+     public BrentSolver() {
+         super(100, 1E-6);
++		this.defaultFunctionValueAccuracy = 1.0e-15;
+     }
+ 
+     /** {@inheritDoc} */
+@@ -104,15 +105,13 @@
+ 
+         // return the initial guess if it is good enough
+         double yInitial = f.value(initial);
+-        if (Math.abs(yInitial) <= functionValueAccuracy) {
+-            setResult(initial, 0);
+-            return result;
+-        }
++        if (Math.abs(yInitial) <= functionValueAccuracy)
++			return result;
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
++            setResult(min, 0);
+             return result;
+         }
+ 
+@@ -124,7 +123,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 

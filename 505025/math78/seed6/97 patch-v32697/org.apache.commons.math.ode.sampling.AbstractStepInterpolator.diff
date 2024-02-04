@@ -1,0 +1,59 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -94,9 +94,11 @@
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
++    finalized = false;
++	finalized = false;
++	finalized = false;
++	finalized               = false;
+     this.forward            = true;
+-    this.dirtyState         = true;
+   }
+ 
+   /** Simple constructor.
+@@ -271,6 +273,42 @@
+       // lazy evaluation of the state
+       if (dirtyState) {
+           final double oneMinusThetaH = currentTime - interpolatedTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
++		previousTime = currentTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+           dirtyState = false;

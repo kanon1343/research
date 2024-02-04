@@ -1,0 +1,18 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -345,6 +345,7 @@
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			resizeBuffer();
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -418,7 +419,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }

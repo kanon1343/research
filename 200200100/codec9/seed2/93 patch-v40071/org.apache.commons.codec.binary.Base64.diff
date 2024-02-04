@@ -1,0 +1,51 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -347,7 +347,8 @@
+             String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+-        this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
++        int bytesCopied = 0;
++		this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+     }
+ 
+     /**
+@@ -471,7 +472,8 @@
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                pos += lineSeparator.length;
++                System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++				pos += lineSeparator.length;
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -493,6 +495,10 @@
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
++						readPos = 0;
++						readPos = 0;
++						readPos = 0;
++						readPos = 0;
+                         currentLinePos = 0;
+                     }
+                 }
+@@ -967,9 +973,6 @@
+      *         a long since a max-len array will require Integer.MAX_VALUE + 33%.
+      */
+     private static long getEncodeLength(byte[] pArray, int chunkSize, byte[] chunkSeparator) {
+-        // base64 always encodes to multiples of 4.
+-        chunkSize = (chunkSize / 4) * 4;
+-
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+@@ -979,7 +982,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

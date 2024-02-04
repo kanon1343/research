@@ -1,0 +1,80 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -338,7 +338,8 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            readPos = 0;
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -441,7 +442,8 @@
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+-            eof = true;
++            resizeBuffer();
++			resizeBuffer();
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+             }
+@@ -491,9 +493,29 @@
+                     buffer[pos++] = encodeTable[x & MASK_6BITS];
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+-                        System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                        pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        readPos = 0;
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						{
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 3:
++								x = x >> 2;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++                        b += 256;
++						pos += lineSeparator.length;
++                        readPos = 0;
++						readPos = 0;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -529,6 +551,8 @@
+         }
+         if (inAvail < 0) {
+             eof = true;
++			resizeBuffer();
++			resizeBuffer();
+         }
+         for (int i = 0; i < inAvail; i++) {
+             if (buffer == null || buffer.length - pos < decodeSize) {
+@@ -952,6 +976,7 @@
+         encode(pArray, 0, -1); // Notify encoder of EOF.
+         byte[] buf = new byte[pos - readPos];
+         readResults(buf, 0, buf.length);
++		resizeBuffer();
+         return buf;
+     }
+ 
+@@ -979,7 +1004,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

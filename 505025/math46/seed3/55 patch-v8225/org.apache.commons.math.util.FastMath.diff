@@ -1,0 +1,18 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1430,7 +1430,6 @@
+             lnza = lnza * epsilon + 0.19999954120254515;
+             lnza = lnza * epsilon + -0.2499999997677497;
+             lnza = lnza * epsilon + 0.3333333333332802;
+-            lnza = lnza * epsilon + -0.5;
+             lnza = lnza * epsilon + 1.0;
+             lnza = lnza * epsilon;
+         }
+@@ -2884,7 +2883,6 @@
+             final double yaa = (ya + temp) - temp;
+             final double yab = ya - yaa;
+ 
+-            temp = za * HEX_40000000;
+             final double zaa = (za + temp) - temp;
+             final double zab = za - zaa;
+ 

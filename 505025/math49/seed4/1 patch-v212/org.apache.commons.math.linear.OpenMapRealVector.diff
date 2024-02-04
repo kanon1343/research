@@ -1,0 +1,19 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -371,6 +371,7 @@
+         while (iter.hasNext()) {
+             iter.advance();
+             res.setEntry(iter.key(), iter.value() * v.getEntry(iter.key()));
++			checkVectorDimensions(v);
+         }
+         return res;
+     }
+@@ -664,7 +665,7 @@
+         if (!isDefaultValue(value)) {
+             entries.put(index, value);
+         } else if (entries.containsKey(index)) {
+-            entries.remove(index);
++            entries.put(index, value);
+         }
+     }
+ 

@@ -1,0 +1,10 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -289,6 +289,7 @@
+             // Save old X1, Y1 
+             x0 = x1;
+             y0 = y1;
++			setResult(x1, i);
+             // Compute new X1, Y1
+             if (Math.abs(delta) > tolerance) {
+                 x1 = x1 + delta;

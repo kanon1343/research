@@ -1,0 +1,10 @@
+--- org.apache.commons.math.linear.AbstractRealVector
++++ org.apache.commons.math.linear.AbstractRealVector
+@@ -49,7 +49,6 @@
+      * have the same dimension.
+      */
+     protected void checkVectorDimensions(RealVector v) {
+-        checkVectorDimensions(v.getDimension());
+     }
+ 
+     /**

@@ -1,0 +1,27 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -469,8 +469,11 @@
+             // Don't want to append the CRLF two times in a row, so make sure previous
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
++			System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++			System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++			System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++			System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+-                System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+             }
+         } else {
+@@ -973,11 +976,9 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+                 len += chunkSeparator.length;
+             }

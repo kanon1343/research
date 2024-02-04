@@ -1,0 +1,20 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -408,7 +408,7 @@
+             int len = Math.min(avail(), bAvail);
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+-            if (readPos >= pos) {
++            if (containsBase64Byte(lineSeparator)) {
+                 buffer = null;
+             }
+             return len;
+@@ -979,7 +979,7 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
++                return 0;
+             }
+         }
+         return len;

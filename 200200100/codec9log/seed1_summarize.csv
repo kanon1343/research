@@ -1,0 +1,62 @@
+,世代,時間,出力数,前世代までの合計
+0,4th, 1 minutes 6 seconds,4,0
+1,5th, 1 minutes 26 seconds,7,4
+2,6th, 1 minutes 50 seconds,5,11
+3,7th, 2 minutes 7 seconds,2,16
+4,8th, 2 minutes 24 seconds,1,18
+5,9th, 2 minutes 43 seconds,1,19
+6,13th, 4 minutes 9 seconds,1,20
+7,17th, 6 minutes 5 seconds,1,21
+8,18th, 6 minutes 36 seconds,2,22
+9,21st, 8 minutes 19 seconds,1,24
+10,24th, 10 minutes 10 seconds,1,25
+11,25th, 11 minutes 30 seconds,1,26
+12,26th, 12 minutes 38 seconds,2,27
+13,29th, 14 minutes 22 seconds,2,29
+14,30th, 14 minutes 55 seconds,4,31
+15,31st, 15 minutes 30 seconds,1,35
+16,32nd, 16 minutes 2 seconds,3,36
+17,35th, 17 minutes 48 seconds,1,39
+18,43rd, 22 minutes 56 seconds,1,40
+19,50th, 27 minutes 20 seconds,1,41
+20,52nd, 28 minutes 40 seconds,1,42
+21,53rd, 29 minutes 24 seconds,1,43
+22,58th, 32 minutes 49 seconds,2,44
+23,59th, 33 minutes 38 seconds,2,46
+24,60th, 34 minutes 21 seconds,3,48
+25,61st, 35 minutes 2 seconds,3,51
+26,63rd, 36 minutes 27 seconds,1,54
+27,64th, 37 minutes 8 seconds,1,55
+28,65th, 37 minutes 49 seconds,1,56
+29,67th, 39 minutes 16 seconds,1,57
+30,77th, 46 minutes 41 seconds,1,58
+31,78th, 47 minutes 26 seconds,1,59
+32,80th, 48 minutes 59 seconds,1,60
+33,81st, 49 minutes 43 seconds,1,61
+34,82nd, 50 minutes 25 seconds,1,62
+35,83rd, 51 minutes 9 seconds,1,63
+36,84th, 51 minutes 47 seconds,1,64
+37,87th, 54 minutes 17 seconds,1,65
+38,88th, 54 minutes 59 seconds,2,66
+39,90th, 56 minutes 42 seconds,1,68
+40,91st, 57 minutes 34 seconds,1,69
+41,92nd, 58 minutes 27 seconds,1,70
+42,94th, 1 hours 10 seconds,1,71
+43,95th, 1 hours 1 minutes 2 seconds,2,72
+44,96th, 1 hours 1 minutes 54 seconds,1,74
+45,101st, 1 hours 6 minutes 9 seconds,1,75
+46,105th, 1 hours 9 minutes 45 seconds,3,76
+47,106th, 1 hours 10 minutes 43 seconds,5,79
+48,107th, 1 hours 11 minutes 38 seconds,1,84
+49,111th, 1 hours 15 minutes 26 seconds,2,85
+50,115th, 1 hours 19 minutes 15 seconds,1,87
+51,117th, 1 hours 21 minutes 4 seconds,1,88
+52,118th, 1 hours 22 minutes 2 seconds,2,89
+53,120th, 1 hours 23 minutes 56 seconds,1,91
+54,123rd, 1 hours 26 minutes 45 seconds,1,92
+55,124th, 1 hours 27 minutes 44 seconds,2,93
+56,128th, 1 hours 31 minutes 49 seconds,1,95
+57,133rd, 1 hours 36 minutes 51 seconds,1,96
+58,135th, 1 hours 38 minutes 51 seconds,1,97
+59,137th, 1 hours 40 minutes 50 seconds,1,98
+60,139th, 1 hours 41 minutes 53 seconds,1,99

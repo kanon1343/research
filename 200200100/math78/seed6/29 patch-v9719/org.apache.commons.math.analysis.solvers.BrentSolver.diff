@@ -1,0 +1,19 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -237,7 +237,6 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =
+@@ -258,7 +257,7 @@
+                 // the equality test (x0 == x2) is intentional,
+                 // it is part of the original Brent's method,
+                 // it should NOT be replaced by proximity test
+-                if (x0 == x2) {
++                if (i <= maximalIterationCount) {
+                     // Linear interpolation.
+                     p = dx * r3;
+                     p1 = 1.0 - r3;

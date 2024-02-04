@@ -1,0 +1,20 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,8 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            String sep = StringUtils.newStringUtf8(lineSeparator);
++			lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -545,7 +546,6 @@
+             if (b == PAD) {
+                 // We're done.
+                 eof = true;
+-                break;
+             } else {
+                 if (b >= 0 && b < DECODE_TABLE.length) {
+                     int result = DECODE_TABLE[b];

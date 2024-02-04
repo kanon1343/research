@@ -1,0 +1,59 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,8 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		modulus = 0;
++		modulus = 0;
+     }
+ 
+     /**
+@@ -335,10 +337,12 @@
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
++		buffer = null;
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            eof = true;
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -459,6 +463,7 @@
+                 case 2 :
+                     buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+@@ -476,7 +481,8 @@
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+                 if (buffer == null || buffer.length - pos < encodeSize) {
+-                    resizeBuffer();
++                    currentLinePos = 0;
++					resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+                 int b = in[inPos++];
+@@ -494,6 +500,7 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						x = x >> 2;
+                     }
+                 }
+             }
+@@ -973,7 +980,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

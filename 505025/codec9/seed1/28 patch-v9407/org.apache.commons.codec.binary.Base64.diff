@@ -1,0 +1,79 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -337,6 +337,9 @@
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
+         } else {
+@@ -382,6 +385,36 @@
+     private void resizeBuffer() {
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
+             pos = 0;
+             readPos = 0;
+         } else {
+@@ -447,7 +480,12 @@
+             }
+             switch (modulus) {
+                 case 1 :
+-                    buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				{
++					byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
++					System.arraycopy(buffer, 0, b, 0, buffer.length);
++					buffer = b;
++				}
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+@@ -973,7 +1011,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1053,6 +1090,7 @@
+         buffer = null;
+         pos = 0;
+         readPos = 0;
++		readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

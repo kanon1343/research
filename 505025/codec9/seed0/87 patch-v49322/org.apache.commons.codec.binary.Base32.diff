@@ -1,0 +1,26 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -238,7 +238,22 @@
+      */
+     public Base32(int lineLength, byte[] lineSeparator, boolean useHex) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			buffer[pos++] = PAD;
++			lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / BYTES_PER_ENCODED_BLOCK) * BYTES_PER_ENCODED_BLOCK : 0;

@@ -1,0 +1,12 @@
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -170,7 +170,8 @@
+                         base64.setInitialBuffer(b, offset, len);
+                     }
+                     if (doEncode) {
+-                        base64.encode(buf, 0, c);
++                        long mod = len % 4;
++						base64.encode(buf, 0, c);
+                     } else {
+                         base64.decode(buf, 0, c);
+                     }

@@ -1,0 +1,78 @@
+,世代,時間,出力数,前世代までの合計
+0,4th, 1 minutes 9 seconds,1,0
+1,5th, 1 minutes 25 seconds,1,1
+2,6th, 1 minutes 36 seconds,1,2
+3,7th, 1 minutes 50 seconds,4,3
+4,8th, 2 minutes 0 seconds,2,7
+5,9th, 2 minutes 12 seconds,5,9
+6,10th, 2 minutes 23 seconds,1,14
+7,11th, 2 minutes 35 seconds,3,15
+8,13th, 3 minutes 0 seconds,2,18
+9,20th, 4 minutes 44 seconds,1,20
+10,26th, 6 minutes 28 seconds,2,21
+11,27th, 6 minutes 49 seconds,1,23
+12,37th, 10 minutes 0 seconds,2,24
+13,39th, 10 minutes 39 seconds,2,26
+14,40th, 11 minutes 1 seconds,1,28
+15,41st, 11 minutes 22 seconds,2,29
+16,42nd, 11 minutes 42 seconds,1,31
+17,43rd, 12 minutes 5 seconds,2,32
+18,46th, 13 minutes 8 seconds,3,34
+19,47th, 13 minutes 28 seconds,1,37
+20,52nd, 15 minutes 9 seconds,1,38
+21,57th, 17 minutes 4 seconds,1,39
+22,62nd, 19 minutes 43 seconds,1,40
+23,68th, 22 minutes 58 seconds,1,41
+24,76th, 26 minutes 30 seconds,1,42
+25,80th, 28 minutes 23 seconds,1,43
+26,90th, 34 minutes 24 seconds,1,44
+27,97th, 38 minutes 39 seconds,1,45
+28,101st, 41 minutes 4 seconds,1,46
+29,102nd, 41 minutes 41 seconds,2,47
+30,108th, 45 minutes 39 seconds,1,49
+31,120th, 52 minutes 51 seconds,1,50
+32,124th, 54 minutes 38 seconds,1,51
+33,136th, 1 hours 41 seconds,1,52
+34,139th, 1 hours 2 minutes 17 seconds,1,53
+35,142nd, 1 hours 3 minutes 54 seconds,2,54
+36,153rd, 1 hours 10 minutes 3 seconds,2,56
+37,164th, 1 hours 16 minutes 47 seconds,1,58
+38,171st, 1 hours 21 minutes 24 seconds,1,59
+39,172nd, 1 hours 22 minutes 2 seconds,1,60
+40,174th, 1 hours 23 minutes 23 seconds,1,61
+41,175th, 1 hours 24 minutes 4 seconds,1,62
+42,185th, 1 hours 35 minutes 53 seconds,1,63
+43,186th, 1 hours 37 minutes 40 seconds,1,64
+44,195th, 1 hours 54 minutes 30 seconds,1,65
+45,196th, 1 hours 56 minutes 33 seconds,1,66
+46,199th, 2 hours 2 minutes 7 seconds,1,67
+47,204th, 2 hours 11 minutes 25 seconds,1,68
+48,207th, 2 hours 17 minutes 22 seconds,1,69
+49,210th, 2 hours 23 minutes 48 seconds,1,70
+50,212th, 2 hours 27 minutes 41 seconds,1,71
+51,214th, 2 hours 32 minutes 5 seconds,1,72
+52,235th, 3 hours 24 minutes 13 seconds,1,73
+53,245th, 3 hours 49 minutes 54 seconds,1,74
+54,247th, 3 hours 55 minutes 39 seconds,1,75
+55,250th, 4 hours 3 minutes 35 seconds,2,76
+56,251st, 4 hours 6 minutes 5 seconds,1,78
+57,256th, 4 hours 18 minutes 43 seconds,1,79
+58,257th, 4 hours 21 minutes 12 seconds,1,80
+59,259th, 4 hours 26 minutes 3 seconds,1,81
+60,262nd, 4 hours 33 minutes 23 seconds,2,82
+61,263rd, 4 hours 36 minutes 6 seconds,1,84
+62,265th, 4 hours 40 minutes 49 seconds,1,85
+63,268th, 4 hours 48 minutes 17 seconds,1,86
+64,269th, 4 hours 50 minutes 45 seconds,1,87
+65,272nd, 4 hours 58 minutes 22 seconds,1,88
+66,274th, 5 hours 3 minutes 28 seconds,1,89
+67,277th, 5 hours 11 minutes 31 seconds,1,90
+68,283rd, 5 hours 28 minutes 5 seconds,1,91
+69,284th, 5 hours 30 minutes 47 seconds,1,92
+70,291st, 5 hours 50 minutes 5 seconds,1,93
+71,294th, 5 hours 58 minutes 10 seconds,1,94
+72,295th, 6 hours 50 seconds,1,95
+73,310th, 6 hours 43 minutes 7 seconds,1,96
+74,313th, 6 hours 52 minutes 12 seconds,1,97
+75,320th, 7 hours 13 minutes 28 seconds,1,98
+76,325th, 7 hours 26 minutes 20 seconds,1,99

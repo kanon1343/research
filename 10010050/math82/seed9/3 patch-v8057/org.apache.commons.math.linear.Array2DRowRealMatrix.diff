@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.Array2DRowRealMatrix
++++ org.apache.commons.math.linear.Array2DRowRealMatrix
+@@ -92,7 +92,8 @@
+      */
+     public Array2DRowRealMatrix(final double[][] d)
+         throws IllegalArgumentException, NullPointerException {
+-        copyIn(d);
++        double value = 0;
++		copyIn(d);
+     }
+ 
+     /**

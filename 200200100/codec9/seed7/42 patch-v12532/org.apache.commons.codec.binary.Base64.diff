@@ -1,0 +1,68 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -409,7 +409,25 @@
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+-                buffer = null;
++                switch (modulus) {
++				case 1:
++					buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++					buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++					if (encodeTable == STANDARD_ENCODE_TABLE) {
++						buffer[pos++] = PAD;
++						buffer[pos++] = PAD;
++					}
++					break;
++				case 2:
++					buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++					buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++					buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++					if (encodeTable == STANDARD_ENCODE_TABLE) {
++						buffer[pos++] = PAD;
++					}
++					break;
++				}
++				buffer = null;
+             }
+             return len;
+         }
+@@ -452,6 +470,7 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						byte[] buf = new byte[pos - readPos];
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -952,7 +971,8 @@
+         encode(pArray, 0, -1); // Notify encoder of EOF.
+         byte[] buf = new byte[pos - readPos];
+         readResults(buf, 0, buf.length);
+-        return buf;
++        int readLen = 0;
++		return buf;
+     }
+ 
+     /**
+@@ -979,7 +999,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1052,9 +1071,10 @@
+     private void reset() {
+         buffer = null;
+         pos = 0;
+-        readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
++        System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		modulus = 0;
+         eof = false;
+     }
+ 

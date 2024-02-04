@@ -1,0 +1,42 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -452,6 +452,7 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						x = x >> 3;
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -459,6 +460,7 @@
+                 case 2 :
+                     buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+@@ -472,6 +474,7 @@
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
++				int bytesCopied = 0;
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -571,6 +574,7 @@
+                 case 2 : // 12 bits = 8 + 4
+                     x = x >> 4;
+                     buffer[pos++] = (byte) ((x) & MASK_8BITS);
++			default:
+                     break;
+                 case 3 : // 18 bits = 8 + 8 + 2
+                     x = x >> 2;
+@@ -973,7 +977,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

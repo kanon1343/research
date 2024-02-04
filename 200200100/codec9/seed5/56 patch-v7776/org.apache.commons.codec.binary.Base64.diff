@@ -1,0 +1,44 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -339,6 +339,7 @@
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
++			buffer = null;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -476,7 +477,8 @@
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+                 if (buffer == null || buffer.length - pos < encodeSize) {
+-                    resizeBuffer();
++                    currentLinePos = 0;
++					resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+                 int b = in[inPos++];
+@@ -494,6 +496,7 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                     }
+                 }
+             }
+@@ -979,7 +982,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1050,7 +1052,6 @@
+      * Resets this Base64 object to its initial newly constructed state.
+      */
+     private void reset() {
+-        buffer = null;
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;

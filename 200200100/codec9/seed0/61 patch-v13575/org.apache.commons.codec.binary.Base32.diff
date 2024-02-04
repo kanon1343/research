@@ -1,0 +1,19 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -248,12 +248,12 @@
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK + lineSeparator.length;
+         } else {
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK;
++			buffer = null;
++			buffer = null;
+         }
+         this.decodeSize = this.encodeSize - 1;
+-        if (containsBase32Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
+-            throw new IllegalArgumentException("lineSeperator must not contain Base32 characters: [" + sep + "]");
+-        }
++        if (containsBase32Byte(lineSeparator))
++			resizeBuffer();
+         if (useHex){
+             this.encodeTable = BASE32HEX_ENCODE_TABLE;
+             this.decodeTable = BASE32HEX_DECODE_TABLE;            

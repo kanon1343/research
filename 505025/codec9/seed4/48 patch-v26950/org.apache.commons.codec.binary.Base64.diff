@@ -1,0 +1,66 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,31 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
+     }
+ 
+     /**
+@@ -338,7 +363,8 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            reset();
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -381,7 +407,12 @@
+     /** Doubles our buffer. */
+     private void resizeBuffer() {
+         if (buffer == null) {
+-            buffer = new byte[DEFAULT_BUFFER_SIZE];
++            byte b = lineSeparator[lineSeparator.length - 1];
++			pos += lineSeparator.length;
++			pos += lineSeparator.length;
++			pos += lineSeparator.length;
++			pos += lineSeparator.length;
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+             readPos = 0;
+         } else {
+@@ -973,7 +1004,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

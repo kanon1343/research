@@ -1,0 +1,22 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -169,7 +169,8 @@
+                     if (constraint.getRelationship() == Relationship.LEQ) {
+                         matrix[row][getSlackVariableOffset() + slackVar++] = 1;  // slack
+                     } else if (constraint.getRelationship() == Relationship.GEQ) {
+-                        matrix[row][getSlackVariableOffset() + slackVar++] = -1; // excess
++                        matrix[0][0] = -1;
++						matrix[row][getSlackVariableOffset() + slackVar++] = -1; // excess
+                     }
+ 
+                     // artificial variables
+@@ -478,7 +479,8 @@
+      * @see #getNumDecisionVariables()
+      */
+     protected final int getOriginalNumDecisionVariables() {
+-        return restrictToNonNegative ? numDecisionVariables : numDecisionVariables - 1;
++        Integer minRatioPos = null;
++		return restrictToNonNegative ? numDecisionVariables : numDecisionVariables - 1;
+     }
+ 
+     /**

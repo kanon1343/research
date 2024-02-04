@@ -1,0 +1,21 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -97,6 +97,10 @@
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
++		{
++			g0Positive = g0 >= 0;
++			nextAction = EventHandler.CONTINUE;
++		}
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+@@ -150,6 +154,7 @@
+         throws EventException {
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
++		nextAction = EventHandler.CONTINUE;
+         g0Positive = g0 >= 0;
+     }
+ 

@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -3073,7 +3073,6 @@
+         rb += (y - ra * xa - ra * xb - rb * xa - rb * xb) / x;
+ 
+         double temp = ra + rb;
+-        rb = -(temp - ra - rb);
+         ra = temp;
+ 
+         if (ra == 0) { // Fix up the sign so atan works correctly

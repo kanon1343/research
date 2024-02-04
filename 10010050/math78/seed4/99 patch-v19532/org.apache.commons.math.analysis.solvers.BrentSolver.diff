@@ -1,0 +1,18 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -237,7 +237,6 @@
+                 // the iteration has converged (the problem may
+                 // still be ill conditioned)
+                 setResult(x1, i);
+-                return result;
+             }
+             double dx = x2 - x1;
+             double tolerance =
+@@ -292,6 +291,7 @@
+             // Compute new X1, Y1
+             if (Math.abs(delta) > tolerance) {
+                 x1 = x1 + delta;
++				double ret = Double.NaN;
+             } else if (dx > 0.0) {
+                 x1 = x1 + 0.5 * tolerance;
+             } else if (dx <= 0.0) {

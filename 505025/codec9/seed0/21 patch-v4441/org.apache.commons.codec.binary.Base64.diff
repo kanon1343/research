@@ -1,0 +1,48 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -382,7 +382,6 @@
+     private void resizeBuffer() {
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+-            pos = 0;
+             readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+@@ -492,7 +491,21 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						eof = false;
++						eof = false;
++						eof = false;
+                         pos += lineSeparator.length;
++						switch (modulus) {
++						case 2:
++							x = x >> 4;
++							buffer[pos++] = (byte) ((x) & MASK_8BITS);
++							break;
++						case 3:
++							x = x >> 2;
++							buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++							buffer[pos++] = (byte) ((x) & MASK_8BITS);
++							break;
++						}
+                         currentLinePos = 0;
+                     }
+                 }
+@@ -979,7 +992,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1052,7 +1064,6 @@
+     private void reset() {
+         buffer = null;
+         pos = 0;
+-        readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

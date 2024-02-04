@@ -1,0 +1,62 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -99,7 +99,6 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+@@ -112,7 +111,8 @@
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
++            clearResult();
++			clearResult();
+             return result;
+         }
+ 
+@@ -124,7 +124,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -175,14 +174,23 @@
+ 
+         // Verify bracketing
+         double sign = yMin * yMax;
++		clearResult();
+         if (sign > 0) {
+             // check if either value is close to a zero
+             if (Math.abs(yMin) <= functionValueAccuracy) {
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+-                setResult(max, 0);
+                 ret = max;
++				this.iterationCount = iterationCount;
++				ret = max;
++				ret = max;
++				ret = max;
++				ret = max;
++				ret = max;
++				setResult(max, 0);
++				ret = solve(f, min, yMin, max, yMax, min, yMin);
++                ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+@@ -302,7 +310,7 @@
+                 x1 = x1 + delta;
+             } else if (dx > 0.0) {
+                 x1 = x1 + 0.5 * tolerance;
+-            } else if (dx <= 0.0) {
++            } else if (i <= maximalIterationCount) {
+                 x1 = x1 - 0.5 * tolerance;
+             }
+             y1 = f.value(x1);

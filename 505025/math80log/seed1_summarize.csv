@@ -1,0 +1,47 @@
+,世代,時間,出力数,前世代までの合計
+0,1st, 16 seconds,1,0
+1,2nd, 6 minutes 29 seconds,1,1
+2,6th, 41 minutes 0 seconds,1,2
+3,23rd, 1 hours 49 minutes 4 seconds,2,3
+4,24th, 1 hours 49 minutes 29 seconds,1,5
+5,26th, 1 hours 50 minutes 17 seconds,3,6
+6,31st, 2 hours 1 minutes 11 seconds,1,9
+7,32nd, 2 hours 4 minutes 39 seconds,2,10
+8,36th, 2 hours 12 minutes 34 seconds,1,12
+9,39th, 2 hours 53 minutes 4 seconds,1,13
+10,40th, 3 hours 2 minutes 34 seconds,1,14
+11,43rd, 3 hours 25 minutes 14 seconds,2,15
+12,44th, 3 hours 43 minutes 49 seconds,1,17
+13,45th, 3 hours 56 minutes 14 seconds,1,18
+14,47th, 4 hours 15 minutes 10 seconds,2,19
+15,50th, 5 hours 34 minutes 29 seconds,2,21
+16,59th, 8 hours 32 minutes 44 seconds,2,23
+17,60th, 8 hours 48 minutes 14 seconds,1,25
+18,61st, 8 hours 57 minutes 42 seconds,2,26
+19,62nd, 9 hours 16 minutes 17 seconds,2,28
+20,63rd, 9 hours 25 minutes 44 seconds,1,30
+21,64th, 9 hours 38 minutes 2 seconds,1,31
+22,66th, 10 hours 29 minutes 41 seconds,1,32
+23,69th, 11 hours 3 minutes 41 seconds,1,33
+24,71st, 11 hours 37 minutes 21 seconds,1,34
+25,77th, 13 hours 15 minutes 20 seconds,1,35
+26,80th, 13 hours 46 minutes 13 seconds,2,36
+27,81st, 14 hours 1 minutes 30 seconds,1,38
+28,84th, 14 hours 59 minutes 23 seconds,1,39
+29,86th, 15 hours 26 minutes 58 seconds,2,40
+30,87th, 15 hours 33 minutes 17 seconds,1,42
+31,88th, 15 hours 39 minutes 35 seconds,1,43
+32,91st, 15 hours 58 minutes 36 seconds,1,44
+33,96th, 17 hours 21 minutes 13 seconds,1,45
+34,99th, 18 hours 7 minutes 13 seconds,1,46
+35,104th, 18 hours 26 minutes 45 seconds,1,47
+36,119th, 20 hours 16 minutes 43 seconds,1,48
+37,122nd, 20 hours 23 minutes 43 seconds,1,49
+38,127th, 20 hours 46 minutes 14 seconds,1,50
+39,128th, 20 hours 55 minutes 31 seconds,1,51
+40,129th, 20 hours 55 minutes 45 seconds,1,52
+41,133rd, 21 hours 23 minutes 52 seconds,1,53
+42,135th, 21 hours 36 minutes 28 seconds,1,54
+43,142nd, 23 hours 2 minutes 34 seconds,1,55
+44,144th, 23 hours 33 minutes 8 seconds,1,56
+45,145th, 23 hours 36 minutes 24 seconds,1,57

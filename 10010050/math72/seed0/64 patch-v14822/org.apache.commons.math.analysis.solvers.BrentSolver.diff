@@ -1,0 +1,70 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -99,20 +99,20 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
++        double x0 = min;
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            checkResultComputed();
++			return result;
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+             return result;
+         }
+ 
+@@ -124,7 +124,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -177,7 +176,7 @@
+         double sign = yMin * yMax;
+         if (sign > 0) {
+             // check if either value is close to a zero
+-            if (Math.abs(yMin) <= functionValueAccuracy) {
++            if (f.value(min) == 0.0) {
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+@@ -189,7 +188,8 @@
+                         NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+             }
+         } else if (sign < 0){
+-            // solve using only the first endpoint as initial guess
++            iterationCount += this.iterationCount;
++			// solve using only the first endpoint as initial guess
+             ret = solve(f, min, yMin, max, yMax, min, yMin);
+         } else {
+             // either min or max is a root
+@@ -228,6 +228,7 @@
+ 
+         double delta = x1 - x0;
+         double oldDelta = delta;
++		this.iterationCount = iterationCount;
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+@@ -258,7 +259,7 @@
+                     (Math.abs(y0) <= Math.abs(y1))) {
+                 // Force bisection.
+                 delta = 0.5 * dx;
+-                oldDelta = delta;
++                double oldx = Double.POSITIVE_INFINITY;
+             } else {
+                 double r3 = y1 / y0;
+                 double p;

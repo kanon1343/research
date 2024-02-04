@@ -1,0 +1,39 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,7 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		byte[] result = new byte[pos];
+     }
+ 
+     /**
+@@ -342,7 +343,8 @@
+         } else {
+             this.encodeSize = 4;
+         }
+-        this.decodeSize = this.encodeSize - 1;
++        pos = 0;
++		this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+@@ -375,7 +377,8 @@
+      * @return The amount of buffered data available for reading.
+      */
+     int avail() {
+-        return buffer != null ? pos - readPos : 0;
++        buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++		return buffer != null ? pos - readPos : 0;
+     }
+ 
+     /** Doubles our buffer. */
+@@ -975,7 +978,7 @@
+         if (mod != 0) {
+             len += 4 - mod;
+         }
+-        if (chunkSize > 0) {
++        if (pArray == null || pArray.length == 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {

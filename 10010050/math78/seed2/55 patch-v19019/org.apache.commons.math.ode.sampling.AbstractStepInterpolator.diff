@@ -1,0 +1,22 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -90,6 +90,11 @@
+     previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
+     interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+@@ -243,7 +248,6 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */

@@ -1,0 +1,26 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -105,7 +105,6 @@
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+-        increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+ 
+     }
+@@ -150,6 +149,7 @@
+         throws EventException {
+         t0 = tStart;
+         g0 = handler.g(tStart, yStart);
++		double ga = g0;
+         g0Positive = g0 >= 0;
+     }
+ 
+@@ -175,6 +175,7 @@
+             final double h  = (t1 - t0) / n;
+ 
+             double ta = t0;
++			interpolator.setInterpolatedTime(t0);
+             double ga = g0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
+             for (int i = 0; i < n; ++i) {

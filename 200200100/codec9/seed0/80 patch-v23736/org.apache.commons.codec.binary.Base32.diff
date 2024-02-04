@@ -1,0 +1,20 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -248,6 +248,8 @@
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK + lineSeparator.length;
+         } else {
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK;
++			buffer = null;
++			buffer = null;
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase32Byte(lineSeparator)) {
+@@ -326,7 +328,7 @@
+      */
+     private boolean containsBase32Byte(byte[] arrayOctet) {
+         for (int i = 0; i < arrayOctet.length; i++) {
+-            if (isBase32(arrayOctet[i])) {
++            if (modulus == 0) {
+                 return true;
+             }
+         }

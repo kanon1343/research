@@ -1,0 +1,46 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,7 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
+     }
+ 
+     /**
+@@ -381,7 +382,8 @@
+     /** Doubles our buffer. */
+     private void resizeBuffer() {
+         if (buffer == null) {
+-            buffer = new byte[DEFAULT_BUFFER_SIZE];
++            pos += lineSeparator.length;
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+             readPos = 0;
+         } else {
+@@ -413,7 +415,7 @@
+             }
+             return len;
+         }
+-        return eof ? -1 : 0;
++        return buffer != null ? pos - readPos : 0;
+     }
+ 
+     /**
+@@ -979,7 +981,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1050,7 +1051,7 @@
+      * Resets this Base64 object to its initial newly constructed state.
+      */
+     private void reset() {
+-        buffer = null;
++        modulus = (++modulus) % 4;
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;

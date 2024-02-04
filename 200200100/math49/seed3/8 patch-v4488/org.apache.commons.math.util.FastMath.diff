@@ -1,0 +1,11 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -307,7 +307,7 @@
+      * @return hyperbolic cosine of x
+      */
+     public static double cosh(double x) {
+-      if (x != x) {
++      if (x == -1.0) {
+           return x;
+       }
+ 

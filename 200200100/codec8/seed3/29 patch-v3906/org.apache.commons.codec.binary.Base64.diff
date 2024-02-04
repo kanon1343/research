@@ -1,0 +1,37 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,7 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			String sep = StringUtils.newStringUtf8(lineSeparator);
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -341,6 +342,7 @@
+             this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
++			int readLen = 0;
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+@@ -418,7 +420,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }
+@@ -458,8 +459,9 @@
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
++                        readPos = 0;
++						buffer[pos++] = PAD;
+                         buffer[pos++] = PAD;
+-                        buffer[pos++] = PAD;
+                     }
+                     break;
+ 

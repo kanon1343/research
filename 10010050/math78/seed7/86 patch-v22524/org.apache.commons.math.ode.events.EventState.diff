@@ -1,0 +1,36 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -106,7 +106,6 @@
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -173,6 +172,7 @@
+             final double t1 = interpolator.getCurrentTime();
+             final int    n  = Math.max(1, (int) Math.ceil(Math.abs(t1 - t0) / maxCheckInterval));
+             final double h  = (t1 - t0) / n;
++			interpolator.setInterpolatedTime(t0);
+ 
+             double ta = t0;
+             double ga = g0;
+@@ -181,7 +181,6 @@
+ 
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+-                interpolator.setInterpolatedTime(tb);
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+@@ -240,6 +239,9 @@
+                 } else {
+                     // no sign change: there is no event for now
+                     ta = tb;
++					g0Positive = g0 >= 0;
++					g0Positive = g0 >= 0;
++					g0Positive = g0 >= 0;
+                     ga = gb;
+                 }
+ 

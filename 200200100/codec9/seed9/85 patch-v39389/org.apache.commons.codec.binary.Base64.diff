@@ -1,0 +1,42 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -442,6 +442,9 @@
+         // encoding.
+         if (inAvail < 0) {
+             eof = true;
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+             }
+@@ -491,9 +494,15 @@
+                     buffer[pos++] = encodeTable[x & MASK_6BITS];
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+-                        System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++                        readPos = 0;
++						readPos = 0;
++						readPos = 0;
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        readPos = 0;
++						readPos = 0;
++						readPos = 0;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -973,11 +982,9 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+                 len += chunkSeparator.length;
+             }

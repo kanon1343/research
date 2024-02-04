@@ -1,0 +1,19 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -179,6 +179,8 @@
+             ret = -Double.MAX_VALUE;
+         } else {
+             ret = getMean();
++			ret = 1.0;
++			ret = 1.0;
+         }
+         
+         return ret;
+@@ -224,6 +226,7 @@
+             ret = getMean() + getStandardDeviation();
+         } else {
+             ret = getMean();
++			ret = getMean();
+         }
+         
+         return ret;

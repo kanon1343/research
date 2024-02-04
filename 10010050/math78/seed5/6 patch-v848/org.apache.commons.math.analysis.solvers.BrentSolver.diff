@@ -1,0 +1,23 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -231,6 +231,8 @@
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
++				clearResult();
++				clearResult();
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+                 // Avoid division by very small values. Assume
+@@ -290,10 +292,9 @@
+             x0 = x1;
+             y0 = y1;
+             // Compute new X1, Y1
+-            if (Math.abs(delta) > tolerance) {
++            if (i <= maximalIterationCount) {
+                 x1 = x1 + delta;
+             } else if (dx > 0.0) {
+-                x1 = x1 + 0.5 * tolerance;
+             } else if (dx <= 0.0) {
+                 x1 = x1 - 0.5 * tolerance;
+             }

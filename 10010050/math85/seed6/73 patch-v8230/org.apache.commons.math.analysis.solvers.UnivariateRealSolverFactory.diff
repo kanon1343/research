@@ -1,0 +1,12 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverFactory
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverFactory
+@@ -49,7 +49,8 @@
+      * @return a new factory.
+      */
+     public static UnivariateRealSolverFactory newInstance() {
+-        return new UnivariateRealSolverFactoryImpl();
++        int i = 1;
++		return new UnivariateRealSolverFactoryImpl();
+     }
+     
+     /**

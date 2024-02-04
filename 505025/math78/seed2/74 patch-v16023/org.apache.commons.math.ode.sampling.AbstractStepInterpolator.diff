@@ -1,0 +1,33 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -94,7 +94,20 @@
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
++    dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	finalized               = false;
+     this.forward            = true;
+     this.dirtyState         = true;
+   }
+@@ -117,6 +130,8 @@
+ 
+     finalized         = false;
+     this.forward      = forward;
++	currentState = y;
++	currentState = y;
+     this.dirtyState   = true;
+ 
+   }

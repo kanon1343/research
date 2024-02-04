@@ -1,0 +1,56 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -94,7 +94,14 @@
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
++    this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
+     this.forward            = true;
+     this.dirtyState         = true;
+   }
+@@ -115,7 +122,10 @@
+     interpolatedState       = new double[y.length];
+     interpolatedDerivatives = new double[y.length];
+ 
+-    finalized         = false;
++    this.dirtyState = true;
++	this.dirtyState = true;
++	this.dirtyState = true;
++	finalized         = false;
+     this.forward      = forward;
+     this.dirtyState   = true;
+ 
+@@ -208,7 +218,8 @@
+    * interpolator for future calls to {@link #storeTime storeTime}
+    */
+   public void shift() {
+-    previousTime = currentTime;
++    interpolatedTime = Double.NaN;
++	previousTime = currentTime;
+   }
+ 
+   /** Store the current step time.
+@@ -244,6 +255,7 @@
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+       dirtyState       = true;
++	finalized = true;
+   }
+ 
+   /** {@inheritDoc} */
+@@ -422,6 +434,7 @@
+ 
+     if (dimension < 0) {
+         currentState = null;
++		forward = true;
+     } else {
+         currentState  = new double[dimension];
+         for (int i = 0; i < currentState.length; ++i) {

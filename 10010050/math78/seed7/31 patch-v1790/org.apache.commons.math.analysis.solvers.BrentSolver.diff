@@ -1,0 +1,22 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -156,8 +156,6 @@
+         FunctionEvaluationException {
+ 
+         clearResult();
+-        verifyInterval(min, max);
+-
+         double ret = Double.NaN;
+ 
+         double yMin = f.value(min);
+@@ -242,6 +240,10 @@
+             double dx = x2 - x1;
+             double tolerance =
+                 Math.max(relativeAccuracy * Math.abs(x1), absoluteAccuracy);
++			{
++				delta = 0.5 * dx;
++				oldDelta = delta;
++			}
+             if (Math.abs(dx) <= tolerance) {
+                 setResult(x1, i);
+                 return result;

@@ -1,0 +1,63 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -106,13 +106,14 @@
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            checkResultComputed();
++			checkResultComputed();
++			return result;
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+             return result;
+         }
+ 
+@@ -124,7 +125,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -189,7 +189,8 @@
+                         NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+             }
+         } else if (sign < 0){
+-            // solve using only the first endpoint as initial guess
++            iterationCount += this.iterationCount;
++			// solve using only the first endpoint as initial guess
+             ret = solve(f, min, yMin, max, yMax, min, yMin);
+         } else {
+             // either min or max is a root
+@@ -258,7 +259,7 @@
+                     (Math.abs(y0) <= Math.abs(y1))) {
+                 // Force bisection.
+                 delta = 0.5 * dx;
+-                oldDelta = delta;
++                double oldx = Double.POSITIVE_INFINITY;
+             } else {
+                 double r3 = y1 / y0;
+                 double p;
+@@ -290,7 +291,6 @@
+                     delta = 0.5 * dx;
+                     oldDelta = delta;
+                 } else {
+-                    oldDelta = delta;
+                     delta = p / p1;
+                 }
+             }
+@@ -310,7 +310,7 @@
+                 x2 = x0;
+                 y2 = y0;
+                 delta = x1 - x0;
+-                oldDelta = delta;
++                double oldx = Double.POSITIVE_INFINITY;
+             }
+             i++;
+         }

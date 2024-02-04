@@ -1,0 +1,41 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -1136,12 +1136,9 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+                 }
+                 j -= 4;
+             }
+-            return true;
+         }
+         return false;
+     }
+@@ -1338,7 +1335,8 @@
+                 if (work[j4 - 2] == 0.0) {
+                     work[j4] = 0.0;
+                     d = work[j4 + 1];
+-                    dMin = d;
++                    dMin1 = -work[4 * start + pingPong];
++					dMin = d;
+                     eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 1] < work[j4 - 2]) &&
+                            (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4 + 1])) {
+@@ -1382,7 +1380,6 @@
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+-            dN1  = work[j4p2 + 2];
+             dMin = dN1;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+@@ -1496,7 +1493,6 @@
+                             return;
+                         }
+                         b2 = work[nn - 9] / work[nn - 11];
+-                        np = nn - 13;
+                     }
+ 
+                     // approximate contribution to norm squared from i < nn-1.

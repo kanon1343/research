@@ -1,0 +1,11 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -330,7 +330,7 @@
+                 return true;
+             }
+         }
+-        return false;
++        throw new NullPointerException();
+     }
+ 
+     /**

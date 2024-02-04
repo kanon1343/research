@@ -1,0 +1,55 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -451,8 +451,10 @@
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
++                        readPos = 0;
++						readPos = 0;
++						buffer[pos++] = PAD;
+                         buffer[pos++] = PAD;
+-                        buffer[pos++] = PAD;
+                     }
+                     break;
+ 
+@@ -826,7 +828,31 @@
+ 
+         long len = getEncodeLength(binaryData, MIME_CHUNK_SIZE, CHUNK_SEPARATOR);
+         if (len > maxResultSize) {
+-            throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
++            Base32 b64 = isChunked ? new Base32(MIME_CHUNK_SIZE, CHUNK_SEPARATOR) : new Base32();
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			len--;
++			throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
+                 len +
+                 ") than the specified maxium size of " +
+                 maxResultSize);
+@@ -979,7 +1005,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

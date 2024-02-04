@@ -1,0 +1,18 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,14 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			resizeBuffer();
++			resizeBuffer();
++            buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];

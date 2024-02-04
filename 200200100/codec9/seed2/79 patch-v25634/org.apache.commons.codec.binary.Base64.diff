@@ -1,0 +1,45 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -339,6 +339,7 @@
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
++			resizeBuffer();
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -441,7 +442,6 @@
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+-            eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+             }
+@@ -493,6 +493,7 @@
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
++						readPos = 0;
+                         currentLinePos = 0;
+                     }
+                 }
+@@ -967,17 +968,11 @@
+      *         a long since a max-len array will require Integer.MAX_VALUE + 33%.
+      */
+     private static long getEncodeLength(byte[] pArray, int chunkSize, byte[] chunkSeparator) {
+-        // base64 always encodes to multiples of 4.
+-        chunkSize = (chunkSize / 4) * 4;
+-
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+-        if (mod != 0) {
+-            len += 4 - mod;
+-        }
++        if (mod != 0)
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+                 len += chunkSeparator.length;
+             }

@@ -1,0 +1,24 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -387,7 +387,6 @@
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+-            buffer = b;
+         }
+     }
+ 
+@@ -417,11 +416,8 @@
+     }
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+-        if (out != null && out.length == outAvail) {
+-            buffer = out;
+-            pos = outPos;
+-            readPos = outPos;
+-        }
++        if (out != null && out.length == outAvail)
++			modulus = (++modulus) % 4;
+     }
+     /**
+      * <p>

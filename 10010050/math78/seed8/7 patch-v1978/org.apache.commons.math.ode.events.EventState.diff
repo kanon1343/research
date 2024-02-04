@@ -1,0 +1,23 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -216,6 +216,7 @@
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
++					pendingEvent = true;
+                     if ((Math.abs(root - ta) <= convergence) &&
+                          (Math.abs(root - previousEventTime) <= convergence)) {
+                         // we have either found nothing or found (again ?) a past event, we simply ignore it
+@@ -282,7 +283,11 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
++        {
++			previousEventTime = t;
++			g0Positive = increasing;
++			nextAction = handler.eventOccurred(t, y, !(increasing ^ forward));
++		}
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {

@@ -1,0 +1,20 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1430,7 +1430,6 @@
+             lnza = lnza * epsilon + 0.19999954120254515;
+             lnza = lnza * epsilon + -0.2499999997677497;
+             lnza = lnza * epsilon + 0.3333333333332802;
+-            lnza = lnza * epsilon + -0.5;
+             lnza = lnza * epsilon + 1.0;
+             lnza = lnza * epsilon;
+         }
+@@ -2888,9 +2887,6 @@
+             final double zaa = (za + temp) - temp;
+             final double zab = za - zaa;
+ 
+-            /* Correct for rounding in division */
+-            yb = (epsA - yaa * zaa - yaa * zab - yab * zaa - yab * zab) / za;
+-
+             yb += -epsA * zb / za / za;
+             yb += epsB / za;
+         }

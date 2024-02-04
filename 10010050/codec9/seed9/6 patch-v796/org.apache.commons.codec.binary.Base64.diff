@@ -1,0 +1,19 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -404,7 +404,7 @@
+      * @return The number of bytes successfully extracted into the provided byte[] array.
+      */
+     int readResults(byte[] b, int bPos, int bAvail) {
+-        if (buffer != null) {
++        if (eof) {
+             int len = Math.min(avail(), bAvail);
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+@@ -979,7 +979,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

@@ -51,15 +51,15 @@ def summarize(file_path, i, data):
 
 
 def main():
-    options = ["10010050"]
-    projects = ["49", "80", "82"]
+    options = ["505025"]
+    projects = ["codec9"]
     for option in options:
         for project in projects:
             for i in range(10):
                 file_path = pathlib.Path(
-                    "/Users/haradakanon/Downloads/research/{option}/math{project}log/seed{i}".format(option=option, project=project, i=i))
+                    "/Users/haradakanon/Downloads/research/{option}/{project}log/seed{i}".format(option=option, project=project, i=i))
                 summarize_file_path = pathlib.Path(
-                    "/Users/haradakanon/Downloads/research/{option}/math{project}log".format(option=option, project=project))
+                    "/Users/haradakanon/Downloads/research/{option}/{project}log".format(option=option, project=project))
                 data = extract_generation_with_max_fitness(file_path)
                 summarize(summarize_file_path, i, data)
 

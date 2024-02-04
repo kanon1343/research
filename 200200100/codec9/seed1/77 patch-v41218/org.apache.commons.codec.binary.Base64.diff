@@ -1,0 +1,53 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -409,7 +409,6 @@
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+-                buffer = null;
+             }
+             return len;
+         }
+@@ -470,7 +469,8 @@
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+-                System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++                readPos = 0;
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+             }
+         } else {
+@@ -491,7 +491,15 @@
+                     buffer[pos++] = encodeTable[x & MASK_6BITS];
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+-                        System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++                        currentLinePos = 0;
++						x = x >> 3;
++						x = x >> 4;
++						currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
+                     }
+@@ -979,7 +987,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1053,7 +1060,6 @@
+         buffer = null;
+         pos = 0;
+         readPos = 0;
+-        currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+     }

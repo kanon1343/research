@@ -1,0 +1,29 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -344,10 +344,13 @@
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
++		eof = false;
+     }
+ 
+     /**
+@@ -486,7 +489,10 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }

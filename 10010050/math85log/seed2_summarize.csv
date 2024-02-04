@@ -1,0 +1,55 @@
+,世代,時間,出力数,前世代までの合計
+0,3rd, 12 minutes 11 seconds,1,0
+1,5th, 21 minutes 22 seconds,1,1
+2,6th, 24 minutes 28 seconds,1,2
+3,7th, 24 minutes 35 seconds,1,3
+4,8th, 30 minutes 44 seconds,2,4
+5,9th, 30 minutes 52 seconds,1,6
+6,10th, 37 minutes 0 seconds,2,7
+7,11th, 49 minutes 8 seconds,1,9
+8,12th, 52 minutes 19 seconds,2,10
+9,13th, 55 minutes 27 seconds,2,12
+10,15th, 1 hours 7 minutes 45 seconds,2,14
+11,16th, 1 hours 16 minutes 54 seconds,1,16
+12,17th, 1 hours 17 minutes 3 seconds,2,17
+13,18th, 1 hours 56 minutes 11 seconds,1,19
+14,19th, 2 hours 2 minutes 20 seconds,1,20
+15,21st, 2 hours 17 minutes 35 seconds,2,21
+16,22nd, 2 hours 17 minutes 44 seconds,2,23
+17,24th, 2 hours 21 minutes 1 seconds,1,25
+18,25th, 2 hours 24 minutes 9 seconds,2,26
+19,26th, 2 hours 24 minutes 18 seconds,3,28
+20,27th, 2 hours 24 minutes 28 seconds,1,31
+21,28th, 2 hours 27 minutes 38 seconds,5,32
+22,29th, 2 hours 30 minutes 47 seconds,1,37
+23,30th, 2 hours 30 minutes 56 seconds,1,38
+24,31st, 2 hours 31 minutes 4 seconds,1,39
+25,32nd, 2 hours 31 minutes 14 seconds,1,40
+26,37th, 3 hours 12 minutes 51 seconds,2,41
+27,39th, 3 hours 31 minutes 11 seconds,2,43
+28,40th, 3 hours 37 minutes 20 seconds,1,45
+29,41st, 3 hours 49 minutes 32 seconds,4,46
+30,42nd, 3 hours 52 minutes 42 seconds,1,50
+31,43rd, 3 hours 55 minutes 52 seconds,1,51
+32,44th, 3 hours 59 minutes 2 seconds,1,52
+33,46th, 4 hours 2 minutes 23 seconds,1,53
+34,47th, 4 hours 5 minutes 33 seconds,1,54
+35,50th, 4 hours 21 minutes 5 seconds,1,55
+36,51st, 4 hours 21 minutes 16 seconds,3,56
+37,53rd, 4 hours 27 minutes 38 seconds,2,59
+38,55th, 4 hours 34 minutes 0 seconds,2,61
+39,59th, 4 hours 48 minutes 33 seconds,1,63
+40,60th, 4 hours 51 minutes 45 seconds,4,64
+41,61st, 4 hours 54 minutes 54 seconds,4,68
+42,62nd, 4 hours 58 minutes 4 seconds,3,72
+43,63rd, 5 hours 4 minutes 15 seconds,3,75
+44,64th, 5 hours 7 minutes 26 seconds,4,78
+45,65th, 5 hours 13 minutes 37 seconds,4,82
+46,66th, 5 hours 22 minutes 47 seconds,1,86
+47,67th, 5 hours 28 minutes 58 seconds,1,87
+48,68th, 5 hours 29 minutes 10 seconds,1,88
+49,71st, 5 hours 47 minutes 6 seconds,3,89
+50,72nd, 5 hours 53 minutes 17 seconds,3,92
+51,73rd, 6 hours 5 minutes 28 seconds,2,95
+52,74th, 6 hours 7 minutes 11 seconds,2,97
+53,75th, 6 hours 7 minutes 16 seconds,1,99

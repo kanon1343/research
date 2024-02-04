@@ -1,0 +1,37 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -94,7 +94,24 @@
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+-    finalized               = false;
++    dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	dirtyState = false;
++	finalized               = false;
+     this.forward            = true;
+     this.dirtyState         = true;
+   }
+@@ -218,8 +235,6 @@
+ 
+     currentTime = t;
+     h           = currentTime - previousTime;
+-    setInterpolatedTime(t);
+-
+     // the step is not finalized anymore
+     finalized  = false;
+ 

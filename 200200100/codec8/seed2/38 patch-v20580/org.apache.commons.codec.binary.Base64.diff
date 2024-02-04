@@ -1,0 +1,43 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,12 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			currentLinePos = 0;
++			currentLinePos = 0;
++			currentLinePos = 0;
++			currentLinePos = 0;
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -343,8 +348,11 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -417,11 +425,8 @@
+     }
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+-        if (out != null && out.length == outAvail) {
+-            buffer = out;
+-            pos = outPos;
+-            readPos = outPos;
+-        }
++        if (out != null && out.length == outAvail)
++			System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+     }
+     /**
+      * <p>

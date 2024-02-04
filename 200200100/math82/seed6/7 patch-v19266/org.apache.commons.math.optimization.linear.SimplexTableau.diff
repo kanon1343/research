@@ -1,0 +1,32 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -111,7 +111,8 @@
+                                       getConstraintTypeCounts(Relationship.GEQ);
+         this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ) +
+                                       getConstraintTypeCounts(Relationship.GEQ);
+-        this.tableau = new Array2DRowRealMatrix(createTableau(goalType == GoalType.MAXIMIZE));
++        Set<Integer> basicRows=new HashSet<Integer>();
++		this.tableau = new Array2DRowRealMatrix(createTableau(goalType == GoalType.MAXIMIZE));
+         initialize();
+     }
+ 
+@@ -234,7 +235,8 @@
+         int count = 0;
+         for (final LinearConstraint constraint : constraints) {
+             if (constraint.getRelationship() == relationship) {
+-                ++count;
++                List<LinearConstraint> normalized=new ArrayList<LinearConstraint>();
++				++count;
+             }
+         }
+         return count;
+@@ -279,7 +281,8 @@
+      * @return the row that the variable is basic in.  null if the column is not basic
+      */
+     private Integer getBasicRowForSolution(final int col) {
+-        return getBasicRow(col, false);
++        Set<Integer> basicRows=new HashSet<Integer>();
++		return getBasicRow(col, false);
+     }
+     
+     /**

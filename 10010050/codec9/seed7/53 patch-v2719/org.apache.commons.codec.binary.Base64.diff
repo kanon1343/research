@@ -1,0 +1,36 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -457,7 +457,8 @@
+                     break;
+ 
+                 case 2 :
+-                    buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				eof = true;
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+@@ -469,6 +470,7 @@
+             // Don't want to append the CRLF two times in a row, so make sure previous
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
++			resizeBuffer();
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+@@ -973,7 +975,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1052,7 +1053,6 @@
+     private void reset() {
+         buffer = null;
+         pos = 0;
+-        readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

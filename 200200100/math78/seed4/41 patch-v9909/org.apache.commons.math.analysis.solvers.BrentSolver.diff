@@ -1,0 +1,19 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -280,7 +280,15 @@
+                     // in the wrong direction, or progress is slow.
+                     // Fall back to bisection.
+                     delta = 0.5 * dx;
+-                    oldDelta = delta;
++                    {
++						x0 = x1;
++						x1 = x2;
++						x2 = x0;
++						y0 = y1;
++						y1 = y2;
++						y2 = y0;
++					}
++					oldDelta = delta;
+                 } else {
+                     oldDelta = delta;
+                     delta = p / p1;

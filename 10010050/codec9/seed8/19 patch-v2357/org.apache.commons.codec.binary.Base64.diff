@@ -1,0 +1,29 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -451,8 +451,9 @@
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
++                        modulus = 0;
++						buffer[pos++] = PAD;
+                         buffer[pos++] = PAD;
+-                        buffer[pos++] = PAD;
+                     }
+                     break;
+ 
+@@ -973,7 +974,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1052,7 +1052,6 @@
+     private void reset() {
+         buffer = null;
+         pos = 0;
+-        readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

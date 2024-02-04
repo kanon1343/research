@@ -1,0 +1,11 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -245,8 +245,6 @@
+ 
+             }
+ 
+-            // no event during the whole step
+-            pendingEvent     = false;
+             pendingEventTime = Double.NaN;
+             return false;
+ 

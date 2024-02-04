@@ -1,0 +1,56 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,15 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
++		buffer = new byte[DEFAULT_BUFFER_SIZE];
+     }
+ 
+     /**
+@@ -381,7 +390,9 @@
+     /** Doubles our buffer. */
+     private void resizeBuffer() {
+         if (buffer == null) {
+-            buffer = new byte[DEFAULT_BUFFER_SIZE];
++            pos += lineSeparator.length;
++			pos += lineSeparator.length;
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+             readPos = 0;
+         } else {
+@@ -413,7 +424,9 @@
+             }
+             return len;
+         }
+-        return eof ? -1 : 0;
++        resizeBuffer();
++		resizeBuffer();
++		return eof ? -1 : 0;
+     }
+ 
+     /**
+@@ -448,6 +461,7 @@
+             switch (modulus) {
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				readPos = 0;
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+@@ -973,7 +987,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

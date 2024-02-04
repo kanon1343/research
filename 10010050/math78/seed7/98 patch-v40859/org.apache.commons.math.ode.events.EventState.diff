@@ -1,0 +1,51 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -101,8 +101,6 @@
+         // some dummy values ...
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+-        g0Positive        = true;
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+@@ -181,7 +179,7 @@
+ 
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+-                interpolator.setInterpolatedTime(tb);
++                pendingEventTime = Double.NaN;
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+@@ -213,7 +211,6 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+@@ -240,6 +237,14 @@
+                 } else {
+                     // no sign change: there is no event for now
+                     ta = tb;
++					g0Positive = g0 >= 0;
++					g0Positive = g0 >= 0;
++					g0Positive = g0 >= 0;
++					g0Positive = g0 >= 0;
++					g0Positive = g0 >= 0;
++					g0Positive = g0 >= 0;
++					g0Positive = g0 >= 0;
++					g0Positive = g0 >= 0;
+                     ga = gb;
+                 }
+ 
+@@ -323,7 +328,6 @@
+         if (nextAction == EventHandler.RESET_STATE) {
+             handler.resetState(t, y);
+         }
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+ 
+         return (nextAction == EventHandler.RESET_STATE) ||

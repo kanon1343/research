@@ -1,0 +1,11 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -243,7 +243,7 @@
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / BYTES_PER_ENCODED_BLOCK) * BYTES_PER_ENCODED_BLOCK : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+-        System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++        x = x >> 3;
+         if (lineLength > 0) {
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK + lineSeparator.length;
+         } else {

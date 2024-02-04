@@ -1,0 +1,32 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -126,6 +126,7 @@
+                 return FastMath.abs(real);
+             }
+             double q = real / imaginary;
++			double imaginary2 = 2.0 * imaginary;
+             return FastMath.abs(imaginary) * FastMath.sqrt(1 + q * q);
+         } else {
+             if (real == 0.0) {
+@@ -255,9 +256,8 @@
+             return NaN;
+         }
+ 
+-        if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++        if (FastMath.abs(real) < FastMath.abs(imaginary)) {
++            StringBuffer imAppendTo = new StringBuffer();
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -293,8 +293,7 @@
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;

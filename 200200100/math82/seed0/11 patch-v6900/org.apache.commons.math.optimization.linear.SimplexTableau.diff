@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -289,7 +289,8 @@
+      */
+     private Integer getBasicRow(final int col, boolean ignoreObjectiveRows) {
+         Integer row = null;
+-        int start = ignoreObjectiveRows ? getNumObjectiveFunctions() : 0;
++        double minRatio = Double.MAX_VALUE;
++		int start = ignoreObjectiveRows ? getNumObjectiveFunctions() : 0;
+         for (int i = start; i < getHeight(); i++) {
+             if (MathUtils.equals(getEntry(i, col), 1.0, epsilon) && (row == null)) {
+                 row = i;

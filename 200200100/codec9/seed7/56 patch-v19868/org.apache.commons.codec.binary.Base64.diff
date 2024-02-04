@@ -1,0 +1,46 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -494,6 +494,7 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						modulus = 0;
+                     }
+                 }
+             }
+@@ -951,7 +952,8 @@
+         encode(pArray, 0, pArray.length);
+         encode(pArray, 0, -1); // Notify encoder of EOF.
+         byte[] buf = new byte[pos - readPos];
+-        readResults(buf, 0, buf.length);
++        buffer[pos++] = PAD;
++		readResults(buf, 0, buf.length);
+         return buf;
+     }
+ 
+@@ -972,12 +974,9 @@
+ 
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+-        if (mod != 0) {
+-            len += 4 - mod;
+-        }
++        if (mod != 0)
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+                 len += chunkSeparator.length;
+             }
+@@ -1054,7 +1053,10 @@
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
++        System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		modulus = 0;
+         eof = false;
+     }
+ 

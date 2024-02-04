@@ -1,0 +1,11 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -972,7 +972,7 @@
+ 
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+-        if (mod != 0) {
++        if (pArray == null || pArray.length == 0) {
+             len += 4 - mod;
+         }
+         if (chunkSize > 0) {

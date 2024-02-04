@@ -1,0 +1,41 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -382,7 +382,7 @@
+     private void resizeBuffer() {
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+-            pos = 0;
++            eof = false;
+             readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+@@ -441,7 +441,12 @@
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+-            eof = true;
++            {
++				byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
++				System.arraycopy(buffer, 0, b, 0, buffer.length);
++				buffer = b;
++			}
++			eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+             }
+@@ -973,7 +978,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1053,7 +1057,6 @@
+         buffer = null;
+         pos = 0;
+         readPos = 0;
+-        currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+     }

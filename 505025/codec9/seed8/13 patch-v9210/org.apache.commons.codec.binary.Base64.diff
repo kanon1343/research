@@ -1,0 +1,73 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -441,7 +441,17 @@
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+-            eof = true;
++            {
++				byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
++				System.arraycopy(buffer, 0, b, 0, buffer.length);
++				buffer = b;
++			}
++			{
++				byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
++				System.arraycopy(buffer, 0, b, 0, buffer.length);
++				buffer = b;
++			}
++			eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+             }
+@@ -449,6 +459,11 @@
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
+@@ -470,7 +485,8 @@
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+-                System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++                x = x >> 4;
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+             }
+         } else {
+@@ -479,7 +495,9 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+@@ -826,7 +844,9 @@
+ 
+         long len = getEncodeLength(binaryData, MIME_CHUNK_SIZE, CHUNK_SEPARATOR);
+         if (len > maxResultSize) {
+-            throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
++            len--;
++			len--;
++			throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
+                 len +
+                 ") than the specified maxium size of " +
+                 maxResultSize);
+@@ -973,7 +993,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

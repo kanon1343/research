@@ -1,0 +1,36 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -141,7 +141,8 @@
+         missingEntries = source.missingEntries;
+         size  = source.size;
+         mask  = source.mask;
+-        count = source.count;
++        double xb = 0;
++		count = source.count;
+     }
+ 
+     /**
+@@ -184,7 +185,6 @@
+         }
+ 
+         if (states[index] == FREE) {
+-            return missingEntries;
+         }
+ 
+         int j = index;
+@@ -396,7 +396,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 
+@@ -423,7 +422,6 @@
+             if (shouldGrowTable()) {
+                 growTable();
+             }
+-            ++count;
+         }
+         return previous;
+ 

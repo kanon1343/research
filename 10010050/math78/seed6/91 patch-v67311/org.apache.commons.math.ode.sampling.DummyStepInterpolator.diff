@@ -1,0 +1,11 @@
+--- org.apache.commons.math.ode.sampling.DummyStepInterpolator
++++ org.apache.commons.math.ode.sampling.DummyStepInterpolator
+@@ -97,6 +97,8 @@
+   protected void computeInterpolatedStateAndDerivatives(final double theta, final double oneMinusThetaH)
+     throws DerivativeException {
+       System.arraycopy(currentState, 0, interpolatedState, 0, currentState.length);
++	finalizeStep();
++	finalizeStep();
+   }
+ 
+   /** Write the instance to an output channel.

@@ -1,0 +1,83 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -338,7 +338,9 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            eof = false;
++			eof = false;
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -451,8 +453,9 @@
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
++                        eof = true;
++						buffer[pos++] = PAD;
+                         buffer[pos++] = PAD;
+-                        buffer[pos++] = PAD;
+                     }
+                     break;
+ 
+@@ -492,8 +495,48 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        {
++							if (buffer == null || buffer.length - pos < decodeSize) {
++								resizeBuffer();
++							}
++							switch (modulus) {
++							case 2:
++								buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++								break;
++							case 3:
++								buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++								break;
++							case 4:
++								x = x >> 4;
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 5:
++								x = x >> 1;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 6:
++								x = x >> 6;
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							case 7:
++								x = x >> 3;
++								buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++								buffer[pos++] = (byte) ((x) & MASK_8BITS);
++								break;
++							}
++						}
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -979,7 +1022,7 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
++                int readLen = 0;
+             }
+         }
+         return len;

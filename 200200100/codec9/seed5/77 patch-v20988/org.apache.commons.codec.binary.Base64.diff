@@ -1,0 +1,55 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -338,7 +338,8 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            eof = true;
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -448,6 +449,17 @@
+             switch (modulus) {
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				switch (modulus) {
++				case 2:
++					x = x >> 4;
++					buffer[pos++] = (byte) ((x) & MASK_8BITS);
++					break;
++				case 3:
++					x = x >> 2;
++					buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++					buffer[pos++] = (byte) ((x) & MASK_8BITS);
++					break;
++				}
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+@@ -459,6 +471,7 @@
+                 case 2 :
+                     buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+@@ -494,6 +507,8 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                     }
+                 }
+             }
+@@ -979,7 +994,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

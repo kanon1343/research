@@ -1,0 +1,72 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -99,20 +99,31 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            setResult(initial, 0);
++			setResult(initial, 0);
++			setResult(initial, 0);
++			setResult(initial, 0);
++			setResult(initial, 0);
++			setResult(initial, 0);
++			setResult(initial, 0);
++			setResult(initial, 0);
++			return result;
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
++        if (Math.abs(yInitial) <= functionValueAccuracy) {
++            verifyBracketing(min, max, f);
++			verifyBracketing(min, max, f);
++			verifyBracketing(min, max, f);
++			verifyBracketing(min, max, f);
++			setResult(yMin, 0);
+             return result;
+         }
+ 
+@@ -124,7 +135,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -181,8 +191,24 @@
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
++                this.resultComputed = false;
++				this.resultComputed = false;
++				this.resultComputed = false;
++				setResult(max, 0);
++				setResult(max, 0);
++				setResult(max, 0);
++				setResult(max, 0);
++				ret = max;
++				setResult(max, 0);
++				ret = max;
++				ret = max;
++				ret = max;
++				this.resultComputed = false;
++				setResult(max, 0);
++				setResult(yMin, 0);
+                 setResult(max, 0);
+-                ret = max;
++				setResult(max, 0);
++				ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(

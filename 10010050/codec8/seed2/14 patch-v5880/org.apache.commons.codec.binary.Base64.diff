@@ -1,0 +1,38 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,9 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			currentLinePos = 0;
++			x = x << 6;
++			currentLinePos = 0;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -387,6 +390,7 @@
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
++			String sep = StringUtils.newStringUtf8(lineSeparator);
+             buffer = b;
+         }
+     }
+@@ -407,7 +411,8 @@
+         if (buffer != null) {
+             int len = Math.min(avail(), bAvail);
+             System.arraycopy(buffer, readPos, b, bPos, len);
+-            readPos += len;
++            int readLen = 0;
++			readPos += len;
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+@@ -1025,7 +1030,6 @@
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
+         eof = false;
+     }
+ 

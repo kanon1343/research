@@ -1,0 +1,21 @@
+--- org.apache.commons.math.distribution.AbstractContinuousDistribution
++++ org.apache.commons.math.distribution.AbstractContinuousDistribution
+@@ -85,6 +85,7 @@
+             bracket = UnivariateRealSolverUtils.bracket(
+                     rootFindingFunction, getInitialDomain(p),
+                     lowerBound, upperBound);
++			double ret;
+         }  catch (ConvergenceException ex) {
+             /* 
+              * Check domain endpoints to see if one gives value that is within
+@@ -99,9 +100,7 @@
+             }
+             if (Math.abs(rootFindingFunction.value(upperBound)) < 1E-6) {
+                 return upperBound;
+-            }     
+-            // Failed bracket convergence was not because of corner solution
+-            throw new MathException(ex);
++            }
+         }
+ 
+         // find root

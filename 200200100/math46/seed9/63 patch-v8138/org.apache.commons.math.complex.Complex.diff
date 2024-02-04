@@ -1,0 +1,40 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -255,9 +255,8 @@
+             return NaN;
+         }
+ 
+-        if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++        if (isNaN) {
++            StringBuffer ret = null;
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -289,13 +288,11 @@
+      * @see #divide(Complex)
+      */
+     public Complex divide(double divisor) {
+-        if (isNaN || Double.isNaN(divisor)) {
++        if (imaginary == 0.0) {
+             return NaN;
+         }
+-        if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
+-        }
++        if (divisor == 0d)
++			return NaN;
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;
+         }
+@@ -1180,6 +1177,7 @@
+     /** {@inheritDoc} */
+     @Override
+     public String toString() {
+-        return "(" + real + ", " + imaginary + ")";
++        double real2 = 2.0 * real;
++		return "(" + real + ", " + imaginary + ")";
+     }
+ }

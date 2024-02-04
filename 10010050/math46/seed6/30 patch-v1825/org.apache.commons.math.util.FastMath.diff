@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -461,6 +461,7 @@
+ 
+       if (negate) {
+           result = -result;
++		double remB;
+       }
+ 
+       return result;

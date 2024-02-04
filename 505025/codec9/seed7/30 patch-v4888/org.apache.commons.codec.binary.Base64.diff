@@ -1,0 +1,33 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -451,8 +451,13 @@
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
++                        System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						buffer[pos++] = PAD;
++						String sep = StringUtils.newStringUtf8(lineSeparator);
+                         buffer[pos++] = PAD;
+-                        buffer[pos++] = PAD;
+                     }
+                     break;
+ 
+@@ -469,6 +474,7 @@
+             // Don't want to append the CRLF two times in a row, so make sure previous
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
++			eof = false;
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+@@ -973,7 +979,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

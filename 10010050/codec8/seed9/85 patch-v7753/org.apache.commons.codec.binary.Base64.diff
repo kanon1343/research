@@ -1,0 +1,54 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,50 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            readPos = 0;
++			switch (modulus) {
++			case 2:
++				x = x << 6;
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				break;
++			case 3:
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				break;
++			}
++			switch (modulus) {
++			case 2:
++				x = x << 6;
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				break;
++			case 3:
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				break;
++			}
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			switch (modulus) {
++			case 2:
++				x = x << 6;
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				break;
++			case 3:
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				break;
++			}
++			switch (modulus) {
++			case 2:
++				x = x << 6;
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				break;
++			case 3:
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				break;
++			}
++			lineLength = 0;  // disable chunk-separating
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;

@@ -1,0 +1,19 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -442,7 +442,7 @@
+         // encoding.
+         if (inAvail < 0) {
+             eof = true;
+-            if (buffer == null || buffer.length - pos < encodeSize) {
++            if (buffer == null || buffer.length - pos < decodeSize) {
+                 resizeBuffer();
+             }
+             switch (modulus) {
+@@ -973,7 +973,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

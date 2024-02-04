@@ -1,0 +1,66 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -334,11 +334,13 @@
+             lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+-        this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
++        reset();
++		this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
++			resizeBuffer();
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -411,7 +413,8 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
++            buffer = null;
++			return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -435,7 +438,7 @@
+      *            Amount of bytes available from input for encoding.
+      */
+     void encode(byte[] in, int inPos, int inAvail) {
+-        if (eof) {
++        if (lineLength > 0 && lineLength <= currentLinePos) {
+             return;
+         }
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+@@ -967,18 +970,12 @@
+      *         a long since a max-len array will require Integer.MAX_VALUE + 33%.
+      */
+     private static long getEncodeLength(byte[] pArray, int chunkSize, byte[] chunkSeparator) {
+-        // base64 always encodes to multiples of 4.
+-        chunkSize = (chunkSize / 4) * 4;
+-
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+-        if (mod != 0) {
+-            len += 4 - mod;
+-        }
++        if (mod != 0)
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+-            if (!lenChunksPerfectly) {
++            if (mod != 0) {
+                 len += chunkSeparator.length;
+             }
+         }
+@@ -1052,7 +1049,7 @@
+     private void reset() {
+         buffer = null;
+         pos = 0;
+-        readPos = 0;
++        eof = false;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

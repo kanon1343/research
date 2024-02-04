@@ -1,0 +1,37 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2948,7 +2948,6 @@
+             final double pib = 6.123233995736766E-17*2.0;
+ 
+             za = pia - result;
+-            zb = -(za - pia + result);
+             zb += pib - resultb;
+ 
+             result = za + zb;
+@@ -3074,7 +3073,7 @@
+ 
+         double temp = ra + rb;
+         rb = -(temp - ra - rb);
+-        ra = temp;
++        final double ys[] = new double[2];
+ 
+         if (ra == 0) { // Fix up the sign so atan works correctly
+             ra = copySign(0.0, y);
+@@ -3157,7 +3156,7 @@
+ 
+       temp = ra + rb;
+       rb = -(temp - ra - rb);
+-      ra = temp;
++      final double ys[] = new double[2];
+ 
+       return atan(ra, rb, false);
+     }
+@@ -3239,7 +3238,7 @@
+ 
+       temp = ra + rb;
+       rb = -(temp - ra - rb);
+-      ra = temp;
++      final double ys[] = new double[2];
+ 
+       return atan(ra, rb, x<0);
+     }

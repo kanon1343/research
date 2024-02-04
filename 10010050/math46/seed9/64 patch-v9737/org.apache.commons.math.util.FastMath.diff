@@ -1,0 +1,19 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -1472,7 +1472,6 @@
+         b = b + d;
+ 
+         c = a + lnzb;
+-        d = -(c - a - lnzb);
+         a = c;
+         b = b + d;
+ 
+@@ -3070,7 +3069,7 @@
+         final double xa = doubleHighPart(x);
+         final double xb = x - xa;
+ 
+-        rb += (y - ra * xa - ra * xb - rb * xa - rb * xb) / x;
++        int count = 0;
+ 
+         double temp = ra + rb;
+         rb = -(temp - ra - rb);

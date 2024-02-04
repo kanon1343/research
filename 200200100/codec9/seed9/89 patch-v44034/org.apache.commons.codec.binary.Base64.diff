@@ -1,0 +1,57 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -442,6 +442,11 @@
+         // encoding.
+         if (inAvail < 0) {
+             eof = true;
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+             }
+@@ -452,6 +457,7 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						String sep = StringUtils.newStringUtf8(lineSeparator);
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -491,9 +497,15 @@
+                     buffer[pos++] = encodeTable[x & MASK_6BITS];
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+-                        System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                        pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        readPos = 0;
++						readPos = 0;
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++                        b += 256;
++						b += 256;
++						pos += lineSeparator.length;
++                        readPos = 0;
++						readPos = 0;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -952,6 +964,7 @@
+         encode(pArray, 0, -1); // Notify encoder of EOF.
+         byte[] buf = new byte[pos - readPos];
+         readResults(buf, 0, buf.length);
++		resizeBuffer();
+         return buf;
+     }
+ 
+@@ -973,7 +986,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

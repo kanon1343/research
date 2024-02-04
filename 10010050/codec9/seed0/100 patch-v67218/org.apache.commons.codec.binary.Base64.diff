@@ -1,0 +1,98 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -338,7 +338,42 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            reset();
++			reset();
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			reset();
++			reset();
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			reset();
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			reset();
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -406,6 +441,10 @@
+     int readResults(byte[] b, int bPos, int bAvail) {
+         if (buffer != null) {
+             int len = Math.min(avail(), bAvail);
++			buffer[pos++] = encodeTable[(x >> 18) & MASK_6BITS];
++			buffer[pos++] = encodeTable[(x >> 18) & MASK_6BITS];
++			buffer[pos++] = encodeTable[(x >> 18) & MASK_6BITS];
++			buffer[pos++] = encodeTable[(x >> 18) & MASK_6BITS];
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+@@ -459,6 +498,8 @@
+                 case 2 :
+                     buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				resizeBuffer();
++				resizeBuffer();
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+@@ -492,7 +533,23 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						byte[] buf = new byte[pos - readPos];
+                         pos += lineSeparator.length;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
++						currentLinePos += 4;
+                         currentLinePos = 0;
+                     }
+                 }
+@@ -979,7 +1036,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

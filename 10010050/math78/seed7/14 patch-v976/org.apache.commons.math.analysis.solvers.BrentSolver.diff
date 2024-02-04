@@ -1,0 +1,17 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -282,13 +282,12 @@
+                     delta = 0.5 * dx;
+                     oldDelta = delta;
+                 } else {
+-                    oldDelta = delta;
++                    y0 = y1;
+                     delta = p / p1;
+                 }
+             }
+             // Save old X1, Y1
+             x0 = x1;
+-            y0 = y1;
+             // Compute new X1, Y1
+             if (Math.abs(delta) > tolerance) {
+                 x1 = x1 + delta;

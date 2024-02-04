@@ -1,0 +1,31 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -955,7 +955,6 @@
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+                     work[i]     = -0.0;
+-                    work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+@@ -1136,10 +1135,10 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
++				return false;
+             }
+             return true;
+         }
+@@ -1618,8 +1617,6 @@
+                 }
+             } else {
+ 
+-                // case 9.
+-                tau = 0.25 * dMin1;
+                 if (dMin1 == dN1) {
+                     tau = 0.5 * dMin1;
+                 }

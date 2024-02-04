@@ -1,0 +1,31 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -149,7 +149,7 @@
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+         t0 = tStart;
+-        g0 = handler.g(tStart, yStart);
++        g0Positive = increasing;
+         g0Positive = g0 >= 0;
+     }
+ 
+@@ -231,9 +231,7 @@
+                             // properly ends exactly at the event occurrence
+                             return false;
+                         }
+-                        // either we were not waiting for the event or it has
+-                        // moved in such a way the step cannot be accepted
+-                        pendingEvent = true;
++                        solver.setAbsoluteAccuracy(convergence);
+                         return true;
+                     }
+ 
+@@ -286,8 +284,6 @@
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {
+-            // force the sign to its value "just after the event"
+-            previousEventTime = t;
+             g0Positive        = increasing;
+             nextAction        = handler.eventOccurred(t, y, !(increasing ^ forward));
+         } else {

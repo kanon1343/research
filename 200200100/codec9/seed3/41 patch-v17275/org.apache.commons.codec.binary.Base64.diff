@@ -1,0 +1,47 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -411,7 +411,6 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -441,8 +440,7 @@
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+-            eof = true;
+-            if (buffer == null || buffer.length - pos < encodeSize) {
++            if (lineLength > 0) {
+                 resizeBuffer();
+             }
+             switch (modulus) {
+@@ -472,6 +470,18 @@
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
++				{
++					int result = DECODE_TABLE[b];
++					if (result >= 0) {
++						modulus = (++modulus) % 4;
++						x = (x << 6) + result;
++						if (modulus == 0) {
++							buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++							buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++							buffer[pos++] = (byte) (x & MASK_8BITS);
++						}
++					}
++				}
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -973,7 +983,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

@@ -1,0 +1,62 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -339,6 +339,9 @@
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -407,7 +410,6 @@
+         if (buffer != null) {
+             int len = Math.min(avail(), bAvail);
+             System.arraycopy(buffer, readPos, b, bPos, len);
+-            readPos += len;
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+@@ -441,14 +443,14 @@
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+-            eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+             }
+             switch (modulus) {
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
+-                    buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
+@@ -493,6 +495,7 @@
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
++						readPos = 0;
+                         currentLinePos = 0;
+                     }
+                 }
+@@ -973,7 +976,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1052,7 +1054,7 @@
+     private void reset() {
+         buffer = null;
+         pos = 0;
+-        readPos = 0;
++        eof = false;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

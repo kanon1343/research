@@ -1,0 +1,23 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -343,8 +343,11 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -543,8 +546,6 @@
+             }
+             byte b = in[inPos++];
+             if (b == PAD) {
+-                // We're done.
+-                eof = true;
+                 break;
+             } else {
+                 if (b >= 0 && b < DECODE_TABLE.length) {

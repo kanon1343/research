@@ -1,0 +1,142 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,89 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		eof = true;
++		resizeBuffer();
++		{
++			if (buffer == null || buffer.length - pos < decodeSize) {
++				resizeBuffer();
++			}
++			switch (modulus) {
++			case 2:
++				buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++				break;
++			case 3:
++				buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++				break;
++			case 4:
++				x = x >> 4;
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			case 5:
++				x = x >> 1;
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			case 6:
++				x = x >> 6;
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			case 7:
++				x = x >> 3;
++				buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			}
++		}
++		{
++			if (buffer == null || buffer.length - pos < decodeSize) {
++				resizeBuffer();
++			}
++			switch (modulus) {
++			case 2:
++				buffer[pos++] = (byte) ((x >> 2) & MASK_8BITS);
++				break;
++			case 3:
++				buffer[pos++] = (byte) ((x >> 7) & MASK_8BITS);
++				break;
++			case 4:
++				x = x >> 4;
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			case 5:
++				x = x >> 1;
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			case 6:
++				x = x >> 6;
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			case 7:
++				x = x >> 3;
++				buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			}
++		}
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
+     }
+ 
+     /**
+@@ -409,7 +492,16 @@
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+-                buffer = null;
++                buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer = null;
+             }
+             return len;
+         }
+@@ -441,7 +533,6 @@
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+-            eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+             }
+@@ -471,7 +562,14 @@
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                pos += lineSeparator.length;
++                x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				x = x >> 1;
++				pos += lineSeparator.length;
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -979,7 +1077,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

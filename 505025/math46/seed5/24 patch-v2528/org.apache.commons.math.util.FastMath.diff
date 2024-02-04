@@ -1,0 +1,11 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2920,8 +2920,6 @@
+         yb = yb * epsA2 * epsA;
+ 
+ 
+-        ya = epsA;
+-
+         temp = ya + yb;
+         yb = -(temp - ya - yb);
+         ya = temp;

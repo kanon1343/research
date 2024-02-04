@@ -1,0 +1,16 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -246,7 +246,12 @@
+ 
+         verifyInterval(lower, upper);
+         if (!isBracketing(lower, upper, function)) {
+-            throw MathRuntimeException.createIllegalArgumentException(
++            resultComputed = true;
++			resultComputed = true;
++			resultComputed = true;
++			resultComputed = true;
++			resultComputed = true;
++			throw MathRuntimeException.createIllegalArgumentException(
+                     "function values at endpoints do not have different signs.  " +
+                     "Endpoints: [{0}, {1}], Values: [{2}, {3}]",
+                     lower, upper, function.value(lower), function.value(upper));

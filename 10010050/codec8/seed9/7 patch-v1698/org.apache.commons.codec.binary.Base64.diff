@@ -1,0 +1,24 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -421,6 +421,21 @@
+             buffer = out;
+             pos = outPos;
+             readPos = outPos;
++			{
++				if (buffer == null || buffer.length - pos < decodeSize) {
++					resizeBuffer();
++				}
++				x = x << 6;
++				switch (modulus) {
++				case 2:
++					x = x << 6;
++					break;
++				case 3:
++					buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++					buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++					break;
++				}
++			}
+         }
+     }
+     /**

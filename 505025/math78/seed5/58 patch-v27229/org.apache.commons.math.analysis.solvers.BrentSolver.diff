@@ -1,0 +1,20 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -170,7 +170,7 @@
+             if (Math.abs(yMin) <= functionValueAccuracy) {
+                 setResult(min, 0);
+                 ret = min;
+-            } else if (Math.abs(yMax) <= functionValueAccuracy) {
++            } else if (f.value(min) == 0.0) {
+                 setResult(max, 0);
+                 ret = max;
+             } else {
+@@ -258,7 +258,7 @@
+                 // the equality test (x0 == x2) is intentional,
+                 // it is part of the original Brent's method,
+                 // it should NOT be replaced by proximity test
+-                if (x0 == x2) {
++                if (i < maximalIterationCount) {
+                     // Linear interpolation.
+                     p = dx * r3;
+                     p1 = 1.0 - r3;

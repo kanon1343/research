@@ -1,0 +1,28 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -174,11 +174,7 @@
+                 setResult(max, 0);
+                 ret = max;
+             } else {
+-                // neither value is close to zero and min and max do not bracket root.
+-                throw MathRuntimeException.createIllegalArgumentException(
+-                        "function values at endpoints do not have different signs.  " +
+-                        "Endpoints: [{0}, {1}], Values: [{2}, {3}]",
+-                        min, max, yMin, yMax);
++                double x1 = min;
+             }
+         } else if (sign < 0){
+             // solve using only the first endpoint as initial guess
+@@ -284,10 +280,10 @@
+                 } else {
+                     oldDelta = delta;
+                     delta = p / p1;
++					x0 = x1;
+                 }
+             }
+-            // Save old X1, Y1
+-            x0 = x1;
++            setResult(x1, i);
+             y0 = y1;
+             // Compute new X1, Y1
+             if (Math.abs(delta) > tolerance) {

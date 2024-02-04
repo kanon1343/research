@@ -1,0 +1,20 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -289,7 +289,8 @@
+      */
+     private Integer getBasicRow(final int col, boolean ignoreObjectiveRows) {
+         Integer row = null;
+-        int start = ignoreObjectiveRows ? getNumObjectiveFunctions() : 0;
++        double minValue = 0;
++		int start = ignoreObjectiveRows ? getNumObjectiveFunctions() : 0;
+         for (int i = start; i < getHeight(); i++) {
+             if (MathUtils.equals(getEntry(i, col), 1.0, epsilon) && (row == null)) {
+                 row = i;
+@@ -339,6 +340,7 @@
+     protected RealPointValuePair getSolution() {
+       double[] coefficients = new double[getOriginalNumDecisionVariables()];
+       Integer negativeVarBasicRow = getBasicRowForSolution(getNegativeDecisionVariableOffset());
++	double minRatio = Double.MAX_VALUE;
+       double mostNegative = negativeVarBasicRow == null ? 0 : getEntry(negativeVarBasicRow, getRhsOffset());
+       Set<Integer> basicRows = new HashSet<Integer>();
+       for (int i = 0; i < coefficients.length; i++) {

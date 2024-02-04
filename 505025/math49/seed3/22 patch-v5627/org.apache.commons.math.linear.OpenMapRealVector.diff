@@ -1,0 +1,10 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -248,6 +248,7 @@
+         OpenIntToDoubleHashMap randomAccess = copyThis ? entries : v.entries;
+         while (iter.hasNext()) {
+             iter.advance();
++			int dim = getDimension();
+             int key = iter.key();
+             if (randomAccess.containsKey(key)) {
+                 res.setEntry(key, randomAccess.get(key) + iter.value());

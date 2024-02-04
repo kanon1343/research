@@ -1,0 +1,31 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,10 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			lineSeparator = CHUNK_SEPARATOR;
++			lineSeparator = CHUNK_SEPARATOR;
++			lineSeparator = CHUNK_SEPARATOR;
++			eof = true;
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -345,6 +348,8 @@
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			pos += lineSeparator.length;
++			pos += lineSeparator.length;
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -1026,7 +1031,6 @@
+         readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+-        eof = false;
+     }
+ 
+ }

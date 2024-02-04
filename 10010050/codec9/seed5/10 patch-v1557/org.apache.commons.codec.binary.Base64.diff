@@ -1,0 +1,31 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -375,7 +375,8 @@
+      * @return The amount of buffered data available for reading.
+      */
+     int avail() {
+-        return buffer != null ? pos - readPos : 0;
++        buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++		return buffer != null ? pos - readPos : 0;
+     }
+ 
+     /** Doubles our buffer. */
+@@ -471,7 +472,8 @@
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                pos += lineSeparator.length;
++                System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -975,7 +977,7 @@
+         if (mod != 0) {
+             len += 4 - mod;
+         }
+-        if (chunkSize > 0) {
++        if (pArray == null || pArray.length == 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {

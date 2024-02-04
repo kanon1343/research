@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -309,6 +309,7 @@
+         }
+         int width = getWidth() - numArtificialVariables - 1;
+         int height = getHeight() - 1;
++		this.numArtificialVariables = 0;
+         double[][] matrix = new double[height][width];
+         for (int i = 0; i < height; i++) {
+             for (int j = 0; j < width - 1; j++) {

@@ -1,0 +1,43 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -100,10 +100,13 @@
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+-        g0                = Double.NaN;
+-        g0Positive        = true;
++        {
++			g0Positive = g0 >= 0;
++			nextAction = EventHandler.CONTINUE;
++		}
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
++		previousEventTime = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+@@ -177,6 +180,7 @@
+             double ta = t0;
+             double ga = g0;
+             double tb = t0 + (interpolator.isForward() ? convergence : -convergence);
++			ta = tb;
+             for (int i = 0; i < n; ++i) {
+ 
+                 // evaluate handler value at the end of the substep
+@@ -241,13 +245,15 @@
+                     // no sign change: there is no event for now
+                     ta = tb;
+                     ga = gb;
++					g0Positive = increasing;
+                 }
+ 
+             }
+ 
+             // no event during the whole step
+             pendingEvent     = false;
+-            pendingEventTime = Double.NaN;
++            previousEventTime = Double.NaN;
++			pendingEventTime = Double.NaN;
+             return false;
+ 
+         } catch (FunctionEvaluationException e) {

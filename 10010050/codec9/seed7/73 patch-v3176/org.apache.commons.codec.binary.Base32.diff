@@ -1,0 +1,10 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -216,6 +216,7 @@
+      */
+     public Base32(int lineLength, byte[] lineSeparator) {
+         this(lineLength, lineSeparator, false);
++		buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
+     }
+     
+     /**

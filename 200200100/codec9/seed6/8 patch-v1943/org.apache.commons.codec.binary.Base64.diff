@@ -1,0 +1,60 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -476,7 +476,8 @@
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+                 if (buffer == null || buffer.length - pos < encodeSize) {
+-                    resizeBuffer();
++                    x = x >> 6;
++					resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+                 int b = in[inPos++];
+@@ -972,7 +973,7 @@
+ 
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+-        if (mod != 0) {
++        if (pArray == null || pArray.length == 0) {
+             len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+@@ -1051,9 +1052,37 @@
+      */
+     private void reset() {
+         buffer = null;
++		{
++			eof = true;
++			if (buffer == null || buffer.length - pos < encodeSize) {
++				resizeBuffer();
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			byte b = lineSeparator[lineSeparator.length - 1];
++			if (lineLength > 0 && pos > 0 && buffer[pos - 1] != b) {
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++		}
+         pos = 0;
+         readPos = 0;
+-        currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+     }

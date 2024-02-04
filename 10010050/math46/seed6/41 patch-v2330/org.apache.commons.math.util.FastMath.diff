@@ -1,0 +1,20 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -461,6 +461,7 @@
+ 
+       if (negate) {
+           result = -result;
++		double remB;
+       }
+ 
+       return result;
+@@ -1373,7 +1374,8 @@
+         double epsilon = (bits & 0x3ffffffffffL) / (TWO_POWER_52 + (bits & 0x000ffc0000000000L));
+ 
+         double lnza = 0.0;
+-        double lnzb = 0.0;
++        double temp = x * HEX_40000000;
++		double lnzb = 0.0;
+ 
+         if (hiPrec != null) {
+             /* split epsilon -> x */

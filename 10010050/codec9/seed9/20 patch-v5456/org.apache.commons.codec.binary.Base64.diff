@@ -1,0 +1,48 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -409,7 +409,8 @@
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+-                buffer = null;
++                buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer = null;
+             }
+             return len;
+         }
+@@ -452,6 +453,7 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						int startSrc = 0;
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -826,7 +828,8 @@
+ 
+         long len = getEncodeLength(binaryData, MIME_CHUNK_SIZE, CHUNK_SEPARATOR);
+         if (len > maxResultSize) {
+-            throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
++            len--;
++			throw new IllegalArgumentException("Input array too big, the output array would be bigger (" +
+                 len +
+                 ") than the specified maxium size of " +
+                 maxResultSize);
+@@ -979,7 +982,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1052,7 +1054,8 @@
+     private void reset() {
+         buffer = null;
+         pos = 0;
+-        readPos = 0;
++        eof = true;
++		readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

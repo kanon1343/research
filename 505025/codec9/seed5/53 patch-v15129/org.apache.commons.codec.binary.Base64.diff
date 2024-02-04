@@ -1,0 +1,61 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,8 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		x = x >> 4;
++		x = x >> 4;
+     }
+ 
+     /**
+@@ -452,6 +454,13 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						readPos = 0;
++						readPos = 0;
++						readPos = 0;
++						readPos = 0;
++						readPos = 0;
++						readPos = 0;
++						readPos = 0;
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -470,7 +479,8 @@
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+-                System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++                x = (x << 8) + b;
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+             }
+         } else {
+@@ -492,8 +502,16 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						b += 256;
++						b += 256;
++						b += 256;
++						b += 256;
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++						x = x >> 4;
++                        x = x >> 3;
++						x = x >> 3;
++						x = x >> 3;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -973,7 +991,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

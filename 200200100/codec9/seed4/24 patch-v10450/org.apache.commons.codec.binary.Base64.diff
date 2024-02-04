@@ -1,0 +1,43 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -383,7 +383,6 @@
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+-            readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+@@ -411,7 +410,8 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
++            resizeBuffer();
++			return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -973,11 +973,9 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+                 len += chunkSeparator.length;
+             }
+@@ -1054,7 +1052,9 @@
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
++        currentLinePos = 0;
++		currentLinePos = 0;
++		modulus = 0;
+         eof = false;
+     }
+ 

@@ -1,0 +1,80 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,58 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			currentLinePos = 0;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			resizeBuffer();
++			eof = false;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			buffer = null;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -490,7 +542,17 @@
+                 if (b < 0) {
+                     b += 256;
+                 }
+-                x = (x << 8) + b;
++                System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				x = (x << 8) + b;
+                 if (0 == modulus) {
+                     buffer[pos++] = encodeTable[(x >> 18) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 12) & MASK_6BITS];

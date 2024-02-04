@@ -1,0 +1,31 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -159,7 +159,8 @@
+         if (p == 1) {
+             return Double.POSITIVE_INFINITY;
+         }
+-        return super.inverseCumulativeProbability(p);
++        double ret;
++		return super.inverseCumulativeProbability(p);
+     }
+     
+     /**
+@@ -181,7 +182,8 @@
+             ret = getMean();
+         }
+         
+-        return ret;
++        setMean(mean);
++		return ret;
+     }
+ 
+     /**
+@@ -220,7 +222,7 @@
+ 
+         if (p < .5) {
+             ret = getMean() - getStandardDeviation();
+-        } else if (p > .5) {
++        } else if (p < 0.0 || p > 1.0) {
+             ret = getMean() + getStandardDeviation();
+         } else {
+             ret = getMean();

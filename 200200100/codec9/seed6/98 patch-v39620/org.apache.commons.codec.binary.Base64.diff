@@ -1,0 +1,55 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,9 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		currentLinePos = 0;
++		currentLinePos = 0;
++		currentLinePos = 0;
+     }
+ 
+     /**
+@@ -469,6 +472,7 @@
+             // Don't want to append the CRLF two times in a row, so make sure previous
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
++			System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+@@ -476,7 +480,9 @@
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+                 if (buffer == null || buffer.length - pos < encodeSize) {
+-                    resizeBuffer();
++                    x = x >> 6;
++					x = x >> 6;
++					resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+                 int b = in[inPos++];
+@@ -492,8 +498,14 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						x = x >> 3;
++						x = x >> 3;
++						x = x >> 3;
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        x = x >> 1;
++						x = x >> 1;
++						x = x >> 1;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -973,7 +985,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

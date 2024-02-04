@@ -1,0 +1,81 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,55 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            reset();
++			reset();
++			reset();
++			lineLength = 0;  // disable chunk-separating
++			eof = true;
++			currentLinePos = 0;
++			x = x << 6;
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			currentLinePos = 0;
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				reset();
++				readPos = 0;
++			}
++			currentLinePos = 0;
++			x = x << 6;
++			x = x << 6;
++			x = x << 6;
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			currentLinePos = 0;
++			currentLinePos = 0;
++			currentLinePos = 0;
++			currentLinePos = 0;
++			currentLinePos = 0;
++			currentLinePos = 0;
++			currentLinePos = 0;
++			currentLinePos = 0;
++			x = x << 6;
++			x = x << 6;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -1023,10 +1070,18 @@
+     private void reset() {
+         buffer = null;
+         pos = 0;
+-        readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+-        eof = false;
++        switch (modulus) {
++		case 2:
++			x = x << 6;
++			buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++			break;
++		case 3:
++			buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++			buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++			break;
++		}
+     }
+ 
+ }

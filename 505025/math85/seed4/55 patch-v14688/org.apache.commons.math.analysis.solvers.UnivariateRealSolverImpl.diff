@@ -1,0 +1,10 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -139,7 +139,6 @@
+      */
+     protected final void setResult(final double result, final int iterationCount) {
+         this.result         = result;
+-        this.iterationCount = iterationCount;
+         this.resultComputed = true;
+     }
+ 

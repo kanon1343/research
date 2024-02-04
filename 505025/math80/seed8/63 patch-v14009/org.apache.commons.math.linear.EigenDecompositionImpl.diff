@@ -1,0 +1,37 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -910,7 +910,6 @@
+                             work[i + 2]  = -sigma;
+                             split        = i / 4;
+                             diagMax      = 0;
+-                            offDiagMin   = work[i + 6];
+                             previousEMin = work[i + 7];
+                         } else {
+                             diagMax      = Math.max(diagMax, work[i + 4]);
+@@ -942,7 +941,6 @@
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+                     work[i + 2] = -0.0;
+-                    d = work[i];
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+                 }
+@@ -1052,7 +1050,6 @@
+         // step 2: flip array if needed
+         if ((dMin <= 0) || (deflatedEnd < end)) {
+             if (flipIfWarranted(deflatedEnd, 1)) {
+-                dMin2 = Math.min(dMin2, work[l - 1]);
+                 work[l - 1] =
+                     Math.min(work[l - 1],
+                              Math.min(work[3 + pingPong], work[7 + pingPong]));
+@@ -1135,8 +1132,8 @@
+             int j = 4 * n - 1;
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+-                    final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
++                    tau = 0.0;
++					final double tmp = work[i + k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;

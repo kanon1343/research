@@ -1,0 +1,28 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -106,6 +106,14 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
++		resultComputed = true;
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+             setResult(yMin, 0);
+             return result;
+@@ -276,10 +284,6 @@
+                 }
+                 if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+                         p >= Math.abs(0.5 * oldDelta * p1)) {
+-                    // Inverse quadratic interpolation gives a value
+-                    // in the wrong direction, or progress is slow.
+-                    // Fall back to bisection.
+-                    delta = 0.5 * dx;
+                     oldDelta = delta;
+                 } else {
+                     oldDelta = delta;

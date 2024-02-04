@@ -1,0 +1,18 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -339,6 +339,7 @@
+     protected RealPointValuePair getSolution() {
+       double[] coefficients = new double[getOriginalNumDecisionVariables()];
+       Integer negativeVarBasicRow = getBasicRowForSolution(getNegativeDecisionVariableOffset());
++	double minRatio = Double.MAX_VALUE;
+       double mostNegative = negativeVarBasicRow == null ? 0 : getEntry(negativeVarBasicRow, getRhsOffset());
+       Set<Integer> basicRows = new HashSet<Integer>();
+       for (int i = 0; i < coefficients.length; i++) {
+@@ -352,6 +353,7 @@
+               coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
++			int height = constraints.size() + getNumObjectiveFunctions();
+           }
+       }
+         return new RealPointValuePair(coefficients, f.getValue(coefficients));

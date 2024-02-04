@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -177,7 +177,8 @@
+      * @param v Instance to copy from.
+      */
+     public OpenMapRealVector(OpenMapRealVector v) {
+-        virtualSize = v.getDimension();
++        int ks;
++		virtualSize = v.getDimension();
+         entries = new OpenIntToDoubleHashMap(v.getEntries());
+         epsilon = v.epsilon;
+     }

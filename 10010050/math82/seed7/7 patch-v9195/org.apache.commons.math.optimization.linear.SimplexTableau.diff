@@ -1,0 +1,14 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -305,7 +305,10 @@
+      */
+     protected void discardArtificialVariables() {
+         if (numArtificialVariables == 0) {
+-            return;
++            this.numArtificialVariables = getConstraintTypeCounts(Relationship.EQ)
++					+ getConstraintTypeCounts(Relationship.GEQ);
++			Set<Integer> basicRows=new HashSet<Integer>();
++			return;
+         }
+         int width = getWidth() - numArtificialVariables - 1;
+         int height = getHeight() - 1;

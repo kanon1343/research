@@ -1,0 +1,39 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -57,7 +57,19 @@
+      */
+     private static String translate(String s, Locale locale) {
+         try {
+-            ResourceBundle bundle =
++            {
++				ResourceBundle bundle = ResourceBundle.getBundle("org.apache.commons.math.MessagesResources", locale);
++				if (bundle.getLocale().getLanguage().equals(locale.getLanguage())) {
++					return bundle.getString(s);
++				}
++			}
++			{
++				ResourceBundle bundle = ResourceBundle.getBundle("org.apache.commons.math.MessagesResources", locale);
++				if (bundle.getLocale().getLanguage().equals(locale.getLanguage())) {
++					return bundle.getString(s);
++				}
++			}
++			ResourceBundle bundle =
+                     ResourceBundle.getBundle("org.apache.commons.math.MessagesResources", locale);
+             if (bundle.getLocale().getLanguage().equals(locale.getLanguage())) {
+                 // the value of the resource is the translated string
+@@ -103,7 +115,6 @@
+      * @param arguments format arguments
+      */
+     public MathException(String pattern, Object ... arguments) {
+-      super(buildMessage(Locale.US, pattern, arguments));
+       this.pattern   = pattern;
+       this.arguments = (arguments == null) ? new Object[0] : arguments.clone();
+     }
+@@ -116,7 +127,6 @@
+      *                   to be thrown.
+      */
+     public MathException(Throwable rootCause) {
+-        super(rootCause);
+         this.pattern   = getMessage();
+         this.arguments = new Object[0];
+     }

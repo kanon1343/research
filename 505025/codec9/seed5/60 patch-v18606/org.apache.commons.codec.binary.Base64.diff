@@ -1,0 +1,71 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,10 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
+     }
+ 
+     /**
+@@ -452,6 +456,7 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						readPos = 0;
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -470,7 +475,9 @@
+             // character is not from CRLF!
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+-                System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++                x = (x << 8) + b;
++				x = (x << 8) + b;
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+             }
+         } else {
+@@ -492,8 +499,21 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						b += 256;
++						b += 256;
++						b += 256;
++						b += 256;
++						b += 256;
++						b += 256;
++						b += 256;
++						b += 256;
++						b += 256;
++						b += 256;
++						b += 256;
++						b += 256;
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++						x = x >> 4;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -951,6 +971,7 @@
+         encode(pArray, 0, pArray.length);
+         encode(pArray, 0, -1); // Notify encoder of EOF.
+         byte[] buf = new byte[pos - readPos];
++		buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
+         readResults(buf, 0, buf.length);
+         return buf;
+     }
+@@ -973,7 +994,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

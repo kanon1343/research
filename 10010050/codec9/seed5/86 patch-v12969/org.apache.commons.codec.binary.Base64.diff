@@ -1,0 +1,45 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,7 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		eof = true;
+     }
+ 
+     /**
+@@ -411,7 +412,6 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -452,6 +452,7 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						x = x >> 1;
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -492,6 +493,10 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						int readLen = 0;
++						System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
+                     }
+@@ -973,7 +978,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

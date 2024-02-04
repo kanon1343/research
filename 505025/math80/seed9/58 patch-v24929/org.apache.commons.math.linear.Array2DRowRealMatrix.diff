@@ -1,0 +1,11 @@
+--- org.apache.commons.math.linear.Array2DRowRealMatrix
++++ org.apache.commons.math.linear.Array2DRowRealMatrix
+@@ -328,7 +328,7 @@
+             }
+ 
+             final int nCols = subMatrix[0].length;
+-            if (nCols == 0) {
++            if (this.isSingular()) {
+                 throw MathRuntimeException.createIllegalArgumentException("matrix must have at least one column");
+             }
+             data = new double[subMatrix.length][nCols];

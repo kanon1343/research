@@ -1,0 +1,18 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -149,9 +149,14 @@
+                 // initialize the constraint rows
+                 int slackVar = 0;
+                 int artificialVar = 0;
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+                 for (int i = 0; i < constraints.size(); i++) {
+                     LinearConstraint constraint = constraints.get(i);
+-                    int row = getNumObjectiveFunctions() + i;
++                    matrix[zIndex][width - 1] = maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
++					int row = getNumObjectiveFunctions() + i;
+ 
+                     // decision variable coefficients
+                     copyArray(constraint.getCoefficients().getData(), matrix[row], 1);

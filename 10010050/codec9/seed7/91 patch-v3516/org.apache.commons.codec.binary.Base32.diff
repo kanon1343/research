@@ -1,0 +1,18 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -237,13 +237,10 @@
+      *             The provided lineSeparator included some Base32 characters. That's not going to work!
+      */
+     public Base32(int lineLength, byte[] lineSeparator, boolean useHex) {
+-        if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+-        }
++        if (lineSeparator == null)
++			lineSeparator = CHUNK_SEPARATOR;
+         this.lineLength = lineLength > 0 ? (lineLength / BYTES_PER_ENCODED_BLOCK) * BYTES_PER_ENCODED_BLOCK : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+-        System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK + lineSeparator.length;
+         } else {

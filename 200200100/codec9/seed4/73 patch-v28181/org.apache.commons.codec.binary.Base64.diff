@@ -1,0 +1,69 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -411,7 +411,9 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
++            resizeBuffer();
++			resizeBuffer();
++			return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -448,11 +450,24 @@
+             switch (modulus) {
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
+-                    buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				resizeBuffer();
++				resizeBuffer();
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
++                        switch (modulus) {
++						case 2:
++							x = x >> 4;
++							buffer[pos++] = (byte) ((x) & MASK_8BITS);
++							break;
++						case 3:
++							x = x >> 2;
++							buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++							buffer[pos++] = (byte) ((x) & MASK_8BITS);
++							break;
++						}
++						buffer[pos++] = PAD;
+                         buffer[pos++] = PAD;
+-                        buffer[pos++] = PAD;
+                     }
+                     break;
+ 
+@@ -494,6 +509,7 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -977,9 +993,7 @@
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1054,7 +1068,9 @@
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
++        currentLinePos = 0;
++		currentLinePos = 0;
++		modulus = 0;
+         eof = false;
+     }
+ 

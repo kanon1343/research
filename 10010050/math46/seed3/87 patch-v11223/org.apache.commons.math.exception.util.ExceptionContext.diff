@@ -1,0 +1,14 @@
+--- org.apache.commons.math.exception.util.ExceptionContext
++++ org.apache.commons.math.exception.util.ExceptionContext
+@@ -64,7 +64,10 @@
+     public void addMessage(Localizable pattern,
+                            Object ... arguments) {
+         msgPatterns.add(pattern);
+-        msgArguments.add(ArgUtils.flatten(arguments));
++        context=new HashMap<String, Object>();
++		context=new HashMap<String, Object>();
++		context=new HashMap<String, Object>();
++		msgArguments.add(ArgUtils.flatten(arguments));
+     }
+ 
+     /**

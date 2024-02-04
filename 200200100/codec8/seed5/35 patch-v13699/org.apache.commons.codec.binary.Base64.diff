@@ -1,0 +1,42 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,8 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -340,7 +341,8 @@
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
+         } else {
+-            this.encodeSize = 4;
++            byte[] buf = new byte[pos - readPos];
++			this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+@@ -981,7 +983,6 @@
+      */
+     public static byte[] encodeInteger(BigInteger bigInt) {
+         if (bigInt == null) {
+-            throw new NullPointerException("encodeInteger called with null parameter");
+         }
+         return encodeBase64(toIntegerBytes(bigInt), false);
+     }
+@@ -1021,10 +1022,8 @@
+      * Resets this Base64 object to its initial newly constructed state.
+      */
+     private void reset() {
+-        buffer = null;
+-        pos = 0;
++        resizeBuffer();
+         readPos = 0;
+-        currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+     }

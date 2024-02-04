@@ -1,0 +1,51 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -339,10 +339,12 @@
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
++			resizeBuffer();
+         } else {
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		eof = true;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+@@ -411,7 +413,8 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
++            buffer = null;
++			return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -493,6 +496,7 @@
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
++						readPos = 0;
+                         currentLinePos = 0;
+                     }
+                 }
+@@ -973,7 +977,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1051,7 +1054,8 @@
+      */
+     private void reset() {
+         buffer = null;
+-        pos = 0;
++        resizeBuffer();
++		pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;

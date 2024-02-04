@@ -1,0 +1,54 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -383,7 +383,6 @@
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+-            readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+@@ -442,7 +441,7 @@
+         // encoding.
+         if (inAvail < 0) {
+             eof = true;
+-            if (buffer == null || buffer.length - pos < encodeSize) {
++            if (lineLength > 0) {
+                 resizeBuffer();
+             }
+             switch (modulus) {
+@@ -472,6 +471,18 @@
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
++				{
++					int result = DECODE_TABLE[b];
++					if (result >= 0) {
++						modulus = (++modulus) % 4;
++						x = (x << 6) + result;
++						if (modulus == 0) {
++							buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++							buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++							buffer[pos++] = (byte) (x & MASK_8BITS);
++						}
++					}
++				}
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -973,7 +984,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1053,7 +1063,6 @@
+         buffer = null;
+         pos = 0;
+         readPos = 0;
+-        currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+     }

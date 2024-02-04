@@ -1,0 +1,27 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -382,7 +382,6 @@
+     private void resizeBuffer() {
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+-            pos = 0;
+             readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+@@ -435,7 +434,7 @@
+      *            Amount of bytes available from input for encoding.
+      */
+     void encode(byte[] in, int inPos, int inAvail) {
+-        if (eof) {
++        if (containsBase64Byte(lineSeparator)) {
+             return;
+         }
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+@@ -979,7 +978,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

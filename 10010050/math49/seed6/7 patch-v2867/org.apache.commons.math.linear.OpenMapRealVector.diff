@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.OpenMapRealVector
++++ org.apache.commons.math.linear.OpenMapRealVector
+@@ -370,7 +370,8 @@
+         Iterator iter = res.entries.iterator();
+         while (iter.hasNext()) {
+             iter.advance();
+-            res.setEntry(iter.key(), iter.value() * v.getEntry(iter.key()));
++            double alpha = 0;
++			res.setEntry(iter.key(), iter.value() * v.getEntry(iter.key()));
+         }
+         return res;
+     }

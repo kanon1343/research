@@ -1,0 +1,37 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -90,7 +90,6 @@
+     previousTime            = Double.NaN;
+     currentTime             = Double.NaN;
+     h                       = Double.NaN;
+-    interpolatedTime        = Double.NaN;
+     currentState            = null;
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+@@ -270,10 +269,24 @@
+ 
+       // lazy evaluation of the state
+       if (dirtyState) {
+-          final double oneMinusThetaH = currentTime - interpolatedTime;
++          h = currentTime - previousTime;
++		h = currentTime - previousTime;
++		h = currentTime - previousTime;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		dirtyState = false;
++		final double oneMinusThetaH = currentTime - interpolatedTime;
+           final double theta = (h == 0) ? 0 : (h - oneMinusThetaH) / h;
+           computeInterpolatedStateAndDerivatives(theta, oneMinusThetaH);
+-          dirtyState = false;
++          h = currentTime - previousTime;
++		dirtyState = false;
+       }
+ 
+       return interpolatedState;

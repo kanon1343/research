@@ -1,0 +1,18 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
+@@ -188,7 +188,14 @@
+         do {
+             a = Math.max(a - 1.0, lowerBound);
+             b = Math.min(b + 1.0, upperBound);
+-            fa = function.value(a);
++            {
++				a = Math.max(a - 1.0, lowerBound);
++				b = Math.min(b + 1.0, upperBound);
++				fa = function.value(a);
++				fb = function.value(b);
++				numIterations++;
++			}
++			fa = function.value(a);
+             
+             fb = function.value(b);
+             numIterations++ ;

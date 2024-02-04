@@ -1,0 +1,21 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -219,7 +219,9 @@
+     throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+         double delta = x1 - x0;
+-        double oldDelta = delta;
++        y1 = f.value(x1);
++		y1 = f.value(x1);
++		double oldDelta = delta;
+ 
+         int i = 0;
+         while (i < maximalIterationCount) {
+@@ -231,6 +233,7 @@
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
++				setResult(x1, i);
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+                 // Avoid division by very small values. Assume

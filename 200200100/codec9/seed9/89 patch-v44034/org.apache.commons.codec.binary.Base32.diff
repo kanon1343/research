@@ -1,0 +1,18 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -245,7 +245,14 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = BYTES_PER_ENCODED_BLOCK + lineSeparator.length;
++            {
++				buffer[pos++] = (byte) ((x >> 32) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 24) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) (x & MASK_8BITS);
++			}
++			this.encodeSize = BYTES_PER_ENCODED_BLOCK + lineSeparator.length;
+         } else {
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK;
+         }

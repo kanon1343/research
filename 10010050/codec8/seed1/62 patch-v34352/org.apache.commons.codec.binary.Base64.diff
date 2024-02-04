@@ -1,0 +1,41 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,25 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            lineSeparator = CHUNK_SEPARATOR;
++			lineSeparator = CHUNK_SEPARATOR;
++			lineLength = 0;
++			lineLength = 0;
++			buffer = null;
++			lineSeparator = CHUNK_SEPARATOR;
++			lineSeparator = CHUNK_SEPARATOR;
++			lineSeparator = CHUNK_SEPARATOR;
++			lineSeparator = CHUNK_SEPARATOR;
++			lineSeparator = CHUNK_SEPARATOR;
++			lineSeparator = CHUNK_SEPARATOR;
++			lineSeparator = CHUNK_SEPARATOR;
++			lineLength = 0;
++			buffer = null;
++			buffer = null;
++			eof = true;
++			lineSeparator = CHUNK_SEPARATOR;
++			lineLength = 0;  // disable chunk-separating
++			buffer = null;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -570,7 +588,10 @@
+                 resizeBuffer();
+             }
+             
+-            x = x << 6;
++            System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++			System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++			System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++			x = x << 6;
+             switch (modulus) {
+                 case 2 :
+                     x = x << 6;

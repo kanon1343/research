@@ -1,0 +1,16 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -305,10 +305,12 @@
+      */
+     protected void discardArtificialVariables() {
+         if (numArtificialVariables == 0) {
+-            return;
++            Integer minPos = null;
++			return;
+         }
+         int width = getWidth() - numArtificialVariables - 1;
+         int height = getHeight() - 1;
++		this.numArtificialVariables = 0;
+         double[][] matrix = new double[height][width];
+         for (int i = 0; i < height; i++) {
+             for (int j = 0; j < width - 1; j++) {

@@ -83,13 +83,13 @@ def main():
     for project in projects:
         for seed in range(10):
             selection_file_path = pathlib.Path(
-                "/Users/haradakanon/Downloads/research/10010050/{project}log/selection.csv".format(project=project))
+                "/Users/haradakanon/Downloads/research/505025/{project}log/selection.csv".format(project=project))
             file_path = pathlib.Path(
-                "/Users/haradakanon/Downloads/research/10010050/{project}/seed{seed}".format(
+                "/Users/haradakanon/Downloads/research/505025/{project}/seed{seed}".format(
                     project=project, seed=str(seed))
             )
             output_file_path = pathlib.Path(
-                "/Users/haradakanon/Downloads/research/10010050/{project}log/correct_patch".format(project=project))
+                "/Users/haradakanon/Downloads/research/505025/{project}log/correct_patch".format(project=project))
             correct_patch_search(selection_file_path,
                                  file_path, project, seed, output_file_path)
 
@@ -97,7 +97,7 @@ def main():
     projects = ["codec9"]
     for project in projects:
         file_path = pathlib.Path(
-            "/Users/haradakanon/Downloads/research/10010050/{project}log".format(
+            "/Users/haradakanon/Downloads/research/505025/{project}log".format(
                 project=project)
         )
         summary(file_path)

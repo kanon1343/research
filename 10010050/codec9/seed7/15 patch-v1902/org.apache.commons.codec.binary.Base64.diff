@@ -1,0 +1,29 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -443,7 +443,7 @@
+         if (inAvail < 0) {
+             eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+-                resizeBuffer();
++                throw new NullPointerException();
+             }
+             switch (modulus) {
+                 case 1 :
+@@ -973,7 +973,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1050,9 +1049,7 @@
+      * Resets this Base64 object to its initial newly constructed state.
+      */
+     private void reset() {
+-        buffer = null;
+         pos = 0;
+-        readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

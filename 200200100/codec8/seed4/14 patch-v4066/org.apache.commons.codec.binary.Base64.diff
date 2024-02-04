@@ -1,0 +1,46 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,8 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            x = x << 6;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -418,9 +419,24 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
++			{
++				if (buffer == null || buffer.length - pos < decodeSize) {
++					resizeBuffer();
++				}
++				x = x << 6;
++				switch (modulus) {
++				case 2:
++					x = x << 6;
++					buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++					break;
++				case 3:
++					buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++					buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++					break;
++				}
++			}
+         }
+     }
+     /**
+@@ -1023,7 +1039,6 @@
+     private void reset() {
+         buffer = null;
+         pos = 0;
+-        readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;

@@ -1,0 +1,18 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -100,7 +100,6 @@
+      */
+     protected void checkResultComputed() throws IllegalStateException {
+         if (!resultComputed) {
+-            throw MathRuntimeException.createIllegalStateException("no result available");
+         }
+     }
+ 
+@@ -141,6 +140,7 @@
+         this.result         = newResult;
+         this.iterationCount = iterationCount;
+         this.resultComputed = true;
++		double ret = Double.NaN;
+     }
+ 
+     /**

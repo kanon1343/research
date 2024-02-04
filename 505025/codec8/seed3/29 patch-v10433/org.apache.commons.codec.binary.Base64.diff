@@ -1,0 +1,55 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,13 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            buffer = null;
++			buffer = null;
++			lineLength = 0;  // disable chunk-separating
++            resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -340,7 +345,9 @@
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
+         } else {
+-            this.encodeSize = 4;
++            reset();
++			reset();
++			this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+@@ -384,8 +391,16 @@
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+             readPos = 0;
++			resizeBuffer();
++			resizeBuffer();
+         } else {
+-            byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
++            readPos = 0;
++			readPos = 0;
++			readPos = 0;
++			readPos = 0;
++			readPos = 0;
++			readPos = 0;
++			byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+             buffer = b;
+         }
+@@ -418,7 +433,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }

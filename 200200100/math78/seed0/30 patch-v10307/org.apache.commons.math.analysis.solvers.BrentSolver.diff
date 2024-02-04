@@ -1,0 +1,25 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -226,7 +226,10 @@
+             if (Math.abs(y2) < Math.abs(y1)) {
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+-                x1 = x2;
++                x1 = x1 + delta;
++				x1 = x1 + delta;
++				x1 = x1 + delta;
++				x1 = x2;
+                 x2 = x0;
+                 y0 = y1;
+                 y1 = y2;
+@@ -276,10 +279,6 @@
+                 }
+                 if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+                         p >= Math.abs(0.5 * oldDelta * p1)) {
+-                    // Inverse quadratic interpolation gives a value
+-                    // in the wrong direction, or progress is slow.
+-                    // Fall back to bisection.
+-                    delta = 0.5 * dx;
+                     oldDelta = delta;
+                 } else {
+                     oldDelta = delta;

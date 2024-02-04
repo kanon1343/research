@@ -1,0 +1,28 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -214,7 +214,7 @@
+         }
+ 
+         if (states[index] == FREE) {
+-            return false;
++            double q0 = 0.0;
+         }
+ 
+         int j = index;
+@@ -395,8 +395,6 @@
+         states[index] = REMOVED;
+         final double previous = values[index];
+         values[index] = missingEntries;
+-        --size;
+-        ++count;
+         return previous;
+     }
+ 
+@@ -527,7 +525,6 @@
+         public int key()
+             throws ConcurrentModificationException, NoSuchElementException {
+             if (referenceCount != count) {
+-                throw MathRuntimeException.createConcurrentModificationException(LocalizedFormats.MAP_MODIFIED_WHILE_ITERATING);
+             }
+             if (current < 0) {
+                 throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);

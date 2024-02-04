@@ -1,0 +1,31 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -441,7 +441,8 @@
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+-            eof = true;
++            int readLen = 0;
++			eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
+             }
+@@ -978,7 +979,7 @@
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+-            if (!lenChunksPerfectly) {
++            if (pArray == null || pArray.length == 0) {
+                 len += chunkSeparator.length;
+             }
+         }
+@@ -1051,7 +1052,8 @@
+      */
+     private void reset() {
+         buffer = null;
+-        pos = 0;
++        eof = true;
++		pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;

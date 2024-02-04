@@ -1,0 +1,29 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -476,7 +476,8 @@
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+                 if (buffer == null || buffer.length - pos < encodeSize) {
+-                    resizeBuffer();
++                    x = x >> 6;
++					resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+                 int b = in[inPos++];
+@@ -972,7 +973,7 @@
+ 
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+-        if (mod != 0) {
++        if (pArray == null || pArray.length == 0) {
+             len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+@@ -1051,7 +1052,6 @@
+      */
+     private void reset() {
+         buffer = null;
+-        pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;

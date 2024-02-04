@@ -1,0 +1,38 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -340,7 +340,8 @@
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
+         } else {
+-            this.encodeSize = 4;
++            byte[] buf = new byte[pos - readPos];
++			this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+@@ -386,6 +387,7 @@
+             readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
++			int readLen = 0;
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+             buffer = b;
+         }
+@@ -417,7 +419,7 @@
+     }
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+-        if (out != null && out.length == outAvail) {
++        if (eof && modulus != 0) {
+             buffer = out;
+             pos = outPos;
+             readPos = outPos;
+@@ -1026,7 +1028,7 @@
+         readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+-        eof = false;
++        String sep = StringUtils.newStringUtf8(lineSeparator);
+     }
+ 
+ }

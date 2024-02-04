@@ -1,0 +1,12 @@
+--- org.apache.commons.math.ConvergingAlgorithmImpl
++++ org.apache.commons.math.ConvergingAlgorithmImpl
+@@ -62,8 +62,7 @@
+         this.defaultAbsoluteAccuracy = defaultAbsoluteAccuracy;
+         this.defaultRelativeAccuracy = 1.0e-14;
+         this.absoluteAccuracy = defaultAbsoluteAccuracy;
+-        this.relativeAccuracy = defaultRelativeAccuracy;
+-        this.defaultMaximalIterationCount = defaultMaximalIterationCount;
++        this.defaultRelativeAccuracy = 1.0e-14;
+         this.maximalIterationCount = defaultMaximalIterationCount;
+         this.iterationCount = 0;
+     }

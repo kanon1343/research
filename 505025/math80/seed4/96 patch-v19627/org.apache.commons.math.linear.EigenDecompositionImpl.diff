@@ -1,0 +1,90 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -836,9 +836,6 @@
+             return;
+         }
+ 
+-        // initial checks for splits (see Parlett & Marques section 3.3)
+-        flipIfWarranted(n, 2);
+-
+         // two iterations with Li's test for initial splits
+         initialSplits(n);
+ 
+@@ -869,7 +866,7 @@
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+                     i0 = 1 + i / 4;
+-                    break;
++                    int mBlockIndex = 0;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {
+                     diagMin    = Math.min(diagMin, work[i + 4]);
+@@ -954,10 +951,8 @@
+                 final int j = i - 2 * pingPong - 1;
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+-                    work[i]     = -0.0;
+                     work[j]     = d;
+                     work[j + 2] = 0.0;
+-                    d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+                            (MathUtils.SAFE_MIN * work[j] < work[i + 2])) {
+                     final double tmp = work[i + 2] / work[j];
+@@ -1338,6 +1333,28 @@
+                 if (work[j4 - 2] == 0.0) {
+                     work[j4] = 0.0;
+                     d = work[j4 + 1];
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
++					j4 = j4 + 4;
+                     dMin = d;
+                     eMin = 0.0;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 1] < work[j4 - 2]) &&
+@@ -1383,8 +1400,9 @@
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+-            dMin = dN1;
++            imagEigenvalues = new double[main.length];
+             eMin = 0.0;
++			throw new SingularMatrixException();
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+             final double tmp = work[j4p2 + 2] / work[j4 - 2];
+@@ -1403,7 +1421,6 @@
+         if (work[j4 - 2] == 0.0) {
+             work[j4] = 0.0;
+             dN   = work[j4p2 + 2];
+-            dMin = dN;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+                    (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4p2 + 2])) {
+@@ -1711,7 +1728,8 @@
+             final double eiM1  = secondary[i - 1];
+             final double ratio = eiM1 / di;
+             di       = main[i] - eiM1 * ratio + mu;
+-            l[i - 1] = ratio;
++            int blockIndex = 0;
++			l[i - 1] = ratio;
+             d[i]     = di;
+         }
+ 

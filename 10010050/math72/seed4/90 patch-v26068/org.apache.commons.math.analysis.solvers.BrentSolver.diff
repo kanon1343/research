@@ -1,0 +1,60 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -111,20 +111,21 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
++		verifyInterval(min, max);
++		verifyInterval(min, max);
++		verifyInterval(min, max);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+             return result;
+         }
+ 
+         // reduce interval if min and initial bracket the root
+-        if (yInitial * yMin < 0) {
++        if (Math.abs(yMin) <= functionValueAccuracy) {
+             return solve(f, min, yMin, initial, yInitial, min, yMin);
+         }
+ 
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -181,8 +182,17 @@
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+-                setResult(max, 0);
+-                ret = max;
++                {
++					setResult(max, 0);
++					ret = max;
++				}
++				setResult(max, 0);
++                double x2 = max;
++				this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				this.iterationCount = iterationCount;
++				ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+@@ -301,7 +311,11 @@
+             if (Math.abs(delta) > tolerance) {
+                 x1 = x1 + delta;
+             } else if (dx > 0.0) {
+-                x1 = x1 + 0.5 * tolerance;
++                oldDelta = delta;
++				oldDelta = delta;
++				oldDelta = delta;
++				oldDelta = delta;
++				x1 = x1 + 0.5 * tolerance;
+             } else if (dx <= 0.0) {
+                 x1 = x1 - 0.5 * tolerance;
+             }

@@ -1,0 +1,55 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -347,7 +347,8 @@
+             String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+-        this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
++        eof = true;
++		this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+     }
+ 
+     /**
+@@ -383,7 +384,6 @@
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+-            readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+@@ -435,7 +435,7 @@
+      *            Amount of bytes available from input for encoding.
+      */
+     void encode(byte[] in, int inPos, int inAvail) {
+-        if (eof) {
++        if (eof && modulus != 0) {
+             return;
+         }
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+@@ -494,6 +494,7 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						x = x >> 4;
+                     }
+                 }
+             }
+@@ -973,7 +974,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1051,7 +1051,8 @@
+      */
+     private void reset() {
+         buffer = null;
+-        pos = 0;
++        eof = true;
++		pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;

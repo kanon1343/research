@@ -1,0 +1,22 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -160,6 +160,7 @@
+             ret = Double.NaN;
+         } else if (x == 0.0) {
+             ret = 0.0;
++			ret = 1.0 - regularizedGammaQ(a, x, epsilon, maxIterations);
+         } else if (a >= 1.0 && x > a) {
+             // use regularizedGammaQ because it should converge faster in this
+             // case.
+@@ -178,7 +179,10 @@
+                 sum = sum + an;
+             }
+             if (n >= maxIterations) {
+-                throw new MaxIterationsExceededException(maxIterations);
++                {
++					double inv = 1 / (x * x);
++					return Math.log(x) - 0.5 / x - inv * ((1.0 / 12) + inv * (1.0 / 120 - inv / 252));
++				}
+             } else {
+                 ret = Math.exp(-x + (a * Math.log(x)) - logGamma(a)) * sum;
+             }

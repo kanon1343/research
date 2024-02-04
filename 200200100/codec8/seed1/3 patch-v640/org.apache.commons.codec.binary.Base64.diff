@@ -1,0 +1,10 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -484,6 +484,7 @@
+             for (int i = 0; i < inAvail; i++) {
+                 if (buffer == null || buffer.length - pos < encodeSize) {
+                     resizeBuffer();
++					readPos = 0;
+                 }
+                 modulus = (++modulus) % 3;
+                 int b = in[inPos++];

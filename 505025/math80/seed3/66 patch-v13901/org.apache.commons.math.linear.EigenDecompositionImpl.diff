@@ -1,0 +1,42 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -1136,7 +1136,7 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
++                    double alpha = 0;
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1340,6 +1340,22 @@
+                     d = work[j4 + 1];
+                     dMin = d;
+                     eMin = 0.0;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
++					work[4 * end - pingPong - 1] = eMin;
+                 } else if ((MathUtils.SAFE_MIN * work[j4 + 1] < work[j4 - 2]) &&
+                            (MathUtils.SAFE_MIN * work[j4 - 2] < work[j4 + 1])) {
+                     final double tmp = work[j4 + 1] / work[j4 - 2];
+@@ -1391,7 +1407,6 @@
+             work[j4] = work[j4p2] * tmp;
+             dN1 = dN2 * tmp;
+         } else {
+-            work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+             dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);

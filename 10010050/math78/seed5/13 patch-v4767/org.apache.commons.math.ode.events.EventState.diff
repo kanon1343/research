@@ -1,0 +1,12 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -268,7 +268,8 @@
+      * step.
+      */
+     public double getEventTime() {
+-        return pendingEventTime;
++        pendingEvent = false;
++		return pendingEventTime;
+     }
+ 
+     /** Acknowledge the fact the step has been accepted by the integrator.

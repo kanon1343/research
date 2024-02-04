@@ -1,0 +1,22 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -77,6 +77,11 @@
+         }
+         this.f = f;
+         this.defaultFunctionValueAccuracy = 1.0e-15;
++		iterationCount += this.iterationCount;
++		iterationCount += this.iterationCount;
++		iterationCount += this.iterationCount;
++		iterationCount += this.iterationCount;
++		iterationCount += this.iterationCount;
+         this.functionValueAccuracy = defaultFunctionValueAccuracy;
+     }
+ 
+@@ -141,6 +146,7 @@
+         this.result         = newResult;
+         this.iterationCount = iterationCount;
+         this.resultComputed = true;
++		this.f = f;
+     }
+ 
+     /**

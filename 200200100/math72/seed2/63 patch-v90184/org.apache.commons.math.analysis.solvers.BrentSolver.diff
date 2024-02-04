@@ -1,0 +1,65 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -99,21 +99,30 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
++        this.resultComputed = true;
++		clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+         double yInitial = f.value(initial);
+         if (Math.abs(yInitial) <= functionValueAccuracy) {
+             setResult(initial, 0);
+-            return result;
++            this.f = f;
++			this.f = f;
++			return result;
+         }
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+         if (Math.abs(yMin) <= functionValueAccuracy) {
+-            setResult(yMin, 0);
+-            return result;
++            double x;
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			verifySequence(min, initial, max);
++			return result;
+         }
+ 
+         // reduce interval if min and initial bracket the root
+@@ -124,7 +133,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -238,6 +246,19 @@
+                 x2 = x0;
+                 y0 = y1;
+                 y1 = y2;
++				y2 = y0;
++				y2 = y0;
++				x2 = x0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
++				y2 = y0;
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {

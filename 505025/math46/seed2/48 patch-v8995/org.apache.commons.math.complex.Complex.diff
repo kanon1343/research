@@ -1,0 +1,34 @@
+--- org.apache.commons.math.complex.Complex
++++ org.apache.commons.math.complex.Complex
+@@ -255,9 +255,9 @@
+             return NaN;
+         }
+ 
+-        if (divisor.isZero) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++        if (isNaN) {
++            double q = real / imaginary;
++			double t = FastMath.sqrt((FastMath.abs(real) + abs()) / 2.0);
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -293,8 +293,8 @@
+             return NaN;
+         }
+         if (divisor == 0d) {
+-            // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            double q = real / imaginary;
++			return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;
+@@ -1180,6 +1180,6 @@
+     /** {@inheritDoc} */
+     @Override
+     public String toString() {
+-        return "(" + real + ", " + imaginary + ")";
++        throw new NullArgumentException(LocalizedFormats.IMAGINARY_FORMAT);
+     }
+ }

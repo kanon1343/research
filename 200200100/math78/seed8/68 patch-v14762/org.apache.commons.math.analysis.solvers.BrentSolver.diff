@@ -1,0 +1,19 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -118,6 +118,7 @@
+ 
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
++		double sign = yMin * yMax;
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+             setResult(yMax, 0);
+             return result;
+@@ -165,6 +166,8 @@
+ 
+         // Verify bracketing
+         double sign = yMin * yMax;
++		this.resultComputed = true;
++		this.resultComputed = true;
+         if (sign > 0) {
+             // check if either value is close to a zero
+             if (Math.abs(yMin) <= functionValueAccuracy) {

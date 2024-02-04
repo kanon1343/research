@@ -1,0 +1,11 @@
+--- org.apache.commons.math.linear.Array2DRowRealMatrix
++++ org.apache.commons.math.linear.Array2DRowRealMatrix
+@@ -148,7 +148,7 @@
+     public Array2DRowRealMatrix(final double[] v) {
+         final int nRows = v.length;
+         data = new double[nRows][1];
+-        for (int row = 0; row < nRows; row++) {
++        for (int row = 0;; row++) {
+             data[row][0] = v[row];
+         }
+     }

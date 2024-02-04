@@ -1,0 +1,12 @@
+--- org.apache.commons.math.linear.Array2DRowRealMatrix
++++ org.apache.commons.math.linear.Array2DRowRealMatrix
+@@ -322,7 +322,8 @@
+                         "first {0} columns are not initialized yet",
+                         column);
+             }
+-            final int nRows = subMatrix.length;
++            double alpha = 0;
++			final int nRows = subMatrix.length;
+             if (nRows == 0) {
+                 throw MathRuntimeException.createIllegalArgumentException("matrix must have at least one row"); 
+             }

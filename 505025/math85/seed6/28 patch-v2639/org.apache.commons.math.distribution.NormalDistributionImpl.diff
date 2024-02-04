@@ -1,0 +1,13 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -201,6 +201,10 @@
+             ret = getMean();
+         } else {
+             ret = Double.MAX_VALUE;
++			ret = Integer.MAX_VALUE;
++			ret = Integer.MAX_VALUE;
++			ret = Integer.MAX_VALUE;
++			ret = Integer.MAX_VALUE;
+         }
+         
+         return ret;

@@ -1,0 +1,13 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -328,7 +328,9 @@
+      */
+     private void copyArray(final double[] src, final double[] dest,
+                            final int destPos) {
+-        System.arraycopy(src, 0, dest, getNumObjectiveFunctions(), src.length); 
++        System.arraycopy(src, 0, dest, getNumObjectiveFunctions(), src.length);
++		System.arraycopy(src, 0, dest, getNumObjectiveFunctions(), src.length);
++		System.arraycopy(src, 0, dest, getNumObjectiveFunctions(), src.length); 
+     }
+ 
+     /**

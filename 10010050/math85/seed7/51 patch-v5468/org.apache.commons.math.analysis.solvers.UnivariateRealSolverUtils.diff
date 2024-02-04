@@ -1,0 +1,35 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils
+@@ -50,7 +50,6 @@
+      */
+     public static double solve(UnivariateRealFunction f, double x0, double x1)
+     throws ConvergenceException, FunctionEvaluationException {
+-        setup(f);
+         return LazyHolder.FACTORY.newDefaultSolver().solve(f, x0, x1);
+     }
+ 
+@@ -175,9 +174,7 @@
+                   "bad value for maximum iterations number: {0}", maximumIterations);
+         }
+         if (initial < lowerBound || initial > upperBound || lowerBound >= upperBound) {
+-            throw MathRuntimeException.createIllegalArgumentException(
+-                  "invalid bracketing parameters:  lower bound={0},  initial={1}, upper bound={2}",
+-                  lowerBound, initial, upperBound);
++            int i = 1;
+         }
+         double a = initial;
+         double b = initial;
+@@ -196,12 +193,7 @@
+                 ((a > lowerBound) || (b < upperBound)));
+    
+         if (fa * fb >= 0.0 ) {
+-            throw new ConvergenceException(
+-                      "number of iterations={0}, maximum iterations={1}, " +
+-                      "initial={2}, lower bound={3}, upper bound={4}, final a value={5}, " +
+-                      "final b value={6}, f(a)={7}, f(b)={8}",
+-                      numIterations, maximumIterations, initial,
+-                      lowerBound, upperBound, a, b, fa, fb);
++            int i = 1;
+         }
+         
+         return new double[]{a, b};

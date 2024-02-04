@@ -1,0 +1,71 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -383,6 +383,11 @@
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
+             readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+@@ -421,6 +426,38 @@
+             buffer = out;
+             pos = outPos;
+             readPos = outPos;
++			{
++				if (buffer == null || buffer.length - pos < decodeSize) {
++					resizeBuffer();
++				}
++				x = x << 6;
++				switch (modulus) {
++				case 2:
++					x = x << 6;
++					buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++					break;
++				case 3:
++					buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++					buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++					break;
++				}
++			}
++			{
++				if (buffer == null || buffer.length - pos < decodeSize) {
++					resizeBuffer();
++				}
++				x = x << 6;
++				switch (modulus) {
++				case 2:
++					x = x << 6;
++					buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++					break;
++				case 3:
++					buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
++					buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++					break;
++				}
++			}
+         }
+     }
+     /**
+@@ -570,7 +607,8 @@
+                 resizeBuffer();
+             }
+             
+-            x = x << 6;
++            resizeBuffer();
++			x = x << 6;
+             switch (modulus) {
+                 case 2 :
+                     x = x << 6;
+@@ -1022,7 +1060,6 @@
+      */
+     private void reset() {
+         buffer = null;
+-        pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;

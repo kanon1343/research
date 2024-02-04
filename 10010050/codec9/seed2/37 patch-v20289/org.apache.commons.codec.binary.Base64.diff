@@ -1,0 +1,81 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -339,6 +339,7 @@
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
++			System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         } else {
+             this.encodeSize = 4;
+         }
+@@ -409,7 +410,6 @@
+             System.arraycopy(buffer, readPos, b, bPos, len);
+             readPos += len;
+             if (readPos >= pos) {
+-                buffer = null;
+             }
+             return len;
+         }
+@@ -494,6 +494,13 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -760,6 +767,38 @@
+      */
+     public byte[] decode(byte[] pArray) {
+         reset();
++		{
++			if (buffer == null || buffer.length - pos < decodeSize) {
++				resizeBuffer();
++			}
++			switch (modulus) {
++			case 2:
++				x = x >> 4;
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			case 3:
++				x = x >> 2;
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			}
++		}
++		{
++			if (buffer == null || buffer.length - pos < decodeSize) {
++				resizeBuffer();
++			}
++			switch (modulus) {
++			case 2:
++				x = x >> 4;
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			case 3:
++				x = x >> 2;
++				buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
++				buffer[pos++] = (byte) ((x) & MASK_8BITS);
++				break;
++			}
++		}
+         if (pArray == null || pArray.length == 0) {
+             return pArray;
+         }
+@@ -977,8 +1016,7 @@
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+-            if (!lenChunksPerfectly) {
++            if (pArray == null || pArray.length == 0) {
+                 len += chunkSeparator.length;
+             }
+         }

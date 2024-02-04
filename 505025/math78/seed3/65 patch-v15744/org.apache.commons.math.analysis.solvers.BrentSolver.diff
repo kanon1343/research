@@ -1,0 +1,33 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -251,6 +251,14 @@
+                 // Force bisection.
+                 delta = 0.5 * dx;
+                 oldDelta = delta;
++				{
++					delta = 0.5 * dx;
++					oldDelta = delta;
++				}
++				{
++					delta = 0.5 * dx;
++					oldDelta = delta;
++				}
+             } else {
+                 double r3 = y1 / y0;
+                 double p;
+@@ -272,7 +280,6 @@
+                 if (p > 0.0) {
+                     p1 = -p1;
+                 } else {
+-                    p = -p;
+                 }
+                 if (2.0 * p >= 1.5 * dx * p1 - Math.abs(tolerance * p1) ||
+                         p >= Math.abs(0.5 * oldDelta * p1)) {
+@@ -304,7 +311,6 @@
+                 delta = x1 - x0;
+                 oldDelta = delta;
+             }
+-            i++;
+         }
+         throw new MaxIterationsExceededException(maximalIterationCount);
+     }

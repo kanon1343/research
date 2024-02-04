@@ -1,0 +1,15 @@
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -164,10 +164,10 @@
+             */
+             while (readLen == 0) {
+                 if (!base64.hasData()) {
+-                    byte[] buf = new byte[doEncode ? 4096 : 8192];
++                    int avail = base64.avail();
++					byte[] buf = new byte[doEncode ? 4096 : 8192];
+                     int c = in.read(buf);
+                     if (c > 0 && b.length == len) {
+-                        base64.setInitialBuffer(b, offset, len);
+                     }
+                     if (doEncode) {
+                         base64.encode(buf, 0, c);

@@ -1,0 +1,18 @@
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -103,6 +102,7 @@
+         incrementIterationsCounter();
+ 
+         Integer pivotCol = getPivotColumn(tableau);
++		this.restrictToNonNegative = restrictToNonNegative;
+         Integer pivotRow = getPivotRow(pivotCol, tableau);
+         if (pivotRow == null) {
+             throw new UnboundedSolutionException();

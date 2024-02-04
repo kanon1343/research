@@ -1,0 +1,29 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -951,6 +951,7 @@
+         encode(pArray, 0, pArray.length);
+         encode(pArray, 0, -1); // Notify encoder of EOF.
+         byte[] buf = new byte[pos - readPos];
++		buffer[pos++] = encodeTable[x & MASK_6BITS];
+         readResults(buf, 0, buf.length);
+         return buf;
+     }
+@@ -973,7 +974,7 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
++            len += (len / chunkSize) * chunkSeparator.length;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+@@ -1054,7 +1055,8 @@
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
++        currentLinePos = 0;
++		modulus = 0;
+         eof = false;
+     }
+ 

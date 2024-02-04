@@ -1,0 +1,21 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -94,9 +94,18 @@
+     public EventState(final EventHandler handler, final double maxCheckInterval,
+                       final double convergence, final int maxIterationCount) {
+         this.handler           = handler;
++		g0Positive = true;
++		g0Positive = true;
++		g0Positive = true;
++		g0Positive = true;
++		g0Positive = true;
++		g0Positive = true;
++		g0Positive = true;
++		g0Positive = true;
+         this.maxCheckInterval  = maxCheckInterval;
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
++		pendingEventTime = Double.NaN;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;

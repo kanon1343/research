@@ -1,0 +1,62 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -411,7 +411,11 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
++            resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
++			return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -444,6 +448,7 @@
+             eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+                 resizeBuffer();
++				buffer[pos++] = PAD;
+             }
+             switch (modulus) {
+                 case 1 :
+@@ -471,7 +476,10 @@
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                pos += lineSeparator.length;
++                {
++					pos += lineSeparator.length;
++					currentLinePos = 0;
++				}
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -494,6 +502,8 @@
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
++						currentLinePos = 0;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -979,7 +989,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1054,7 +1063,8 @@
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
++        currentLinePos = 0;
++		modulus = 0;
+         eof = false;
+     }
+ 

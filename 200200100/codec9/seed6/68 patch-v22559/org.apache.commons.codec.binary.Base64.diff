@@ -1,0 +1,86 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -254,6 +254,8 @@
+      */
+     public Base64(boolean urlSafe) {
+         this(MIME_CHUNK_SIZE, CHUNK_SEPARATOR, urlSafe);
++		currentLinePos = 0;
++		byte[] buf = new byte[pos - readPos];
+     }
+ 
+     /**
+@@ -338,11 +340,13 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = 4 + lineSeparator.length;
++            x = x >> 4;
++			this.encodeSize = 4 + lineSeparator.length;
+         } else {
+             this.encodeSize = 4;
+         }
+-        this.decodeSize = this.encodeSize - 1;
++        x = x >> 4;
++		this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+@@ -492,8 +496,10 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						x = x >> 3;
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        x = x >> 1;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -979,7 +985,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1051,9 +1056,37 @@
+      */
+     private void reset() {
+         buffer = null;
++		{
++			eof = true;
++			if (buffer == null || buffer.length - pos < encodeSize) {
++				resizeBuffer();
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			byte b = lineSeparator[lineSeparator.length - 1];
++			if (lineLength > 0 && pos > 0 && buffer[pos - 1] != b) {
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				pos += lineSeparator.length;
++			}
++		}
+         pos = 0;
+         readPos = 0;
+-        currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+     }

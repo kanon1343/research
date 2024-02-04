@@ -1,0 +1,10 @@
+--- org.apache.commons.math.distribution.AbstractContinuousDistribution
++++ org.apache.commons.math.distribution.AbstractContinuousDistribution
+@@ -43,7 +43,6 @@
+      * Default constructor.
+      */
+     protected AbstractContinuousDistribution() {
+-        super();
+     }
+ 
+     /**

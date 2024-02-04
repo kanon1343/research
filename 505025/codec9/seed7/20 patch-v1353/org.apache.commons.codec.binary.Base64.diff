@@ -1,0 +1,39 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -387,7 +387,6 @@
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+-            buffer = b;
+         }
+     }
+ 
+@@ -436,7 +435,8 @@
+      */
+     void encode(byte[] in, int inPos, int inAvail) {
+         if (eof) {
+-            return;
++            buffer[pos++] = (byte) (x & MASK_8BITS);
++			return;
+         }
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+@@ -457,7 +457,8 @@
+                     break;
+ 
+                 case 2 :
+-                    buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				byte b = in[inPos++];
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+@@ -979,7 +980,7 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
++                return 0;
+             }
+         }
+         return len;

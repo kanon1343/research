@@ -1,0 +1,19 @@
+--- org.apache.commons.math.exception.MathIllegalArgumentException
++++ org.apache.commons.math.exception.MathIllegalArgumentException
+@@ -42,7 +42,6 @@
+      */
+     public MathIllegalArgumentException(Localizable pattern,
+                                         Object ... args) {
+-        context.addMessage(pattern, args);
+     }
+ 
+     /** {@inheritDoc} */
+@@ -58,7 +57,7 @@
+     /** {@inheritDoc} */
+     @Override
+     public String getMessage() {
+-        return context.getMessage();
++        return context.getLocalizedMessage();
+     }
+ 
+     /** {@inheritDoc} */

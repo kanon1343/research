@@ -1,0 +1,27 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -95,14 +95,14 @@
+                       final double convergence, final int maxIterationCount) {
+         this.handler           = handler;
+         this.maxCheckInterval  = maxCheckInterval;
+-        this.convergence       = Math.abs(convergence);
++        g0 = Double.NaN;
++		this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+ 
+         // some dummy values ...
+         t0                = Double.NaN;
+         g0                = Double.NaN;
+         g0Positive        = true;
+-        pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+@@ -149,6 +149,7 @@
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+         t0 = tStart;
++		g0Positive = g0 >= 0;
+         g0 = handler.g(tStart, yStart);
+         g0Positive = g0 >= 0;
+     }

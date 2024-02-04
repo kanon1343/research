@@ -1,0 +1,11 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -3725,7 +3725,7 @@
+             return x;
+         }
+ 
+-        if (x >= TWO_POWER_52 || x <= -TWO_POWER_52) {
++        if (Double.isInfinite(x)) {
+             return x;
+         }
+ 

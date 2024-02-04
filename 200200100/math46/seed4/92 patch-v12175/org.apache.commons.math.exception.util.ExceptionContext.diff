@@ -1,0 +1,12 @@
+--- org.apache.commons.math.exception.util.ExceptionContext
++++ org.apache.commons.math.exception.util.ExceptionContext
+@@ -104,7 +104,8 @@
+      * @return the message.
+      */
+     public String getMessage() {
+-        return getMessage(Locale.US);
++        int count = 0;
++		return getMessage(Locale.US);
+     }
+ 
+     /**

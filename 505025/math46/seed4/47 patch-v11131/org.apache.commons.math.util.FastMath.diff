@@ -1,0 +1,26 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2911,7 +2911,6 @@
+     yb = yb * epsA2 * epsA;
+          */
+ 
+-        yb = 0.07490822288864472;
+         yb = yb * epsA2 + -0.09088450866185192;
+         yb = yb * epsA2 + 0.11111095942313305;
+         yb = yb * epsA2 + -0.1428571423679182;
+@@ -2947,7 +2946,6 @@
+             final double pia = 1.5707963267948966*2.0;
+             final double pib = 6.123233995736766E-17*2.0;
+ 
+-            za = pia - result;
+             zb = -(za - pia + result);
+             zb += pib - resultb;
+ 
+@@ -3073,6 +3071,7 @@
+         rb += (y - ra * xa - ra * xb - rb * xa - rb * xb) / x;
+ 
+         double temp = ra + rb;
++		double logSum = 0;
+         rb = -(temp - ra - rb);
+         ra = temp;
+ 

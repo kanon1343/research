@@ -1,0 +1,261 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -388,6 +388,204 @@
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+             buffer = b;
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
++			switch (modulus) {
++			case 1:
++				buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++					buffer[pos++] = PAD;
++				}
++				break;
++			case 2:
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
++				buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
++				if (encodeTable == STANDARD_ENCODE_TABLE) {
++					buffer[pos++] = PAD;
++				}
++				break;
++			}
+         }
+     }
+ 
+@@ -451,8 +649,30 @@
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
++                        System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						buffer[pos++] = PAD;
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         buffer[pos++] = PAD;
+-                        buffer[pos++] = PAD;
+                     }
+                     break;
+ 
+@@ -492,7 +712,12 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                        pos += lineSeparator.length;
++                        x = x >> 4;
++						x = x >> 4;
++						x = x >> 4;
++						pos += lineSeparator.length;
++						b += 256;
++						b += 256;
+                         currentLinePos = 0;
+                     }
+                 }
+@@ -973,7 +1198,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

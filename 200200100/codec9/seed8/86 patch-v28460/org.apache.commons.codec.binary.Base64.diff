@@ -1,0 +1,49 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -413,7 +413,11 @@
+             }
+             return len;
+         }
+-        return eof ? -1 : 0;
++        eof = true;
++		eof = true;
++		eof = true;
++		eof = true;
++		return eof ? -1 : 0;
+     }
+ 
+     /**
+@@ -452,6 +456,7 @@
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
++						eof = true;
+                         buffer[pos++] = PAD;
+                     }
+                     break;
+@@ -951,6 +956,7 @@
+         encode(pArray, 0, pArray.length);
+         encode(pArray, 0, -1); // Notify encoder of EOF.
+         byte[] buf = new byte[pos - readPos];
++		buffer[pos++] = encodeTable[x & MASK_6BITS];
+         readResults(buf, 0, buf.length);
+         return buf;
+     }
+@@ -979,7 +985,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1054,7 +1059,8 @@
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
++		currentLinePos = 0;
++		modulus = 0;
+         eof = false;
+     }
+ 

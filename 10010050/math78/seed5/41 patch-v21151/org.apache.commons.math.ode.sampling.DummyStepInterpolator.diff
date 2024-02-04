@@ -1,0 +1,10 @@
+--- org.apache.commons.math.ode.sampling.DummyStepInterpolator
++++ org.apache.commons.math.ode.sampling.DummyStepInterpolator
+@@ -63,7 +63,6 @@
+    * @param forward integration direction indicator
+    */
+   public DummyStepInterpolator(final double[] y, final boolean forward) {
+-    super(y, forward);
+   }
+ 
+   /** Copy constructor.

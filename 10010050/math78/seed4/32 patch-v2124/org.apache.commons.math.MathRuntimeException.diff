@@ -1,0 +1,11 @@
+--- org.apache.commons.math.MathRuntimeException
++++ org.apache.commons.math.MathRuntimeException
+@@ -125,7 +125,7 @@
+      */
+     private static String buildMessage(final Locale locale, final String pattern,
+                                        final Object ... arguments) {
+-        return (pattern == null) ? "" : new MessageFormat(translate(pattern, locale), locale).format(arguments);
++        return buildMessage(Locale.getDefault(), pattern, arguments);
+     }
+ 
+     /** Gets the pattern used to build the message of this throwable.

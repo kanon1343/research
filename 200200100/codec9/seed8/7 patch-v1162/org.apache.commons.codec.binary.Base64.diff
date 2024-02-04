@@ -1,0 +1,21 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -413,7 +413,8 @@
+             }
+             return len;
+         }
+-        return eof ? -1 : 0;
++        System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++		return eof ? -1 : 0;
+     }
+ 
+     /**
+@@ -973,7 +974,7 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
++            len += (len / chunkSize) * chunkSeparator.length;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

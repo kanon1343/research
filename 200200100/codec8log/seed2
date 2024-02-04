@@ -1,0 +1,4471 @@
+2023-11-15 01:28:24 [main] [WARN]  Configuration$Builder - The directory where kGenProg is running is different from the root directory of the given target project.
+2023-11-15 01:28:24 [main] [WARN]  Configuration$Builder - If the target project includes test cases with file I/O, such test cases won't run correctly.
+2023-11-15 01:28:24 [main] [WARN]  Configuration$Builder - We recommend you running kGenProg with the root directory of the target project as the current directory.
+2023-11-15 01:28:24 [main] [INFO]  KGenProgMain - 
+==================== kGenProg Configuration ====================
+configPath = /home/fse-pluto/Downloads/kGenProg-1.8.2/example/codec8/kgenprog-8.toml (set by command line)
+rootDir = /home/fse-pluto/Downloads/kGenProg-1.8.2/example/codec8 (set in config file)
+productPaths = [/home/fse-pluto/Downloads/kGenProg-1.8.2/example/codec8/src/java] (set in config file)
+testPaths = [/home/fse-pluto/Downloads/kGenProg-1.8.2/example/codec8/src/test] (set in config file)
+classPaths = []
+executionTests = [org.apache.commons.codec.binary.Base64InputStreamTest] (set in config file)
+outDir = kgenprog-out
+logLevel = INFO (set in config file)
+mutationGeneratingCount = 200 (set in config file)
+crossoverGeneratingCount = 200 (set in config file)
+headcount = 100
+maxGeneration = 500 (set in config file)
+timeLimit = PT24H (set in config file)
+testTimeLimit = PT3M (set in config file)
+requiredSolutionsCount = 100 (set in config file)
+randomSeed = 2 (set by command line)
+scope = PACKAGE (set in config file)
+faultLocalization = Zoltar (set in config file)
+mutationType = Simple
+crossoverType = Random
+firstVariantSelectionStrategy = Random
+secondVariantSelectionStrategy = Random
+isPatchOutput = true (set in config file)
+isHistoryRecord = false
+currentDirectory = /home/fse-pluto/Desktop/research
+version = 1.8.2
+================================================================
+2023-11-15 01:28:27 [main] [INFO]  KGenProgMain - initial failed tests (1/12)
+org.apache.commons.codec.binary.Base64InputStreamTest.testCodec105: null
+
+2023-11-15 01:28:27 [main] [INFO]  KGenProgMain - GA started
+2023-11-15 01:28:27 [main] [INFO]  KGenProgMain - entered the era of 1st generation.
+2023-11-15 01:55:33 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 27 minutes 5 seconds
+Variants: generated 200, build-succeeded 30, build-failed 98, syntax-invalid 14, redundant 58
+Fitness: max 1(2), min 0.333(1), ave 0.811
+Test execution time: sum 1621935 ms, max 900030 ms, min 24 ms
+----------------------------------------------------------------
+
+2023-11-15 01:55:33 [main] [INFO]  KGenProgMain - entered the era of 2nd generation.
+2023-11-15 02:01:38 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 33 minutes 11 seconds
+Variants: generated 200, build-succeeded 37, build-failed 98, syntax-invalid 22, redundant 43
+Fitness: max 1(1), min 0(1), ave 0.773
+Test execution time: sum 361623 ms, max 360023 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 02:01:38 [main] [INFO]  KGenProgMain - entered the era of 3rd generation.
+2023-11-15 03:22:49 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 1 hours 54 minutes 22 seconds
+Variants: generated 400, build-succeeded 141, build-failed 95, syntax-invalid 43, redundant 121
+Fitness: max 0.917(22), min 0(3), ave 0.752
+Test execution time: sum 4864563 ms, max 1440022 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 03:22:49 [main] [INFO]  KGenProgMain - entered the era of 4th generation.
+2023-11-15 03:51:46 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 23 minutes 18 seconds
+Variants: generated 400, build-succeeded 133, build-failed 112, syntax-invalid 42, redundant 113
+Fitness: max 0.917(28), min 0.5(2), ave 0.793
+Test execution time: sum 1729422 ms, max 900022 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 03:51:46 [main] [INFO]  KGenProgMain - entered the era of 5th generation.
+2023-11-15 03:51:58 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 23 minutes 30 seconds
+Variants: generated 400, build-succeeded 121, build-failed 110, syntax-invalid 58, redundant 111
+Fitness: max 0.917(46), min 0(1), ave 0.807
+Test execution time: sum 5563 ms, max 128 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 03:51:58 [main] [INFO]  KGenProgMain - entered the era of 6th generation.
+2023-11-15 03:52:11 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 23 minutes 44 seconds
+Variants: generated 400, build-succeeded 106, build-failed 127, syntax-invalid 61, redundant 106
+Fitness: max 1(1), min 0(1), ave 0.867
+Test execution time: sum 7637 ms, max 143 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 03:52:11 [main] [INFO]  KGenProgMain - entered the era of 7th generation.
+2023-11-15 04:10:25 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 41 minutes 58 seconds
+Variants: generated 400, build-succeeded 101, build-failed 133, syntax-invalid 62, redundant 104
+Fitness: max 1(1), min 0.333(1), ave 0.878
+Test execution time: sum 1087672 ms, max 1080020 ms, min 19 ms
+----------------------------------------------------------------
+
+2023-11-15 04:10:25 [main] [INFO]  KGenProgMain - entered the era of 8th generation.
+2023-11-15 04:34:42 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 6 minutes 15 seconds
+Variants: generated 400, build-succeeded 125, build-failed 117, syntax-invalid 44, redundant 114
+Fitness: max 0.917(109), min 0.333(2), ave 0.879
+Test execution time: sum 1450242 ms, max 720022 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 04:34:42 [main] [INFO]  KGenProgMain - entered the era of 9th generation.
+2023-11-15 04:47:00 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 18 minutes 33 seconds
+Variants: generated 400, build-succeeded 141, build-failed 115, syntax-invalid 56, redundant 88
+Fitness: max 1(1), min 0(1), ave 0.879
+Test execution time: sum 730969 ms, max 720022 ms, min 19 ms
+----------------------------------------------------------------
+
+2023-11-15 04:47:00 [main] [INFO]  KGenProgMain - entered the era of 10th generation.
+2023-11-15 04:59:18 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 30 minutes 51 seconds
+Variants: generated 400, build-succeeded 133, build-failed 126, syntax-invalid 81, redundant 60
+Fitness: max 1(3), min 0.333(1), ave 0.906
+Test execution time: sum 730843 ms, max 720022 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 04:59:18 [main] [INFO]  KGenProgMain - entered the era of 11th generation.
+2023-11-15 05:59:38 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 4 hours 31 minutes 11 seconds
+Variants: generated 400, build-succeeded 148, build-failed 128, syntax-invalid 47, redundant 77
+Fitness: max 1(3), min 0.333(5), ave 0.888
+Test execution time: sum 3611572 ms, max 720022 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 05:59:38 [main] [INFO]  KGenProgMain - entered the era of 12th generation.
+2023-11-15 07:11:56 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 43 minutes 28 seconds
+Variants: generated 400, build-succeeded 132, build-failed 134, syntax-invalid 56, redundant 78
+Fitness: max 0.917(114), min 0.333(6), ave 0.873
+Test execution time: sum 4329906 ms, max 720022 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 07:11:56 [main] [INFO]  KGenProgMain - entered the era of 13th generation.
+2023-11-15 08:21:13 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 6 hours 52 minutes 45 seconds
+Variants: generated 400, build-succeeded 143, build-failed 126, syntax-invalid 58, redundant 73
+Fitness: max 1(1), min 0.333(2), ave 0.883
+Test execution time: sum 4148944 ms, max 1080020 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 08:21:13 [main] [INFO]  KGenProgMain - entered the era of 14th generation.
+2023-11-15 09:27:29 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 7 hours 59 minutes 2 seconds
+Variants: generated 400, build-succeeded 156, build-failed 112, syntax-invalid 63, redundant 69
+Fitness: max 1(2), min 0.333(4), ave 0.878
+Test execution time: sum 3968419 ms, max 720022 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 09:27:29 [main] [INFO]  KGenProgMain - entered the era of 15th generation.
+2023-11-15 10:09:45 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 8 hours 41 minutes 17 seconds
+Variants: generated 400, build-succeeded 158, build-failed 117, syntax-invalid 57, redundant 68
+Fitness: max 0.917(133), min 0.333(2), ave 0.879
+Test execution time: sum 2527133 ms, max 720022 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 10:09:45 [main] [INFO]  KGenProgMain - entered the era of 16th generation.
+2023-11-15 10:55:07 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 9 hours 26 minutes 40 seconds
+Variants: generated 400, build-succeeded 182, build-failed 118, syntax-invalid 49, redundant 51
+Fitness: max 1(1), min 0.333(3), ave 0.891
+Test execution time: sum 2713101 ms, max 720022 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 10:55:07 [main] [INFO]  KGenProgMain - entered the era of 17th generation.
+2023-11-15 10:55:31 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 9 hours 27 minutes 3 seconds
+Variants: generated 400, build-succeeded 174, build-failed 126, syntax-invalid 59, redundant 41
+Fitness: max 0.917(164), min 0.5(1), ave 0.905
+Test execution time: sum 14684 ms, max 160 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 10:55:31 [main] [INFO]  KGenProgMain - entered the era of 18th generation.
+2023-11-15 11:21:02 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 9 hours 52 minutes 34 seconds
+Variants: generated 400, build-succeeded 167, build-failed 110, syntax-invalid 59, redundant 64
+Fitness: max 0.917(156), min 0(2), ave 0.892
+Test execution time: sum 1522412 ms, max 1440021 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 11:21:02 [main] [INFO]  KGenProgMain - entered the era of 19th generation.
+2023-11-15 12:06:26 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 10 hours 37 minutes 58 seconds
+Variants: generated 400, build-succeeded 180, build-failed 124, syntax-invalid 47, redundant 49
+Fitness: max 0.917(159), min 0.333(1), ave 0.892
+Test execution time: sum 2714579 ms, max 1080020 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 12:06:26 [main] [INFO]  KGenProgMain - entered the era of 20th generation.
+2023-11-15 12:30:51 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 2 minutes 23 seconds
+Variants: generated 400, build-succeeded 184, build-failed 118, syntax-invalid 54, redundant 44
+Fitness: max 1(2), min 0.333(1), ave 0.901
+Test execution time: sum 1455791 ms, max 1440021 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 12:30:51 [main] [INFO]  KGenProgMain - entered the era of 21st generation.
+2023-11-15 12:31:15 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 2 minutes 47 seconds
+Variants: generated 400, build-succeeded 173, build-failed 133, syntax-invalid 41, redundant 53
+Fitness: max 0.917(159), min 0.667(5), ave 0.902
+Test execution time: sum 13988 ms, max 123 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 12:31:15 [main] [INFO]  KGenProgMain - entered the era of 22nd generation.
+2023-11-15 12:32:47 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 4 minutes 20 seconds
+Variants: generated 400, build-succeeded 178, build-failed 112, syntax-invalid 59, redundant 51
+Fitness: max 1(2), min 0.5(1), ave 0.906
+Test execution time: sum 83111 ms, max 68683 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 12:32:47 [main] [INFO]  KGenProgMain - entered the era of 23rd generation.
+2023-11-15 12:57:12 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 28 minutes 45 seconds
+Variants: generated 400, build-succeeded 187, build-failed 102, syntax-invalid 61, redundant 50
+Fitness: max 0.917(175), min 0(1), ave 0.901
+Test execution time: sum 1455545 ms, max 1440021 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 12:57:12 [main] [INFO]  KGenProgMain - entered the era of 24th generation.
+2023-11-15 13:21:40 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 53 minutes 13 seconds
+Variants: generated 400, build-succeeded 204, build-failed 109, syntax-invalid 45, redundant 42
+Fitness: max 0.917(189), min 0.333(1), ave 0.902
+Test execution time: sum 1457193 ms, max 1440021 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 13:21:40 [main] [INFO]  KGenProgMain - entered the era of 25th generation.
+2023-11-15 13:22:07 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 53 minutes 40 seconds
+Variants: generated 400, build-succeeded 193, build-failed 119, syntax-invalid 49, redundant 39
+Fitness: max 0.917(182), min 0.667(3), ave 0.906
+Test execution time: sum 16157 ms, max 167 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 13:22:07 [main] [INFO]  KGenProgMain - entered the era of 26th generation.
+2023-11-15 13:22:35 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 54 minutes 8 seconds
+Variants: generated 400, build-succeeded 201, build-failed 115, syntax-invalid 40, redundant 44
+Fitness: max 0.917(187), min 0(1), ave 0.898
+Test execution time: sum 16775 ms, max 161 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 13:22:35 [main] [INFO]  KGenProgMain - entered the era of 27th generation.
+2023-11-15 13:41:11 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 12 hours 12 minutes 44 seconds
+Variants: generated 400, build-succeeded 202, build-failed 130, syntax-invalid 43, redundant 25
+Fitness: max 1(1), min 0.333(1), ave 0.897
+Test execution time: sum 1104682 ms, max 1080022 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 13:41:11 [main] [INFO]  KGenProgMain - entered the era of 28th generation.
+2023-11-15 14:05:40 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 12 hours 37 minutes 13 seconds
+Variants: generated 400, build-succeeded 202, build-failed 112, syntax-invalid 40, redundant 46
+Fitness: max 1(1), min 0(1), ave 0.896
+Test execution time: sum 1457204 ms, max 1440021 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 14:05:40 [main] [INFO]  KGenProgMain - entered the era of 29th generation.
+2023-11-15 14:45:08 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 16 minutes 40 seconds
+Variants: generated 400, build-succeeded 202, build-failed 107, syntax-invalid 47, redundant 44
+Fitness: max 1(1), min 0.333(1), ave 0.895
+Test execution time: sum 2356788 ms, max 1440021 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 14:45:08 [main] [INFO]  KGenProgMain - entered the era of 30th generation.
+2023-11-15 14:45:35 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 17 minutes 8 seconds
+Variants: generated 400, build-succeeded 195, build-failed 114, syntax-invalid 49, redundant 42
+Fitness: max 0.917(181), min 0.667(4), ave 0.903
+Test execution time: sum 16199 ms, max 170 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 14:45:35 [main] [INFO]  KGenProgMain - entered the era of 31st generation.
+2023-11-15 15:20:10 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 51 minutes 43 seconds
+Variants: generated 400, build-succeeded 187, build-failed 114, syntax-invalid 44, redundant 55
+Fitness: max 1(2), min 0.5(4), ave 0.902
+Test execution time: sum 2064011 ms, max 1080021 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 15:20:10 [main] [INFO]  KGenProgMain - entered the era of 32nd generation.
+2023-11-15 15:44:38 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 16 minutes 10 seconds
+Variants: generated 400, build-succeeded 195, build-failed 117, syntax-invalid 46, redundant 42
+Fitness: max 1(1), min 0.333(1), ave 0.901
+Test execution time: sum 1455996 ms, max 1440021 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 15:44:38 [main] [INFO]  KGenProgMain - entered the era of 33rd generation.
+2023-11-15 15:45:06 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 16 minutes 38 seconds
+Variants: generated 400, build-succeeded 194, build-failed 125, syntax-invalid 46, redundant 35
+Fitness: max 0.917(189), min 0.667(1), ave 0.912
+Test execution time: sum 16427 ms, max 173 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 15:45:06 [main] [INFO]  KGenProgMain - entered the era of 34th generation.
+2023-11-15 16:24:33 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 56 minutes 6 seconds
+Variants: generated 400, build-succeeded 203, build-failed 110, syntax-invalid 54, redundant 33
+Fitness: max 0.917(187), min 0.333(1), ave 0.898
+Test execution time: sum 2356073 ms, max 1440021 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 16:24:33 [main] [INFO]  KGenProgMain - entered the era of 35th generation.
+2023-11-15 16:33:58 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 15 hours 5 minutes 31 seconds
+Variants: generated 400, build-succeeded 185, build-failed 127, syntax-invalid 60, redundant 28
+Fitness: max 1(3), min 0(1), ave 0.903
+Test execution time: sum 553089 ms, max 537599 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 16:33:58 [main] [INFO]  KGenProgMain - entered the era of 36th generation.
+2023-11-15 16:59:42 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 15 hours 31 minutes 15 seconds
+Variants: generated 400, build-succeeded 217, build-failed 105, syntax-invalid 47, redundant 31
+Fitness: max 0.917(202), min 0.333(1), ave 0.902
+Test execution time: sum 1532041 ms, max 1440021 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 16:59:42 [main] [INFO]  KGenProgMain - entered the era of 37th generation.
+2023-11-15 17:33:04 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 16 hours 4 minutes 37 seconds
+Variants: generated 400, build-succeeded 201, build-failed 115, syntax-invalid 51, redundant 33
+Fitness: max 0.917(192), min 0.583(3), ave 0.906
+Test execution time: sum 1990166 ms, max 900022 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 17:33:04 [main] [INFO]  KGenProgMain - entered the era of 38th generation.
+2023-11-15 18:06:27 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 16 hours 37 minutes 59 seconds
+Variants: generated 400, build-succeeded 202, build-failed 111, syntax-invalid 45, redundant 42
+Fitness: max 0.917(189), min 0.333(2), ave 0.9
+Test execution time: sum 1989737 ms, max 1440021 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 18:06:27 [main] [INFO]  KGenProgMain - entered the era of 39th generation.
+2023-11-15 18:32:09 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 3 minutes 42 seconds
+Variants: generated 400, build-succeeded 190, build-failed 124, syntax-invalid 47, redundant 39
+Fitness: max 0.917(181), min 0.333(1), ave 0.901
+Test execution time: sum 1529709 ms, max 1440021 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 18:32:09 [main] [INFO]  KGenProgMain - entered the era of 40th generation.
+2023-11-15 18:32:36 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 4 minutes 9 seconds
+Variants: generated 400, build-succeeded 176, build-failed 112, syntax-invalid 87, redundant 25
+Fitness: max 0.917(168), min 0.75(7), ave 0.91
+Test execution time: sum 15150 ms, max 577 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 18:32:36 [main] [INFO]  KGenProgMain - entered the era of 41st generation.
+2023-11-15 18:48:03 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 19 minutes 36 seconds
+Variants: generated 400, build-succeeded 177, build-failed 120, syntax-invalid 79, redundant 24
+Fitness: max 1(1), min 0.5(2), ave 0.903
+Test execution time: sum 914355 ms, max 900023 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 18:48:03 [main] [INFO]  KGenProgMain - entered the era of 42nd generation.
+2023-11-15 19:12:31 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 44 minutes 4 seconds
+Variants: generated 400, build-succeeded 184, build-failed 124, syntax-invalid 72, redundant 20
+Fitness: max 0.917(165), min 0.333(1), ave 0.893
+Test execution time: sum 1455017 ms, max 1440021 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 19:12:31 [main] [INFO]  KGenProgMain - entered the era of 43rd generation.
+2023-11-15 19:51:54 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 18 hours 23 minutes 27 seconds
+Variants: generated 400, build-succeeded 182, build-failed 116, syntax-invalid 75, redundant 27
+Fitness: max 1(1), min 0.583(4), ave 0.9
+Test execution time: sum 2350466 ms, max 720022 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 19:51:54 [main] [INFO]  KGenProgMain - entered the era of 44th generation.
+2023-11-15 20:22:23 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 18 hours 53 minutes 56 seconds
+Variants: generated 400, build-succeeded 193, build-failed 112, syntax-invalid 70, redundant 25
+Fitness: max 0.917(182), min 0(1), ave 0.901
+Test execution time: sum 1815641 ms, max 900023 ms, min 20 ms
+----------------------------------------------------------------
+
+2023-11-15 20:22:23 [main] [INFO]  KGenProgMain - entered the era of 45th generation.
+2023-11-15 21:37:44 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 9 minutes 17 seconds
+Variants: generated 400, build-succeeded 173, build-failed 123, syntax-invalid 81, redundant 23
+Fitness: max 1(1), min 0.333(2), ave 0.895
+Test execution time: sum 4507840 ms, max 1440021 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 21:37:44 [main] [INFO]  KGenProgMain - entered the era of 46th generation.
+2023-11-15 21:53:15 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 24 minutes 47 seconds
+Variants: generated 400, build-succeeded 202, build-failed 106, syntax-invalid 70, redundant 22
+Fitness: max 0.917(192), min 0.583(1), ave 0.907
+Test execution time: sum 916589 ms, max 900023 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 21:53:15 [main] [INFO]  KGenProgMain - entered the era of 47th generation.
+2023-11-15 22:35:44 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 7 minutes 16 seconds
+Variants: generated 400, build-succeeded 186, build-failed 115, syntax-invalid 75, redundant 24
+Fitness: max 0.917(173), min 0.333(2), ave 0.9
+Test execution time: sum 2535540 ms, max 1440021 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 22:35:44 [main] [INFO]  KGenProgMain - entered the era of 48th generation.
+2023-11-15 22:36:16 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 7 minutes 49 seconds
+Variants: generated 400, build-succeeded 212, build-failed 106, syntax-invalid 62, redundant 20
+Fitness: max 1(1), min 0.667(4), ave 0.908
+Test execution time: sum 17982 ms, max 160 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 22:36:16 [main] [INFO]  KGenProgMain - entered the era of 49th generation.
+2023-11-15 22:48:49 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 20 minutes 22 seconds
+Variants: generated 400, build-succeeded 215, build-failed 110, syntax-invalid 51, redundant 24
+Fitness: max 0.917(199), min 0.5(2), ave 0.899
+Test execution time: sum 737562 ms, max 720022 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 22:48:49 [main] [INFO]  KGenProgMain - entered the era of 50th generation.
+2023-11-15 23:13:22 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 44 minutes 54 seconds
+Variants: generated 400, build-succeeded 208, build-failed 111, syntax-invalid 62, redundant 19
+Fitness: max 1(2), min 0.333(1), ave 0.902
+Test execution time: sum 1457639 ms, max 1440021 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 23:13:22 [main] [INFO]  KGenProgMain - entered the era of 51st generation.
+2023-11-15 23:13:54 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 45 minutes 26 seconds
+Variants: generated 400, build-succeeded 196, build-failed 124, syntax-invalid 54, redundant 26
+Fitness: max 1(1), min 0.667(3), ave 0.911
+Test execution time: sum 17088 ms, max 229 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-15 23:13:54 [main] [INFO]  KGenProgMain - entered the era of 52nd generation.
+2023-11-15 23:29:23 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 55 seconds
+Variants: generated 400, build-succeeded 173, build-failed 129, syntax-invalid 74, redundant 24
+Fitness: max 0.917(161), min 0.5(1), ave 0.901
+Test execution time: sum 914450 ms, max 900023 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 23:29:23 [main] [INFO]  KGenProgMain - entered the era of 53rd generation.
+2023-11-15 23:53:54 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 25 minutes 27 seconds
+Variants: generated 400, build-succeeded 195, build-failed 103, syntax-invalid 78, redundant 24
+Fitness: max 1(3), min 0.333(1), ave 0.889
+Test execution time: sum 1456268 ms, max 1440021 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-15 23:53:54 [main] [INFO]  KGenProgMain - entered the era of 54th generation.
+2023-11-16 00:19:34 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 51 minutes 7 seconds
+Variants: generated 400, build-succeeded 190, build-failed 114, syntax-invalid 70, redundant 26
+Fitness: max 1(1), min 0.333(1), ave 0.895
+Test execution time: sum 1524754 ms, max 900021 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-16 00:19:34 [main] [INFO]  KGenProgMain - entered the era of 55th generation.
+2023-11-16 00:53:03 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 23 hours 24 minutes 36 seconds
+Variants: generated 400, build-succeeded 188, build-failed 115, syntax-invalid 69, redundant 28
+Fitness: max 1(1), min 0.333(1), ave 0.901
+Test execution time: sum 1993656 ms, max 900023 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-16 00:53:03 [main] [INFO]  KGenProgMain - entered the era of 56th generation.
+2023-11-16 01:26:34 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 23 hours 58 minutes 6 seconds
+Variants: generated 400, build-succeeded 180, build-failed 125, syntax-invalid 82, redundant 13
+Fitness: max 1(2), min 0.333(1), ave 0.894
+Test execution time: sum 1995267 ms, max 1440021 ms, min 21 ms
+----------------------------------------------------------------
+
+2023-11-16 01:26:34 [main] [INFO]  KGenProgMain - entered the era of 57th generation.
+2023-11-16 02:21:01 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 24 hours 52 minutes 33 seconds
+Variants: generated 400, build-succeeded 180, build-failed 112, syntax-invalid 83, redundant 25
+Fitness: max 1(2), min 0.5(1), ave 0.9
+Test execution time: sum 3251539 ms, max 1080021 ms, min 22 ms
+----------------------------------------------------------------
+
+2023-11-16 02:21:01 [main] [INFO]  KGenProgMain - GA stopped
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v129)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v129)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v129)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v129)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -333,6 +333,7 @@
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			eof = true;
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v129)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v129)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v129)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v152)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v152)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v152)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v152)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -419,6 +419,7 @@
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+             buffer = out;
++			buffer = null;
+             pos = outPos;
+             readPos = outPos;
+         }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v152)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v152)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v152)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v292)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v292)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v292)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v292)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,9 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            modulus = 0;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			eof = true;
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v292)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v292)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v292)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v1606)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v1606)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v1606)
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -167,7 +167,6 @@
+                     byte[] buf = new byte[doEncode ? 4096 : 8192];
+                     int c = in.read(buf);
+                     if (c > 0 && b.length == len) {
+-                        base64.setInitialBuffer(b, offset, len);
+                     }
+                     if (doEncode) {
+                         base64.encode(buf, 0, c);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v1606)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v1606)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,8 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            String sep = StringUtils.newStringUtf8(lineSeparator);
++			lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -545,7 +546,6 @@
+             if (b == PAD) {
+                 // We're done.
+                 eof = true;
+-                break;
+             } else {
+                 if (b >= 0 && b < DECODE_TABLE.length) {
+                     int result = DECODE_TABLE[b];
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v1606)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v1606)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v1606)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2271)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2271)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2271)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2271)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,9 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            eof = true;
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -464,7 +465,8 @@
+                     break;
+ 
+                 case 2 :
+-                    buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
++				currentLinePos = 0;
++				buffer[pos++] = encodeTable[(x >> 10) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x >> 4) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 2) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2271)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2271)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2271)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2846)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2846)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2846)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2846)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,7 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            int readLen = 0;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -417,7 +417,7 @@
+     }
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+-        if (out != null && out.length == outAvail) {
++        if (0 == modulus) {
+             buffer = out;
+             pos = outPos;
+             readPos = outPos;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2846)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2846)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2846)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+@@ -184,7 +183,6 @@
+      */
+     public static String newString(byte[] bytes, String charsetName) {
+         if (bytes == null) {
+-            return null;
+         }
+         try {
+             return new String(bytes, charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v2846)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3285)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3285)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3285)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3285)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,13 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			eof = true;
++            {
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -486,7 +492,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3285)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3285)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3285)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3285)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3443)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3443)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3443)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3443)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,10 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            int bytesCopied = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			lineLength = 0;  // disable chunk-separating
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -417,7 +420,7 @@
+     }
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+-        if (out != null && out.length == outAvail) {
++        if (encodeTable == STANDARD_ENCODE_TABLE) {
+             buffer = out;
+             pos = outPos;
+             readPos = outPos;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3443)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3443)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3443)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3571)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3571)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3571)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3571)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,10 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            int bytesCopied = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			lineLength = 0;  // disable chunk-separating
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -417,7 +420,7 @@
+     }
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+-        if (out != null && out.length == outAvail) {
++        if (encodeTable == STANDARD_ENCODE_TABLE) {
+             buffer = out;
+             pos = outPos;
+             readPos = outPos;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3571)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3571)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3571)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3571)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3801)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3801)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3801)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3801)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,7 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -486,7 +487,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3801)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3801)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3801)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3801)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3874)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3874)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3874)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3874)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,10 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            int bytesCopied = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			lineLength = 0;  // disable chunk-separating
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -345,6 +348,7 @@
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3874)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3874)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3874)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3977)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3977)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3977)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3977)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,9 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            int bytesCopied = 0;
++			pos = 0;
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3977)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3977)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3977)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v3977)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v4548)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v4548)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v4548)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v4548)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,8 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            eof = true;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -383,6 +384,7 @@
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
++			byte b = lineSeparator[lineSeparator.length - 1];
+             readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v4548)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v4548)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v4548)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5075)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5075)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5075)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5075)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,9 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            String sep = StringUtils.newStringUtf8(lineSeparator);
++			lineLength = 0;  // disable chunk-separating
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -343,6 +345,7 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+@@ -486,7 +489,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5075)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5075)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5075)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5075)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5166)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5166)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5166)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5166)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,11 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            String sep = StringUtils.newStringUtf8(lineSeparator);
++			lineLength = 0;  // disable chunk-separating
++			eof = true;
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5166)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5166)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5166)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5166)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5664)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5664)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5664)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5664)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,8 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            int bytesCopied = 0;
++			lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -344,7 +345,9 @@
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -418,7 +421,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }
+@@ -486,7 +488,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5664)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5664)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v5664)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7368)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7368)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7368)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7368)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,10 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            modulus = 0;
++			eof = true;
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -344,7 +346,9 @@
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7368)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7368)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7368)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,7 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
++            int bytesCopied = 0;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7368)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7391)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7391)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7391)
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -164,10 +164,10 @@
+             */
+             while (readLen == 0) {
+                 if (!base64.hasData()) {
+-                    byte[] buf = new byte[doEncode ? 4096 : 8192];
++                    int avail = base64.avail();
++					byte[] buf = new byte[doEncode ? 4096 : 8192];
+                     int c = in.read(buf);
+                     if (c > 0 && b.length == len) {
+-                        base64.setInitialBuffer(b, offset, len);
+                     }
+                     if (doEncode) {
+                         base64.encode(buf, 0, c);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7391)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7391)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -343,8 +343,11 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -543,8 +546,6 @@
+             }
+             byte b = in[inPos++];
+             if (b == PAD) {
+-                // We're done.
+-                eof = true;
+                 break;
+             } else {
+                 if (b >= 0 && b < DECODE_TABLE.length) {
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7391)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7391)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v7391)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8030)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8030)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8030)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8030)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,8 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -345,9 +346,11 @@
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
++		eof = false;
+     }
+ 
+     /**
+@@ -418,7 +421,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8030)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8030)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8030)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8030)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8169)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8169)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8169)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8169)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,8 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            eof = true;
++			currentLinePos = 0;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -343,6 +344,7 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+@@ -486,7 +488,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8169)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8169)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8169)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v8169)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10130)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10130)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10130)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10130)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -343,6 +343,7 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+@@ -418,7 +419,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }
+@@ -486,7 +486,9 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10130)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10130)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10130)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+@@ -184,7 +183,6 @@
+      */
+     public static String newString(byte[] bytes, String charsetName) {
+         if (bytes == null) {
+-            return null;
+         }
+         try {
+             return new String(bytes, charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10130)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10583)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10583)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10583)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10583)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,8 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			eof = true;
++			currentLinePos = 0;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -486,7 +488,9 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+@@ -543,8 +547,6 @@
+             }
+             byte b = in[inPos++];
+             if (b == PAD) {
+-                // We're done.
+-                eof = true;
+                 break;
+             } else {
+                 if (b >= 0 && b < DECODE_TABLE.length) {
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10583)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10583)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10583)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10889)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10889)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10889)
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -167,7 +167,6 @@
+                     byte[] buf = new byte[doEncode ? 4096 : 8192];
+                     int c = in.read(buf);
+                     if (c > 0 && b.length == len) {
+-                        base64.setInitialBuffer(b, offset, len);
+                     }
+                     if (doEncode) {
+                         base64.encode(buf, 0, c);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10889)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10889)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,10 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            String sep = StringUtils.newStringUtf8(lineSeparator);
++			lineLength = 0;  // disable chunk-separating
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -345,6 +347,8 @@
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -486,7 +490,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+@@ -543,8 +548,6 @@
+             }
+             byte b = in[inPos++];
+             if (b == PAD) {
+-                // We're done.
+-                eof = true;
+                 break;
+             } else {
+                 if (b >= 0 && b < DECODE_TABLE.length) {
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10889)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10889)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v10889)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11743)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11743)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11743)
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -167,7 +167,6 @@
+                     byte[] buf = new byte[doEncode ? 4096 : 8192];
+                     int c = in.read(buf);
+                     if (c > 0 && b.length == len) {
+-                        base64.setInitialBuffer(b, offset, len);
+                     }
+                     if (doEncode) {
+                         base64.encode(buf, 0, c);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11743)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11743)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -344,10 +344,13 @@
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
++		eof = false;
+     }
+ 
+     /**
+@@ -486,7 +489,10 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11743)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11743)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11743)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11796)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11796)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11796)
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -167,7 +167,6 @@
+                     byte[] buf = new byte[doEncode ? 4096 : 8192];
+                     int c = in.read(buf);
+                     if (c > 0 && b.length == len) {
+-                        base64.setInitialBuffer(b, offset, len);
+                     }
+                     if (doEncode) {
+                         base64.encode(buf, 0, c);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11796)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11796)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,8 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -344,7 +345,8 @@
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -486,7 +488,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11796)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11796)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11796)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+@@ -184,7 +183,6 @@
+      */
+     public static String newString(byte[] bytes, String charsetName) {
+         if (bytes == null) {
+-            return null;
+         }
+         try {
+             return new String(bytes, charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v11796)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v12063)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v12063)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v12063)
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -170,7 +170,8 @@
+                         base64.setInitialBuffer(b, offset, len);
+                     }
+                     if (doEncode) {
+-                        base64.encode(buf, 0, c);
++                        long mod = len % 4;
++						base64.encode(buf, 0, c);
+                     } else {
+                         base64.decode(buf, 0, c);
+                     }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v12063)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v12063)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -343,11 +343,14 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
++		eof = false;
+     }
+ 
+     /**
+@@ -418,7 +421,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }
+@@ -486,7 +488,9 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v12063)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v12063)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v12063)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13277)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13277)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13277)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13277)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -343,8 +343,12 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -383,7 +387,12 @@
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+             pos = 0;
+-            readPos = 0;
++            {
++				byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
++				System.arraycopy(buffer, 0, b, 0, buffer.length);
++				buffer = b;
++			}
++			readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+             System.arraycopy(buffer, 0, b, 0, buffer.length);
+@@ -418,7 +427,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }
+@@ -486,7 +494,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13277)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13277)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13277)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13322)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13322)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13322)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13322)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,8 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            eof = true;
++			lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -343,8 +344,12 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -486,7 +491,11 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int bytesCopied = 0;
++				readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13322)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13322)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13322)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13391)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13391)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13391)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13391)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,8 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -343,8 +343,10 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -418,7 +420,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }
+@@ -486,7 +487,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13391)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13391)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13391)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+@@ -184,7 +183,6 @@
+      */
+     public static String newString(byte[] bytes, String charsetName) {
+         if (bytes == null) {
+-            return null;
+         }
+         try {
+             return new String(bytes, charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v13391)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v15603)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v15603)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v15603)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v15603)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,8 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            lineSeparator = CHUNK_SEPARATOR;
++            eof = true;
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -343,8 +343,12 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v15603)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v15603)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v15603)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v15603)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v16504)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v16504)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v16504)
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -170,7 +170,8 @@
+                         base64.setInitialBuffer(b, offset, len);
+                     }
+                     if (doEncode) {
+-                        base64.encode(buf, 0, c);
++                        long mod = len % 4;
++						base64.encode(buf, 0, c);
+                     } else {
+                         base64.decode(buf, 0, c);
+                     }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v16504)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v16504)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,9 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            resizeBuffer();
++            eof = true;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -344,7 +345,10 @@
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -417,7 +421,7 @@
+     }
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+-        if (out != null && out.length == outAvail) {
++        if (encodeTable == STANDARD_ENCODE_TABLE) {
+             buffer = out;
+             pos = outPos;
+             readPos = outPos;
+@@ -486,7 +490,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v16504)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v16504)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v16504)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v17262)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v17262)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v17262)
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -167,7 +167,6 @@
+                     byte[] buf = new byte[doEncode ? 4096 : 8192];
+                     int c = in.read(buf);
+                     if (c > 0 && b.length == len) {
+-                        base64.setInitialBuffer(b, offset, len);
+                     }
+                     if (doEncode) {
+                         base64.encode(buf, 0, c);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v17262)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v17262)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,12 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			lineLength = 0;  // disable chunk-separating
++            readPos = 0;
++			readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -344,7 +348,9 @@
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -486,7 +492,9 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v17262)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v17262)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v17262)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v18498)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v18498)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v18498)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v18498)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,15 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            {
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				lineSeparator = CHUNK_SEPARATOR;
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				readPos = 0;
++			}
++			int bytesCopied = 0;
++			lineLength = 0;  // disable chunk-separating
++            eof = true;
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -344,7 +351,8 @@
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -486,7 +494,10 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v18498)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v18498)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v18498)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19417)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19417)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19417)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19417)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,7 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -343,8 +343,14 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19417)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19417)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19417)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19544)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19544)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19544)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19544)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,9 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			eof = true;
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -343,8 +345,14 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -486,7 +494,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19544)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19544)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19544)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19872)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19872)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19872)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19872)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,7 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -343,8 +344,14 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
++		x = x << 6;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -486,7 +493,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19872)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19872)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19872)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v19872)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20540)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20540)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20540)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20540)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,14 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            {
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				eof = true;
++				readPos = 0;
++			}
++			lineLength = 0;  // disable chunk-separating
++			currentLinePos = 0;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -344,7 +351,12 @@
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20540)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20540)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20540)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20580)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20580)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20580)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20580)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,12 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			currentLinePos = 0;
++			currentLinePos = 0;
++			currentLinePos = 0;
++			currentLinePos = 0;
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -343,8 +348,11 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -417,11 +425,8 @@
+     }
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+-        if (out != null && out.length == outAvail) {
+-            buffer = out;
+-            pos = outPos;
+-            readPos = outPos;
+-        }
++        if (out != null && out.length == outAvail)
++			System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+     }
+     /**
+      * <p>
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20580)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20580)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20580)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20690)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20690)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20690)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20690)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,13 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            {
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			lineLength = 0;  // disable chunk-separating
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -343,8 +349,13 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20690)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20690)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20690)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v20690)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21119)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21119)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21119)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21119)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,8 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			currentLinePos = 0;
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -343,8 +345,12 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -486,7 +492,9 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+@@ -1023,7 +1031,6 @@
+     private void reset() {
+         buffer = null;
+         pos = 0;
+-        readPos = 0;
+         currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21119)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21119)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21119)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21354)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21354)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21354)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21354)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,7 +332,8 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -345,9 +346,13 @@
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
++		eof = false;
++		eof = false;
+     }
+ 
+     /**
+@@ -420,7 +425,11 @@
+         if (out != null && out.length == outAvail) {
+             buffer = out;
+             pos = outPos;
+-            readPos = outPos;
++            {
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
+         }
+     }
+     /**
+@@ -486,7 +495,8 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21354)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21354)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21354)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,7 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
++            int bytesCopied = 0;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21354)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21639)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21639)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21639)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21639)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,14 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            {
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			lineLength = 0;  // disable chunk-separating
++            readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -343,8 +349,11 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -418,7 +427,6 @@
+ 
+     void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+         if (out != null && out.length == outAvail) {
+-            buffer = out;
+             pos = outPos;
+             readPos = outPos;
+         }
+@@ -486,7 +494,10 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21639)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21639)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21639)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21639)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21968)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21968)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21968)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21968)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,8 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			eof = true;
++			currentLinePos = 0;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -343,8 +345,14 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21968)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21968)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v21968)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22210)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22210)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22210)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22210)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,8 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			eof = true;
++			currentLinePos = 0;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -343,8 +345,15 @@
+             this.encodeSize = 4;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		x = x << 6;
++		x = x << 6;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			pos = 0;
++			pos = 0;
++			pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22210)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22210)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22210)
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,6 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
+         }
+         try {
+             return string.getBytes(charsetName);
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22210)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22281)
+--- org.apache.commons.codec.StringEncoder
++++ org.apache.commons.codec.StringEncoder
+@@ -37,4 +37,3 @@
+      */
+     String encode(String pString) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22281)
+--- org.apache.commons.codec.BinaryDecoder
++++ org.apache.commons.codec.BinaryDecoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] decode(byte[] pArray) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22281)
+--- org.apache.commons.codec.BinaryEncoder
++++ org.apache.commons.codec.BinaryEncoder
+@@ -39,4 +39,3 @@
+      */
+     byte[] encode(byte[] pArray) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22281)
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -332,6 +332,7 @@
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
++			eof = true;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+@@ -344,7 +345,13 @@
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase64Byte(lineSeparator)) {
+-            String sep = StringUtils.newStringUtf8(lineSeparator);
++            pos = 0;
++			pos = 0;
++			pos = 0;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
++			buffer = new byte[DEFAULT_BUFFER_SIZE];
+             throw new IllegalArgumentException("lineSeperator must not contain base64 characters: [" + sep + "]");
+         }
+         this.encodeTable = urlSafe ? URL_SAFE_ENCODE_TABLE : STANDARD_ENCODE_TABLE;
+@@ -486,7 +493,9 @@
+                     resizeBuffer();
+                 }
+                 modulus = (++modulus) % 3;
+-                int b = in[inPos++];
++                readPos = 0;
++				readPos = 0;
++				int b = in[inPos++];
+                 if (b < 0) {
+                     b += 256;
+                 }
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22281)
+--- org.apache.commons.codec.Decoder
++++ org.apache.commons.codec.Decoder
+@@ -52,4 +52,3 @@
+      */
+     Object decode(Object pObject) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22281)
+--- org.apache.commons.codec.StringDecoder
++++ org.apache.commons.codec.StringDecoder
+@@ -37,4 +37,3 @@
+      */
+     String decode(String pString) throws DecoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  PatchLogExporter - patch (v22281)
+--- org.apache.commons.codec.Encoder
++++ org.apache.commons.codec.Encoder
+@@ -43,4 +43,3 @@
+      */
+     Object encode(Object pObject) throws EncoderException;
+ }  
+-
+2023-11-16 02:21:01 [main] [INFO]  KGenProgMain - Summary
+Reached generation = 57
+Generated variants = 22400
+Syntax valid variants = 19160
+Build succeeded variants = 9813
+Time elapsed = 24 hours 52 minutes 34 seconds
+Exit status = FAILURE (time limit)

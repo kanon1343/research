@@ -1,0 +1,21 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -129,7 +129,7 @@
+             if (x < (mean - 20 * standardDeviation)) { // JDK 1.5 blows at 38
+                 return 0.0d;
+             } else if (x > (mean + 20 * standardDeviation)) {
+-                return 1.0d;
++                return standardDeviation;
+             } else {
+                 throw ex;
+             }
+@@ -200,7 +200,8 @@
+         if (p < .5) {
+             ret = getMean();
+         } else {
+-            ret = Double.MAX_VALUE;
++            ret = getMean() + getStandardDeviation();
++			ret = Double.MAX_VALUE;
+         }
+         
+         return ret;

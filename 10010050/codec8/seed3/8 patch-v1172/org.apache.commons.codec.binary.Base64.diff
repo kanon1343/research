@@ -1,0 +1,19 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -386,8 +386,6 @@
+             readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];
+-            System.arraycopy(buffer, 0, b, 0, buffer.length);
+-            buffer = b;
+         }
+     }
+ 
+@@ -421,6 +419,7 @@
+             buffer = out;
+             pos = outPos;
+             readPos = outPos;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
+         }
+     }
+     /**

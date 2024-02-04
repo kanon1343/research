@@ -1,0 +1,23 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -238,16 +238,18 @@
+      */
+     public Base32(int lineLength, byte[] lineSeparator, boolean useHex) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / BYTES_PER_ENCODED_BLOCK) * BYTES_PER_ENCODED_BLOCK : 0;
+-        this.lineSeparator = new byte[lineSeparator.length];
++        resizeBuffer();
++		this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK + lineSeparator.length;
+         } else {
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK;
++			buffer = null;
+         }
+         this.decodeSize = this.encodeSize - 1;
+         if (containsBase32Byte(lineSeparator)) {

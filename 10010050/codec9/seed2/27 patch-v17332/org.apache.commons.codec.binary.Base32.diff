@@ -1,0 +1,17 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -245,11 +245,13 @@
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {
+-            this.encodeSize = BYTES_PER_ENCODED_BLOCK + lineSeparator.length;
++            resizeBuffer();
++			this.encodeSize = BYTES_PER_ENCODED_BLOCK + lineSeparator.length;
+         } else {
+             this.encodeSize = BYTES_PER_ENCODED_BLOCK;
+         }
+         this.decodeSize = this.encodeSize - 1;
++		buffer[pos++] = PAD;
+         if (containsBase32Byte(lineSeparator)) {
+             String sep = StringUtils.newStringUtf8(lineSeparator);
+             throw new IllegalArgumentException("lineSeperator must not contain Base32 characters: [" + sep + "]");

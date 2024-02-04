@@ -1,0 +1,10 @@
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -338,6 +338,7 @@
+         double[] out = new double[data.length];
+         for (int i = 0; i < data.length; i++) {
+             out[i] = data[i] * d;
++			int outBlockIndex = 0;
+         }
+         return new ArrayRealVector(out);
+     }

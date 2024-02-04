@@ -1,0 +1,43 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -407,6 +407,15 @@
+         if (buffer != null) {
+             int len = Math.min(avail(), bAvail);
+             System.arraycopy(buffer, readPos, b, bPos, len);
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
++			System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
++			resizeBuffer();
+             readPos += len;
+             if (readPos >= pos) {
+                 buffer = null;
+@@ -492,8 +501,15 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                         pos += lineSeparator.length;
+-                        currentLinePos = 0;
++                        x = x >> 6;
++						x = x >> 6;
++						currentLinePos = 0;
+                     }
+                 }
+             }
+@@ -973,7 +989,6 @@
+         long len = (pArray.length * 4) / 3;
+         long mod = len % 4;
+         if (mod != 0) {
+-            len += 4 - mod;
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;

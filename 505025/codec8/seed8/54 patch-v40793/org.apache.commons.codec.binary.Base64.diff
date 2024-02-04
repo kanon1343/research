@@ -1,0 +1,83 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,7 +331,79 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
++            modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			modulus = (++modulus) % 3;
++			lineLength = 0;  // disable chunk-separating
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			eof = false;
++			eof = false;
++			buffer = null;
++			eof = false;
++			eof = false;
++			String sep = StringUtils.newStringUtf8(lineSeparator);
++			buffer = null;
++			eof = false;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			eof = false;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			buffer = null;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			buffer = null;
++			eof = false;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			eof = false;
++			pos = 0;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			buffer = null;
++			modulus = 0;
++			eof = false;
++			buffer = null;
++			buffer = null;
++			eof = true;
++			buffer = null;
++			buffer = null;
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;

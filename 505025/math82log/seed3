@@ -1,0 +1,2628 @@
+2023-08-04 12:55:12 [main] [WARN]  Configuration$Builder - The directory where kGenProg is running is different from the root directory of the given target project.
+2023-08-04 12:55:12 [main] [WARN]  Configuration$Builder - If the target project includes test cases with file I/O, such test cases won't run correctly.
+2023-08-04 12:55:12 [main] [WARN]  Configuration$Builder - We recommend you running kGenProg with the root directory of the target project as the current directory.
+2023-08-04 12:55:12 [main] [INFO]  KGenProgMain - 
+==================== kGenProg Configuration ====================
+configPath = /home/fse-pluto/Downloads/kGenProg-1.8.2/example/math82_FOSE/kgenprog-82.toml (set by command line)
+rootDir = /home/fse-pluto/Downloads/kGenProg-1.8.2/example/math82_FOSE (set in config file)
+productPaths = [/home/fse-pluto/Downloads/kGenProg-1.8.2/example/math82_FOSE/src/main] (set in config file)
+testPaths = [/home/fse-pluto/Downloads/kGenProg-1.8.2/example/math82_FOSE/src/test] (set in config file)
+classPaths = []
+executionTests = [org.apache.commons.math.optimization.linear.SimplexSolverTest] (set in config file)
+outDir = kgenprog-out
+logLevel = INFO (set in config file)
+mutationGeneratingCount = 50 (set in config file)
+crossoverGeneratingCount = 50 (set in config file)
+headcount = 25
+maxGeneration = 500 (set in config file)
+timeLimit = PT24H (set in config file)
+testTimeLimit = PT3M (set in config file)
+requiredSolutionsCount = 100 (set in config file)
+randomSeed = 3 (set by command line)
+scope = PACKAGE
+faultLocalization = Zoltar (set in config file)
+mutationType = Simple
+crossoverType = Random
+firstVariantSelectionStrategy = Random
+secondVariantSelectionStrategy = Random
+isPatchOutput = true (set in config file)
+isHistoryRecord = false
+currentDirectory = /home/fse-pluto/Desktop/research
+version = 1.8.2
+================================================================
+2023-08-04 12:55:20 [main] [INFO]  KGenProgMain - initial failed tests (1/14)
+org.apache.commons.math.optimization.linear.SimplexSolverTest.testMath288: expected:<10.0> but was:<11.5>
+
+2023-08-04 12:55:20 [main] [INFO]  KGenProgMain - GA started
+2023-08-04 12:55:20 [main] [INFO]  KGenProgMain - entered the era of 1st generation.
+2023-08-04 12:55:24 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 seconds
+Variants: generated 50, build-succeeded 7, build-failed 35, syntax-invalid 4, redundant 4
+Fitness: max 0.929(1), min 0(2), ave 0.5
+Test execution time: sum 1711 ms, max 339 ms, min 186 ms
+----------------------------------------------------------------
+
+2023-08-04 12:55:24 [main] [INFO]  KGenProgMain - entered the era of 2nd generation.
+2023-08-04 12:55:27 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 7 seconds
+Variants: generated 50, build-succeeded 9, build-failed 34, syntax-invalid 4, redundant 3
+Fitness: max 0.929(1), min 0(1), ave 0.548
+Test execution time: sum 1744 ms, max 251 ms, min 154 ms
+----------------------------------------------------------------
+
+2023-08-04 12:55:27 [main] [INFO]  KGenProgMain - entered the era of 3rd generation.
+2023-08-04 12:55:34 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 seconds
+Variants: generated 100, build-succeeded 26, build-failed 35, syntax-invalid 4, redundant 35
+Fitness: max 0.857(1), min 0(7), ave 0.357
+Test execution time: sum 4506 ms, max 203 ms, min 138 ms
+----------------------------------------------------------------
+
+2023-08-04 12:55:34 [main] [INFO]  KGenProgMain - entered the era of 4th generation.
+2023-08-04 12:55:40 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 seconds
+Variants: generated 100, build-succeeded 22, build-failed 36, syntax-invalid 7, redundant 35
+Fitness: max 0.857(2), min 0(4), ave 0.435
+Test execution time: sum 3706 ms, max 223 ms, min 95 ms
+----------------------------------------------------------------
+
+2023-08-04 12:55:40 [main] [INFO]  KGenProgMain - entered the era of 5th generation.
+2023-08-04 12:55:47 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 26 seconds
+Variants: generated 100, build-succeeded 24, build-failed 31, syntax-invalid 13, redundant 32
+Fitness: max 0.929(5), min 0(2), ave 0.72
+Test execution time: sum 4347 ms, max 221 ms, min 118 ms
+----------------------------------------------------------------
+
+2023-08-04 12:55:47 [main] [INFO]  KGenProgMain - entered the era of 6th generation.
+2023-08-04 12:55:52 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 32 seconds
+Variants: generated 100, build-succeeded 18, build-failed 35, syntax-invalid 16, redundant 31
+Fitness: max 0.929(3), min 0(4), ave 0.615
+Test execution time: sum 3126 ms, max 212 ms, min 84 ms
+----------------------------------------------------------------
+
+2023-08-04 12:55:52 [main] [INFO]  KGenProgMain - entered the era of 7th generation.
+2023-08-04 12:55:58 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 37 seconds
+Variants: generated 100, build-succeeded 18, build-failed 34, syntax-invalid 19, redundant 29
+Fitness: max 0.929(3), min 0(2), ave 0.687
+Test execution time: sum 2998 ms, max 218 ms, min 127 ms
+----------------------------------------------------------------
+
+2023-08-04 12:55:58 [main] [INFO]  KGenProgMain - entered the era of 8th generation.
+2023-08-04 13:29:02 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 33 minutes 41 seconds
+Variants: generated 100, build-succeeded 16, build-failed 37, syntax-invalid 16, redundant 31
+Fitness: max 0.929(5), min 0(2), ave 0.719
+Test execution time: sum 1982598 ms, max 1980131 ms, min 92 ms
+----------------------------------------------------------------
+
+2023-08-04 13:29:02 [main] [INFO]  KGenProgMain - entered the era of 9th generation.
+2023-08-04 14:02:06 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 1 hours 6 minutes 46 seconds
+Variants: generated 100, build-succeeded 15, build-failed 29, syntax-invalid 22, redundant 34
+Fitness: max 0.929(5), min 0(3), ave 0.567
+Test execution time: sum 1982510 ms, max 1980131 ms, min 92 ms
+----------------------------------------------------------------
+
+2023-08-04 14:02:06 [main] [INFO]  KGenProgMain - entered the era of 10th generation.
+2023-08-04 14:02:12 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 1 hours 6 minutes 51 seconds
+Variants: generated 100, build-succeeded 21, build-failed 32, syntax-invalid 10, redundant 37
+Fitness: max 1(1), min 0(3), ave 0.735
+Test execution time: sum 3540 ms, max 213 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-04 14:02:12 [main] [INFO]  KGenProgMain - entered the era of 11th generation.
+2023-08-04 14:02:17 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 1 hours 6 minutes 57 seconds
+Variants: generated 100, build-succeeded 21, build-failed 29, syntax-invalid 20, redundant 30
+Fitness: max 0.929(12), min 0(4), ave 0.663
+Test execution time: sum 3788 ms, max 214 ms, min 119 ms
+----------------------------------------------------------------
+
+2023-08-04 14:02:17 [main] [INFO]  KGenProgMain - entered the era of 12th generation.
+2023-08-04 15:08:23 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 13 minutes 2 seconds
+Variants: generated 100, build-succeeded 19, build-failed 30, syntax-invalid 14, redundant 37
+Fitness: max 0.929(13), min 0(1), ave 0.774
+Test execution time: sum 3963475 ms, max 1980131 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-04 15:08:23 [main] [INFO]  KGenProgMain - entered the era of 13th generation.
+2023-08-04 15:08:29 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 13 minutes 8 seconds
+Variants: generated 100, build-succeeded 20, build-failed 30, syntax-invalid 7, redundant 43
+Fitness: max 0.929(10), min 0(3), ave 0.711
+Test execution time: sum 3611 ms, max 215 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-04 15:08:29 [main] [INFO]  KGenProgMain - entered the era of 14th generation.
+2023-08-04 15:08:35 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 13 minutes 14 seconds
+Variants: generated 100, build-succeeded 23, build-failed 28, syntax-invalid 11, redundant 38
+Fitness: max 0.929(13), min 0(2), ave 0.776
+Test execution time: sum 4300 ms, max 212 ms, min 117 ms
+----------------------------------------------------------------
+
+2023-08-04 15:08:35 [main] [INFO]  KGenProgMain - entered the era of 15th generation.
+2023-08-04 15:41:40 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 46 minutes 20 seconds
+Variants: generated 100, build-succeeded 16, build-failed 40, syntax-invalid 8, redundant 36
+Fitness: max 0.929(11), min 0.143(1), ave 0.795
+Test execution time: sum 1982987 ms, max 1980132 ms, min 153 ms
+----------------------------------------------------------------
+
+2023-08-04 15:41:40 [main] [INFO]  KGenProgMain - entered the era of 16th generation.
+2023-08-04 15:41:48 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 46 minutes 27 seconds
+Variants: generated 100, build-succeeded 29, build-failed 37, syntax-invalid 2, redundant 32
+Fitness: max 0.929(23), min 0(1), ave 0.85
+Test execution time: sum 5487 ms, max 204 ms, min 113 ms
+----------------------------------------------------------------
+
+2023-08-04 15:41:48 [main] [INFO]  KGenProgMain - entered the era of 17th generation.
+2023-08-04 15:41:56 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 46 minutes 36 seconds
+Variants: generated 100, build-succeeded 26, build-failed 32, syntax-invalid 8, redundant 34
+Fitness: max 0.929(23), min 0.786(2), ave 0.915
+Test execution time: sum 5133 ms, max 228 ms, min 186 ms
+----------------------------------------------------------------
+
+2023-08-04 15:41:56 [main] [INFO]  KGenProgMain - entered the era of 18th generation.
+2023-08-04 15:42:06 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 2 hours 46 minutes 45 seconds
+Variants: generated 100, build-succeeded 35, build-failed 31, syntax-invalid 11, redundant 23
+Fitness: max 0.929(28), min 0(2), ave 0.851
+Test execution time: sum 6725 ms, max 227 ms, min 150 ms
+----------------------------------------------------------------
+
+2023-08-04 15:42:06 [main] [INFO]  KGenProgMain - entered the era of 19th generation.
+2023-08-04 16:03:14 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 7 minutes 53 seconds
+Variants: generated 100, build-succeeded 29, build-failed 35, syntax-invalid 11, redundant 25
+Fitness: max 0.929(23), min 0(4), ave 0.788
+Test execution time: sum 1265339 ms, max 1260127 ms, min 117 ms
+----------------------------------------------------------------
+
+2023-08-04 16:03:14 [main] [INFO]  KGenProgMain - entered the era of 20th generation.
+2023-08-04 16:03:22 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 8 minutes 1 seconds
+Variants: generated 100, build-succeeded 26, build-failed 33, syntax-invalid 11, redundant 30
+Fitness: max 0.929(23), min 0.786(3), ave 0.912
+Test execution time: sum 4924 ms, max 200 ms, min 183 ms
+----------------------------------------------------------------
+
+2023-08-04 16:03:22 [main] [INFO]  KGenProgMain - entered the era of 21st generation.
+2023-08-04 16:36:30 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 41 minutes 9 seconds
+Variants: generated 100, build-succeeded 29, build-failed 39, syntax-invalid 4, redundant 28
+Fitness: max 0.929(20), min 0(3), ave 0.719
+Test execution time: sum 1985229 ms, max 1980131 ms, min 116 ms
+----------------------------------------------------------------
+
+2023-08-04 16:36:30 [main] [INFO]  KGenProgMain - entered the era of 22nd generation.
+2023-08-04 16:36:38 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 41 minutes 18 seconds
+Variants: generated 100, build-succeeded 30, build-failed 37, syntax-invalid 5, redundant 28
+Fitness: max 0.929(24), min 0(3), ave 0.795
+Test execution time: sum 5484 ms, max 210 ms, min 91 ms
+----------------------------------------------------------------
+
+2023-08-04 16:36:38 [main] [INFO]  KGenProgMain - entered the era of 23rd generation.
+2023-08-04 16:36:48 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 41 minutes 27 seconds
+Variants: generated 100, build-succeeded 33, build-failed 38, syntax-invalid 7, redundant 22
+Fitness: max 0.929(27), min 0(1), ave 0.877
+Test execution time: sum 6291 ms, max 207 ms, min 154 ms
+----------------------------------------------------------------
+
+2023-08-04 16:36:48 [main] [INFO]  KGenProgMain - entered the era of 24th generation.
+2023-08-04 16:36:57 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 41 minutes 36 seconds
+Variants: generated 100, build-succeeded 33, build-failed 45, syntax-invalid 3, redundant 19
+Fitness: max 0.929(29), min 0(2), ave 0.861
+Test execution time: sum 6244 ms, max 208 ms, min 93 ms
+----------------------------------------------------------------
+
+2023-08-04 16:36:57 [main] [INFO]  KGenProgMain - entered the era of 25th generation.
+2023-08-04 16:37:08 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 41 minutes 47 seconds
+Variants: generated 100, build-succeeded 39, build-failed 38, syntax-invalid 5, redundant 18
+Fitness: max 0.929(33), min 0(2), ave 0.852
+Test execution time: sum 7393 ms, max 226 ms, min 116 ms
+----------------------------------------------------------------
+
+2023-08-04 16:37:08 [main] [INFO]  KGenProgMain - entered the era of 26th generation.
+2023-08-04 16:37:18 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 41 minutes 58 seconds
+Variants: generated 100, build-succeeded 39, build-failed 37, syntax-invalid 5, redundant 19
+Fitness: max 0.929(33), min 0(1), ave 0.87
+Test execution time: sum 7394 ms, max 224 ms, min 116 ms
+----------------------------------------------------------------
+
+2023-08-04 16:37:18 [main] [INFO]  KGenProgMain - entered the era of 27th generation.
+2023-08-04 16:37:28 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 42 minutes 8 seconds
+Variants: generated 100, build-succeeded 36, build-failed 37, syntax-invalid 5, redundant 22
+Fitness: max 0.929(33), min 0.071(1), ave 0.873
+Test execution time: sum 6895 ms, max 212 ms, min 132 ms
+----------------------------------------------------------------
+
+2023-08-04 16:37:28 [main] [INFO]  KGenProgMain - entered the era of 28th generation.
+2023-08-04 16:37:39 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 42 minutes 18 seconds
+Variants: generated 100, build-succeeded 38, build-failed 43, syntax-invalid 8, redundant 11
+Fitness: max 1(1), min 0.786(2), ave 0.923
+Test execution time: sum 7298 ms, max 215 ms, min 188 ms
+----------------------------------------------------------------
+
+2023-08-04 16:37:39 [main] [INFO]  KGenProgMain - entered the era of 29th generation.
+2023-08-04 16:37:50 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 3 hours 42 minutes 30 seconds
+Variants: generated 100, build-succeeded 45, build-failed 31, syntax-invalid 5, redundant 19
+Fitness: max 0.929(38), min 0(3), ave 0.854
+Test execution time: sum 8461 ms, max 201 ms, min 108 ms
+----------------------------------------------------------------
+
+2023-08-04 16:37:50 [main] [INFO]  KGenProgMain - entered the era of 30th generation.
+2023-08-04 17:44:02 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 4 hours 48 minutes 42 seconds
+Variants: generated 100, build-succeeded 46, build-failed 36, syntax-invalid 5, redundant 13
+Fitness: max 0.929(38), min 0(1), ave 0.835
+Test execution time: sum 3968596 ms, max 1980131 ms, min 125 ms
+----------------------------------------------------------------
+
+2023-08-04 17:44:02 [main] [INFO]  KGenProgMain - entered the era of 31st generation.
+2023-08-04 17:44:14 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 4 hours 48 minutes 54 seconds
+Variants: generated 100, build-succeeded 44, build-failed 39, syntax-invalid 1, redundant 16
+Fitness: max 0.929(34), min 0.143(1), ave 0.831
+Test execution time: sum 8336 ms, max 231 ms, min 146 ms
+----------------------------------------------------------------
+
+2023-08-04 17:44:14 [main] [INFO]  KGenProgMain - entered the era of 32nd generation.
+2023-08-04 17:44:24 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 4 hours 49 minutes 4 seconds
+Variants: generated 100, build-succeeded 39, build-failed 38, syntax-invalid 8, redundant 15
+Fitness: max 0.929(28), min 0(4), ave 0.777
+Test execution time: sum 7114 ms, max 229 ms, min 93 ms
+----------------------------------------------------------------
+
+2023-08-04 17:44:24 [main] [INFO]  KGenProgMain - entered the era of 33rd generation.
+2023-08-04 17:44:33 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 4 hours 49 minutes 13 seconds
+Variants: generated 100, build-succeeded 31, build-failed 40, syntax-invalid 7, redundant 22
+Fitness: max 0.929(28), min 0(1), ave 0.88
+Test execution time: sum 5976 ms, max 232 ms, min 153 ms
+----------------------------------------------------------------
+
+2023-08-04 17:44:33 [main] [INFO]  KGenProgMain - entered the era of 34th generation.
+2023-08-04 17:44:43 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 4 hours 49 minutes 23 seconds
+Variants: generated 100, build-succeeded 36, build-failed 35, syntax-invalid 3, redundant 26
+Fitness: max 0.929(27), min 0(6), ave 0.73
+Test execution time: sum 6552 ms, max 224 ms, min 117 ms
+----------------------------------------------------------------
+
+2023-08-04 17:44:43 [main] [INFO]  KGenProgMain - entered the era of 35th generation.
+2023-08-04 17:44:54 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 4 hours 49 minutes 34 seconds
+Variants: generated 100, build-succeeded 43, build-failed 37, syntax-invalid 4, redundant 16
+Fitness: max 0.929(37), min 0(2), ave 0.834
+Test execution time: sum 7985 ms, max 222 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-04 17:44:54 [main] [INFO]  KGenProgMain - entered the era of 36th generation.
+2023-08-04 18:18:03 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 22 minutes 43 seconds
+Variants: generated 100, build-succeeded 32, build-failed 29, syntax-invalid 8, redundant 31
+Fitness: max 0.929(26), min 0(2), ave 0.821
+Test execution time: sum 1985963 ms, max 1980131 ms, min 121 ms
+----------------------------------------------------------------
+
+2023-08-04 18:18:03 [main] [INFO]  KGenProgMain - entered the era of 37th generation.
+2023-08-04 18:18:16 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 22 minutes 56 seconds
+Variants: generated 100, build-succeeded 50, build-failed 37, syntax-invalid 0, redundant 13
+Fitness: max 0.929(40), min 0(6), ave 0.774
+Test execution time: sum 9221 ms, max 212 ms, min 95 ms
+----------------------------------------------------------------
+
+2023-08-04 18:18:16 [main] [INFO]  KGenProgMain - entered the era of 38th generation.
+2023-08-04 18:18:26 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 23 minutes 6 seconds
+Variants: generated 100, build-succeeded 33, build-failed 41, syntax-invalid 2, redundant 24
+Fitness: max 0.929(27), min 0(2), ave 0.816
+Test execution time: sum 6358 ms, max 229 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-04 18:18:26 [main] [INFO]  KGenProgMain - entered the era of 39th generation.
+2023-08-04 18:18:36 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 23 minutes 16 seconds
+Variants: generated 100, build-succeeded 36, build-failed 34, syntax-invalid 9, redundant 21
+Fitness: max 0.929(34), min 0.143(1), ave 0.903
+Test execution time: sum 6910 ms, max 232 ms, min 152 ms
+----------------------------------------------------------------
+
+2023-08-04 18:18:36 [main] [INFO]  KGenProgMain - entered the era of 40th generation.
+2023-08-04 18:51:46 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 56 minutes 25 seconds
+Variants: generated 100, build-succeeded 34, build-failed 36, syntax-invalid 11, redundant 19
+Fitness: max 0.929(27), min 0.071(1), ave 0.838
+Test execution time: sum 1986450 ms, max 1980167 ms, min 154 ms
+----------------------------------------------------------------
+
+2023-08-04 18:51:46 [main] [INFO]  KGenProgMain - entered the era of 41st generation.
+2023-08-04 18:51:58 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 56 minutes 37 seconds
+Variants: generated 100, build-succeeded 46, build-failed 32, syntax-invalid 5, redundant 17
+Fitness: max 0.929(34), min 0(3), ave 0.787
+Test execution time: sum 8533 ms, max 215 ms, min 114 ms
+----------------------------------------------------------------
+
+2023-08-04 18:51:58 [main] [INFO]  KGenProgMain - entered the era of 42nd generation.
+2023-08-04 18:52:08 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 56 minutes 48 seconds
+Variants: generated 100, build-succeeded 41, build-failed 30, syntax-invalid 10, redundant 19
+Fitness: max 0.929(29), min 0(5), ave 0.775
+Test execution time: sum 7663 ms, max 204 ms, min 122 ms
+----------------------------------------------------------------
+
+2023-08-04 18:52:08 [main] [INFO]  KGenProgMain - entered the era of 43rd generation.
+2023-08-04 18:52:18 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 56 minutes 58 seconds
+Variants: generated 100, build-succeeded 35, build-failed 33, syntax-invalid 9, redundant 23
+Fitness: max 0.929(27), min 0(1), ave 0.859
+Test execution time: sum 6654 ms, max 201 ms, min 103 ms
+----------------------------------------------------------------
+
+2023-08-04 18:52:18 [main] [INFO]  KGenProgMain - entered the era of 44th generation.
+2023-08-04 18:52:26 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 57 minutes 6 seconds
+Variants: generated 100, build-succeeded 25, build-failed 41, syntax-invalid 16, redundant 18
+Fitness: max 0.929(21), min 0(2), ave 0.823
+Test execution time: sum 4934 ms, max 231 ms, min 107 ms
+----------------------------------------------------------------
+
+2023-08-04 18:52:26 [main] [INFO]  KGenProgMain - entered the era of 45th generation.
+2023-08-04 18:52:36 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 57 minutes 15 seconds
+Variants: generated 100, build-succeeded 33, build-failed 34, syntax-invalid 8, redundant 25
+Fitness: max 0.929(25), min 0(1), ave 0.861
+Test execution time: sum 6434 ms, max 228 ms, min 165 ms
+----------------------------------------------------------------
+
+2023-08-04 18:52:36 [main] [INFO]  KGenProgMain - entered the era of 46th generation.
+2023-08-04 18:52:44 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 57 minutes 24 seconds
+Variants: generated 100, build-succeeded 26, build-failed 45, syntax-invalid 9, redundant 20
+Fitness: max 0.929(22), min 0(3), ave 0.808
+Test execution time: sum 5066 ms, max 241 ms, min 117 ms
+----------------------------------------------------------------
+
+2023-08-04 18:52:44 [main] [INFO]  KGenProgMain - entered the era of 47th generation.
+2023-08-04 18:52:53 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 57 minutes 32 seconds
+Variants: generated 100, build-succeeded 27, build-failed 33, syntax-invalid 14, redundant 26
+Fitness: max 0.929(20), min 0(2), ave 0.765
+Test execution time: sum 5126 ms, max 220 ms, min 138 ms
+----------------------------------------------------------------
+
+2023-08-04 18:52:53 [main] [INFO]  KGenProgMain - entered the era of 48th generation.
+2023-08-04 18:53:01 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 57 minutes 41 seconds
+Variants: generated 100, build-succeeded 28, build-failed 40, syntax-invalid 13, redundant 19
+Fitness: max 0.929(24), min 0(2), ave 0.849
+Test execution time: sum 5448 ms, max 224 ms, min 95 ms
+----------------------------------------------------------------
+
+2023-08-04 18:53:01 [main] [INFO]  KGenProgMain - entered the era of 49th generation.
+2023-08-04 18:53:10 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 5 hours 57 minutes 49 seconds
+Variants: generated 100, build-succeeded 27, build-failed 45, syntax-invalid 11, redundant 17
+Fitness: max 0.929(21), min 0(2), ave 0.794
+Test execution time: sum 5213 ms, max 221 ms, min 104 ms
+----------------------------------------------------------------
+
+2023-08-04 18:53:10 [main] [INFO]  KGenProgMain - entered the era of 50th generation.
+2023-08-04 19:26:20 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 6 hours 31 minutes 0 seconds
+Variants: generated 100, build-succeeded 37, build-failed 37, syntax-invalid 8, redundant 18
+Fitness: max 0.929(28), min 0(4), ave 0.772
+Test execution time: sum 1987218 ms, max 1980136 ms, min 142 ms
+----------------------------------------------------------------
+
+2023-08-04 19:26:20 [main] [INFO]  KGenProgMain - entered the era of 51st generation.
+2023-08-04 19:26:30 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 6 hours 31 minutes 10 seconds
+Variants: generated 100, build-succeeded 31, build-failed 44, syntax-invalid 7, redundant 18
+Fitness: max 0.929(29), min 0.786(2), ave 0.919
+Test execution time: sum 6293 ms, max 234 ms, min 195 ms
+----------------------------------------------------------------
+
+2023-08-04 19:26:30 [main] [INFO]  KGenProgMain - entered the era of 52nd generation.
+2023-08-04 20:32:43 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 7 hours 37 minutes 23 seconds
+Variants: generated 100, build-succeeded 46, build-failed 37, syntax-invalid 7, redundant 10
+Fitness: max 0.929(40), min 0(2), ave 0.848
+Test execution time: sum 3968944 ms, max 1980162 ms, min 92 ms
+----------------------------------------------------------------
+
+2023-08-04 20:32:43 [main] [INFO]  KGenProgMain - entered the era of 53rd generation.
+2023-08-04 20:32:54 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 7 hours 37 minutes 34 seconds
+Variants: generated 100, build-succeeded 38, build-failed 42, syntax-invalid 8, redundant 12
+Fitness: max 0.929(33), min 0(1), ave 0.872
+Test execution time: sum 7556 ms, max 227 ms, min 96 ms
+----------------------------------------------------------------
+
+2023-08-04 20:32:54 [main] [INFO]  KGenProgMain - entered the era of 54th generation.
+2023-08-04 20:33:06 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 7 hours 37 minutes 45 seconds
+Variants: generated 100, build-succeeded 38, build-failed 40, syntax-invalid 4, redundant 18
+Fitness: max 0.929(30), min 0.214(2), ave 0.867
+Test execution time: sum 7890 ms, max 235 ms, min 199 ms
+----------------------------------------------------------------
+
+2023-08-04 20:33:06 [main] [INFO]  KGenProgMain - entered the era of 55th generation.
+2023-08-04 21:06:17 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 8 hours 10 minutes 56 seconds
+Variants: generated 100, build-succeeded 35, build-failed 45, syntax-invalid 7, redundant 13
+Fitness: max 0.929(29), min 0(2), ave 0.816
+Test execution time: sum 1986929 ms, max 1980158 ms, min 122 ms
+----------------------------------------------------------------
+
+2023-08-04 21:06:17 [main] [INFO]  KGenProgMain - entered the era of 56th generation.
+2023-08-04 21:06:30 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 8 hours 11 minutes 9 seconds
+Variants: generated 100, build-succeeded 44, build-failed 36, syntax-invalid 7, redundant 13
+Fitness: max 0.929(37), min 0(2), ave 0.834
+Test execution time: sum 8993 ms, max 220 ms, min 134 ms
+----------------------------------------------------------------
+
+2023-08-04 21:06:30 [main] [INFO]  KGenProgMain - entered the era of 57th generation.
+2023-08-04 21:39:42 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 8 hours 44 minutes 22 seconds
+Variants: generated 100, build-succeeded 43, build-failed 36, syntax-invalid 13, redundant 8
+Fitness: max 0.929(38), min 0.071(1), ave 0.842
+Test execution time: sum 1988614 ms, max 1980130 ms, min 156 ms
+----------------------------------------------------------------
+
+2023-08-04 21:39:42 [main] [INFO]  KGenProgMain - entered the era of 58th generation.
+2023-08-04 21:39:52 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 8 hours 44 minutes 32 seconds
+Variants: generated 100, build-succeeded 35, build-failed 39, syntax-invalid 11, redundant 15
+Fitness: max 0.929(28), min 0.071(1), ave 0.841
+Test execution time: sum 6890 ms, max 261 ms, min 144 ms
+----------------------------------------------------------------
+
+2023-08-04 21:39:52 [main] [INFO]  KGenProgMain - entered the era of 59th generation.
+2023-08-04 22:13:04 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 9 hours 17 minutes 43 seconds
+Variants: generated 100, build-succeeded 38, build-failed 45, syntax-invalid 6, redundant 11
+Fitness: max 0.929(33), min 0(1), ave 0.872
+Test execution time: sum 1987237 ms, max 1980130 ms, min 121 ms
+----------------------------------------------------------------
+
+2023-08-04 22:13:04 [main] [INFO]  KGenProgMain - entered the era of 60th generation.
+2023-08-04 22:13:14 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 9 hours 17 minutes 54 seconds
+Variants: generated 100, build-succeeded 37, build-failed 37, syntax-invalid 19, redundant 7
+Fitness: max 0.929(34), min 0(1), ave 0.861
+Test execution time: sum 7037 ms, max 242 ms, min 117 ms
+----------------------------------------------------------------
+
+2023-08-04 22:13:14 [main] [INFO]  KGenProgMain - entered the era of 61st generation.
+2023-08-04 22:13:26 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 9 hours 18 minutes 5 seconds
+Variants: generated 100, build-succeeded 43, build-failed 33, syntax-invalid 7, redundant 17
+Fitness: max 0.929(34), min 0(4), ave 0.791
+Test execution time: sum 8048 ms, max 235 ms, min 117 ms
+----------------------------------------------------------------
+
+2023-08-04 22:13:26 [main] [INFO]  KGenProgMain - entered the era of 62nd generation.
+2023-08-04 22:13:37 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 9 hours 18 minutes 17 seconds
+Variants: generated 100, build-succeeded 42, build-failed 37, syntax-invalid 10, redundant 11
+Fitness: max 0.929(37), min 0(1), ave 0.881
+Test execution time: sum 7958 ms, max 235 ms, min 93 ms
+----------------------------------------------------------------
+
+2023-08-04 22:13:37 [main] [INFO]  KGenProgMain - entered the era of 63rd generation.
+2023-08-04 22:13:48 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 9 hours 18 minutes 28 seconds
+Variants: generated 100, build-succeeded 38, build-failed 37, syntax-invalid 11, redundant 14
+Fitness: max 0.929(33), min 0(3), ave 0.835
+Test execution time: sum 7140 ms, max 230 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-04 22:13:48 [main] [INFO]  KGenProgMain - entered the era of 64th generation.
+2023-08-04 22:46:58 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 9 hours 51 minutes 38 seconds
+Variants: generated 100, build-succeeded 35, build-failed 38, syntax-invalid 9, redundant 18
+Fitness: max 0.929(32), min 0(1), ave 0.857
+Test execution time: sum 1986614 ms, max 1980130 ms, min 91 ms
+----------------------------------------------------------------
+
+2023-08-04 22:46:58 [main] [INFO]  KGenProgMain - entered the era of 65th generation.
+2023-08-04 23:56:11 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 50 seconds
+Variants: generated 100, build-succeeded 47, build-failed 36, syntax-invalid 8, redundant 9
+Fitness: max 0.929(41), min 0(2), ave 0.847
+Test execution time: sum 4148769 ms, max 2160144 ms, min 143 ms
+----------------------------------------------------------------
+
+2023-08-04 23:56:11 [main] [INFO]  KGenProgMain - entered the era of 66th generation.
+2023-08-04 23:56:23 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 1 minutes 3 seconds
+Variants: generated 100, build-succeeded 46, build-failed 38, syntax-invalid 4, redundant 12
+Fitness: max 1(1), min 0(4), ave 0.789
+Test execution time: sum 8496 ms, max 202 ms, min 99 ms
+----------------------------------------------------------------
+
+2023-08-04 23:56:23 [main] [INFO]  KGenProgMain - entered the era of 67th generation.
+2023-08-04 23:56:32 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 1 minutes 12 seconds
+Variants: generated 100, build-succeeded 31, build-failed 37, syntax-invalid 11, redundant 21
+Fitness: max 0.929(25), min 0(3), ave 0.765
+Test execution time: sum 5806 ms, max 206 ms, min 129 ms
+----------------------------------------------------------------
+
+2023-08-04 23:56:32 [main] [INFO]  KGenProgMain - entered the era of 68th generation.
+2023-08-04 23:56:42 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 1 minutes 22 seconds
+Variants: generated 100, build-succeeded 34, build-failed 35, syntax-invalid 12, redundant 19
+Fitness: max 0.929(29), min 0(1), ave 0.88
+Test execution time: sum 6366 ms, max 231 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-04 23:56:42 [main] [INFO]  KGenProgMain - entered the era of 69th generation.
+2023-08-04 23:56:54 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 1 minutes 33 seconds
+Variants: generated 100, build-succeeded 40, build-failed 41, syntax-invalid 6, redundant 13
+Fitness: max 0.929(36), min 0(1), ave 0.895
+Test execution time: sum 7642 ms, max 245 ms, min 93 ms
+----------------------------------------------------------------
+
+2023-08-04 23:56:54 [main] [INFO]  KGenProgMain - entered the era of 70th generation.
+2023-08-04 23:57:05 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 1 minutes 45 seconds
+Variants: generated 100, build-succeeded 42, build-failed 33, syntax-invalid 6, redundant 19
+Fitness: max 0.929(36), min 0(2), ave 0.869
+Test execution time: sum 8010 ms, max 237 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-04 23:57:05 [main] [INFO]  KGenProgMain - entered the era of 71st generation.
+2023-08-04 23:57:17 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 1 minutes 56 seconds
+Variants: generated 100, build-succeeded 42, build-failed 35, syntax-invalid 9, redundant 14
+Fitness: max 0.929(35), min 0(2), ave 0.825
+Test execution time: sum 7838 ms, max 238 ms, min 90 ms
+----------------------------------------------------------------
+
+2023-08-04 23:57:17 [main] [INFO]  KGenProgMain - entered the era of 72nd generation.
+2023-08-04 23:57:27 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 11 hours 2 minutes 7 seconds
+Variants: generated 100, build-succeeded 37, build-failed 38, syntax-invalid 10, redundant 15
+Fitness: max 0.929(31), min 0(3), ave 0.836
+Test execution time: sum 6945 ms, max 235 ms, min 91 ms
+----------------------------------------------------------------
+
+2023-08-04 23:57:27 [main] [INFO]  KGenProgMain - entered the era of 73rd generation.
+2023-08-05 01:03:38 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 12 hours 8 minutes 17 seconds
+Variants: generated 100, build-succeeded 38, build-failed 33, syntax-invalid 11, redundant 18
+Fitness: max 0.929(30), min 0(1), ave 0.812
+Test execution time: sum 3967059 ms, max 1980130 ms, min 143 ms
+----------------------------------------------------------------
+
+2023-08-05 01:03:38 [main] [INFO]  KGenProgMain - entered the era of 74th generation.
+2023-08-05 01:36:50 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 12 hours 41 minutes 29 seconds
+Variants: generated 100, build-succeeded 43, build-failed 35, syntax-invalid 5, redundant 17
+Fitness: max 0.929(35), min 0(1), ave 0.841
+Test execution time: sum 1988100 ms, max 1980131 ms, min 150 ms
+----------------------------------------------------------------
+
+2023-08-05 01:36:50 [main] [INFO]  KGenProgMain - entered the era of 75th generation.
+2023-08-05 02:09:59 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 14 minutes 39 seconds
+Variants: generated 100, build-succeeded 31, build-failed 36, syntax-invalid 12, redundant 21
+Fitness: max 0.929(27), min 0(2), ave 0.834
+Test execution time: sum 1985769 ms, max 1980130 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 02:09:59 [main] [INFO]  KGenProgMain - entered the era of 76th generation.
+2023-08-05 02:10:10 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 14 minutes 49 seconds
+Variants: generated 100, build-succeeded 36, build-failed 39, syntax-invalid 9, redundant 16
+Fitness: max 0.929(29), min 0(3), ave 0.804
+Test execution time: sum 6713 ms, max 216 ms, min 104 ms
+----------------------------------------------------------------
+
+2023-08-05 02:10:10 [main] [INFO]  KGenProgMain - entered the era of 77th generation.
+2023-08-05 02:10:21 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 15 minutes 0 seconds
+Variants: generated 100, build-succeeded 39, build-failed 39, syntax-invalid 7, redundant 15
+Fitness: max 0.929(32), min 0(4), ave 0.797
+Test execution time: sum 7104 ms, max 208 ms, min 93 ms
+----------------------------------------------------------------
+
+2023-08-05 02:10:21 [main] [INFO]  KGenProgMain - entered the era of 78th generation.
+2023-08-05 02:10:34 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 15 minutes 13 seconds
+Variants: generated 100, build-succeeded 47, build-failed 36, syntax-invalid 8, redundant 9
+Fitness: max 0.929(42), min 0(1), ave 0.857
+Test execution time: sum 9058 ms, max 232 ms, min 182 ms
+----------------------------------------------------------------
+
+2023-08-05 02:10:34 [main] [INFO]  KGenProgMain - entered the era of 79th generation.
+2023-08-05 02:10:45 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 15 minutes 24 seconds
+Variants: generated 100, build-succeeded 36, build-failed 39, syntax-invalid 11, redundant 14
+Fitness: max 0.929(29), min 0(1), ave 0.871
+Test execution time: sum 6909 ms, max 232 ms, min 145 ms
+----------------------------------------------------------------
+
+2023-08-05 02:10:45 [main] [INFO]  KGenProgMain - entered the era of 80th generation.
+2023-08-05 02:10:56 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 15 minutes 35 seconds
+Variants: generated 100, build-succeeded 41, build-failed 36, syntax-invalid 8, redundant 15
+Fitness: max 1(1), min 0(1), ave 0.88
+Test execution time: sum 7782 ms, max 230 ms, min 117 ms
+----------------------------------------------------------------
+
+2023-08-05 02:10:56 [main] [INFO]  KGenProgMain - entered the era of 81st generation.
+2023-08-05 02:11:08 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 15 minutes 47 seconds
+Variants: generated 100, build-succeeded 42, build-failed 34, syntax-invalid 9, redundant 15
+Fitness: max 0.929(37), min 0(1), ave 0.864
+Test execution time: sum 8039 ms, max 226 ms, min 117 ms
+----------------------------------------------------------------
+
+2023-08-05 02:11:08 [main] [INFO]  KGenProgMain - entered the era of 82nd generation.
+2023-08-05 02:44:19 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 48 minutes 59 seconds
+Variants: generated 100, build-succeeded 39, build-failed 39, syntax-invalid 7, redundant 15
+Fitness: max 0.929(36), min 0(1), ave 0.864
+Test execution time: sum 1987559 ms, max 1980130 ms, min 157 ms
+----------------------------------------------------------------
+
+2023-08-05 02:44:19 [main] [INFO]  KGenProgMain - entered the era of 83rd generation.
+2023-08-05 02:44:33 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 49 minutes 12 seconds
+Variants: generated 100, build-succeeded 46, build-failed 34, syntax-invalid 8, redundant 12
+Fitness: max 0.929(39), min 0(2), ave 0.873
+Test execution time: sum 9018 ms, max 213 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 02:44:33 [main] [INFO]  KGenProgMain - entered the era of 84th generation.
+2023-08-05 02:44:46 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 49 minutes 25 seconds
+Variants: generated 100, build-succeeded 46, build-failed 35, syntax-invalid 8, redundant 11
+Fitness: max 0.929(39), min 0(3), ave 0.839
+Test execution time: sum 8978 ms, max 263 ms, min 95 ms
+----------------------------------------------------------------
+
+2023-08-05 02:44:46 [main] [INFO]  KGenProgMain - entered the era of 85th generation.
+2023-08-05 02:44:57 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 49 minutes 36 seconds
+Variants: generated 100, build-succeeded 35, build-failed 42, syntax-invalid 6, redundant 17
+Fitness: max 0.929(32), min 0(1), ave 0.878
+Test execution time: sum 6834 ms, max 256 ms, min 132 ms
+----------------------------------------------------------------
+
+2023-08-05 02:44:57 [main] [INFO]  KGenProgMain - entered the era of 86th generation.
+2023-08-05 02:45:11 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 13 hours 49 minutes 51 seconds
+Variants: generated 100, build-succeeded 56, build-failed 33, syntax-invalid 1, redundant 10
+Fitness: max 1(1), min 0(3), ave 0.839
+Test execution time: sum 10460 ms, max 233 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 02:45:11 [main] [INFO]  KGenProgMain - entered the era of 87th generation.
+2023-08-05 03:18:24 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 23 minutes 4 seconds
+Variants: generated 100, build-succeeded 50, build-failed 29, syntax-invalid 9, redundant 12
+Fitness: max 0.929(43), min 0(2), ave 0.85
+Test execution time: sum 1989298 ms, max 1980130 ms, min 108 ms
+----------------------------------------------------------------
+
+2023-08-05 03:18:24 [main] [INFO]  KGenProgMain - entered the era of 88th generation.
+2023-08-05 03:18:37 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 23 minutes 16 seconds
+Variants: generated 100, build-succeeded 45, build-failed 41, syntax-invalid 6, redundant 8
+Fitness: max 0.929(42), min 0(2), ave 0.871
+Test execution time: sum 8510 ms, max 227 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 03:18:37 [main] [INFO]  KGenProgMain - entered the era of 89th generation.
+2023-08-05 03:18:51 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 23 minutes 30 seconds
+Variants: generated 100, build-succeeded 51, build-failed 32, syntax-invalid 8, redundant 9
+Fitness: max 0.929(44), min 0(2), ave 0.854
+Test execution time: sum 9731 ms, max 222 ms, min 122 ms
+----------------------------------------------------------------
+
+2023-08-05 03:18:51 [main] [INFO]  KGenProgMain - entered the era of 90th generation.
+2023-08-05 03:19:01 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 23 minutes 41 seconds
+Variants: generated 100, build-succeeded 36, build-failed 39, syntax-invalid 8, redundant 17
+Fitness: max 0.929(29), min 0(3), ave 0.81
+Test execution time: sum 6696 ms, max 231 ms, min 108 ms
+----------------------------------------------------------------
+
+2023-08-05 03:19:01 [main] [INFO]  KGenProgMain - entered the era of 91st generation.
+2023-08-05 03:19:14 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 23 minutes 53 seconds
+Variants: generated 100, build-succeeded 45, build-failed 40, syntax-invalid 3, redundant 12
+Fitness: max 0.929(40), min 0(2), ave 0.867
+Test execution time: sum 8605 ms, max 211 ms, min 149 ms
+----------------------------------------------------------------
+
+2023-08-05 03:19:14 [main] [INFO]  KGenProgMain - entered the era of 92nd generation.
+2023-08-05 03:52:28 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 57 minutes 8 seconds
+Variants: generated 100, build-succeeded 54, build-failed 35, syntax-invalid 5, redundant 6
+Fitness: max 0.929(45), min 0(1), ave 0.841
+Test execution time: sum 1990218 ms, max 1980130 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 03:52:28 [main] [INFO]  KGenProgMain - entered the era of 93rd generation.
+2023-08-05 03:52:42 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 57 minutes 21 seconds
+Variants: generated 100, build-succeeded 49, build-failed 31, syntax-invalid 5, redundant 15
+Fitness: max 0.929(42), min 0(1), ave 0.851
+Test execution time: sum 9324 ms, max 206 ms, min 118 ms
+----------------------------------------------------------------
+
+2023-08-05 03:52:42 [main] [INFO]  KGenProgMain - entered the era of 94th generation.
+2023-08-05 03:52:55 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 57 minutes 34 seconds
+Variants: generated 100, build-succeeded 47, build-failed 36, syntax-invalid 4, redundant 13
+Fitness: max 0.929(42), min 0(1), ave 0.883
+Test execution time: sum 8869 ms, max 207 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 03:52:55 [main] [INFO]  KGenProgMain - entered the era of 95th generation.
+2023-08-05 03:53:07 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 57 minutes 47 seconds
+Variants: generated 100, build-succeeded 45, build-failed 44, syntax-invalid 6, redundant 5
+Fitness: max 0.929(42), min 0.571(1), ave 0.914
+Test execution time: sum 8733 ms, max 249 ms, min 188 ms
+----------------------------------------------------------------
+
+2023-08-05 03:53:07 [main] [INFO]  KGenProgMain - entered the era of 96th generation.
+2023-08-05 03:53:21 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 14 hours 58 minutes 0 seconds
+Variants: generated 100, build-succeeded 52, build-failed 30, syntax-invalid 10, redundant 8
+Fitness: max 0.929(46), min 0(4), ave 0.845
+Test execution time: sum 9778 ms, max 236 ms, min 108 ms
+----------------------------------------------------------------
+
+2023-08-05 03:53:21 [main] [INFO]  KGenProgMain - entered the era of 97th generation.
+2023-08-05 04:26:34 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 15 hours 31 minutes 13 seconds
+Variants: generated 100, build-succeeded 48, build-failed 33, syntax-invalid 9, redundant 10
+Fitness: max 0.929(40), min 0(3), ave 0.829
+Test execution time: sum 1989043 ms, max 1980130 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 04:26:34 [main] [INFO]  KGenProgMain - entered the era of 98th generation.
+2023-08-05 04:59:47 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 16 hours 4 minutes 27 seconds
+Variants: generated 100, build-succeeded 50, build-failed 36, syntax-invalid 4, redundant 10
+Fitness: max 0.929(43), min 0(3), ave 0.826
+Test execution time: sum 1989475 ms, max 1980131 ms, min 91 ms
+----------------------------------------------------------------
+
+2023-08-05 04:59:47 [main] [INFO]  KGenProgMain - entered the era of 99th generation.
+2023-08-05 05:33:01 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 16 hours 37 minutes 41 seconds
+Variants: generated 100, build-succeeded 52, build-failed 34, syntax-invalid 3, redundant 11
+Fitness: max 0.929(45), min 0(2), ave 0.864
+Test execution time: sum 1989919 ms, max 1980130 ms, min 132 ms
+----------------------------------------------------------------
+
+2023-08-05 05:33:01 [main] [INFO]  KGenProgMain - entered the era of 100th generation.
+2023-08-05 05:33:15 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 16 hours 37 minutes 55 seconds
+Variants: generated 100, build-succeeded 49, build-failed 41, syntax-invalid 5, redundant 5
+Fitness: max 1(1), min 0.214(1), ave 0.901
+Test execution time: sum 9505 ms, max 225 ms, min 187 ms
+----------------------------------------------------------------
+
+2023-08-05 05:33:15 [main] [INFO]  KGenProgMain - entered the era of 101st generation.
+2023-08-05 06:06:28 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 11 minutes 7 seconds
+Variants: generated 100, build-succeeded 43, build-failed 40, syntax-invalid 3, redundant 14
+Fitness: max 0.929(38), min 0(1), ave 0.88
+Test execution time: sum 1988232 ms, max 1980130 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 06:06:28 [main] [INFO]  KGenProgMain - entered the era of 102nd generation.
+2023-08-05 06:06:41 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 11 minutes 20 seconds
+Variants: generated 100, build-succeeded 46, build-failed 39, syntax-invalid 4, redundant 11
+Fitness: max 0.929(41), min 0(2), ave 0.877
+Test execution time: sum 8807 ms, max 214 ms, min 122 ms
+----------------------------------------------------------------
+
+2023-08-05 06:06:41 [main] [INFO]  KGenProgMain - entered the era of 103rd generation.
+2023-08-05 06:06:54 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 11 minutes 34 seconds
+Variants: generated 100, build-succeeded 46, build-failed 36, syntax-invalid 6, redundant 12
+Fitness: max 0.929(41), min 0(3), ave 0.856
+Test execution time: sum 8711 ms, max 210 ms, min 102 ms
+----------------------------------------------------------------
+
+2023-08-05 06:06:54 [main] [INFO]  KGenProgMain - entered the era of 104th generation.
+2023-08-05 06:07:09 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 11 minutes 48 seconds
+Variants: generated 100, build-succeeded 53, build-failed 34, syntax-invalid 2, redundant 11
+Fitness: max 1(1), min 0(2), ave 0.84
+Test execution time: sum 9977 ms, max 246 ms, min 108 ms
+----------------------------------------------------------------
+
+2023-08-05 06:07:09 [main] [INFO]  KGenProgMain - entered the era of 105th generation.
+2023-08-05 06:07:22 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 12 minutes 1 seconds
+Variants: generated 100, build-succeeded 45, build-failed 41, syntax-invalid 2, redundant 12
+Fitness: max 0.929(38), min 0(1), ave 0.867
+Test execution time: sum 8567 ms, max 242 ms, min 127 ms
+----------------------------------------------------------------
+
+2023-08-05 06:07:22 [main] [INFO]  KGenProgMain - entered the era of 106th generation.
+2023-08-05 06:40:35 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 45 minutes 14 seconds
+Variants: generated 100, build-succeeded 47, build-failed 37, syntax-invalid 4, redundant 12
+Fitness: max 0.929(41), min 0(1), ave 0.869
+Test execution time: sum 1989022 ms, max 1980130 ms, min 148 ms
+----------------------------------------------------------------
+
+2023-08-05 06:40:35 [main] [INFO]  KGenProgMain - entered the era of 107th generation.
+2023-08-05 06:40:47 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 45 minutes 27 seconds
+Variants: generated 100, build-succeeded 44, build-failed 41, syntax-invalid 2, redundant 13
+Fitness: max 0.929(39), min 0.071(1), ave 0.89
+Test execution time: sum 8509 ms, max 237 ms, min 154 ms
+----------------------------------------------------------------
+
+2023-08-05 06:40:47 [main] [INFO]  KGenProgMain - entered the era of 108th generation.
+2023-08-05 06:40:59 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 45 minutes 39 seconds
+Variants: generated 100, build-succeeded 41, build-failed 38, syntax-invalid 8, redundant 13
+Fitness: max 1(1), min 0.214(1), ave 0.897
+Test execution time: sum 7925 ms, max 231 ms, min 168 ms
+----------------------------------------------------------------
+
+2023-08-05 06:40:59 [main] [INFO]  KGenProgMain - entered the era of 109th generation.
+2023-08-05 06:41:11 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 45 minutes 51 seconds
+Variants: generated 100, build-succeeded 42, build-failed 45, syntax-invalid 6, redundant 7
+Fitness: max 0.929(39), min 0(1), ave 0.871
+Test execution time: sum 8052 ms, max 215 ms, min 127 ms
+----------------------------------------------------------------
+
+2023-08-05 06:41:11 [main] [INFO]  KGenProgMain - entered the era of 110th generation.
+2023-08-05 06:41:25 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 46 minutes 4 seconds
+Variants: generated 100, build-succeeded 49, build-failed 33, syntax-invalid 9, redundant 9
+Fitness: max 0.929(43), min 0(2), ave 0.857
+Test execution time: sum 9265 ms, max 204 ms, min 118 ms
+----------------------------------------------------------------
+
+2023-08-05 06:41:25 [main] [INFO]  KGenProgMain - entered the era of 111th generation.
+2023-08-05 06:41:38 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 46 minutes 17 seconds
+Variants: generated 100, build-succeeded 47, build-failed 41, syntax-invalid 2, redundant 10
+Fitness: max 0.929(42), min 0.071(1), ave 0.872
+Test execution time: sum 8997 ms, max 207 ms, min 108 ms
+----------------------------------------------------------------
+
+2023-08-05 06:41:38 [main] [INFO]  KGenProgMain - entered the era of 112th generation.
+2023-08-05 06:41:51 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 46 minutes 30 seconds
+Variants: generated 100, build-succeeded 48, build-failed 34, syntax-invalid 7, redundant 11
+Fitness: max 0.929(45), min 0(2), ave 0.887
+Test execution time: sum 9207 ms, max 233 ms, min 117 ms
+----------------------------------------------------------------
+
+2023-08-05 06:41:51 [main] [INFO]  KGenProgMain - entered the era of 113th generation.
+2023-08-05 06:42:04 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 46 minutes 43 seconds
+Variants: generated 100, build-succeeded 46, build-failed 39, syntax-invalid 9, redundant 6
+Fitness: max 0.929(44), min 0(2), ave 0.888
+Test execution time: sum 8774 ms, max 237 ms, min 118 ms
+----------------------------------------------------------------
+
+2023-08-05 06:42:04 [main] [INFO]  KGenProgMain - entered the era of 114th generation.
+2023-08-05 06:42:16 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 46 minutes 56 seconds
+Variants: generated 100, build-succeeded 45, build-failed 43, syntax-invalid 6, redundant 6
+Fitness: max 0.929(40), min 0.071(1), ave 0.86
+Test execution time: sum 8679 ms, max 243 ms, min 153 ms
+----------------------------------------------------------------
+
+2023-08-05 06:42:16 [main] [INFO]  KGenProgMain - entered the era of 115th generation.
+2023-08-05 06:42:29 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 47 minutes 9 seconds
+Variants: generated 100, build-succeeded 47, build-failed 33, syntax-invalid 3, redundant 17
+Fitness: max 0.929(40), min 0(2), ave 0.842
+Test execution time: sum 8958 ms, max 242 ms, min 133 ms
+----------------------------------------------------------------
+
+2023-08-05 06:42:29 [main] [INFO]  KGenProgMain - entered the era of 116th generation.
+2023-08-05 06:42:41 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 47 minutes 21 seconds
+Variants: generated 100, build-succeeded 43, build-failed 38, syntax-invalid 5, redundant 14
+Fitness: max 0.929(37), min 0.071(2), ave 0.875
+Test execution time: sum 8269 ms, max 236 ms, min 108 ms
+----------------------------------------------------------------
+
+2023-08-05 06:42:41 [main] [INFO]  KGenProgMain - entered the era of 117th generation.
+2023-08-05 06:42:55 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 47 minutes 34 seconds
+Variants: generated 100, build-succeeded 50, build-failed 35, syntax-invalid 3, redundant 12
+Fitness: max 0.929(46), min 0.071(1), ave 0.884
+Test execution time: sum 9604 ms, max 236 ms, min 108 ms
+----------------------------------------------------------------
+
+2023-08-05 06:42:55 [main] [INFO]  KGenProgMain - entered the era of 118th generation.
+2023-08-05 06:43:09 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 47 minutes 48 seconds
+Variants: generated 100, build-succeeded 53, build-failed 29, syntax-invalid 6, redundant 12
+Fitness: max 0.929(45), min 0(1), ave 0.887
+Test execution time: sum 10209 ms, max 223 ms, min 129 ms
+----------------------------------------------------------------
+
+2023-08-05 06:43:09 [main] [INFO]  KGenProgMain - entered the era of 119th generation.
+2023-08-05 06:43:21 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 48 minutes 1 seconds
+Variants: generated 100, build-succeeded 42, build-failed 44, syntax-invalid 3, redundant 11
+Fitness: max 0.929(38), min 0(2), ave 0.864
+Test execution time: sum 7897 ms, max 228 ms, min 92 ms
+----------------------------------------------------------------
+
+2023-08-05 06:43:21 [main] [INFO]  KGenProgMain - entered the era of 120th generation.
+2023-08-05 06:43:33 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 48 minutes 12 seconds
+Variants: generated 100, build-succeeded 41, build-failed 39, syntax-invalid 9, redundant 11
+Fitness: max 0.929(39), min 0(2), ave 0.883
+Test execution time: sum 7858 ms, max 212 ms, min 93 ms
+----------------------------------------------------------------
+
+2023-08-05 06:43:33 [main] [INFO]  KGenProgMain - entered the era of 121st generation.
+2023-08-05 06:43:46 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 17 hours 48 minutes 25 seconds
+Variants: generated 100, build-succeeded 47, build-failed 40, syntax-invalid 4, redundant 9
+Fitness: max 0.929(41), min 0(1), ave 0.88
+Test execution time: sum 9151 ms, max 214 ms, min 156 ms
+----------------------------------------------------------------
+
+2023-08-05 06:43:46 [main] [INFO]  KGenProgMain - entered the era of 122nd generation.
+2023-08-05 07:16:59 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 18 hours 21 minutes 39 seconds
+Variants: generated 100, build-succeeded 50, build-failed 34, syntax-invalid 3, redundant 13
+Fitness: max 0.929(46), min 0.143(1), ave 0.893
+Test execution time: sum 1989614 ms, max 1980130 ms, min 188 ms
+----------------------------------------------------------------
+
+2023-08-05 07:16:59 [main] [INFO]  KGenProgMain - entered the era of 123rd generation.
+2023-08-05 07:17:12 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 18 hours 21 minutes 52 seconds
+Variants: generated 100, build-succeeded 44, build-failed 42, syntax-invalid 3, redundant 11
+Fitness: max 0.929(42), min 0(1), ave 0.894
+Test execution time: sum 8510 ms, max 244 ms, min 122 ms
+----------------------------------------------------------------
+
+2023-08-05 07:17:12 [main] [INFO]  KGenProgMain - entered the era of 124th generation.
+2023-08-05 07:17:26 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 18 hours 22 minutes 5 seconds
+Variants: generated 100, build-succeeded 51, build-failed 40, syntax-invalid 3, redundant 6
+Fitness: max 0.929(43), min 0(4), ave 0.819
+Test execution time: sum 9361 ms, max 246 ms, min 92 ms
+----------------------------------------------------------------
+
+2023-08-05 07:17:26 [main] [INFO]  KGenProgMain - entered the era of 125th generation.
+2023-08-05 07:17:39 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 18 hours 22 minutes 18 seconds
+Variants: generated 100, build-succeeded 46, build-failed 37, syntax-invalid 5, redundant 12
+Fitness: max 0.929(42), min 0(2), ave 0.865
+Test execution time: sum 8722 ms, max 247 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 07:17:39 [main] [INFO]  KGenProgMain - entered the era of 126th generation.
+2023-08-05 07:50:52 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 18 hours 55 minutes 31 seconds
+Variants: generated 100, build-succeeded 47, build-failed 38, syntax-invalid 5, redundant 10
+Fitness: max 0.929(43), min 0(1), ave 0.875
+Test execution time: sum 1988964 ms, max 1980130 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 07:50:52 [main] [INFO]  KGenProgMain - entered the era of 127th generation.
+2023-08-05 07:51:07 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 18 hours 55 minutes 47 seconds
+Variants: generated 100, build-succeeded 58, build-failed 38, syntax-invalid 2, redundant 2
+Fitness: max 0.929(49), min 0(4), ave 0.84
+Test execution time: sum 10920 ms, max 234 ms, min 92 ms
+----------------------------------------------------------------
+
+2023-08-05 07:51:07 [main] [INFO]  KGenProgMain - entered the era of 128th generation.
+2023-08-05 07:51:21 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 18 hours 56 minutes 0 seconds
+Variants: generated 100, build-succeeded 50, build-failed 39, syntax-invalid 8, redundant 3
+Fitness: max 0.929(42), min 0(2), ave 0.859
+Test execution time: sum 9547 ms, max 224 ms, min 118 ms
+----------------------------------------------------------------
+
+2023-08-05 07:51:21 [main] [INFO]  KGenProgMain - entered the era of 129th generation.
+2023-08-05 08:24:35 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 19 hours 29 minutes 14 seconds
+Variants: generated 100, build-succeeded 51, build-failed 37, syntax-invalid 9, redundant 3
+Fitness: max 0.929(42), min 0(2), ave 0.859
+Test execution time: sum 1989679 ms, max 1980130 ms, min 95 ms
+----------------------------------------------------------------
+
+2023-08-05 08:24:35 [main] [INFO]  KGenProgMain - entered the era of 130th generation.
+2023-08-05 08:57:49 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 2 minutes 28 seconds
+Variants: generated 100, build-succeeded 51, build-failed 33, syntax-invalid 10, redundant 6
+Fitness: max 0.929(46), min 0(1), ave 0.875
+Test execution time: sum 1989805 ms, max 1980131 ms, min 158 ms
+----------------------------------------------------------------
+
+2023-08-05 08:57:49 [main] [INFO]  KGenProgMain - entered the era of 131st generation.
+2023-08-05 08:58:03 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 2 minutes 42 seconds
+Variants: generated 100, build-succeeded 52, build-failed 31, syntax-invalid 11, redundant 6
+Fitness: max 0.929(45), min 0(2), ave 0.872
+Test execution time: sum 10113 ms, max 216 ms, min 140 ms
+----------------------------------------------------------------
+
+2023-08-05 08:58:03 [main] [INFO]  KGenProgMain - entered the era of 132nd generation.
+2023-08-05 08:58:15 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 2 minutes 54 seconds
+Variants: generated 100, build-succeeded 42, build-failed 34, syntax-invalid 18, redundant 6
+Fitness: max 0.929(37), min 0.071(1), ave 0.866
+Test execution time: sum 7971 ms, max 228 ms, min 109 ms
+----------------------------------------------------------------
+
+2023-08-05 08:58:15 [main] [INFO]  KGenProgMain - entered the era of 133rd generation.
+2023-08-05 08:58:29 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 3 minutes 9 seconds
+Variants: generated 100, build-succeeded 53, build-failed 35, syntax-invalid 5, redundant 7
+Fitness: max 0.929(48), min 0(1), ave 0.865
+Test execution time: sum 10306 ms, max 229 ms, min 134 ms
+----------------------------------------------------------------
+
+2023-08-05 08:58:29 [main] [INFO]  KGenProgMain - entered the era of 134th generation.
+2023-08-05 08:58:44 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 3 minutes 23 seconds
+Variants: generated 100, build-succeeded 52, build-failed 34, syntax-invalid 9, redundant 5
+Fitness: max 0.929(46), min 0(2), ave 0.867
+Test execution time: sum 10129 ms, max 229 ms, min 110 ms
+----------------------------------------------------------------
+
+2023-08-05 08:58:44 [main] [INFO]  KGenProgMain - entered the era of 135th generation.
+2023-08-05 08:58:58 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 3 minutes 38 seconds
+Variants: generated 100, build-succeeded 52, build-failed 27, syntax-invalid 17, redundant 4
+Fitness: max 0.929(45), min 0(3), ave 0.848
+Test execution time: sum 10309 ms, max 222 ms, min 151 ms
+----------------------------------------------------------------
+
+2023-08-05 08:58:58 [main] [INFO]  KGenProgMain - entered the era of 136th generation.
+2023-08-05 09:32:12 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 36 minutes 51 seconds
+Variants: generated 100, build-succeeded 48, build-failed 32, syntax-invalid 13, redundant 7
+Fitness: max 0.929(39), min 0(2), ave 0.841
+Test execution time: sum 1989513 ms, max 1980130 ms, min 156 ms
+----------------------------------------------------------------
+
+2023-08-05 09:32:12 [main] [INFO]  KGenProgMain - entered the era of 137th generation.
+2023-08-05 09:32:26 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 20 hours 37 minutes 5 seconds
+Variants: generated 100, build-succeeded 46, build-failed 36, syntax-invalid 15, redundant 3
+Fitness: max 0.929(43), min 0.214(1), ave 0.907
+Test execution time: sum 9387 ms, max 224 ms, min 194 ms
+----------------------------------------------------------------
+
+2023-08-05 09:32:26 [main] [INFO]  KGenProgMain - entered the era of 138th generation.
+2023-08-05 10:05:41 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 10 minutes 20 seconds
+Variants: generated 100, build-succeeded 53, build-failed 35, syntax-invalid 8, redundant 4
+Fitness: max 0.929(46), min 0(2), ave 0.845
+Test execution time: sum 1990484 ms, max 1980139 ms, min 113 ms
+----------------------------------------------------------------
+
+2023-08-05 10:05:41 [main] [INFO]  KGenProgMain - entered the era of 139th generation.
+2023-08-05 10:05:56 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 10 minutes 36 seconds
+Variants: generated 100, build-succeeded 50, build-failed 37, syntax-invalid 12, redundant 1
+Fitness: max 0.929(49), min 0.786(1), ave 0.926
+Test execution time: sum 10339 ms, max 231 ms, min 197 ms
+----------------------------------------------------------------
+
+2023-08-05 10:05:56 [main] [INFO]  KGenProgMain - entered the era of 140th generation.
+2023-08-05 10:06:12 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 10 minutes 52 seconds
+Variants: generated 100, build-succeeded 60, build-failed 28, syntax-invalid 9, redundant 3
+Fitness: max 0.929(52), min 0(5), ave 0.833
+Test execution time: sum 12111 ms, max 213 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 10:06:12 [main] [INFO]  KGenProgMain - entered the era of 141st generation.
+2023-08-05 10:06:26 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 11 minutes 6 seconds
+Variants: generated 100, build-succeeded 47, build-failed 38, syntax-invalid 11, redundant 4
+Fitness: max 0.929(44), min 0(2), ave 0.884
+Test execution time: sum 9694 ms, max 228 ms, min 95 ms
+----------------------------------------------------------------
+
+2023-08-05 10:06:26 [main] [INFO]  KGenProgMain - entered the era of 142nd generation.
+2023-08-05 10:06:41 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 11 minutes 21 seconds
+Variants: generated 100, build-succeeded 53, build-failed 32, syntax-invalid 10, redundant 5
+Fitness: max 0.929(48), min 0(1), ave 0.875
+Test execution time: sum 11100 ms, max 220 ms, min 141 ms
+----------------------------------------------------------------
+
+2023-08-05 10:06:41 [main] [INFO]  KGenProgMain - entered the era of 143rd generation.
+2023-08-05 10:06:56 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 11 minutes 36 seconds
+Variants: generated 100, build-succeeded 49, build-failed 41, syntax-invalid 9, redundant 1
+Fitness: max 0.929(47), min 0.786(2), ave 0.923
+Test execution time: sum 10699 ms, max 241 ms, min 210 ms
+----------------------------------------------------------------
+
+2023-08-05 10:06:56 [main] [INFO]  KGenProgMain - entered the era of 144th generation.
+2023-08-05 10:07:12 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 11 minutes 52 seconds
+Variants: generated 100, build-succeeded 54, build-failed 34, syntax-invalid 8, redundant 4
+Fitness: max 0.929(49), min 0(1), ave 0.877
+Test execution time: sum 11838 ms, max 268 ms, min 165 ms
+----------------------------------------------------------------
+
+2023-08-05 10:07:12 [main] [INFO]  KGenProgMain - entered the era of 145th generation.
+2023-08-05 10:07:27 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 12 minutes 6 seconds
+Variants: generated 100, build-succeeded 45, build-failed 41, syntax-invalid 9, redundant 5
+Fitness: max 1(1), min 0.786(1), ave 0.927
+Test execution time: sum 10110 ms, max 237 ms, min 211 ms
+----------------------------------------------------------------
+
+2023-08-05 10:07:27 [main] [INFO]  KGenProgMain - entered the era of 146th generation.
+2023-08-05 10:07:42 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 12 minutes 22 seconds
+Variants: generated 100, build-succeeded 52, build-failed 37, syntax-invalid 7, redundant 4
+Fitness: max 0.929(47), min 0(2), ave 0.867
+Test execution time: sum 11088 ms, max 236 ms, min 95 ms
+----------------------------------------------------------------
+
+2023-08-05 10:07:42 [main] [INFO]  KGenProgMain - entered the era of 147th generation.
+2023-08-05 10:07:58 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 12 minutes 37 seconds
+Variants: generated 100, build-succeeded 58, build-failed 31, syntax-invalid 7, redundant 4
+Fitness: max 0.929(51), min 0(2), ave 0.852
+Test execution time: sum 11333 ms, max 239 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 10:07:58 [main] [INFO]  KGenProgMain - entered the era of 148th generation.
+2023-08-05 10:08:11 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 12 minutes 51 seconds
+Variants: generated 100, build-succeeded 51, build-failed 34, syntax-invalid 12, redundant 3
+Fitness: max 0.929(45), min 0(3), ave 0.84
+Test execution time: sum 9701 ms, max 236 ms, min 118 ms
+----------------------------------------------------------------
+
+2023-08-05 10:08:11 [main] [INFO]  KGenProgMain - entered the era of 149th generation.
+2023-08-05 10:08:24 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 13 minutes 3 seconds
+Variants: generated 100, build-succeeded 45, build-failed 37, syntax-invalid 9, redundant 9
+Fitness: max 0.929(42), min 0.071(1), ave 0.903
+Test execution time: sum 8726 ms, max 231 ms, min 152 ms
+----------------------------------------------------------------
+
+2023-08-05 10:08:24 [main] [INFO]  KGenProgMain - entered the era of 150th generation.
+2023-08-05 10:08:38 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 13 minutes 17 seconds
+Variants: generated 100, build-succeeded 54, build-failed 32, syntax-invalid 9, redundant 5
+Fitness: max 0.929(45), min 0(5), ave 0.811
+Test execution time: sum 10054 ms, max 230 ms, min 93 ms
+----------------------------------------------------------------
+
+2023-08-05 10:08:38 [main] [INFO]  KGenProgMain - entered the era of 151st generation.
+2023-08-05 10:41:52 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 46 minutes 31 seconds
+Variants: generated 100, build-succeeded 52, build-failed 35, syntax-invalid 10, redundant 3
+Fitness: max 0.929(47), min 0.143(1), ave 0.889
+Test execution time: sum 1989952 ms, max 1980130 ms, min 127 ms
+----------------------------------------------------------------
+
+2023-08-05 10:41:52 [main] [INFO]  KGenProgMain - entered the era of 152nd generation.
+2023-08-05 10:42:06 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 46 minutes 45 seconds
+Variants: generated 100, build-succeeded 49, build-failed 39, syntax-invalid 6, redundant 6
+Fitness: max 0.929(45), min 0(1), ave 0.891
+Test execution time: sum 9452 ms, max 228 ms, min 92 ms
+----------------------------------------------------------------
+
+2023-08-05 10:42:06 [main] [INFO]  KGenProgMain - entered the era of 153rd generation.
+2023-08-05 10:42:19 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 46 minutes 59 seconds
+Variants: generated 100, build-succeeded 50, build-failed 35, syntax-invalid 10, redundant 5
+Fitness: max 0.929(41), min 0(3), ave 0.833
+Test execution time: sum 9499 ms, max 226 ms, min 110 ms
+----------------------------------------------------------------
+
+2023-08-05 10:42:19 [main] [INFO]  KGenProgMain - entered the era of 154th generation.
+2023-08-05 10:42:31 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 47 minutes 11 seconds
+Variants: generated 100, build-succeeded 42, build-failed 33, syntax-invalid 10, redundant 15
+Fitness: max 0.929(36), min 0(2), ave 0.867
+Test execution time: sum 8139 ms, max 216 ms, min 165 ms
+----------------------------------------------------------------
+
+2023-08-05 10:42:31 [main] [INFO]  KGenProgMain - entered the era of 155th generation.
+2023-08-05 10:42:45 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 47 minutes 24 seconds
+Variants: generated 100, build-succeeded 46, build-failed 37, syntax-invalid 7, redundant 10
+Fitness: max 0.929(41), min 0(3), ave 0.849
+Test execution time: sum 8862 ms, max 204 ms, min 134 ms
+----------------------------------------------------------------
+
+2023-08-05 10:42:45 [main] [INFO]  KGenProgMain - entered the era of 156th generation.
+2023-08-05 10:42:58 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 47 minutes 38 seconds
+Variants: generated 100, build-succeeded 47, build-failed 39, syntax-invalid 4, redundant 10
+Fitness: max 0.929(42), min 0(3), ave 0.856
+Test execution time: sum 9054 ms, max 208 ms, min 134 ms
+----------------------------------------------------------------
+
+2023-08-05 10:42:58 [main] [INFO]  KGenProgMain - entered the era of 157th generation.
+2023-08-05 10:43:12 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 47 minutes 51 seconds
+Variants: generated 100, build-succeeded 48, build-failed 36, syntax-invalid 4, redundant 12
+Fitness: max 0.929(42), min 0(2), ave 0.862
+Test execution time: sum 9234 ms, max 216 ms, min 97 ms
+----------------------------------------------------------------
+
+2023-08-05 10:43:12 [main] [INFO]  KGenProgMain - entered the era of 158th generation.
+2023-08-05 10:43:26 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 48 minutes 6 seconds
+Variants: generated 100, build-succeeded 51, build-failed 37, syntax-invalid 6, redundant 6
+Fitness: max 0.929(47), min 0.143(1), ave 0.903
+Test execution time: sum 10006 ms, max 228 ms, min 154 ms
+----------------------------------------------------------------
+
+2023-08-05 10:43:26 [main] [INFO]  KGenProgMain - entered the era of 159th generation.
+2023-08-05 10:43:40 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 48 minutes 20 seconds
+Variants: generated 100, build-succeeded 51, build-failed 26, syntax-invalid 14, redundant 9
+Fitness: max 1(1), min 0(3), ave 0.833
+Test execution time: sum 9864 ms, max 219 ms, min 109 ms
+----------------------------------------------------------------
+
+2023-08-05 10:43:40 [main] [INFO]  KGenProgMain - entered the era of 160th generation.
+2023-08-05 10:43:54 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 48 minutes 33 seconds
+Variants: generated 100, build-succeeded 47, build-failed 35, syntax-invalid 5, redundant 13
+Fitness: max 1(1), min 0(3), ave 0.851
+Test execution time: sum 9292 ms, max 224 ms, min 122 ms
+----------------------------------------------------------------
+
+2023-08-05 10:43:54 [main] [INFO]  KGenProgMain - entered the era of 161st generation.
+2023-08-05 10:44:08 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 21 hours 48 minutes 48 seconds
+Variants: generated 100, build-succeeded 51, build-failed 35, syntax-invalid 8, redundant 6
+Fitness: max 0.929(43), min 0(1), ave 0.819
+Test execution time: sum 10043 ms, max 218 ms, min 109 ms
+----------------------------------------------------------------
+
+2023-08-05 10:44:08 [main] [INFO]  KGenProgMain - entered the era of 162nd generation.
+2023-08-05 11:17:24 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 22 minutes 4 seconds
+Variants: generated 100, build-succeeded 57, build-failed 34, syntax-invalid 6, redundant 3
+Fitness: max 0.929(49), min 0(1), ave 0.885
+Test execution time: sum 1991535 ms, max 1980138 ms, min 101 ms
+----------------------------------------------------------------
+
+2023-08-05 11:17:24 [main] [INFO]  KGenProgMain - entered the era of 163rd generation.
+2023-08-05 11:17:40 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 22 minutes 20 seconds
+Variants: generated 100, build-succeeded 54, build-failed 34, syntax-invalid 5, redundant 7
+Fitness: max 0.929(47), min 0(1), ave 0.874
+Test execution time: sum 10988 ms, max 226 ms, min 119 ms
+----------------------------------------------------------------
+
+2023-08-05 11:17:40 [main] [INFO]  KGenProgMain - entered the era of 164th generation.
+2023-08-05 11:17:56 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 22 minutes 35 seconds
+Variants: generated 100, build-succeeded 50, build-failed 39, syntax-invalid 7, redundant 4
+Fitness: max 0.929(44), min 0(4), ave 0.837
+Test execution time: sum 10245 ms, max 229 ms, min 160 ms
+----------------------------------------------------------------
+
+2023-08-05 11:17:56 [main] [INFO]  KGenProgMain - entered the era of 165th generation.
+2023-08-05 11:18:13 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 22 minutes 53 seconds
+Variants: generated 100, build-succeeded 60, build-failed 32, syntax-invalid 3, redundant 5
+Fitness: max 0.929(53), min 0(2), ave 0.869
+Test execution time: sum 12390 ms, max 235 ms, min 95 ms
+----------------------------------------------------------------
+
+2023-08-05 11:18:13 [main] [INFO]  KGenProgMain - entered the era of 166th generation.
+2023-08-05 11:18:31 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 23 minutes 10 seconds
+Variants: generated 100, build-succeeded 58, build-failed 32, syntax-invalid 2, redundant 8
+Fitness: max 0.929(50), min 0(3), ave 0.837
+Test execution time: sum 11983 ms, max 220 ms, min 110 ms
+----------------------------------------------------------------
+
+2023-08-05 11:18:31 [main] [INFO]  KGenProgMain - entered the era of 167th generation.
+2023-08-05 11:18:48 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 23 minutes 28 seconds
+Variants: generated 100, build-succeeded 60, build-failed 32, syntax-invalid 4, redundant 4
+Fitness: max 0.929(53), min 0(3), ave 0.873
+Test execution time: sum 12755 ms, max 232 ms, min 125 ms
+----------------------------------------------------------------
+
+2023-08-05 11:18:48 [main] [INFO]  KGenProgMain - entered the era of 168th generation.
+2023-08-05 11:19:05 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 23 minutes 44 seconds
+Variants: generated 100, build-succeeded 54, build-failed 39, syntax-invalid 4, redundant 3
+Fitness: max 0.929(49), min 0(3), ave 0.86
+Test execution time: sum 11607 ms, max 241 ms, min 119 ms
+----------------------------------------------------------------
+
+2023-08-05 11:19:05 [main] [INFO]  KGenProgMain - entered the era of 169th generation.
+2023-08-05 11:19:22 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 24 minutes 1 seconds
+Variants: generated 100, build-succeeded 56, build-failed 29, syntax-invalid 7, redundant 8
+Fitness: max 0.929(48), min 0(1), ave 0.871
+Test execution time: sum 12371 ms, max 363 ms, min 126 ms
+----------------------------------------------------------------
+
+2023-08-05 11:19:22 [main] [INFO]  KGenProgMain - entered the era of 170th generation.
+2023-08-05 11:19:38 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 24 minutes 17 seconds
+Variants: generated 100, build-succeeded 52, build-failed 35, syntax-invalid 10, redundant 3
+Fitness: max 0.929(49), min 0(1), ave 0.905
+Test execution time: sum 11311 ms, max 255 ms, min 118 ms
+----------------------------------------------------------------
+
+2023-08-05 11:19:38 [main] [INFO]  KGenProgMain - entered the era of 171st generation.
+2023-08-05 11:19:53 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 24 minutes 33 seconds
+Variants: generated 100, build-succeeded 53, build-failed 33, syntax-invalid 5, redundant 9
+Fitness: max 0.929(51), min 0(1), ave 0.908
+Test execution time: sum 10272 ms, max 239 ms, min 156 ms
+----------------------------------------------------------------
+
+2023-08-05 11:19:53 [main] [INFO]  KGenProgMain - entered the era of 172nd generation.
+2023-08-05 11:20:09 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 24 minutes 49 seconds
+Variants: generated 100, build-succeeded 56, build-failed 34, syntax-invalid 9, redundant 1
+Fitness: max 0.929(54), min 0(1), ave 0.909
+Test execution time: sum 10922 ms, max 238 ms, min 188 ms
+----------------------------------------------------------------
+
+2023-08-05 11:20:09 [main] [INFO]  KGenProgMain - entered the era of 173rd generation.
+2023-08-05 11:20:24 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 25 minutes 4 seconds
+Variants: generated 100, build-succeeded 53, build-failed 23, syntax-invalid 14, redundant 10
+Fitness: max 0.929(49), min 0(1), ave 0.892
+Test execution time: sum 10284 ms, max 230 ms, min 136 ms
+----------------------------------------------------------------
+
+2023-08-05 11:20:24 [main] [INFO]  KGenProgMain - entered the era of 174th generation.
+2023-08-05 11:20:40 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 25 minutes 19 seconds
+Variants: generated 100, build-succeeded 54, build-failed 32, syntax-invalid 8, redundant 6
+Fitness: max 0.929(47), min 0(3), ave 0.843
+Test execution time: sum 10318 ms, max 234 ms, min 144 ms
+----------------------------------------------------------------
+
+2023-08-05 11:20:40 [main] [INFO]  KGenProgMain - entered the era of 175th generation.
+2023-08-05 11:20:53 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 25 minutes 33 seconds
+Variants: generated 100, build-succeeded 49, build-failed 38, syntax-invalid 9, redundant 4
+Fitness: max 0.929(46), min 0.071(1), ave 0.899
+Test execution time: sum 9417 ms, max 229 ms, min 110 ms
+----------------------------------------------------------------
+
+2023-08-05 11:20:53 [main] [INFO]  KGenProgMain - entered the era of 176th generation.
+2023-08-05 11:54:10 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 58 minutes 49 seconds
+Variants: generated 100, build-succeeded 58, build-failed 30, syntax-invalid 9, redundant 3
+Fitness: max 1(1), min 0.071(1), ave 0.878
+Test execution time: sum 1991225 ms, max 1980129 ms, min 140 ms
+----------------------------------------------------------------
+
+2023-08-05 11:54:10 [main] [INFO]  KGenProgMain - entered the era of 177th generation.
+2023-08-05 11:54:24 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 59 minutes 4 seconds
+Variants: generated 100, build-succeeded 50, build-failed 34, syntax-invalid 7, redundant 9
+Fitness: max 0.929(45), min 0.214(1), ave 0.887
+Test execution time: sum 9702 ms, max 218 ms, min 170 ms
+----------------------------------------------------------------
+
+2023-08-05 11:54:24 [main] [INFO]  KGenProgMain - entered the era of 178th generation.
+2023-08-05 11:54:42 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 22 hours 59 minutes 21 seconds
+Variants: generated 100, build-succeeded 65, build-failed 28, syntax-invalid 3, redundant 4
+Fitness: max 0.929(56), min 0(2), ave 0.849
+Test execution time: sum 12432 ms, max 209 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 11:54:42 [main] [INFO]  KGenProgMain - entered the era of 179th generation.
+2023-08-05 12:27:58 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 23 hours 32 minutes 37 seconds
+Variants: generated 100, build-succeeded 56, build-failed 34, syntax-invalid 7, redundant 3
+Fitness: max 0.929(49), min 0(2), ave 0.844
+Test execution time: sum 1990805 ms, max 1980137 ms, min 153 ms
+----------------------------------------------------------------
+
+2023-08-05 12:27:58 [main] [INFO]  KGenProgMain - entered the era of 180th generation.
+2023-08-05 12:28:11 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 23 hours 32 minutes 51 seconds
+Variants: generated 100, build-succeeded 46, build-failed 38, syntax-invalid 9, redundant 7
+Fitness: max 0.929(41), min 0(2), ave 0.871
+Test execution time: sum 8878 ms, max 227 ms, min 94 ms
+----------------------------------------------------------------
+
+2023-08-05 12:28:11 [main] [INFO]  KGenProgMain - entered the era of 181st generation.
+2023-08-05 13:01:25 [main] [INFO]  KGenProgMain - 
+----------------------------------------------------------------
+Elapsed time: 24 hours 6 minutes 5 seconds
+Variants: generated 100, build-succeeded 49, build-failed 29, syntax-invalid 9, redundant 13
+Fitness: max 0.929(40), min 0(1), ave 0.832
+Test execution time: sum 1989478 ms, max 1980130 ms, min 130 ms
+----------------------------------------------------------------
+
+2023-08-05 13:01:25 [main] [INFO]  KGenProgMain - GA stopped
+2023-08-05 13:01:25 [main] [INFO]  PatchLogExporter - patch (v822)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:25 [main] [INFO]  PatchLogExporter - patch (v822)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,7 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
++                this.restrictToNonNegative = restrictToNonNegative;
+                 minPos = i;
+             }
+         }
+@@ -166,7 +166,8 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
++            Integer minPos = null;
++			int count = 0;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {
+2023-08-05 13:01:25 [main] [INFO]  PatchLogExporter - patch (v822)
+--- org.apache.commons.math.optimization.OptimizationException
++++ org.apache.commons.math.optimization.OptimizationException
+@@ -39,7 +39,6 @@
+      * @param parts to insert in the format (no translation)
+      */
+     public OptimizationException(String specifier, Object ... parts) {
+-        super(specifier, parts);
+     }
+ 
+     /**
+2023-08-05 13:01:25 [main] [INFO]  PatchLogExporter - patch (v822)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v2614)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v2614)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -166,7 +165,8 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
++            doIteration(tableau);
++			return;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v2614)
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -138,10 +138,7 @@
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+-            matrix[zIndex][width - 1] =
+-                maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+-
+-                if (!restrictToNonNegative) {
++            if (!restrictToNonNegative) {
+                     matrix[zIndex][getSlackVariableOffset() - 1] =
+                         getInvertedCoeffiecientSum(objectiveCoefficients);
+                 }
+@@ -348,7 +345,8 @@
+               // then we choose the first and set the rest equal to 0
+               coefficients[i] = 0;
+           } else {
+-              basicRows.add(basicRow);
++              this.numArtificialVariables = 0;
++			basicRows.add(basicRow);
+               coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v2614)
+--- org.apache.commons.math.util.MathUtils
++++ org.apache.commons.math.util.MathUtils
+@@ -289,7 +289,6 @@
+     public static double binomialCoefficientLog(final int n, final int k) {
+         checkBinomial(n, k);
+         if ((n == k) || (k == 0)) {
+-            return 0;
+         }
+         if ((k == 1) || (k == n - 1)) {
+             return Math.log(n);
+@@ -365,7 +364,6 @@
+      */
+     public static int compareTo(double x, double y, double eps) {
+         if (equals(x, y, eps)) {
+-            return 0;
+         } else if (x < y) {
+           return -1;
+         }
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v2614)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v6407)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v6407)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -132,7 +131,9 @@
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+-                return false;
++                this.constraints = constraints;
++				this.constraints = constraints;
++				return false;
+             }
+         }
+         return true;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v6407)
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -348,7 +348,8 @@
+               // then we choose the first and set the rest equal to 0
+               coefficients[i] = 0;
+           } else {
+-              basicRows.add(basicRow);
++              this.numArtificialVariables = 0;
++			basicRows.add(basicRow);
+               coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v6407)
+--- org.apache.commons.math.util.MathUtils
++++ org.apache.commons.math.util.MathUtils
+@@ -289,7 +289,6 @@
+     public static double binomialCoefficientLog(final int n, final int k) {
+         checkBinomial(n, k);
+         if ((n == k) || (k == 0)) {
+-            return 0;
+         }
+         if ((k == 1) || (k == n - 1)) {
+             return Math.log(n);
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v6407)
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -97,7 +97,10 @@
+         // store linear problem characteristics
+         this.f                     = f;
+         this.constraints           = constraints;
+-        this.goalType              = goalType;
++        incrementIterationsCounter();
++		incrementIterationsCounter();
++		incrementIterationsCounter();
++		this.goalType              = goalType;
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+         iterations  = 0;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v6407)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v7815)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v7815)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -132,7 +131,8 @@
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+-                return false;
++                this.constraints = constraints;
++				return false;
+             }
+         }
+         return true;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v7815)
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -134,7 +134,7 @@
+             matrix[0][0] = -1;
+         }
+         int zIndex = (getNumObjectiveFunctions() == 1) ? 0 : 1;
+-        matrix[zIndex][zIndex] = maximize ? 1 : -1;
++        double minValue = 0;
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+@@ -348,7 +348,9 @@
+               // then we choose the first and set the rest equal to 0
+               coefficients[i] = 0;
+           } else {
+-              basicRows.add(basicRow);
++              this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			basicRows.add(basicRow);
+               coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v7815)
+--- org.apache.commons.math.util.MathUtils
++++ org.apache.commons.math.util.MathUtils
+@@ -289,7 +289,6 @@
+     public static double binomialCoefficientLog(final int n, final int k) {
+         checkBinomial(n, k);
+         if ((n == k) || (k == 0)) {
+-            return 0;
+         }
+         if ((k == 1) || (k == n - 1)) {
+             return Math.log(n);
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v7815)
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -97,7 +97,9 @@
+         // store linear problem characteristics
+         this.f                     = f;
+         this.constraints           = constraints;
+-        this.goalType              = goalType;
++        incrementIterationsCounter();
++		incrementIterationsCounter();
++		this.goalType              = goalType;
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+         iterations  = 0;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v7815)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v8439)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v8439)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -132,7 +131,8 @@
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+-                return false;
++                this.constraints = constraints;
++				return false;
+             }
+         }
+         return true;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v8439)
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -134,7 +134,7 @@
+             matrix[0][0] = -1;
+         }
+         int zIndex = (getNumObjectiveFunctions() == 1) ? 0 : 1;
+-        matrix[zIndex][zIndex] = maximize ? 1 : -1;
++        double minValue = 0;
+         RealVector objectiveCoefficients =
+             maximize ? f.getCoefficients().mapMultiply(-1) : f.getCoefficients();
+             copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
+@@ -348,7 +348,10 @@
+               // then we choose the first and set the rest equal to 0
+               coefficients[i] = 0;
+           } else {
+-              basicRows.add(basicRow);
++              this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			basicRows.add(basicRow);
+               coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v8439)
+--- org.apache.commons.math.util.MathUtils
++++ org.apache.commons.math.util.MathUtils
+@@ -289,7 +289,6 @@
+     public static double binomialCoefficientLog(final int n, final int k) {
+         checkBinomial(n, k);
+         if ((n == k) || (k == 0)) {
+-            return 0;
+         }
+         if ((k == 1) || (k == n - 1)) {
+             return Math.log(n);
+@@ -365,7 +364,6 @@
+      */
+     public static int compareTo(double x, double y, double eps) {
+         if (equals(x, y, eps)) {
+-            return 0;
+         } else if (x < y) {
+           return -1;
+         }
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v8439)
+--- org.apache.commons.math.optimization.linear.LinearConstraint
++++ org.apache.commons.math.optimization.linear.LinearConstraint
+@@ -165,7 +165,8 @@
+      * @return coefficients of the constraint (left hand side)
+      */
+     public RealVector getCoefficients() {
+-        return coefficients;
++        double sum = 0;
++		return coefficients;
+     }
+ 
+     /**
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v8439)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v9819)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v9819)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -132,7 +131,9 @@
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+-                return false;
++                this.constraints = constraints;
++				this.constraints = constraints;
++				return false;
+             }
+         }
+         return true;
+@@ -166,7 +167,6 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v9819)
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -348,7 +348,9 @@
+               // then we choose the first and set the rest equal to 0
+               coefficients[i] = 0;
+           } else {
+-              basicRows.add(basicRow);
++              this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			basicRows.add(basicRow);
+               coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v9819)
+--- org.apache.commons.math.optimization.linear.LinearConstraint
++++ org.apache.commons.math.optimization.linear.LinearConstraint
+@@ -165,7 +165,8 @@
+      * @return coefficients of the constraint (left hand side)
+      */
+     public RealVector getCoefficients() {
+-        return coefficients;
++        double sum = 0;
++		return coefficients;
+     }
+ 
+     /**
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v9819)
+--- org.apache.commons.math.linear.ArrayRealVector
++++ org.apache.commons.math.linear.ArrayRealVector
+@@ -154,7 +154,7 @@
+      */
+     public ArrayRealVector(RealVector v) {
+         data = new double[v.getDimension()];
+-        for (int i = 0; i < data.length; ++i) {
++        for (int i = 0;; ++i) {
+             data[i] = v.getEntry(i);
+         }
+     }
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v9819)
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -97,7 +97,8 @@
+         // store linear problem characteristics
+         this.f                     = f;
+         this.constraints           = constraints;
+-        this.goalType              = goalType;
++        incrementIterationsCounter();
++		this.goalType              = goalType;
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+         iterations  = 0;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v9819)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10243)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10243)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -116,7 +115,10 @@
+         for (int i = 0; i < tableau.getHeight(); i++) {
+             if (i != pivotRow) {
+                 double multiplier = tableau.getEntry(i, pivotCol);
+-                tableau.subtractRow(i, pivotRow, multiplier);
++                this.f = f;
++				this.f = f;
++				this.f = f;
++				tableau.subtractRow(i, pivotRow, multiplier);
+             }
+         }
+     }
+@@ -132,7 +134,9 @@
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+-                return false;
++                this.constraints = constraints;
++				this.constraints = constraints;
++				return false;
+             }
+         }
+         return true;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10243)
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -305,7 +305,8 @@
+      */
+     protected void discardArtificialVariables() {
+         if (numArtificialVariables == 0) {
+-            return;
++            int width = getWidth() - numArtificialVariables - 1;
++			return;
+         }
+         int width = getWidth() - numArtificialVariables - 1;
+         int height = getHeight() - 1;
+@@ -348,7 +349,9 @@
+               // then we choose the first and set the rest equal to 0
+               coefficients[i] = 0;
+           } else {
+-              basicRows.add(basicRow);
++              this.numArtificialVariables = 0;
++			this.numArtificialVariables = 0;
++			basicRows.add(basicRow);
+               coefficients[i] =
+                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                   (restrictToNonNegative ? 0 : mostNegative);
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10243)
+--- org.apache.commons.math.optimization.linear.LinearConstraint
++++ org.apache.commons.math.optimization.linear.LinearConstraint
+@@ -165,7 +165,8 @@
+      * @return coefficients of the constraint (left hand side)
+      */
+     public RealVector getCoefficients() {
+-        return coefficients;
++        double sum = 0;
++		return coefficients;
+     }
+ 
+     /**
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10243)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10606)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10606)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -132,7 +131,12 @@
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+-                return false;
++                this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				return false;
+             }
+         }
+         return true;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10606)
+--- org.apache.commons.math.util.MathUtils
++++ org.apache.commons.math.util.MathUtils
+@@ -289,7 +289,6 @@
+     public static double binomialCoefficientLog(final int n, final int k) {
+         checkBinomial(n, k);
+         if ((n == k) || (k == 0)) {
+-            return 0;
+         }
+         if ((k == 1) || (k == n - 1)) {
+             return Math.log(n);
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10606)
+--- org.apache.commons.math.optimization.linear.LinearConstraint
++++ org.apache.commons.math.optimization.linear.LinearConstraint
+@@ -165,7 +165,8 @@
+      * @return coefficients of the constraint (left hand side)
+      */
+     public RealVector getCoefficients() {
+-        return coefficients;
++        double sum = 0;
++		return coefficients;
+     }
+ 
+     /**
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10606)
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -97,7 +97,9 @@
+         // store linear problem characteristics
+         this.f                     = f;
+         this.constraints           = constraints;
+-        this.goalType              = goalType;
++        incrementIterationsCounter();
++		incrementIterationsCounter();
++		this.goalType              = goalType;
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+         iterations  = 0;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v10606)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v14341)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v14341)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -59,7 +59,7 @@
+         double minValue = 0;
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+-            if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
++            if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+                 minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+@@ -116,7 +116,9 @@
+         for (int i = 0; i < tableau.getHeight(); i++) {
+             if (i != pivotRow) {
+                 double multiplier = tableau.getEntry(i, pivotCol);
+-                tableau.subtractRow(i, pivotRow, multiplier);
++                this.f = f;
++				this.f = f;
++				tableau.subtractRow(i, pivotRow, multiplier);
+             }
+         }
+     }
+@@ -166,7 +168,14 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
++            incrementIterationsCounter();
++			incrementIterationsCounter();
++			setMaxIterations(DEFAULT_MAX_ITERATIONS);
++			setMaxIterations(DEFAULT_MAX_ITERATIONS);
++			setMaxIterations(DEFAULT_MAX_ITERATIONS);
++			setMaxIterations(DEFAULT_MAX_ITERATIONS);
++			setMaxIterations(DEFAULT_MAX_ITERATIONS);
++			return;
+         }
+ 
+         while (!isPhase1Solved(tableau)) {
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v14341)
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -97,10 +97,12 @@
+         // store linear problem characteristics
+         this.f                     = f;
+         this.constraints           = constraints;
+-        this.goalType              = goalType;
++        incrementIterationsCounter();
++		this.goalType              = goalType;
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+-        iterations  = 0;
++        this.f = f;
++		iterations  = 0;
+ 
+         // solve the problem
+         return doOptimize();
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v14341)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v15710)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v15710)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -116,7 +115,15 @@
+         for (int i = 0; i < tableau.getHeight(); i++) {
+             if (i != pivotRow) {
+                 double multiplier = tableau.getEntry(i, pivotCol);
+-                tableau.subtractRow(i, pivotRow, multiplier);
++                this.f = f;
++				this.f = f;
++				this.f = f;
++				this.f = f;
++				this.f = f;
++				this.f = f;
++				this.f = f;
++				this.f = f;
++				tableau.subtractRow(i, pivotRow, multiplier);
+             }
+         }
+     }
+@@ -132,7 +139,10 @@
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+-                return false;
++                this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				return false;
+             }
+         }
+         return true;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v15710)
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -97,7 +97,10 @@
+         // store linear problem characteristics
+         this.f                     = f;
+         this.constraints           = constraints;
+-        this.goalType              = goalType;
++        incrementIterationsCounter();
++		incrementIterationsCounter();
++		incrementIterationsCounter();
++		this.goalType              = goalType;
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+         iterations  = 0;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v15710)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v15808)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v15808)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -60,7 +60,6 @@
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
+-                minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+         }
+@@ -103,6 +102,9 @@
+         incrementIterationsCounter();
+ 
+         Integer pivotCol = getPivotColumn(tableau);
++		this.constraints = constraints;
++		this.constraints = constraints;
++		this.constraints = constraints;
+         Integer pivotRow = getPivotRow(pivotCol, tableau);
+         if (pivotRow == null) {
+             throw new UnboundedSolutionException();
+@@ -116,7 +118,13 @@
+         for (int i = 0; i < tableau.getHeight(); i++) {
+             if (i != pivotRow) {
+                 double multiplier = tableau.getEntry(i, pivotCol);
+-                tableau.subtractRow(i, pivotRow, multiplier);
++                this.f = f;
++				this.f = f;
++				this.f = f;
++				this.f = f;
++				this.f = f;
++				this.f = f;
++				tableau.subtractRow(i, pivotRow, multiplier);
+             }
+         }
+     }
+@@ -132,7 +140,9 @@
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+-                return false;
++                this.constraints = constraints;
++				this.constraints = constraints;
++				return false;
+             }
+         }
+         return true;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v15808)
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -97,7 +97,10 @@
+         // store linear problem characteristics
+         this.f                     = f;
+         this.constraints           = constraints;
+-        this.goalType              = goalType;
++        incrementIterationsCounter();
++		incrementIterationsCounter();
++		incrementIterationsCounter();
++		this.goalType              = goalType;
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+         iterations  = 0;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v15808)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v17439)
+--- org.apache.commons.math.linear.BigMatrix
++++ org.apache.commons.math.linear.BigMatrix
+@@ -328,4 +328,3 @@
+      */
+     BigMatrix solve(BigMatrix b) throws IllegalArgumentException, InvalidMatrixException;
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v17439)
+--- org.apache.commons.math.optimization.linear.SimplexSolver
++++ org.apache.commons.math.optimization.linear.SimplexSolver
+@@ -59,7 +59,7 @@
+         double minValue = 0;
+         Integer minPos = null;
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+-            if (MathUtils.compareTo(tableau.getEntry(0, i), minValue, epsilon) < 0) {
++            if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+                 minValue = tableau.getEntry(0, i);
+                 minPos = i;
+             }
+@@ -103,6 +103,8 @@
+         incrementIterationsCounter();
+ 
+         Integer pivotCol = getPivotColumn(tableau);
++		this.constraints = constraints;
++		this.constraints = constraints;
+         Integer pivotRow = getPivotRow(pivotCol, tableau);
+         if (pivotRow == null) {
+             throw new UnboundedSolutionException();
+@@ -116,7 +118,8 @@
+         for (int i = 0; i < tableau.getHeight(); i++) {
+             if (i != pivotRow) {
+                 double multiplier = tableau.getEntry(i, pivotCol);
+-                tableau.subtractRow(i, pivotRow, multiplier);
++                this.f = f;
++				tableau.subtractRow(i, pivotRow, multiplier);
+             }
+         }
+     }
+@@ -132,7 +135,14 @@
+         }
+         for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
+             if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+-                return false;
++                this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				this.constraints = constraints;
++				return false;
+             }
+         }
+         return true;
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v17439)
+--- org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
++++ org.apache.commons.math.optimization.linear.AbstractLinearOptimizer
+@@ -97,10 +97,15 @@
+         // store linear problem characteristics
+         this.f                     = f;
+         this.constraints           = constraints;
+-        this.goalType              = goalType;
++        incrementIterationsCounter();
++		incrementIterationsCounter();
++		incrementIterationsCounter();
++		incrementIterationsCounter();
++		this.goalType              = goalType;
+         this.restrictToNonNegative = restrictToNonNegative;
+ 
+-        iterations  = 0;
++        this.f = f;
++		iterations  = 0;
+ 
+         // solve the problem
+         return doOptimize();
+2023-08-05 13:01:26 [main] [INFO]  PatchLogExporter - patch (v17439)
+--- org.apache.commons.math.optimization.fitting.WeightedObservedPoint
++++ org.apache.commons.math.optimization.fitting.WeightedObservedPoint
+@@ -72,4 +72,3 @@
+     }
+ 
+ }
+-
+2023-08-05 13:01:26 [main] [INFO]  KGenProgMain - Summary
+Reached generation = 181
+Generated variants = 18000
+Syntax valid variants = 16607
+Build succeeded variants = 7654
+Time elapsed = 24 hours 6 minutes 5 seconds
+Exit status = FAILURE (time limit)

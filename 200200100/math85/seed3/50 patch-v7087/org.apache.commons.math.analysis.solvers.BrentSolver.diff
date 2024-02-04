@@ -1,0 +1,21 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -94,7 +94,6 @@
+                         final double min, final double max, final double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+ 
+-        clearResult();
+         verifySequence(min, initial, max);
+ 
+         // return the initial guess if it is good enough
+@@ -259,7 +258,9 @@
+                 // it is part of the original Brent's method,
+                 // it should NOT be replaced by proximity test
+                 if (x0 == x2) {
+-                    // Linear interpolation.
++                    x0 = x1;
++					x0 = x1;
++					// Linear interpolation.
+                     p = dx * r3;
+                     p1 = 1.0 - r3;
+                 } else {

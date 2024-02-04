@@ -1,0 +1,69 @@
+,世代,時間,出力数,前世代までの合計
+0,3rd, 15 minutes 6 seconds,1,0
+1,4th, 33 minutes 8 seconds,2,1
+2,5th, 1 hours 5 minutes 1 seconds,1,3
+3,6th, 1 hours 17 minutes 4 seconds,2,4
+4,7th, 1 hours 17 minutes 8 seconds,2,6
+5,10th, 1 hours 32 minutes 18 seconds,1,8
+6,11th, 1 hours 35 minutes 21 seconds,2,9
+7,15th, 1 hours 38 minutes 34 seconds,2,11
+8,16th, 1 hours 44 minutes 37 seconds,1,13
+9,17th, 1 hours 49 minutes 30 seconds,1,14
+10,18th, 1 hours 49 minutes 34 seconds,2,15
+11,20th, 2 hours 3 minutes 32 seconds,1,17
+12,23rd, 2 hours 8 minutes 31 seconds,1,18
+13,25th, 2 hours 14 minutes 38 seconds,1,19
+14,26th, 2 hours 14 minutes 42 seconds,1,20
+15,28th, 2 hours 17 minutes 50 seconds,1,21
+16,30th, 2 hours 34 minutes 47 seconds,2,22
+17,32nd, 2 hours 34 minutes 56 seconds,1,24
+18,33rd, 2 hours 35 minutes 1 seconds,2,25
+19,35th, 2 hours 41 minutes 9 seconds,1,27
+20,36th, 2 hours 41 minutes 13 seconds,1,28
+21,38th, 2 hours 47 minutes 23 seconds,2,29
+22,39th, 2 hours 47 minutes 27 seconds,1,31
+23,42nd, 2 hours 50 minutes 40 seconds,1,32
+24,43rd, 2 hours 59 minutes 45 seconds,1,33
+25,44th, 2 hours 59 minutes 50 seconds,1,34
+26,45th, 3 hours 11 minutes 55 seconds,1,35
+27,48th, 3 hours 18 minutes 9 seconds,1,36
+28,51st, 3 hours 27 minutes 25 seconds,1,37
+29,53rd, 3 hours 29 minutes 28 seconds,2,38
+30,57th, 3 hours 54 minutes 35 seconds,3,40
+31,62nd, 4 hours 28 minutes 4 seconds,2,43
+32,69th, 4 hours 56 minutes 27 seconds,1,45
+33,77th, 5 hours 15 minutes 10 seconds,2,46
+34,78th, 5 hours 15 minutes 16 seconds,1,48
+35,81st, 5 hours 15 minutes 31 seconds,1,49
+36,83rd, 5 hours 15 minutes 43 seconds,2,50
+37,88th, 6 hours 8 seconds,1,52
+38,89th, 6 hours 14 seconds,3,53
+39,90th, 6 hours 22 seconds,1,56
+40,92nd, 6 hours 3 minutes 34 seconds,1,57
+41,93rd, 6 hours 15 minutes 41 seconds,1,58
+42,96th, 6 hours 22 minutes 1 seconds,2,59
+43,98th, 6 hours 22 minutes 15 seconds,2,61
+44,99th, 6 hours 22 minutes 22 seconds,1,63
+45,100th, 6 hours 28 minutes 29 seconds,1,64
+46,103rd, 6 hours 31 minutes 51 seconds,3,65
+47,105th, 7 hours 14 minutes 4 seconds,2,68
+48,106th, 7 hours 17 minutes 11 seconds,1,70
+49,107th, 7 hours 23 minutes 18 seconds,1,71
+50,109th, 7 hours 32 minutes 31 seconds,2,72
+51,110th, 7 hours 32 minutes 38 seconds,2,74
+52,112th, 7 hours 38 minutes 52 seconds,3,76
+53,115th, 8 hours 3 minutes 12 seconds,1,79
+54,116th, 8 hours 6 minutes 19 seconds,1,80
+55,117th, 8 hours 6 minutes 25 seconds,1,81
+56,118th, 8 hours 9 minutes 31 seconds,1,82
+57,122nd, 8 hours 19 minutes 3 seconds,1,83
+58,123rd, 8 hours 31 minutes 10 seconds,2,84
+59,125th, 8 hours 43 minutes 24 seconds,1,86
+60,127th, 8 hours 45 minutes 33 seconds,1,87
+61,128th, 8 hours 57 minutes 40 seconds,1,88
+62,131st, 9 hours 11 minutes 54 seconds,1,89
+63,133rd, 9 hours 18 minutes 9 seconds,1,90
+64,135th, 9 hours 24 minutes 21 seconds,2,91
+65,136th, 9 hours 24 minutes 27 seconds,3,93
+66,137th, 9 hours 24 minutes 34 seconds,1,96
+67,139th, 9 hours 24 minutes 44 seconds,3,97

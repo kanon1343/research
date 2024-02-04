@@ -1,0 +1,13 @@
+--- org.apache.commons.math.MathException
++++ org.apache.commons.math.MathException
+@@ -90,9 +90,9 @@
+      * detail message.
+      */
+     public MathException() {
+-        super();
+         this.pattern   = null;
+         this.arguments = new Object[0];
++		printStackTrace(System.err);
+     }
+     
+     /**

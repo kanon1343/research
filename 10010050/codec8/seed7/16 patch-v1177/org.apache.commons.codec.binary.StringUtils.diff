@@ -1,0 +1,11 @@
+--- org.apache.commons.codec.binary.StringUtils
++++ org.apache.commons.codec.binary.StringUtils
+@@ -150,7 +150,7 @@
+      */
+     public static byte[] getBytesUnchecked(String string, String charsetName) {
+         if (string == null) {
+-            return null;
++            throw new NullPointerException("encodeInteger called with null parameter");
+         }
+         try {
+             return string.getBytes(charsetName);

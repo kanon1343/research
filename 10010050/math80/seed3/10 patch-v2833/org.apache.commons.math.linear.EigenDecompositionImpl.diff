@@ -1,0 +1,37 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -192,8 +192,6 @@
+ 
+         this.main      = main.clone();
+         this.secondary = secondary.clone();
+-        transformer    = null;
+-
+         // pre-compute some elements
+         squaredSecondary = new double[secondary.length];
+         for (int i = 0; i < squaredSecondary.length; ++i) {
+@@ -836,9 +834,6 @@
+             return;
+         }
+ 
+-        // initial checks for splits (see Parlett & Marques section 3.3)
+-        flipIfWarranted(n, 2);
+-
+         // two iterations with Li's test for initial splits
+         initialSplits(n);
+ 
+@@ -1141,7 +1136,6 @@
+                 }
+                 j -= 4;
+             }
+-            return true;
+         }
+         return false;
+     }
+@@ -1486,7 +1480,6 @@
+                         np = nn - 9;
+                     } else {
+                         np = nn - 2 * pingPong;
+-                        b2 = work[np - 2];
+                         gam = dN1;
+                         if (work[np - 4]  >  work[np - 2]) {
+                             return;

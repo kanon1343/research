@@ -1,0 +1,10 @@
+--- org.apache.commons.codec.binary.Base64InputStream
++++ org.apache.commons.codec.binary.Base64InputStream
+@@ -72,6 +72,7 @@
+      */
+     public Base64InputStream(InputStream in, boolean doEncode) {
+         super(in);
++		int bytesCopied = 0;
+         this.doEncode = doEncode;
+         this.base64 = new Base64(false);
+     }

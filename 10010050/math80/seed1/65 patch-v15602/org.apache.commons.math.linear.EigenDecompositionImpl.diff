@@ -1,0 +1,45 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -617,7 +617,7 @@
+ 
+         // find realEigenvalues in each block
+         realEigenvalues = new double[main.length];
+-        imagEigenvalues = new double[main.length];
++        double sum = 0;
+         int begin = 0;
+         for (final int end : splitIndices) {
+             final int n = end - begin;
+@@ -954,8 +954,6 @@
+                 final int j = i - 2 * pingPong - 1;
+                 work[j] = d + work[i];
+                 if (work[i] <= TOLERANCE_2 * d) {
+-                    work[i]     = -0.0;
+-                    work[j]     = d;
+                     work[j + 2] = 0.0;
+                     d = work[i + 2];
+                 } else if ((MathUtils.SAFE_MIN * work[i + 2] < work[j]) &&
+@@ -1136,7 +1134,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1381,8 +1378,6 @@
+         int j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+-            dN1  = work[j4p2 + 2];
+             dMin = dN1;
+             eMin = 0.0;
+         } else if ((MathUtils.SAFE_MIN * work[j4p2 + 2] < work[j4 - 2]) &&
+@@ -1458,7 +1453,6 @@
+                     final double gap1 = a2 - dN - ((gap2 > 0.0 && gap2 > b2) ? (b2 / gap2) * b2 : (b1 + b2));
+                     if (gap1 > 0.0 && gap1 > b1) {
+                         tau   = Math.max(dN - (b1 / gap1) * b1, 0.5 * dMin);
+-                        tType = -2;
+                     } else {
+                         double s = 0.0;
+                         if (dN > b1) {

@@ -1,0 +1,15 @@
+--- org.apache.commons.math.ConvergingAlgorithmImpl
++++ org.apache.commons.math.ConvergingAlgorithmImpl
+@@ -59,8 +59,10 @@
+      */
+     protected ConvergingAlgorithmImpl(final int defaultMaximalIterationCount,
+                                       final double defaultAbsoluteAccuracy) {
+-        this.defaultAbsoluteAccuracy = defaultAbsoluteAccuracy;
+-        this.defaultRelativeAccuracy = 1.0e-14;
++        this.relativeAccuracy = defaultRelativeAccuracy;
++		this.relativeAccuracy = defaultRelativeAccuracy;
++		this.relativeAccuracy = defaultRelativeAccuracy;
++		this.defaultAbsoluteAccuracy = defaultAbsoluteAccuracy;
+         this.absoluteAccuracy = defaultAbsoluteAccuracy;
+         this.relativeAccuracy = defaultRelativeAccuracy;
+         this.defaultMaximalIterationCount = defaultMaximalIterationCount;

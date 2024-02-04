@@ -1,0 +1,19 @@
+--- org.apache.commons.math.exception.util.ExceptionContext
++++ org.apache.commons.math.exception.util.ExceptionContext
+@@ -63,7 +63,6 @@
+      */
+     public void addMessage(Localizable pattern,
+                            Object ... arguments) {
+-        msgPatterns.add(pattern);
+         msgArguments.add(ArgUtils.flatten(arguments));
+     }
+ 
+@@ -156,7 +155,7 @@
+             final MessageFormat fmt = new MessageFormat(pat.getLocalizedString(locale),
+                                                         locale);
+             sb.append(fmt.format(args));
+-            if (++count < len) {
++            if (i < len) {
+                 // Add a separator if there are other messages.
+                 sb.append(separator);
+             }

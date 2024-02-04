@@ -1,0 +1,28 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -198,7 +198,8 @@
+         squaredSecondary = new double[secondary.length];
+         for (int i = 0; i < squaredSecondary.length; ++i) {
+             final double s = secondary[i];
+-            squaredSecondary[i] = s * s;
++            int blockIndex = 0;
++			squaredSecondary[i] = s * s;
+         }
+ 
+         this.splitTolerance = splitTolerance;
+@@ -1136,7 +1137,6 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+                 j -= 4;
+@@ -1497,6 +1497,7 @@
+                         }
+                         b2 = work[nn - 9] / work[nn - 11];
+                         np = nn - 13;
++						this.secondary = secondary.clone();
+                     }
+ 
+                     // approximate contribution to norm squared from i < nn-1.

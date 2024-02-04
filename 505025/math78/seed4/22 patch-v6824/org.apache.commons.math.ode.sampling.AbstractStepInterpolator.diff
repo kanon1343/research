@@ -1,0 +1,23 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -216,8 +216,9 @@
+    */
+   public void storeTime(final double t) {
+ 
++    final double oneMinusThetaH = currentTime - interpolatedTime;
++	currentTime = t;
+     currentTime = t;
+-    h           = currentTime - previousTime;
+     setInterpolatedTime(t);
+ 
+     // the step is not finalized anymore
+@@ -248,7 +249,8 @@
+ 
+   /** {@inheritDoc} */
+   public boolean isForward() {
+-    return forward;
++    dirtyState = false;
++	return forward;
+   }
+ 
+   /** Compute the state and derivatives at the interpolated time.

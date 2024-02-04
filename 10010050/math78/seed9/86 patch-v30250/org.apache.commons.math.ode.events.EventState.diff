@@ -1,0 +1,11 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -282,7 +282,7 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
++        nextAction = handler.eventOccurred(t, y, !(increasing ^ forward));
+         g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {

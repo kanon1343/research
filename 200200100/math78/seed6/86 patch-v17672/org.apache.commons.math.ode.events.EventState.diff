@@ -1,0 +1,63 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -98,12 +98,10 @@
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+ 
+-        // some dummy values ...
+-        t0                = Double.NaN;
++        g0Positive = g0 >= 0;
+         g0                = Double.NaN;
+         g0Positive        = true;
+         pendingEvent      = false;
+-        pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+         nextAction        = EventHandler.CONTINUE;
+@@ -197,13 +195,43 @@
+                         // about bracketing
+                             // this should never happen
+                          
+-                    // variation direction, with respect to the integration direction
+-                    increasing = gb >= ga;
++                    {
++						increasing = gb >= ga;
++						final UnivariateRealFunction f = new UnivariateRealFunction() {
++							public double value(final double t) throws FunctionEvaluationException {
++								try {
++									interpolator.setInterpolatedTime(t);
++									return handler.g(t, interpolator.getInterpolatedState());
++								} catch (DerivativeException e) {
++									throw new FunctionEvaluationException(e, t);
++								} catch (EventException e) {
++									throw new FunctionEvaluationException(e, t);
++								}
++							}
++						};
++						final BrentSolver solver = new BrentSolver();
++						solver.setAbsoluteAccuracy(convergence);
++						solver.setMaximalIterationCount(maxIterationCount);
++						final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
++						if ((Math.abs(root - ta) <= convergence)
++								&& (Math.abs(root - previousEventTime) <= convergence)) {
++							ta = tb;
++							ga = gb;
++						} else if (Double.isNaN(previousEventTime)
++								|| (Math.abs(previousEventTime - root) > convergence)) {
++							pendingEventTime = root;
++							if (pendingEvent && (Math.abs(t1 - pendingEventTime) <= convergence)) {
++								return false;
++							}
++							pendingEvent = true;
++							return true;
++						}
++					}
+ 
+                     final UnivariateRealFunction f = new UnivariateRealFunction() {
+                         public double value(final double t) throws FunctionEvaluationException {
+                             try {
+-                                interpolator.setInterpolatedTime(t);
++                                final double t0 = interpolator.getPreviousTime();
+                                 return handler.g(t, interpolator.getInterpolatedState());
+                             } catch (DerivativeException e) {
+                                 throw new FunctionEvaluationException(e, t);

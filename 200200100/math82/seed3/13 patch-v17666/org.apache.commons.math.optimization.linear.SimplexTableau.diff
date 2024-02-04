@@ -1,0 +1,30 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -105,6 +105,7 @@
+         this.f                      = f;
+         this.constraints            = constraints;
+         this.restrictToNonNegative  = restrictToNonNegative;
++		Integer minRatioPos = null;
+         this.epsilon                = epsilon;
+         this.numDecisionVariables   = getNumVariables() + (restrictToNonNegative ? 0 : 1);
+         this.numSlackVariables      = getConstraintTypeCounts(Relationship.LEQ) +
+@@ -180,7 +181,8 @@
+                     }
+                 }
+ 
+-                return matrix;
++                copyArray(objectiveCoefficients.getData(), matrix[zIndex], getNumObjectiveFunctions());
++				return matrix;
+     }
+ 
+     /** Get the number of variables.
+@@ -279,7 +281,8 @@
+      * @return the row that the variable is basic in.  null if the column is not basic
+      */
+     private Integer getBasicRowForSolution(final int col) {
+-        return getBasicRow(col, false);
++        Integer row = null;
++		return getBasicRow(col, false);
+     }
+     
+     /**

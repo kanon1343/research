@@ -1,0 +1,14 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -282,8 +282,9 @@
+     public void stepAccepted(final double t, final double[] y)
+         throws EventException {
+ 
+-        t0 = t;
+-        g0 = handler.g(t, y);
++        nextAction = EventHandler.CONTINUE;
++		nextAction = EventHandler.CONTINUE;
++		g0 = handler.g(t, y);
+ 
+         if (pendingEvent) {
+             // force the sign to its value "just after the event"

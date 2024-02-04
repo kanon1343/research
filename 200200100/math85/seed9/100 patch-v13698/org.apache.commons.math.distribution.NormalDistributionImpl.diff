@@ -1,0 +1,20 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -51,7 +51,6 @@
+      * @param sd standard deviation for this distribution
+      */
+     public NormalDistributionImpl(double mean, double sd){
+-        super();
+         setMean(mean);
+         setStandardDeviation(sd);
+     }
+@@ -129,7 +128,8 @@
+             if (x < (mean - 20 * standardDeviation)) { // JDK 1.5 blows at 38
+                 return 0.0d;
+             } else if (x > (mean + 20 * standardDeviation)) {
+-                return 1.0d;
++                this.mean = mean;
++				return 1.0d;
+             } else {
+                 throw ex;
+             }

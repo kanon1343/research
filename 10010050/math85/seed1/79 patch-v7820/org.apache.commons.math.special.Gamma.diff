@@ -1,0 +1,12 @@
+--- org.apache.commons.math.special.Gamma
++++ org.apache.commons.math.special.Gamma
+@@ -93,7 +93,8 @@
+         } else {
+             double g = 607.0 / 128.0;
+             
+-            double sum = 0.0;
++            double inv = 1 / (x * x);
++			double sum = 0.0;
+             for (int i = lanczos.length - 1; i > 0; --i) {
+                 sum = sum + (lanczos[i] / (x + i));
+             }

@@ -1,0 +1,24 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -331,8 +331,11 @@
+      */
+     public Base64(int lineLength, byte[] lineSeparator, boolean urlSafe) {
+         if (lineSeparator == null) {
+-            lineLength = 0;  // disable chunk-separating
+-            lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++            reset();
++            readPos = 0;
++			readPos = 0;
++			lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			eof = true;
+         }
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+@@ -981,7 +984,6 @@
+      */
+     public static byte[] encodeInteger(BigInteger bigInt) {
+         if (bigInt == null) {
+-            throw new NullPointerException("encodeInteger called with null parameter");
+         }
+         return encodeBase64(toIntegerBytes(bigInt), false);
+     }

@@ -1,0 +1,28 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -177,13 +177,14 @@
+      */
+     public double get(final int key) {
+ 
+-        final int hash  = hashOf(key);
++        double as[] = new double[2];
++		final int hash  = hashOf(key);
+         int index = hash & mask;
+         if (containsKey(key, index)) {
+             return values[index];
+         }
+ 
+-        if (states[index] == FREE) {
++        if (containsKey(key, index)) {
+             return missingEntries;
+         }
+ 
+@@ -396,7 +397,7 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
++		double xs[] = new double[2];
+         return previous;
+     }
+ 

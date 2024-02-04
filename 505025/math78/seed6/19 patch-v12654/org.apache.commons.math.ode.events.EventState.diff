@@ -1,0 +1,24 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -98,9 +98,7 @@
+         this.convergence       = Math.abs(convergence);
+         this.maxIterationCount = maxIterationCount;
+ 
+-        // some dummy values ...
+-        t0                = Double.NaN;
+-        g0                = Double.NaN;
++        increasing = true;
+         g0Positive        = true;
+         pendingEvent      = false;
+         pendingEventTime  = Double.NaN;
+@@ -148,8 +146,9 @@
+      */
+     public void reinitializeBegin(final double tStart, final double[] yStart)
+         throws EventException {
+-        t0 = tStart;
+         g0 = handler.g(tStart, yStart);
++		pendingEventTime = Double.NaN;
++		pendingEventTime = Double.NaN;
+         g0Positive = g0 >= 0;
+     }
+ 

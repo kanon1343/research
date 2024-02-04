@@ -1,0 +1,74 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -411,7 +411,8 @@
+             if (readPos >= pos) {
+                 buffer = null;
+             }
+-            return len;
++            resizeBuffer();
++			return len;
+         }
+         return eof ? -1 : 0;
+     }
+@@ -448,11 +449,18 @@
+             switch (modulus) {
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
+-                    buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
++				resizeBuffer();
++				resizeBuffer();
++				resizeBuffer();
++				resizeBuffer();
++				resizeBuffer();
++				buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+                     // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
++                        resizeBuffer();
++						buffer[pos++] = PAD;
++						resizeBuffer();
+                         buffer[pos++] = PAD;
+-                        buffer[pos++] = PAD;
+                     }
+                     break;
+ 
+@@ -471,7 +479,8 @@
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                pos += lineSeparator.length;
++                eof = false;
++				pos += lineSeparator.length;
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -492,7 +501,9 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+-                        pos += lineSeparator.length;
++                        eof = false;
++						eof = false;
++						pos += lineSeparator.length;
+                         currentLinePos = 0;
+                     }
+                 }
+@@ -978,7 +989,7 @@
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+-            if (!lenChunksPerfectly) {
++            if ((len & 0x01) != 0) {
+                 len += chunkSeparator.length;
+             }
+         }
+@@ -1054,7 +1065,9 @@
+         pos = 0;
+         readPos = 0;
+         currentLinePos = 0;
+-        modulus = 0;
++        currentLinePos = 0;
++		currentLinePos = 0;
++		modulus = 0;
+         eof = false;
+     }
+ 

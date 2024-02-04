@@ -1,0 +1,12 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -299,7 +299,8 @@
+      * @return square root of a
+      */
+     public static double sqrt(final double a) {
+-        return Math.sqrt(a);
++        final double result;
++		return Math.sqrt(a);
+     }
+ 
+     /** Compute the hyperbolic cosine of a number.

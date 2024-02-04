@@ -1,0 +1,239 @@
+./505025/codec8/seed0/2 patch-v616/org.apache.commons.codec.binary.Base64.java:498:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed1/1 patch-v68/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/10 patch-v3335/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/13 patch-v4516/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/16 patch-v5623/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/2 patch-v658/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/20 patch-v6047/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/23 patch-v6424/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/3 patch-v884/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/37 patch-v16257/org.apache.commons.codec.binary.Base64.java:1044:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed1/4 patch-v896/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/42 patch-v31118/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/5 patch-v965/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/6 patch-v1516/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/69 patch-v36722/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/78 patch-v37322/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/8 patch-v2829/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/83 patch-v38254/org.apache.commons.codec.binary.Base64.java:395:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed1/86 patch-v40007/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/87 patch-v41123/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed1/9 patch-v2921/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed2/10 patch-v4406/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/11 patch-v4472/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/13 patch-v4810/org.apache.commons.codec.binary.Base64.java:336:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/13 patch-v4810/org.apache.commons.codec.binary.Base64.java:583:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/16 patch-v5907/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed2/17 patch-v6716/org.apache.commons.codec.binary.Base64.java:340:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/18 patch-v6727/org.apache.commons.codec.binary.Base64.java:341:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/20 patch-v7129/org.apache.commons.codec.binary.Base64.java:343:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/24 patch-v7927/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed2/26 patch-v8102/org.apache.commons.codec.binary.Base64.java:344:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/30 patch-v10916/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed2/31 patch-v11015/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed2/35 patch-v12005/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed2/4 patch-v1406/org.apache.commons.codec.binary.Base64.java:494:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/5 patch-v1543/org.apache.commons.codec.binary.Base64InputStream.java:76:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/6 patch-v2390/org.apache.commons.codec.binary.Base64InputStream.java:76:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/61 patch-v19817/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed2/7 patch-v2610/org.apache.commons.codec.binary.Base64.java:339:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/8 patch-v3041/org.apache.commons.codec.binary.Base64.java:581:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/8 patch-v3041/org.apache.commons.codec.binary.Base64InputStream.java:76:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/84 patch-v29203/org.apache.commons.codec.binary.Base64.java:336:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/85 patch-v31647/org.apache.commons.codec.binary.Base64.java:356:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/86 patch-v32419/org.apache.commons.codec.binary.Base64.java:352:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/9 patch-v3540/org.apache.commons.codec.binary.Base64.java:334:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/9 patch-v3540/org.apache.commons.codec.binary.Base64InputStream.java:76:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/9 patch-v3540/org.apache.commons.codec.binary.Base64InputStream.java:170:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed2/94 patch-v37803/org.apache.commons.codec.binary.Base64.java:365:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed2/98 patch-v39936/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/15 patch-v1614/org.apache.commons.codec.binary.Base64.java:490:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed3/18 patch-v3124/org.apache.commons.codec.binary.Base64InputStream.java:76:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed3/18 patch-v3124/org.apache.commons.codec.binary.Base64InputStream.java:170:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/19 patch-v4205/org.apache.commons.codec.binary.Base64.java:502:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed3/2 patch-v32/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/24 patch-v6907/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/25 patch-v6910/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/28 patch-v10246/org.apache.commons.codec.binary.Base64.java:335:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed3/28 patch-v10246/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/31 patch-v11703/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/33 patch-v14925/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/38 patch-v17527/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/39 patch-v17830/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/40 patch-v17903/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/41 patch-v18711/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/44 patch-v19304/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/45 patch-v19821/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/49 patch-v26524/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed3/6 patch-v719/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed4/10 patch-v2457/org.apache.commons.codec.binary.Base64.java:335:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed4/13 patch-v4236/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed4/15 patch-v7506/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed4/16 patch-v7643/org.apache.commons.codec.binary.Base64InputStream.java:170:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed4/23 patch-v14421/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed4/24 patch-v14742/org.apache.commons.codec.binary.Base64.java:336:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed4/24 patch-v14742/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed4/27 patch-v18417/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed4/29 patch-v23802/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed4/30 patch-v25124/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed4/37 patch-v34100/org.apache.commons.codec.binary.Base64.java:345:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed4/5 patch-v1812/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed4/7 patch-v1926/org.apache.commons.codec.binary.Base64.java:335:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed4/8 patch-v2208/org.apache.commons.codec.binary.Base64.java:336:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/100 patch-v31929/org.apache.commons.codec.binary.Base64.java:494:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/2 patch-v579/org.apache.commons.codec.binary.Base64.java:390:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/26 patch-v9917/org.apache.commons.codec.binary.Base64.java:350:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/3 patch-v891/org.apache.commons.codec.binary.Base64.java:390:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/30 patch-v11416/org.apache.commons.codec.binary.Base64.java:336:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/35 patch-v12643/org.apache.commons.codec.binary.Base64.java:350:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/38 patch-v13474/org.apache.commons.codec.binary.Base64.java:342:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/40 patch-v13652/org.apache.commons.codec.binary.Base64.java:419:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/43 patch-v13790/org.apache.commons.codec.binary.Base64.java:342:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/44 patch-v13912/org.apache.commons.codec.binary.Base64.java:432:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/5 patch-v1259/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/52 patch-v17622/org.apache.commons.codec.binary.Base64.java:337:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/55 patch-v17928/org.apache.commons.codec.binary.Base64.java:390:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/55 patch-v17928/org.apache.commons.codec.binary.Base64.java:407:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/58 patch-v18305/org.apache.commons.codec.binary.Base64.java:390:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/58 patch-v18305/org.apache.commons.codec.binary.Base64.java:407:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/60 patch-v18463/org.apache.commons.codec.binary.Base64.java:425:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/66 patch-v22027/org.apache.commons.codec.binary.Base64.java:370:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/68 patch-v23822/org.apache.commons.codec.binary.Base64.java:395:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/68 patch-v23822/org.apache.commons.codec.binary.Base64.java:484:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/7 patch-v2307/org.apache.commons.codec.binary.Base64.java:389:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/70 patch-v24441/org.apache.commons.codec.binary.Base64.java:335:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/73 patch-v24904/org.apache.commons.codec.binary.Base64.java:415:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/75 patch-v25532/org.apache.commons.codec.binary.Base64.java:366:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/77 patch-v27127/org.apache.commons.codec.binary.Base64.java:359:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/81 patch-v28832/org.apache.commons.codec.binary.Base64.java:377:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/82 patch-v28919/org.apache.commons.codec.binary.Base64.java:378:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/83 patch-v28939/org.apache.commons.codec.binary.Base64.java:366:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/83 patch-v28939/org.apache.commons.codec.binary.Base64.java:395:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/83 patch-v28939/org.apache.commons.codec.binary.Base64.java:473:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/84 patch-v29106/org.apache.commons.codec.binary.Base64.java:388:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/84 patch-v29106/org.apache.commons.codec.binary.Base64.java:426:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/84 patch-v29106/org.apache.commons.codec.binary.Base64.java:434:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/85 patch-v29288/org.apache.commons.codec.binary.Base64.java:460:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/85 patch-v29288/org.apache.commons.codec.binary.Base64.java:515:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/86 patch-v29389/org.apache.commons.codec.binary.Base64.java:457:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/86 patch-v29389/org.apache.commons.codec.binary.Base64.java:583:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/87 patch-v29421/org.apache.commons.codec.binary.Base64.java:354:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/87 patch-v29421/org.apache.commons.codec.binary.Base64.java:384:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/87 patch-v29421/org.apache.commons.codec.binary.Base64.java:464:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/88 patch-v29545/org.apache.commons.codec.binary.Base64.java:378:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/88 patch-v29545/org.apache.commons.codec.binary.Base64.java:449:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/89 patch-v29627/org.apache.commons.codec.binary.Base64.java:433:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/90 patch-v29912/org.apache.commons.codec.binary.Base64.java:406:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/90 patch-v29912/org.apache.commons.codec.binary.Base64.java:553:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/91 patch-v29946/org.apache.commons.codec.binary.Base64.java:351:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/92 patch-v30410/org.apache.commons.codec.binary.Base64.java:344:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/92 patch-v30410/org.apache.commons.codec.binary.Base64.java:349:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/92 patch-v30410/org.apache.commons.codec.binary.Base64.java:382:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/93 patch-v30831/org.apache.commons.codec.binary.Base64.java:433:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/93 patch-v30831/org.apache.commons.codec.binary.Base64.java:467:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/94 patch-v31347/org.apache.commons.codec.binary.Base64.java:493:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/96 patch-v31442/org.apache.commons.codec.binary.Base64.java:340:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/96 patch-v31442/org.apache.commons.codec.binary.Base64.java:355:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/96 patch-v31442/org.apache.commons.codec.binary.Base64.java:450:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/96 patch-v31442/org.apache.commons.codec.binary.Base64.java:453:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/96 patch-v31442/org.apache.commons.codec.binary.Base64.java:530:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed5/97 patch-v31509/org.apache.commons.codec.binary.Base64.java:376:	EmptyControlStatement:	Empty block
+./505025/codec8/seed5/98 patch-v31816/org.apache.commons.codec.binary.Base64.java:377:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/1 patch-v78/org.apache.commons.codec.binary.Base64.java:487:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/1 patch-v78/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed6/10 patch-v5403/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed6/2 patch-v610/org.apache.commons.codec.binary.Base64.java:490:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/26 patch-v9605/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/3 patch-v833/org.apache.commons.codec.binary.Base64.java:490:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/41 patch-v14536/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed6/42 patch-v14805/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed6/44 patch-v15421/org.apache.commons.codec.binary.Base64.java:336:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/45 patch-v15702/org.apache.commons.codec.binary.Base64.java:334:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/46 patch-v16733/org.apache.commons.codec.binary.Base64.java:357:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/46 patch-v16733/org.apache.commons.codec.binary.Base64.java:358:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/49 patch-v17336/org.apache.commons.codec.binary.Base64.java:334:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/64 patch-v21208/org.apache.commons.codec.binary.Base64InputStream.java:170:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/65 patch-v22228/org.apache.commons.codec.binary.Base64.java:335:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/7 patch-v4118/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed6/71 patch-v24318/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed6/80 patch-v26816/org.apache.commons.codec.binary.Base64.java:335:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/81 patch-v26886/org.apache.commons.codec.binary.Base64.java:335:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed6/9 patch-v4841/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed6/95 patch-v30208/org.apache.commons.codec.binary.Base64.java:335:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed7/19 patch-v11721/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed7/21 patch-v12831/org.apache.commons.codec.binary.Base64.java:346:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed7/24 patch-v13519/org.apache.commons.codec.binary.Base64.java:334:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed7/26 patch-v14008/org.apache.commons.codec.binary.Base64.java:335:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed7/4 patch-v2530/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed7/49 patch-v22945/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed7/6 patch-v3741/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed7/8 patch-v5940/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed7/91 patch-v36842/org.apache.commons.codec.binary.Base64.java:334:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed7/92 patch-v37507/org.apache.commons.codec.binary.Base64.java:340:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed7/97 patch-v40702/org.apache.commons.codec.binary.Base64.java:340:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed7/98 patch-v40714/org.apache.commons.codec.binary.Base64.java:339:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed7/98 patch-v40714/org.apache.commons.codec.binary.Base64.java:444:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed7/99 patch-v40725/org.apache.commons.codec.binary.Base64.java:339:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed7/99 patch-v40725/org.apache.commons.codec.binary.Base64.java:342:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/14 patch-v15425/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed8/2 patch-v713/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed8/20 patch-v21924/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed8/22 patch-v23023/org.apache.commons.codec.binary.Base64.java:368:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/22 patch-v23023/org.apache.commons.codec.binary.Base64.java:459:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/29 patch-v29055/org.apache.commons.codec.binary.Base64.java:382:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/31 patch-v29154/org.apache.commons.codec.binary.Base64.java:387:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/36 patch-v36817/org.apache.commons.codec.binary.Base64.java:359:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/4 patch-v6511/org.apache.commons.codec.binary.Base64.java:341:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/40 patch-v38913/org.apache.commons.codec.binary.Base64.java:352:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/40 patch-v38913/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed8/41 patch-v39164/org.apache.commons.codec.binary.Base64.java:374:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/42 patch-v39373/org.apache.commons.codec.binary.Base64.java:359:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/43 patch-v39388/org.apache.commons.codec.binary.Base64.java:358:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/49 patch-v40194/org.apache.commons.codec.binary.Base64.java:363:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/5 patch-v7404/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed8/54 patch-v40793/org.apache.commons.codec.binary.Base64.java:357:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/6 patch-v8467/org.apache.commons.codec.binary.Base64.java:349:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/7 patch-v8566/org.apache.commons.codec.binary.Base64.java:334:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed8/9 patch-v8689/org.apache.commons.codec.binary.Base64.java:346:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/10 patch-v1011/org.apache.commons.codec.binary.Base64.java:337:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/11 patch-v1059/org.apache.commons.codec.binary.Base64.java:337:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/13 patch-v1286/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/15 patch-v1563/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/16 patch-v2225/org.apache.commons.codec.binary.Base64.java:339:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/17 patch-v2425/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/19 patch-v3432/org.apache.commons.codec.binary.Base64.java:341:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/2 patch-v290/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/20 patch-v4020/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/21 patch-v4247/org.apache.commons.codec.binary.Base64.java:341:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/21 patch-v4247/org.apache.commons.codec.binary.Base64.java:493:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/21 patch-v4247/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/21 patch-v4247/org.apache.commons.codec.binary.Base64InputStream.java:171:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/22 patch-v4436/org.apache.commons.codec.binary.Base64.java:342:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/22 patch-v4436/org.apache.commons.codec.binary.Base64.java:494:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/22 patch-v4436/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/22 patch-v4436/org.apache.commons.codec.binary.Base64InputStream.java:170:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed9/23 patch-v4506/org.apache.commons.codec.binary.Base64.java:493:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/23 patch-v4506/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/24 patch-v5102/org.apache.commons.codec.binary.Base64.java:492:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/24 patch-v5102/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/25 patch-v5107/org.apache.commons.codec.binary.Base64InputStream.java:169:	EmptyControlStatement:	Empty if statement
+./505025/codec8/seed9/26 patch-v5127/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/27 patch-v5813/org.apache.commons.codec.binary.Base64.java:498:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/28 patch-v6213/org.apache.commons.codec.binary.Base64.java:494:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/29 patch-v6430/org.apache.commons.codec.binary.Base64.java:498:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/30 patch-v6445/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/31 patch-v7007/org.apache.commons.codec.binary.Base64.java:502:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/33 patch-v8004/org.apache.commons.codec.binary.Base64.java:341:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/34 patch-v9025/org.apache.commons.codec.binary.Base64.java:335:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/39 patch-v11134/org.apache.commons.codec.binary.Base64.java:334:	EmptyControlStatement:	Empty block
+./505025/codec8/seed9/4 patch-v371/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/47 patch-v12222/org.apache.commons.codec.binary.Base64.java:342:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/49 patch-v13306/org.apache.commons.codec.binary.Base64.java:334:	EmptyControlStatement:	Empty block
+./505025/codec8/seed9/50 patch-v13926/org.apache.commons.codec.binary.Base64.java:423:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/62 patch-v17606/org.apache.commons.codec.binary.Base64.java:357:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/7 patch-v877/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/79 patch-v20444/org.apache.commons.codec.binary.Base64.java:335:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/9 patch-v896/org.apache.commons.codec.binary.Base64InputStream.java:75:	UnusedLocalVariable:	使用されない変数
+./505025/codec8/seed9/92 patch-v26745/org.apache.commons.codec.binary.Base64.java:337:	EmptyControlStatement:	Empty block
+./505025/codec8/seed9/98 patch-v28711/org.apache.commons.codec.binary.Base64.java:339:	EmptyControlStatement:	Empty block
+./505025/codec8/seed9/99 patch-v29345/org.apache.commons.codec.binary.Base64.java:334:	EmptyControlStatement:	Empty block

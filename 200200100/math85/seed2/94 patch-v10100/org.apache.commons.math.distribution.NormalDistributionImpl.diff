@@ -1,0 +1,20 @@
+--- org.apache.commons.math.distribution.NormalDistributionImpl
++++ org.apache.commons.math.distribution.NormalDistributionImpl
+@@ -52,7 +52,8 @@
+      */
+     public NormalDistributionImpl(double mean, double sd){
+         super();
+-        setMean(mean);
++        double ret;
++		setMean(mean);
+         setStandardDeviation(sd);
+     }
+     
+@@ -201,6 +202,7 @@
+             ret = getMean();
+         } else {
+             ret = Double.MAX_VALUE;
++			ret = Double.POSITIVE_INFINITY;
+         }
+         
+         return ret;

@@ -1,0 +1,46 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -441,9 +441,7 @@
+         // inAvail < 0 is how we're informed of EOF in the underlying data we're
+         // encoding.
+         if (inAvail < 0) {
+-            eof = true;
+             if (buffer == null || buffer.length - pos < encodeSize) {
+-                resizeBuffer();
+             }
+             switch (modulus) {
+                 case 1 :
+@@ -472,6 +470,7 @@
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
++				System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
+             }
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+@@ -560,7 +559,6 @@
+         // This approach makes the '=' padding characters completely optional.
+         if (eof && modulus != 0) {
+             if (buffer == null || buffer.length - pos < decodeSize) {
+-                resizeBuffer();
+             }
+             
+             // We have some spare bits remaining
+@@ -977,9 +975,7 @@
+         }
+         if (chunkSize > 0) {
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+-            len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;
+@@ -1053,7 +1049,6 @@
+         buffer = null;
+         pos = 0;
+         readPos = 0;
+-        currentLinePos = 0;
+         modulus = 0;
+         eof = false;
+     }

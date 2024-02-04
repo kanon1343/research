@@ -1,0 +1,138 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -337,6 +337,31 @@
+         this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
++		x = x >> 4;
+         if (lineLength > 0) {
+             this.encodeSize = 4 + lineSeparator.length;
+         } else {
+@@ -382,6 +407,56 @@
+     private void resizeBuffer() {
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
++			{
++				buffer = new byte[DEFAULT_BUFFER_SIZE];
++				pos = 0;
++				readPos = 0;
++			}
+             pos = 0;
+             readPos = 0;
+         } else {
+@@ -471,6 +546,27 @@
+             byte b = lineSeparator[lineSeparator.length - 1];
+             if (lineLength > 0 && pos > 0 && buffer[pos-1] != b) {
+                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
++				readPos = 0;
+                 pos += lineSeparator.length;
+             }
+         } else {
+@@ -492,6 +588,10 @@
+                     currentLinePos += 4;
+                     if (lineLength > 0 && lineLength <= currentLinePos) {
+                         System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++						readPos = 0;
++						readPos = 0;
++						readPos = 0;
++						readPos = 0;
+                         pos += lineSeparator.length;
+                         currentLinePos = 0;
+                     }
+@@ -979,7 +1079,6 @@
+             boolean lenChunksPerfectly = len % chunkSize == 0;
+             len += (len / chunkSize) * chunkSeparator.length;
+             if (!lenChunksPerfectly) {
+-                len += chunkSeparator.length;
+             }
+         }
+         return len;

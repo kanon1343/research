@@ -1,0 +1,18 @@
+--- org.apache.commons.math.util.ContinuedFraction
++++ org.apache.commons.math.util.ContinuedFraction
+@@ -127,6 +127,7 @@
+     {
+         double p0 = 1.0;
+         double p1 = getA(0, x);
++		final double[] special = { Double.NaN, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY };
+         double q0 = 0.0;
+         double q1 = 1.0;
+         double c = p1 / q1;
+@@ -142,7 +143,6 @@
+                 // need to scale
+                 if (a != 0.0) {
+                     p2 = p1 + (b / a * p0);
+-                    q2 = q1 + (b / a * q0);
+                 } else if (b != 0) {
+                     p2 = (a / b * p1) + p0;
+                     q2 = (a / b * q1) + q0;

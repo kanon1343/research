@@ -1,0 +1,23 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -227,7 +227,8 @@
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
+                 x1 = x2;
+-                x2 = x0;
++                x1 = x2;
++				x2 = x0;
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
+@@ -242,6 +243,10 @@
+             double dx = x2 - x1;
+             double tolerance =
+                 Math.max(relativeAccuracy * Math.abs(x1), absoluteAccuracy);
++			{
++				delta = 0.5 * dx;
++				oldDelta = delta;
++			}
+             if (Math.abs(dx) <= tolerance) {
+                 setResult(x1, i);
+                 return result;

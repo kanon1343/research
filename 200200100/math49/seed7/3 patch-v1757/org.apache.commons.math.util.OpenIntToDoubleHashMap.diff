@@ -1,0 +1,18 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -156,7 +156,6 @@
+         final int capacity   = (int) FastMath.ceil(expectedSize / LOAD_FACTOR);
+         final int powerOfTwo = Integer.highestOneBit(capacity);
+         if (powerOfTwo == capacity) {
+-            return capacity;
+         }
+         return nextPowerOfTwo(capacity);
+     }
+@@ -396,7 +395,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 

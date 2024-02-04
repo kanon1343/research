@@ -1,0 +1,12 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -412,7 +412,8 @@
+      * @return entry at (row, column)
+      */
+     protected final double getEntry(final int row, final int column) {
+-        return tableau.getEntry(row, column);
++        int height = getHeight() - 1;
++		return tableau.getEntry(row, column);
+     }
+ 
+     /** Set an entry of the tableau.

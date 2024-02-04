@@ -1,0 +1,10 @@
+--- org.apache.commons.math.optimization.linear.SimplexTableau
++++ org.apache.commons.math.optimization.linear.SimplexTableau
+@@ -148,6 +148,7 @@
+ 
+                 // initialize the constraint rows
+                 int slackVar = 0;
++				matrix[zIndex][width - 1] = maximize ? f.getConstantTerm() : -1 * f.getConstantTerm();
+                 int artificialVar = 0;
+                 for (int i = 0; i < constraints.size(); i++) {
+                     LinearConstraint constraint = constraints.get(i);

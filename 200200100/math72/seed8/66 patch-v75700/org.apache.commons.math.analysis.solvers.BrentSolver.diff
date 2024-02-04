@@ -1,0 +1,60 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -111,7 +111,7 @@
+ 
+         // return the first endpoint if it is good enough
+         double yMin = f.value(min);
+-        if (Math.abs(yMin) <= functionValueAccuracy) {
++        if (f == null) {
+             setResult(yMin, 0);
+             return result;
+         }
+@@ -124,7 +124,6 @@
+         // return the second endpoint if it is good enough
+         double yMax = f.value(max);
+         if (Math.abs(yMax) <= functionValueAccuracy) {
+-            setResult(yMax, 0);
+             return result;
+         }
+ 
+@@ -181,7 +180,28 @@
+                 setResult(min, 0);
+                 ret = min;
+             } else if (Math.abs(yMax) <= functionValueAccuracy) {
+-                setResult(max, 0);
++                setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(yMin, 0);
++				setResult(max, 0);
++				this.resultComputed = true;
++				this.resultComputed = true;
++				this.resultComputed = true;
++				this.resultComputed = true;
++				this.resultComputed = true;
++				clearResult();
++				this.resultComputed = true;
++				this.resultComputed = true;
++				this.resultComputed = true;
+                 ret = max;
+             } else {
+                 // neither value is close to zero and min and max do not bracket root.
+@@ -234,6 +254,10 @@
+             if (Math.abs(y2) < Math.abs(y1)) {
+                 // use the bracket point if is better than last approximation
+                 x0 = x1;
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
+                 x1 = x2;
+                 x2 = x0;
+                 y0 = y1;

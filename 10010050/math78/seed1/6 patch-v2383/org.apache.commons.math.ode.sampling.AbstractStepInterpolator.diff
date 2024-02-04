@@ -1,0 +1,12 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -276,7 +276,8 @@
+           dirtyState = false;
+       }
+ 
+-      return interpolatedState;
++      h = -h;
++	return interpolatedState;
+ 
+   }
+ 

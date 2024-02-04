@@ -1,0 +1,20 @@
+--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator
++++ org.apache.commons.math.ode.sampling.AbstractStepInterpolator
+@@ -95,7 +95,6 @@
+     interpolatedState       = null;
+     interpolatedDerivatives = null;
+     finalized               = false;
+-    this.forward            = true;
+     this.dirtyState         = true;
+   }
+ 
+@@ -243,7 +242,8 @@
+   /** {@inheritDoc} */
+   public void setInterpolatedTime(final double time) {
+       interpolatedTime = time;
+-      dirtyState       = true;
++      final double oneMinusThetaH = currentTime - interpolatedTime;
++	dirtyState       = true;
+   }
+ 
+   /** {@inheritDoc} */

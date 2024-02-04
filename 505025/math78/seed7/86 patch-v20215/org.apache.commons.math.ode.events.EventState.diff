@@ -1,0 +1,13 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -212,7 +212,9 @@
+                             }
+                         }
+                     };
+-                    final BrentSolver solver = new BrentSolver();
++                    pendingEvent = false;
++					pendingEvent = false;
++					final BrentSolver solver = new BrentSolver();
+                     solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);

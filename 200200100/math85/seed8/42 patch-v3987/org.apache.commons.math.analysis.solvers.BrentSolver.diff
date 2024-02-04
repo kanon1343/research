@@ -1,0 +1,12 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -304,7 +304,8 @@
+                 delta = x1 - x0;
+                 oldDelta = delta;
+             }
+-            i++;
++            int numIterations = 0;
++			i++;
+         }
+         throw new MaxIterationsExceededException(maximalIterationCount);
+     }

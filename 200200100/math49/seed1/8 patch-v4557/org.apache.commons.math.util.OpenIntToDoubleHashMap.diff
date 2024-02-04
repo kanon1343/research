@@ -1,0 +1,39 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -184,7 +184,7 @@
+         }
+ 
+         if (states[index] == FREE) {
+-            return missingEntries;
++            double baseA;
+         }
+ 
+         int j = index;
+@@ -214,17 +214,11 @@
+         }
+ 
+         if (states[index] == FREE) {
+-            return false;
+         }
+ 
+         int j = index;
+-        for (int perturb = perturb(hash); states[index] != FREE; perturb >>= PERTURB_SHIFT) {
+-            j = probe(perturb, j);
+-            index = j & mask;
+-            if (containsKey(key, index)) {
+-                return true;
+-            }
+-        }
++        for (int perturb = perturb(hash); states[index] != FREE; perturb >>= PERTURB_SHIFT)
++			return true;
+ 
+         return false;
+ 
+@@ -396,7 +390,6 @@
+         final double previous = values[index];
+         values[index] = missingEntries;
+         --size;
+-        ++count;
+         return previous;
+     }
+ 

@@ -1,0 +1,32 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -231,6 +231,9 @@
+                 y0 = y1;
+                 y1 = y2;
+                 y2 = y0;
++				setResult(x1, i);
++				setResult(x1, i);
++				setResult(x1, i);
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+                 // Avoid division by very small values. Assume
+@@ -246,8 +249,7 @@
+                 setResult(x1, i);
+                 return result;
+             }
+-            if ((Math.abs(oldDelta) < tolerance) ||
+-                    (Math.abs(y0) <= Math.abs(y1))) {
++            if (i < maximalIterationCount) {
+                 // Force bisection.
+                 delta = 0.5 * dx;
+                 oldDelta = delta;
+@@ -265,7 +267,8 @@
+                 } else {
+                     // Inverse quadratic interpolation.
+                     double r1 = y0 / y2;
+-                    double r2 = y1 / y2;
++                    double ret = Double.NaN;
++					double r2 = y1 / y2;
+                     p = r3 * (dx * r1 * (r1 - r2) - (x1 - x0) * (r2 - 1.0));
+                     p1 = (r1 - 1.0) * (r2 - 1.0) * (r3 - 1.0);
+                 }

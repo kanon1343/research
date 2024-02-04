@@ -1,0 +1,23 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -174,7 +174,11 @@
+                 setResult(max, 0);
+                 ret = max;
+             } else {
+-                // neither value is close to zero and min and max do not bracket root.
++                {
++					setResult(max, 0);
++					ret = max;
++				}
++				// neither value is close to zero and min and max do not bracket root.
+                 throw MathRuntimeException.createIllegalArgumentException(
+                         "function values at endpoints do not have different signs.  " +
+                         "Endpoints: [{0}, {1}], Values: [{2}, {3}]",
+@@ -262,6 +266,7 @@
+                     // Linear interpolation.
+                     p = dx * r3;
+                     p1 = 1.0 - r3;
++					functionValueAccuracy = defaultFunctionValueAccuracy;
+                 } else {
+                     // Inverse quadratic interpolation.
+                     double r1 = y0 / y2;

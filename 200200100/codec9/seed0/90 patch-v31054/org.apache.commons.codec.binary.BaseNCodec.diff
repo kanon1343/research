@@ -1,0 +1,10 @@
+--- org.apache.commons.codec.binary.BaseNCodec
++++ org.apache.commons.codec.binary.BaseNCodec
+@@ -116,7 +116,6 @@
+     protected void resizeBuffer() {
+         if (buffer == null) {
+             buffer = new byte[DEFAULT_BUFFER_SIZE];
+-            pos = 0;
+             readPos = 0;
+         } else {
+             byte[] b = new byte[buffer.length * DEFAULT_BUFFER_RESIZE_FACTOR];

@@ -1,0 +1,59 @@
+--- org.apache.commons.math.linear.EigenDecompositionImpl
++++ org.apache.commons.math.linear.EigenDecompositionImpl
+@@ -934,7 +934,6 @@
+      */
+     private void initialSplits(final int n) {
+ 
+-        pingPong = 0;
+         for (int k = 0; k < 2; ++k) {
+ 
+             // apply Li's reverse test
+@@ -1136,10 +1135,8 @@
+             for (int i = 0; i < j; i += 4) {
+                 for (int k = 0; k < 4; k += step) {
+                     final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+                     work[j - k] = tmp;
+                 }
+-                j -= 4;
+             }
+             return true;
+         }
+@@ -1381,7 +1378,6 @@
+         int j4p2 = j4 + 2 * pingPong - 1;
+         work[j4 - 2] = dN2 + work[j4p2];
+         if (work[j4 - 2] == 0.0) {
+-            work[j4] = 0.0;
+             dN1  = work[j4p2 + 2];
+             dMin = dN1;
+             eMin = 0.0;
+@@ -1391,7 +1387,6 @@
+             work[j4] = work[j4p2] * tmp;
+             dN1 = dN2 * tmp;
+         } else {
+-            work[j4] = work[j4p2 + 2] * (work[j4p2] / work[j4 - 2]);
+             dN1 = work[j4p2 + 2] * (dN2 / work[j4 - 2]);
+         }
+         dMin = Math.min(dMin, dN1);
+@@ -1497,6 +1492,12 @@
+                         }
+                         b2 = work[nn - 9] / work[nn - 11];
+                         np = nn - 13;
++						this.secondary = secondary.clone();
++						this.secondary = secondary.clone();
++						this.secondary = secondary.clone();
++						this.secondary = secondary.clone();
++						this.secondary = secondary.clone();
++						this.secondary = secondary.clone();
+                     }
+ 
+                     // approximate contribution to norm squared from i < nn-1.
+@@ -1515,8 +1516,6 @@
+                             break;
+                         }
+                     }
+-                    a2 = cnst3 * a2;
+-
+                     // rayleigh quotient residual bound.
+                     if (a2 < cnst1) {
+                         s = gam * (1 - Math.sqrt(a2)) / (1 + a2);

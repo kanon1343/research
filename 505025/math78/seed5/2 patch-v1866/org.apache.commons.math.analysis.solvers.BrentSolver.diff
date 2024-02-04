@@ -1,0 +1,17 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -247,11 +247,9 @@
+                 return result;
+             }
+             if ((Math.abs(oldDelta) < tolerance) ||
+-                    (Math.abs(y0) <= Math.abs(y1))) {
+-                // Force bisection.
+-                delta = 0.5 * dx;
+-                oldDelta = delta;
+-            } else {
++                    (Math.abs(y0) <= Math.abs(y1)))
++				y1 = f.value(x1);
++			else {
+                 double r3 = y1 / y0;
+                 double p;
+                 double p1;

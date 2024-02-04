@@ -1,0 +1,11 @@
+--- org.apache.commons.math.util.OpenIntToDoubleHashMap
++++ org.apache.commons.math.util.OpenIntToDoubleHashMap
+@@ -354,7 +354,7 @@
+         final int hash  = hashOf(key);
+         int index = hash & mask;
+         if (containsKey(key, index)) {
+-            return doRemove(index);
++            values[index] = missingEntries;
+         }
+ 
+         if (states[index] == FREE) {

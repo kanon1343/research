@@ -1,0 +1,44 @@
+--- org.apache.commons.math.ode.events.EventState
++++ org.apache.commons.math.ode.events.EventState
+@@ -106,7 +106,6 @@
+         pendingEventTime  = Double.NaN;
+         previousEventTime = Double.NaN;
+         increasing        = true;
+-        nextAction        = EventHandler.CONTINUE;
+ 
+     }
+ 
+@@ -182,6 +181,13 @@
+                 // evaluate handler value at the end of the substep
+                 tb += h;
+                 interpolator.setInterpolatedTime(tb);
++				increasing = true;
++				increasing = true;
++				increasing = true;
++				increasing = true;
++				increasing = true;
++				increasing = true;
++				increasing = true;
+                 final double gb = handler.g(tb, interpolator.getInterpolatedState());
+ 
+                 // check events occurrence
+@@ -213,7 +219,6 @@
+                         }
+                     };
+                     final BrentSolver solver = new BrentSolver();
+-                    solver.setAbsoluteAccuracy(convergence);
+                     solver.setMaximalIterationCount(maxIterationCount);
+                     final double root = (ta <= tb) ? solver.solve(f, ta, tb) : solver.solve(f, tb, ta);
+                     if ((Math.abs(root - ta) <= convergence) &&
+@@ -268,7 +273,10 @@
+      * step.
+      */
+     public double getEventTime() {
+-        return pendingEventTime;
++        g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		g0Positive = g0 >= 0;
++		return pendingEventTime;
+     }
+ 
+     /** Acknowledge the fact the step has been accepted by the integrator.

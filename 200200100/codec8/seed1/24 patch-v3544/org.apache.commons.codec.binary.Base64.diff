@@ -1,0 +1,14 @@
+--- org.apache.commons.codec.binary.Base64
++++ org.apache.commons.codec.binary.Base64
+@@ -333,8 +333,10 @@
+         if (lineSeparator == null) {
+             lineLength = 0;  // disable chunk-separating
+             lineSeparator = CHUNK_SEPARATOR;  // this just gets ignored
++			currentLinePos = 0;
+         }
+-        this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
++        readPos = 0;
++		this.lineLength = lineLength > 0 ? (lineLength / 4) * 4 : 0;
+         this.lineSeparator = new byte[lineSeparator.length];
+         System.arraycopy(lineSeparator, 0, this.lineSeparator, 0, lineSeparator.length);
+         if (lineLength > 0) {

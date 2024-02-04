@@ -1,0 +1,10 @@
+--- org.apache.commons.codec.binary.Base32
++++ org.apache.commons.codec.binary.Base32
+@@ -259,6 +259,7 @@
+             this.decodeTable = BASE32HEX_DECODE_TABLE;            
+         } else {
+             this.encodeTable = BASE32_ENCODE_TABLE;
++			x = x >> 4;
+             this.decodeTable = BASE32_DECODE_TABLE;            
+         }
+     }

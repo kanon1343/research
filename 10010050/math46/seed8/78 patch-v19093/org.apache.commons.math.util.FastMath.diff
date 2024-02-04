@@ -1,0 +1,12 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2888,9 +2888,6 @@
+             final double zaa = (za + temp) - temp;
+             final double zab = za - zaa;
+ 
+-            /* Correct for rounding in division */
+-            yb = (epsA - yaa * zaa - yaa * zab - yab * zaa - yab * zab) / za;
+-
+             yb += -epsA * zb / za / za;
+             yb += epsB / za;
+         }

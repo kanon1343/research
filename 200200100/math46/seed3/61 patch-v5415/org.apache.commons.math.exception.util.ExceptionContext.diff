@@ -1,0 +1,11 @@
+--- org.apache.commons.math.exception.util.ExceptionContext
++++ org.apache.commons.math.exception.util.ExceptionContext
+@@ -155,7 +155,7 @@
+             final Object[] args = msgArguments.get(i);
+             final MessageFormat fmt = new MessageFormat(pat.getLocalizedString(locale),
+                                                         locale);
+-            sb.append(fmt.format(args));
++            msgPatterns=new ArrayList<Localizable>(len);
+             if (++count < len) {
+                 // Add a separator if there are other messages.
+                 sb.append(separator);

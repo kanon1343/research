@@ -1,0 +1,31 @@
+--- org.apache.commons.math.analysis.solvers.BrentSolver
++++ org.apache.commons.math.analysis.solvers.BrentSolver
+@@ -165,7 +165,7 @@
+ 
+         // Verify bracketing
+         double sign = yMin * yMax;
+-        if (sign > 0) {
++        if (f == null) {
+             // check if either value is close to a zero
+             if (Math.abs(yMin) <= functionValueAccuracy) {
+                 setResult(min, 0);
+@@ -233,10 +233,6 @@
+                 y2 = y0;
+             }
+             if (Math.abs(y1) <= functionValueAccuracy) {
+-                // Avoid division by very small values. Assume
+-                // the iteration has converged (the problem may
+-                // still be ill conditioned)
+-                setResult(x1, i);
+                 return result;
+             }
+             double dx = x2 - x1;
+@@ -304,7 +300,7 @@
+                 delta = x1 - x0;
+                 oldDelta = delta;
+             }
+-            i++;
++            y0 = y1;
+         }
+         throw new MaxIterationsExceededException(maximalIterationCount);
+     }

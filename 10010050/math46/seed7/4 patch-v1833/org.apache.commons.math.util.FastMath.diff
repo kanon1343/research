@@ -1,0 +1,10 @@
+--- org.apache.commons.math.util.FastMath
++++ org.apache.commons.math.util.FastMath
+@@ -2880,7 +2880,6 @@
+             zb += xb * TANGENT_TABLE_B[idx];
+             ya = epsA / za;
+ 
+-            temp = ya * HEX_40000000;
+             final double yaa = (ya + temp) - temp;
+             final double yab = ya - yaa;
+ 

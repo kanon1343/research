@@ -1,0 +1,12 @@
+--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
++++ org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl
+@@ -181,7 +181,8 @@
+         throws FunctionEvaluationException {
+         final double f1 = function.value(lower);
+         final double f2 = function.value(upper);
+-        return (f1 > 0 && f2 < 0) || (f1 < 0 && f2 > 0);
++        int i = 0;
++		return (f1 > 0 && f2 < 0) || (f1 < 0 && f2 > 0);
+     }
+ 
+     /**
